@@ -88,14 +88,17 @@ public class SupportRepository {
                 .setProductList(products)
                 .build();
 
-        billingClient.queryProductDetailsAsync(params, (billingResult, productDetailsList) -> {
+        billingClient.queryProductDetailsAsync(params, (billingResult, result) -> {
             if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
-                    && productDetailsList != null) {
-                for (ProductDetails productDetails : productDetailsList) {
-                    productDetailsMap.put(productDetails.getProductId(), productDetails);
-                }
-                if (listener != null) {
-                    listener.onProductDetailsRetrieved(productDetailsList);
+                    && result != null) {
+                List<ProductDetails> productDetailsList = result.getProductDetailsList();
+                if (productDetailsList != null) {
+                    for (ProductDetails productDetails : productDetailsList) {
+                        productDetailsMap.put(productDetails.getProductId(), productDetails);
+                    }
+                    if (listener != null) {
+                        listener.onProductDetailsRetrieved(productDetailsList);
+                    }
                 }
             }
         });
