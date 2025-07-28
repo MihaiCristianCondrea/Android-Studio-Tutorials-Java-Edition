@@ -242,6 +242,10 @@
     <string name="labeled">Etiketli</string>
     <string name="selected">Seçili</string>
     <string name="unlabeled">Etiketsiz</string>
+    <string name="navigation">Gezinme</string>
+    <string name="bottom_navigation">Alt gezinme</string>
+    <string name="navigation_drawer">Gezinme çekmecesi</string>
+    <string name="dashboard">Kontrol paneli</string>
     <string name="code_font">Kod yazı tipi</string>
     <string name="language">Dil</string>
     <string name="notifications">Bildirimler</string>
@@ -356,6 +360,8 @@
     <string name="summary_preference_android_studio_progress_bar">Bir ilerleme çubuğu, bir görevin ilerlemesinin görsel bir göstergesidir. Bu derste, Android\'de hem yatay hem de dairesel ilerleme çubuklarını nasıl kullanacağınızı öğreneceksiniz.</string>
     <string name="summary_preference_android_studio_simple_notifications">Bu dersle Android uygulamanızda bildirimleri nasıl kullanacağınızı öğrenin. Bir bildirim kanalı ve oluşturucu nasıl oluşturulacağını ve kullanıcılarınıza bildirimleri nasıl göstereceğinizi keşfedin. Bildirimlerinizi özelleştirmek için mevcut farklı seçenekleri keşfedin.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Bu dersle Android uygulamanızda gelen kutusu stili bildirimleri nasıl kullanacağınızı öğrenin. Bir bildirim kanalı ve oluşturucu nasıl oluşturulacağını ve bildirimlerinizin stilini birden çok metin satırı ve bir özet metni içeren bir InboxStyle olarak nasıl ayarlayacağınızı keşfedin. Gelen kutusu stili bildirimlerinizi özelleştirmek için mevcut farklı seçenekleri keşfedin.</string>
+    <string name="summary_preference_android_studio_bottom_navigation">Bir alt gezinme çubuğu, uygulamanızdaki üst düzey görünümler arasında hızlıca geçiş yapmanızı sağlar.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">Gezinme çekmecesi kenardan kayarak gelir ve uygulamanın ana gezinme seçeneklerini gösterir.</string>
     <string name="summary_alert_dialog_close">Çıkmak istediğinizden emin misiniz?</string>
     <string name="summary_alert_dialog_message">Bu, ekranda göreceğiniz mesaj olacak!</string>
     <string name="summary_alert_dialog_require_restart">Etkili olması için lütfen uygulamayı yeniden başlatın!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">JUnit ve Espresso ile birim testleri yazın.</string>
     <string name="daily_tip_mvvm">Bakımı kolay kod için MVVM mimarisini takip edin.</string>
     <string name="tip_of_the_day">Günün İpucu</string>
+    <string name="quiz_title">Test</string>
+    <string name="next_question">Sonraki Soru</string>
+    <string name="quiz_finished">Test tamamlandı! Skorunuz: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Başka soru yok, daha fazlası için güncellemeleri kontrol edin.</string>
+    <string name="quiz_reminder_title">Günlük Test Hatırlatıcısı</string>
+    <string name="quiz_reminder_body">Bugünün testi için geri gelin!</string>
     <string name="other_apps_title">Geliştiricinin diğer uygulamaları</string>
 </resources>

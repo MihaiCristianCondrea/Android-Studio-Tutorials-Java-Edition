@@ -242,6 +242,10 @@
     <string name="labeled">Có nhãn</string>
     <string name="selected">Đã chọn</string>
     <string name="unlabeled">Không có nhãn</string>
+    <string name="navigation">Điều hướng</string>
+    <string name="bottom_navigation">Thanh điều hướng dưới</string>
+    <string name="navigation_drawer">Ngăn điều hướng</string>
+    <string name="dashboard">Bảng điều khiển</string>
     <string name="code_font">Phông chữ mã</string>
     <string name="language">Ngôn ngữ</string>
     <string name="notifications">Thông báo</string>
@@ -356,6 +360,8 @@
     <string name="summary_preference_android_studio_progress_bar">Thanh tiến trình là một chỉ báo trực quan về tiến trình của một tác vụ. Trong bài học này, bạn sẽ học cách sử dụng cả thanh tiến trình ngang và tròn trong Android.</string>
     <string name="summary_preference_android_studio_simple_notifications">Tìm hiểu cách sử dụng thông báo trong ứng dụng Android của bạn với bài học này. Khám phá cách tạo kênh thông báo và trình tạo, và cách hiển thị thông báo cho người dùng của bạn. Khám phá các tùy chọn khác nhau có sẵn để tùy chỉnh thông báo của bạn.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Tìm hiểu cách sử dụng thông báo kiểu hộp thư đến trong ứng dụng Android của bạn với bài học này. Khám phá cách tạo kênh thông báo và trình tạo, và cách đặt kiểu thông báo của bạn thành InboxStyle với nhiều dòng văn bản và một văn bản tóm tắt. Khám phá các tùy chọn khác nhau có sẵn để tùy chỉnh thông báo kiểu hộp thư đến của bạn.</string>
+    <string name="summary_preference_android_studio_bottom_navigation">Thanh điều hướng dưới cho phép bạn nhanh chóng chuyển đổi giữa các chế độ xem cấp cao trong ứng dụng.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">Ngăn điều hướng trượt từ bên cạnh vào và hiển thị các tùy chọn điều hướng chính của ứng dụng.</string>
     <string name="summary_alert_dialog_close">Bạn có chắc chắn muốn thoát?</string>
     <string name="summary_alert_dialog_message">Đây sẽ là thông báo bạn sẽ thấy trên màn hình!</string>
     <string name="summary_alert_dialog_require_restart">Để có hiệu lực, vui lòng khởi động lại ứng dụng!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">Viết các bài kiểm tra đơn vị với JUnit và Espresso.</string>
     <string name="daily_tip_mvvm">Tuân theo kiến trúc MVVM để có mã có thể bảo trì.</string>
     <string name="tip_of_the_day">Mẹo trong ngày</string>
+    <string name="quiz_title">Câu đố</string>
+    <string name="next_question">Câu hỏi tiếp theo</string>
+    <string name="quiz_finished">Hoàn thành câu đố! Điểm của bạn: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Hết câu hỏi, hãy xem các bản cập nhật sau để có thêm.</string>
+    <string name="quiz_reminder_title">Nhắc nhở làm quiz hằng ngày</string>
+    <string name="quiz_reminder_body">Quay lại để làm quiz hôm nay!</string>
     <string name="other_apps_title">Các ứng dụng khác của nhà phát triển</string>
 </resources>

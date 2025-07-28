@@ -242,6 +242,10 @@
     <string name="labeled">May label</string>
     <string name="selected">Napili</string>
     <string name="unlabeled">Walang label</string>
+    <string name="navigation">Nabigasyon</string>
+    <string name="bottom_navigation">Nabigasyong nasa ibaba</string>
+    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="dashboard">Dashboard</string>
     <string name="code_font">Font ng code</string>
     <string name="language">Wika</string>
     <string name="notifications">Mga Notipikasyon</string>
@@ -356,6 +360,8 @@
     <string name="summary_preference_android_studio_progress_bar">Ang isang progress bar ay isang visual na indicator ng progreso ng isang gawain. Sa araling ito, matututunan mo kung paano gamitin ang parehong horizontal at circular na progress bar sa Android.</string>
     <string name="summary_preference_android_studio_simple_notifications">Alamin kung paano gamitin ang mga notipikasyon sa iyong Android app sa araling ito. Tuklasin kung paano gumawa ng isang notification channel at builder, at kung paano magpakita ng mga notipikasyon sa iyong mga user. Galugarin ang iba\'t ibang opsyon na available para i-customize ang iyong mga notipikasyon.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Alamin kung paano gamitin ang mga notipikasyon na may istilong inbox sa iyong Android app sa araling ito. Tuklasin kung paano gumawa ng isang notification channel at builder, at kung paano itakda ang istilo ng iyong mga notipikasyon sa isang InboxStyle na may maraming linya ng text at isang buod na text. Galugarin ang iba\'t ibang opsyon na available para i-customize ang iyong mga notipikasyon na may istilong inbox.</string>
+    <string name="summary_preference_android_studio_bottom_navigation">Ang isang bottom navigation bar ay nagbibigay-daan sa iyong mabilis na lumipat sa mga pangunahing view ng iyong app.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">Ang navigation drawer ay dumudulas mula sa gilid at nagpapakita ng mga pangunahing opsyon sa nabigasyon ng app.</string>
     <string name="summary_alert_dialog_close">Sigurado ka bang gusto mong lumabas?</string>
     <string name="summary_alert_dialog_message">Ito ang magiging mensahe na makikita mo sa screen!</string>
     <string name="summary_alert_dialog_require_restart">Para magkabisa mangyaring i-restart ang app!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">Sumulat ng mga unit test gamit ang JUnit at Espresso.</string>
     <string name="daily_tip_mvvm">Sundin ang arkitektura ng MVVM para sa code na madaling i-maintain.</string>
     <string name="tip_of_the_day">Tip ng Araw</string>
+    <string name="quiz_title">Pagsusulit</string>
+    <string name="next_question">Susunod na Tanong</string>
+    <string name="quiz_finished">Tapos na ang pagsusulit! Ang iyong puntos: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Wala nang mga tanong, abangan ang susunod na mga update.</string>
+    <string name="quiz_reminder_title">Paalala sa Araw-araw na Pagsusulit</string>
+    <string name="quiz_reminder_body">Bumalik para sa pagsusulit ngayong araw!</string>
     <string name="other_apps_title">Higit pang mga app mula sa developer</string>
 </resources>

@@ -242,6 +242,10 @@
     <string name="labeled">有標籤</string>
     <string name="selected">已選取</string>
     <string name="unlabeled">無標籤</string>
+    <string name="navigation">導覽</string>
+    <string name="bottom_navigation">底部導覽列</string>
+    <string name="navigation_drawer">側邊選單</string>
+    <string name="dashboard">儀表板</string>
     <string name="code_font">程式碼字型</string>
     <string name="language">語言</string>
     <string name="notifications">通知</string>
@@ -357,6 +361,8 @@
     <string name="summary_preference_android_studio_progress_bar">進度列是任務進度的視覺指標。在本課程中，您將學習如何在 Android 中使用水平和圓形進度列。</string>
     <string name="summary_preference_android_studio_simple_notifications">透過本課程學習如何在您的 Android 應用程式中使用通知。探索如何建立通知通道和建構器，以及如何向您的使用者顯示通知。探索可用於自訂通知的不同選項。</string>
     <string name="summary_preference_android_studio_inbox_notifications">透過本課程學習如何在您的 Android 應用程式中使用收件匣樣式的通知。探索如何建立通知通道和建構器，以及如何將通知的樣式設定為具有多行文字和摘要文字的 InboxStyle。探索可用於自訂收件匣樣式通知的不同選項。</string>
+    <string name="summary_preference_android_studio_bottom_navigation">底部導覽列可讓你快速在應用程式的頂層檢視之間切換。</string>
+    <string name="summary_preference_android_studio_navigation_drawer">側邊選單從側邊滑入並顯示應用程式的主要導覽選項。</string>
     <string name="summary_alert_dialog_close">您確定要退出嗎？</string>
     <string name="summary_alert_dialog_message">這將是您在螢幕上看到的訊息！</string>
     <string name="summary_alert_dialog_require_restart">為使變更生效，請重新啟動應用程式！</string>
@@ -430,5 +436,11 @@
     <string name="daily_tip_unit_tests">使用 JUnit 和 Espresso 編寫單元測試。</string>
     <string name="daily_tip_mvvm">遵循 MVVM 架構以獲得可維護的程式碼。</string>
     <string name="tip_of_the_day">今日提示</string>
+    <string name="quiz_title">小測驗</string>
+    <string name="next_question">下一題</string>
+    <string name="quiz_finished">測驗完成！你的分數：%1$d/%2$d</string>
+    <string name="quiz_no_more_questions">沒有更多題目，請留意之後的更新。</string>
+    <string name="quiz_reminder_title">每日測驗提醒</string>
+    <string name="quiz_reminder_body">回來參加今天的測驗吧！</string>
     <string name="other_apps_title">開發人員的其他應用程式</string>
 </resources>

@@ -241,6 +241,10 @@
     <string name="labeled">লেবেলযুক্ত</string>
     <string name="selected">নির্বাচিত</string>
     <string name="unlabeled">লেবেলবিহীন</string>
+    <string name="navigation">নেভিগেশন</string>
+    <string name="bottom_navigation">নীচের নেভিগেশন</string>
+    <string name="navigation_drawer">নেভিগেশন ড্রয়ার</string>
+    <string name="dashboard">ড্যাশবোর্ড</string>
     <string name="code_font">কোড ফন্ট</string>
     <string name="language">ভাষা</string>
     <string name="notifications">বিজ্ঞপ্তি</string>
@@ -346,6 +350,8 @@
     <string name="summary_preference_android_studio_progress_bar">একটি প্রোগ্রেস বার হল একটি কাজের অগ্রগতির একটি ভিজ্যুয়াল সূচক। এই পাঠে, আপনি অ্যান্ড্রয়েডে অনুভূমিক এবং বৃত্তাকার উভয় প্রোগ্রেস বার কীভাবে ব্যবহার করতে হয় তা শিখবেন।</string>
     <string name="summary_preference_android_studio_simple_notifications">এই পাঠের মাধ্যমে আপনার অ্যান্ড্রয়েড অ্যাপে কীভাবে বিজ্ঞপ্তি ব্যবহার করতে হয় তা শিখুন। কীভাবে একটি বিজ্ঞপ্তি চ্যানেল এবং নির্মাতা তৈরি করতে হয় এবং কীভাবে আপনার ব্যবহারকারীদের বিজ্ঞপ্তি দেখাতে হয় তা আবিষ্কার করুন। আপনার বিজ্ঞপ্তিগুলি কাস্টমাইজ করার জন্য উপলব্ধ বিভিন্ন বিকল্পগুলি অন্বেষণ করুন।</string>
     <string name="summary_preference_android_studio_inbox_notifications">এই পাঠের মাধ্যমে আপনার অ্যান্ড্রয়েড অ্যাপে কীভাবে ইনবক্স স্টাইল বিজ্ঞপ্তি ব্যবহার করতে হয় তা শিখুন। কীভাবে একটি বিজ্ঞপ্তি চ্যানেল এবং নির্মাতা তৈরি করতে হয় এবং কীভাবে একাধিক লাইনের টেক্সট এবং একটি সারাংশ টেক্সট সহ একটি ইনবক্সস্টাইলে আপনার বিজ্ঞপ্তিগুলির স্টাইল সেট করতে হয় তা আবিষ্কার করুন। আপনার ইনবক্স স্টাইল বিজ্ঞপ্তিগুলি কাস্টমাইজ করার জন্য উপলব্ধ বিভিন্ন বিকল্পগুলি অন্বেষণ করুন।</string>
+    <string name="summary_preference_android_studio_bottom_navigation">একটি নীচের নেভিগেশন বার আপনাকে দ্রুত অ্যাপের শীর্ষস্তরের ভিউয়ের মাঝে স্যুইচ করতে দেয়।</string>
+    <string name="summary_preference_android_studio_navigation_drawer">একটি নেভিগেশন ড্রয়ার পাশে থেকে স্লাইড করে এবং অ্যাপের প্রধান নেভিগেশন অপশনগুলো দেখায়।</string>
     <string name="summary_alert_dialog_close">আপনি কি নিশ্চিত যে আপনি প্রস্থান করতে চান?</string>
     <string name="summary_alert_dialog_message">এটি সেই বার্তা যা আপনি পর্দায় দেখতে পাবেন!</string>
     <string name="summary_alert_dialog_require_restart">কার্যকর হওয়ার জন্য দয়া করে অ্যাপটি পুনরায় শুরু করুন!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">JUN এবং এসপ্রেসোতে ইউনিট পরীক্ষা করো।</string>
     <string name="daily_tip_mvvm">যোগ্য কোডের জন্য এমভিএম স্থাপত্য অনুসরণ করুন।</string>
     <string name="tip_of_the_day">আজকের উপদেশ</string>
+    <string name="quiz_title">কুইজ</string>
+    <string name="next_question">পরবর্তী প্রশ্ন</string>
+    <string name="quiz_finished">কুইজ শেষ! আপনার স্কোর: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">আর কোনো প্রশ্ন নেই, পরবর্তী আপডেটে দেখুন।</string>
+    <string name="quiz_reminder_title">দৈনিক কুইজ রিমাইন্ডার</string>
+    <string name="quiz_reminder_body">আজকের কুইজে ফিরে আসুন!</string>
     <string name="other_apps_title">ডেভেলপারকে আরো টুল</string>
 </resources>

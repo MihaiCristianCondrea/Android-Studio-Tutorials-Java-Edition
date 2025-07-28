@@ -242,6 +242,10 @@
     <string name="labeled">لیبل شدہ</string>
     <string name="selected">منتخب</string>
     <string name="unlabeled">بغیر لیبل کے</string>
+    <string name="navigation">نیوی گیشن</string>
+    <string name="bottom_navigation">نیچے کی نیوی گیشن</string>
+    <string name="navigation_drawer">نیوی گیشن دراز</string>
+    <string name="dashboard">ڈیش بورڈ</string>
     <string name="code_font">کوڈ فونٹ</string>
     <string name="language">زبان</string>
     <string name="notifications">نوٹیفکیشنز</string>
@@ -356,6 +360,8 @@
     <string name="summary_preference_android_studio_progress_bar">پروگریس بار کسی کام کی پیشرفت کا ایک بصری اشارہ ہے۔ اس سبق میں، آپ اینڈرائیڈ میں افقی اور سرکلر دونوں پروگریس بار استعمال کرنا سیکھیں گے۔</string>
     <string name="summary_preference_android_studio_simple_notifications">اس سبق کے ساتھ اپنی اینڈرائیڈ ایپ میں نوٹیفکیشنز کا استعمال سیکھیں۔ نوٹیفکیشن چینل اور بلڈر بنانے کا طریقہ، اور اپنے صارفین کو نوٹیفکیشنز دکھانے کا طریقہ دریافت کریں۔ اپنے نوٹیفکیشنز کو اپنی مرضی کے مطابق بنانے کے لیے دستیاب مختلف اختیارات دریافت کریں۔</string>
     <string name="summary_preference_android_studio_inbox_notifications">اس سبق کے ساتھ اپنی اینڈرائیڈ ایپ میں ان باکس اسٹائل نوٹیفکیشنز کا استعمال سیکھیں۔ نوٹیفکیشن چینل اور بلڈر بنانے کا طریقہ، اور اپنے نوٹیفکیشنز کے اسٹائل کو متعدد لائنوں کے متن اور خلاصہ متن کے ساتھ ان باکس اسٹائل پر سیٹ کرنے کا طریقہ دریافت کریں۔ اپنے ان باکس اسٹائل نوٹیفکیشنز کو اپنی مرضی کے مطابق بنانے کے لیے دستیاب مختلف اختیارات دریافت کریں۔</string>
+    <string name="summary_preference_android_studio_bottom_navigation">نیچے کی نیوی گیشن بار آپ کو ایپ کے اعلیٰ سطحی مناظر کے درمیان تیزی سے سوئچ کرنے دیتی ہے۔</string>
+    <string name="summary_preference_android_studio_navigation_drawer">نیوی گیشن دراز سائیڈ سے سلائیڈ ہوتا ہے اور ایپ کے اہم نیوی گیشن اختیارات دکھاتا ہے۔</string>
     <string name="summary_alert_dialog_close">کیا آپ واقعی باہر نکلنا چاہتے ہیں؟</string>
     <string name="summary_alert_dialog_message">یہ وہ پیغام ہوگا جو آپ اسکرین پر دیکھیں گے!</string>
     <string name="summary_alert_dialog_require_restart">اثر انداز ہونے کے لیے براہ کرم ایپ کو دوبارہ شروع کریں!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">JUnit اور Espresso کے ساتھ یونٹ ٹیسٹ لکھیں۔</string>
     <string name="daily_tip_mvvm">قابل دیکھ بھال کوڈ کے لیے MVVM آرکیٹیکچر کی پیروی کریں۔</string>
     <string name="tip_of_the_day">آج کی ٹپ</string>
+    <string name="quiz_title">کوئز</string>
+    <string name="next_question">اگلا سوال</string>
+    <string name="quiz_finished">کوئز مکمل! آپ کا اسکور: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">مزید سوالات نہیں، مزید کے لیے آنے والی اپ ڈیٹس دیکھیں۔</string>
+    <string name="quiz_reminder_title">روزانہ کوئز یاددہانی</string>
+    <string name="quiz_reminder_body">آج کے کوئز کے لیے دوبارہ آئیں!</string>
     <string name="other_apps_title">ڈیولپر کی مزید ایپس</string>
 </resources>

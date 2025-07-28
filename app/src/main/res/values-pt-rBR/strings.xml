@@ -242,6 +242,10 @@
     <string name="labeled">Rotulado</string>
     <string name="selected">Selecionado</string>
     <string name="unlabeled">Sem rótulo</string>
+    <string name="navigation">Navegação</string>
+    <string name="bottom_navigation">Navegação inferior</string>
+    <string name="navigation_drawer">Menu lateral</string>
+    <string name="dashboard">Painel</string>
     <string name="code_font">Fonte do código</string>
     <string name="language">Idioma</string>
     <string name="notifications">Notificações</string>
@@ -356,6 +360,8 @@
     <string name="summary_preference_android_studio_progress_bar">Uma barra de progresso é um indicador visual do progresso de uma tarefa. Nesta lição, você aprenderá a usar as barras de progresso horizontais e circulares no Android.</string>
     <string name="summary_preference_android_studio_simple_notifications">Aprenda a usar notificações em seu aplicativo Android com esta lição. Descubra como criar um canal e um construtor de notificações e como mostrar notificações aos seus usuários. Explore as diferentes opções disponíveis para personalizar suas notificações.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Aprenda a usar notificações no estilo de caixa de entrada em seu aplicativo Android com esta lição. Descubra como criar um canal e um construtor de notificações e como definir o estilo de suas notificações para um InboxStyle com várias linhas de texto e um texto de resumo. Explore as diferentes opções disponíveis para personalizar suas notificações no estilo de caixa de entrada.</string>
+    <string name="summary_preference_android_studio_bottom_navigation">Uma barra de navegação inferior permite alternar rapidamente entre as visualizações principais do seu app.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">Um menu lateral desliza pela lateral e exibe as principais opções de navegação do app.</string>
     <string name="summary_alert_dialog_close">Tem certeza de que deseja sair?</string>
     <string name="summary_alert_dialog_message">Esta será a mensagem que você verá na tela!</string>
     <string name="summary_alert_dialog_require_restart">Para ter efeito, por favor, reinicie o aplicativo!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">Escreva testes unitários com JUnit e Espresso.</string>
     <string name="daily_tip_mvvm">Siga a arquitetura MVVM para um código de fácil manutenção.</string>
     <string name="tip_of_the_day">Dica do Dia</string>
+    <string name="quiz_title">Quiz</string>
+    <string name="next_question">Próxima pergunta</string>
+    <string name="quiz_finished">Quiz completo! Sua pontuação: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Sem mais perguntas, confira as próximas atualizações para mais.</string>
+    <string name="quiz_reminder_title">Lembrete diário do quiz</string>
+    <string name="quiz_reminder_body">Volte para o quiz de hoje!</string>
     <string name="other_apps_title">Mais aplicativos do desenvolvedor</string>
 </resources>

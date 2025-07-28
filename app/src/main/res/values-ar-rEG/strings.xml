@@ -242,6 +242,10 @@
     <string name="labeled">معنون</string>
     <string name="selected">المحدد</string>
     <string name="unlabeled">غير معنون</string>
+    <string name="navigation">التنقل</string>
+    <string name="bottom_navigation">شريط التنقل السفلي</string>
+    <string name="navigation_drawer">قائمة التنقل الجانبية</string>
+    <string name="dashboard">لوحة التحكم</string>
     <string name="code_font">خط الكود</string>
     <string name="language">اللغة</string>
     <string name="notifications">الإشعارات</string>
@@ -356,6 +360,8 @@
     <string name="summary_preference_android_studio_progress_bar">شريط التقدم هو مؤشر مرئي لتقدم مهمة ما. في هذا الدرس، ستتعلم كيفية استخدام كل من أشرطة التقدم الأفقية والدائرية في أندرويد.</string>
     <string name="summary_preference_android_studio_simple_notifications">اتعلم كيفية استخدام الإشعارات في تطبيق أندرويد بتاعك مع هذا الدرس. اكتشف كيفية إنشاء قناة إشعارات ومنشئ، وكيفية عرض الإشعارات للمستخدمين. استكشف الخيارات المختلفة المتاحة لتخصيص إشعاراتك.</string>
     <string name="summary_preference_android_studio_inbox_notifications">اتعلم كيفية استخدام إشعارات نمط البريد الوارد في تطبيق أندرويد بتاعك مع هذا الدرس. اكتشف كيفية إنشاء قناة إشعارات ومنشئ، وكيفية ضبط نمط إشعاراتك إلى InboxStyle مع سطور نصية متعددة ونص ملخص. استكشف الخيارات المختلفة المتاحة لتخصيص إشعارات نمط البريد الوارد.</string>
+    <string name="summary_preference_android_studio_bottom_navigation">تتيح لك شريط التنقل السفلي التنقل بسرعة بين العروض الرئيسية في التطبيق.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">تنزلق قائمة التنقل من الجانب وتعرض خيارات التنقل الرئيسية للتطبيق.</string>
     <string name="summary_alert_dialog_close">متأكد إنك عايز تخرج؟</string>
     <string name="summary_alert_dialog_message">دي هتبقى الرسالة اللي هتشوفها على الشاشة!</string>
     <string name="summary_alert_dialog_require_restart">عشان التغيير يتنفذ، من فضلك أعد تشغيل التطبيق!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">اكتب اختبارات الوحدة باستخدام JUnit و Espresso.</string>
     <string name="daily_tip_mvvm">اتبع بنية MVVM لكود قابل للصيانة.</string>
     <string name="tip_of_the_day">نصيحة اليوم</string>
+    <string name="quiz_title">اختبار</string>
+    <string name="next_question">السؤال التالي</string>
+    <string name="quiz_finished">اكتمل الاختبار! نتيجتك: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">لا مزيد من الأسئلة، تابع التحديثات القادمة للمزيد.</string>
+    <string name="quiz_reminder_title">تذكير الاختبار اليومي</string>
+    <string name="quiz_reminder_body">عد للاختبار اليومي اليوم!</string>
     <string name="other_apps_title">تطبيقات أخرى من المطور</string>
 </resources>

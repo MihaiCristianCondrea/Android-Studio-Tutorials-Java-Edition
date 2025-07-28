@@ -241,6 +241,10 @@
     <string name="labeled">С етикети</string>
     <string name="selected">Избрани</string>
     <string name="unlabeled">Без етикети</string>
+    <string name="navigation">Навигация</string>
+    <string name="bottom_navigation">Долна навигация</string>
+    <string name="navigation_drawer">Навигационно чекмедже</string>
+    <string name="dashboard">Табло</string>
     <string name="code_font">Шрифт на кода</string>
     <string name="language">Език</string>
     <string name="notifications">Известия</string>
@@ -346,6 +350,8 @@
     <string name="summary_preference_android_studio_progress_bar">Лентата за напредък е визуален индикатор за напредъка на дадена задача. В този урок ще научите как да използвате както хоризонтални, така и кръгови ленти за напредък в Android.</string>
     <string name="summary_preference_android_studio_simple_notifications">Научете как да използвате известия във вашето Android приложение с този урок. Открийте как да създадете канал и конструктор за известия и как да показвате известия на вашите потребители. Разгледайте различните налични опции за персонализиране на вашите известия.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Научете как да използвате известия в стил "Входящи" във вашето Android приложение с този урок. Открийте как да създадете канал и конструктор за известия и как да зададете стила на вашите известия на InboxStyle с множество редове текст и обобщаващ текст. Разгледайте различните налични опции за персонализиране на вашите известия в стил "Входящи".</string>
+    <string name="summary_preference_android_studio_bottom_navigation">Долната навигационна лента позволява бързо превключване между основните изгледи в приложението.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">Навигационното чекмедже се плъзга отстрани и показва основните навигационни опции на приложението.</string>
     <string name="summary_alert_dialog_close">Сигурни ли сте, че искате да излезете?</string>
     <string name="summary_alert_dialog_message">Това ще бъде съобщението, което ще видите на екрана!</string>
     <string name="summary_alert_dialog_require_restart">За да влезе в сила, моля, рестартирайте приложението!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">Пиши тестове с JUnit и Espresso.</string>
     <string name="daily_tip_mvvm">Следвайте MVVM архитектурата за поддържане на код.</string>
     <string name="tip_of_the_day">Съвет на деня</string>
+    <string name="quiz_title">Тест</string>
+    <string name="next_question">Следващ въпрос</string>
+    <string name="quiz_finished">Тестът приключи! Вашият резултат: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Няма повече въпроси, очаквайте нови в следващи обновления.</string>
+    <string name="quiz_reminder_title">Ежедневно напомняне за тест</string>
+    <string name="quiz_reminder_body">Върнете се за днешния тест!</string>
     <string name="other_apps_title">Още приложения от разработчика</string>
 </resources>
