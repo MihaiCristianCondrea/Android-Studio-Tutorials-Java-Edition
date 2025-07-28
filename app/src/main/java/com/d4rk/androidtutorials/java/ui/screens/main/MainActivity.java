@@ -9,6 +9,7 @@ import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.IntentSenderRequest;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -36,8 +37,8 @@ import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFr
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -119,6 +120,19 @@ public class MainActivity extends AppCompatActivity {
         this.appUpdateManager = mainViewModel.getAppUpdateManager();
 
         registerInstallStateListener();
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                new MaterialAlertDialogBuilder(MainActivity.this)
+                        .setTitle(R.string.alert_dialog_close)
+                        .setMessage(R.string.summary_alert_dialog_close)
+                        .setPositiveButton(android.R.string.yes, (dialog, which) -> {
+                            finish();
+                            moveTaskToBack(true);
+                        })
+                        .setNegativeButton(android.R.string.no, null)
+                        .show();            }
+        });
     }
 
     private void setupActionBar() {
@@ -222,23 +236,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * @noinspection deprecation
-     */
-    @Deprecated
-    @Override
-    public void onBackPressed() {
-        new MaterialAlertDialogBuilder(this)
-                .setTitle(R.string.alert_dialog_close)
-                .setMessage(R.string.summary_alert_dialog_close)
-                .setPositiveButton(android.R.string.yes, (dialog, which) -> {
-                    super.onBackPressed();
-                    moveTaskToBack(true);
-                })
-                .setNegativeButton(android.R.string.no, null)
-                .show();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)

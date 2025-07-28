@@ -29,13 +29,12 @@ import com.mikepenz.aboutlibraries.LibsBuilder;
 
 public class HelpActivity extends AppCompatActivity {
 
-    private ActivityHelpBinding binding;
     private HelpViewModel helpViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityHelpBinding.inflate(getLayoutInflater());
+        ActivityHelpBinding binding = ActivityHelpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);

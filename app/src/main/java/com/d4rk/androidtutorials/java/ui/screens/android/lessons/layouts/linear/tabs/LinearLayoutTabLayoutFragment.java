@@ -3,22 +3,21 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.linear
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentLinearLayoutLayoutBinding;
-import com.google.android.gms.ads.AdRequest;
-import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
-import android.util.Log;
+import com.d4rk.androidtutorials.java.utils.FontManager;
+import com.google.android.gms.ads.AdRequest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,11 +26,10 @@ import java.io.InputStreamReader;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class LinearLayoutTabLayoutFragment extends Fragment {
-    private FragmentLinearLayoutLayoutBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentLinearLayoutLayoutBinding.inflate(inflater, container, false);
+        FragmentLinearLayoutLayoutBinding binding = FragmentLinearLayoutLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.adView.loadAd(new AdRequest.Builder().build());
 

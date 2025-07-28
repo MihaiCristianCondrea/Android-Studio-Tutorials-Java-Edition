@@ -21,9 +21,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @noinspection deprecation
- */
 public class SupportRepository {
 
     private final Context context;
@@ -88,11 +85,9 @@ public class SupportRepository {
                 .setProductList(products)
                 .build();
 
-        billingClient.queryProductDetailsAsync(params, (billingResult, result) -> {
-            if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
-                    && result != null) {
-                List<ProductDetails> productDetailsList = result.getProductDetailsList();
-                if (productDetailsList != null) {
+        billingClient.queryProductDetailsAsync(params, (billingResult, productDetailsList) -> {
+            if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
+                if (!productDetailsList.isEmpty()) {
                     for (ProductDetails productDetails : productDetailsList) {
                         productDetailsMap.put(productDetails.getProductId(), productDetails);
                     }

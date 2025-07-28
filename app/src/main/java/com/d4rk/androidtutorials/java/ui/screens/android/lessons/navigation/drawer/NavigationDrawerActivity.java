@@ -3,9 +3,9 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.navigation.dra
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Gravity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityNavigationDrawerBinding;
@@ -27,7 +27,7 @@ public class NavigationDrawerActivity extends AppCompatActivity {
 
         binding.navigationView.setNavigationItemSelectedListener(item -> {
             binding.textView.setText(getString(R.string.selected) + " " + item.getTitle());
-            binding.drawerLayout.closeDrawer(Gravity.START);
+            binding.drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         });
 

@@ -564,7 +564,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dependabot/gradle/com.airbnb.android-lottie-6.0.1" />
+        <entry key="$PROJECT_DIR$" value="codex/fix-ci-compilation-errors-in-supportrepository" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -599,39 +599,40 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
-    &quot;ApkExportedModule&quot;: &quot;Android_Studio_Tutorials_Java_Edition.app&quot;,
-    &quot;BundleExportedModule&quot;: &quot;Android_Studio_Tutorials_Java_Edition.app&quot;,
-    &quot;ExportApk.ApkPathForAndroid_Studio_Tutorials_Java_Edition.app&quot;: &quot;C:\\Users\\d4rk7\\AndroidStudioProjects\\com.d4rk.androidtutorials.java\\app&quot;,
-    &quot;ExportBundle.BundlePathForAndroid_Studio_Tutorials_Java_Edition.app&quot;: &quot;C:\\Users\\d4rk7\\StudioProjects\\com.d4rk.androidtutorials.java\\app&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;ScreenshotViewer.SavePath&quot;: &quot;C:/Users/d4rk7/Desktop&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;kotlin.migration.detection.enabled&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/d4rk7/StudioProjects/com.d4rk.androidtutorials.java/app/src/main/res/drawable-anydpi&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.app.executor": "Run",
+    "ApkExportedModule": "Android_Studio_Tutorials_Java_Edition.app",
+    "BundleExportedModule": "Android_Studio_Tutorials_Java_Edition.app",
+    "ExportApk.ApkPathForAndroid_Studio_Tutorials_Java_Edition.app": "C:\\Users\\d4rk7\\AndroidStudioProjects\\com.d4rk.androidtutorials.java\\app",
+    "ExportBundle.BundlePathForAndroid_Studio_Tutorials_Java_Edition.app": "C:\\Users\\d4rk7\\StudioProjects\\com.d4rk.androidtutorials.java\\app",
+    "Gradle.Download Sources.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "ScreenshotViewer.SavePath": "C:/Users/d4rk7/Desktop",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "kotlin.migration.detection.enabled": "false",
+    "last_opened_file_path": "C:/Users/d4rk7/StudioProjects/com.d4rk.androidtutorials.java/app/src/main/res/drawable-anydpi",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.language.Kotlin"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ExportApk.BuildVariants&quot;: [
-      &quot;release&quot;
+  "keyToStringList": {
+    "ExportApk.BuildVariants": [
+      "release"
     ]
   }
-}</component>
+}]]></component>
   <component name="PsdUISettings">
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>

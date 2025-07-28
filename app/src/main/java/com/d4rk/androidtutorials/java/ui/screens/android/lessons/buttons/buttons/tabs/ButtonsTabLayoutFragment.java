@@ -3,23 +3,22 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.button
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
+import com.amrdeveloper.codeview.CodeView;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentButtonsLayoutBinding;
-import com.google.android.gms.ads.AdRequest;
-import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
-import com.amrdeveloper.codeview.CodeView;
-import android.util.Log;
+import com.d4rk.androidtutorials.java.utils.FontManager;
+import com.google.android.gms.ads.AdRequest;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,11 +30,10 @@ import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class ButtonsTabLayoutFragment extends Fragment {
     private final Map<Integer, CodeView> buttonXMLResources = new HashMap<>();
-    private FragmentButtonsLayoutBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentButtonsLayoutBinding.inflate(inflater, container, false);
+        FragmentButtonsLayoutBinding binding = FragmentButtonsLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.adView.loadAd(new AdRequest.Builder().build());
 

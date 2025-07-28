@@ -30,17 +30,19 @@ public class MainRepository {
         this.appUpdateManager = AppUpdateManagerFactory.create(this.context);
     }
 
-    private static int getNewNightMode(String[] darkModeValues, int currentNightMode, String preference) {
+    private static int getNewNightMode(String[] darkModeValues, int currentNightMode, @androidx.annotation.Nullable String preference) {
         int newNightMode = currentNightMode;
 
-        if (preference.equals(darkModeValues[0])) {
-            newNightMode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
-        } else if (preference.equals(darkModeValues[1])) {
-            newNightMode = AppCompatDelegate.MODE_NIGHT_NO;
-        } else if (preference.equals(darkModeValues[2])) {
-            newNightMode = AppCompatDelegate.MODE_NIGHT_YES;
-        } else if (preference.equals(darkModeValues[3])) {
-            newNightMode = AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY;
+        if (preference != null) {
+            if (preference.equals(darkModeValues[0])) {
+                newNightMode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
+            } else if (preference.equals(darkModeValues[1])) {
+                newNightMode = AppCompatDelegate.MODE_NIGHT_NO;
+            } else if (preference.equals(darkModeValues[2])) {
+                newNightMode = AppCompatDelegate.MODE_NIGHT_YES;
+            } else if (preference.equals(darkModeValues[3])) {
+                newNightMode = AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY;
+            }
         }
         return newNightMode;
     }

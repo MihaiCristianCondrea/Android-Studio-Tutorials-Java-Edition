@@ -9,15 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentSameCodeBinding;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
-import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
+import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.google.android.gms.ads.AdRequest;
 
 import java.io.BufferedReader;
@@ -28,11 +27,10 @@ import java.io.InputStreamReader;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class ButtonsTabCodeFragment extends Fragment {
-    private FragmentSameCodeBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentSameCodeBinding.inflate(inflater, container, false);
+        FragmentSameCodeBinding binding = FragmentSameCodeBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.adView.loadAd(new AdRequest.Builder().build());
 
