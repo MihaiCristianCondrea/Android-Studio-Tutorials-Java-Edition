@@ -361,7 +361,7 @@
     <string name="summary_preference_android_studio_simple_notifications">Learn how to use notifications in your Android app with this lesson. Discover how to create a notification channel and builder, and how to show notifications to your users. Explore the different options available for customizing your notifications.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Learn how to use inbox style notifications in your Android app with this lesson. Discover how to create a notification channel and builder, and how to set the style of your notifications to an InboxStyle with multiple lines of text and a summary text. Explore the different options available for customizing your inbox style notifications.</string>
     <string name="summary_preference_android_studio_bottom_navigation">A bottom navigation bar lets you quickly switch between top-level views in your app.</string>
-    <string name="summary_preference_android_studio_navigation_drawer">A navigation drawer slides in from the side and displays the app's main navigation options.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">A navigation drawer slides in from the side and displays the app\'s main navigation options.</string>
     <string name="summary_alert_dialog_close">Are you sure you want to exit?</string>
     <string name="summary_alert_dialog_message">This will be the message you will see on screen!</string>
     <string name="summary_alert_dialog_require_restart">To take effect please restart the app!</string>
