@@ -47,7 +47,9 @@ We are constantly updating and improving Android Studio Tutorials: Java Edition 
 
 Thank you for using Android Studio Tutorials!
 
-__Privacy Policy__ [here](https://d4rk7355608.github.io/profile/#privacy-policy-apps).  
-__Terms of Service__ [here](https://d4rk7355608.github.io/profile/#terms-of-service-apps).
+# License
+
+__Privacy Policy__ [here](https://mihaicristiancondrea.github.io/profile/#privacy-policy-end-user-software).
+__Terms of Service__ [here](https://mihaicristiancondrea.github.io/profile/#terms-of-service-end-user-software).
 
 ![license](https://imgur.com/QQlcEVT.png)
