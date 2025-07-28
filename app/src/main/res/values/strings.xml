@@ -440,6 +440,6 @@
     <string name="quiz_finished">Quiz complete! Your score: %1$d/%2$d</string>
     <string name="quiz_no_more_questions">No more questions, check further updates for more.</string>
     <string name="quiz_reminder_title">Daily Quiz Reminder</string>
-    <string name="quiz_reminder_body">Come back for today&#39;s quiz!</string>
+    <string name="quiz_reminder_body">Come back for today\s quiz!</string>
     <string name="other_apps_title">More apps by the developer</string>
 </resources>
