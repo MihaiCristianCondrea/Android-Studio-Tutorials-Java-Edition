@@ -24,13 +24,13 @@ public class SupportViewModel extends AndroidViewModel {
         repository.initBillingClient(onConnected);
     }
 
-    public void querySkuDetails(List<String> skuList,
-                                SupportRepository.OnSkuDetailsListener listener) {
-        repository.querySkuDetails(skuList, listener);
+    public void queryProductDetails(List<String> productIds,
+                                   SupportRepository.OnProductDetailsListener listener) {
+        repository.queryProductDetails(productIds, listener);
     }
 
-    public void initiatePurchase(Activity activity, String sku) {
-        repository.initiatePurchase(activity, sku);
+    public void initiatePurchase(Activity activity, String productId) {
+        repository.initiatePurchase(activity, productId);
     }
 
     public void initMobileAds(ActivitySupportBinding binding) {
