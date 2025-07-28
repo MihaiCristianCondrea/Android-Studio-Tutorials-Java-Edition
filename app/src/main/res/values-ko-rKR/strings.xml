@@ -242,6 +242,10 @@
     <string name="labeled">라벨 표시</string>
     <string name="selected">선택됨</string>
     <string name="unlabeled">라벨 없음</string>
+    <string name="navigation">내비게이션</string>
+    <string name="bottom_navigation">하단 내비게이션</string>
+    <string name="navigation_drawer">내비게이션 드로어</string>
+    <string name="dashboard">대시보드</string>
     <string name="code_font">코드 글꼴</string>
     <string name="language">언어</string>
     <string name="notifications">알림</string>
@@ -356,6 +360,8 @@
     <string name="summary_preference_android_studio_progress_bar">진행률 표시줄은 작업의 진행 상황을 시각적으로 나타내는 지표입니다. 이 강의에서는 Android에서 수평 및 원형 진행률 표시줄을 사용하는 방법을 배웁니다.</string>
     <string name="summary_preference_android_studio_simple_notifications">이 강의를 통해 Android 앱에서 알림을 사용하는 방법을 배워보세요. 알림 채널과 빌더를 만드는 방법과 사용자에게 알림을 표시하는 방법을 알아보세요. 알림을 사용자 정의하는 데 사용할 수 있는 다양한 옵션을 탐색하세요.</string>
     <string name="summary_preference_android_studio_inbox_notifications">이 강의를 통해 Android 앱에서 받은편지함 스타일 알림을 사용하는 방법을 배워보세요. 알림 채널과 빌더를 만드는 방법과 여러 줄의 텍스트와 요약 텍스트가 있는 InboxStyle로 알림 스타일을 설정하는 방법을 알아보세요. 받은편지함 스타일 알림을 사용자 정의하는 데 사용할 수 있는 다양한 옵션을 탐색하세요.</string>
+    <string name="summary_preference_android_studio_bottom_navigation">하단 내비게이션 바를 사용하면 앱의 최상위 화면을 빠르게 전환할 수 있습니다.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">내비게이션 드로어는 옆에서 슬라이드되며 앱의 주요 탐색 옵션을 표시합니다.</string>
     <string name="summary_alert_dialog_close">종료하시겠습니까?</string>
     <string name="summary_alert_dialog_message">이것이 화면에 표시될 메시지입니다!</string>
     <string name="summary_alert_dialog_require_restart">적용하려면 앱을 다시 시작해주세요!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">JUnit과 Espresso로 단위 테스트를 작성하세요.</string>
     <string name="daily_tip_mvvm">유지보수가 용이한 코드를 위해 MVVM 아키텍처를 따르세요.</string>
     <string name="tip_of_the_day">오늘의 팁</string>
+    <string name="quiz_title">퀴즈</string>
+    <string name="next_question">다음 질문</string>
+    <string name="quiz_finished">퀴즈 완료! 점수: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">더 이상 질문이 없습니다. 추후 업데이트를 확인하세요.</string>
+    <string name="quiz_reminder_title">일일 퀴즈 알림</string>
+    <string name="quiz_reminder_body">오늘의 퀴즈를 위해 다시 오세요!</string>
     <string name="other_apps_title">개발자의 다른 앱</string>
 </resources>

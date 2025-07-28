@@ -241,6 +241,10 @@
     <string name="labeled">Beschriftet</string>
     <string name="selected">Ausgewählt</string>
     <string name="unlabeled">Unbeschriftet</string>
+    <string name="navigation">Navigation</string>
+    <string name="bottom_navigation">Untere Navigation</string>
+    <string name="navigation_drawer">Navigationsleiste</string>
+    <string name="dashboard">Dashboard</string>
     <string name="code_font">Code-Schriftart</string>
     <string name="language">Sprache</string>
     <string name="notifications">Benachrichtigungen</string>
@@ -346,6 +350,8 @@
     <string name="summary_preference_android_studio_progress_bar">Ein Fortschrittsbalken ist ein visueller Indikator für den Fortschritt einer Aufgabe. In dieser Lektion lernen Sie, wie Sie sowohl horizontale als auch kreisförmige Fortschrittsbalken in Android verwenden.</string>
     <string name="summary_preference_android_studio_simple_notifications">Lernen Sie in dieser Lektion, wie Sie Benachrichtigungen in Ihrer Android-App verwenden. Entdecken Sie, wie Sie einen Benachrichtigungskanal und -builder erstellen und wie Sie Ihren Benutzern Benachrichtigungen anzeigen. Erkunden Sie die verschiedenen verfügbaren Optionen zur Anpassung Ihrer Benachrichtigungen.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Lernen Sie in dieser Lektion, wie Sie Benachrichtigungen im Posteingangsstil in Ihrer Android-App verwenden. Entdecken Sie, wie Sie einen Benachrichtigungskanal und -builder erstellen und wie Sie den Stil Ihrer Benachrichtigungen auf einen InboxStyle mit mehreren Textzeilen und einem Zusammenfassungstext einstellen. Erkunden Sie die verschiedenen verfügbaren Optionen zur Anpassung Ihrer Benachrichtigungen im Posteingangsstil.</string>
+    <string name="summary_preference_android_studio_bottom_navigation">Mit einer unteren Navigationsleiste kannst du schnell zwischen Hauptansichten deiner App wechseln.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">Eine Navigationsleiste gleitet von der Seite hinein und zeigt die wichtigsten Navigationsoptionen der App an.</string>
     <string name="summary_alert_dialog_close">Sind Sie sicher, dass Sie beenden möchten?</string>
     <string name="summary_alert_dialog_message">Dies ist die Nachricht, die Sie auf dem Bildschirm sehen werden!</string>
     <string name="summary_alert_dialog_require_restart">Damit die Änderungen wirksam werden, starten Sie bitte die App neu!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">Schreibeinheitstests mit JUnit und Espresso.</string>
     <string name="daily_tip_mvvm">Folgen Sie der MVVM-Architektur für den Aufrechterhaltungscode.</string>
     <string name="tip_of_the_day">Tipp des Tages</string>
+    <string name="quiz_title">Quiz</string>
+    <string name="next_question">Nächste Frage</string>
+    <string name="quiz_finished">Quiz abgeschlossen! Deine Punktzahl: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Keine weiteren Fragen, schau bei zukünftigen Updates vorbei.</string>
+    <string name="quiz_reminder_title">Tägliche Quiz-Erinnerung</string>
+    <string name="quiz_reminder_body">Komm zurück für das heutige Quiz!</string>
     <string name="other_apps_title">Weitere Apps des Entwicklers</string>
 </resources>

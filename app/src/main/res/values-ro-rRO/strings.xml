@@ -221,6 +221,10 @@
     <string name="labeled">Etichetate</string>
     <string name="selected">Selectat</string>
     <string name="unlabeled">Neetichetate</string>
+    <string name="navigation">Navigare</string>
+    <string name="bottom_navigation">Navigare de jos</string>
+    <string name="navigation_drawer">Meniu lateral</string>
+    <string name="dashboard">Tablou de bord</string>
     <string name="code_font">Font cod</string>
     <string name="language">Limbă</string>
     <string name="notifications">Notificări</string>
@@ -328,6 +332,8 @@
     <string name="summary_preference_android_studio_progress_bar">O bară de progres este un indicator vizual al progresului unei sarcini. În această lecție, veți învăța cum să utilizați atât barele de progres orizontale, cât și cele circulare în Android.</string>
     <string name="summary_preference_android_studio_simple_notifications">Aflați cum să utilizați notificările în aplicația dvs. Android cu această lecție. Descoperiți cum să creați un canal de notificare și un builder și cum să afișați notificări utilizatorilor dvs. Explorați diferitele opțiuni disponibile pentru personalizarea notificărilor dvs.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Aflați cum să utilizați notificările în stil cutie poștală în aplicația dvs. Android cu această lecție. Descoperiți cum să creați un canal de notificare și un builder și cum să setați stilul notificărilor dvs. la un InboxStyle cu mai multe rânduri de text și un text de rezumat. Explorați diferitele opțiuni disponibile pentru personalizarea notificărilor dvs. în stil cutie poștală.</string>
+    <string name="summary_preference_android_studio_bottom_navigation">O bară de navigare de jos îți permite să comuți rapid între vizualizările de nivel superior ale aplicației.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">Un meniu lateral glisează din partea laterală și afișează principalele opțiuni de navigare ale aplicației.</string>
     <string name="summary_alert_dialog_close">Ești sigur că vrei să ieși?</string>
     <string name="summary_alert_dialog_message">Acesta va fi mesajul pe care îl veți vedea pe ecran!</string>
     <string name="summary_alert_dialog_require_restart">Pentru a produce efect, vă rugăm să reporniți aplicația!</string>
@@ -404,5 +410,11 @@
     <string name="daily_tip_unit_tests">Scrieţi teste de unitate cu JUnit şi Espresso.</string>
     <string name="daily_tip_mvvm">Urmăriți arhitectura MVVM pentru un cod durabil.</string>
     <string name="tip_of_the_day">Sfat al zilei</string>
+    <string name="quiz_title">Chestionar</string>
+    <string name="next_question">Întrebarea următoare</string>
+    <string name="quiz_finished">Chestionar complet! Scorul tău: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Nu mai sunt întrebări, urmărește actualizările viitoare pentru mai multe.</string>
+    <string name="quiz_reminder_title">Memento zilnic pentru chestionar</string>
+    <string name="quiz_reminder_body">Revino pentru chestionarul de astăzi!</string>
     <string name="other_apps_title">Mai multe aplicații ale dezvoltatorului</string>
 </resources>

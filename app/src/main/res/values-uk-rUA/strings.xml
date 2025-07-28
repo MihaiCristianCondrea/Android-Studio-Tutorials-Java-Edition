@@ -242,6 +242,10 @@
     <string name="labeled">З підписами</string>
     <string name="selected">Вибрані</string>
     <string name="unlabeled">Без підписів</string>
+    <string name="navigation">Навігація</string>
+    <string name="bottom_navigation">Нижня навігація</string>
+    <string name="navigation_drawer">Бічне меню</string>
+    <string name="dashboard">Панель</string>
     <string name="code_font">Шрифт коду</string>
     <string name="language">Мова</string>
     <string name="notifications">Сповіщення</string>
@@ -356,6 +360,8 @@
     <string name="summary_preference_android_studio_progress_bar">Індикатор прогресу — це візуальний індикатор виконання завдання. У цьому уроці ви навчитеся використовувати як горизонтальні, так і кругові індикатори прогресу в Android.</string>
     <string name="summary_preference_android_studio_simple_notifications">Навчіться використовувати сповіщення у вашому додатку для Android за допомогою цього уроку. Дізнайтеся, як створити канал сповіщень та конструктор, а також як показувати сповіщення вашим користувачам. Дослідіть різні доступні варіанти для налаштування ваших сповіщень.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Навчіться використовувати сповіщення у стилі "вхідні" у вашому додатку для Android за допомогою цього уроку. Дізнайтеся, як створити канал сповіщень та конструктор, а також як встановити стиль ваших сповіщень на InboxStyle з кількома рядками тексту та текстом-резюме. Дослідіть різні доступні варіанти для налаштування ваших сповіщень у стилі "вхідні".</string>
+    <string name="summary_preference_android_studio_bottom_navigation">Панель нижньої навігації дозволяє швидко перемикатися між основними розділами програми.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">Бічне меню виїжджає з боку та показує основні параметри навігації програми.</string>
     <string name="summary_alert_dialog_close">Ви впевнені, що хочете вийти?</string>
     <string name="summary_alert_dialog_message">Це буде повідомлення, яке ви побачите на екрані!</string>
     <string name="summary_alert_dialog_require_restart">Щоб зміни набули чинності, будь ласка, перезапустіть додаток!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">Пишіть юніт-тести з JUnit та Espresso.</string>
     <string name="daily_tip_mvvm">Дотримуйтесь архітектури MVVM для коду, який легко підтримувати.</string>
     <string name="tip_of_the_day">Порада дня</string>
+    <string name="quiz_title">Вікторина</string>
+    <string name="next_question">Наступне запитання</string>
+    <string name="quiz_finished">Вікторину завершено! Ваш рахунок: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Більше питань немає, стежте за оновленнями.</string>
+    <string name="quiz_reminder_title">Щоденне нагадування про вікторину</string>
+    <string name="quiz_reminder_body">Поверніться на сьогоднішню вікторину!</string>
     <string name="other_apps_title">Інші додатки розробника</string>
 </resources>

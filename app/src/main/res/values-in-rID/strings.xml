@@ -221,6 +221,10 @@
     <string name="labeled">Berlabel</string>
     <string name="selected">Terpilih</string>
     <string name="unlabeled">Tidak berlabel</string>
+    <string name="navigation">Navigasi</string>
+    <string name="bottom_navigation">Navigasi Bawah</string>
+    <string name="navigation_drawer">Laci Navigasi</string>
+    <string name="dashboard">Dasbor</string>
     <string name="code_font">Font kode</string>
     <string name="language">Bahasa</string>
     <string name="notifications">Notifikasi</string>
@@ -328,6 +332,8 @@
     <string name="summary_preference_android_studio_progress_bar">Progress bar adalah indikator visual dari kemajuan suatu tugas. Dalam pelajaran ini, Anda akan belajar cara menggunakan progress bar horizontal dan melingkar di Android. </string>
     <string name="summary_preference_android_studio_simple_notifications">Pelajari cara menggunakan notifikasi di aplikasi Android Anda dengan pelajaran ini. Temukan cara membuat saluran notifikasi dan builder, serta cara menampilkan notifikasi kepada pengguna Anda. Jelajahi berbagai opsi yang tersedia untuk menyesuaikan notifikasi Anda.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Pelajari cara menggunakan notifikasi gaya kotak masuk di aplikasi Android Anda dengan pelajaran ini. Temukan cara membuat saluran notifikasi dan builder, dan cara mengatur gaya notifikasi Anda ke InboxStyle dengan beberapa baris teks dan teks ringkasan. Jelajahi berbagai opsi yang tersedia untuk menyesuaikan notifikasi gaya kotak masuk Anda.</string>
+    <string name="summary_preference_android_studio_bottom_navigation">Bilah navigasi bawah memungkinkan Anda dengan cepat beralih antar tampilan tingkat atas di aplikasi Anda.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">Laci navigasi meluncur dari samping dan menampilkan opsi navigasi utama aplikasi.</string>
     <string name="summary_alert_dialog_close">Apakah Anda yakin ingin keluar?</string>
     <string name="summary_alert_dialog_message">Ini akan menjadi pesan yang akan Anda lihat di layar!</string>
     <string name="summary_alert_dialog_require_restart">Agar efektif, harap mulai ulang aplikasi!</string>
@@ -404,5 +410,11 @@
     <string name="daily_tip_unit_tests">Tes unit tulis dengan JUnit dan Espresso.</string>
     <string name="daily_tip_mvvm">Ikuti arsitektur MVVM untuk kode yang dapat dipertahankan.</string>
     <string name="tip_of_the_day">Tip Hari</string>
+    <string name="quiz_title">Kuis</string>
+    <string name="next_question">Pertanyaan Selanjutnya</string>
+    <string name="quiz_finished">Kuis selesai! Skor Anda: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Tidak ada lagi pertanyaan, cek pembaruan selanjutnya untuk lebih.</string>
+    <string name="quiz_reminder_title">Pengingat Kuis Harian</string>
+    <string name="quiz_reminder_body">Kembali untuk kuis hari ini!</string>
     <string name="other_apps_title">Lebih banyak aplikasi oleh pengembang</string>
 </resources>

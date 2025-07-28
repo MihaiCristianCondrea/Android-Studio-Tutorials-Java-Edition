@@ -241,6 +241,10 @@
     <string name="labeled">Étiqueté</string>
     <string name="selected">Sélectionné</string>
     <string name="unlabeled">Non étiqueté</string>
+    <string name="navigation">Navigation</string>
+    <string name="bottom_navigation">Navigation inférieure</string>
+    <string name="navigation_drawer">Tiroir de navigation</string>
+    <string name="dashboard">Tableau de bord</string>
     <string name="code_font">Police du code</string>
     <string name="language">Langue</string>
     <string name="notifications">Notifications</string>
@@ -346,6 +350,8 @@
     <string name="summary_preference_android_studio_progress_bar">Une barre de progression est un indicateur visuel de l\'avancement d\'une tâche. Dans cette leçon, vous apprendrez à utiliser les barres de progression horizontales et circulaires dans Android.</string>
     <string name="summary_preference_android_studio_simple_notifications">Apprenez à utiliser les notifications dans votre application Android avec cette leçon. Découvrez comment créer un canal de notification et un constructeur, et comment afficher des notifications à vos utilisateurs. Explorez les différentes options disponibles pour personnaliser vos notifications.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Apprenez à utiliser les notifications de style boîte de réception dans votre application Android avec cette leçon. Découvrez comment créer un canal de notification et un constructeur, et comment définir le style de vos notifications sur un InboxStyle avec plusieurs lignes de texte et un texte récapitulatif. Explorez les différentes options disponibles pour personnaliser vos notifications de style boîte de réception.</string>
+    <string name="summary_preference_android_studio_bottom_navigation">Une barre de navigation inférieure vous permet de passer rapidement entre les vues principales de votre application.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">Un tiroir de navigation se glisse sur le côté et affiche les principales options de navigation de l'application.</string>
     <string name="summary_alert_dialog_close">Êtes-vous sûr de vouloir quitter ?</string>
     <string name="summary_alert_dialog_message">Ce sera le message que vous verrez à l\'écran !</string>
     <string name="summary_alert_dialog_require_restart">Pour que cela prenne effet, veuillez redémarrer l\'application !</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">Écrire des tests unitaires avec Junit et Espresso.</string>
     <string name="daily_tip_mvvm">Suivez l\'architecture MVVM pour maintenir le code.</string>
     <string name="tip_of_the_day">Astuce du jour</string>
+    <string name="quiz_title">Quiz</string>
+    <string name="next_question">Question suivante</string>
+    <string name="quiz_finished">Quiz terminé ! Votre score : %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Plus de questions, consultez les prochaines mises à jour pour plus.</string>
+    <string name="quiz_reminder_title">Rappel quotidien du quiz</string>
+    <string name="quiz_reminder_body">Revenez pour le quiz du jour !</string>
     <string name="other_apps_title">Plus d\'applications par le développeur</string>
 </resources>

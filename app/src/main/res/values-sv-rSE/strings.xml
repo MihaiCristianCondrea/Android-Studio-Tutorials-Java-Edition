@@ -242,6 +242,10 @@
     <string name="labeled">Med etikett</string>
     <string name="selected">Vald</string>
     <string name="unlabeled">Utan etikett</string>
+    <string name="navigation">Navigering</string>
+    <string name="bottom_navigation">Nedre navigering</string>
+    <string name="navigation_drawer">Navigeringsmeny</string>
+    <string name="dashboard">Instrumentpanel</string>
     <string name="code_font">Teckensnitt för kod</string>
     <string name="language">Språk</string>
     <string name="notifications">Notiser</string>
@@ -356,6 +360,8 @@
     <string name="summary_preference_android_studio_progress_bar">En förloppsindikator är en visuell indikator på en uppgifts framsteg. I den här lektionen lär du dig hur man använder både horisontella och cirkulära förloppsindikatorer i Android.</string>
     <string name="summary_preference_android_studio_simple_notifications">Lär dig hur du använder notiser i din Android-app med den här lektionen. Upptäck hur du skapar en notiskanal och en byggare, och hur du visar notiser för dina användare. Utforska de olika alternativen som finns tillgängliga för att anpassa dina notiser.</string>
     <string name="summary_preference_android_studio_inbox_notifications">Lär dig hur du använder notiser i inkorgsstil i din Android-app med den här lektionen. Upptäck hur du skapar en notiskanal och en byggare, och hur du ställer in stilen på dina notiser till en InboxStyle med flera textrader och en sammanfattningstext. Utforska de olika alternativen som finns tillgängliga för att anpassa dina notiser i inkorgsstil.</string>
+    <string name="summary_preference_android_studio_bottom_navigation">En nedre navigeringsrad låter dig snabbt växla mellan huvudvyerna i appen.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">En navigeringsmeny glider in från sidan och visar appens viktigaste navigeringsalternativ.</string>
     <string name="summary_alert_dialog_close">Är du säker på att du vill avsluta?</string>
     <string name="summary_alert_dialog_message">Detta kommer att vara meddelandet du ser på skärmen!</string>
     <string name="summary_alert_dialog_require_restart">För att träda i kraft, starta om appen!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">Skriv enhetstester med JUnit och Espresso.</string>
     <string name="daily_tip_mvvm">Följ MVVM-arkitekturen för underhållbar kod.</string>
     <string name="tip_of_the_day">Dagens tips</string>
+    <string name="quiz_title">Quiz</string>
+    <string name="next_question">Nästa fråga</string>
+    <string name="quiz_finished">Quiz klart! Ditt resultat: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Inga fler frågor, se kommande uppdateringar för mer.</string>
+    <string name="quiz_reminder_title">Daglig quizpåminnelse</string>
+    <string name="quiz_reminder_body">Kom tillbaka för dagens quiz!</string>
     <string name="other_apps_title">Fler appar av utvecklaren</string>
 </resources>

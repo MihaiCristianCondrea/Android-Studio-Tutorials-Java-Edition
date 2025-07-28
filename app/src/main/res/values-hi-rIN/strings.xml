@@ -221,6 +221,10 @@
     <string name="labeled">लेबल किया हुआ</string>
     <string name="selected">चयनित</string>
     <string name="unlabeled">लेबल रहित</string>
+    <string name="navigation">नेविगेशन</string>
+    <string name="bottom_navigation">निचला नेविगेशन</string>
+    <string name="navigation_drawer">नेविगेशन ड्रॉअर</string>
+    <string name="dashboard">डैशबोर्ड</string>
     <string name="code_font">कोड फ़ॉन्ट</string>
     <string name="language">भाषा</string>
     <string name="notifications">सूचनाएं</string>
@@ -328,6 +332,8 @@
     <string name="summary_preference_android_studio_progress_bar">एक प्रोग्रेस बार एक कार्य की प्रगति का एक दृश्य संकेतक है। इस पाठ में, आप Android में क्षैतिज और वृत्ताकार दोनों प्रोग्रेस बार का उपयोग करना सीखेंगे। </string>
     <string name="summary_preference_android_studio_simple_notifications">इस पाठ के साथ अपने Android ऐप में सूचनाओं का उपयोग करना सीखें। जानें कि एक सूचना चैनल और बिल्डर कैसे बनाएं, और अपने उपयोगकर्ताओं को सूचनाएं कैसे दिखाएं। अपनी सूचनाओं को अनुकूलित करने के लिए उपलब्ध विभिन्न विकल्पों का अन्वेषण करें।</string>
     <string name="summary_preference_android_studio_inbox_notifications">इस पाठ के साथ अपने Android ऐप में इनबॉक्स शैली की सूचनाओं का उपयोग करना सीखें। जानें कि एक सूचना चैनल और बिल्डर कैसे बनाएं, और अपनी सूचनाओं की शैली को कई पंक्तियों के पाठ और एक सारांश पाठ के साथ एक InboxStyle पर कैसे सेट करें। अपनी इनबॉक्स शैली की सूचनाओं को अनुकूलित करने के लिए उपलब्ध विभिन्न विकल्पों का अन्वेषण करें।</string>
+    <string name="summary_preference_android_studio_bottom_navigation">निचली नेविगेशन बार आपको ऐप में शीर्ष स्तर के दृश्य के बीच जल्दी से स्विच करने देती है।</string>
+    <string name="summary_preference_android_studio_navigation_drawer">नेविगेशन ड्रॉअर साइड से स्लाइड करता है और ऐप के मुख्य नेविगेशन विकल्प दिखाता है।</string>
     <string name="summary_alert_dialog_close">क्या आप निश्चित रूप से बाहर निकलना चाहते हैं?</string>
     <string name="summary_alert_dialog_message">यह वह संदेश होगा जो आपको स्क्रीन पर दिखाई देगा!</string>
     <string name="summary_alert_dialog_require_restart">प्रभावित होने के लिए कृपया ऐप को पुनः प्रारंभ करें!</string>
@@ -404,5 +410,11 @@
     <string name="daily_tip_unit_tests">JUnit and Espresso के साथ यूनिट परीक्षण लिखें।</string>
     <string name="daily_tip_mvvm">रखरखाव योग्य कोड के लिए MVVM वास्तुकला का पालन करें।</string>
     <string name="tip_of_the_day">दिन का सुझाव</string>
+    <string name="quiz_title">प्रश्नोत्तरी</string>
+    <string name="next_question">अगला प्रश्न</string>
+    <string name="quiz_finished">प्रश्नोत्तरी पूरी हुई! आपका स्कोर: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">कोई और प्रश्न नहीं, अधिक के लिए आगामी अपडेट देखें।</string>
+    <string name="quiz_reminder_title">दैनिक प्रश्नोत्तरी अनुस्मारक</string>
+    <string name="quiz_reminder_body">आज की प्रश्नोत्तरी के लिए वापस आएं!</string>
     <string name="other_apps_title">डेवलपर द्वारा अधिक एप्लिकेशन</string>
 </resources>

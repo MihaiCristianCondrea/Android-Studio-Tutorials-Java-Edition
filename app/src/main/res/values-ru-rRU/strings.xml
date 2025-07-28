@@ -221,6 +221,10 @@
     <string name="labeled">С подписями</string>
     <string name="selected">Выбрано</string>
     <string name="unlabeled">Без подписей</string>
+    <string name="navigation">Навигация</string>
+    <string name="bottom_navigation">Нижняя навигация</string>
+    <string name="navigation_drawer">Выдвижное меню</string>
+    <string name="dashboard">Панель управления</string>
     <string name="code_font">Шрифт кода</string>
     <string name="language">Язык</string>
     <string name="notifications">Уведомления</string>
@@ -328,6 +332,8 @@
     <string name="summary_preference_android_studio_progress_bar">Индикатор выполнения — это визуальный индикатор прогресса задачи. В этом уроке вы узнаете, как использовать как горизонтальные, так и круговые индикаторы выполнения в Android.</string>
     <string name="summary_preference_android_studio_simple_notifications">В этом уроке вы узнаете, как использовать уведомления в своем приложении Android. Узнайте, как создать канал уведомлений и builder, а также как показывать уведомления своим пользователям. Изучите различные доступные параметры для настройки ваших уведомлений.</string>
     <string name="summary_preference_android_studio_inbox_notifications">В этом уроке вы узнаете, как использовать уведомления в стиле "входящие" в своем приложении Android. Узнайте, как создать канал уведомлений и builder, а также как установить стиль ваших уведомлений на InboxStyle с несколькими строками текста и кратким текстом. Изучите различные доступные параметры для настройки ваших уведомлений в стиле "входящие".</string>
+    <string name="summary_preference_android_studio_bottom_navigation">Панель нижней навигации позволяет быстро переключаться между основными разделами приложения.</string>
+    <string name="summary_preference_android_studio_navigation_drawer">Выдвижное меню появляется сбоку и отображает основные параметры навигации приложения.</string>
     <string name="summary_alert_dialog_close">Вы уверены, что хотите выйти?</string>
     <string name="summary_alert_dialog_message">Это будет сообщение, которое вы увидите на экране!</string>
     <string name="summary_alert_dialog_require_restart">Для вступления в силу, пожалуйста, перезапустите приложение!</string>
@@ -404,5 +410,11 @@
     <string name="daily_tip_unit_tests">Пишите единичные тесты с JUnit и Espresso.</string>
     <string name="daily_tip_mvvm">Следуйте архитектуре MVVM для поддерживающего кода.</string>
     <string name="tip_of_the_day">День Победы</string>
+    <string name="quiz_title">Викторина</string>
+    <string name="next_question">Следующий вопрос</string>
+    <string name="quiz_finished">Викторина завершена! Ваш результат: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Вопросы закончились, ждите следующих обновлений.</string>
+    <string name="quiz_reminder_title">Ежедневное напоминание о викторине</string>
+    <string name="quiz_reminder_body">Возвращайтесь на сегодняшнюю викторину!</string>
     <string name="other_apps_title">Больше приложений от разработчика</string>
 </resources>

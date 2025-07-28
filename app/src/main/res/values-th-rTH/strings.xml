@@ -242,6 +242,10 @@
     <string name="labeled">มีป้ายกำกับ</string>
     <string name="selected">ที่เลือก</string>
     <string name="unlabeled">ไม่มีป้ายกำกับ</string>
+    <string name="navigation">การนำทาง</string>
+    <string name="bottom_navigation">แถบนำทางด้านล่าง</string>
+    <string name="navigation_drawer">ลิ้นชักนำทาง</string>
+    <string name="dashboard">แดชบอร์ด</string>
     <string name="code_font">แบบอักษรของโค้ด</string>
     <string name="language">ภาษา</string>
     <string name="notifications">การแจ้งเตือน</string>
@@ -356,6 +360,8 @@
     <string name="summary_preference_android_studio_progress_bar">แถบความคืบหน้าคือตัวบ่งชี้ภาพของความคืบหน้าของงาน ในบทเรียนนี้, คุณจะได้เรียนรู้วิธีใช้ทั้งแถบความคืบหน้าแนวนอนและวงกลมใน Android</string>
     <string name="summary_preference_android_studio_simple_notifications">เรียนรู้วิธีใช้การแจ้งเตือนในแอป Android ของคุณด้วยบทเรียนนี้ ค้นพบวิธีสร้างช่องทางการแจ้งเตือนและตัวสร้าง, และวิธีแสดงการแจ้งเตือนให้ผู้ใช้ของคุณเห็น สำรวจตัวเลือกต่างๆ ที่มีอยู่เพื่อปรับแต่งการแจ้งเตือนของคุณ</string>
     <string name="summary_preference_android_studio_inbox_notifications">เรียนรู้วิธีใช้การแจ้งเตือนสไตล์กล่องข้อความในแอป Android ของคุณด้วยบทเรียนนี้ ค้นพบวิธีสร้างช่องทางการแจ้งเตือนและตัวสร้าง, และวิธีตั้งค่าสไตล์ของการแจ้งเตือนของคุณเป็น InboxStyle ที่มีข้อความหลายบรรทัดและข้อความสรุป สำรวจตัวเลือกต่างๆ ที่มีอยู่เพื่อปรับแต่งการแจ้งเตือนสไตล์กล่องข้อความของคุณ</string>
+    <string name="summary_preference_android_studio_bottom_navigation">แถบนำทางด้านล่างช่วยให้คุณสลับระหว่างมุมมองหลักของแอปได้อย่างรวดเร็ว</string>
+    <string name="summary_preference_android_studio_navigation_drawer">ลิ้นชักนำทางเลื่อนมาจากด้านข้างและแสดงตัวเลือกการนำทางหลักของแอป</string>
     <string name="summary_alert_dialog_close">คุณแน่ใจหรือไม่ว่าต้องการออก?</string>
     <string name="summary_alert_dialog_message">นี่คือข้อความที่คุณจะเห็นบนหน้าจอ!</string>
     <string name="summary_alert_dialog_require_restart">เพื่อให้มีผล กรุณารีสตาร์ทแอป!</string>
@@ -429,5 +435,11 @@
     <string name="daily_tip_unit_tests">เขียนการทดสอบหน่วยด้วย JUnit และ Espresso</string>
     <string name="daily_tip_mvvm">ปฏิบัติตามสถาปัตยกรรม MVVM เพื่อโค้ดที่บำรุงรักษาง่าย</string>
     <string name="tip_of_the_day">เคล็ดลับประจำวัน</string>
+    <string name="quiz_title">แบบทดสอบ</string>
+    <string name="next_question">คำถามถัดไป</string>
+    <string name="quiz_finished">ทำแบบทดสอบเสร็จสิ้น! คะแนนของคุณ: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">ไม่มีคำถามเพิ่มเติม โปรดติดตามการอัปเดตต่อไป</string>
+    <string name="quiz_reminder_title">การแจ้งเตือนแบบทดสอบรายวัน</string>
+    <string name="quiz_reminder_body">กลับมาทำแบบทดสอบของวันนี้!</string>
     <string name="other_apps_title">แอปอื่นๆ จากนักพัฒนา</string>
 </resources>
