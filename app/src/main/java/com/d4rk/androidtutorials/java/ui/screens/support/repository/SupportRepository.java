@@ -9,12 +9,14 @@ import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
 import com.android.billingclient.api.BillingResult;
-import com.android.billingclient.api.SkuDetails;
-import com.android.billingclient.api.SkuDetailsParams;
+import com.android.billingclient.api.PendingPurchasesParams;
+import com.android.billingclient.api.ProductDetails;
+import com.android.billingclient.api.QueryProductDetailsParams;
 import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +27,7 @@ import java.util.Map;
 public class SupportRepository {
 
     private final Context context;
-    private final Map<String, SkuDetails> skuDetailsMap = new HashMap<>();
+    private final Map<String, ProductDetails> productDetailsMap = new HashMap<>();
     private BillingClient billingClient;
 
     public SupportRepository(Context context) {
@@ -41,7 +43,10 @@ public class SupportRepository {
         billingClient = BillingClient.newBuilder(context)
                 .setListener((billingResult, purchases) -> {
                 })
-                .enablePendingPurchases()
+                .enablePendingPurchases(
+                        PendingPurchasesParams.newBuilder()
+                                .enableOneTimeProducts()
+                                .build())
                 .build();
 
         billingClient.startConnection(new BillingClientStateListener() {
@@ -63,40 +68,52 @@ public class SupportRepository {
     }
 
     /**
-     * Query your SKU details for in-app items.
+     * Query your product details for in-app items.
      * Typically called after billing client is connected.
      */
-    public void querySkuDetails(List<String> skuList, OnSkuDetailsListener listener) {
+    public void queryProductDetails(List<String> productIds, OnProductDetailsListener listener) {
         if (billingClient == null || !billingClient.isReady()) {
             return;
         }
-        SkuDetailsParams params = SkuDetailsParams.newBuilder()
-                .setSkusList(skuList)
-                .setType(BillingClient.SkuType.INAPP)
+
+        List<QueryProductDetailsParams.Product> products = new ArrayList<>();
+        for (String id : productIds) {
+            products.add(QueryProductDetailsParams.Product.newBuilder()
+                    .setProductId(id)
+                    .setProductType(BillingClient.ProductType.INAPP)
+                    .build());
+        }
+
+        QueryProductDetailsParams params = QueryProductDetailsParams.newBuilder()
+                .setProductList(products)
                 .build();
 
-        billingClient.querySkuDetailsAsync(params, (billingResult, skuDetailsList) -> {
+        billingClient.queryProductDetailsAsync(params, (billingResult, productDetailsList) -> {
             if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
-                    && skuDetailsList != null) {
-                for (SkuDetails skuDetails : skuDetailsList) {
-                    skuDetailsMap.put(skuDetails.getSku(), skuDetails);
+                    && productDetailsList != null) {
+                for (ProductDetails productDetails : productDetailsList) {
+                    productDetailsMap.put(productDetails.getProductId(), productDetails);
                 }
                 if (listener != null) {
-                    listener.onSkuDetailsRetrieved(skuDetailsList);
+                    listener.onProductDetailsRetrieved(productDetailsList);
                 }
             }
         });
     }
 
     /**
-     * Launch the billing flow for a particular SKU.
+     * Launch the billing flow for a particular product.
      */
-    public void initiatePurchase(Activity activity, String sku) {
-        if (skuDetailsMap.containsKey(sku)) {
-            SkuDetails skuDetails = skuDetailsMap.get(sku);
-            if (skuDetails != null) {
+    public void initiatePurchase(Activity activity, String productId) {
+        if (productDetailsMap.containsKey(productId)) {
+            ProductDetails details = productDetailsMap.get(productId);
+            if (details != null) {
+                BillingFlowParams.ProductDetailsParams productParams =
+                        BillingFlowParams.ProductDetailsParams.newBuilder()
+                                .setProductDetails(details)
+                                .build();
                 BillingFlowParams flowParams = BillingFlowParams.newBuilder()
-                        .setSkuDetails(skuDetails)
+                        .setProductDetailsParamsList(List.of(productParams))
                         .build();
                 billingClient.launchBillingFlow(activity, flowParams);
             }
@@ -113,10 +130,10 @@ public class SupportRepository {
     }
 
     /**
-     * Callback interface for when SKU details are fetched.
+     * Callback interface for when product details are fetched.
      */
-    public interface OnSkuDetailsListener {
-        void onSkuDetailsRetrieved(List<SkuDetails> skuDetailsList);
+    public interface OnProductDetailsListener {
+        void onProductDetailsRetrieved(List<ProductDetails> productDetailsList);
     }
 
 }

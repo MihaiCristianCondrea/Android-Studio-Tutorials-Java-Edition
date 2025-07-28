@@ -10,7 +10,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.android.billingclient.api.SkuDetails;
+import com.android.billingclient.api.ProductDetails;
 import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
@@ -43,7 +43,7 @@ public class SupportActivity extends AppCompatActivity {
         binding.buttonWebAd.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/3p8bpjj"))));
 
-        supportViewModel.initBillingClient(this::querySkuDetails);
+        supportViewModel.initBillingClient(this::queryProductDetails);
 
         binding.buttonLowDonation.setOnClickListener(v -> initiatePurchase("low_donation"));
         binding.buttonNormalDonation.setOnClickListener(v -> initiatePurchase("normal_donation"));
@@ -51,25 +51,25 @@ public class SupportActivity extends AppCompatActivity {
         binding.buttonExtremeDonation.setOnClickListener(v -> initiatePurchase("extreme_donation"));
     }
 
-    private void querySkuDetails() {
-        List<String> skuList = List.of("low_donation", "normal_donation", "high_donation", "extreme_donation");
-        supportViewModel.querySkuDetails(skuList, skuDetailsList -> {
-            for (SkuDetails skuDetails : skuDetailsList) {
-                switch (skuDetails.getSku()) {
-                    case "low_donation" -> binding.buttonLowDonation.setText(skuDetails.getPrice());
-                    case "normal_donation" ->
-                            binding.buttonNormalDonation.setText(skuDetails.getPrice());
-                    case "high_donation" ->
-                            binding.buttonHighDonation.setText(skuDetails.getPrice());
-                    case "extreme_donation" ->
-                            binding.buttonExtremeDonation.setText(skuDetails.getPrice());
+    private void queryProductDetails() {
+        List<String> productIds = List.of("low_donation", "normal_donation", "high_donation", "extreme_donation");
+        supportViewModel.queryProductDetails(productIds, productDetailsList -> {
+            for (ProductDetails productDetails : productDetailsList) {
+                String price = productDetails.getOneTimePurchaseOfferDetails() != null
+                        ? productDetails.getOneTimePurchaseOfferDetails().getFormattedPrice()
+                        : "";
+                switch (productDetails.getProductId()) {
+                    case "low_donation" -> binding.buttonLowDonation.setText(price);
+                    case "normal_donation" -> binding.buttonNormalDonation.setText(price);
+                    case "high_donation" -> binding.buttonHighDonation.setText(price);
+                    case "extreme_donation" -> binding.buttonExtremeDonation.setText(price);
                 }
             }
         });
     }
 
-    private void initiatePurchase(String sku) {
-        supportViewModel.initiatePurchase(this, sku);
+    private void initiatePurchase(String productId) {
+        supportViewModel.initiatePurchase(this, productId);
     }
 
     @Override
