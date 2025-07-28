@@ -16,6 +16,7 @@ import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -75,20 +76,19 @@ public class SupportRepository {
             return;
         }
 
-        List<QueryProductDetailsParams.Product> products = productIds.stream()
-                .map(id -> QueryProductDetailsParams.Product.newBuilder()
-                        .setProductId(id)
-                        .setProductType(BillingClient.ProductType.INAPP)
-                        .build())
-                .toList();
+        List<QueryProductDetailsParams.Product> products = new ArrayList<>();
+        for (String id : productIds) {
+            products.add(QueryProductDetailsParams.Product.newBuilder()
+                    .setProductId(id)
+                    .setProductType(BillingClient.ProductType.INAPP)
+                    .build());
+        }
 
         QueryProductDetailsParams params = QueryProductDetailsParams.newBuilder()
                 .setProductList(products)
                 .build();
 
-        billingClient.queryProductDetailsAsync(params, result -> {
-            BillingResult billingResult = result.getBillingResult();
-            List<ProductDetails> productDetailsList = result.getProductDetailsList();
+        billingClient.queryProductDetailsAsync(params, (billingResult, productDetailsList) -> {
             if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
                     && productDetailsList != null) {
                 for (ProductDetails productDetails : productDetailsList) {
