@@ -85,9 +85,11 @@ public class SupportRepository {
                 .setProductList(products)
                 .build();
 
-        billingClient.queryProductDetailsAsync(params, (billingResult, productDetailsList) -> {
+        billingClient.queryProductDetailsAsync(params, result -> {
+            BillingResult billingResult = result.getBillingResult();
             if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
-                if (!productDetailsList.isEmpty()) {
+                List<ProductDetails> productDetailsList = result.getProductDetailsList();
+                if (productDetailsList != null && !productDetailsList.isEmpty()) {
                     for (ProductDetails productDetails : productDetailsList) {
                         productDetailsMap.put(productDetails.getProductId(), productDetails);
                     }
