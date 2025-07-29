@@ -76,10 +76,10 @@ public class HomeFragment extends Fragment {
             for (com.d4rk.androidtutorials.java.data.model.PromotedApp app : apps) {
                 com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding itemBinding =
                         com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding.inflate(inflater, container, false);
-                loadImage(app.iconUrl, itemBinding.appIcon);
-                itemBinding.appName.setText(app.name);
+                loadImage(app.iconUrl(), itemBinding.appIcon);
+                itemBinding.appName.setText(app.name());
                 itemBinding.appDescription.setVisibility(android.view.View.GONE);
-                itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName)));
+                itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName())));
                 container.addView(itemBinding.getRoot());
             }
         });
