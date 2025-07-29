@@ -17,6 +17,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,18 +40,21 @@ public class SupportRepository {
     public void initBillingClient(Runnable onConnected) {
         billingClient = BillingClient.newBuilder(context)
                 .setListener((billingResult, purchases) -> {
+                    // To be implemented in a later release
                 })
                 .enablePendingPurchases(
                         PendingPurchasesParams.newBuilder()
                                 .enableOneTimeProducts()
                                 .build())
+                // Added as a best practice from the official documentation for v8+
+                .enableAutoServiceReconnection()
                 .build();
 
         billingClient.startConnection(new BillingClientStateListener() {
             @Override
             public void onBillingSetupFinished(@NonNull BillingResult billingResult) {
                 if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
-                    // Billing service connected
+                    // The BillingClient is ready. You can query purchases here.
                     if (onConnected != null) {
                         onConnected.run();
                     }
@@ -59,7 +63,9 @@ public class SupportRepository {
 
             @Override
             public void onBillingServiceDisconnected() {
-                // Attempt reconnection or handle gracefully
+                // Try to restart the connection on the next request to
+                // Google Play by calling the startConnection() method.
+                // With enableAutoServiceReconnection(), this is handled automatically.
             }
         });
     }
@@ -73,23 +79,29 @@ public class SupportRepository {
             return;
         }
 
-        List<QueryProductDetailsParams.Product> products = new ArrayList<>();
+        List<QueryProductDetailsParams.Product> productList = new ArrayList<>();
         for (String id : productIds) {
-            products.add(QueryProductDetailsParams.Product.newBuilder()
-                    .setProductId(id)
-                    .setProductType(BillingClient.ProductType.INAPP)
-                    .build());
+            productList.add(
+                    QueryProductDetailsParams.Product.newBuilder()
+                            .setProductId(id)
+                            .setProductType(BillingClient.ProductType.INAPP)
+                            .build()
+            );
         }
 
         QueryProductDetailsParams params = QueryProductDetailsParams.newBuilder()
-                .setProductList(products)
+                .setProductList(productList)
                 .build();
 
-        billingClient.queryProductDetailsAsync(params, result -> {
-            BillingResult billingResult = result.getBillingResult();
+        // **FIXED**: The lambda now correctly accepts a single QueryProductDetailsResult
+        // object as the second parameter, directly matching the official documentation.
+        billingClient.queryProductDetailsAsync(params, (billingResult, queryProductDetailsResult) -> {
             if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
-                List<ProductDetails> productDetailsList = result.getProductDetailsList();
-                if (productDetailsList != null && !productDetailsList.isEmpty()) {
+
+                // The list of products is retrieved from the QueryProductDetailsResult object.
+                List<ProductDetails> productDetailsList = queryProductDetailsResult.getProductDetailsList();
+
+                if (!productDetailsList.isEmpty()) {
                     for (ProductDetails productDetails : productDetailsList) {
                         productDetailsMap.put(productDetails.getProductId(), productDetails);
                     }
@@ -97,28 +109,45 @@ public class SupportRepository {
                         listener.onProductDetailsRetrieved(productDetailsList);
                     }
                 }
+                // Optionally handle unfetched products if needed:
+                // List<UnfetchedProduct> unfetched = queryProductDetailsResult.getUnfetchedProductList();
             }
+            // Handle other billingResult response codes here if necessary.
         });
     }
+
 
     /**
      * Launch the billing flow for a particular product.
      */
     public void initiatePurchase(Activity activity, String productId) {
-        if (productDetailsMap.containsKey(productId)) {
-            ProductDetails details = productDetailsMap.get(productId);
-            if (details != null) {
-                BillingFlowParams.ProductDetailsParams productParams =
-                        BillingFlowParams.ProductDetailsParams.newBuilder()
-                                .setProductDetails(details)
-                                .build();
-                BillingFlowParams flowParams = BillingFlowParams.newBuilder()
-                        .setProductDetailsParamsList(List.of(productParams))
-                        .build();
-                billingClient.launchBillingFlow(activity, flowParams);
+        ProductDetails details = productDetailsMap.get(productId);
+        if (details != null) {
+            // Note: In a real app, you would select a specific offer. For simplicity,
+            // we're assuming there's only one or we're using the base plan.
+            // For subscriptions, this would be ProductDetails.getSubscriptionOfferDetails()
+            String offerToken = "";
+            if (details.getOneTimePurchaseOfferDetails() != null) {
+                offerToken = details.getOneTimePurchaseOfferDetails().getOfferToken();
             }
+
+            assert offerToken != null;
+            List<BillingFlowParams.ProductDetailsParams> productDetailsParamsList =
+                    Collections.singletonList(
+                            BillingFlowParams.ProductDetailsParams.newBuilder()
+                                    .setProductDetails(details)
+                                    .setOfferToken(offerToken)
+                                    .build()
+                    );
+
+            BillingFlowParams flowParams = BillingFlowParams.newBuilder()
+                    .setProductDetailsParamsList(productDetailsParamsList)
+                    .build();
+
+            billingClient.launchBillingFlow(activity, flowParams);
         }
     }
+
 
     /**
      * Initialize Mobile Ads (usually done once in your app, but
@@ -135,5 +164,4 @@ public class SupportRepository {
     public interface OnProductDetailsListener {
         void onProductDetailsRetrieved(List<ProductDetails> productDetailsList);
     }
-
 }
