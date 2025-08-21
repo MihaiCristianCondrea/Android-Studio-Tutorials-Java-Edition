@@ -11,6 +11,15 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ui.screens.main.repository.MainRepository;
+import com.d4rk.androidtutorials.java.domain.main.ApplyThemeSettingsUseCase;
+import com.d4rk.androidtutorials.java.domain.main.GetBottomNavLabelVisibilityUseCase;
+import com.d4rk.androidtutorials.java.domain.main.GetDefaultTabPreferenceUseCase;
+import com.d4rk.androidtutorials.java.domain.main.ApplyLanguageSettingsUseCase;
+import com.d4rk.androidtutorials.java.domain.main.ShouldShowStartupScreenUseCase;
+import com.d4rk.androidtutorials.java.domain.main.MarkStartupScreenShownUseCase;
+import com.d4rk.androidtutorials.java.domain.main.IsAppInstalledUseCase;
+import com.d4rk.androidtutorials.java.domain.main.BuildShortcutIntentUseCase;
+import com.d4rk.androidtutorials.java.domain.main.GetAppUpdateManagerUseCase;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.play.core.appupdate.AppUpdateManager;
 
@@ -21,6 +30,15 @@ import com.google.android.play.core.appupdate.AppUpdateManager;
 public class MainViewModel extends AndroidViewModel {
 
     private final MainRepository mainRepository;
+    private final ApplyThemeSettingsUseCase applyThemeSettingsUseCase;
+    private final GetBottomNavLabelVisibilityUseCase getBottomNavLabelVisibilityUseCase;
+    private final GetDefaultTabPreferenceUseCase getDefaultTabPreferenceUseCase;
+    private final ApplyLanguageSettingsUseCase applyLanguageSettingsUseCase;
+    private final ShouldShowStartupScreenUseCase shouldShowStartupScreenUseCase;
+    private final MarkStartupScreenShownUseCase markStartupScreenShownUseCase;
+    private final IsAppInstalledUseCase isAppInstalledUseCase;
+    private final BuildShortcutIntentUseCase buildShortcutIntentUseCase;
+    private final GetAppUpdateManagerUseCase getAppUpdateManagerUseCase;
     private final MutableLiveData<Integer> bottomNavLabelVisibility = new MutableLiveData<>();
     private final MutableLiveData<Integer> defaultNavDestination = new MutableLiveData<>();
     private final MutableLiveData<Boolean> themeChanged = new MutableLiveData<>();
@@ -28,6 +46,15 @@ public class MainViewModel extends AndroidViewModel {
     public MainViewModel(@NonNull Application application) {
         super(application);
         mainRepository = new MainRepository(application);
+        applyThemeSettingsUseCase = new ApplyThemeSettingsUseCase(mainRepository);
+        getBottomNavLabelVisibilityUseCase = new GetBottomNavLabelVisibilityUseCase(mainRepository);
+        getDefaultTabPreferenceUseCase = new GetDefaultTabPreferenceUseCase(mainRepository);
+        applyLanguageSettingsUseCase = new ApplyLanguageSettingsUseCase(mainRepository);
+        shouldShowStartupScreenUseCase = new ShouldShowStartupScreenUseCase(mainRepository);
+        markStartupScreenShownUseCase = new MarkStartupScreenShownUseCase(mainRepository);
+        isAppInstalledUseCase = new IsAppInstalledUseCase(mainRepository);
+        buildShortcutIntentUseCase = new BuildShortcutIntentUseCase(mainRepository);
+        getAppUpdateManagerUseCase = new GetAppUpdateManagerUseCase(mainRepository);
     }
 
     private static int getVisibilityMode(String labelVisibilityStr, String[] bottomNavBarLabelsValues) {
@@ -47,7 +74,7 @@ public class MainViewModel extends AndroidViewModel {
      * This can be called from onCreate() or similar lifecycle methods in MainActivity.
      */
     public void applySettings() {
-        boolean changedTheme = mainRepository.applyThemeSettings(
+        boolean changedTheme = applyThemeSettingsUseCase.invoke(
                 getApplication().getResources().getStringArray(R.array.preference_theme_values)
         );
         themeChanged.setValue(changedTheme);
@@ -57,7 +84,7 @@ public class MainViewModel extends AndroidViewModel {
         String[] bottomNavBarLabelsValues =
                 getApplication().getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
 
-        String labelVisibilityStr = mainRepository.getBottomNavLabelVisibility(labelKey, labelDefaultValue);
+        String labelVisibilityStr = getBottomNavLabelVisibilityUseCase.invoke(labelKey, labelDefaultValue);
         int visibilityMode = getVisibilityMode(labelVisibilityStr, bottomNavBarLabelsValues);
         bottomNavLabelVisibility.setValue(visibilityMode);
 
@@ -65,7 +92,7 @@ public class MainViewModel extends AndroidViewModel {
         String defaultTabValue = getApplication().getString(R.string.default_value_tab);
         String[] defaultTabValues = getApplication().getResources().getStringArray(R.array.preference_default_tab_values);
 
-        String startFragmentIdValue = mainRepository.getDefaultTabPreference(defaultTabKey, defaultTabValue);
+        String startFragmentIdValue = getDefaultTabPreferenceUseCase.invoke(defaultTabKey, defaultTabValue);
         int startFragmentId;
         if (startFragmentIdValue.equals(defaultTabValues[0])) {
             startFragmentId = R.id.navigation_home;
@@ -77,21 +104,21 @@ public class MainViewModel extends AndroidViewModel {
             startFragmentId = R.id.navigation_home;
         }
         defaultNavDestination.setValue(startFragmentId);
-        mainRepository.applyLanguageSettings();
+        applyLanguageSettingsUseCase.invoke();
     }
 
     /**
      * Checks if we need to show the startup screen.
      */
     public boolean shouldShowStartupScreen() {
-        return mainRepository.shouldShowStartupScreen();
+        return shouldShowStartupScreenUseCase.invoke();
     }
 
     /**
      * Mark startup screen as shown.
      */
     public void markStartupScreenShown() {
-        mainRepository.markStartupScreenShown();
+        markStartupScreenShownUseCase.invoke();
     }
 
     /**
@@ -99,14 +126,14 @@ public class MainViewModel extends AndroidViewModel {
      */
     public boolean isAndroidTutorialsInstalled() {
         PackageManager pm = getApplication().getPackageManager();
-        return mainRepository.isAppInstalled(pm, "com.d4rk.androidtutorials.java");
+        return isAppInstalledUseCase.invoke(pm, "com.d4rk.androidtutorials.java");
     }
 
     /**
      * Build the intent for the shortcut (opens app if installed, or fallback to the Play Store).
      */
     public Intent getShortcutIntent(boolean isInstalled) {
-        return mainRepository.buildShortcutIntent(isInstalled);
+        return buildShortcutIntentUseCase.invoke(isInstalled);
     }
 
     /**
@@ -134,6 +161,6 @@ public class MainViewModel extends AndroidViewModel {
      * Expose the AppUpdateManager if the Activity wants to directly check for in-app updates.
      */
     public AppUpdateManager getAppUpdateManager() {
-        return mainRepository.getAppUpdateManager();
+        return getAppUpdateManagerUseCase.invoke();
     }
 }

@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
+import com.d4rk.androidtutorials.java.domain.help.RequestReviewFlowUseCase;
+import com.d4rk.androidtutorials.java.domain.help.LaunchReviewFlowUseCase;
 import com.google.android.play.core.review.ReviewInfo;
 
 /**
@@ -16,8 +18,14 @@ import com.google.android.play.core.review.ReviewInfo;
  */
 public class HelpViewModel extends AndroidViewModel {
 
+    private final RequestReviewFlowUseCase requestReviewFlowUseCase;
+    private final LaunchReviewFlowUseCase launchReviewFlowUseCase;
+
     public HelpViewModel(@NonNull Application application) {
         super(application);
+        HelpRepository repository = new HelpRepository(application);
+        requestReviewFlowUseCase = new RequestReviewFlowUseCase(repository);
+        launchReviewFlowUseCase = new LaunchReviewFlowUseCase(repository);
     }
 
     /**
@@ -25,15 +33,13 @@ public class HelpViewModel extends AndroidViewModel {
      * On failure, handle the exception (like fallback to the Play Store).
      */
     public void requestReviewFlow(Activity activity, HelpRepository.OnReviewInfoListener listener) {
-        HelpRepository repository = new HelpRepository(activity);
-        repository.requestReviewFlow(listener);
+        requestReviewFlowUseCase.invoke(activity, listener);
     }
 
     /**
      * Launches the in-app review flow with the given ReviewInfo.
      */
     public void launchReviewFlow(Activity activity, ReviewInfo info) {
-        HelpRepository repository = new HelpRepository(activity);
-        repository.launchReviewFlow(activity, info);
+        launchReviewFlowUseCase.invoke(activity, info);
     }
 }
