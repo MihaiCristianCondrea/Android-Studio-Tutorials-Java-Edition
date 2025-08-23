@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ui.screens.help.repository;
 
 import android.app.Activity;
+import android.content.Context;
 
 import androidx.annotation.NonNull;
 
@@ -15,8 +16,8 @@ public class HelpRepository {
 
     private final ReviewManager reviewManager;
 
-    public HelpRepository(@NonNull Activity activity) {
-        this.reviewManager = ReviewManagerFactory.create(activity);
+    public HelpRepository(@NonNull Context context) {
+        this.reviewManager = ReviewManagerFactory.create(context);
     }
 
     /**

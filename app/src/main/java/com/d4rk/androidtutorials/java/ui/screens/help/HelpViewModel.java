@@ -32,8 +32,8 @@ public class HelpViewModel extends AndroidViewModel {
      * Requests a review flow. On success, you get a ReviewInfo.
      * On failure, handle the exception (like fallback to the Play Store).
      */
-    public void requestReviewFlow(Activity activity, HelpRepository.OnReviewInfoListener listener) {
-        requestReviewFlowUseCase.invoke(activity, listener);
+    public void requestReviewFlow(HelpRepository.OnReviewInfoListener listener) {
+        requestReviewFlowUseCase.invoke(listener);
     }
 
     /**

@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.domain.help;
 
-import android.app.Activity;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
 
 /** Requests the Google Play review flow. */
@@ -11,7 +10,7 @@ public class RequestReviewFlowUseCase {
         this.repository = repository;
     }
 
-    public void invoke(Activity activity, HelpRepository.OnReviewInfoListener listener) {
-        repository.requestReviewFlow(activity, listener);
+    public void invoke(HelpRepository.OnReviewInfoListener listener) {
+        repository.requestReviewFlow(listener);
     }
 }
