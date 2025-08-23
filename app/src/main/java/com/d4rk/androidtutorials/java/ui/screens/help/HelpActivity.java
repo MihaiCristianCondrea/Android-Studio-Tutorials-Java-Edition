@@ -164,7 +164,7 @@ public class HelpActivity extends AppCompatActivity {
                     if (requireActivity() instanceof HelpActivity helpActivity) {
                         HelpViewModel vm = helpActivity.getHelpViewModel();
 
-                        vm.requestReviewFlow(helpActivity, new HelpRepository.OnReviewInfoListener() {
+                        vm.requestReviewFlow(new HelpRepository.OnReviewInfoListener() {
                             @Override
                             public void onSuccess(ReviewInfo info) {
                                 vm.launchReviewFlow(helpActivity, info);
