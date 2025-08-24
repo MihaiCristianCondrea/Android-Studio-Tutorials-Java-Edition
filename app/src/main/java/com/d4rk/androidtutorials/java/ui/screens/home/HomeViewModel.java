@@ -11,6 +11,8 @@ import androidx.lifecycle.MutableLiveData;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 import com.d4rk.androidtutorials.java.ui.screens.home.repository.HomeRepository;
+import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +21,8 @@ import java.util.List;
 public class HomeViewModel extends AndroidViewModel {
 
     private final HomeRepository homeRepository;
+    private final GetDailyTipUseCase getDailyTipUseCase;
+    private final GetPromotedAppsUseCase getPromotedAppsUseCase;
 
     private final MutableLiveData<String> announcementTitle = new MutableLiveData<>();
     private final MutableLiveData<String> announcementSubtitle = new MutableLiveData<>();
@@ -28,12 +32,14 @@ public class HomeViewModel extends AndroidViewModel {
     public HomeViewModel(@NonNull Application application) {
         super(application);
         homeRepository = new HomeRepository(application);
+        getDailyTipUseCase = new GetDailyTipUseCase(homeRepository);
+        getPromotedAppsUseCase = new GetPromotedAppsUseCase(homeRepository);
 
         announcementTitle.setValue(application.getString(R.string.announcement_title));
         announcementSubtitle.setValue(application.getString(R.string.announcement_subtitle));
-        dailyTip.setValue(homeRepository.getDailyTip());
+        dailyTip.setValue(getDailyTipUseCase.invoke());
 
-        homeRepository.fetchPromotedApps(apps -> {
+        getPromotedAppsUseCase.invoke(apps -> {
             if (apps.isEmpty()) {
                 promotedApps.postValue(apps);
                 return;

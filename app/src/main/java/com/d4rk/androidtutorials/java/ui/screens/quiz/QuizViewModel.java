@@ -9,6 +9,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
 import com.d4rk.androidtutorials.java.ui.screens.quiz.repository.QuizRepository;
+import com.d4rk.androidtutorials.java.domain.quiz.LoadQuizQuestionsUseCase;
 
 import java.util.List;
 
@@ -20,11 +21,13 @@ public class QuizViewModel extends AndroidViewModel {
     private final List<QuizQuestion> questions;
     private final MutableLiveData<Integer> currentIndex = new MutableLiveData<>(0);
     private final MutableLiveData<Integer> score = new MutableLiveData<>(0);
+    private final LoadQuizQuestionsUseCase loadQuizQuestionsUseCase;
 
     public QuizViewModel(@NonNull Application application) {
         super(application);
         QuizRepository repository = new QuizRepository(application);
-        questions = repository.loadQuestions();
+        loadQuizQuestionsUseCase = new LoadQuizQuestionsUseCase(repository);
+        questions = loadQuizQuestionsUseCase.invoke();
     }
 
     public QuizQuestion getCurrentQuestion() {

@@ -41,6 +41,16 @@ Our app is designed to be easy to use and lightweight. Plus, it's free and openâ
 
 Download Android Studio Tutorials: Java Edition from the Google Play Store and begin your Android development journey today. It's free, easy to use, and perfect for beginners.
 
+## Architecture
+
+The app follows the modern layered architecture recommended by Google. The UI layer observes
+immutable state from ViewModels. Business logic is encapsulated in use case classes within the
+domain layer, which interact with repositories in the data layer. Each screen now exposes its
+operations through a small set of use cases. This pattern was inspired by the
+[Android Clean Architecture](https://github.com/android10/Android-CleanArchitecture) sample but
+implemented in a simplified form to avoid adding heavy dependencies. The result keeps the UI
+simple and ensures a clear separation of concerns across the whole app.
+
 ## Feedback
 
 We are constantly updating and improving Android Studio Tutorials: Java Edition to give you the best possible experience. If you have suggested features or improvements, please leave a review. If something isn't working correctly, let us know so we can fix it.

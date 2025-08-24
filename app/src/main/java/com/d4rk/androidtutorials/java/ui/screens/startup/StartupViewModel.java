@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 
 import com.d4rk.androidtutorials.java.ui.screens.startup.repository.StartupRepository;
+import com.d4rk.androidtutorials.java.domain.startup.RequestConsentInfoUseCase;
+import com.d4rk.androidtutorials.java.domain.startup.LoadConsentFormUseCase;
 import com.google.android.ump.ConsentRequestParameters;
 
 /**
@@ -16,8 +18,14 @@ import com.google.android.ump.ConsentRequestParameters;
  */
 public class StartupViewModel extends AndroidViewModel {
 
+    private final RequestConsentInfoUseCase requestConsentInfoUseCase;
+    private final LoadConsentFormUseCase loadConsentFormUseCase;
+
     public StartupViewModel(@NonNull Application application) {
         super(application);
+        StartupRepository repository = new StartupRepository(application);
+        requestConsentInfoUseCase = new RequestConsentInfoUseCase(repository);
+        loadConsentFormUseCase = new LoadConsentFormUseCase(repository);
     }
 
     /**
@@ -27,20 +35,13 @@ public class StartupViewModel extends AndroidViewModel {
                                          ConsentRequestParameters params,
                                          Runnable onSuccess,
                                          StartupRepository.OnFormError onError) {
-        StartupRepository localRepo = new StartupRepository(activity);
-        localRepo.requestConsentInfoUpdate(
-                activity,
-                params,
-                onSuccess,
-                onError
-        );
+        requestConsentInfoUseCase.invoke(activity, params, onSuccess, onError);
     }
 
     /**
      * Load the consent form (and show it if required).
      */
     public void loadConsentForm(Activity activity, StartupRepository.OnFormError onError) {
-        StartupRepository localRepo = new StartupRepository(activity);
-        localRepo.loadConsentForm(activity, onError);
+        loadConsentFormUseCase.invoke(activity, onError);
     }
 }
