@@ -8,7 +8,10 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
-import com.d4rk.androidtutorials.java.ui.screens.quiz.repository.QuizRepository;
+import com.d4rk.androidtutorials.java.data.repository.DefaultQuizRepository;
+import com.d4rk.androidtutorials.java.data.repository.QuizRepository;
+import com.d4rk.androidtutorials.java.data.source.DefaultQuizLocalDataSource;
+import com.d4rk.androidtutorials.java.data.source.QuizLocalDataSource;
 import com.d4rk.androidtutorials.java.domain.quiz.LoadQuizQuestionsUseCase;
 
 import java.util.List;
@@ -25,7 +28,8 @@ public class QuizViewModel extends AndroidViewModel {
 
     public QuizViewModel(@NonNull Application application) {
         super(application);
-        QuizRepository repository = new QuizRepository(application);
+        QuizLocalDataSource local = new DefaultQuizLocalDataSource(application.getAssets());
+        QuizRepository repository = new DefaultQuizRepository(local);
         loadQuizQuestionsUseCase = new LoadQuizQuestionsUseCase(repository);
         questions = loadQuizQuestionsUseCase.invoke();
     }

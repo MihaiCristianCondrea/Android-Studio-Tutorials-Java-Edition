@@ -1,6 +1,6 @@
-package com.d4rk.androidtutorials.java.ui.screens.quiz.repository;
+package com.d4rk.androidtutorials.java.data.source;
 
-import android.content.Context;
+import android.content.res.AssetManager;
 
 import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
 
@@ -16,25 +16,21 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Repository responsible for loading quiz question data from JSON assets.
+ * Reads quiz questions from the assets folder.
  */
-public class QuizRepository {
+public class DefaultQuizLocalDataSource implements QuizLocalDataSource {
 
-    private final Context context;
+    private final AssetManager assetManager;
 
-    public QuizRepository(Context context) {
-        this.context = context.getApplicationContext();
+    public DefaultQuizLocalDataSource(AssetManager assetManager) {
+        this.assetManager = assetManager;
     }
 
-    /**
-     * Loads the quiz questions from the assets folder.
-     */
+    @Override
     public List<QuizQuestion> loadQuestions() {
-        try {
-            InputStream is = context.getAssets().open("quiz_questions.json");
+        try (InputStream is = assetManager.open("quiz_questions.json")) {
             byte[] buffer = new byte[is.available()];
             int read = is.read(buffer);
-            is.close();
             String json = new String(buffer, 0, read, StandardCharsets.UTF_8);
             JSONArray array = new JSONArray(json);
             List<QuizQuestion> result = new ArrayList<>();

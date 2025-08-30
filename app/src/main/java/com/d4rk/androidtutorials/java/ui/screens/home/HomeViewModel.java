@@ -8,9 +8,15 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.android.volley.toolbox.Volley;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
-import com.d4rk.androidtutorials.java.ui.screens.home.repository.HomeRepository;
+import com.d4rk.androidtutorials.java.data.repository.DefaultHomeRepository;
+import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
+import com.d4rk.androidtutorials.java.data.source.DefaultHomeLocalDataSource;
+import com.d4rk.androidtutorials.java.data.source.DefaultHomeRemoteDataSource;
+import com.d4rk.androidtutorials.java.data.source.HomeLocalDataSource;
+import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource;
 import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
 import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
 
@@ -31,7 +37,12 @@ public class HomeViewModel extends AndroidViewModel {
 
     public HomeViewModel(@NonNull Application application) {
         super(application);
-        homeRepository = new HomeRepository(application);
+        HomeRemoteDataSource remote = new DefaultHomeRemoteDataSource(
+                Volley.newRequestQueue(application),
+                "https://raw.githubusercontent.com/D4rK7355608/com.d4rk.apis/refs/heads/main/App%20Toolkit/release/en/home/api_android_apps.json"
+        );
+        HomeLocalDataSource local = new DefaultHomeLocalDataSource(application);
+        homeRepository = new DefaultHomeRepository(remote, local);
         getDailyTipUseCase = new GetDailyTipUseCase(homeRepository);
         getPromotedAppsUseCase = new GetPromotedAppsUseCase(homeRepository);
 
