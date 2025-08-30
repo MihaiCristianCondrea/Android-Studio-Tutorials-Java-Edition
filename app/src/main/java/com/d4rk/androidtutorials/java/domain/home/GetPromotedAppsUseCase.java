@@ -1,7 +1,7 @@
 package com.d4rk.androidtutorials.java.domain.home;
 
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
-import com.d4rk.androidtutorials.java.ui.screens.home.repository.HomeRepository;
+import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
 
 import java.util.List;
 
