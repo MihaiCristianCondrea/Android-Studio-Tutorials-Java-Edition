@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ui.screens.startup.repository;
 
 import android.app.Activity;
+import android.content.Context;
 
 import com.google.android.ump.ConsentForm;
 import com.google.android.ump.ConsentInformation;
@@ -17,8 +18,8 @@ public class StartupRepository {
     private final ConsentInformation consentInformation;
     private ConsentForm consentForm;
 
-    public StartupRepository(Activity activity) {
-        consentInformation = UserMessagingPlatform.getConsentInformation(activity);
+    public StartupRepository(Context context) {
+        consentInformation = UserMessagingPlatform.getConsentInformation(context);
     }
 
     /**

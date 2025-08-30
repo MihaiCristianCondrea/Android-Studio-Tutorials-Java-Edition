@@ -7,6 +7,9 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 
 import com.d4rk.androidtutorials.java.ui.screens.settings.repository.SettingsRepository;
+import com.d4rk.androidtutorials.java.domain.settings.OnPreferenceChangedUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.GetSharedPreferencesUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.ApplyConsentUseCase;
 
 
 /**
@@ -16,10 +19,16 @@ import com.d4rk.androidtutorials.java.ui.screens.settings.repository.SettingsRep
 public class SettingsViewModel extends AndroidViewModel {
 
     private final SettingsRepository settingsRepository;
+    private final OnPreferenceChangedUseCase onPreferenceChangedUseCase;
+    private final GetSharedPreferencesUseCase getSharedPreferencesUseCase;
+    private final ApplyConsentUseCase applyConsentUseCase;
 
     public SettingsViewModel(@NonNull Application application) {
         super(application);
         settingsRepository = new SettingsRepository(application);
+        onPreferenceChangedUseCase = new OnPreferenceChangedUseCase(settingsRepository);
+        getSharedPreferencesUseCase = new GetSharedPreferencesUseCase(settingsRepository);
+        applyConsentUseCase = new ApplyConsentUseCase(settingsRepository);
     }
 
     /**
@@ -28,15 +37,14 @@ public class SettingsViewModel extends AndroidViewModel {
      */
     public boolean onPreferenceChanged(String key) {
         if (key == null) return false;
-        settingsRepository.handlePreferenceChange(key);
-        return settingsRepository.applyTheme();
+        return onPreferenceChangedUseCase.invoke(key);
     }
 
     public SharedPreferences getSharedPreferences() {
-        return settingsRepository.getSharedPreferences();
+        return getSharedPreferencesUseCase.invoke();
     }
 
     public void applyConsent() {
-        settingsRepository.applyConsent();
+        applyConsentUseCase.invoke();
     }
 }
