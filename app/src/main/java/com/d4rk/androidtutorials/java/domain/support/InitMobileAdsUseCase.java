@@ -1,7 +1,7 @@
 package com.d4rk.androidtutorials.java.domain.support;
 
 import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
-import com.d4rk.androidtutorials.java.ui.screens.support.repository.SupportRepository;
+import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 
 /** Initializes Google Mobile Ads. */
 public class InitMobileAdsUseCase {

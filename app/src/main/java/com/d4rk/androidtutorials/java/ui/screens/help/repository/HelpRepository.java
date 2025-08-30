@@ -12,7 +12,7 @@ import com.google.android.play.core.review.ReviewManagerFactory;
 /**
  * Repository for the Help screen. Manages the ReviewManager and in-app review flow.
  */
-public class HelpRepository {
+public class HelpRepository implements com.d4rk.androidtutorials.java.data.repository.HelpRepository {
 
     private final ReviewManager reviewManager;
 
@@ -25,7 +25,7 @@ public class HelpRepository {
      * onSuccess -> returns the ReviewInfo to the caller
      * onFailure -> callback with exception
      */
-    public void requestReviewFlow(@NonNull OnReviewInfoListener listener) {
+    public void requestReviewFlow(@NonNull com.d4rk.androidtutorials.java.data.repository.HelpRepository.OnReviewInfoListener listener) {
         reviewManager.requestReviewFlow()
                 .addOnSuccessListener(listener::onSuccess)
                 .addOnFailureListener(listener::onFailure);
@@ -42,13 +42,4 @@ public class HelpRepository {
         reviewManager.launchReviewFlow(activity, reviewInfo);
     }
 
-    /**
-     * Simple callback interface to deliver success or failure
-     * when requesting a ReviewFlow.
-     */
-    public interface OnReviewInfoListener {
-        void onSuccess(ReviewInfo info);
-
-        void onFailure(Exception e);
-    }
 }

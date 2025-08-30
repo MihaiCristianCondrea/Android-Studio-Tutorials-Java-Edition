@@ -1,6 +1,6 @@
 package com.d4rk.androidtutorials.java.domain.support;
 
-import com.d4rk.androidtutorials.java.ui.screens.support.repository.SupportRepository;
+import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 
 /** Initializes billing client and invokes callback when connected. */
 public class InitBillingClientUseCase {

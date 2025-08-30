@@ -18,7 +18,7 @@ import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
  * Repository class that handles data operations such as SharedPreferences,
  * app update checks, etc.
  */
-public class MainRepository {
+public class MainRepository implements com.d4rk.androidtutorials.java.data.repository.MainRepository {
 
     private final Context context;
     private final SharedPreferences defaultSharedPrefs;

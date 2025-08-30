@@ -1,7 +1,7 @@
 package com.d4rk.androidtutorials.java.domain.main;
 
 import android.content.Intent;
-import com.d4rk.androidtutorials.java.ui.screens.main.repository.MainRepository;
+import com.d4rk.androidtutorials.java.data.repository.MainRepository;
 
 /** Creates an intent for the app shortcut. */
 public class BuildShortcutIntentUseCase {

@@ -1,6 +1,6 @@
 package com.d4rk.androidtutorials.java.domain.settings;
 
-import com.d4rk.androidtutorials.java.ui.screens.settings.repository.SettingsRepository;
+import com.d4rk.androidtutorials.java.data.repository.SettingsRepository;
 
 /** Applies the Firebase consent settings. */
 public class ApplyConsentUseCase {

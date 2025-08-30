@@ -16,7 +16,7 @@ import com.d4rk.androidtutorials.java.R;
  * Repository that handles reading/writing preferences (e.g., theme, language)
  * and applies the changes (e.g., calls setDefaultNightMode).
  */
-public class SettingsRepository {
+public class SettingsRepository implements com.d4rk.androidtutorials.java.data.repository.SettingsRepository {
 
     private final Context context;
     private final SharedPreferences sharedPreferences;

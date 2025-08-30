@@ -1,6 +1,6 @@
 package com.d4rk.androidtutorials.java.domain.main;
 
-import com.d4rk.androidtutorials.java.ui.screens.main.repository.MainRepository;
+import com.d4rk.androidtutorials.java.data.repository.MainRepository;
 
 /** Returns bottom navigation label visibility preference. */
 public class GetBottomNavLabelVisibilityUseCase {

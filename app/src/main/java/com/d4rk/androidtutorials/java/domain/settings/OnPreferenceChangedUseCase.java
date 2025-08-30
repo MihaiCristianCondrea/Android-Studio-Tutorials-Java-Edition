@@ -1,6 +1,6 @@
 package com.d4rk.androidtutorials.java.domain.settings;
 
-import com.d4rk.androidtutorials.java.ui.screens.settings.repository.SettingsRepository;
+import com.d4rk.androidtutorials.java.data.repository.SettingsRepository;
 
 /** Handles a preference change and returns true if theme changed. */
 public class OnPreferenceChangedUseCase {

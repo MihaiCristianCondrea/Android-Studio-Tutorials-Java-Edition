@@ -13,7 +13,7 @@ import com.google.android.ump.UserMessagingPlatform;
  * Repository that handles consent logic for the startup screen.
  * It keeps references to ConsentInformation and ConsentForm.
  */
-public class StartupRepository {
+public class StartupRepository implements com.d4rk.androidtutorials.java.data.repository.StartupRepository {
 
     private final ConsentInformation consentInformation;
     private ConsentForm consentForm;
@@ -33,7 +33,7 @@ public class StartupRepository {
     public void requestConsentInfoUpdate(Activity activity,
                                          ConsentRequestParameters params,
                                          Runnable onSuccess,
-                                         OnFormError onError) {
+                                         com.d4rk.androidtutorials.java.data.repository.StartupRepository.OnFormError onError) {
         consentInformation.requestConsentInfoUpdate(
                 activity,
                 params,
@@ -55,7 +55,7 @@ public class StartupRepository {
      * @param activity the current Activity
      * @param onError  callback invoked if there's a problem loading or showing the form
      */
-    public void loadConsentForm(Activity activity, OnFormError onError) {
+    public void loadConsentForm(Activity activity, com.d4rk.androidtutorials.java.data.repository.StartupRepository.OnFormError onError) {
         UserMessagingPlatform.loadConsentForm(
                 activity,
                 form -> {
@@ -76,10 +76,4 @@ public class StartupRepository {
         );
     }
 
-    /**
-     * Simple functional interface for delivering form errors back to the caller.
-     */
-    public interface OnFormError {
-        void onFormError(FormError error);
-    }
 }
