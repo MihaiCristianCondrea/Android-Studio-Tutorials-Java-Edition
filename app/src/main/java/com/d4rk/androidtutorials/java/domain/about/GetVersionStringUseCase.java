@@ -1,6 +1,6 @@
 package com.d4rk.androidtutorials.java.domain.about;
 
-import com.d4rk.androidtutorials.java.ui.screens.about.repository.AboutRepository;
+import com.d4rk.androidtutorials.java.data.repository.AboutRepository;
 
 /** Returns the formatted app version string. */
 public class GetVersionStringUseCase {

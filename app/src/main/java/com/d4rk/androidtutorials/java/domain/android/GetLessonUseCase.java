@@ -1,6 +1,6 @@
 package com.d4rk.androidtutorials.java.domain.android;
 
-import com.d4rk.androidtutorials.java.ui.screens.android.repository.LessonRepository;
+import com.d4rk.androidtutorials.java.data.repository.LessonRepository;
 
 /** Retrieves lesson data by name. */
 public class GetLessonUseCase {

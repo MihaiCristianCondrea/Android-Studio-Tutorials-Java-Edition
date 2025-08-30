@@ -1,7 +1,7 @@
 package com.d4rk.androidtutorials.java.domain.support;
 
 import java.util.List;
-import com.d4rk.androidtutorials.java.ui.screens.support.repository.SupportRepository;
+import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 
 /** Queries in-app product details. */
 public class QueryProductDetailsUseCase {

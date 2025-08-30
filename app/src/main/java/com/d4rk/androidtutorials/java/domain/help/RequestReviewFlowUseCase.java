@@ -1,6 +1,6 @@
 package com.d4rk.androidtutorials.java.domain.help;
 
-import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
+import com.d4rk.androidtutorials.java.data.repository.HelpRepository;
 
 /** Requests the Google Play review flow. */
 public class RequestReviewFlowUseCase {

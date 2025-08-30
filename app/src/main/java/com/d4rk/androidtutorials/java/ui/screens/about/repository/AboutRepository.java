@@ -12,7 +12,7 @@ import java.util.Locale;
 /**
  * Repository for the "About" screen. Provides version info, date strings, etc.
  */
-public class AboutRepository {
+public class AboutRepository implements com.d4rk.androidtutorials.java.data.repository.AboutRepository {
 
     private final Context context;
 

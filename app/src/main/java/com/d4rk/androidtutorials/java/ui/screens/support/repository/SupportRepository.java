@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SupportRepository {
+public class SupportRepository implements com.d4rk.androidtutorials.java.data.repository.SupportRepository {
 
     private final Context context;
     private final Map<String, ProductDetails> productDetailsMap = new HashMap<>();
@@ -74,7 +74,7 @@ public class SupportRepository {
      * Query your product details for in-app items.
      * Typically called after billing client is connected.
      */
-    public void queryProductDetails(List<String> productIds, OnProductDetailsListener listener) {
+    public void queryProductDetails(List<String> productIds, com.d4rk.androidtutorials.java.data.repository.SupportRepository.OnProductDetailsListener listener) {
         if (billingClient == null || !billingClient.isReady()) {
             return;
         }
@@ -158,10 +158,4 @@ public class SupportRepository {
         binding.largeBannerAd.loadAd(new AdRequest.Builder().build());
     }
 
-    /**
-     * Callback interface for when product details are fetched.
-     */
-    public interface OnProductDetailsListener {
-        void onProductDetailsRetrieved(List<ProductDetails> productDetailsList);
-    }
 }
