@@ -492,7 +492,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="Fix compilation errors, update Gradle, and refactor code&#10;&#10;This commit addresses several issues and improvements:&#10;&#10;- **Gradle Update:** Upgraded Gradle wrapper to version 8.14.3.&#10;- **CI Fixes:**&#10;    - Resolved compilation errors in `SupportRepository.java` by updating the `queryProductDetailsAsync` callback to correctly handle the `productDetailsList`.&#10;    - Corrected the usage of `Gravity.START` to `GravityCompat.START` in `NavigationDrawerActivity.java`.&#10;- **Code Refactoring:**&#10;    - Replaced the deprecated `onBackPressed()` method in `MainActivity.java` with the newer `OnBackPressedCallback`.&#10;    - Converted the `PromotedApp` class to a Java record for conciseness.&#10;    - Removed unused private `binding` fields from several Fragment classes.&#10;    - Added a null check for the `preference` parameter in `MainRepository.java` to prevent potential `NullPointerExceptions`.&#10;- **Localization:** Fixed a typo in the German translation for `summary_preference_faq_4`.">
+    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="fix: Corrected BillingClient usage in SupportRepository&#10;&#10;This commit addresses issues with the Google Play Billing Library integration in `SupportRepository.java`:&#10;&#10;- **BillingClient Initialization:** Added `enableAutoServiceReconnection()` during BillingClient setup as a best practice for v8+ of the library.&#10;- **Product Details Query:**&#10;    - Corrected the lambda expression in `queryProductDetailsAsync` to properly accept a single `QueryProductDetailsResult` object, aligning with the official documentation.&#10;    - Ensured that `productDetailsList` is retrieved from the `QueryProductDetailsResult` object.&#10;- **Purchase Initiation:**&#10;    - Updated `initiatePurchase` to correctly use `setOfferToken()` when building `BillingFlowParams.ProductDetailsParams`.&#10;    - Simplified the creation of `productDetailsParamsList` using `Collections.singletonList()`.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -589,7 +589,7 @@
   </component>
   <component name="ProblemsViewState">
     <option name="autoscrollToSource" value="true" />
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;959160a1&quot;
@@ -628,7 +628,7 @@
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "preferences.language.Kotlin"
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   },
   "keyToStringList": {
     "ExportApk.BuildVariants": [
@@ -1041,7 +1041,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753729512778</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="fix: Corrected BillingClient usage in SupportRepository&#10;&#10;This commit addresses issues with the Google Play Billing Library integration in `SupportRepository.java`:&#10;&#10;- **BillingClient Initialization:** Added `enableAutoServiceReconnection()` during BillingClient setup as a best practice for v8+ of the library.&#10;- **Product Details Query:**&#10;    - Corrected the lambda expression in `queryProductDetailsAsync` to properly accept a single `QueryProductDetailsResult` object, aligning with the official documentation.&#10;    - Ensured that `productDetailsList` is retrieved from the `QueryProductDetailsResult` object.&#10;- **Purchase Initiation:**&#10;    - Updated `initiatePurchase` to correctly use `setOfferToken()` when building `BillingFlowParams.ProductDetailsParams`.&#10;    - Simplified the creation of `productDetailsParamsList` using `Collections.singletonList()`.">
+      <option name="closed" value="true" />
+      <created>1753790463569</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1753790463569</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1068,7 +1076,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: App architecture rework and UI improvements (Work in Progress)&#10;&#10;Significantly refactored the app architecture by introducing Repos and ViewModels. &#10;Added edge-to-edge compatibility to more screens. &#10;&#10;**Note:** This is a work-in-progress commit. Further development and refinements are expected in subsequent commits." />
     <MESSAGE value="refactor: Major app overhaul, new features, and dependency updates&#10;&#10;Significantly improved the app's stability, performance, and user experience:&#10;&#10;- Added a new About Libraries screen with detailed information about the used open-source libraries.&#10;- Implemented the EULA (End-User License Agreement) for enhanced user transparency.&#10;- Added support for edge-to-edge displays for a more immersive user experience.&#10;- Updated all dependencies to the latest versions for enhanced performance and security.&#10;- Removed unused dependencies to streamline the project.&#10;- Added a `libs.versions.toml` file to manage and track library versions efficiently." />
     <MESSAGE value="refactor: Improved version info, added explicit encoding, and updated locales&#10;&#10;Enhanced app quality and user experience:&#10;&#10;- Improved the design and information displayed in the version info dialog.&#10;- Added explicit encoding to specific XML files for better compatibility and readability.&#10;- Updated the locales config to include pt-BR (Brazilian Portuguese), th (Thai), and zh-Hant (Traditional Chinese).&#10;- Removed unused resources to streamline the project and improve build times." />
     <MESSAGE value="refactor: Improved code structure, removed redundant code, and added About Libraries screen to Settings&#10;&#10;Significantly enhanced code maintainability and efficiency:&#10;&#10;- Added the About Libraries screen to the Settings menu for easier user access.&#10;- Reworked the lesson screen logic to utilize a single, shared repository, improving code reusability and reducing redundancy.&#10;- Removed numerous redundant and repeated classes to streamline the codebase." />
@@ -1093,19 +1100,20 @@
     <MESSAGE value="feat: Update screenshots and add tablet screenshots&#10;&#10;This commit introduces updated screenshots for the Play Store listing and adds new tablet-specific screenshots.&#10;&#10;- Refreshed phone screenshots for main, tutorials, codes, and themes.&#10;- Added new tablet screenshots for main, tutorials, codes, and themes to enhance the Play Store listing for tablet users." />
     <MESSAGE value="feat: Updated Play Store description and Bottom Navigation icon&#10;&#10;This commit revises the Play Store full description for better clarity and engagement, and updates the icon used for the Bottom Navigation preference.&#10;&#10;- **Play Store Description:**&#10;    - Rewrote the full description to be more concise and highlight key features and benefits.&#10;    - Emphasized ease of use, offline accessibility, and beginner-friendliness.&#10;    - Added sections for &quot;Features,&quot; &quot;Benefits,&quot; &quot;How it works,&quot; &quot;Get started today,&quot; and &quot;Feedback.&quot;&#10;    - Removed outdated personal links and lengthy introductory sections.&#10;- **UI:**&#10;    - Replaced the icon for the &quot;Bottom Navigation&quot; preference in the Android Studio preferences XML with a new `ic_bottom_bar` drawable.&#10;    - Added the `ic_bottom_bar.xml` drawable resource." />
     <MESSAGE value="Fix compilation errors, update Gradle, and refactor code&#10;&#10;This commit addresses several issues and improvements:&#10;&#10;- **Gradle Update:** Upgraded Gradle wrapper to version 8.14.3.&#10;- **CI Fixes:**&#10;    - Resolved compilation errors in `SupportRepository.java` by updating the `queryProductDetailsAsync` callback to correctly handle the `productDetailsList`.&#10;    - Corrected the usage of `Gravity.START` to `GravityCompat.START` in `NavigationDrawerActivity.java`.&#10;- **Code Refactoring:**&#10;    - Replaced the deprecated `onBackPressed()` method in `MainActivity.java` with the newer `OnBackPressedCallback`.&#10;    - Converted the `PromotedApp` class to a Java record for conciseness.&#10;    - Removed unused private `binding` fields from several Fragment classes.&#10;    - Added a null check for the `preference` parameter in `MainRepository.java` to prevent potential `NullPointerExceptions`.&#10;- **Localization:** Fixed a typo in the German translation for `summary_preference_faq_4`." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix compilation errors, update Gradle, and refactor code&#10;&#10;This commit addresses several issues and improvements:&#10;&#10;- **Gradle Update:** Upgraded Gradle wrapper to version 8.14.3.&#10;- **CI Fixes:**&#10;    - Resolved compilation errors in `SupportRepository.java` by updating the `queryProductDetailsAsync` callback to correctly handle the `productDetailsList`.&#10;    - Corrected the usage of `Gravity.START` to `GravityCompat.START` in `NavigationDrawerActivity.java`.&#10;- **Code Refactoring:**&#10;    - Replaced the deprecated `onBackPressed()` method in `MainActivity.java` with the newer `OnBackPressedCallback`.&#10;    - Converted the `PromotedApp` class to a Java record for conciseness.&#10;    - Removed unused private `binding` fields from several Fragment classes.&#10;    - Added a null check for the `preference` parameter in `MainRepository.java` to prevent potential `NullPointerExceptions`.&#10;- **Localization:** Fixed a typo in the German translation for `summary_preference_faq_4`." />
+    <MESSAGE value="fix: Corrected BillingClient usage in SupportRepository&#10;&#10;This commit addresses issues with the Google Play Billing Library integration in `SupportRepository.java`:&#10;&#10;- **BillingClient Initialization:** Added `enableAutoServiceReconnection()` during BillingClient setup as a best practice for v8+ of the library.&#10;- **Product Details Query:**&#10;    - Corrected the lambda expression in `queryProductDetailsAsync` to properly accept a single `QueryProductDetailsResult` object, aligning with the official documentation.&#10;    - Ensured that `productDetailsList` is retrieved from the `QueryProductDetailsResult` object.&#10;- **Purchase Initiation:**&#10;    - Updated `initiatePurchase` to correctly use `setOfferToken()` when building `BillingFlowParams.ProductDetailsParams`.&#10;    - Simplified the creation of `productDetailsParamsList` using `Collections.singletonList()`." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Corrected BillingClient usage in SupportRepository&#10;&#10;This commit addresses issues with the Google Play Billing Library integration in `SupportRepository.java`:&#10;&#10;- **BillingClient Initialization:** Added `enableAutoServiceReconnection()` during BillingClient setup as a best practice for v8+ of the library.&#10;- **Product Details Query:**&#10;    - Corrected the lambda expression in `queryProductDetailsAsync` to properly accept a single `QueryProductDetailsResult` object, aligning with the official documentation.&#10;    - Ensured that `productDetailsList` is retrieved from the `QueryProductDetailsResult` object.&#10;- **Purchase Initiation:**&#10;    - Updated `initiatePurchase` to correctly use `setOfferToken()` when building `BillingFlowParams.ProductDetailsParams`.&#10;    - Simplified the creation of `productDetailsParamsList` using `Collections.singletonList()`." />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.d4rk.androidtutorials.java">
           <value>
-            <CheckInfo lastCheckTimestamp="1753692211465" />
+            <CheckInfo lastCheckTimestamp="1753791032692" />
           </value>
         </entry>
         <entry key="com.d4rk.androidtutorials.java.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1753692211465" />
+            <CheckInfo lastCheckTimestamp="1753791032692" />
           </value>
         </entry>
       </map>
