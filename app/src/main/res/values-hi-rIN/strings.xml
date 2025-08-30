@@ -24,6 +24,7 @@
     <string name="home">होम</string>
     <string name="android_studio">Android Studio</string>
     <string name="android_start">एक नया प्रोजेक्ट शुरू करें…</string>
+    <string name="android_start_project">एक नया प्रोजेक्ट शुरू करें</string>
     <string name="step1">चरण 1</string>
     <string name="step2">चरण 2</string>
     <string name="step3">चरण 3</string>

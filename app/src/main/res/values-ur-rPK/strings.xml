@@ -22,6 +22,7 @@
     <string name="android_studio">اینڈرائیڈ اسٹوڈیو</string>
 
     <string name="android_start">نیا پروجیکٹ شروع کریں…</string>
+    <string name="android_start_project">نیا پروجیکٹ شروع کریں</string>
     <string name="step1">پہلا مرحلہ</string>
     <string name="summary_first_step">اینڈرائیڈ اسٹوڈیو میں نیا پروجیکٹ بنانے کا پہلا مرحلہ تصویر میں دکھائے گئے <b>نیا پروجیکٹ</b> بٹن پر کلک کرنا اور اگلے مرحلے پر جانا ہے۔</string>
     <string name="step2">دوسرا مرحلہ</string>

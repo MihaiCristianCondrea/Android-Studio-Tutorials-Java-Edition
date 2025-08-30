@@ -24,6 +24,7 @@
     <string name="home">Beranda</string>
     <string name="android_studio">Android Studio</string>
     <string name="android_start">Mulai Proyek Baru…</string>
+    <string name="android_start_project">Mulai Proyek Baru</string>
     <string name="step1">Langkah 1</string>
     <string name="step2">Langkah 2</string>
     <string name="step3">Langkah 3</string>

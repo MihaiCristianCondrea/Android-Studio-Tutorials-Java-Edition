@@ -22,6 +22,7 @@
     <string name="android_studio">أندرويد ستوديو</string>
 
     <string name="android_start">ابدأ مشروع جديد…</string>
+    <string name="android_start_project">ابدأ مشروع جديد</string>
     <string name="step1">الخطوة 1</string>
     <string name="summary_first_step">أول خطوة لإنشاء مشروع جديد في أندرويد ستوديو هي الضغط على زر <b>مشروع جديد</b> زي ما هو واضح في الصورة وكمل للخطوة اللي بعدها.</string>
     <string name="step2">الخطوة 2</string>
