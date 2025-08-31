@@ -8,6 +8,8 @@
     <string name="get_on_google_play">इसे Google Play पर प्राप्त करें</string>
     <string name="learn_more">और जानें</string>
     <string name="play_store">प्ले स्टोर</string>
+    <string name="search_tutorials_hint">ट्यूटोरियल खोजें</string>
+    <string name="search_tutorials_content_description">ट्यूटोरियल खोजें</string>
     <string name="update_downloaded">अपडेट डाउनलोड किया गया</string>
     <string name="view_in_google_play">Google Play Store में देखें</string>
     <string name="version_info">संस्करण की जानकारी</string>

@@ -8,6 +8,8 @@
     <string name="get_on_google_play">Dapatkan di Google Play</string>
     <string name="learn_more">Pelajari lebih lanjut</string>
     <string name="play_store">Play Store</string>
+    <string name="search_tutorials_hint">Cari tutorial</string>
+    <string name="search_tutorials_content_description">Cari tutorial</string>
     <string name="update_downloaded">Pembaruan diunduh</string>
     <string name="view_in_google_play">Lihat di Google Play Store</string>
     <string name="version_info">Info versi</string>

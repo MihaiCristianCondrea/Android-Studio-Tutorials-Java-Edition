@@ -19,6 +19,8 @@
     <string name="get_on_google_play">গুগল প্লে থেকে পান</string>
     <string name="learn_more">আরও জানুন</string>
     <string name="play_store">প্লে স্টোর</string>
+    <string name="search_tutorials_hint">টিউটোরিয়াল খুঁজুন</string>
+    <string name="search_tutorials_content_description">টিউটোরিয়াল খুঁজুন</string>
 
     <string name="android_studio">অ্যান্ড্রয়েড স্টুডিও</string>
 

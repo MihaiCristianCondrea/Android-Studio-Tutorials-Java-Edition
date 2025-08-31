@@ -19,6 +19,8 @@
     <string name="get_on_google_play">Tải trên Google Play</string>
     <string name="learn_more">Tìm hiểu thêm</string>
     <string name="play_store">Cửa hàng Play</string>
+    <string name="search_tutorials_hint">Tìm kiếm hướng dẫn</string>
+    <string name="search_tutorials_content_description">Tìm kiếm hướng dẫn</string>
 
     <string name="android_studio">Android Studio</string>
 
