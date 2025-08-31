@@ -24,6 +24,7 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.NavGraph;
+import androidx.navigation.NavOptions;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -217,10 +218,25 @@ public class MainActivity extends AppCompatActivity {
                 navGraph.setStartDestination(uiState.getDefaultNavDestination());
                 navController.setGraph(navGraph);
 
+                NavOptions springNavOptions = new NavOptions.Builder()
+                        .setEnterAnim(R.anim.fragment_spring_enter)
+                        .setExitAnim(R.anim.fragment_spring_exit)
+                        .setPopEnterAnim(R.anim.fragment_spring_pop_enter)
+                        .setPopExitAnim(R.anim.fragment_spring_pop_exit)
+                        .build();
+
                 if (mBinding.navView instanceof BottomNavigationView bottomNav) {
                     NavigationUI.setupWithNavController(bottomNav, navController);
+                    bottomNav.setOnItemSelectedListener(item -> {
+                        navController.navigate(item.getItemId(), null, springNavOptions);
+                        return true;
+                    });
                 } else if (mBinding.navView instanceof NavigationRailView railView) {
                     NavigationUI.setupWithNavController(railView, navController);
+                    railView.setOnItemSelectedListener(item -> {
+                        navController.navigate(item.getItemId(), null, springNavOptions);
+                        return true;
+                    });
                 }
 
                 setSupportActionBar(mBinding.toolbar);
