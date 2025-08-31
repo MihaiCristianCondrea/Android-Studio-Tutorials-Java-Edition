@@ -17,4 +17,24 @@
         android:name="com.d4rk.androidtutorials.java.ui.screens.about.AboutFragment"
         android:label="@string/about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.d4rk.androidtutorials.java.ui.screens.settings.SettingsFragment"
+        android:label="@string/settings">
+        <deepLink app:uri="androidtutorials://settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_support"
+        android:name="com.d4rk.androidtutorials.java.ui.screens.support.SupportFragment"
+        android:label="@string/support_us"
+        tools:layout="@layout/fragment_support">
+        <deepLink app:uri="androidtutorials://support" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_quiz"
+        android:name="com.d4rk.androidtutorials.java.ui.screens.quiz.QuizFragment"
+        android:label="@string/quiz_title"
+        tools:layout="@layout/fragment_quiz">
+        <deepLink app:uri="androidtutorials://quiz" />
+    </fragment>
 </navigation>

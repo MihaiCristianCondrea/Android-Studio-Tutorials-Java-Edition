@@ -4,17 +4,17 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
+import androidx.navigation.NavDeepLinkBuilder;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
 import com.d4rk.androidtutorials.java.R;
-import com.d4rk.androidtutorials.java.ui.screens.quiz.QuizActivity;
+import com.d4rk.androidtutorials.java.ui.screens.main.MainActivity;
 
 /**
  * Worker that displays the daily quiz reminder notification.
@@ -39,9 +39,11 @@ public class QuizReminderWorker extends Worker {
         );
         manager.createNotificationChannel(channel);
 
-        Intent intent = new Intent(getApplicationContext(), QuizActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(
-                getApplicationContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent pendingIntent = new NavDeepLinkBuilder(getApplicationContext())
+                .setComponentName(MainActivity.class)
+                .setGraph(R.navigation.mobile_navigation)
+                .setDestination(R.id.navigation_quiz)
+                .createPendingIntent();
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), channelId)
                 .setSmallIcon(R.drawable.ic_check_circle)

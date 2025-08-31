@@ -7,7 +7,8 @@
         android:shortcutShortLabel="@string/settings">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.settings.SettingsActivity"
+            android:data="androidtutorials://settings"
+            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.main.MainActivity"
             android:targetPackage="com.d4rk.androidtutorials.java" />
     </shortcut>
 </shortcuts>
