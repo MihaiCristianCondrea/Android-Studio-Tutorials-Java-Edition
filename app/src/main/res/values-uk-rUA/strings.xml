@@ -391,6 +391,7 @@
     <string name="snack_image_button">Натиснуто кнопку-зображення!</string>
     <string name="toast_this_is_a_toast">Це toast-повідомлення!</string>
     <string name="tooltip_show_code">Показати синтаксис коду</string>
+    <string name="tooltip_show_java_code_snippet">Показати фрагмент коду Java</string>
     <string name="tooltip_open_me">Відкрий мене 🌐</string>
     <string name="hint_type">Введіть тут…</string>
     <string name="hint_password">Введіть ваш пароль…</string>

@@ -391,6 +391,7 @@
     <string name="snack_image_button">이미지 버튼이 클릭되었습니다!</string>
     <string name="toast_this_is_a_toast">이것은 토스트 메시지입니다!</string>
     <string name="tooltip_show_code">코드 구문 보기</string>
+    <string name="tooltip_show_java_code_snippet">자바 코드 스 니펫을 보여줍니다</string>
     <string name="tooltip_open_me">열기 🌐</string>
     <string name="hint_type">여기에 입력하세요…</string>
     <string name="hint_password">비밀번호를 입력하세요…</string>

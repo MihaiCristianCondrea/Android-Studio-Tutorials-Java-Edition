@@ -391,6 +391,7 @@
     <string name="snack_image_button">Botão de imagem clicado!</string>
     <string name="toast_this_is_a_toast">Isto é um toast!</string>
     <string name="tooltip_show_code">Mostrar sintaxe do código</string>
+    <string name="tooltip_show_java_code_snippet">Mostrar trecho de código Java</string>
     <string name="tooltip_open_me">Abra-me 🌐</string>
     <string name="hint_type">Digite aqui…</string>
     <string name="hint_password">Digite sua senha…</string>

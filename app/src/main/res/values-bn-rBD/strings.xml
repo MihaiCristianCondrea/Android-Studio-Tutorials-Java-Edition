@@ -382,6 +382,7 @@
     <string name="snack_image_button">ইমেজ বোতামে ক্লিক করা হয়েছে!</string>
     <string name="toast_this_is_a_toast">এটি একটি টোস্ট!</string>
     <string name="tooltip_show_code">কোড সিনট্যাক্স দেখান</string>
+    <string name="tooltip_show_java_code_snippet">জাভা কোড স্নিপেট দেখান</string>
     <string name="tooltip_open_me">আমাকে খুলুন 🌐</string>
     <string name="hint_type">এখানে টাইপ করুন…</string>
     <string name="hint_password">আপনার পাসওয়ার্ড লিখুন…</string>

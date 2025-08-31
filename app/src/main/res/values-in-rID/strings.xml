@@ -370,6 +370,7 @@
     <string name="snack_image_button">Tombol gambar diklik!</string>
     <string name="toast_this_is_a_toast">Ini adalah toast!</string>
     <string name="tooltip_show_code">Tampilkan sintaks kode</string>
+    <string name="tooltip_show_java_code_snippet">Tampilkan Cuplikan Kode Java</string>
     <string name="tooltip_open_me">Buka saya 🌐</string>
     <string name="hint_type">Ketik di sini…</string>
     <string name="hint_password">Masukkan kata sandi Anda…</string>

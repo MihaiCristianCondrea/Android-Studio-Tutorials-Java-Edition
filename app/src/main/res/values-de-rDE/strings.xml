@@ -382,6 +382,7 @@
     <string name="snack_image_button">Bildschaltfläche geklickt!</string>
     <string name="toast_this_is_a_toast">Das ist ein Toast!</string>
     <string name="tooltip_show_code">Code-Syntax anzeigen</string>
+    <string name="tooltip_show_java_code_snippet">Zeigen Sie Java Code Snippet</string>
     <string name="tooltip_open_me">Öffne mich 🌐</string>
     <string name="hint_type">Hier tippen…</string>
     <string name="hint_password">Geben Sie Ihr Passwort ein…</string>

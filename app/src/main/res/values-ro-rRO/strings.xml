@@ -370,6 +370,7 @@
     <string name="snack_image_button">Butonul imagine a fost apăsat!</string>
     <string name="toast_this_is_a_toast">Acesta este un toast!</string>
     <string name="tooltip_show_code">Afișează sintaxa codului</string>
+    <string name="tooltip_show_java_code_snippet">Afișați fragmentul de cod Java</string>
     <string name="tooltip_open_me">Deschide-mă 🌐</string>
     <string name="hint_type">Scrie aici…</string>
     <string name="hint_password">Introduceți parola…</string>

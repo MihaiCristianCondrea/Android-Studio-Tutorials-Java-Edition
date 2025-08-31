@@ -391,6 +391,7 @@
     <string name="snack_image_button">Na-click ang image button!</string>
     <string name="toast_this_is_a_toast">Ito ay isang toast!</string>
     <string name="tooltip_show_code">Ipakita ang syntax ng code</string>
+    <string name="tooltip_show_java_code_snippet">Ipakita ang Java Code Snippet</string>
     <string name="tooltip_open_me">Buksan mo ako 🌐</string>
     <string name="hint_type">Mag-type dito…</string>
     <string name="hint_password">Ilagay ang iyong password…</string>

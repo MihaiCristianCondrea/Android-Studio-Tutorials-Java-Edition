@@ -6,4 +6,5 @@
     <string name="im_step1_desc">Screenshot che mostra il pulsante Nuovo progetto in Android Studio.</string>
     <string name="im_step2_desc">Screenshot che mostra la selezione del tipo di attività durante la configurazione del progetto.</string>
     <string name="im_step3_desc">Screenshot che mostra i campi nome app, pacchetto, lingua e SDK minimo.</string>
+    <string name="tooltip_show_java_code_snippet">Mostra snippet di codice Java</string>
 </resources>
