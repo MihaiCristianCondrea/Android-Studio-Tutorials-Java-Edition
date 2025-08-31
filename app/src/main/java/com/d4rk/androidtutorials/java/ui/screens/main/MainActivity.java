@@ -41,8 +41,8 @@ import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigationrail.NavigationRailView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
@@ -185,18 +185,28 @@ public class MainActivity extends AppCompatActivity {
         ShortcutManagerCompat.pushDynamicShortcut(this, shortcut);
     }
 
+    private boolean shouldUseNavigationRail() {
+        return getResources().getConfiguration().smallestScreenWidthDp >= 600;
+    }
+
     private void observeViewModel() {
         mainViewModel.getUiState().observe(this, uiState -> {
             if (uiState == null) {
                 return;
             }
 
+            boolean useRail = shouldUseNavigationRail();
             EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-            if (mBinding.navView instanceof BottomNavigationView) {
-
+            if (useRail) {
+                mBinding.navRail.setVisibility(View.VISIBLE);
+                mBinding.navView.setVisibility(View.GONE);
+                edgeToEdgeDelegate.applyEdgeToEdge(mBinding.container);
+            } else {
+                mBinding.navRail.setVisibility(View.GONE);
+                mBinding.navView.setVisibility(View.VISIBLE);
                 edgeToEdgeDelegate.applyEdgeToEdgeBottomBar(mBinding.container, mBinding.navView);
 
-                ((BottomNavigationView) mBinding.navView).setLabelVisibilityMode(uiState.getBottomNavVisibility());
+                mBinding.navView.setLabelVisibilityMode(uiState.getBottomNavVisibility());
                 if (mBinding.adView != null) {
                     if (ConsentUtils.canShowAds(this)) {
                         MobileAds.initialize(this);
@@ -206,8 +216,6 @@ public class MainActivity extends AppCompatActivity {
                         mBinding.adView.setVisibility(View.GONE);
                     }
                 }
-            } else {
-                edgeToEdgeDelegate.applyEdgeToEdge(mBinding.container);
             }
 
             NavHostFragment navHostFragment = (NavHostFragment)
@@ -225,15 +233,15 @@ public class MainActivity extends AppCompatActivity {
                         .setPopExitAnim(R.anim.fragment_spring_pop_exit)
                         .build();
 
-                if (mBinding.navView instanceof BottomNavigationView bottomNav) {
-                    NavigationUI.setupWithNavController(bottomNav, navController);
-                    bottomNav.setOnItemSelectedListener(item -> {
+                if (useRail) {
+                    NavigationUI.setupWithNavController(mBinding.navRail, navController);
+                    mBinding.navRail.setOnItemSelectedListener(item -> {
                         navController.navigate(item.getItemId(), null, springNavOptions);
                         return true;
                     });
-                } else if (mBinding.navView instanceof NavigationRailView railView) {
-                    NavigationUI.setupWithNavController(railView, navController);
-                    railView.setOnItemSelectedListener(item -> {
+                } else {
+                    NavigationUI.setupWithNavController(mBinding.navView, navController);
+                    mBinding.navView.setOnItemSelectedListener(item -> {
                         navController.navigate(item.getItemId(), null, springNavOptions);
                         return true;
                     });
