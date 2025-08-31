@@ -112,7 +112,27 @@ public class SettingsRepository implements com.d4rk.androidtutorials.java.data.r
         FirebaseAnalytics.getInstance(context).setConsent(map);
     }
 
-    public SharedPreferences getSharedPreferences() {
-        return sharedPreferences;
+    @Override
+    public void registerPreferenceChangeListener(SharedPreferences.OnSharedPreferenceChangeListener listener) {
+        sharedPreferences.registerOnSharedPreferenceChangeListener(listener);
+    }
+
+    @Override
+    public void unregisterPreferenceChangeListener(SharedPreferences.OnSharedPreferenceChangeListener listener) {
+        sharedPreferences.unregisterOnSharedPreferenceChangeListener(listener);
+    }
+
+    @Override
+    public String getDarkMode() {
+        String preferenceKey = context.getString(R.string.key_theme);
+        String defaultThemeValue = context.getString(R.string.default_value_theme);
+        return sharedPreferences.getString(preferenceKey, defaultThemeValue);
+    }
+
+    @Override
+    public void setConsentAccepted(boolean accepted) {
+        sharedPreferences.edit()
+                .putBoolean(context.getString(R.string.key_consent_analytics), accepted)
+                .apply();
     }
 }

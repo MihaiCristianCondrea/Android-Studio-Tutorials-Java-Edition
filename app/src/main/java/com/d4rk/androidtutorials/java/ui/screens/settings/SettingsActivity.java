@@ -46,8 +46,7 @@ public class SettingsActivity extends AppCompatActivity
             supportActionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        SharedPreferences prefs = settingsViewModel.getSharedPreferences();
-        prefs.registerOnSharedPreferenceChangeListener(this);
+        settingsViewModel.registerPreferenceChangeListener(this);
     }
 
     @Override
@@ -64,9 +63,14 @@ public class SettingsActivity extends AppCompatActivity
     @Override
     public CharSequence provideSummary(ListPreference preference) {
         String key = preference.getKey();
-        if (key != null) {
-            if (key.equals(getString(R.string.dark_mode))) {
-                return preference.getEntry();
+        if (key != null && key.equals(getString(R.string.dark_mode))) {
+            String value = settingsViewModel.getDarkMode();
+            int index = preference.findIndexOfValue(value);
+            if (index >= 0) {
+                CharSequence[] entries = preference.getEntries();
+                if (entries != null && index < entries.length) {
+                    return entries[index];
+                }
             }
         }
         return null;
@@ -75,7 +79,6 @@ public class SettingsActivity extends AppCompatActivity
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        SharedPreferences prefs = settingsViewModel.getSharedPreferences();
-        prefs.unregisterOnSharedPreferenceChangeListener(this);
+        settingsViewModel.unregisterPreferenceChangeListener(this);
     }
 }
