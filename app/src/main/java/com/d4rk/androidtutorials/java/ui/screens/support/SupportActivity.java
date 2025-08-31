@@ -11,9 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.android.billingclient.api.ProductDetails;
-import com.d4rk.androidtutorials.java.data.model.AdLoadParams;
+import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.google.android.gms.ads.AdRequest;
 
 import java.util.List;
 
@@ -42,7 +43,8 @@ public class SupportActivity extends AppCompatActivity {
 
         supportViewModel = new ViewModelProvider(this).get(SupportViewModel.class);
 
-        supportViewModel.initMobileAds(new AdLoadParams(adRequest -> binding.largeBannerAd.loadAd(adRequest)));
+        AdRequest adRequest = supportViewModel.initMobileAds();
+        binding.largeBannerAd.loadAd(adRequest);
 
         binding.buttonWebAd.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/3p8bpjj"))));
@@ -73,8 +75,10 @@ public class SupportActivity extends AppCompatActivity {
     }
 
     private void initiatePurchase(String productId) {
-        supportViewModel.initiatePurchase(productId,
-                (billingClient, params) -> billingClient.launchBillingFlow(this, params));
+        SupportRepository.BillingFlowLauncher launcher = supportViewModel.initiatePurchase(productId);
+        if (launcher != null) {
+            launcher.launch(this);
+        }
     }
 
     @Override

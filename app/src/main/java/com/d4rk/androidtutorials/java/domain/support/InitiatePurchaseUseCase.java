@@ -10,7 +10,7 @@ public class InitiatePurchaseUseCase {
         this.repository = repository;
     }
 
-    public void invoke(String productId, SupportRepository.BillingFlowLauncher launcher) {
-        repository.initiatePurchase(productId, launcher);
+    public SupportRepository.BillingFlowLauncher invoke(String productId) {
+        return repository.initiatePurchase(productId);
     }
 }
