@@ -1,20 +1,19 @@
 package com.d4rk.androidtutorials.java.data.repository;
 
-import android.content.Intent;
-
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
-import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource.PromotedAppsCallback;
+import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * Abstraction over home data operations.
  */
 public interface HomeRepository {
 
-    Intent getPlayStoreIntent();
+    String getPlayStoreUrl();
 
-    Intent getAppPlayStoreIntent(String packageName);
+    String getAppPlayStoreUrl(String packageName);
 
     String getDailyTip();
 
-    void fetchPromotedApps(PromotedAppsCallback callback);
+    void fetchPromotedApps(Consumer<List<PromotedApp>> callback);
 }

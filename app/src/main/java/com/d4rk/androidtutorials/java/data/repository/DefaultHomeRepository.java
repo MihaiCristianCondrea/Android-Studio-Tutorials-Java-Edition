@@ -1,10 +1,11 @@
 package com.d4rk.androidtutorials.java.data.repository;
 
-import android.content.Intent;
-
 import com.d4rk.androidtutorials.java.data.source.HomeLocalDataSource;
 import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource;
-import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource.PromotedAppsCallback;
+import com.d4rk.androidtutorials.java.data.model.PromotedApp;
+
+import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * Default implementation of {@link HomeRepository} combining local and remote sources.
@@ -21,13 +22,13 @@ public class DefaultHomeRepository implements HomeRepository {
     }
 
     @Override
-    public Intent getPlayStoreIntent() {
-        return localDataSource.getPlayStoreIntent();
+    public String getPlayStoreUrl() {
+        return localDataSource.getPlayStoreUrl();
     }
 
     @Override
-    public Intent getAppPlayStoreIntent(String packageName) {
-        return localDataSource.getAppPlayStoreIntent(packageName);
+    public String getAppPlayStoreUrl(String packageName) {
+        return localDataSource.getAppPlayStoreUrl(packageName);
     }
 
     @Override
@@ -36,7 +37,7 @@ public class DefaultHomeRepository implements HomeRepository {
     }
 
     @Override
-    public void fetchPromotedApps(PromotedAppsCallback callback) {
-        remoteDataSource.fetchPromotedApps(callback);
+    public void fetchPromotedApps(Consumer<List<PromotedApp>> callback) {
+        remoteDataSource.fetchPromotedApps(callback::accept);
     }
 }

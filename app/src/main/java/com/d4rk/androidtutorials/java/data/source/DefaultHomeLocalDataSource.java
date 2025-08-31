@@ -1,8 +1,6 @@
 package com.d4rk.androidtutorials.java.data.source;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 
 import com.d4rk.androidtutorials.java.R;
 
@@ -18,15 +16,13 @@ public class DefaultHomeLocalDataSource implements HomeLocalDataSource {
     }
 
     @Override
-    public Intent getPlayStoreIntent() {
-        String playStoreUrl = "https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials";
-        return buildPlayStoreIntent(playStoreUrl);
+    public String getPlayStoreUrl() {
+        return "https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials";
     }
 
     @Override
-    public Intent getAppPlayStoreIntent(String packageName) {
-        String url = "https://play.google.com/store/apps/details?id=" + packageName;
-        return buildPlayStoreIntent(url);
+    public String getAppPlayStoreUrl(String packageName) {
+        return "https://play.google.com/store/apps/details?id=" + packageName;
     }
 
     @Override
@@ -37,12 +33,4 @@ public class DefaultHomeLocalDataSource implements HomeLocalDataSource {
         return tips[index];
     }
 
-    private Intent buildPlayStoreIntent(String url) {
-        Intent playStoreIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        playStoreIntent.setPackage("com.android.vending");
-        if (playStoreIntent.resolveActivity(context.getPackageManager()) != null) {
-            return playStoreIntent;
-        }
-        return new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-    }
 }

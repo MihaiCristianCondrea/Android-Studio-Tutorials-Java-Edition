@@ -2,6 +2,7 @@ package com.d4rk.androidtutorials.java.ui.screens.home;
 
 import android.app.Application;
 import android.content.Intent;
+import android.net.Uri;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -90,7 +91,7 @@ public class HomeViewModel extends AndroidViewModel {
      * The HomeFragment can startActivity(...) on it.
      */
     public Intent getOpenPlayStoreIntent() {
-        return homeRepository.getPlayStoreIntent();
+        return buildPlayStoreIntent(homeRepository.getPlayStoreUrl());
     }
 
     /**
@@ -104,6 +105,15 @@ public class HomeViewModel extends AndroidViewModel {
      * Builds an intent to open the Google Play listing for the provided package.
      */
     public Intent getPromotedAppIntent(String packageName) {
-        return homeRepository.getAppPlayStoreIntent(packageName);
+        return buildPlayStoreIntent(homeRepository.getAppPlayStoreUrl(packageName));
+    }
+
+    private Intent buildPlayStoreIntent(String url) {
+        Intent playStoreIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        playStoreIntent.setPackage("com.android.vending");
+        if (playStoreIntent.resolveActivity(getApplication().getPackageManager()) != null) {
+            return playStoreIntent;
+        }
+        return new Intent(Intent.ACTION_VIEW, Uri.parse(url));
     }
 }
