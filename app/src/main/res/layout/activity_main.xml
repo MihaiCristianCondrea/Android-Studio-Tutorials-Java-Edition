@@ -19,12 +19,24 @@
             app:title="@string/app_name" />
     </com.google.android.material.appbar.AppBarLayout>
 
+    <com.google.android.material.navigationrail.NavigationRailView
+        android:id="@+id/nav_rail"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintBottom_toTopOf="@id/ad_view"
+        app:menu="@menu/bottom_nav_menu" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment_activity_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:defaultNavHost="true"
+        app:layout_constraintStart_toEndOf="@id/nav_rail"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/ad_view"
         app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
         app:navGraph="@navigation/mobile_navigation" />
@@ -37,10 +49,11 @@
         app:adUnitId="@string/ad_banner_unit_id"
         app:layout_constraintBottom_toTopOf="@id/nav_view" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <com.google.android.material.navigation.NavigationBarView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
