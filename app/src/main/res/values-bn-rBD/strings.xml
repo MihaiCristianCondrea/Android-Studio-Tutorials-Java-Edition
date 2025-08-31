@@ -17,6 +17,8 @@
     <string name="main_card_subtitle">কোটলিন এবং জাভা সংস্করণ সহ</string>
     <string name="main_card_description">কোটলিন সংস্করণটি ডাইনামিক পাঠ, এআই সহকারী এবং আরও অনেক কিছু দিয়ে আপডেট করা হয়েছে। অ্যান্ড্রয়েড ডেভেলপমেন্টের ভবিষ্যৎ অভিজ্ঞতা নিন!</string>
     <string name="get_on_google_play">গুগল প্লে থেকে পান</string>
+    <string name="learn_more">আরও জানুন</string>
+    <string name="play_store">প্লে স্টোর</string>
 
     <string name="android_studio">অ্যান্ড্রয়েড স্টুডিও</string>
 
@@ -400,7 +402,6 @@
     <string name="firebase_crashlytics">ফায়ারবেথ অ্যাকসিটিভ</string>
     <string name="firebase_analytics">অগ্নিময় এনালিস্ট</string>
     <string name="firebase_performance">জর্মন</string>
-    <string name="play_store">সংরক্ষণ</string>
     <string name="special">বিশেষ</string>
     <string name="wake_lock">/_সহায়তা/_সম্বন্ধে</string>
     <string name="summary_preference_permissions_wake_lock">অ্যাপ্লিকেশন দ্বারা নিদ্রিত অবস্থায় স্থাপনার পূর্বে ডিভাইসটি নিদ্রিত অবস্থা প্রদর্শন করা হবে (যেমন, পর্দার ক্ষেত্রে) অথবা প্রসেসর নিদ্রিত অবস্থায় না থাকলে অনুরোধ জানানো হবে। ব্যাটারি সংরক্ষণের জন্য এটি ব্যবহার করা হয়।</string>

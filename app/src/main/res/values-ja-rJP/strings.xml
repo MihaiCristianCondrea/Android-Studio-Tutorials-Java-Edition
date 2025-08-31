@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="get_on_google_play">Google Play で入手しよう</string>
+    <string name="learn_more">詳しく見る</string>
+    <string name="play_store">Play ストア</string>
+</resources>

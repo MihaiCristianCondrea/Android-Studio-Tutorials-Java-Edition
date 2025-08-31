@@ -17,6 +17,7 @@
     <string name="main_card_subtitle">นำเสนอฉบับ Kotlin และ Java</string>
     <string name="main_card_description">ฉบับ Kotlin ได้รับการอัปเดตด้วยบทเรียนแบบไดนามิก, ผู้ช่วย AI และอื่นๆ สัมผัสอนาคตของการพัฒนา Android!</string>
     <string name="get_on_google_play">ดาวน์โหลดได้ที่ Google Play</string>
+    <string name="learn_more">เรียนรู้เพิ่มเติม</string>
     <string name="play_store">Play Store</string>
 
     <string name="android_studio">Android Studio</string>

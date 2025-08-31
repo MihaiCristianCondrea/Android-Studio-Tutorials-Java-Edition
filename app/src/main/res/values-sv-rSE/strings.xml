@@ -17,6 +17,7 @@
     <string name="main_card_subtitle">Med Kotlin- och Java-utgåvor</string>
     <string name="main_card_description">Kotlin-utgåvan har uppdaterats med dynamiska lektioner, AI-assistent och mer. Upplev framtiden för Android-utveckling!</string>
     <string name="get_on_google_play">Hämta den på Google Play</string>
+    <string name="learn_more">Läs mer</string>
     <string name="play_store">Play Butik</string>
 
     <string name="android_studio">Android Studio</string>

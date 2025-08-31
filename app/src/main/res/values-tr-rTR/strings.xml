@@ -17,6 +17,7 @@
     <string name="main_card_subtitle">Kotlin ve Java Sürümleriyle</string>
     <string name="main_card_description">Kotlin Sürümü dinamik dersler, yapay zeka asistanı ve daha fazlasıyla güncellendi. Android geliştirmenin geleceğini deneyimleyin!</string>
     <string name="get_on_google_play">Google Play\'den edinin</string>
+    <string name="learn_more">Daha fazla bilgi edinin</string>
     <string name="play_store">Play Store</string>
 
     <string name="android_studio">Android Studio</string>

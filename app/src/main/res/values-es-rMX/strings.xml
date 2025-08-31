@@ -17,6 +17,7 @@
     <string name="main_card_subtitle">Con ediciones de Kotlin y Java</string>
     <string name="main_card_description">La edición de Kotlin ha sido actualizada con lecciones dinámicas, asistente de IA y más. ¡Experimenta el futuro del desarrollo de Android!</string>
     <string name="get_on_google_play">Descárgala en Google Play</string>
+    <string name="learn_more">Más información</string>
     <string name="play_store">Play Store</string>
 
     <string name="android_studio">Android Studio</string>

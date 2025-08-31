@@ -6,6 +6,8 @@
     <string name="main_card_subtitle">Включая версии на Kotlin и Java</string>
     <string name="main_card_description">Версия Kotlin была обновлена динамическими уроками, помощником с ИИ и многим другим. Ощутите будущее разработки Android!</string>
     <string name="get_on_google_play">Получить в Google Play</string>
+    <string name="learn_more">Узнать больше</string>
+    <string name="play_store">Play Маркет</string>
     <string name="update_downloaded">Обновление загружено</string>
     <string name="view_in_google_play">Просмотреть в Google Play Store</string>
     <string name="version_info">Информация о версии</string>
@@ -375,7 +377,6 @@
     <string name="firebase_crashlytics">Пожарная база Crashlytics</string>
     <string name="firebase_analytics">Firebase Analytics</string>
     <string name="firebase_performance">Производительность Firebase</string>
-    <string name="play_store">Play Store</string>
     <string name="special">Специальный</string>
     <string name="wake_lock">Держите устройство в сознании [WAKE_LOCK]</string>
     <string name="summary_preference_permissions_wake_lock">Позволяет приложению предотвратить засыпание устройства (например, затемнение экрана или сон процессора) во время критических операций, чтобы обеспечить их завершение без перерыва. Это используется экономно для сохранения батареи.</string>
