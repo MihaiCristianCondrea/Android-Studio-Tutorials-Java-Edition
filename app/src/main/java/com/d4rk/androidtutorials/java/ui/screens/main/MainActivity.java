@@ -2,7 +2,6 @@ package com.d4rk.androidtutorials.java.ui.screens.main;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -13,13 +12,15 @@ import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.IntentSenderRequest;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.RequiresApi;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.pm.ShortcutInfoCompat;
 import androidx.core.content.pm.ShortcutManagerCompat;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.splashscreen.SplashScreen;
+import androidx.lifecycle.DefaultLifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.NavGraph;
@@ -31,8 +32,6 @@ import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
 import com.d4rk.androidtutorials.java.notifications.managers.AppUpdateNotificationsManager;
-import com.d4rk.androidtutorials.java.notifications.managers.AppUsageNotificationsManager;
-import com.d4rk.androidtutorials.java.notifications.managers.QuizReminderManager;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFragment;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
@@ -77,6 +76,23 @@ public class MainActivity extends AppCompatActivity {
     private AppUpdateNotificationsManager appUpdateNotificationsManager;
     private AppUpdateManager appUpdateManager;
     private InstallStateUpdatedListener installStateUpdatedListener;
+    private final DefaultLifecycleObserver lifecycleObserver = new DefaultLifecycleObserver() {
+        @Override
+        public void onResume(@NonNull LifecycleOwner owner) {
+            ConsentUtils.applyStoredConsent(MainActivity.this);
+            if (mBinding.adView != null) {
+                if (ConsentUtils.canShowAds(MainActivity.this)) {
+                    if (mBinding.adView.getVisibility() != View.VISIBLE) {
+                        MobileAds.initialize(MainActivity.this);
+                        mBinding.adView.setVisibility(View.VISIBLE);
+                        mBinding.adView.loadAd(new AdRequest.Builder().build());
+                    }
+                } else {
+                    mBinding.adView.setVisibility(View.GONE);
+                }
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
         this.appUpdateManager = mainViewModel.getAppUpdateManager();
 
         registerInstallStateListener();
+        getLifecycle().addObserver(lifecycleObserver);
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
@@ -238,30 +255,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    @Override
-    protected void onResume() {
-        super.onResume();
-        ConsentUtils.applyStoredConsent(this);
-        if (mBinding.adView != null) {
-            if (ConsentUtils.canShowAds(this)) {
-                if (mBinding.adView.getVisibility() != View.VISIBLE) {
-                    MobileAds.initialize(this);
-                    mBinding.adView.setVisibility(View.VISIBLE);
-                    mBinding.adView.loadAd(new AdRequest.Builder().build());
-                }
-            } else {
-                mBinding.adView.setVisibility(View.GONE);
-            }
-        }
-        AppUsageNotificationsManager appUsageNotificationsManager = new AppUsageNotificationsManager(this);
-        appUsageNotificationsManager.scheduleAppUsageCheck();
-        QuizReminderManager quizReminderManager = new QuizReminderManager(this);
-        quizReminderManager.scheduleDailyReminder();
-        appUpdateNotificationsManager.checkAndSendUpdateNotification();
-        checkForImmediateUpdate();
     }
 
     private void checkForImmediateUpdate() {
