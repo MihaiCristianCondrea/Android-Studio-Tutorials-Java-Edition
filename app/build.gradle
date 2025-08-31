@@ -96,4 +96,10 @@ dependencies {
     implementation libs.codeview
     implementation libs.hilt.android
     annotationProcessor libs.hilt.compiler
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'androidx.arch.core:core-testing:2.2.0'
+    testImplementation 'org.mockito:mockito-core:5.12.0'
+    testImplementation 'org.mockito:mockito-inline:5.2.0'
 }
