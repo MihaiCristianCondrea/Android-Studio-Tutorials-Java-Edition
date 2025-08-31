@@ -445,4 +445,5 @@
     <string name="quiz_reminder_title">تذكير الاختبار اليومي</string>
     <string name="quiz_reminder_body">عد للاختبار اليومي اليوم!</string>
     <string name="other_apps_title">تطبيقات أخرى من المطور</string>
+    <string name="tooltip_show_java_code">عرض مقتطفات رمز Java</string>
 </resources>

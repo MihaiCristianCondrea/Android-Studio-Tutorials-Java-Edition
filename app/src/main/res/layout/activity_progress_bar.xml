@@ -104,10 +104,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        android:contentDescription="@string/tooltip_show_code"
+        android:contentDescription="@string/tooltip_show_java_code"
         android:text="@string/show_code"
         android:textSize="14sp"
-        android:tooltipText="@string/tooltip_show_code"
+        android:tooltipText="@string/tooltip_show_java_code"
         app:icon="@drawable/ic_code"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

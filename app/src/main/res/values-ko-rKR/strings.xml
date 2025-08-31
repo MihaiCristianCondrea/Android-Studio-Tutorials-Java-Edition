@@ -445,4 +445,5 @@
     <string name="quiz_reminder_title">일일 퀴즈 알림</string>
     <string name="quiz_reminder_body">오늘의 퀴즈를 위해 다시 오세요!</string>
     <string name="other_apps_title">개발자의 다른 앱</string>
+    <string name="tooltip_show_java_code">자바 코드 스니펫을 보여줍니다</string>
 </resources>

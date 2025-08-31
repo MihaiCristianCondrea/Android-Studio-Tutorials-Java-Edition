@@ -445,4 +445,5 @@
     <string name="quiz_reminder_title">Günlük Test Hatırlatıcısı</string>
     <string name="quiz_reminder_body">Bugünün testi için geri gelin!</string>
     <string name="other_apps_title">Geliştiricinin diğer uygulamaları</string>
+    <string name="tooltip_show_java_code">Java kod parçacığını göster</string>
 </resources>

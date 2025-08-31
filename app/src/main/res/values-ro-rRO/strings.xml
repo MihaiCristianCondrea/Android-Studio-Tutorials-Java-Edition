@@ -420,4 +420,5 @@
     <string name="quiz_reminder_title">Memento zilnic pentru chestionar</string>
     <string name="quiz_reminder_body">Revino pentru chestionarul de astăzi!</string>
     <string name="other_apps_title">Mai multe aplicații ale dezvoltatorului</string>
+    <string name="tooltip_show_java_code">Afișați fragmentul de cod Java</string>
 </resources>

@@ -445,4 +445,5 @@
     <string name="quiz_reminder_title">Paalala sa Araw-araw na Pagsusulit</string>
     <string name="quiz_reminder_body">Bumalik para sa pagsusulit ngayong araw!</string>
     <string name="other_apps_title">Higit pang mga app mula sa developer</string>
+    <string name="tooltip_show_java_code">Ipakita ang snippet ng code na Java</string>
 </resources>

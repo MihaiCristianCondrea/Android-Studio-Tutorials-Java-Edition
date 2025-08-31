@@ -445,4 +445,5 @@
     <string name="quiz_reminder_title">Ежедневно напомняне за тест</string>
     <string name="quiz_reminder_body">Върнете се за днешния тест!</string>
     <string name="other_apps_title">Още приложения от разработчика</string>
+    <string name="tooltip_show_java_code">Показване на фрагмент от код на Java</string>
 </resources>

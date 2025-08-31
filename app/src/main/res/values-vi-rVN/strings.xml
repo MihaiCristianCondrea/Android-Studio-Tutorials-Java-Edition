@@ -445,4 +445,5 @@
     <string name="quiz_reminder_title">Nhắc nhở làm quiz hằng ngày</string>
     <string name="quiz_reminder_body">Quay lại để làm quiz hôm nay!</string>
     <string name="other_apps_title">Các ứng dụng khác của nhà phát triển</string>
+    <string name="tooltip_show_java_code">Hiển thị đoạn mã Java</string>
 </resources>

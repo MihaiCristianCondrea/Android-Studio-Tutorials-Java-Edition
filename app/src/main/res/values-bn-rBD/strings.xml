@@ -445,4 +445,5 @@
     <string name="quiz_reminder_title">দৈনিক কুইজ রিমাইন্ডার</string>
     <string name="quiz_reminder_body">আজকের কুইজে ফিরে আসুন!</string>
     <string name="other_apps_title">ডেভেলপারকে আরো টুল</string>
+    <string name="tooltip_show_java_code">জাভা কোড স্নিপেট দেখান</string>
 </resources>

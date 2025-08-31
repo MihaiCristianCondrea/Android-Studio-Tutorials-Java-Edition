@@ -3,4 +3,5 @@
     <string name="get_on_google_play">Szerezd meg a Google Playen</string>
     <string name="learn_more">Tudj meg többet</string>
     <string name="play_store">Play Áruház</string>
+    <string name="tooltip_show_java_code">Mutasd meg a Java kódrészletet</string>
 </resources>

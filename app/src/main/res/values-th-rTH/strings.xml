@@ -445,4 +445,5 @@
     <string name="quiz_reminder_title">การแจ้งเตือนแบบทดสอบรายวัน</string>
     <string name="quiz_reminder_body">กลับมาทำแบบทดสอบของวันนี้!</string>
     <string name="other_apps_title">แอปอื่นๆ จากนักพัฒนา</string>
+    <string name="tooltip_show_java_code">แสดงส่วนของโค้ด Java</string>
 </resources>

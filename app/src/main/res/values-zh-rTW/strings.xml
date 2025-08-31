@@ -446,4 +446,5 @@
     <string name="quiz_reminder_title">每日測驗提醒</string>
     <string name="quiz_reminder_body">回來參加今天的測驗吧！</string>
     <string name="other_apps_title">開發人員的其他應用程式</string>
+    <string name="tooltip_show_java_code">顯示 Java 程式碼片段</string>
 </resources>

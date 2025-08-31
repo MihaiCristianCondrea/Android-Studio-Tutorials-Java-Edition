@@ -420,4 +420,5 @@
     <string name="quiz_reminder_title">दैनिक प्रश्नोत्तरी अनुस्मारक</string>
     <string name="quiz_reminder_body">आज की प्रश्नोत्तरी के लिए वापस आएं!</string>
     <string name="other_apps_title">डेवलपर द्वारा अधिक एप्लिकेशन</string>
+    <string name="tooltip_show_java_code">जावा कोड स्निपेट दिखाएं</string>
 </resources>

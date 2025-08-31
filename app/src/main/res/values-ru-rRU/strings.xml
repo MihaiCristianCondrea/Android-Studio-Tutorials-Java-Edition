@@ -420,4 +420,5 @@
     <string name="quiz_reminder_title">Ежедневное напоминание о викторине</string>
     <string name="quiz_reminder_body">Возвращайтесь на сегодняшнюю викторину!</string>
     <string name="other_apps_title">Больше приложений от разработчика</string>
+    <string name="tooltip_show_java_code">Показать фрагмент кода Java</string>
 </resources>

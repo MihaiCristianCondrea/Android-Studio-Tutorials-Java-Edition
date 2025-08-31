@@ -445,4 +445,5 @@
     <string name="quiz_reminder_title">Daglig quizpåminnelse</string>
     <string name="quiz_reminder_body">Kom tillbaka för dagens quiz!</string>
     <string name="other_apps_title">Fler appar av utvecklaren</string>
+    <string name="tooltip_show_java_code">Visa Java-kodavsnitt</string>
 </resources>

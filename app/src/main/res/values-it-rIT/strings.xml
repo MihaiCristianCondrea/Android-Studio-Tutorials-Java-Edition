@@ -3,4 +3,5 @@
     <string name="get_on_google_play">Scaricalo su Google Play</string>
     <string name="learn_more">Scopri di più</string>
     <string name="play_store">Play Store</string>
+    <string name="tooltip_show_java_code">Mostra snippet di codice Java</string>
 </resources>

@@ -445,4 +445,5 @@
     <string name="quiz_reminder_title">Rappel quotidien du quiz</string>
     <string name="quiz_reminder_body">Revenez pour le quiz du jour !</string>
     <string name="other_apps_title">Plus d\'applications par le développeur</string>
+    <string name="tooltip_show_java_code">Afficher l'extrait de code Java</string>
 </resources>

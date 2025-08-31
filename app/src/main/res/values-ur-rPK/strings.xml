@@ -445,4 +445,5 @@
     <string name="quiz_reminder_title">روزانہ کوئز یاددہانی</string>
     <string name="quiz_reminder_body">آج کے کوئز کے لیے دوبارہ آئیں!</string>
     <string name="other_apps_title">ڈیولپر کی مزید ایپس</string>
+    <string name="tooltip_show_java_code">جاوا کوڈ کا ٹکڑا دکھائیں</string>
 </resources>

@@ -420,4 +420,5 @@
     <string name="quiz_reminder_title">Pengingat Kuis Harian</string>
     <string name="quiz_reminder_body">Kembali untuk kuis hari ini!</string>
     <string name="other_apps_title">Lebih banyak aplikasi oleh pengembang</string>
+    <string name="tooltip_show_java_code">Tampilkan cuplikan kode Java</string>
 </resources>
