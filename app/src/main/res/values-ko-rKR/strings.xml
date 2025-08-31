@@ -445,4 +445,7 @@
     <string name="quiz_reminder_title">일일 퀴즈 알림</string>
     <string name="quiz_reminder_body">오늘의 퀴즈를 위해 다시 오세요!</string>
     <string name="other_apps_title">개발자의 다른 앱</string>
+    <string name="im_step1_desc">Android Studio에서 새 프로젝트 버튼을 보여주는 스크린샷.</string>
+    <string name="im_step2_desc">프로젝트 설정 중 액티비티 유형 선택을 보여주는 스크린샷.</string>
+    <string name="im_step3_desc">앱 이름, 패키지, 언어 및 최소 SDK 필드를 보여주는 스크린샷.</string>
 </resources>
