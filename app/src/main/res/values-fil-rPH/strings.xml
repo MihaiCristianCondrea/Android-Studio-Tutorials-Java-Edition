@@ -281,6 +281,7 @@
     <string name="share">Ibahagi</string>
     <string name="share_subject">Subukan ito ngayon!!!</string>
     <string name="share_using">Ibahagi gamit ang…</string>
+    <string name="share_message">Tingnan ang app na ito: %1$s</string>
     <string name="support_us">Suportahan Kami</string>
     <string name="paid_support">Suportang may Bayad</string>
     <string name="non_paid_support">Suportang Walang Bayad</string>

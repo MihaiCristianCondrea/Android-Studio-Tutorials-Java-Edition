@@ -274,6 +274,7 @@
     <string name="share">শেয়ার করুন</string>
     <string name="share_subject">এখনই চেষ্টা করুন!!!</string>
     <string name="share_using">ব্যবহার করে শেয়ার করুন…</string>
+    <string name="share_message">এই অ্যাপটি দেখুন: %1$s</string>
     <string name="support_us">আমাদের সমর্থন করুন</string>
     <string name="paid_support">অর্থপ্রদত্ত সমর্থন</string>
     <string name="non_paid_support">অবৈতনিক সমর্থন</string>

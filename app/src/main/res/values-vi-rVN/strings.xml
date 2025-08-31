@@ -281,6 +281,7 @@
     <string name="share">Chia sẻ</string>
     <string name="share_subject">Thử ngay!!!</string>
     <string name="share_using">Chia sẻ bằng…</string>
+    <string name="share_message">Hãy xem ứng dụng này: %1$s</string>
     <string name="support_us">Ủng hộ chúng tôi</string>
     <string name="paid_support">Hỗ trợ trả phí</string>
     <string name="non_paid_support">Hỗ trợ không trả phí</string>

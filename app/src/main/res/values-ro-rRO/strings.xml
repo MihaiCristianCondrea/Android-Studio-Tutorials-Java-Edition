@@ -254,6 +254,7 @@
     <string name="share">Distribuie</string>
     <string name="share_subject">Încearcă acum!!!</string>
     <string name="share_using">Distribuie utilizând…</string>
+    <string name="share_message">Vezi această aplicație: %1$s</string>
     <string name="support_us">Susține-ne</string>
     <string name="paid_support">Suport plătit</string>
     <string name="non_paid_support">Suport gratuit</string>
