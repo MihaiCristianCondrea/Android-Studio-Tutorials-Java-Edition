@@ -185,13 +185,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void observeViewModel() {
-        mainViewModel.getBottomNavVisibility().observe(this, visibilityMode -> {
+        mainViewModel.getUiState().observe(this, uiState -> {
+            if (uiState == null) {
+                return;
+            }
+
             EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
             if (mBinding.navView instanceof BottomNavigationView) {
 
                 edgeToEdgeDelegate.applyEdgeToEdgeBottomBar(mBinding.container, mBinding.navView);
 
-                ((BottomNavigationView) mBinding.navView).setLabelVisibilityMode(visibilityMode);
+                ((BottomNavigationView) mBinding.navView).setLabelVisibilityMode(uiState.getBottomNavVisibility());
                 if (mBinding.adView != null) {
                     if (ConsentUtils.canShowAds(this)) {
                         MobileAds.initialize(this);
@@ -204,15 +208,13 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 edgeToEdgeDelegate.applyEdgeToEdge(mBinding.container);
             }
-        });
 
-        mainViewModel.getDefaultNavDestination().observe(this, startFragmentId -> {
             NavHostFragment navHostFragment = (NavHostFragment)
                     getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
             if (navHostFragment != null) {
                 navController = navHostFragment.getNavController();
                 NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.mobile_navigation);
-                navGraph.setStartDestination(startFragmentId);
+                navGraph.setStartDestination(uiState.getDefaultNavDestination());
                 navController.setGraph(navGraph);
 
                 if (mBinding.navView instanceof BottomNavigationView bottomNav) {
@@ -228,10 +230,8 @@ public class MainActivity extends AppCompatActivity {
                     bottomSheet.show(getSupportFragmentManager(), bottomSheet.getTag());
                 });
             }
-        });
 
-        mainViewModel.getThemeChanged().observe(this, changed -> {
-            if (Boolean.TRUE.equals(changed)) {
+            if (uiState.isThemeChanged()) {
                 recreate();
             }
         });

@@ -38,9 +38,7 @@ public class MainViewModel extends ViewModel {
     private final IsAppInstalledUseCase isAppInstalledUseCase;
     private final BuildShortcutIntentUseCase buildShortcutIntentUseCase;
     private final GetAppUpdateManagerUseCase getAppUpdateManagerUseCase;
-    private final MutableLiveData<Integer> bottomNavLabelVisibility = new MutableLiveData<>();
-    private final MutableLiveData<Integer> defaultNavDestination = new MutableLiveData<>();
-    private final MutableLiveData<Boolean> themeChanged = new MutableLiveData<>();
+    private final MutableLiveData<MainUiState> uiState = new MutableLiveData<>();
 
     @Inject
     public MainViewModel(ApplyThemeSettingsUseCase applyThemeSettingsUseCase,
@@ -63,8 +61,8 @@ public class MainViewModel extends ViewModel {
         this.getAppUpdateManagerUseCase = getAppUpdateManagerUseCase;
     }
 
-    private static int getVisibilityMode(String labelVisibilityStr, String[] bottomNavBarLabelsValues) {
-        int visibilityMode = NavigationBarView.LABEL_VISIBILITY_AUTO;
+    private static @NavigationBarView.LabelVisibility int getVisibilityMode(String labelVisibilityStr, String[] bottomNavBarLabelsValues) {
+        @NavigationBarView.LabelVisibility int visibilityMode = NavigationBarView.LABEL_VISIBILITY_AUTO;
         if (labelVisibilityStr.equals(bottomNavBarLabelsValues[0])) {
             visibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED;
         } else if (labelVisibilityStr.equals(bottomNavBarLabelsValues[1])) {
@@ -83,11 +81,9 @@ public class MainViewModel extends ViewModel {
                               String[] bottomNavBarLabelsValues,
                               String[] defaultTabValues) {
         boolean changedTheme = applyThemeSettingsUseCase.invoke(themeValues);
-        themeChanged.setValue(changedTheme);
 
         String labelVisibilityStr = getBottomNavLabelVisibilityUseCase.invoke();
-        int visibilityMode = getVisibilityMode(labelVisibilityStr, bottomNavBarLabelsValues);
-        bottomNavLabelVisibility.setValue(visibilityMode);
+        @NavigationBarView.LabelVisibility int visibilityMode = getVisibilityMode(labelVisibilityStr, bottomNavBarLabelsValues);
 
         String startFragmentIdValue = getDefaultTabPreferenceUseCase.invoke();
         int startFragmentId;
@@ -100,7 +96,8 @@ public class MainViewModel extends ViewModel {
         } else {
             startFragmentId = R.id.navigation_home;
         }
-        defaultNavDestination.setValue(startFragmentId);
+
+        uiState.setValue(new MainUiState(visibilityMode, startFragmentId, changedTheme));
         applyLanguageSettingsUseCase.invoke();
     }
 
@@ -133,24 +130,10 @@ public class MainViewModel extends ViewModel {
     }
 
     /**
-     * Expose the bottom nav visibility as LiveData, so MainActivity can observe it.
+     * Expose the consolidated UI state so MainActivity can observe it.
      */
-    public LiveData<Integer> getBottomNavVisibility() {
-        return bottomNavLabelVisibility;
-    }
-
-    /**
-     * Expose the default nav destination as LiveData, so MainActivity can observe it.
-     */
-    public LiveData<Integer> getDefaultNavDestination() {
-        return defaultNavDestination;
-    }
-
-    /**
-     * This tells the UI whether the theme changed so it can decide to recreate if necessary.
-     */
-    public LiveData<Boolean> getThemeChanged() {
-        return themeChanged;
+    public LiveData<MainUiState> getUiState() {
+        return uiState;
     }
 
     /**
