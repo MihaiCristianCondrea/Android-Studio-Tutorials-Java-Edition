@@ -32,13 +32,27 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
-        homeViewModel.getAnnouncementTitle().observe(getViewLifecycleOwner(), title -> binding.announcementTitle.setText(title));
-        homeViewModel.getAnnouncementSubtitle().observe(getViewLifecycleOwner(), subtitle -> binding.announcementSubtitle.setText(subtitle));
-        homeViewModel.getDailyTip().observe(getViewLifecycleOwner(), tip -> {
-            binding.tipText.setText(tip);
-            binding.shareTipButton.setOnClickListener(v -> shareTip(tip));
+        LayoutInflater inflater = LayoutInflater.from(requireContext());
+        homeViewModel.getUiState().observe(getViewLifecycleOwner(), state -> {
+            binding.announcementTitle.setText(state.announcementTitle());
+            binding.announcementSubtitle.setText(state.announcementSubtitle());
+            binding.tipText.setText(state.dailyTip());
+            binding.shareTipButton.setOnClickListener(v -> shareTip(state.dailyTip()));
+
+            ViewGroup promotedContainer = binding.promotedAppsContainer;
+            binding.scrollView.clearFocus();
+            promotedContainer.clearFocus();
+            promotedContainer.removeAllViews();
+            for (com.d4rk.androidtutorials.java.data.model.PromotedApp app : state.promotedApps()) {
+                com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding itemBinding =
+                        com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding.inflate(inflater, promotedContainer, false);
+                loadImage(app.iconUrl(), itemBinding.appIcon);
+                itemBinding.appName.setText(app.name());
+                itemBinding.appDescription.setVisibility(android.view.View.GONE);
+                itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName())));
+                promotedContainer.addView(itemBinding.getRoot());
+            }
         });
-        setupPromotions(LayoutInflater.from(requireContext()));
         new FastScrollerBuilder(binding.scrollView)
                 .useMd2Style()
                 .build();
@@ -65,24 +79,6 @@ public class HomeFragment extends Fragment {
         shareIntent.setType("text/plain");
         shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, tip);
         startActivity(android.content.Intent.createChooser(shareIntent, getString(com.d4rk.androidtutorials.java.R.string.share_using)));
-    }
-
-    private void setupPromotions(LayoutInflater inflater) {
-        ViewGroup container = binding.promotedAppsContainer;
-        homeViewModel.getPromotedApps().observe(getViewLifecycleOwner(), apps -> {
-            binding.scrollView.clearFocus();
-            container.clearFocus();
-            container.removeAllViews();
-            for (com.d4rk.androidtutorials.java.data.model.PromotedApp app : apps) {
-                com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding itemBinding =
-                        com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding.inflate(inflater, container, false);
-                loadImage(app.iconUrl(), itemBinding.appIcon);
-                itemBinding.appName.setText(app.name());
-                itemBinding.appDescription.setVisibility(android.view.View.GONE);
-                itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName())));
-                container.addView(itemBinding.getRoot());
-            }
-        });
     }
 
     private void loadImage(String url, android.widget.ImageView imageView) {

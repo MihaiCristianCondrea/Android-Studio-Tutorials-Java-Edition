@@ -4,9 +4,9 @@ import android.app.Application;
 import android.content.Intent;
 import android.net.Uri;
 
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
@@ -29,10 +29,7 @@ public class HomeViewModel extends ViewModel {
     private final GetDailyTipUseCase getDailyTipUseCase;
     private final GetPromotedAppsUseCase getPromotedAppsUseCase;
 
-    private final MutableLiveData<String> announcementTitle = new MutableLiveData<>();
-    private final MutableLiveData<String> announcementSubtitle = new MutableLiveData<>();
-    private final MutableLiveData<String> dailyTip = new MutableLiveData<>();
-    private final MutableLiveData<List<PromotedApp>> promotedApps = new MutableLiveData<>(new ArrayList<>());
+    private final MutableLiveData<HomeUiState> uiState = new MutableLiveData<>();
 
     @Inject
     public HomeViewModel(Application application,
@@ -44,43 +41,45 @@ public class HomeViewModel extends ViewModel {
         this.getDailyTipUseCase = getDailyTipUseCase;
         this.getPromotedAppsUseCase = getPromotedAppsUseCase;
 
-        announcementTitle.setValue(application.getString(R.string.announcement_title));
-        announcementSubtitle.setValue(application.getString(R.string.announcement_subtitle));
-        dailyTip.setValue(getDailyTipUseCase.invoke());
+        HomeUiState initialState = new HomeUiState(
+                application.getString(R.string.announcement_title),
+                application.getString(R.string.announcement_subtitle),
+                getDailyTipUseCase.invoke(),
+                new ArrayList<>()
+        );
+        uiState.setValue(initialState);
 
         getPromotedAppsUseCase.invoke(apps -> {
+            List<PromotedApp> result;
             if (apps.isEmpty()) {
-                promotedApps.postValue(apps);
-                return;
+                result = apps;
+            } else {
+                int startIndex = (int) ((System.currentTimeMillis() / (24L * 60 * 60 * 1000)) % apps.size());
+                result = new ArrayList<>();
+                for (int i = 0; i < Math.min(4, apps.size()); i++) {
+                    result.add(apps.get((startIndex + i) % apps.size()));
+                }
             }
-            int startIndex = (int) ((System.currentTimeMillis() / (24L * 60 * 60 * 1000)) % apps.size());
-            List<PromotedApp> rotated = new ArrayList<>();
-            for (int i = 0; i < Math.min(4, apps.size()); i++) {
-                rotated.add(apps.get((startIndex + i) % apps.size()));
+            HomeUiState current = uiState.getValue();
+            if (current == null) {
+                current = new HomeUiState("", "", "", result);
+            } else {
+                current = new HomeUiState(
+                        current.announcementTitle(),
+                        current.announcementSubtitle(),
+                        current.dailyTip(),
+                        result
+                );
             }
-            promotedApps.postValue(rotated);
+            uiState.postValue(current);
         });
     }
 
     /**
-     * Provides a LiveData for the announcement title.
+     * Exposes the UI state for the Home screen.
      */
-    public LiveData<String> getAnnouncementTitle() {
-        return announcementTitle;
-    }
-
-    /**
-     * Provides a LiveData for the announcement subtitle.
-     */
-    public LiveData<String> getAnnouncementSubtitle() {
-        return announcementSubtitle;
-    }
-
-    /**
-     * Provides a LiveData for the tip of the day text.
-     */
-    public LiveData<String> getDailyTip() {
-        return dailyTip;
+    public LiveData<HomeUiState> getUiState() {
+        return uiState;
     }
 
     /**
@@ -89,13 +88,6 @@ public class HomeViewModel extends ViewModel {
      */
     public Intent getOpenPlayStoreIntent() {
         return buildPlayStoreIntent(homeRepository.getPlayStoreUrl());
-    }
-
-    /**
-     * List of apps to promote on the Home screen.
-     */
-    public LiveData<List<PromotedApp>> getPromotedApps() {
-        return promotedApps;
     }
 
     /**
