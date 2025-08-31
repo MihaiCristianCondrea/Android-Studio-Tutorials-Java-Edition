@@ -61,8 +61,8 @@ public class MainViewModel extends ViewModel {
         this.getAppUpdateManagerUseCase = getAppUpdateManagerUseCase;
     }
 
-    private static int getVisibilityMode(String labelVisibilityStr, String[] bottomNavBarLabelsValues) {
-        int visibilityMode = NavigationBarView.LABEL_VISIBILITY_AUTO;
+    private static @NavigationBarView.LabelVisibility int getVisibilityMode(String labelVisibilityStr, String[] bottomNavBarLabelsValues) {
+        @NavigationBarView.LabelVisibility int visibilityMode = NavigationBarView.LABEL_VISIBILITY_AUTO;
         if (labelVisibilityStr.equals(bottomNavBarLabelsValues[0])) {
             visibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED;
         } else if (labelVisibilityStr.equals(bottomNavBarLabelsValues[1])) {
@@ -83,7 +83,7 @@ public class MainViewModel extends ViewModel {
         boolean changedTheme = applyThemeSettingsUseCase.invoke(themeValues);
 
         String labelVisibilityStr = getBottomNavLabelVisibilityUseCase.invoke();
-        int visibilityMode = getVisibilityMode(labelVisibilityStr, bottomNavBarLabelsValues);
+        @NavigationBarView.LabelVisibility int visibilityMode = getVisibilityMode(labelVisibilityStr, bottomNavBarLabelsValues);
 
         String startFragmentIdValue = getDefaultTabPreferenceUseCase.invoke();
         int startFragmentId;
