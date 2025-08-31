@@ -5,7 +5,10 @@ import android.content.SharedPreferences;
 import androidx.lifecycle.ViewModel;
 
 import com.d4rk.androidtutorials.java.domain.settings.OnPreferenceChangedUseCase;
-import com.d4rk.androidtutorials.java.domain.settings.GetSharedPreferencesUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.RegisterPreferenceChangeListenerUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.UnregisterPreferenceChangeListenerUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.GetDarkModeUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.SetConsentAcceptedUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.ApplyConsentUseCase;
 
 import dagger.hilt.android.lifecycle.HiltViewModel;
@@ -20,15 +23,24 @@ import javax.inject.Inject;
 public class SettingsViewModel extends ViewModel {
 
     private final OnPreferenceChangedUseCase onPreferenceChangedUseCase;
-    private final GetSharedPreferencesUseCase getSharedPreferencesUseCase;
+    private final RegisterPreferenceChangeListenerUseCase registerPreferenceChangeListenerUseCase;
+    private final UnregisterPreferenceChangeListenerUseCase unregisterPreferenceChangeListenerUseCase;
+    private final GetDarkModeUseCase getDarkModeUseCase;
+    private final SetConsentAcceptedUseCase setConsentAcceptedUseCase;
     private final ApplyConsentUseCase applyConsentUseCase;
 
     @Inject
     public SettingsViewModel(OnPreferenceChangedUseCase onPreferenceChangedUseCase,
-                             GetSharedPreferencesUseCase getSharedPreferencesUseCase,
+                             RegisterPreferenceChangeListenerUseCase registerPreferenceChangeListenerUseCase,
+                             UnregisterPreferenceChangeListenerUseCase unregisterPreferenceChangeListenerUseCase,
+                             GetDarkModeUseCase getDarkModeUseCase,
+                             SetConsentAcceptedUseCase setConsentAcceptedUseCase,
                              ApplyConsentUseCase applyConsentUseCase) {
         this.onPreferenceChangedUseCase = onPreferenceChangedUseCase;
-        this.getSharedPreferencesUseCase = getSharedPreferencesUseCase;
+        this.registerPreferenceChangeListenerUseCase = registerPreferenceChangeListenerUseCase;
+        this.unregisterPreferenceChangeListenerUseCase = unregisterPreferenceChangeListenerUseCase;
+        this.getDarkModeUseCase = getDarkModeUseCase;
+        this.setConsentAcceptedUseCase = setConsentAcceptedUseCase;
         this.applyConsentUseCase = applyConsentUseCase;
     }
 
@@ -41,11 +53,23 @@ public class SettingsViewModel extends ViewModel {
         return onPreferenceChangedUseCase.invoke(key);
     }
 
-    public SharedPreferences getSharedPreferences() {
-        return getSharedPreferencesUseCase.invoke();
-    }
-
     public void applyConsent() {
         applyConsentUseCase.invoke();
+    }
+
+    public void registerPreferenceChangeListener(SharedPreferences.OnSharedPreferenceChangeListener listener) {
+        registerPreferenceChangeListenerUseCase.invoke(listener);
+    }
+
+    public void unregisterPreferenceChangeListener(SharedPreferences.OnSharedPreferenceChangeListener listener) {
+        unregisterPreferenceChangeListenerUseCase.invoke(listener);
+    }
+
+    public String getDarkMode() {
+        return getDarkModeUseCase.invoke();
+    }
+
+    public void setConsentAccepted(boolean accepted) {
+        setConsentAcceptedUseCase.invoke(accepted);
     }
 }

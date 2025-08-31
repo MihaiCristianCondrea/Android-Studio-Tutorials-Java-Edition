@@ -36,7 +36,10 @@ import com.d4rk.androidtutorials.java.domain.main.MarkStartupScreenShownUseCase;
 import com.d4rk.androidtutorials.java.domain.main.ShouldShowStartupScreenUseCase;
 import com.d4rk.androidtutorials.java.domain.quiz.LoadQuizQuestionsUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.ApplyConsentUseCase;
-import com.d4rk.androidtutorials.java.domain.settings.GetSharedPreferencesUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.GetDarkModeUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.RegisterPreferenceChangeListenerUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.UnregisterPreferenceChangeListenerUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.SetConsentAcceptedUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.OnPreferenceChangedUseCase;
 import com.d4rk.androidtutorials.java.domain.startup.LoadConsentFormUseCase;
 import com.d4rk.androidtutorials.java.domain.startup.RequestConsentInfoUseCase;
@@ -183,13 +186,28 @@ public class AppModule {
     }
 
     @Provides
-    public GetSharedPreferencesUseCase provideGetSharedPreferencesUseCase(SettingsRepository repository) {
-        return new GetSharedPreferencesUseCase(repository);
+    public ApplyConsentUseCase provideApplyConsentUseCase(SettingsRepository repository) {
+        return new ApplyConsentUseCase(repository);
     }
 
     @Provides
-    public ApplyConsentUseCase provideApplyConsentUseCase(SettingsRepository repository) {
-        return new ApplyConsentUseCase(repository);
+    public RegisterPreferenceChangeListenerUseCase provideRegisterPreferenceChangeListenerUseCase(SettingsRepository repository) {
+        return new RegisterPreferenceChangeListenerUseCase(repository);
+    }
+
+    @Provides
+    public UnregisterPreferenceChangeListenerUseCase provideUnregisterPreferenceChangeListenerUseCase(SettingsRepository repository) {
+        return new UnregisterPreferenceChangeListenerUseCase(repository);
+    }
+
+    @Provides
+    public GetDarkModeUseCase provideGetDarkModeUseCase(SettingsRepository repository) {
+        return new GetDarkModeUseCase(repository);
+    }
+
+    @Provides
+    public SetConsentAcceptedUseCase provideSetConsentAcceptedUseCase(SettingsRepository repository) {
+        return new SetConsentAcceptedUseCase(repository);
     }
 
     @Provides
