@@ -197,16 +197,17 @@ public class MainActivity extends AppCompatActivity {
 
             boolean useRail = shouldUseNavigationRail();
             EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
+            NavigationBarView navBarView = (NavigationBarView) mBinding.navView;
             if (useRail) {
                 mBinding.navRail.setVisibility(View.VISIBLE);
-                mBinding.navView.setVisibility(View.GONE);
+                navBarView.setVisibility(View.GONE);
                 edgeToEdgeDelegate.applyEdgeToEdge(mBinding.container);
             } else {
                 mBinding.navRail.setVisibility(View.GONE);
-                mBinding.navView.setVisibility(View.VISIBLE);
-                edgeToEdgeDelegate.applyEdgeToEdgeBottomBar(mBinding.container, mBinding.navView);
+                navBarView.setVisibility(View.VISIBLE);
+                edgeToEdgeDelegate.applyEdgeToEdgeBottomBar(mBinding.container, navBarView);
 
-                mBinding.navView.setLabelVisibilityMode(uiState.getBottomNavVisibility());
+                navBarView.setLabelVisibilityMode(uiState.getBottomNavVisibility());
                 if (mBinding.adView != null) {
                     if (ConsentUtils.canShowAds(this)) {
                         MobileAds.initialize(this);
@@ -240,8 +241,8 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     });
                 } else {
-                    NavigationUI.setupWithNavController(mBinding.navView, navController);
-                    mBinding.navView.setOnItemSelectedListener(item -> {
+                    NavigationUI.setupWithNavController(navBarView, navController);
+                    navBarView.setOnItemSelectedListener(item -> {
                         navController.navigate(item.getItemId(), null, springNavOptions);
                         return true;
                     });
