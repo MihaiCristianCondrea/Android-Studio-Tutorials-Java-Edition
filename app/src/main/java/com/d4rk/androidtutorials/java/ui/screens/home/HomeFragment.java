@@ -35,6 +35,10 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+        homeViewModel.setAnnouncements(
+                getString(com.d4rk.androidtutorials.java.R.string.announcement_title),
+                getString(com.d4rk.androidtutorials.java.R.string.announcement_subtitle)
+        );
         LayoutInflater inflater = LayoutInflater.from(requireContext());
         homeViewModel.getUiState().observe(getViewLifecycleOwner(), state -> {
             binding.announcementTitle.setText(state.announcementTitle());

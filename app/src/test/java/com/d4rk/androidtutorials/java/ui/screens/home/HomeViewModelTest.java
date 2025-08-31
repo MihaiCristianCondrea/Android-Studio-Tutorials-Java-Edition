@@ -1,14 +1,13 @@
 package com.d4rk.androidtutorials.java.ui.screens.home;
 
-import android.app.Application;
-
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
 
-import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
 import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
 import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetPlayStoreUrlUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetAppPlayStoreUrlUseCase;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -17,7 +16,6 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-import org.mockito.Mockito;
 
 public class HomeViewModelTest {
 
@@ -44,11 +42,13 @@ public class HomeViewModelTest {
     public void uiStateUpdatesWithData() {
         List<PromotedApp> promoted = List.of(new PromotedApp("App", "pkg", "icon"));
         FakeHomeRepository repo = new FakeHomeRepository("tip", promoted);
-        Application app = Mockito.mock(Application.class);
-        Mockito.when(app.getString(R.string.announcement_title)).thenReturn("Title");
-        Mockito.when(app.getString(R.string.announcement_subtitle)).thenReturn("Subtitle");
-        HomeViewModel viewModel = new HomeViewModel(app, repo,
-                new GetDailyTipUseCase(repo), new GetPromotedAppsUseCase(repo));
+        HomeViewModel viewModel = new HomeViewModel(
+                new GetDailyTipUseCase(repo),
+                new GetPromotedAppsUseCase(repo),
+                new GetPlayStoreUrlUseCase(repo),
+                new GetAppPlayStoreUrlUseCase(repo)
+        );
+        viewModel.setAnnouncements("Title", "Subtitle");
 
         HomeUiState state = viewModel.getUiState().getValue();
         assertNotNull(state);
@@ -61,11 +61,13 @@ public class HomeViewModelTest {
     @Test
     public void uiStateHandlesEmptyPromotedApps() {
         FakeHomeRepository repo = new FakeHomeRepository("tip", List.of());
-        Application app = Mockito.mock(Application.class);
-        Mockito.when(app.getString(R.string.announcement_title)).thenReturn("Title");
-        Mockito.when(app.getString(R.string.announcement_subtitle)).thenReturn("Subtitle");
-        HomeViewModel viewModel = new HomeViewModel(app, repo,
-                new GetDailyTipUseCase(repo), new GetPromotedAppsUseCase(repo));
+        HomeViewModel viewModel = new HomeViewModel(
+                new GetDailyTipUseCase(repo),
+                new GetPromotedAppsUseCase(repo),
+                new GetPlayStoreUrlUseCase(repo),
+                new GetAppPlayStoreUrlUseCase(repo)
+        );
+        viewModel.setAnnouncements("Title", "Subtitle");
 
         HomeUiState state = viewModel.getUiState().getValue();
         assertNotNull(state);
