@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.screens.support.repository;
 
-import android.app.Activity;
 import android.content.Context;
 
 import androidx.annotation.NonNull;
@@ -12,7 +11,7 @@ import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.PendingPurchasesParams;
 import com.android.billingclient.api.ProductDetails;
 import com.android.billingclient.api.QueryProductDetailsParams;
-import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
+import com.d4rk.androidtutorials.java.data.model.AdLoadParams;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
@@ -120,9 +119,9 @@ public class SupportRepository implements com.d4rk.androidtutorials.java.data.re
     /**
      * Launch the billing flow for a particular product.
      */
-    public void initiatePurchase(Activity activity, String productId) {
+    public void initiatePurchase(String productId, com.d4rk.androidtutorials.java.data.repository.SupportRepository.BillingFlowLauncher launcher) {
         ProductDetails details = productDetailsMap.get(productId);
-        if (details != null) {
+        if (details != null && billingClient != null && launcher != null) {
             // Note: In a real app, you would select a specific offer. For simplicity,
             // we're assuming there's only one or we're using the base plan.
             // For subscriptions, this would be ProductDetails.getSubscriptionOfferDetails()
@@ -144,7 +143,7 @@ public class SupportRepository implements com.d4rk.androidtutorials.java.data.re
                     .setProductDetailsParamsList(productDetailsParamsList)
                     .build();
 
-            billingClient.launchBillingFlow(activity, flowParams);
+            launcher.launch(billingClient, flowParams);
         }
     }
 
@@ -153,9 +152,11 @@ public class SupportRepository implements com.d4rk.androidtutorials.java.data.re
      * Initialize Mobile Ads (usually done once in your app, but
      * can be done here if needed for the support screen).
      */
-    public void initMobileAds(ActivitySupportBinding binding) {
+    public void initMobileAds(AdLoadParams params) {
         MobileAds.initialize(context);
-        binding.largeBannerAd.loadAd(new AdRequest.Builder().build());
+        if (params != null && params.getAdLoader() != null) {
+            params.getAdLoader().load(new AdRequest.Builder().build());
+        }
     }
 
 }

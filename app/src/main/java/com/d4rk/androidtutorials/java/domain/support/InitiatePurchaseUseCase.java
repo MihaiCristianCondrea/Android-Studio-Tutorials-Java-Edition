@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.domain.support;
 
-import android.app.Activity;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 
 /** Launches billing flow for a product. */
@@ -11,7 +10,7 @@ public class InitiatePurchaseUseCase {
         this.repository = repository;
     }
 
-    public void invoke(Activity activity, String productId) {
-        repository.initiatePurchase(activity, productId);
+    public void invoke(String productId, SupportRepository.BillingFlowLauncher launcher) {
+        repository.initiatePurchase(productId, launcher);
     }
 }
