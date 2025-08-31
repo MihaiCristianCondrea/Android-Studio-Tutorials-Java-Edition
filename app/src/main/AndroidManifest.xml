@@ -36,11 +36,6 @@
         tools:targetApi="33">
 
         <activity
-            android:name=".ui.screens.startup.StartupActivity"
-            android:noHistory="true"
-            android:theme="@style/AppTheme" />
-
-        <activity
             android:name=".ui.screens.main.MainActivity"
             android:exported="true"
             android:theme="@style/SplashScreenTheme">
