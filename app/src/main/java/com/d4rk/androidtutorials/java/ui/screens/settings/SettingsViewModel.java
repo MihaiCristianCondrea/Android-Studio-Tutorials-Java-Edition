@@ -1,34 +1,35 @@
 package com.d4rk.androidtutorials.java.ui.screens.settings;
 
-import android.app.Application;
 import android.content.SharedPreferences;
 
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.ViewModel;
 
-import com.d4rk.androidtutorials.java.ui.screens.settings.repository.SettingsRepository;
 import com.d4rk.androidtutorials.java.domain.settings.OnPreferenceChangedUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.GetSharedPreferencesUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.ApplyConsentUseCase;
+
+import dagger.hilt.android.lifecycle.HiltViewModel;
+import javax.inject.Inject;
 
 
 /**
  * ViewModel for the Settings screen. Delegates to SettingsRepository for
  * reading/writing preferences, applying theme, etc.
  */
-public class SettingsViewModel extends AndroidViewModel {
+@HiltViewModel
+public class SettingsViewModel extends ViewModel {
 
-    private final SettingsRepository settingsRepository;
     private final OnPreferenceChangedUseCase onPreferenceChangedUseCase;
     private final GetSharedPreferencesUseCase getSharedPreferencesUseCase;
     private final ApplyConsentUseCase applyConsentUseCase;
 
-    public SettingsViewModel(@NonNull Application application) {
-        super(application);
-        settingsRepository = new SettingsRepository(application);
-        onPreferenceChangedUseCase = new OnPreferenceChangedUseCase(settingsRepository);
-        getSharedPreferencesUseCase = new GetSharedPreferencesUseCase(settingsRepository);
-        applyConsentUseCase = new ApplyConsentUseCase(settingsRepository);
+    @Inject
+    public SettingsViewModel(OnPreferenceChangedUseCase onPreferenceChangedUseCase,
+                             GetSharedPreferencesUseCase getSharedPreferencesUseCase,
+                             ApplyConsentUseCase applyConsentUseCase) {
+        this.onPreferenceChangedUseCase = onPreferenceChangedUseCase;
+        this.getSharedPreferencesUseCase = getSharedPreferencesUseCase;
+        this.applyConsentUseCase = applyConsentUseCase;
     }
 
     /**

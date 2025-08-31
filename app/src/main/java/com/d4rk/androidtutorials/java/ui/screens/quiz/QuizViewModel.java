@@ -1,36 +1,31 @@
 package com.d4rk.androidtutorials.java.ui.screens.quiz;
 
-import android.app.Application;
-
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
-import com.d4rk.androidtutorials.java.data.repository.DefaultQuizRepository;
-import com.d4rk.androidtutorials.java.data.repository.QuizRepository;
-import com.d4rk.androidtutorials.java.data.source.DefaultQuizLocalDataSource;
-import com.d4rk.androidtutorials.java.data.source.QuizLocalDataSource;
 import com.d4rk.androidtutorials.java.domain.quiz.LoadQuizQuestionsUseCase;
 
 import java.util.List;
 
+import dagger.hilt.android.lifecycle.HiltViewModel;
+import javax.inject.Inject;
+
 /**
  * ViewModel managing quiz state and scoring.
  */
-public class QuizViewModel extends AndroidViewModel {
+@HiltViewModel
+public class QuizViewModel extends ViewModel {
 
     private final List<QuizQuestion> questions;
     private final MutableLiveData<Integer> currentIndex = new MutableLiveData<>(0);
     private final MutableLiveData<Integer> score = new MutableLiveData<>(0);
     private final LoadQuizQuestionsUseCase loadQuizQuestionsUseCase;
 
-    public QuizViewModel(@NonNull Application application) {
-        super(application);
-        QuizLocalDataSource local = new DefaultQuizLocalDataSource(application.getAssets());
-        QuizRepository repository = new DefaultQuizRepository(local);
-        loadQuizQuestionsUseCase = new LoadQuizQuestionsUseCase(repository);
+    @Inject
+    public QuizViewModel(LoadQuizQuestionsUseCase loadQuizQuestionsUseCase) {
+        this.loadQuizQuestionsUseCase = loadQuizQuestionsUseCase;
         questions = loadQuizQuestionsUseCase.invoke();
     }
 

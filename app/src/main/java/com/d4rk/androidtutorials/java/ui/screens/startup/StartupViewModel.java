@@ -2,30 +2,32 @@ package com.d4rk.androidtutorials.java.ui.screens.startup;
 
 
 import android.app.Activity;
-import android.app.Application;
 
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.ViewModel;
 
-import com.d4rk.androidtutorials.java.ui.screens.startup.repository.StartupRepository;
 import com.d4rk.androidtutorials.java.domain.startup.RequestConsentInfoUseCase;
 import com.d4rk.androidtutorials.java.domain.startup.LoadConsentFormUseCase;
 import com.google.android.ump.ConsentRequestParameters;
+import com.d4rk.androidtutorials.java.ui.screens.startup.repository.StartupRepository;
+
+import dagger.hilt.android.lifecycle.HiltViewModel;
+import javax.inject.Inject;
 
 /**
  * ViewModel for the startup screen.
  * Handles consent logic by delegating to StartupRepository.
  */
-public class StartupViewModel extends AndroidViewModel {
+@HiltViewModel
+public class StartupViewModel extends ViewModel {
 
     private final RequestConsentInfoUseCase requestConsentInfoUseCase;
     private final LoadConsentFormUseCase loadConsentFormUseCase;
 
-    public StartupViewModel(@NonNull Application application) {
-        super(application);
-        StartupRepository repository = new StartupRepository(application);
-        requestConsentInfoUseCase = new RequestConsentInfoUseCase(repository);
-        loadConsentFormUseCase = new LoadConsentFormUseCase(repository);
+    @Inject
+    public StartupViewModel(RequestConsentInfoUseCase requestConsentInfoUseCase,
+                             LoadConsentFormUseCase loadConsentFormUseCase) {
+        this.requestConsentInfoUseCase = requestConsentInfoUseCase;
+        this.loadConsentFormUseCase = loadConsentFormUseCase;
     }
 
     /**
