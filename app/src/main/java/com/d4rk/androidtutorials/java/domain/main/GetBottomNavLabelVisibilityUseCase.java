@@ -10,7 +10,7 @@ public class GetBottomNavLabelVisibilityUseCase {
         this.repository = repository;
     }
 
-    public String invoke(String key, String defaultValue) {
-        return repository.getBottomNavLabelVisibility(key, defaultValue);
+    public String invoke() {
+        return repository.getBottomNavLabelVisibility();
     }
 }

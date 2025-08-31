@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.domain.main;
 
-import android.content.pm.PackageManager;
 import com.d4rk.androidtutorials.java.data.repository.MainRepository;
 
 /** Checks if an app is installed by package name. */
@@ -11,7 +10,7 @@ public class IsAppInstalledUseCase {
         this.repository = repository;
     }
 
-    public boolean invoke(PackageManager pm, String packageName) {
-        return repository.isAppInstalled(pm, packageName);
+    public boolean invoke(String packageName) {
+        return repository.isAppInstalled(packageName);
     }
 }

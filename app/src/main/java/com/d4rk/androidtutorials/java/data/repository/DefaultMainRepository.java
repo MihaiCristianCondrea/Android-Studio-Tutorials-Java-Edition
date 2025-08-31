@@ -50,11 +50,11 @@ public class DefaultMainRepository implements MainRepository {
     /**
      * Check if a given package name is installed.
      *
-     * @param packageManager The PackageManager used to check installations.
-     * @param packageName    The package to check.
+     * @param packageName The package to check.
      * @return True if installed, false otherwise.
      */
-    public boolean isAppInstalled(PackageManager packageManager, String packageName) {
+    public boolean isAppInstalled(String packageName) {
+        PackageManager packageManager = context.getPackageManager();
         try {
             packageManager.getPackageInfo(packageName, 0);
             return true;
@@ -85,14 +85,18 @@ public class DefaultMainRepository implements MainRepository {
     /**
      * Retrieves the bottom navigation label visibility preference.
      */
-    public String getBottomNavLabelVisibility(String labelKey, String labelDefaultValue) {
+    public String getBottomNavLabelVisibility() {
+        String labelKey = context.getString(R.string.key_bottom_navigation_bar_labels);
+        String labelDefaultValue = context.getString(R.string.default_value_bottom_navigation_bar_labels);
         return defaultSharedPrefs.getString(labelKey, labelDefaultValue);
     }
 
     /**
      * Retrieves which tab should be shown by default.
      */
-    public String getDefaultTabPreference(String defaultTabKey, String defaultTabValue) {
+    public String getDefaultTabPreference() {
+        String defaultTabKey = context.getString(R.string.key_default_tab);
+        String defaultTabValue = context.getString(R.string.default_value_tab);
         return defaultSharedPrefs.getString(defaultTabKey, defaultTabValue);
     }
 

@@ -127,7 +127,10 @@ public class MainActivity extends AppCompatActivity {
 
         setupUpdateNotifications();
 
-        mainViewModel.applySettings();
+        String[] themeValues = getResources().getStringArray(R.array.preference_theme_values);
+        String[] bottomNavBarLabelsValues = getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
+        String[] defaultTabValues = getResources().getStringArray(R.array.preference_default_tab_values);
+        mainViewModel.applySettings(themeValues, bottomNavBarLabelsValues, defaultTabValues);
         if (mainViewModel.shouldShowStartupScreen()) {
             mainViewModel.markStartupScreenShown();
             startActivity(new Intent(this, StartupActivity.class));

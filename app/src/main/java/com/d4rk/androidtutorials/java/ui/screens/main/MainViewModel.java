@@ -1,8 +1,6 @@
 package com.d4rk.androidtutorials.java.ui.screens.main;
 
-import android.app.Application;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.LiveData;
@@ -31,7 +29,6 @@ import javax.inject.Inject;
 @HiltViewModel
 public class MainViewModel extends ViewModel {
 
-    private final Application application;
     private final ApplyThemeSettingsUseCase applyThemeSettingsUseCase;
     private final GetBottomNavLabelVisibilityUseCase getBottomNavLabelVisibilityUseCase;
     private final GetDefaultTabPreferenceUseCase getDefaultTabPreferenceUseCase;
@@ -46,8 +43,7 @@ public class MainViewModel extends ViewModel {
     private final MutableLiveData<Boolean> themeChanged = new MutableLiveData<>();
 
     @Inject
-    public MainViewModel(Application application,
-                         ApplyThemeSettingsUseCase applyThemeSettingsUseCase,
+    public MainViewModel(ApplyThemeSettingsUseCase applyThemeSettingsUseCase,
                          GetBottomNavLabelVisibilityUseCase getBottomNavLabelVisibilityUseCase,
                          GetDefaultTabPreferenceUseCase getDefaultTabPreferenceUseCase,
                          ApplyLanguageSettingsUseCase applyLanguageSettingsUseCase,
@@ -56,7 +52,6 @@ public class MainViewModel extends ViewModel {
                          IsAppInstalledUseCase isAppInstalledUseCase,
                          BuildShortcutIntentUseCase buildShortcutIntentUseCase,
                          GetAppUpdateManagerUseCase getAppUpdateManagerUseCase) {
-        this.application = application;
         this.applyThemeSettingsUseCase = applyThemeSettingsUseCase;
         this.getBottomNavLabelVisibilityUseCase = getBottomNavLabelVisibilityUseCase;
         this.getDefaultTabPreferenceUseCase = getDefaultTabPreferenceUseCase;
@@ -84,26 +79,17 @@ public class MainViewModel extends ViewModel {
      * Loads and applies settings such as theme, bottom nav visibility, default tab, etc.
      * This can be called from onCreate() or similar lifecycle methods in MainActivity.
      */
-    public void applySettings() {
-        boolean changedTheme = applyThemeSettingsUseCase.invoke(
-                application.getResources().getStringArray(R.array.preference_theme_values)
-        );
+    public void applySettings(String[] themeValues,
+                              String[] bottomNavBarLabelsValues,
+                              String[] defaultTabValues) {
+        boolean changedTheme = applyThemeSettingsUseCase.invoke(themeValues);
         themeChanged.setValue(changedTheme);
 
-        String labelKey = application.getString(R.string.key_bottom_navigation_bar_labels);
-        String labelDefaultValue = application.getString(R.string.default_value_bottom_navigation_bar_labels);
-        String[] bottomNavBarLabelsValues =
-                application.getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
-
-        String labelVisibilityStr = getBottomNavLabelVisibilityUseCase.invoke(labelKey, labelDefaultValue);
+        String labelVisibilityStr = getBottomNavLabelVisibilityUseCase.invoke();
         int visibilityMode = getVisibilityMode(labelVisibilityStr, bottomNavBarLabelsValues);
         bottomNavLabelVisibility.setValue(visibilityMode);
 
-        String defaultTabKey = application.getString(R.string.key_default_tab);
-        String defaultTabValue = application.getString(R.string.default_value_tab);
-        String[] defaultTabValues = application.getResources().getStringArray(R.array.preference_default_tab_values);
-
-        String startFragmentIdValue = getDefaultTabPreferenceUseCase.invoke(defaultTabKey, defaultTabValue);
+        String startFragmentIdValue = getDefaultTabPreferenceUseCase.invoke();
         int startFragmentId;
         if (startFragmentIdValue.equals(defaultTabValues[0])) {
             startFragmentId = R.id.navigation_home;
@@ -136,8 +122,7 @@ public class MainViewModel extends ViewModel {
      * Check if the “Android Tutorials” app is installed or not.
      */
     public boolean isAndroidTutorialsInstalled() {
-        PackageManager pm = application.getPackageManager();
-        return isAppInstalledUseCase.invoke(pm, "com.d4rk.androidtutorials.java");
+        return isAppInstalledUseCase.invoke("com.d4rk.androidtutorials.java");
     }
 
     /**
