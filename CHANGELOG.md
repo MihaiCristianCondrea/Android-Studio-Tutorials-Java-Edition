@@ -2,6 +2,7 @@
 
 - Improved lesson UI with a top app bar and share action in the Start a New Project tutorial.
 - Added translations for the Start a New Project lesson across supported languages.
+- Removed Google Play Instant Apps integration ahead of its deprecation in December 2025.
 
 # Version 5.0.2:
 
