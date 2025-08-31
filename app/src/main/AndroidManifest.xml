@@ -258,15 +258,6 @@
             android:label="@string/grid_view"
             android:parentActivityName=".ui.screens.android.lessons.views.grid.GirdViewActivity" />
         <activity
-            android:name=".ui.screens.settings.SettingsActivity"
-            android:exported="false"
-            android:label="@string/settings"
-            android:parentActivityName=".ui.screens.settings.SettingsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".ui.screens.help.HelpActivity"
             android:exported="false"
             android:label="@string/help"
@@ -276,11 +267,6 @@
             android:exported="false"
             android:label="@string/switches"
             android:parentActivityName=".ui.screens.android.lessons.buttons.switches.SwitchActivity" />
-        <activity
-            android:name=".ui.screens.support.SupportActivity"
-            android:exported="false"
-            android:label="@string/support_us"
-            android:parentActivityName=".ui.screens.support.SupportActivity" />
         <activity
             android:name=".ui.screens.android.lessons.buttons.buttons.ButtonsActivity"
             android:exported="false"
@@ -322,11 +308,6 @@
             android:exported="false"
             android:label="@string/navigation_drawer"
             android:parentActivityName=".ui.screens.android.lessons.navigation.drawer.NavigationDrawerActivity" />
-        <activity
-            android:name=".ui.screens.quiz.QuizActivity"
-            android:exported="false"
-            android:label="@string/quiz_title"
-            android:parentActivityName=".ui.screens.quiz.QuizActivity" />
 
         <receiver
             android:name=".notifications.receivers.QuizReminderReceiver"
