@@ -4,29 +4,27 @@ import android.app.Application;
 import android.content.Intent;
 import android.net.Uri;
 
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.android.volley.toolbox.Volley;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
-import com.d4rk.androidtutorials.java.data.repository.DefaultHomeRepository;
 import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
-import com.d4rk.androidtutorials.java.data.source.DefaultHomeLocalDataSource;
-import com.d4rk.androidtutorials.java.data.source.DefaultHomeRemoteDataSource;
-import com.d4rk.androidtutorials.java.data.source.HomeLocalDataSource;
-import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource;
 import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
 import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
+
+import dagger.hilt.android.lifecycle.HiltViewModel;
+import javax.inject.Inject;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class HomeViewModel extends AndroidViewModel {
+@HiltViewModel
+public class HomeViewModel extends ViewModel {
 
+    private final Application application;
     private final HomeRepository homeRepository;
     private final GetDailyTipUseCase getDailyTipUseCase;
     private final GetPromotedAppsUseCase getPromotedAppsUseCase;
@@ -36,16 +34,15 @@ public class HomeViewModel extends AndroidViewModel {
     private final MutableLiveData<String> dailyTip = new MutableLiveData<>();
     private final MutableLiveData<List<PromotedApp>> promotedApps = new MutableLiveData<>(new ArrayList<>());
 
-    public HomeViewModel(@NonNull Application application) {
-        super(application);
-        HomeRemoteDataSource remote = new DefaultHomeRemoteDataSource(
-                Volley.newRequestQueue(application),
-                "https://raw.githubusercontent.com/D4rK7355608/com.d4rk.apis/refs/heads/main/App%20Toolkit/release/en/home/api_android_apps.json"
-        );
-        HomeLocalDataSource local = new DefaultHomeLocalDataSource(application);
-        homeRepository = new DefaultHomeRepository(remote, local);
-        getDailyTipUseCase = new GetDailyTipUseCase(homeRepository);
-        getPromotedAppsUseCase = new GetPromotedAppsUseCase(homeRepository);
+    @Inject
+    public HomeViewModel(Application application,
+                         HomeRepository homeRepository,
+                         GetDailyTipUseCase getDailyTipUseCase,
+                         GetPromotedAppsUseCase getPromotedAppsUseCase) {
+        this.application = application;
+        this.homeRepository = homeRepository;
+        this.getDailyTipUseCase = getDailyTipUseCase;
+        this.getPromotedAppsUseCase = getPromotedAppsUseCase;
 
         announcementTitle.setValue(application.getString(R.string.announcement_title));
         announcementSubtitle.setValue(application.getString(R.string.announcement_subtitle));
@@ -111,7 +108,7 @@ public class HomeViewModel extends AndroidViewModel {
     private Intent buildPlayStoreIntent(String url) {
         Intent playStoreIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         playStoreIntent.setPackage("com.android.vending");
-        if (playStoreIntent.resolveActivity(getApplication().getPackageManager()) != null) {
+        if (playStoreIntent.resolveActivity(application.getPackageManager()) != null) {
             return playStoreIntent;
         }
         return new Intent(Intent.ACTION_VIEW, Uri.parse(url));

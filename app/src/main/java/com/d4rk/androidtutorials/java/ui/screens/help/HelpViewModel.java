@@ -2,30 +2,32 @@ package com.d4rk.androidtutorials.java.ui.screens.help;
 
 
 import android.app.Activity;
-import android.app.Application;
 
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.ViewModel;
 
-import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
 import com.d4rk.androidtutorials.java.domain.help.RequestReviewFlowUseCase;
 import com.d4rk.androidtutorials.java.domain.help.LaunchReviewFlowUseCase;
 import com.google.android.play.core.review.ReviewInfo;
+import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
+
+import dagger.hilt.android.lifecycle.HiltViewModel;
+import javax.inject.Inject;
 
 /**
  * ViewModel for the Help screen. Delegates to HelpRepository for
  * requesting or launching in-app reviews.
  */
-public class HelpViewModel extends AndroidViewModel {
+@HiltViewModel
+public class HelpViewModel extends ViewModel {
 
     private final RequestReviewFlowUseCase requestReviewFlowUseCase;
     private final LaunchReviewFlowUseCase launchReviewFlowUseCase;
 
-    public HelpViewModel(@NonNull Application application) {
-        super(application);
-        HelpRepository repository = new HelpRepository(application);
-        requestReviewFlowUseCase = new RequestReviewFlowUseCase(repository);
-        launchReviewFlowUseCase = new LaunchReviewFlowUseCase(repository);
+    @Inject
+    public HelpViewModel(RequestReviewFlowUseCase requestReviewFlowUseCase,
+                         LaunchReviewFlowUseCase launchReviewFlowUseCase) {
+        this.requestReviewFlowUseCase = requestReviewFlowUseCase;
+        this.launchReviewFlowUseCase = launchReviewFlowUseCase;
     }
 
     /**

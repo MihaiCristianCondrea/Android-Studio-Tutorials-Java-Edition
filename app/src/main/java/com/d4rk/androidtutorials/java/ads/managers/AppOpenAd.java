@@ -20,9 +20,12 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.appopen.AppOpenAd.AppOpenAdLoadCallback;
 
+import dagger.hilt.android.HiltAndroidApp;
+
 import java.util.Date;
 
 @SuppressWarnings("ALL")
+@HiltAndroidApp
 public class AppOpenAd extends Application implements ActivityLifecycleCallbacks, LifecycleObserver {
     private AppOpenAdManager appOpenAdManager;
     private Activity currentActivity;

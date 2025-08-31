@@ -3,6 +3,7 @@ plugins {
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
     id 'com.mikepenz.aboutlibraries.plugin'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -93,4 +94,6 @@ dependencies {
     implementation libs.library
     implementation libs.materialratingbar.library
     implementation libs.codeview
+    implementation libs.hilt.android
+    annotationProcessor libs.hilt.compiler
 }

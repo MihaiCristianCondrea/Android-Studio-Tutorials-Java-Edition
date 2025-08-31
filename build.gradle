@@ -4,4 +4,5 @@ plugins {
     id 'com.google.firebase.crashlytics' version '3.0.6' apply false
     //noinspection NewerVersionAvailable
     id 'com.mikepenz.aboutlibraries.plugin' version '11.3.0' apply true
+    id 'com.google.dagger.hilt.android' version '2.51.1' apply false
 }

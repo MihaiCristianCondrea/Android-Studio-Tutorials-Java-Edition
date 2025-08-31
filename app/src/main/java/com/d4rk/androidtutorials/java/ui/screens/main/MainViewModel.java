@@ -4,13 +4,11 @@ import android.app.Application;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.d4rk.androidtutorials.java.R;
-import com.d4rk.androidtutorials.java.ui.screens.main.repository.MainRepository;
 import com.d4rk.androidtutorials.java.domain.main.ApplyThemeSettingsUseCase;
 import com.d4rk.androidtutorials.java.domain.main.GetBottomNavLabelVisibilityUseCase;
 import com.d4rk.androidtutorials.java.domain.main.GetDefaultTabPreferenceUseCase;
@@ -23,13 +21,17 @@ import com.d4rk.androidtutorials.java.domain.main.GetAppUpdateManagerUseCase;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.play.core.appupdate.AppUpdateManager;
 
+import dagger.hilt.android.lifecycle.HiltViewModel;
+import javax.inject.Inject;
+
 /**
  * ViewModel for MainActivity. It interacts with MainRepository to retrieve or
  * update data, and exposes it to the UI.
  */
-public class MainViewModel extends AndroidViewModel {
+@HiltViewModel
+public class MainViewModel extends ViewModel {
 
-    private final MainRepository mainRepository;
+    private final Application application;
     private final ApplyThemeSettingsUseCase applyThemeSettingsUseCase;
     private final GetBottomNavLabelVisibilityUseCase getBottomNavLabelVisibilityUseCase;
     private final GetDefaultTabPreferenceUseCase getDefaultTabPreferenceUseCase;
@@ -43,18 +45,27 @@ public class MainViewModel extends AndroidViewModel {
     private final MutableLiveData<Integer> defaultNavDestination = new MutableLiveData<>();
     private final MutableLiveData<Boolean> themeChanged = new MutableLiveData<>();
 
-    public MainViewModel(@NonNull Application application) {
-        super(application);
-        mainRepository = new MainRepository(application);
-        applyThemeSettingsUseCase = new ApplyThemeSettingsUseCase(mainRepository);
-        getBottomNavLabelVisibilityUseCase = new GetBottomNavLabelVisibilityUseCase(mainRepository);
-        getDefaultTabPreferenceUseCase = new GetDefaultTabPreferenceUseCase(mainRepository);
-        applyLanguageSettingsUseCase = new ApplyLanguageSettingsUseCase(mainRepository);
-        shouldShowStartupScreenUseCase = new ShouldShowStartupScreenUseCase(mainRepository);
-        markStartupScreenShownUseCase = new MarkStartupScreenShownUseCase(mainRepository);
-        isAppInstalledUseCase = new IsAppInstalledUseCase(mainRepository);
-        buildShortcutIntentUseCase = new BuildShortcutIntentUseCase(mainRepository);
-        getAppUpdateManagerUseCase = new GetAppUpdateManagerUseCase(mainRepository);
+    @Inject
+    public MainViewModel(Application application,
+                         ApplyThemeSettingsUseCase applyThemeSettingsUseCase,
+                         GetBottomNavLabelVisibilityUseCase getBottomNavLabelVisibilityUseCase,
+                         GetDefaultTabPreferenceUseCase getDefaultTabPreferenceUseCase,
+                         ApplyLanguageSettingsUseCase applyLanguageSettingsUseCase,
+                         ShouldShowStartupScreenUseCase shouldShowStartupScreenUseCase,
+                         MarkStartupScreenShownUseCase markStartupScreenShownUseCase,
+                         IsAppInstalledUseCase isAppInstalledUseCase,
+                         BuildShortcutIntentUseCase buildShortcutIntentUseCase,
+                         GetAppUpdateManagerUseCase getAppUpdateManagerUseCase) {
+        this.application = application;
+        this.applyThemeSettingsUseCase = applyThemeSettingsUseCase;
+        this.getBottomNavLabelVisibilityUseCase = getBottomNavLabelVisibilityUseCase;
+        this.getDefaultTabPreferenceUseCase = getDefaultTabPreferenceUseCase;
+        this.applyLanguageSettingsUseCase = applyLanguageSettingsUseCase;
+        this.shouldShowStartupScreenUseCase = shouldShowStartupScreenUseCase;
+        this.markStartupScreenShownUseCase = markStartupScreenShownUseCase;
+        this.isAppInstalledUseCase = isAppInstalledUseCase;
+        this.buildShortcutIntentUseCase = buildShortcutIntentUseCase;
+        this.getAppUpdateManagerUseCase = getAppUpdateManagerUseCase;
     }
 
     private static int getVisibilityMode(String labelVisibilityStr, String[] bottomNavBarLabelsValues) {
@@ -75,22 +86,22 @@ public class MainViewModel extends AndroidViewModel {
      */
     public void applySettings() {
         boolean changedTheme = applyThemeSettingsUseCase.invoke(
-                getApplication().getResources().getStringArray(R.array.preference_theme_values)
+                application.getResources().getStringArray(R.array.preference_theme_values)
         );
         themeChanged.setValue(changedTheme);
 
-        String labelKey = getApplication().getString(R.string.key_bottom_navigation_bar_labels);
-        String labelDefaultValue = getApplication().getString(R.string.default_value_bottom_navigation_bar_labels);
+        String labelKey = application.getString(R.string.key_bottom_navigation_bar_labels);
+        String labelDefaultValue = application.getString(R.string.default_value_bottom_navigation_bar_labels);
         String[] bottomNavBarLabelsValues =
-                getApplication().getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
+                application.getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
 
         String labelVisibilityStr = getBottomNavLabelVisibilityUseCase.invoke(labelKey, labelDefaultValue);
         int visibilityMode = getVisibilityMode(labelVisibilityStr, bottomNavBarLabelsValues);
         bottomNavLabelVisibility.setValue(visibilityMode);
 
-        String defaultTabKey = getApplication().getString(R.string.key_default_tab);
-        String defaultTabValue = getApplication().getString(R.string.default_value_tab);
-        String[] defaultTabValues = getApplication().getResources().getStringArray(R.array.preference_default_tab_values);
+        String defaultTabKey = application.getString(R.string.key_default_tab);
+        String defaultTabValue = application.getString(R.string.default_value_tab);
+        String[] defaultTabValues = application.getResources().getStringArray(R.array.preference_default_tab_values);
 
         String startFragmentIdValue = getDefaultTabPreferenceUseCase.invoke(defaultTabKey, defaultTabValue);
         int startFragmentId;
@@ -125,7 +136,7 @@ public class MainViewModel extends AndroidViewModel {
      * Check if the “Android Tutorials” app is installed or not.
      */
     public boolean isAndroidTutorialsInstalled() {
-        PackageManager pm = getApplication().getPackageManager();
+        PackageManager pm = application.getPackageManager();
         return isAppInstalledUseCase.invoke(pm, "com.d4rk.androidtutorials.java");
     }
 
