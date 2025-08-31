@@ -10,7 +10,7 @@ public class GetDefaultTabPreferenceUseCase {
         this.repository = repository;
     }
 
-    public String invoke(String key, String defaultValue) {
-        return repository.getDefaultTabPreference(key, defaultValue);
+    public String invoke() {
+        return repository.getDefaultTabPreference();
     }
 }
