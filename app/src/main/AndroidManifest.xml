@@ -290,6 +290,7 @@
             android:name=".ui.screens.android.lessons.start.AndroidStartProjectActivity"
             android:exported="false"
             android:label="@string/android_start"
+            android:theme="@style/AppTheme"
             android:parentActivityName=".ui.screens.android.lessons.start.AndroidStartProjectActivity" />
         <activity
             android:name=".ui.screens.android.lessons.basics.sdk.AndroidSDK"
