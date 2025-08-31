@@ -27,6 +27,7 @@ coreKtx = "1.17.0"
 material = "1.14.0-alpha04"
 multidex = "2.0.1"
 playServicesAds = "24.5.0"
+playServicesInstantApps = "18.2.0"
 codeview = "1.3.9"
 hilt = "2.57.1"
 
@@ -62,6 +63,7 @@ materialratingbar-library = { module = "me.zhanghai.android.materialratingbar:li
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
 mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockitoInline" }
 play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "playServicesAds" }
+play-services-instantapps = { module = "com.google.android.gms:play-services-instantapps", version.ref = "playServicesInstantApps" }
 review = { module = "com.google.android.play:review", version.ref = "review" }
 volley = { module = "com.android.volley:volley", version.ref = "volley" }
 codeview = { module = "io.github.amrdeveloper:codeview", version.ref = "codeview" }
