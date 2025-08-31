@@ -392,6 +392,7 @@
     <string name="snack_image_button">圖片按鈕已點擊！</string>
     <string name="toast_this_is_a_toast">這是一個 Toast！</string>
     <string name="tooltip_show_code">顯示程式碼語法</string>
+    <string name="tooltip_show_java_code_snippet">顯示Java代碼段</string>
     <string name="tooltip_open_me">開啟我 🌐</string>
     <string name="hint_type">在此輸入…</string>
     <string name="hint_password">輸入您的密碼…</string>

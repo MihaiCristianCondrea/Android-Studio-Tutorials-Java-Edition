@@ -391,6 +391,7 @@
     <string name="snack_image_button">امیج بٹن پر کلک کیا گیا!</string>
     <string name="toast_this_is_a_toast">یہ ایک ٹوسٹ ہے!</string>
     <string name="tooltip_show_code">کوڈ سنٹیکس دکھائیں</string>
+    <string name="tooltip_show_java_code_snippet">جاوا کوڈ کا ٹکڑا دکھائیں</string>
     <string name="tooltip_open_me">مجھے کھولو 🌐</string>
     <string name="hint_type">یہاں ٹائپ کریں…</string>
     <string name="hint_password">اپنا پاس ورڈ درج کریں…</string>

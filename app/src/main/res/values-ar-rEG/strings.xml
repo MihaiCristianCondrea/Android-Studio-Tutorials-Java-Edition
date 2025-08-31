@@ -391,6 +391,7 @@
     <string name="snack_image_button">تم النقر على زر الصورة!</string>
     <string name="toast_this_is_a_toast">دي رسالة سريعة!</string>
     <string name="tooltip_show_code">عرض صيغة الكود</string>
+    <string name="tooltip_show_java_code_snippet">عرض مقتطفات رمز Java</string>
     <string name="tooltip_open_me">افتحني 🌐</string>
     <string name="hint_type">اكتب هنا…</string>
     <string name="hint_password">أدخل كلمة المرور الخاصة بك…</string>

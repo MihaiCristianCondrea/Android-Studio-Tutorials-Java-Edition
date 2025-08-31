@@ -370,6 +370,7 @@
     <string name="snack_image_button">इमेज बटन क्लिक किया गया!</string>
     <string name="toast_this_is_a_toast">यह एक टोस्ट है!</string>
     <string name="tooltip_show_code">कोड सिंटैक्स दिखाएं</string>
+    <string name="tooltip_show_java_code_snippet">जावा कोड स्निपेट दिखाएं</string>
     <string name="tooltip_open_me">मुझे खोलें 🌐</string>
     <string name="hint_type">यहां टाइप करें…</string>
     <string name="hint_password">अपना पासवर्ड दर्ज करें…</string>

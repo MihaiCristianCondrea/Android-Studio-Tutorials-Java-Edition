@@ -391,6 +391,7 @@
     <string name="snack_image_button">Resim butonuna tıklandı!</string>
     <string name="toast_this_is_a_toast">Bu bir toast!</string>
     <string name="tooltip_show_code">Kod sözdizimini göster</string>
+    <string name="tooltip_show_java_code_snippet">Java Kodu Snippet'i Göster</string>
     <string name="tooltip_open_me">Beni aç 🌐</string>
     <string name="hint_type">Buraya yazın…</string>
     <string name="hint_password">Şifrenizi girin…</string>

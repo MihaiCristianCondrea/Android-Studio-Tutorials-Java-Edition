@@ -391,6 +391,7 @@
     <string name="snack_image_button">Đã nhấp vào nút hình ảnh!</string>
     <string name="toast_this_is_a_toast">Đây là một thông báo nhanh!</string>
     <string name="tooltip_show_code">Hiển thị cú pháp mã</string>
+    <string name="tooltip_show_java_code_snippet">Hiển thị đoạn mã Java Code</string>
     <string name="tooltip_open_me">Mở tôi 🌐</string>
     <string name="hint_type">Nhập ở đây…</string>
     <string name="hint_password">Nhập mật khẩu của bạn…</string>

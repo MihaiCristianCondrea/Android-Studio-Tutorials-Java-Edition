@@ -6,4 +6,5 @@
     <string name="im_step1_desc">Android Studio の新規プロジェクトボタンを示すスクリーンショット。</string>
     <string name="im_step2_desc">プロジェクト設定中のアクティビティタイプ選択を示すスクリーンショット。</string>
     <string name="im_step3_desc">アプリ名、パッケージ、言語、最小 SDK の入力欄を示すスクリーンショット。</string>
+    <string name="tooltip_show_java_code_snippet">Javaコードスニペットを表示します</string>
 </resources>

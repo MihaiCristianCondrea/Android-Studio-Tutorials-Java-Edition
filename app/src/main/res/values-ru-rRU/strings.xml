@@ -370,6 +370,7 @@
     <string name="snack_image_button">Кнопка-изображение нажата!</string>
     <string name="toast_this_is_a_toast">Это тост!</string>
     <string name="tooltip_show_code">Показать синтаксис кода</string>
+    <string name="tooltip_show_java_code_snippet">Показать фрагмент кода Java</string>
     <string name="tooltip_open_me">Открыть меня 🌐</string>
     <string name="hint_type">Введите здесь…</string>
     <string name="hint_password">Введите ваш пароль…</string>

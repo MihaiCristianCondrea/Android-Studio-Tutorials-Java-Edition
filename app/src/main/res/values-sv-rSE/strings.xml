@@ -391,6 +391,7 @@
     <string name="snack_image_button">Bildknapp klickad!</string>
     <string name="toast_this_is_a_toast">Detta är en toast!</string>
     <string name="tooltip_show_code">Visa kodsyntax</string>
+    <string name="tooltip_show_java_code_snippet">Visa Java -kodavsnitt</string>
     <string name="tooltip_open_me">Öppna mig 🌐</string>
     <string name="hint_type">Skriv här…</string>
     <string name="hint_password">Ange ditt lösenord…</string>

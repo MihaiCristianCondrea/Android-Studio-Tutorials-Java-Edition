@@ -382,6 +382,7 @@
     <string name="snack_image_button">Кликнат е бутон с изображение!</string>
     <string name="toast_this_is_a_toast">Това е изскачащо съобщение!</string>
     <string name="tooltip_show_code">Покажи синтаксиса на кода</string>
+    <string name="tooltip_show_java_code_snippet">Показване на фрагмент от код на Java</string>
     <string name="tooltip_open_me">Отвори ме 🌐</string>
     <string name="hint_type">Въведете тук…</string>
     <string name="hint_password">Въведете паролата си…</string>
