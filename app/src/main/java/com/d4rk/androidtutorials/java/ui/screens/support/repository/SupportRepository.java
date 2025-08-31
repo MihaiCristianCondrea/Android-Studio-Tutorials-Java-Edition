@@ -155,7 +155,7 @@ public class SupportRepository implements com.d4rk.androidtutorials.java.data.re
     public void initMobileAds(AdLoadParams params) {
         MobileAds.initialize(context);
         if (params != null && params.getAdLoader() != null) {
-            params.getAdLoader().accept(new AdRequest.Builder().build());
+            params.getAdLoader().load(new AdRequest.Builder().build());
         }
     }
 
