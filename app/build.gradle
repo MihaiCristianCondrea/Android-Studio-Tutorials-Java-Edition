@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    compileSdk 36
+    compileSdkVersion 36
     namespace 'com.d4rk.androidtutorials.java'
     defaultConfig {
         applicationId 'com.d4rk.androidtutorials.java'
@@ -36,8 +36,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
 
     buildFeatures {
