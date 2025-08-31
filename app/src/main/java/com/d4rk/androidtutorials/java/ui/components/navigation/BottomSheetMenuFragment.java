@@ -62,10 +62,14 @@ public class BottomSheetMenuFragment extends BottomSheetDialogFragment {
             sharingIntent.setType("text/plain");
 
             String shareLink;
-            if (InstantApps.isInstantApp(requireContext())) {
+            boolean isInstant = InstantApps
+                    .getPackageManagerCompat(requireContext())
+                    .isInstantApp();
+            if (isInstant) {
                 shareLink = "https://example.com/instant";
             } else {
-                shareLink = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID;
+                shareLink = "https://play.google.com/store/apps/details?id="
+                        + BuildConfig.APPLICATION_ID;
             }
 
             String shareMessage = getString(R.string.share_message, shareLink);
