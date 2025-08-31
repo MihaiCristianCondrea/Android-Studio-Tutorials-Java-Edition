@@ -11,7 +11,6 @@ import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.PendingPurchasesParams;
 import com.android.billingclient.api.ProductDetails;
 import com.android.billingclient.api.QueryProductDetailsParams;
-import com.d4rk.androidtutorials.java.data.model.AdLoadParams;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository.BillingFlowLauncher;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository.OnProductDetailsListener;
 import com.google.android.gms.ads.AdRequest;
@@ -121,23 +120,20 @@ public class DefaultSupportRepository implements SupportRepository {
     /**
      * Launch the billing flow for a particular product.
      */
-    public void initiatePurchase(String productId, BillingFlowLauncher launcher) {
+    public BillingFlowLauncher initiatePurchase(String productId) {
         ProductDetails details = productDetailsMap.get(productId);
-        if (details != null && billingClient != null && launcher != null) {
-            // Note: In a real app, you would select a specific offer. For simplicity,
-            // we're assuming there's only one or we're using the base plan.
-            // For subscriptions, this would be ProductDetails.getSubscriptionOfferDetails()
+        if (details != null && billingClient != null) {
             String offerToken = "";
             if (details.getOneTimePurchaseOfferDetails() != null) {
                 offerToken = details.getOneTimePurchaseOfferDetails().getOfferToken();
             }
 
-            assert offerToken != null;
+            String finalOfferToken = offerToken;
             List<BillingFlowParams.ProductDetailsParams> productDetailsParamsList =
                     Collections.singletonList(
                             BillingFlowParams.ProductDetailsParams.newBuilder()
                                     .setProductDetails(details)
-                                    .setOfferToken(offerToken)
+                                    .setOfferToken(finalOfferToken)
                                     .build()
                     );
 
@@ -145,8 +141,9 @@ public class DefaultSupportRepository implements SupportRepository {
                     .setProductDetailsParamsList(productDetailsParamsList)
                     .build();
 
-            launcher.launch(billingClient, flowParams);
+            return activity -> billingClient.launchBillingFlow(activity, flowParams);
         }
+        return null;
     }
 
 
@@ -154,11 +151,9 @@ public class DefaultSupportRepository implements SupportRepository {
      * Initialize Mobile Ads (usually done once in your app, but
      * can be done here if needed for the support screen).
      */
-    public void initMobileAds(AdLoadParams params) {
+    public AdRequest initMobileAds() {
         MobileAds.initialize(context);
-        if (params != null && params.getAdLoader() != null) {
-            params.getAdLoader().load(new AdRequest.Builder().build());
-        }
+        return new AdRequest.Builder().build();
     }
 
 }
