@@ -16,6 +16,9 @@ import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import java.util.List;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class SupportActivity extends AppCompatActivity {
 
     private ActivitySupportBinding binding;
