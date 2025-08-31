@@ -1,4 +1,4 @@
-package com.d4rk.androidtutorials.java.ui.screens.support.repository;
+package com.d4rk.androidtutorials.java.data.repository;
 
 import android.content.Context;
 
@@ -12,6 +12,8 @@ import com.android.billingclient.api.PendingPurchasesParams;
 import com.android.billingclient.api.ProductDetails;
 import com.android.billingclient.api.QueryProductDetailsParams;
 import com.d4rk.androidtutorials.java.data.model.AdLoadParams;
+import com.d4rk.androidtutorials.java.data.repository.SupportRepository.BillingFlowLauncher;
+import com.d4rk.androidtutorials.java.data.repository.SupportRepository.OnProductDetailsListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
@@ -21,13 +23,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SupportRepository implements com.d4rk.androidtutorials.java.data.repository.SupportRepository {
+public class DefaultSupportRepository implements SupportRepository {
 
     private final Context context;
     private final Map<String, ProductDetails> productDetailsMap = new HashMap<>();
     private BillingClient billingClient;
 
-    public SupportRepository(Context context) {
+    public DefaultSupportRepository(Context context) {
         this.context = context.getApplicationContext();
     }
 
@@ -73,7 +75,7 @@ public class SupportRepository implements com.d4rk.androidtutorials.java.data.re
      * Query your product details for in-app items.
      * Typically called after billing client is connected.
      */
-    public void queryProductDetails(List<String> productIds, com.d4rk.androidtutorials.java.data.repository.SupportRepository.OnProductDetailsListener listener) {
+    public void queryProductDetails(List<String> productIds, OnProductDetailsListener listener) {
         if (billingClient == null || !billingClient.isReady()) {
             return;
         }
@@ -119,7 +121,7 @@ public class SupportRepository implements com.d4rk.androidtutorials.java.data.re
     /**
      * Launch the billing flow for a particular product.
      */
-    public void initiatePurchase(String productId, com.d4rk.androidtutorials.java.data.repository.SupportRepository.BillingFlowLauncher launcher) {
+    public void initiatePurchase(String productId, BillingFlowLauncher launcher) {
         ProductDetails details = productDetailsMap.get(productId);
         if (details != null && billingClient != null && launcher != null) {
             // Note: In a real app, you would select a specific offer. For simplicity,
