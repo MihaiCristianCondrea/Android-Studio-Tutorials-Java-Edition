@@ -34,10 +34,10 @@
                     android:focusable="true"
                     android:src="@mipmap/ic_launcher"
                     android:tooltipText="@string/tooltip_open_me"
+                    android:contentDescription="@string/app_name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/text_view_app_title"
