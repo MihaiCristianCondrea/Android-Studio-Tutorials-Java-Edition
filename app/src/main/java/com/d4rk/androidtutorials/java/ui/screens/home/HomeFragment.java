@@ -63,7 +63,10 @@ public class HomeFragment extends Fragment {
         new FastScrollerBuilder(binding.scrollView)
                 .useMd2Style()
                 .build();
-        binding.btnGooglePlay.setOnClickListener(v -> startActivity(homeViewModel.getOpenPlayStoreIntent()));
+        binding.btnGooglePlay.setOnClickListener(v ->
+                startActivity(homeViewModel.getOpenPlayStoreIntent()));
+        binding.btnLearnMore.setOnClickListener(v ->
+                startActivity(homeViewModel.getLearnMoreIntent()));
     }
 
     @Override
