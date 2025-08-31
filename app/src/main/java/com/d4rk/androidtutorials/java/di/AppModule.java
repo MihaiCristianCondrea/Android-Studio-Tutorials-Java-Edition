@@ -6,8 +6,10 @@ import android.content.res.AssetManager;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.d4rk.androidtutorials.java.data.repository.DefaultHomeRepository;
+import com.d4rk.androidtutorials.java.data.repository.DefaultMainRepository;
 import com.d4rk.androidtutorials.java.data.repository.DefaultQuizRepository;
 import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
+import com.d4rk.androidtutorials.java.data.repository.MainRepository;
 import com.d4rk.androidtutorials.java.data.repository.QuizRepository;
 import com.d4rk.androidtutorials.java.data.source.DefaultHomeLocalDataSource;
 import com.d4rk.androidtutorials.java.data.source.DefaultHomeRemoteDataSource;
@@ -42,7 +44,6 @@ import com.d4rk.androidtutorials.java.domain.support.InitiatePurchaseUseCase;
 import com.d4rk.androidtutorials.java.domain.support.QueryProductDetailsUseCase;
 import com.d4rk.androidtutorials.java.ui.screens.about.repository.AboutRepository;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
-import com.d4rk.androidtutorials.java.ui.screens.main.repository.MainRepository;
 import com.d4rk.androidtutorials.java.ui.screens.settings.repository.SettingsRepository;
 import com.d4rk.androidtutorials.java.ui.screens.startup.repository.StartupRepository;
 import com.d4rk.androidtutorials.java.ui.screens.support.repository.SupportRepository;
@@ -121,7 +122,7 @@ public class AppModule {
     @Provides
     @Singleton
     public MainRepository provideMainRepository(Application application) {
-        return new MainRepository(application);
+        return new DefaultMainRepository(application);
     }
 
     @Provides
