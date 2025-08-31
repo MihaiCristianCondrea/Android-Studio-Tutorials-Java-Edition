@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.BottomSheetMenuBinding;
-import androidx.navigation.fragment.NavHostFragment;
+import com.d4rk.androidtutorials.java.ui.screens.settings.SettingsActivity;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class BottomSheetMenuFragment extends BottomSheetDialogFragment {
@@ -26,12 +26,8 @@ public class BottomSheetMenuFragment extends BottomSheetDialogFragment {
         binding = BottomSheetMenuBinding.inflate(inflater, container, false);
 
         binding.menuSettings.setOnClickListener(v -> {
-            NavHostFragment navHostFragment = (NavHostFragment) requireActivity()
-                    .getSupportFragmentManager()
-                    .findFragmentById(R.id.nav_host_fragment_activity_main);
-            if (navHostFragment != null) {
-                navHostFragment.getNavController().navigate(R.id.navigation_settings);
-            }
+            Intent intent = new Intent(requireContext(), SettingsActivity.class);
+            startActivity(intent);
             dismiss();
         });
 

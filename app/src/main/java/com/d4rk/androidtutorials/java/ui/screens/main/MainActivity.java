@@ -35,6 +35,7 @@ import com.d4rk.androidtutorials.java.notifications.managers.AppUpdateNotificati
 import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFragment;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 import com.d4rk.androidtutorials.java.ui.screens.startup.dialogs.ConsentDialogFragment;
+import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
@@ -256,9 +257,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(android.view.MenuItem item) {
         if (item.getItemId() == R.id.support) {
-            if (navController != null) {
-                navController.navigate(R.id.navigation_support);
-            }
+            startActivity(new Intent(this, SupportActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);

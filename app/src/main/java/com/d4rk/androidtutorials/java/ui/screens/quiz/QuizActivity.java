@@ -1,54 +1,60 @@
 package com.d4rk.androidtutorials.java.ui.screens.quiz;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.fragment.NavHostFragment;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
-import com.d4rk.androidtutorials.java.databinding.FragmentQuizBinding;
+import com.d4rk.androidtutorials.java.databinding.ActivityQuizBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
+import com.airbnb.lottie.LottieAnimationView;
 
+/**
+ * Activity that displays a simple multiple-choice quiz.
+ */
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class QuizFragment extends Fragment {
+public class QuizActivity extends AppCompatActivity {
 
-    private FragmentQuizBinding binding;
+    private ActivityQuizBinding binding;
     private QuizViewModel viewModel;
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        binding = FragmentQuizBinding.inflate(inflater, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityQuizBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(requireActivity());
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
         edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         viewModel = new ViewModelProvider(this).get(QuizViewModel.class);
         if (viewModel.getTotalQuestions() == 0) {
-            new MaterialAlertDialogBuilder(requireContext())
+            new MaterialAlertDialogBuilder(this)
                     .setMessage(R.string.quiz_no_more_questions)
-                    .setPositiveButton(android.R.string.ok, (d, w) -> NavHostFragment.findNavController(this).popBackStack())
+                    .setPositiveButton(android.R.string.ok, (d, w) -> finish())
                     .setCancelable(false)
                     .show();
-        } else {
-            showQuestion(viewModel.getCurrentQuestion());
-            binding.buttonNext.setOnClickListener(v -> onNextClicked());
+            return;
         }
+        showQuestion(viewModel.getCurrentQuestion());
 
-        return binding.getRoot();
+        binding.buttonNext.setOnClickListener(v -> onNextClicked());
     }
 
     private void onNextClicked() {
@@ -88,21 +94,24 @@ public class QuizFragment extends Fragment {
     private void showResult() {
         int score = viewModel.getScore().getValue();
         int total = viewModel.getTotalQuestions();
-        View view = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_quiz_result, null, false);
+        View view = LayoutInflater.from(this).inflate(R.layout.dialog_quiz_result, null, false);
         TextView textResult = view.findViewById(R.id.text_result);
         textResult.setText(getString(R.string.quiz_finished, score, total));
         LottieAnimationView animationView = view.findViewById(R.id.animation_success);
         animationView.playAnimation();
-        new MaterialAlertDialogBuilder(requireContext())
+        new MaterialAlertDialogBuilder(this)
                 .setView(view)
-                .setPositiveButton(android.R.string.ok, (d, w) -> NavHostFragment.findNavController(this).popBackStack())
+                .setPositiveButton(android.R.string.ok, (d, w) -> finish())
                 .setCancelable(false)
                 .show();
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
