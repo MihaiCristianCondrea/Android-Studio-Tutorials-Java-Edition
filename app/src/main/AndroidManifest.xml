@@ -304,6 +304,26 @@
             android:label="@string/navigation_drawer"
             android:parentActivityName=".ui.screens.main.MainActivity" />
 
+        <activity
+            android:name=".ui.screens.settings.SettingsActivity"
+            android:exported="false"
+            android:label="@string/settings"
+            android:parentActivityName=".ui.screens.settings.SettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.screens.support.SupportActivity"
+            android:exported="false"
+            android:label="@string/support_us"
+            android:parentActivityName=".ui.screens.support.SupportActivity" />
+        <activity
+            android:name=".ui.screens.quiz.QuizActivity"
+            android:exported="false"
+            android:label="@string/quiz_title"
+            android:parentActivityName=".ui.screens.quiz.QuizActivity" />
+
         <receiver
             android:name=".notifications.receivers.QuizReminderReceiver"
             android:exported="false" />

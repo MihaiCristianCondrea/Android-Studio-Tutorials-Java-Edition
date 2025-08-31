@@ -3,18 +3,16 @@ package com.d4rk.androidtutorials.java.ui.screens.support;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.android.billingclient.api.ProductDetails;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
-import com.d4rk.androidtutorials.java.databinding.FragmentSupportBinding;
+import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
 
@@ -23,19 +21,25 @@ import java.util.List;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class SupportFragment extends Fragment {
+public class SupportActivity extends AppCompatActivity {
 
-    private FragmentSupportBinding binding;
+    private ActivitySupportBinding binding;
     private SupportViewModel supportViewModel;
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        binding = FragmentSupportBinding.inflate(inflater, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivitySupportBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(requireActivity());
+
+        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
         edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         supportViewModel = new ViewModelProvider(this).get(SupportViewModel.class);
 
@@ -51,8 +55,6 @@ public class SupportFragment extends Fragment {
         binding.buttonNormalDonation.setOnClickListener(v -> initiatePurchase("normal_donation"));
         binding.buttonHighDonation.setOnClickListener(v -> initiatePurchase("high_donation"));
         binding.buttonExtremeDonation.setOnClickListener(v -> initiatePurchase("extreme_donation"));
-
-        return binding.getRoot();
     }
 
     private void queryProductDetails() {
@@ -75,13 +77,16 @@ public class SupportFragment extends Fragment {
     private void initiatePurchase(String productId) {
         SupportRepository.BillingFlowLauncher launcher = supportViewModel.initiatePurchase(productId);
         if (launcher != null) {
-            launcher.launch(requireActivity());
+            launcher.launch(this);
         }
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
