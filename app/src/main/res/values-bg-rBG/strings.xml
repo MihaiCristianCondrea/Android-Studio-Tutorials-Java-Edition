@@ -19,6 +19,8 @@
     <string name="get_on_google_play">Вземете от Google Play</string>
     <string name="learn_more">Научете повече</string>
     <string name="play_store">Play Store</string>
+    <string name="search_tutorials_hint">Търсене на уроци</string>
+    <string name="search_tutorials_content_description">Търсене на уроци</string>
 
     <string name="android_studio">Android Studio</string>
 

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -39,6 +40,19 @@ public class HomeFragment extends Fragment {
                 getString(com.d4rk.androidtutorials.java.R.string.announcement_title),
                 getString(com.d4rk.androidtutorials.java.R.string.announcement_subtitle)
         );
+        binding.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                homeViewModel.setSearchQuery(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                homeViewModel.setSearchQuery(newText);
+                return true;
+            }
+        });
         LayoutInflater inflater = LayoutInflater.from(requireContext());
         homeViewModel.getUiState().observe(getViewLifecycleOwner(), state -> {
             binding.announcementTitle.setText(state.announcementTitle());

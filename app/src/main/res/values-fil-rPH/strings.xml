@@ -19,6 +19,8 @@
     <string name="get_on_google_play">Kunin ito sa Google Play</string>
     <string name="learn_more">Matuto pa</string>
     <string name="play_store">Play Store</string>
+    <string name="search_tutorials_hint">Maghanap ng mga tutorial</string>
+    <string name="search_tutorials_content_description">Maghanap ng mga tutorial</string>
 
     <string name="android_studio">Android Studio</string>
 

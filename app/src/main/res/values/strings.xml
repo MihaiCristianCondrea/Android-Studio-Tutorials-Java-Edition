@@ -19,6 +19,8 @@
       <string name="get_on_google_play">Get it on Google Play</string>
       <string name="learn_more">Learn More</string>
       <string name="play_store">Play Store</string>
+      <string name="search_tutorials_hint">Search tutorials</string>
+      <string name="search_tutorials_content_description">Search tutorials</string>
 
     <string name="android_studio">Android Studio</string>
 

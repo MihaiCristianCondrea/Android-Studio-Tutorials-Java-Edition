@@ -8,6 +8,8 @@
     <string name="get_on_google_play">Ia-l de pe Google Play</string>
     <string name="learn_more">Află mai multe</string>
     <string name="play_store">Magazin Play</string>
+    <string name="search_tutorials_hint">Caută tutoriale</string>
+    <string name="search_tutorials_content_description">Caută tutoriale</string>
     <string name="update_downloaded">Actualizare descărcată</string>
     <string name="view_in_google_play">Vezi în Magazinul Google Play</string>
     <string name="version_info">Informații versiune</string>

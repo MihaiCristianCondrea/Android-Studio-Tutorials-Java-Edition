@@ -19,6 +19,8 @@
     <string name="get_on_google_play">Disponível no Google Play</string>
     <string name="learn_more">Saiba mais</string>
     <string name="play_store">Play Store</string>
+    <string name="search_tutorials_hint">Pesquisar tutoriais</string>
+    <string name="search_tutorials_content_description">Pesquisar tutoriais</string>
 
     <string name="android_studio">Android Studio</string>
 
