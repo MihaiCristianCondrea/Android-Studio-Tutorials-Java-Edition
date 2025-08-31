@@ -2,7 +2,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcu
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityShortcutsBuildBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
@@ -11,7 +11,7 @@ import com.google.android.gms.ads.MobileAds;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
-public class BuildShortcutsActivity extends AppCompatActivity {
+public class BuildShortcutsActivity extends UpNavigationActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

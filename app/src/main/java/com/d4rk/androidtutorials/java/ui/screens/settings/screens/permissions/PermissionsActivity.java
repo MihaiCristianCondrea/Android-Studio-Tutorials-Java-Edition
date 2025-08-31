@@ -2,14 +2,14 @@ package com.d4rk.androidtutorials.java.ui.screens.settings.screens.permissions;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityPermissionsBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
-public class PermissionsActivity extends AppCompatActivity {
+public class PermissionsActivity extends UpNavigationActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

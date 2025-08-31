@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.core.view.GravityCompat;
 
 import com.d4rk.androidtutorials.java.R;
@@ -12,7 +12,7 @@ import com.d4rk.androidtutorials.java.databinding.ActivityNavigationDrawerBindin
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
-public class NavigationDrawerActivity extends AppCompatActivity {
+public class NavigationDrawerActivity extends UpNavigationActivity {
     private final Handler handler = new Handler();
     private ActivityNavigationDrawerBinding binding;
 

@@ -6,13 +6,13 @@ import android.os.Handler;
 import android.os.SystemClock;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityChronometerBinding;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
-public class ChronometerActivity extends AppCompatActivity {
+public class ChronometerActivity extends UpNavigationActivity {
     private final Handler handler = new Handler();
     private ActivityChronometerBinding binding;
 

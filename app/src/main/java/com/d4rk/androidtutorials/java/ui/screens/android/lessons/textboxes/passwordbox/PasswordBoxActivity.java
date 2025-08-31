@@ -7,14 +7,14 @@ import android.os.Handler;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityPasswordBoxBinding;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.google.android.material.snackbar.Snackbar;
 
-public class PasswordBoxActivity extends AppCompatActivity {
+public class PasswordBoxActivity extends UpNavigationActivity {
     private final Handler handler = new Handler();
     private ActivityPasswordBoxBinding binding;
 
