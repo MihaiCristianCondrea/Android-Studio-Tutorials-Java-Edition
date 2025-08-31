@@ -27,6 +27,9 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.review.ReviewInfo;
 import com.mikepenz.aboutlibraries.LibsBuilder;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class HelpActivity extends AppCompatActivity {
 
     private HelpViewModel helpViewModel;

@@ -55,7 +55,9 @@ import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.ump.ConsentInformation;
 import com.google.android.ump.ConsentRequestParameters;
 import com.google.android.ump.UserMessagingPlatform;
+import dagger.hilt.android.AndroidEntryPoint;
 
+@AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
 
     private final ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher =

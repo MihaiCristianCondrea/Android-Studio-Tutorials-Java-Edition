@@ -21,6 +21,9 @@ import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class StartupActivity extends AppCompatActivity {
 
     private StartupViewModel startupViewModel;

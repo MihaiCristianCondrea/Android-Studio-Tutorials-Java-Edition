@@ -22,6 +22,9 @@ import com.google.android.gms.ads.MobileAds;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class AboutFragment extends Fragment {
 
     private FragmentAboutBinding binding;

@@ -21,6 +21,9 @@ import com.airbnb.lottie.LottieAnimationView;
 /**
  * Activity that displays a simple multiple-choice quiz.
  */
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class QuizActivity extends AppCompatActivity {
 
     private ActivityQuizBinding binding;
