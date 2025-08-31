@@ -2,10 +2,7 @@ package com.d4rk.androidtutorials.java.data.repository;
 
 import com.d4rk.androidtutorials.java.data.source.HomeLocalDataSource;
 import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource;
-import com.d4rk.androidtutorials.java.data.model.PromotedApp;
-
-import java.util.List;
-import java.util.function.Consumer;
+import com.d4rk.androidtutorials.java.data.repository.HomeRepository.PromotedAppsCallback;
 
 /**
  * Default implementation of {@link HomeRepository} combining local and remote sources.
@@ -37,7 +34,7 @@ public class DefaultHomeRepository implements HomeRepository {
     }
 
     @Override
-    public void fetchPromotedApps(Consumer<List<PromotedApp>> callback) {
-        remoteDataSource.fetchPromotedApps(callback::accept);
+    public void fetchPromotedApps(PromotedAppsCallback callback) {
+        remoteDataSource.fetchPromotedApps(callback::onResult);
     }
 }
