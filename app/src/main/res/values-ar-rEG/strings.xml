@@ -445,4 +445,7 @@
     <string name="quiz_reminder_title">تذكير الاختبار اليومي</string>
     <string name="quiz_reminder_body">عد للاختبار اليومي اليوم!</string>
     <string name="other_apps_title">تطبيقات أخرى من المطور</string>
+    <string name="im_step1_desc">لقطة شاشة تعرض زر مشروع جديد في Android Studio.</string>
+    <string name="im_step2_desc">لقطة شاشة تعرض اختيار نوع النشاط أثناء إعداد المشروع.</string>
+    <string name="im_step3_desc">لقطة شاشة تعرض حقول اسم التطبيق والحزمة واللغة وSDK الأدنى.</string>
 </resources>

@@ -65,7 +65,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
-                    android:src="@drawable/im_step1" />
+                    android:src="@drawable/im_step1"
+                    android:contentDescription="@string/im_step1_desc" />
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.gms.ads.AdView
@@ -113,7 +114,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
-                    android:src="@drawable/im_step2" />
+                    android:src="@drawable/im_step2"
+                    android:contentDescription="@string/im_step2_desc" />
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.textview.MaterialTextView
@@ -152,7 +154,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
-                    android:src="@drawable/im_step3" />
+                    android:src="@drawable/im_step3"
+                    android:contentDescription="@string/im_step3_desc" />
             </com.google.android.material.card.MaterialCardView>
 
             <com.airbnb.lottie.LottieAnimationView

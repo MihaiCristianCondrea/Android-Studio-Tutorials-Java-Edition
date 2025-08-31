@@ -446,4 +446,7 @@
     <string name="quiz_reminder_title">每日測驗提醒</string>
     <string name="quiz_reminder_body">回來參加今天的測驗吧！</string>
     <string name="other_apps_title">開發人員的其他應用程式</string>
+    <string name="im_step1_desc">顯示 Android Studio 中新專案按鈕的螢幕截圖。</string>
+    <string name="im_step2_desc">顯示在專案設定期間選擇活動類型的螢幕截圖。</string>
+    <string name="im_step3_desc">顯示應用名稱、套件、語言和最低 SDK 欄位的螢幕截圖。</string>
 </resources>

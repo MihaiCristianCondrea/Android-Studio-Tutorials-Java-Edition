@@ -420,4 +420,7 @@
     <string name="quiz_reminder_title">Pengingat Kuis Harian</string>
     <string name="quiz_reminder_body">Kembali untuk kuis hari ini!</string>
     <string name="other_apps_title">Lebih banyak aplikasi oleh pengembang</string>
+    <string name="im_step1_desc">Cuplikan layar yang menampilkan tombol Proyek baru di Android Studio.</string>
+    <string name="im_step2_desc">Cuplikan layar yang menampilkan pemilihan jenis aktivitas saat menyiapkan proyek.</string>
+    <string name="im_step3_desc">Cuplikan layar yang menampilkan kolom nama aplikasi, paket, bahasa, dan SDK minimum.</string>
 </resources>

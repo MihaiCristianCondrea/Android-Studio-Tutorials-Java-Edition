@@ -420,4 +420,7 @@
     <string name="quiz_reminder_title">Ежедневное напоминание о викторине</string>
     <string name="quiz_reminder_body">Возвращайтесь на сегодняшнюю викторину!</string>
     <string name="other_apps_title">Больше приложений от разработчика</string>
+    <string name="im_step1_desc">Скриншот с кнопкой Новый проект в Android Studio.</string>
+    <string name="im_step2_desc">Скриншот выбора типа активности при настройке проекта.</string>
+    <string name="im_step3_desc">Скриншот полей имени приложения, пакета, языка и минимального SDK.</string>
 </resources>

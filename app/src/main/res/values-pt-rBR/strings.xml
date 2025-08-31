@@ -445,4 +445,7 @@
     <string name="quiz_reminder_title">Lembrete diário do quiz</string>
     <string name="quiz_reminder_body">Volte para o quiz de hoje!</string>
     <string name="other_apps_title">Mais aplicativos do desenvolvedor</string>
+    <string name="im_step1_desc">Captura de tela mostrando o botão Novo projeto no Android Studio.</string>
+    <string name="im_step2_desc">Captura de tela mostrando a seleção do tipo de atividade na configuração do projeto.</string>
+    <string name="im_step3_desc">Captura de tela mostrando campos de nome do app, pacote, idioma e SDK mínimo.</string>
 </resources>
