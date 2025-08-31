@@ -51,7 +51,7 @@
         <item name="shapeAppearanceOverlay">@style/ShapeTokens.Clover</item>
     </style>
 
-    <style name="Widget.App.CardView.Clover" parent="@style/Widget.Material3.CardView">
+    <style name="Widget.App.CardView.Clover" parent="@style/Widget.Material3.CardView.Outlined">
         <item name="shapeAppearanceOverlay">@style/ShapeTokens.Clover</item>
     </style>
 
