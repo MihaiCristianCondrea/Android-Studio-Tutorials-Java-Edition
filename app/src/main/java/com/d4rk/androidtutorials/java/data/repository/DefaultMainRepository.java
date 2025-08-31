@@ -1,4 +1,4 @@
-package com.d4rk.androidtutorials.java.ui.screens.main.repository;
+package com.d4rk.androidtutorials.java.data.repository;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,13 +18,13 @@ import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
  * Repository class that handles data operations such as SharedPreferences,
  * app update checks, etc.
  */
-public class MainRepository implements com.d4rk.androidtutorials.java.data.repository.MainRepository {
+public class DefaultMainRepository implements MainRepository {
 
     private final Context context;
     private final SharedPreferences defaultSharedPrefs;
     private final AppUpdateManager appUpdateManager;
 
-    public MainRepository(Context context) {
+    public DefaultMainRepository(Context context) {
         this.context = context.getApplicationContext();
         this.defaultSharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         this.appUpdateManager = AppUpdateManagerFactory.create(this.context);
