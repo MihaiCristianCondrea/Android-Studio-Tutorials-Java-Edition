@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
@@ -30,7 +30,7 @@ import com.mikepenz.aboutlibraries.LibsBuilder;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class HelpActivity extends AppCompatActivity {
+public class HelpActivity extends UpNavigationActivity {
 
     private HelpViewModel helpViewModel;
 

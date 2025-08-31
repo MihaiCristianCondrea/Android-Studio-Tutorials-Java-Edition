@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySwitchBinding;
@@ -14,7 +14,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
-public class SwitchActivity extends AppCompatActivity {
+public class SwitchActivity extends UpNavigationActivity {
     private final Handler handler = new Handler();
     private ActivitySwitchBinding binding;
 

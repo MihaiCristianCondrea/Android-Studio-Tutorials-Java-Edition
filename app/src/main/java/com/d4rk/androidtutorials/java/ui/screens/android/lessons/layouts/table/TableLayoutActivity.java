@@ -4,14 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityTableLayoutBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
-public class TableLayoutActivity extends AppCompatActivity {
+public class TableLayoutActivity extends UpNavigationActivity {
     private final Handler handler = new Handler();
     private ActivityTableLayoutBinding binding;
 

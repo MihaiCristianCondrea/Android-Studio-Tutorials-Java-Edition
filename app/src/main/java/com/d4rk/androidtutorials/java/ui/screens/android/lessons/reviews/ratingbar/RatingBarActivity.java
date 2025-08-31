@@ -5,13 +5,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRatingBarBinding;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 
-public class RatingBarActivity extends AppCompatActivity {
+public class RatingBarActivity extends UpNavigationActivity {
     private final Handler handler = new Handler();
     private ActivityRatingBarBinding binding;
     private float rating = 0f;

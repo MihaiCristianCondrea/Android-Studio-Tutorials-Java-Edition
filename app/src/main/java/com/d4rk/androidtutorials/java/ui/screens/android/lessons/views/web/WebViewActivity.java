@@ -7,7 +7,7 @@ import android.os.Handler;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityWebviewBinding;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
@@ -15,7 +15,7 @@ import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
-public class WebViewActivity extends AppCompatActivity {
+public class WebViewActivity extends UpNavigationActivity {
     private final Handler handler = new Handler();
     private ActivityWebviewBinding binding;
 

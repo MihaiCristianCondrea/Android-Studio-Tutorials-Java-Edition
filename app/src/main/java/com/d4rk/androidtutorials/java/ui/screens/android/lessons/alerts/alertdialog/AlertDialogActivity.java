@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityAlertDialogBinding;
@@ -12,7 +12,7 @@ import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
-public class AlertDialogActivity extends AppCompatActivity {
+public class AlertDialogActivity extends UpNavigationActivity {
     private final Handler handler = new Handler();
     private ActivityAlertDialogBinding binding;
 

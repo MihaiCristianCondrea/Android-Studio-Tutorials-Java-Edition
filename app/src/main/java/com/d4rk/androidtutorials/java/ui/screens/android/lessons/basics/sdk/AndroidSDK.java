@@ -7,7 +7,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.model.AndroidVersion;
@@ -21,7 +21,7 @@ import java.util.List;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
-public class AndroidSDK extends AppCompatActivity {
+public class AndroidSDK extends UpNavigationActivity {
     private ActivityAndroidSdkBinding binding;
     private final List<AndroidVersion> androidVersions = Arrays.asList(
             new AndroidVersion("1.0", "1", "BASE", "None", "2008"),

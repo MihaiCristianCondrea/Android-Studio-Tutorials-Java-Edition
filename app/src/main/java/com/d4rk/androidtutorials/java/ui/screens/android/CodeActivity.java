@@ -3,7 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
@@ -17,7 +17,7 @@ import com.d4rk.androidtutorials.java.ui.screens.android.tabs.NoCodeFragment;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-public class CodeActivity extends AppCompatActivity {
+public class CodeActivity extends UpNavigationActivity {
     private ActivityTabLayoutBinding binding;
 
     @Override
@@ -63,7 +63,7 @@ public class CodeActivity extends AppCompatActivity {
     private static class CodePagerAdapter extends FragmentStateAdapter {
         private final LessonRepository.Lesson lesson;
 
-        public CodePagerAdapter(@NonNull AppCompatActivity fragmentActivity, LessonRepository.Lesson lesson) {
+        public CodePagerAdapter(@NonNull UpNavigationActivity fragmentActivity, LessonRepository.Lesson lesson) {
             super(fragmentActivity);
             this.lesson = lesson;
         }

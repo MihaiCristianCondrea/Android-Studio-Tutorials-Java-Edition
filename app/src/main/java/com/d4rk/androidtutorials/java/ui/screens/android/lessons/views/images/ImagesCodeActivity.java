@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
@@ -17,7 +17,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
-public class ImagesCodeActivity extends AppCompatActivity {
+public class ImagesCodeActivity extends UpNavigationActivity {
     private ActivityTabLayoutBinding binding;
 
     @Override
@@ -51,7 +51,7 @@ public class ImagesCodeActivity extends AppCompatActivity {
         private final ArrayList<Fragment> fragmentList = new ArrayList<>();
         private final ArrayList<String> fragmentTitleList = new ArrayList<>();
 
-        public ViewPagerAdapter(@NonNull AppCompatActivity activity) {
+        public ViewPagerAdapter(@NonNull UpNavigationActivity activity) {
             super(activity);
         }
 

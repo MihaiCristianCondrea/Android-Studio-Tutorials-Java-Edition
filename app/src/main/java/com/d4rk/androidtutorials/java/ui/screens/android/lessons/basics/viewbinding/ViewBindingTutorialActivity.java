@@ -6,7 +6,7 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
@@ -25,7 +25,7 @@ import java.io.InputStreamReader;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
-public class ViewBindingTutorialActivity extends AppCompatActivity {
+public class ViewBindingTutorialActivity extends UpNavigationActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

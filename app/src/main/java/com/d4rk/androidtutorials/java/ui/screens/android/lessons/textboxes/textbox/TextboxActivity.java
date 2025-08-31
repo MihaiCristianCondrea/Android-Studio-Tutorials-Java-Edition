@@ -4,13 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityTextBoxBinding;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.google.android.material.snackbar.Snackbar;
 
-public class TextboxActivity extends AppCompatActivity {
+public class TextboxActivity extends UpNavigationActivity {
     private final Handler handler = new Handler();
     private ActivityTextBoxBinding binding;
 

@@ -10,14 +10,14 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.core.app.NotificationCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityNotificationBinding;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 
-public class SimpleNotificationActivity extends AppCompatActivity {
+public class SimpleNotificationActivity extends UpNavigationActivity {
     private final String simpleChannelId = "simple_notification";
     private final int simpleNotificationId = 1;
     private final Handler handler = new Handler();
