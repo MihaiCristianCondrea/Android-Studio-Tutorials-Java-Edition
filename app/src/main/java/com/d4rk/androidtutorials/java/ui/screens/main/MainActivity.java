@@ -1,10 +1,10 @@
 package com.d4rk.androidtutorials.java.ui.screens.main;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 
@@ -33,8 +33,8 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
 import com.d4rk.androidtutorials.java.notifications.managers.AppUpdateNotificationsManager;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFragment;
-import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
+import com.d4rk.androidtutorials.java.ui.screens.startup.dialogs.ConsentDialogFragment;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
@@ -120,10 +120,6 @@ public class MainActivity extends AppCompatActivity {
         setupActionBar();
         observeViewModel();
 
-        Handler handler = new Handler(Looper.getMainLooper());
-        long snackbarInterval = 60L * 24 * 60 * 60 * 1000;
-        handler.postDelayed(this::showSnackbar, snackbarInterval);
-
         setupUpdateNotifications();
 
         String[] themeValues = getResources().getStringArray(R.array.preference_theme_values);
@@ -132,10 +128,14 @@ public class MainActivity extends AppCompatActivity {
         mainViewModel.applySettings(themeValues, bottomNavBarLabelsValues, defaultTabValues);
         if (mainViewModel.shouldShowStartupScreen()) {
             mainViewModel.markStartupScreenShown();
-            startActivity(new Intent(this, StartupActivity.class));
+            showConsentDialog();
         }
 
         launcherShortcuts();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1);
+        }
 
         this.appUpdateManager = mainViewModel.getAppUpdateManager();
 
@@ -240,8 +240,11 @@ public class MainActivity extends AppCompatActivity {
         appUpdateNotificationsManager = new AppUpdateNotificationsManager(this);
     }
 
-    private void showSnackbar() {
-        Snackbar.make(mBinding.getRoot(), "Hello after 1 day!", Snackbar.LENGTH_LONG).show();
+    private void showConsentDialog() {
+        ConsentDialogFragment dialog = new ConsentDialogFragment();
+        dialog.setConsentListener((analytics, adStorage, adUserData, adPersonalization) ->
+                ConsentUtils.updateFirebaseConsent(this, analytics, adStorage, adUserData, adPersonalization));
+        dialog.show(getSupportFragmentManager(), "consent_dialog");
     }
 
     @Override
