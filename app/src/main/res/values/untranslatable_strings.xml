@@ -48,7 +48,7 @@
 
 
     <string name="eula_title" translatable="false">EULA</string>
-    <string name="changelog" translatable="false">>CHANGELOG</string>
+    <string name="changelog" translatable="false">CHANGELOG</string>
     <string name="loading_eula" translatable="false">>Loading EULA</string>
     <string name="error_loading_eula" translatable="false">>Error loading EULA</string>
     <string name="loading_changelog" translatable="false">>Loading changelog</string>
