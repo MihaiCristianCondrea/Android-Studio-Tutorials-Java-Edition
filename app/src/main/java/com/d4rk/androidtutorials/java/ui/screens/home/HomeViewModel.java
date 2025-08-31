@@ -29,6 +29,8 @@ public class HomeViewModel extends ViewModel {
     private final GetAppPlayStoreUrlUseCase getAppPlayStoreUrlUseCase;
 
     private final MutableLiveData<HomeUiState> uiState = new MutableLiveData<>();
+    private final MutableLiveData<String> searchQuery = new MutableLiveData<>("");
+    private List<PromotedApp> allPromotedApps = new ArrayList<>();
 
     @Inject
     public HomeViewModel(GetDailyTipUseCase getDailyTipUseCase,
@@ -59,18 +61,8 @@ public class HomeViewModel extends ViewModel {
                     result.add(apps.get((startIndex + i) % apps.size()));
                 }
             }
-            HomeUiState current = uiState.getValue();
-            if (current == null) {
-                current = new HomeUiState("", "", "", result);
-            } else {
-                current = new HomeUiState(
-                        current.announcementTitle(),
-                        current.announcementSubtitle(),
-                        current.dailyTip(),
-                        result
-                );
-            }
-            uiState.postValue(current);
+            allPromotedApps = result;
+            filterPromotedApps();
         });
     }
 
@@ -82,6 +74,34 @@ public class HomeViewModel extends ViewModel {
             current = new HomeUiState(title, subtitle, current.dailyTip(), current.promotedApps());
         }
         uiState.setValue(current);
+    }
+
+    public void setSearchQuery(String query) {
+        searchQuery.setValue(query);
+        filterPromotedApps();
+    }
+
+    private void filterPromotedApps() {
+        String query = searchQuery.getValue();
+        List<PromotedApp> filtered = new ArrayList<>();
+        for (PromotedApp app : allPromotedApps) {
+            if (query == null || query.isEmpty() ||
+                    app.name().toLowerCase().contains(query.toLowerCase())) {
+                filtered.add(app);
+            }
+        }
+        HomeUiState current = uiState.getValue();
+        if (current == null) {
+            current = new HomeUiState("", "", getDailyTipUseCase.invoke(), filtered);
+        } else {
+            current = new HomeUiState(
+                    current.announcementTitle(),
+                    current.announcementSubtitle(),
+                    current.dailyTip(),
+                    filtered
+            );
+        }
+        uiState.postValue(current);
     }
 
     /**
