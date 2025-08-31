@@ -1,15 +1,13 @@
 package com.d4rk.androidtutorials.java.data.source;
 
-import android.content.Intent;
-
 /**
  * Local data access for the home feature.
  */
 public interface HomeLocalDataSource {
 
-    Intent getPlayStoreIntent();
+    String getPlayStoreUrl();
 
-    Intent getAppPlayStoreIntent(String packageName);
+    String getAppPlayStoreUrl(String packageName);
 
     String getDailyTip();
 }
