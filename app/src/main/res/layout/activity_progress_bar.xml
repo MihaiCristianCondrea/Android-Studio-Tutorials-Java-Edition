@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <me.zhanghai.android.fastscroll.FastScrollScrollView
@@ -52,12 +53,13 @@
                 android:layout_marginTop="24dp"
                 android:text="@string/horizontal" />
 
-            <androidx.core.widget.ContentLoadingProgressBar
+            <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/progress_bar_horizontal"
-                style="?android:attr/progressBarStyleHorizontal"
+                style="@style/Widget.Material3Expressive.LinearProgressIndicator.Wavy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="24dp" />
+                android:layout_margin="24dp"
+                android:indeterminate="true" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_download_horizontal"
@@ -74,13 +76,17 @@
                 android:layout_marginTop="24dp"
                 android:text="@string/circular" />
 
-            <androidx.core.widget.ContentLoadingProgressBar
+            <com.google.android.material.progressindicator.CircularProgressIndicator
                 android:id="@+id/progress_bar"
-                style="?android:attr/progressBarStyle"
+                style="@style/Widget.Material3Expressive.CircularProgressIndicator.Wavy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="24dp" />
+                android:layout_margin="24dp"
+                android:indeterminate="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_download"
