@@ -17,6 +17,7 @@
     <string name="main_card_subtitle">Kotlin 및 Java 에디션 제공</string>
     <string name="main_card_description">Kotlin 에디션이 동적 강의, AI 어시스턴트 등으로 업데이트되었습니다. Android 개발의 미래를 경험해보세요!</string>
     <string name="get_on_google_play">Google Play에서 다운로드</string>
+    <string name="learn_more">자세히 알아보기</string>
     <string name="play_store">Play 스토어</string>
 
     <string name="android_studio">Android Studio</string>

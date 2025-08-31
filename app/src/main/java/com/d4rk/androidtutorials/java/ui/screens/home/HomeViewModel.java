@@ -99,6 +99,10 @@ public class HomeViewModel extends ViewModel {
         return buildPlayStoreIntent(getPlayStoreUrlUseCase.invoke());
     }
 
+    public Intent getLearnMoreIntent() {
+        return new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"));
+    }
+
     /**
      * Builds an intent to open the Google Play listing for the provided package.
      */

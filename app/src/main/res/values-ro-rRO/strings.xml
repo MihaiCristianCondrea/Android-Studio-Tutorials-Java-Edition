@@ -6,6 +6,8 @@
     <string name="main_card_subtitle">Disponibilă în edițiile Kotlin și Java</string>
     <string name="main_card_description">Ediția Kotlin a fost actualizată cu lecții dinamice, asistent AI și multe altele. Experimentează viitorul dezvoltării Android!</string>
     <string name="get_on_google_play">Ia-l de pe Google Play</string>
+    <string name="learn_more">Află mai multe</string>
+    <string name="play_store">Magazin Play</string>
     <string name="update_downloaded">Actualizare descărcată</string>
     <string name="view_in_google_play">Vezi în Magazinul Google Play</string>
     <string name="version_info">Informații versiune</string>
@@ -375,7 +377,6 @@
     <string name="firebase_crashlytics">Baza de foc Crashlytics</string>
     <string name="firebase_analytics">Analiza bazei de foc</string>
     <string name="firebase_performance">Performanță baza de foc</string>
-    <string name="play_store">Joacă magazin</string>
     <string name="special">Special</string>
     <string name="wake_lock">Păstrați dispozitivul treaz [WAKE_LOCK]</string>
     <string name="summary_preference_permissions_wake_lock">Permite aplicației să împiedice somnul dispozitivului (de exemplu, dimming ecran sau somnul procesorului) în timpul operațiunilor critice pentru a se asigura că acesta este complet fără întrerupere. Acesta este folosit cu grijă pentru a conserva bateria.</string>

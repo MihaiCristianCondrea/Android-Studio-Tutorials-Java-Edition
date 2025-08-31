@@ -6,6 +6,8 @@
     <string name="main_card_subtitle">Menampilkan Edisi Kotlin dan Java</string>
     <string name="main_card_description">Edisi Kotlin telah diperbarui dengan pelajaran dinamis, asisten AI, dan banyak lagi. Rasakan masa depan pengembangan Android!</string>
     <string name="get_on_google_play">Dapatkan di Google Play</string>
+    <string name="learn_more">Pelajari lebih lanjut</string>
+    <string name="play_store">Play Store</string>
     <string name="update_downloaded">Pembaruan diunduh</string>
     <string name="view_in_google_play">Lihat di Google Play Store</string>
     <string name="version_info">Info versi</string>
@@ -375,7 +377,6 @@
     <string name="firebase_crashlytics">Firebase Crashlytics</string>
     <string name="firebase_analytics">Analisis Firebase</string>
     <string name="firebase_performance">Performance Firebase</string>
-    <string name="play_store">Play Store</string>
     <string name="special">Khusus</string>
     <string name="wake_lock">Jauhkan perangkat terjaga [WAKE _ LOCK]</string>
     <string name="summary_preference_permissions_wake_lock">Memungkinkan aplikasi untuk mencegah perangkat dari pergi tidur (misalnya, layar merem atau prosesor tidur) selama operasi kritis untuk memastikan mereka lengkap tanpa interupsi. Ini digunakan untuk menghemat baterai.</string>

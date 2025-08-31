@@ -6,6 +6,8 @@
     <string name="main_card_subtitle">कोटलिन और जावा संस्करणों की विशेषता</string>
     <string name="main_card_description">कोटलिन संस्करण को गतिशील पाठों, एआई सहायक और बहुत कुछ के साथ अपडेट किया गया है। एंड्रॉइड डेवलपमेंट के भविष्य का अनुभव करें!</string>
     <string name="get_on_google_play">इसे Google Play पर प्राप्त करें</string>
+    <string name="learn_more">और जानें</string>
+    <string name="play_store">प्ले स्टोर</string>
     <string name="update_downloaded">अपडेट डाउनलोड किया गया</string>
     <string name="view_in_google_play">Google Play Store में देखें</string>
     <string name="version_info">संस्करण की जानकारी</string>
@@ -375,7 +377,6 @@
     <string name="firebase_crashlytics">फायरबेस क्रैशलिटिक्स</string>
     <string name="firebase_analytics">फायरबेस एनालिटिक्स</string>
     <string name="firebase_performance">फायरबेस प्रदर्शन</string>
-    <string name="play_store">प्ले स्टोर</string>
     <string name="special">विशेष</string>
     <string name="wake_lock">डिवाइस को जागृत रखें [Wake_LOCK]</string>
     <string name="summary_preference_permissions_wake_lock">यह सुनिश्चित करने के लिए कि वे बिना रुकावट के पूरा होने के लिए डिवाइस को नींद में जाने से रोकने की अनुमति देता है (उदाहरण के लिए, स्क्रीन डिमिंग या प्रोसेसर स्लीपिंग)। इसका उपयोग बैटरी को बचाने के लिए धीरे-धीरे किया जाता है।</string>

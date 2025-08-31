@@ -17,6 +17,7 @@
     <string name="main_card_subtitle">Nagtatampok ng mga Edisyon ng Kotlin at Java</string>
     <string name="main_card_description">Ang Kotlin Edition ay na-update na may mga dynamic na aralin, AI assistant, at marami pa. Damhin ang hinaharap ng Android development!</string>
     <string name="get_on_google_play">Kunin ito sa Google Play</string>
+    <string name="learn_more">Matuto pa</string>
     <string name="play_store">Play Store</string>
 
     <string name="android_studio">Android Studio</string>

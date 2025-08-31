@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style applied to the home action button group -->
+    <style name="Widget.App.ButtonGroup" parent="Widget.Material3.MaterialButtonToggleGroup" />
+</resources>

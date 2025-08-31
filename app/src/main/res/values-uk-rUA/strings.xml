@@ -17,6 +17,7 @@
     <string name="main_card_subtitle">З версіями на Kotlin та Java</string>
     <string name="main_card_description">Версія на Kotlin оновлена динамічними уроками, ШІ-асистентом та іншим. Відчуйте майбутнє розробки на Android!</string>
     <string name="get_on_google_play">Завантажте з Google Play</string>
+    <string name="learn_more">Дізнайтеся більше</string>
     <string name="play_store">Play Store</string>
 
     <string name="android_studio">Android Studio</string>

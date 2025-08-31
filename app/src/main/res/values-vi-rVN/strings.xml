@@ -17,6 +17,7 @@
     <string name="main_card_subtitle">Bao gồm các phiên bản Kotlin và Java</string>
     <string name="main_card_description">Phiên bản Kotlin đã được cập nhật với các bài học động, trợ lý AI, v.v. Trải nghiệm tương lai của phát triển Android!</string>
     <string name="get_on_google_play">Tải trên Google Play</string>
+    <string name="learn_more">Tìm hiểu thêm</string>
     <string name="play_store">Cửa hàng Play</string>
 
     <string name="android_studio">Android Studio</string>

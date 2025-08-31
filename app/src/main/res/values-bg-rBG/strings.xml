@@ -17,6 +17,8 @@
     <string name="main_card_subtitle">Представяме издания за Kotlin и Java</string>
     <string name="main_card_description">Изданието за Kotlin е актуализирано с динамични уроци, AI асистент и още. Изживейте бъдещето на разработката за Android!</string>
     <string name="get_on_google_play">Вземете от Google Play</string>
+    <string name="learn_more">Научете повече</string>
+    <string name="play_store">Play Store</string>
 
     <string name="android_studio">Android Studio</string>
 
@@ -400,7 +402,6 @@
     <string name="firebase_crashlytics">Катастрофа</string>
     <string name="firebase_analytics">Анализ на пожарната база</string>
     <string name="firebase_performance">Firebase Performance</string>
-    <string name="play_store">Play Store</string>
     <string name="special">Специални</string>
     <string name="wake_lock">Дръж устройството будно.</string>
     <string name="summary_preference_permissions_wake_lock">Позволява на приложението да попречи на устройството да заспи (напр. затъмняване на екрана или заспиване на процесора) по време на критичните операции, за да се гарантира, че те завършват без прекъсване. Това се използва пестеливо, за да се запази батерията.</string>

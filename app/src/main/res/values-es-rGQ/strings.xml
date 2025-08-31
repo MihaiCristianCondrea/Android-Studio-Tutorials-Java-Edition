@@ -17,6 +17,8 @@
     <string name="main_card_subtitle">Con ediciones para Kotlin y Java</string>
     <string name="main_card_description">La edición de Kotlin se ha actualizado con lecciones dinámicas, asistente de IA y más. ¡Experimenta el futuro del desarrollo de Android!</string>
     <string name="get_on_google_play">Consíguelo en Google Play</string>
+    <string name="learn_more">Más información</string>
+    <string name="play_store">Play Store</string>
 
     <string name="android_studio">Android Studio</string>
 
@@ -400,7 +402,6 @@
     <string name="firebase_crashlytics">Firebase Crashlytics</string>
     <string name="firebase_analytics">Firebase Analytics</string>
     <string name="firebase_performance">Firebase Performance</string>
-    <string name="play_store">Play Store</string>
     <string name="special">Especial</string>
     <string name="wake_lock">Mantenga el dispositivo despierto [WAKE_LOCK]</string>
     <string name="summary_preference_permissions_wake_lock">Permite que la aplicación impida que el dispositivo se vaya a dormir (por ejemplo, atenuación de pantalla o sueño de procesador) durante operaciones críticas para asegurar que completen sin interrupción. Esto se utiliza con moderación para conservar la batería.</string>
