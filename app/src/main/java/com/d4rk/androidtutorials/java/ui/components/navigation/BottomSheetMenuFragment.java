@@ -14,6 +14,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.BottomSheetMenuBinding;
 import com.d4rk.androidtutorials.java.ui.screens.settings.SettingsActivity;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.android.gms.instantapps.InstantApps;
 
 public class BottomSheetMenuFragment extends BottomSheetDialogFragment {
 
@@ -56,9 +57,20 @@ public class BottomSheetMenuFragment extends BottomSheetDialogFragment {
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
 
-            String shareLink = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID;
+            String shareLink;
+            boolean isInstant = InstantApps
+                    .getPackageManagerCompat(requireContext())
+                    .isInstantApp();
+            if (isInstant) {
+                shareLink = "https://example.com/instant";
+            } else {
+                shareLink = "https://play.google.com/store/apps/details?id="
+                        + BuildConfig.APPLICATION_ID;
+            }
 
-            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareLink);
+            String shareMessage = getString(R.string.share_message, shareLink);
+
+            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
             sharingIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.share_subject));
 
             startActivity(

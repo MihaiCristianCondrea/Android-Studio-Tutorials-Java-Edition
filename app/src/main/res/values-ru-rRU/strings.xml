@@ -254,6 +254,7 @@
     <string name="share">Поделиться</string>
     <string name="share_subject">Попробуйте прямо сейчас!!!</string>
     <string name="share_using">Поделиться с помощью…</string>
+    <string name="share_message">Посмотрите это приложение: %1$s</string>
     <string name="support_us">Поддержите нас</string>
     <string name="paid_support">Платная поддержка</string>
     <string name="non_paid_support">Бесплатная поддержка</string>

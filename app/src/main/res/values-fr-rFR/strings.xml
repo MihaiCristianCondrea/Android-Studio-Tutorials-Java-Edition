@@ -274,6 +274,7 @@
     <string name="share">Partager</string>
     <string name="share_subject">Essayez-le maintenant !!!</string>
     <string name="share_using">Partager via…</string>
+    <string name="share_message">Découvrez cette application : %1$s</string>
     <string name="support_us">Soutenez-nous</string>
     <string name="paid_support">Support payant</string>
     <string name="non_paid_support">Support non payant</string>

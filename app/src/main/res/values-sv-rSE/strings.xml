@@ -281,6 +281,7 @@
     <string name="share">Dela</string>
     <string name="share_subject">Prova den nu!!!</string>
     <string name="share_using">Dela med…</string>
+    <string name="share_message">Kolla in den här appen: %1$s</string>
     <string name="support_us">Stöd oss</string>
     <string name="paid_support">Betald support</string>
     <string name="non_paid_support">Icke-betald support</string>

@@ -254,6 +254,7 @@
     <string name="share">Bagikan</string>
     <string name="share_subject">Coba sekarang!!!</string>
     <string name="share_using">Bagikan menggunakan…</string>
+    <string name="share_message">Lihat aplikasi ini: %1$s</string>
     <string name="support_us">Dukung Kami</string>
     <string name="paid_support">Dukungan Berbayar</string>
     <string name="non_paid_support">Dukungan Tidak Berbayar</string>

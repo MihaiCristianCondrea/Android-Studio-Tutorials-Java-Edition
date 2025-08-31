@@ -254,6 +254,7 @@
     <string name="share">साझा करें</string>
     <string name="share_subject">इसे अभी आज़माएं!!!</string>
     <string name="share_using">इसका उपयोग करके साझा करें…</string>
+    <string name="share_message">इस ऐप को देखें: %1$s</string>
     <string name="support_us">हमारा समर्थन करें</string>
     <string name="paid_support">सशुल्क समर्थन</string>
     <string name="non_paid_support">गैर-सशुल्क समर्थन</string>

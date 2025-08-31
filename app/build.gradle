@@ -57,6 +57,7 @@ dependencies {
     // Google
     implementation libs.material
     implementation libs.play.services.ads
+    implementation libs.play.services.instantapps
     implementation libs.review
     implementation libs.app.update
     implementation libs.volley
