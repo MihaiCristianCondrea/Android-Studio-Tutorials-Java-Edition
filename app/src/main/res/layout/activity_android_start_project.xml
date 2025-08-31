@@ -13,6 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/menu_share"
+        app:shapeAppearanceOverlay="@style/ShapeTokens.Clover"
         app:title="@string/android_start_project" />
 
     <me.zhanghai.android.fastscroll.FastScrollScrollView
@@ -30,11 +31,11 @@
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_first_step"
-                style="@style/TextAppearance.Material3.HeadlineLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"
                 android:text="@string/step1"
+                android:textAppearance="@style/TextAppearance.TitleLargeEmphasized"
                 android:textColor="?attr/colorSecondary"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -45,6 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"
                 android:text="@string/summary_first_step"
+                android:textAppearance="@style/TextAppearance.BodyLargeEmphasized"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_view_first_step" />
 
@@ -54,10 +56,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="256dp"
                 android:layout_margin="24dp"
-                app:cardCornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_view_first_step_summary">
+                app:layout_constraintTop_toBottomOf="@id/text_view_first_step_summary"
+                app:shapeAppearanceOverlay="@style/ShapeTokens.Clover">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
@@ -77,11 +79,11 @@
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_second_step"
-                style="@style/TextAppearance.Material3.HeadlineLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"
                 android:text="@string/step2"
+                android:textAppearance="@style/TextAppearance.TitleLargeEmphasized"
                 android:textColor="?attr/colorSecondary"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ad_view" />
@@ -92,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"
                 android:text="@string/summary_second_step"
+                android:textAppearance="@style/TextAppearance.BodyLargeEmphasized"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_view_second_step" />
 
@@ -101,10 +104,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="256dp"
                 android:layout_margin="24dp"
-                app:cardCornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_view_second_step_summary">
+                app:layout_constraintTop_toBottomOf="@id/text_view_second_step_summary"
+                app:shapeAppearanceOverlay="@style/ShapeTokens.Clover">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
@@ -115,11 +118,11 @@
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_third_step"
-                style="@style/TextAppearance.Material3.HeadlineLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"
                 android:text="@string/step3"
+                android:textAppearance="@style/TextAppearance.TitleLargeEmphasized"
                 android:textColor="?attr/colorSecondary"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/card_view_second_step" />
@@ -130,6 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"
                 android:text="@string/summary_third_step"
+                android:textAppearance="@style/TextAppearance.BodyLargeEmphasized"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_view_third_step" />
 
@@ -139,10 +143,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="256dp"
                 android:layout_margin="24dp"
-                app:cardCornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_view_third_step_summary">
+                app:layout_constraintTop_toBottomOf="@id/text_view_third_step_summary"
+                app:shapeAppearanceOverlay="@style/ShapeTokens.Clover">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"

@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/ic_menu"
+            app:shapeAppearanceOverlay="@style/ShapeTokens.Clover"
             app:title="@string/app_name" />
     </com.google.android.material.appbar.AppBarLayout>
 
