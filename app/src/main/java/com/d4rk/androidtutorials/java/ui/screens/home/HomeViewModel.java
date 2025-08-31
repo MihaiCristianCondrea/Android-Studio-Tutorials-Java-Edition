@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.screens.home;
 
-import android.app.Application;
 import android.content.Intent;
 import android.net.Uri;
 
@@ -8,11 +7,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
-import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
 import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
 import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetPlayStoreUrlUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetAppPlayStoreUrlUseCase;
 
 import dagger.hilt.android.lifecycle.HiltViewModel;
 import javax.inject.Inject;
@@ -24,26 +23,26 @@ import java.util.List;
 @HiltViewModel
 public class HomeViewModel extends ViewModel {
 
-    private final Application application;
-    private final HomeRepository homeRepository;
     private final GetDailyTipUseCase getDailyTipUseCase;
     private final GetPromotedAppsUseCase getPromotedAppsUseCase;
+    private final GetPlayStoreUrlUseCase getPlayStoreUrlUseCase;
+    private final GetAppPlayStoreUrlUseCase getAppPlayStoreUrlUseCase;
 
     private final MutableLiveData<HomeUiState> uiState = new MutableLiveData<>();
 
     @Inject
-    public HomeViewModel(Application application,
-                         HomeRepository homeRepository,
-                         GetDailyTipUseCase getDailyTipUseCase,
-                         GetPromotedAppsUseCase getPromotedAppsUseCase) {
-        this.application = application;
-        this.homeRepository = homeRepository;
+    public HomeViewModel(GetDailyTipUseCase getDailyTipUseCase,
+                         GetPromotedAppsUseCase getPromotedAppsUseCase,
+                         GetPlayStoreUrlUseCase getPlayStoreUrlUseCase,
+                         GetAppPlayStoreUrlUseCase getAppPlayStoreUrlUseCase) {
         this.getDailyTipUseCase = getDailyTipUseCase;
         this.getPromotedAppsUseCase = getPromotedAppsUseCase;
+        this.getPlayStoreUrlUseCase = getPlayStoreUrlUseCase;
+        this.getAppPlayStoreUrlUseCase = getAppPlayStoreUrlUseCase;
 
         HomeUiState initialState = new HomeUiState(
-                application.getString(R.string.announcement_title),
-                application.getString(R.string.announcement_subtitle),
+                "",
+                "",
                 getDailyTipUseCase.invoke(),
                 new ArrayList<>()
         );
@@ -75,6 +74,16 @@ public class HomeViewModel extends ViewModel {
         });
     }
 
+    public void setAnnouncements(String title, String subtitle) {
+        HomeUiState current = uiState.getValue();
+        if (current == null) {
+            current = new HomeUiState(title, subtitle, getDailyTipUseCase.invoke(), new ArrayList<>());
+        } else {
+            current = new HomeUiState(title, subtitle, current.dailyTip(), current.promotedApps());
+        }
+        uiState.setValue(current);
+    }
+
     /**
      * Exposes the UI state for the Home screen.
      */
@@ -87,22 +96,17 @@ public class HomeViewModel extends ViewModel {
      * The HomeFragment can startActivity(...) on it.
      */
     public Intent getOpenPlayStoreIntent() {
-        return buildPlayStoreIntent(homeRepository.getPlayStoreUrl());
+        return buildPlayStoreIntent(getPlayStoreUrlUseCase.invoke());
     }
 
     /**
      * Builds an intent to open the Google Play listing for the provided package.
      */
     public Intent getPromotedAppIntent(String packageName) {
-        return buildPlayStoreIntent(homeRepository.getAppPlayStoreUrl(packageName));
+        return buildPlayStoreIntent(getAppPlayStoreUrlUseCase.invoke(packageName));
     }
 
     private Intent buildPlayStoreIntent(String url) {
-        Intent playStoreIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        playStoreIntent.setPackage("com.android.vending");
-        if (playStoreIntent.resolveActivity(application.getPackageManager()) != null) {
-            return playStoreIntent;
-        }
         return new Intent(Intent.ACTION_VIEW, Uri.parse(url));
     }
 }

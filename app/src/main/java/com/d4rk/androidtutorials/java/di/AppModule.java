@@ -25,6 +25,8 @@ import com.d4rk.androidtutorials.java.domain.help.LaunchReviewFlowUseCase;
 import com.d4rk.androidtutorials.java.domain.help.RequestReviewFlowUseCase;
 import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
 import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetPlayStoreUrlUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetAppPlayStoreUrlUseCase;
 import com.d4rk.androidtutorials.java.domain.main.ApplyLanguageSettingsUseCase;
 import com.d4rk.androidtutorials.java.domain.main.ApplyThemeSettingsUseCase;
 import com.d4rk.androidtutorials.java.domain.main.BuildShortcutIntentUseCase;
@@ -105,6 +107,16 @@ public class AppModule {
     @Provides
     public GetPromotedAppsUseCase provideGetPromotedAppsUseCase(HomeRepository repository) {
         return new GetPromotedAppsUseCase(repository);
+    }
+
+    @Provides
+    public GetPlayStoreUrlUseCase provideGetPlayStoreUrlUseCase(HomeRepository repository) {
+        return new GetPlayStoreUrlUseCase(repository);
+    }
+
+    @Provides
+    public GetAppPlayStoreUrlUseCase provideGetAppPlayStoreUrlUseCase(HomeRepository repository) {
+        return new GetAppPlayStoreUrlUseCase(repository);
     }
 
     @Provides
