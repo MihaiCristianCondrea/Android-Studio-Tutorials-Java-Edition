@@ -420,4 +420,7 @@
     <string name="quiz_reminder_title">Memento zilnic pentru chestionar</string>
     <string name="quiz_reminder_body">Revino pentru chestionarul de astăzi!</string>
     <string name="other_apps_title">Mai multe aplicații ale dezvoltatorului</string>
+    <string name="im_step1_desc">Captură de ecran cu butonul Proiect nou în Android Studio.</string>
+    <string name="im_step2_desc">Captură de ecran cu selectarea tipului de activitate în timpul configurării proiectului.</string>
+    <string name="im_step3_desc">Captură de ecran cu câmpurile nume aplicație, pachet, limbă și SDK minim.</string>
 </resources>

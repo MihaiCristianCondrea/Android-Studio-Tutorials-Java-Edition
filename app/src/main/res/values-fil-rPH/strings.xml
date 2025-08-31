@@ -445,4 +445,7 @@
     <string name="quiz_reminder_title">Paalala sa Araw-araw na Pagsusulit</string>
     <string name="quiz_reminder_body">Bumalik para sa pagsusulit ngayong araw!</string>
     <string name="other_apps_title">Higit pang mga app mula sa developer</string>
+    <string name="im_step1_desc">Screenshot na nagpapakita ng button na New project sa Android Studio.</string>
+    <string name="im_step2_desc">Screenshot na nagpapakita ng pagpili ng uri ng activity sa pag-set up ng proyekto.</string>
+    <string name="im_step3_desc">Screenshot na nagpapakita ng mga field para sa pangalan ng app, package, wika, at minimum SDK.</string>
 </resources>

@@ -445,4 +445,7 @@
     <string name="quiz_reminder_title">Nhắc nhở làm quiz hằng ngày</string>
     <string name="quiz_reminder_body">Quay lại để làm quiz hôm nay!</string>
     <string name="other_apps_title">Các ứng dụng khác của nhà phát triển</string>
+    <string name="im_step1_desc">Ảnh chụp màn hình hiển thị nút Dự án mới trong Android Studio.</string>
+    <string name="im_step2_desc">Ảnh chụp màn hình hiển thị lựa chọn loại hoạt động khi thiết lập dự án.</string>
+    <string name="im_step3_desc">Ảnh chụp màn hình hiển thị các trường tên ứng dụng, gói, ngôn ngữ và SDK tối thiểu.</string>
 </resources>

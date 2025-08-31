@@ -445,4 +445,7 @@
     <string name="quiz_reminder_title">การแจ้งเตือนแบบทดสอบรายวัน</string>
     <string name="quiz_reminder_body">กลับมาทำแบบทดสอบของวันนี้!</string>
     <string name="other_apps_title">แอปอื่นๆ จากนักพัฒนา</string>
+    <string name="im_step1_desc">ภาพหน้าจอแสดงปุ่มโปรเจ็กต์ใหม่ใน Android Studio.</string>
+    <string name="im_step2_desc">ภาพหน้าจอแสดงการเลือกประเภทกิจกรรมระหว่างตั้งค่าโปรเจ็กต์.</string>
+    <string name="im_step3_desc">ภาพหน้าจอแสดงช่องชื่อแอป แพ็กเกจ ภาษา และ SDK ขั้นต่ำ.</string>
 </resources>

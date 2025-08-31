@@ -445,4 +445,7 @@
     <string name="quiz_reminder_title">Günlük Test Hatırlatıcısı</string>
     <string name="quiz_reminder_body">Bugünün testi için geri gelin!</string>
     <string name="other_apps_title">Geliştiricinin diğer uygulamaları</string>
+    <string name="im_step1_desc">Android Studio’da Yeni proje düğmesini gösteren ekran görüntüsü.</string>
+    <string name="im_step2_desc">Proje kurulumunda etkinlik türü seçimini gösteren ekran görüntüsü.</string>
+    <string name="im_step3_desc">Uygulama adı, paket, dil ve minimum SDK alanlarını gösteren ekran görüntüsü.</string>
 </resources>

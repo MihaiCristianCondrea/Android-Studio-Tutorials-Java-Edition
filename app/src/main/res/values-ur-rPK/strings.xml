@@ -445,4 +445,7 @@
     <string name="quiz_reminder_title">روزانہ کوئز یاددہانی</string>
     <string name="quiz_reminder_body">آج کے کوئز کے لیے دوبارہ آئیں!</string>
     <string name="other_apps_title">ڈیولپر کی مزید ایپس</string>
+    <string name="im_step1_desc">اسکرین شاٹ جس میں اینڈروئیڈ اسٹوڈیو میں نیا پروجیکٹ بٹن دکھایا گیا ہے۔</string>
+    <string name="im_step2_desc">اسکرین شاٹ جس میں پروجیکٹ سیٹ اپ کے دوران سرگرمی کی قسم کا انتخاب دکھایا گیا ہے۔</string>
+    <string name="im_step3_desc">اسکرین شاٹ جس میں ایپ کا نام، پیکج، زبان اور کم سے کم SDK کے فیلڈ دکھائے گئے ہیں۔</string>
 </resources>

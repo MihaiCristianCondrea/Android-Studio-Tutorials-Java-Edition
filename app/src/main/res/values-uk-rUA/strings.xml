@@ -445,4 +445,7 @@
     <string name="quiz_reminder_title">Щоденне нагадування про вікторину</string>
     <string name="quiz_reminder_body">Поверніться на сьогоднішню вікторину!</string>
     <string name="other_apps_title">Інші додатки розробника</string>
+    <string name="im_step1_desc">Знімок екрана з кнопкою Новий проєкт у Android Studio.</string>
+    <string name="im_step2_desc">Знімок екрана вибору типу активності під час налаштування проєкту.</string>
+    <string name="im_step3_desc">Знімок екрана полів назви застосунку, пакета, мови та мінімального SDK.</string>
 </resources>

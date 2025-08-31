@@ -3,4 +3,7 @@
     <string name="get_on_google_play">Pobierz z Google Play</string>
     <string name="learn_more">Dowiedz się więcej</string>
     <string name="play_store">Sklep Play</string>
+    <string name="im_step1_desc">Zrzut ekranu pokazujący przycisk Nowy projekt w Android Studio.</string>
+    <string name="im_step2_desc">Zrzut ekranu pokazujący wybór typu aktywności podczas konfiguracji projektu.</string>
+    <string name="im_step3_desc">Zrzut ekranu pokazujący pola nazwy aplikacji, pakietu, języka i minimalnego SDK.</string>
 </resources>

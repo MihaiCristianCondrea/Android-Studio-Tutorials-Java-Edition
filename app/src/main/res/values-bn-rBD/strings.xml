@@ -445,4 +445,7 @@
     <string name="quiz_reminder_title">দৈনিক কুইজ রিমাইন্ডার</string>
     <string name="quiz_reminder_body">আজকের কুইজে ফিরে আসুন!</string>
     <string name="other_apps_title">ডেভেলপারকে আরো টুল</string>
+    <string name="im_step1_desc">স্ক্রিনশটে Android Studio-তে নতুন প্রকল্প বোতাম দেখা যাচ্ছে।</string>
+    <string name="im_step2_desc">স্ক্রিনশটে প্রকল্প সেটআপের সময় অ্যাক্টিভিটি টাইপ নির্বাচন দেখা যাচ্ছে।</string>
+    <string name="im_step3_desc">স্ক্রিনশটে অ্যাপ নাম, প্যাকেজ, ভাষা ও ন্যূনতম SDK ফিল্ড দেখা যাচ্ছে।</string>
 </resources>

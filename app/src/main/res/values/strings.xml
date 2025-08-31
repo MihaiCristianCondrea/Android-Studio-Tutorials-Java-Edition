@@ -445,4 +445,7 @@
     <string name="quiz_reminder_title">Daily Quiz Reminder</string>
     <string name="quiz_reminder_body">Come back for today\s quiz!</string>
     <string name="other_apps_title">More apps by the developer</string>
+    <string name="im_step1_desc">Screenshot showing the New project button in Android Studio.</string>
+    <string name="im_step2_desc">Screenshot showing activity type selection during project setup.</string>
+    <string name="im_step3_desc">Screenshot showing fields for app name, package, language, and minimum SDK.</string>
 </resources>
