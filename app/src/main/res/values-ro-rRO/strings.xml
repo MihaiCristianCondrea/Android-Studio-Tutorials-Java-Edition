@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="announcement_title">A sosit o aplicație nouă.</string>
     <string name="announcement_subtitle">Descoperă cea mai recentă aplicație Android Studio Tutorials.</string>
@@ -18,16 +18,20 @@
     <string name="version">Versiunea %1$s</string>
     <string name="error_loading_layout">Eroare la încărcarea aspectului</string>
     <string name="error_loading_code">Eroare la încărcarea codului</string>
-
     <string name="app_short_description">Învață cum să faci aplicații simple în Android Studio. 📱</string>
     <string name="app_usage_notifications">Notificări de utilizare a aplicației</string>
     <string name="update_notifications">Notificări de actualizare</string>
     <string name="welcome">Bun venit</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Răsfoiți <i><u>Termenii de utilizare</u></i> și <i><u>Politica de confidențialitate</u></i></string>
+    <string name="browse_terms_of_service_and_privacy_policy">Răsfoiți <i>
+            <u>Termenii de utilizare</u>
+        </i> și <i>
+            <u>Politica de confidențialitate</u>
+        </i>
+    </string>
     <string name="agree">Sunt de acord</string>
     <string name="home">Acasă</string>
     <string name="android_studio">Android Studio</string>
-    <string name="android_start">Porniți un proiect nou…</string>
+    <string name="android_start">Start a new project</string>
     <string name="android_start_project">Porniți un proiect nou</string>
     <string name="step1">Pasul 1</string>
     <string name="step2">Pasul 2</string>
@@ -56,7 +60,7 @@
     <string name="extract_field">Extrage câmpul</string>
     <string name="extract_variable">Extrage variabila</string>
     <string name="extract_constant">Extrage constanta</string>
-    <string name="build_and_run">Construire &amp; rulare</string>
+    <string name="build_and_run">Build and run</string>
     <string name="build">Construire</string>
     <string name="apply_changes">Aplică modificări (cu Instant Run)</string>
     <string name="debugging">Depanare</string>
@@ -70,7 +74,7 @@
     <string name="resume_program">Reia programul</string>
     <string name="toggle_breakpoint">Activează/Dezactivează punctul de întrerupere</string>
     <string name="view_breakpoints">Vizualizează punctele de întrerupere</string>
-    <string name="navigation_and_searching">Navigare &amp; căutare</string>
+    <string name="navigation_and_searching">Navigation and searching</string>
     <string name="press_shift_twice">Apăsați Shift de două ori</string>
     <string name="search_everything">Căutați totul (inclusiv codul și meniurile)</string>
     <string name="find">Găsește</string>
@@ -97,17 +101,17 @@
     <string name="open_v_hierarchy">Deschide ierarhia metodelor</string>
     <string name="open_call_hierarchy">Deschide ierarhia apelurilor</string>
     <string name="writing_code">Scrierea codului</string>
-    <string name="generate_code">Generează cod (getters, setters, etc.)</string>
+    <string name="generate_code">Generate code (getters, setters, and more)</string>
     <string name="override_methods">Suprascrie metode</string>
     <string name="implement_methods">Implementează metode</string>
-    <string name="surround">Încadrează cu (if…else / try…catch / etc.)</string>
+    <string name="surround">Surround with (if/else, try/catch, and more)</string>
     <string name="delete_line">Șterge linia la cursor</string>
     <string name="collapse_and_expand_code_block">Restrânge/extinde blocul de cod curent</string>
     <string name="collapse_and_expand_all_code_block">Restrânge/extinde toate blocurile de cod</string>
     <string name="duplicate_current_line">Duplică linia curentă sau selecția</string>
     <string name="basic_code_completion">Completare cod de bază</string>
     <string name="smart_code_completion">Completare inteligentă a codului (filtrează lista de metode și variabile după tipul așteptat)</string>
-    <string name="version_control">Controlul versiunilor &amp; istoricul local</string>
+    <string name="version_control">Version control and local history</string>
     <string name="commit_project">Comite proiectul la VCS</string>
     <string name="update_project">Actualizează proiectul din VCS</string>
     <string name="view_recent_changes">Vezi modificările recente</string>
@@ -127,7 +131,7 @@
     <string name="more_about_permissions">Mai multe despre permisiuni</string>
     <string name="per_app_language_preferences">Preferințe de limbă per aplicație</string>
     <string name="predictive_back_gesture">Gest de revenire predictiv</string>
-    <string name="layouts">Aranjamente &amp; Vizualizări</string>
+    <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Aranjament liniar</string>
     <string name="vertical">Vertical</string>
     <string name="horizontal">Orizontal</string>
@@ -138,7 +142,7 @@
     <string name="image_view">Vizualizare imagine</string>
     <string name="web_view">Vizualizare web</string>
     <string name="layout_preview">Previzualizare aspect</string>
-    <string name="buttons_and_switches">Butoane &amp; Comutatoare</string>
+    <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Butoane</string>
     <string name="button">Buton</string>
     <string name="button_normal">Buton 1 (normal)</string>
@@ -172,7 +176,7 @@
     <string name="material_switch">Comutator Material</string>
     <string name="switch_material">Comutator Material</string>
     <string name="toggle_button">Buton de comutare</string>
-    <string name="clocks_and_timers">Ceasuri &amp; Cronometre</string>
+    <string name="clocks_and_timers">Clocks and timers</string>
     <string name="clocks">Ceasuri</string>
     <string name="clock_analog">Ceas analogic</string>
     <string name="clock_text">Ceas text</string>
@@ -203,7 +207,7 @@
     <string name="tooltips">Indicații</string>
     <string name="reviews">Recenzii</string>
     <string name="rating_bar">Bară de evaluare</string>
-    <string name="rate_us">Evaluează aplicația noastră.</string>
+    <string name="rate_us">Rate the app.</string>
     <string name="stars">%1$.1f stele.</string>
     <string name="in_app_review">Recenzii în aplicație</string>
     <string name="progress_bars">Bare de progres</string>
@@ -324,10 +328,10 @@
     <string name="summary_preference_android_studio_image_buttons">Afișează un buton cu o imagine (în loc de text) care poate fi apăsat sau făcut clic de către utilizator. În mod implicit, un ImageButton arată ca un Buton obișnuit, cu fundalul standard al butonului care își schimbă culoarea în timpul diferitelor stări ale butonului. Imaginea de pe suprafața butonului este definită fie prin atributul android:src din elementul XML ImageButton, fie prin metoda ImageView.setImageResource(int).</string>
     <string name="summary_preference_android_studio_switches">Explorați capacitățile comutatoarelor din Android Studio și învățați cum să le implementați eficient în aplicațiile dumneavoastră. Această lecție oferă un ghid complet pentru utilizarea comutatoarelor, inclusiv cele mai bune practici pentru proiectarea unor interfețe vizual atractive și ușor de utilizat.</string>
     <string name="summary_preference_android_studio_clocks">O modalitate simplă de a adăuga ceasuri digitale, analogice sau text în aplicația ta Android.</string>
-    <string name="summary_preference_android_studio_time_picker">Android TimePicker este un control de interfață utilizator pentru selectarea orei, fie în format de 24 de ore, fie în modul AM/PM. Este utilizat pentru a se asigura că utilizatorii aleg ora validă pentru ziua respectivă în aplicația noastră. Interfața de selecție a orei există practic în două moduri: unul este sub aspect XML, iar celălalt este un dialog.</string>
+    <string name="summary_preference_android_studio_time_picker">Android TimePicker is a user interface control for selecting the time in either 24-hour format or AM/PM mode. It is used to ensure that users pick the valid time for the day in the app. The time picker interface exists basically in two modes one is under XML layout and another is a dialog.</string>
     <string name="summary_preference_android_studio_date_picker">Android oferă controale pentru ca utilizatorul să selecteze o oră sau o dată ca dialoguri gata de utilizat. Fiecare selector oferă controale pentru selectarea fiecărei părți a orei (oră, minut, AM/PM) sau a datei (lună, zi, an). Utilizarea acestor selectori ajută la asigurarea faptului că utilizatorii dvs. pot alege o oră sau o dată validă, formatată corect și ajustată la locația utilizatorului.</string>
     <string name="summary_preference_android_studio_chronometer">Explorați capacitățile widget-ului Cronometru în Android, un instrument puternic pentru afișarea timpului scurs. Aflați cum să configurați ascultători de clic pentru butoane pentru a controla cronometrul și descoperiți diversele metode disponibile pentru personalizarea comportamentului său.</string>
-    <string name="summary_preference_android_studio_text_box">Un element de interfață utilizator pentru introducerea și modificarea textului. Când definiți un widget de editare a textului, trebuie să specificați atributul R.styleable.TextView_inputType…</string>
+    <string name="summary_preference_android_studio_text_box">A user interface element for entering and modifying text. When you define an edit text widget, you must specify the R.styleable.TextView_inputType attribute to ensure the correct keyboard and input behaviors.</string>
     <string name="summary_preference_android_studio_password_text_box">O căsuță de text simplă cu posibilitatea de a ascunde textul. Este utilizată pe ecranele de conectare pentru majoritatea aplicațiilor pentru a păstra parolele în siguranță.</string>
     <string name="summary_preference_android_studio_alert_dialog">Un dialog este o fereastră mică care solicită utilizatorului să ia o decizie sau să introducă informații suplimentare. Un dialog nu umple ecranul și este utilizat în mod normal pentru evenimente modale care necesită ca utilizatorii să întreprindă o acțiune înainte de a putea continua.</string>
     <string name="summary_preference_android_studio_snack_bar">Barele de snack-bar informează utilizatorii despre un proces pe care o aplicație l-a efectuat sau îl va efectua. Ele apar temporar, spre partea de jos a ecranului. Nu ar trebui să întrerupă experiența utilizatorului și nu necesită introducerea datelor de către utilizator pentru a dispărea.</string>
@@ -349,40 +353,40 @@
     <string name="summary_second_step">Al doilea pas este să selectați tipul de activitate care se potrivește aplicației dumneavoastră. Puteți alege dintre câteva presetări care vă pot simplifica munca. Selectați una dintre ele și faceți clic pe butonul <b>Următorul</b>.</string>
     <string name="summary_third_step">Al treilea și ultimul pas este să configurați setările aplicației, cum ar fi numele aplicației, <b>numele pachetului</b>, <b>limba de programare</b> preferată și <b>SDK-ul minim</b>. Puteți afla mai multe despre ele pe <a href="https://developer.android.com/">Android Developers</a>.</string>
     <string name="summary_enable_binding">Binding-ul vizualizărilor este activat pe bază de modul. Pentru a activa binding-ul vizualizărilor într-un modul, setați opțiunea de compilare viewBinding la true în fișierul build.gradle la nivel de modul, așa cum se arată în exemplul următor:</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">Citiți și acceptați Termenii noștri de utilizare și Politica de confidențialitate pentru a continua.</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="summary_toggle">Puteți adăuga un buton de comutare de bază la aspectul dvs. cu obiectul ToggleButton. Android 4.0 (API nivel 14) introduce un alt tip de buton de comutare numit switch care oferă un control glisant, pe care îl puteți adăuga cu un obiect Switch. SwitchCompat este o versiune a widget-ului Switch care rulează pe dispozitive până la API 7.</string>
     <string name="summary_clocks">Notă importantă: Ceasul digital este depreciat în versiunea API 17. Începând cu nivelul API 17, puteți utiliza TextClock în loc de ceas digital. Mai jos este descrierea ceasului Text în Android.</string>
     <string name="summary_buttons">Butoanele sunt un element esențial al oricărei aplicații Android. Acestea permit utilizatorilor să interacționeze cu aplicația și să efectueze acțiuni precum trimiterea unui formular, începerea unei noi activități sau efectuarea unei achiziții.\n\nÎn Android Studio, butoanele sunt create utilizând clasa Button și pot fi personalizate în diverse moduri, inclusiv setarea textului, culorii și dimensiunii acestora. De asemenea, ele pot fi configurate pentru a declanșa diferite acțiuni atunci când sunt apăsate, cum ar fi începerea unei noi activități sau afișarea unui mesaj pop-up.\n\nButoanele pot fi plasate oriunde în aspectul unei aplicații și pot fi utilizate împreună cu alte elemente UI, cum ar fi câmpurile de text și listele, pentru a crea o aplicație complet funcțională și ușor de utilizat.\n\nÎn general, butoanele sunt un instrument simplu, dar puternic, pentru construirea de aplicații Android atractive și interactive.</string>
     <string name="summary_permissions">De exemplu, dacă aplicația dvs. trebuie să descarce ceva, va necesita permisiunea Internet.\n\nAruncați o privire pe site-ul web Android Developers pentru toate permisiunile și o referință la documentația oficială.\n\nAplicațiile Android trebuie să solicite permisiunea de a accesa anumite funcționalități sau date pe un dispozitiv. Aceste permisiuni sunt utilizate pentru a proteja confidențialitatea utilizatorului și a dispozitivului. Când o aplicație este instalată, utilizatorului i se solicită să acorde sau să refuze permisiunile pe care le solicită aplicația. Aplicația va avea acces doar la funcționalitățile sau datele pentru care a solicitat permisiunea.\n\nExistă două tipuri de permisiuni: normale și periculoase. Permisiunile normale nu prezintă un risc pentru confidențialitatea utilizatorului. Acestea includ lucruri precum accesul la internet și vibrarea. Permisiunile periculoase, pe de altă parte, pot accesa potențial informații sau acțiuni sensibile și sunt, prin urmare, mai restricționate. Acestea includ permisiuni precum accesul la locația utilizatorului, camera și contactele.\n\nEste important ca dezvoltatorii de aplicații să solicite doar permisiunile care sunt absolut necesare pentru ca aplicația lor să funcționeze corect. Acest lucru ajută la protejarea confidențialității utilizatorului și, de asemenea, face aplicația mai ușor de utilizat.</string>
     <string name="summary_image_buttons">Butoanele imagine sunt butoane care conțin o imagine în loc de text. Ele pot fi utilizate în Android pentru a oferi o interfață de utilizator mai atractivă vizual și interactivă. Butoanele imagine pot fi utilizate pentru a declanșa acțiuni, a naviga la diferite ecrane sau a afișa informații suplimentare. Ele sunt adesea utilizate în combinație cu etichete text pentru a oferi o comunicare clară utilizatorului despre scopul butonului.</string>
-    <string name="summary_notification_last_time_used">Nu lăsa ca abilitățile tale de dezvoltare Android să adune praf. Revino la învățare și îmbunătățire cu Android Studio Tutorials: Java Edition astăzi. Aplicația noastră are ceva pentru toată lumea, de la începători la dezvoltatori experimentați.</string>
+    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
     <string name="summary_notification_update">Este disponibilă o nouă versiune a aplicației. Apasă pentru a actualiza.</string>
     <string name="summary_image_view">AndroidX AppCompatImageView este o subclasă a ImageView care este proiectată să suporte diverse funcționalități ale ActionBar și Material Design. Face parte din biblioteca AndroidX, care este un set de biblioteci de suport ce oferă versiuni compatibile înapoi ale API-urilor framework-ului Android, precum și funcționalități disponibile doar prin API-urile bibliotecii.\n\nAppCompatImageView este conceput pentru a fi utilizat ca înlocuitor direct pentru ImageView, permițând dezvoltatorilor să utilizeze același cod și elemente UI în diferite versiuni de Android. Acesta include suport pentru diverse funcționalități, cum ar fi colorarea (tinting), încărcarea resurselor vectoriale (vector drawables) și gestionarea scalării imaginii.\n\nAppCompatImageView include, de asemenea, suport pentru funcționalități Material Design, cum ar fi elevația, care permite vizualizării imaginii să proiecteze o umbră și să pară ridicată deasupra suprafeței aspectului. Include, de asemenea, suport pentru efectul Material Design ripple, care este un efect vizual aplicat atunci când vizualizarea imaginii este atinsă.\n\nPe scurt, AndroidX AppCompatImageView este o subclasă versatilă și bogată în funcționalități a ImageView, concepută pentru a suporta o gamă largă de funcționalități și elemente de design în aplicațiile Android.</string>
     <string name="summary_linear_layout_compat">Linear Layout Compat este o clasă din biblioteca de suport Android appCompat v7. A fost adăugată pentru a suporta metodele care au fost adăugate în niveluri API mai noi pe cele vechi (cum ar fi divizoarele). Dacă comparați metodele din LinearLayout și LinearLayoutCompat, puteți vedea că aspectul Compat are toate metodele LinearLayout fără nicio limitare a nivelului API. De exemplu, metoda setShowDividers a fost introdusă la nivelul API 11. Prin urmare, în acest caz, setShowDividers (și parametrii săi) ar trebui să fie invocate utilizând Linear Layout Compat în loc de LinearLayout dacă vizați o platformă cu nivel API sub 11.</string>
-    <string name="summary_donations">Indiferent de cât donați, ne veți ajuta să menținem aplicația noastră funcțională și să îmbunătățim funcționalitățile. Apreciem generozitatea și bunătatea dumneavoastră.</string>
+    <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">Aflați cum să utilizați barele de progres în Android cu această lecție interactivă. Această lecție include două secțiuni: una pentru o bară de progres orizontală și una pentru o bară de progres circulară. În fiecare secțiune, puteți vedea cum bara de progres se actualizează pe măsură ce o descărcare progresează. De asemenea, puteți vizualiza codul pentru lecție făcând clic pe butonul de acțiune plutitor din partea de jos a ecranului.</string>
     <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android este un sistem de operare mobil dezvoltat de Google. A fost lansat pentru prima dată ca versiune beta pe 5 noiembrie 2007, iar prima versiune comercială, Android 1.0, a fost lansată pe 23 septembrie 2008. Android se bazează pe o versiune modificată a nucleului Linux și pe alte software-uri open source.\n\nAndroid Studio este mediul oficial de dezvoltare integrat (IDE) pentru dezvoltarea aplicațiilor Android. A fost anunțat de Google la conferința I/O din 15 mai 2013 și lansat pentru uz public pe 8 decembrie 2014. Android Studio se bazează pe IntelliJ IDEA, un IDE Java popular.\n\nKotlin este un limbaj de programare multi-platformă care poate rula pe mașina virtuală Java (JVM), Android, browser și platforme native. A fost creat de JetBrains, o companie de software cu sediul în Praga. Kotlin a fost anunțat pentru prima dată în iulie 2011 și lansat ca proiect open source în februarie 2012.\n\nGoogle a anunțat suportul pentru Kotlin ca limbaj oficial pentru dezvoltarea aplicațiilor Android la conferința I/O din 17 mai 2017. De atunci, Kotlin a devenit unul dintre cele mai populare limbaje pentru dezvoltatorii Android. Conform datelor Google din octombrie 2020, peste 70% dintre primele 1000 de aplicații din Google Play folosesc Kotlin.</string>
-    <string name="summary_android_features">Android nu este doar un sistem de operare, ci și o platformă care oferă o gamă largă de funcționalități și capabilități pentru utilizatori și dezvoltatori. Unele dintre funcționalitățile Android includ:\n\n- Near Field Communication (NFC), care vă permite să partajați date, să efectuați plăți și să vă conectați fără fir la alte dispozitive.\n- Tastaturi alternative, care vă permit să personalizați metoda de introducere cu diferite aranjamente, limbi și teme.\n- Transmisie IR, care vă permite să utilizați telefonul ca telecomandă pentru televizoare, aparate de aer condiționat și alte aparate.\n- Control fără atingere, care vă permite să efectuați acțiuni pe telefon fără a atinge ecranul, utilizând gesturi sau comenzi vocale.\n- Automatizare, care vă permite să configurați rutine și declanșatoare pentru ca telefonul să efectueze anumite sarcini automat.\n- Descărcări de aplicații fără fir, care vă permit să instalați aplicații de pe computer sau browser web fără a conecta telefonul cu un cablu.\n- Schimb de stocare și baterie, care vă oferă opțiunea de a extinde memoria telefonului sau de a-i înlocui cu ușurință bateria.\n- Ecran de pornire personalizat, care vă permite să personalizați aspectul telefonului cu widget-uri, imagini de fundal, pictograme și lansatoare.\n\nAndroid Studio este cel mai bun instrument pentru dezvoltarea aplicațiilor Android. Acesta oferă multe funcționalități și beneficii pentru dezvoltatori, cum ar fi:\n\n- Editor de cod cu evidențiere sintactică, completare automată a codului, refactorizare, depanare, testare și instrumente de linting.\n- Editor de aspect cu interfață drag-and-drop pentru proiectarea interfețelor utilizator.\n- Emulator cu pornire rapidă și suport pentru instantanee pentru testarea aplicațiilor pe diferite dispozitive și configurații.\n- Integrare Firebase cu servicii precum autentificarea, baza de date, stocarea, analitica, raportarea erorilor etc.\n- Sistem de construire bazat pe Gradle cu gestionarea dependențelor,\npersonalizare,\noptimizare,\nsemnare,\nopțiuni de distribuție etc.\n\nCu Android Studio,\nputeți crea aplicații uimitoare pentru dispozitive Android utilizând Kotlin,\nun limbaj de programare modern care este concis,\nsigur,\nexpresiv,\nși interoperabil cu Java.</string>
+    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">Un Cronometru este un widget specializat în cadrul Android care oferă o funcționalitate similară cu un cronometru pentru afișarea timpului scurs. Poate fi configurat să numere în sus sau în jos și este utilizat în mod obișnuit în aplicațiile care necesită înregistrarea timpului, cum ar fi aplicațiile de cronometru sau de numărătoare inversă. Clasa Chronometer este derivată din clasa TextView, ceea ce înseamnă că moștenește toate proprietățile și metodele unui TextView. Acest lucru permite dezvoltatorilor să personalizeze cu ușurință aspectul cronometrului, inclusiv dimensiunea textului, culoarea și fontul.</string>
     <string name="snack_this_is_a_snackbar">Acesta este un snack bar.</string>
     <string name="snack_bar_clicked">apăsat</string>
     <string name="snack_copied_to_clipboard">Copiat în clipboard. 📋</string>
     <string name="snack_unable_to_open_google_play_store">Nu se poate deschide Magazinul Google Play.</string>
-    <string name="snack_rating">Vă mulțumim că ne-ați acordat %1$.1f stele. ❤️</string>
+    <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Butonul imagine a fost apăsat.</string>
     <string name="toast_this_is_a_toast">Acesta este un toast.</string>
     <string name="tooltip_show_code">Afișează sintaxa codului</string>
     <string name="tooltip_show_java_code_snippet">Afișați fragmentul de cod Java</string>
     <string name="tooltip_open_me">Deschide-mă 🌐</string>
-    <string name="hint_type">Scrie aici…</string>
-    <string name="hint_password">Introduceți parola…</string>
+    <string name="hint_type">Type here</string>
+    <string name="hint_password">Enter your password</string>
     <string name="snack_general_error">A apărut o eroare la verificarea actualizărilor</string>
     <string name="firebase_crashlytics">Baza de foc Crashlytics</string>
     <string name="firebase_analytics">Analiza bazei de foc</string>
     <string name="firebase_performance">Performanță baza de foc</string>
     <string name="special">Special</string>
     <string name="wake_lock">Păstrați dispozitivul treaz [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Permite aplicației să împiedice somnul dispozitivului (de exemplu, dimming ecran sau somnul procesorului) în timpul operațiunilor critice pentru a se asigura că acesta este complet fără întrerupere. Acesta este folosit cu grijă pentru a conserva bateria.</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="summary_preference_settings_firebase_crashlytics">Colecta rapoarte de accident pentru a ajuta la rezolvarea problemelor.</string>
     <string name="summary_preference_settings_firebase_analytics">Adună date de utilizare pentru îmbunătățirea aplicației.</string>
     <string name="summary_preference_settings_firebase_performance">Măsoară performanța aplicației pentru optimizare.</string>

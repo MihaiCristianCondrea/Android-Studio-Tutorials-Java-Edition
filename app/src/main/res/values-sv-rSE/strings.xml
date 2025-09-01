@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_short_description">Lär dig hur man skapar enkla Java-appar i Android Studio. 📱</string>
     <string name="notification_update_title">En ny uppdatering finns tillgänglig.</string>
     <string name="summary_notification_update">En ny version av appen finns tillgänglig. Klicka för att uppdatera.</string>
     <string name="notification_last_time_used_title">Det var ett tag sen.</string>
-    <string name="summary_notification_last_time_used">Vi har saknat dig. Låt oss lära oss något nytt om Android.</string>
-
+    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
     <string name="welcome">Välkommen</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">Läs och godkänn våra användarvillkor och integritetspolicy för att fortsätta</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Godkänn</string>
-
     <string name="home">Hem</string>
     <string name="announcement_title">En ny app har kommit.</string>
     <string name="announcement_subtitle">Kolla in den senaste appen Android Studio Tutorials. Lär dig Jetpack Compose, Material 3 och mer.</string>
@@ -21,10 +19,8 @@
     <string name="play_store">Play Butik</string>
     <string name="search_tutorials_hint">Sök handledningar</string>
     <string name="search_tutorials_content_description">Sök handledningar</string>
-
     <string name="android_studio">Android Studio</string>
-
-    <string name="android_start">Starta ett nytt projekt…</string>
+    <string name="android_start">Start a new project</string>
     <string name="android_start_project">Starta ett nytt projekt</string>
     <string name="step1">Steg 1</string>
     <string name="summary_first_step">Det första steget för att skapa ett nytt projekt i Android Studio är att klicka på knappen <b>Nytt projekt</b> som visas på bilden och fortsätta till nästa steg.</string>
@@ -32,9 +28,7 @@
     <string name="summary_second_step">Det andra steget är att välja den aktivitetstyp som passar din app. Du kan välja bland några förinställningar som kan förenkla ditt arbete. Välj en av dem och klicka på <b>nästa</b>-knappen.</string>
     <string name="step3">Steg 3</string>
     <string name="summary_third_step">Det tredje och sista steget är att konfigurera dina appinställningar, såsom appnamn, <b>paketnamn</b>, föredraget <b>programmeringsspråk</b> och <b>lägsta SDK</b>. Du kan lära dig mer om dem på <a href="https://developer.android.com/">Android Developers</a>.</string>
-
     <string name="basics">Grunderna</string>
-
     <string name="shortcuts">Android Studio-genvägar</string>
     <string name="shortcuts_title">Genvägar</string>
     <string name="description">Beskrivning</string>
@@ -58,7 +52,7 @@
     <string name="extract_field">Extrahera fält</string>
     <string name="extract_variable">Extrahera variabel</string>
     <string name="extract_constant">Extrahera konstant</string>
-    <string name="build_and_run">Bygg &amp; kör</string>
+    <string name="build_and_run">Build and run</string>
     <string name="build">Bygg</string>
     <string name="apply_changes">Verkställ ändringar (med Instant Run)</string>
     <string name="debugging">Felsökning</string>
@@ -72,7 +66,7 @@
     <string name="resume_program">Återuppta program</string>
     <string name="toggle_breakpoint">Växla brytpunkt</string>
     <string name="view_breakpoints">Visa brytpunkter</string>
-    <string name="navigation_and_searching">Navigering &amp; sökning</string>
+    <string name="navigation_and_searching">Navigation and searching</string>
     <string name="press_shift_twice">Tryck Shift två gånger</string>
     <string name="search_everything">Sök överallt (inklusive kod och menyer)</string>
     <string name="find">Sök</string>
@@ -99,63 +93,48 @@
     <string name="open_v_hierarchy">Öppna metodhierarki</string>
     <string name="open_call_hierarchy">Öppna anropshierarki</string>
     <string name="writing_code">Skriva kod</string>
-    <string name="generate_code">Generera kod (getters, setters, etc)</string>
+    <string name="generate_code">Generate code (getters, setters, and more)</string>
     <string name="override_methods">Åsidosätt metoder</string>
     <string name="implement_methods">Implementera metoder</string>
-    <string name="surround">Omge med (if…else / try…catch / etc.)</string>
+    <string name="surround">Surround with (if/else, try/catch, and more)</string>
     <string name="delete_line">Ta bort rad vid markör</string>
     <string name="collapse_and_expand_code_block">Fäll ihop/expandera aktuellt kodblock</string>
     <string name="collapse_and_expand_all_code_block">Fäll ihop/expandera alla kodblock</string>
     <string name="duplicate_current_line">Duplicera aktuell rad eller markering</string>
     <string name="basic_code_completion">Grundläggande kodkomplettering</string>
     <string name="smart_code_completion">Smart kodkomplettering (filtrerar listan med metoder och variabler efter förväntad typ)</string>
-    <string name="version_control">Versionskontroll &amp; lokal historik</string>
+    <string name="version_control">Version control and local history</string>
     <string name="commit_project">Committa projekt till VCS</string>
     <string name="update_project">Uppdatera projekt från VCS</string>
     <string name="view_recent_changes">Visa senaste ändringar</string>
     <string name="open_vcs_popup">Öppna VCS-popup</string>
     <string name="more_about_shortcuts">Mer om genvägar</string>
-
     <string name="history_of_android">Androids historia</string>
     <string name="history">Historia</string>
     <string name="features">Funktioner</string>
-
     <string name="android_sdk">Android SDK:er</string>
     <string name="android_versions">Android-versioner</string>
-
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Installationsinstruktioner</string>
     <string name="use_view_binding_in_activities">Använd View Binding i aktiviteter</string>
     <string name="use_view_binding_in_fragments">Använd View Binding i fragment</string>
     <string name="more_about_view_binding">Mer om View Binding</string>
-
     <string name="permission_dialog_example">Exempel på behörighetsdialog</string>
     <string name="more_about_permissions">Mer om behörigheter</string>
-
     <string name="per_app_language_preferences">Språkpreferenser per app</string>
-
     <string name="predictive_back_gesture">Förutsägande bakåtgest</string>
-
-    <string name="layouts">Layouter &amp; Vyer</string>
-
+    <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Linjär layout</string>
-
     <string name="vertical">Vertikal</string>
     <string name="horizontal">Horisontell</string>
     <string name="layout_preview">Layoutförhandsgranskning</string>
     <string name="no_java_code_needed">Ingen Java-kod krävs för denna aktivitet.</string>
-
     <string name="relative_layout">Relativ layout</string>
-
     <string name="table_layout">Tabellayout</string>
-
     <string name="grid_view">Rutnätsvy</string>
-
     <string name="image_view">Bildvy</string>
-
     <string name="web_view">Webbvy</string>
-
-    <string name="buttons_and_switches">Knappar &amp; Reglage</string>
+    <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Knappar</string>
     <string name="button">Knapp</string>
     <string name="button_normal">Knapp 1 (normal)</string>
@@ -177,22 +156,19 @@
     <string name="floating_button_surface_icon">Flytande knapp 3 (yta)</string>
     <string name="floating_button_tertiary_icon">Flytande knapp 4 (tertiär)</string>
     <string name="same_code_buttons">Använd denna Java-kod för alla typer av knappar.</string>
-
     <string name="radio_buttons">Radioknappar</string>
     <string name="choose_your_option">Välj ditt alternativ</string>
     <string name="first_radio_option">Alternativ 1</string>
     <string name="second_radio_option">Alternativ 2</string>
     <string name="display_option">Visa alternativ</string>
-
     <string name="image_buttons">Bildknappar</string>
-
     <string name="switches">Reglage</string>
     <string name="switch_me">Slå om mig</string>
     <string name="material_switch_preference">Material Switch-preferens</string>
     <string name="material_switch">Material Switch</string>
     <string name="switch_material">Switch Material</string>
     <string name="toggle_button">Växlingsknapp</string>
-    <string name="clocks_and_timers">Klockor &amp; Timers</string>
+    <string name="clocks_and_timers">Clocks and timers</string>
     <string name="clocks">Klockor</string>
     <string name="clock_analog">Analog klocka</string>
     <string name="clock_text">Textklocka</string>
@@ -223,7 +199,7 @@
     <string name="tooltips">Verktygstips</string>
     <string name="reviews">Recensioner</string>
     <string name="rating_bar">Betygsfält</string>
-    <string name="rate_us">Betygsätt vår app.</string>
+    <string name="rate_us">Rate the app.</string>
     <string name="stars">%1$.1f stjärnor.</string>
     <string name="in_app_review">Recensioner i appen</string>
     <string name="progress_bars">Förloppsindikatorer</string>
@@ -268,7 +244,7 @@
     <string name="ad_id">Annons-ID [AD_ID]</string>
     <string name="internet">Internet [INTERNET]</string>
     <string name="wake_lock">Håll enheten vaken [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Tillåter appen att förhindra att enheten går i viloläge (t.ex. skärmdämpning eller processorvila) under kritiska operationer för att säkerställa att de slutförs utan avbrott. Detta används sparsamt för att spara batteri.</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">Skicka notiser [POST_NOTIFICATIONS]</string>
     <string name="runtime">Körningstid (Runtime)</string>
     <string name="access_network_state">Åtkomst till nätverksstatus [ACCESS_NETWORK_STATE]</string>
@@ -351,10 +327,10 @@
     <string name="summary_preference_android_studio_image_buttons">Visar en knapp med en bild (istället för text) som kan tryckas eller klickas på av användaren. Som standard ser en ImageButton ut som en vanlig Knapp, med standardknappbakgrunden som ändrar färg under olika knapptillstånd. Bilden på knappens yta definieras antingen av android:src-attributet i ImageButton XML-elementet eller av metoden ImageView.setImageResource(int).</string>
     <string name="summary_preference_android_studio_switches">Utforska funktionerna hos reglage i Android Studio och lär dig hur du implementerar dem effektivt i dina applikationer. Denna lektion ger en omfattande guide till att använda reglage, inklusive bästa praxis för att designa visuellt tilltalande och användarvänliga gränssnitt.</string>
     <string name="summary_preference_android_studio_clocks">Ett enkelt sätt att lägga till en digital, analog eller textklocka i din Android-app.</string>
-    <string name="summary_preference_android_studio_time_picker">Android TimePicker är en användargränssnittskontroll för att välja tid i antingen 24-timmarsformat eller AM/PM-läge. Den används för att säkerställa att användare väljer giltig tid för dagen i vår applikation. Tidsväljargränssnittet finns i grunden i två lägen: ett under XML-layout och ett annat är en dialog.</string>
+    <string name="summary_preference_android_studio_time_picker">Android TimePicker is a user interface control for selecting the time in either 24-hour format or AM/PM mode. It is used to ensure that users pick the valid time for the day in the app. The time picker interface exists basically in two modes one is under XML layout and another is a dialog.</string>
     <string name="summary_preference_android_studio_date_picker">Android tillhandahåller kontroller för användaren att välja en tid eller ett datum som färdiga dialoger. Varje väljare tillhandahåller kontroller för att välja varje del av tiden (timme, minut, AM/PM) eller datum (månad, dag, år). Att använda dessa väljare hjälper till att säkerställa att dina användare kan välja en tid eller ett datum som är giltigt, korrekt formaterat och anpassat till användarens lokala inställningar.</string>
     <string name="summary_preference_android_studio_chronometer">Utforska funktionerna i Chronometer-widgeten i Android, ett kraftfullt verktyg för att visa förfluten tid. Lär dig hur du ställer in klicklyssnare för knappar för att styra kronometern och upptäck de olika metoderna som finns tillgängliga för att anpassa dess beteende.</string>
-    <string name="summary_preference_android_studio_text_box">Ett användargränssnittselement för att mata in och ändra text. När du definierar en redigeringstextruta måste du specificera attributet R.styleable.TextView_inputType…</string>
+    <string name="summary_preference_android_studio_text_box">A user interface element for entering and modifying text. When you define an edit text widget, you must specify the R.styleable.TextView_inputType attribute to ensure the correct keyboard and input behaviors.</string>
     <string name="summary_preference_android_studio_password_text_box">En enkel textruta med möjlighet att dölja text. Används i inloggningsskärmar för de flesta appar för att hålla lösenord säkra.</string>
     <string name="summary_preference_android_studio_alert_dialog">En dialog är ett litet fönster som uppmanar användaren att fatta ett beslut eller ange ytterligare information. En dialog fyller inte skärmen och används normalt för modala händelser som kräver att användare vidtar en åtgärd innan de kan fortsätta.</string>
     <string name="summary_preference_android_studio_snack_bar">Snackbars informerar användare om en process som en app har utfört eller kommer att utföra. De visas tillfälligt, mot botten av skärmen. De ska inte avbryta användarupplevelsen och kräver inte användarinmatning för att försvinna.</string>
@@ -380,28 +356,31 @@
     <string name="summary_image_buttons">Bildknappar är knappar som innehåller en bild istället för text. De kan användas i Android för att ge ett mer visuellt tilltalande och interaktivt användargränssnitt. Bildknappar kan användas för att utlösa åtgärder, navigera till olika skärmar eller visa ytterligare information. De används ofta i kombination med textetiketter för att ge tydlig kommunikation till användaren om knappens syfte.</string>
     <string name="summary_image_view">AndroidX AppCompatImageView är en underklass till ImageView som är utformad för att stödja olika funktioner i ActionBar och Material Design. Det är en del av AndroidX-biblioteket, som är en uppsättning stöd-bibliotek som erbjuder bakåtkompatibla versioner av Android-ramverkets API:er samt funktioner som endast är tillgängliga via biblioteks-API:erna.\n\nAppCompatImageView är avsedd att användas som en direkt ersättning för ImageView, vilket gör att utvecklare kan använda samma kod och UI-element över olika versioner av Android. Det inkluderar stöd för olika funktioner som färgtoning, laddning av vektor-drawables och hantering av bildskalning.\n\nAppCompatImageView inkluderar också stöd för Material Design-funktioner som elevation, vilket gör att bildvyn kan kasta en skugga och verka upphöjd över layoutens yta. Det inkluderar också stöd för Material Design-rippleffekten, som är en visuell effekt som appliceras när bildvyn berörs.\n\nSammanfattningsvis är AndroidX AppCompatImageView en mångsidig och funktionsrik underklass till ImageView som är utformad för att stödja ett brett utbud av funktioner och designelement i Android-appar.</string>
     <string name="summary_linear_layout_compat">LinearLayoutCompat är en klass i Android-stöd-biblioteket appCompat v7. Den lades till för att stödja metoder som lades till i nyare API-nivåer på gamla (som avdelare). Om du jämför metoderna i LinearLayout och LinearLayoutCompat kan du se att Compat-layouten har alla metoder från LinearLayout utan någon API-nivåbegränsning. Till exempel introducerades metoden setShowDividers på API-nivå 11. Så i detta fall bör setShowDividers (och dess parametrar) anropas med LinearLayoutCompat istället för LinearLayout om du riktar dig mot en plattform med API-nivå under 11.</string>
-    <string name="summary_donations">Oavsett hur mycket du donerar, kommer du att hjälpa oss att hålla vår app igång och förbättra våra funktioner. Vi uppskattar din generositet och vänlighet.</string>
+    <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">Lär dig hur du använder förloppsindikatorer i Android med denna interaktiva lektion. Lektionen innehåller två avsnitt: ett för en horisontell förloppsindikator och ett för en cirkulär förloppsindikator. I varje avsnitt kan du se hur förloppsindikatorn uppdateras när en nedladdning fortskrider. Du kan också se koden för lektionen genom att klicka på den flytande åtgärdsknappen längst ner på skärmen.</string>
     <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android är ett mobilt operativsystem utvecklat av Google. Det släpptes först som en betaversion den 5 november 2007 och den första kommersiella versionen, Android 1.0, lanserades den 23 september 2008. Android är baserat på en modifierad version av Linux-kärnan och annan öppen källkodsprogramvara.\n\nAndroid Studio är den officiella integrerade utvecklingsmiljön (IDE) för Android-apputveckling. Det tillkännagavs av Google på dess I/O-konferens den 15 maj 2013 och släpptes för allmän användning den 8 december 2014. Android Studio är baserat på IntelliJ IDEA, en populär Java-IDE.\n\nKotlin är ett plattformsoberoende programmeringsspråk som kan köras på Java Virtual Machine (JVM), Android, webbläsare och inbyggda plattformar. Det skapades av JetBrains, ett mjukvaruföretag baserat i Prag. Kotlin tillkännagavs först i juli 2011 och släpptes som ett öppen källkodsprojekt i februari 2012.\n\nGoogle tillkännagav sitt stöd för Kotlin som ett officiellt språk för Android-apputveckling på sin I/O-konferens den 17 maj 2017. Sedan dess har Kotlin blivit ett av de mest populära språken för Android-utvecklare. Enligt Googles data från oktober 2020 använder mer än 70 %% av de 1000 bästa apparna på Google Play Kotlin.</string>
-    <string name="summary_android_features">Android är inte bara ett operativsystem, utan också en plattform som erbjuder en rad funktioner och möjligheter för användare och utvecklare. Några av funktionerna i Android inkluderar:\n\n- Near Field Communication (NFC), som låter dig dela data, göra betalningar och ansluta till andra enheter trådlöst.\n- Alternativa tangentbord, som låter dig anpassa din inmatningsmetod med olika layouter, språk och teman.\n- IR-sändning, som gör att du kan använda din telefon som en fjärrkontroll för TV-apparater, luftkonditioneringsapparater och andra apparater.\n- Beröringsfri kontroll, som låter dig utföra åtgärder på din telefon utan att röra skärmen genom att använda gester eller röstkommandon.\n- Automatisering, som låter dig ställa in rutiner och utlösare för din telefon att utföra vissa uppgifter automatiskt.\n- Trådlösa appnedladdningar, som låter dig installera appar från din dator eller webbläsare utan att ansluta din telefon med en kabel.\n- Lagrings- och batteribyte, som ger dig möjlighet att utöka telefonens minne eller byta ut batteriet enkelt.\n- Anpassad hemskärm, som låter dig anpassa telefonens utseende med widgets, bakgrundsbilder, ikoner och launchers.\n\nAndroid Studio är det bästa verktyget för att utveckla Android-appar. Det erbjuder många funktioner och fördelar för utvecklare som:\n\n- Kodredigerare med syntaxmarkering, kodkomplettering, refaktorering, felsökning, testning och linting-verktyg.\n- Layoutredigerare med dra-och-släpp-gränssnitt för att designa användargränssnitt.\n- Emulator med snabb start och stöd för ögonblicksbilder för att testa appar på olika enheter och konfigurationer.\n- Firebase-integration med tjänster som autentisering, databas, lagring, analys, kraschrapportering etc. \n- Gradle-baserat byggsystem med beroendehantering,\nanpassning,\noptimering,\nsignering,\ndistributionsalternativ etc. \n\nMed Android Studio,\nkan du skapa fantastiska appar för Android-enheter med Kotlin,\nett modernt programmeringsspråk som är koncist,\nsäkert,\nuttrycksfullt,\noch interoperabelt med Java.</string>
+    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">En kronometer är en specialiserad widget i Android-ramverket som tillhandahåller en timer-liknande funktionalitet för att visa förfluten tid. Den kan konfigureras för att räkna upp eller ner, och används vanligtvis i applikationer som kräver tidtagning, såsom stoppur eller nedräkningstimer-appar. Chronometer-klassen är härledd från TextView-klassen, vilket innebär att den ärver alla egenskaper och metoder från en TextView. Detta gör det möjligt för utvecklare att enkelt anpassa utseendet på kronometern, inklusive dess textstorlek, färg och teckensnitt.</string>
     <string name="snack_this_is_a_snackbar">Detta är en snackbar.</string>
     <string name="snack_bar_clicked">klickad</string>
     <string name="snack_copied_to_clipboard">Kopierad till urklipp. 📋</string>
     <string name="snack_unable_to_open_google_play_store">Kunde inte öppna Google Play Butik.</string>
-    <string name="snack_rating">Tack för att du betygsatte oss med %1$.1f stjärnor. ❤️</string>
+    <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Bildknapp klickad.</string>
     <string name="toast_this_is_a_toast">Detta är en toast.</string>
     <string name="tooltip_show_code">Visa kodsyntax</string>
     <string name="tooltip_show_java_code_snippet">Visa Java -kodavsnitt</string>
     <string name="tooltip_open_me">Öppna mig 🌐</string>
-    <string name="hint_type">Skriv här…</string>
-    <string name="hint_password">Ange ditt lösenord…</string>
-
+    <string name="hint_type">Type here</string>
+    <string name="hint_password">Enter your password</string>
     <string name="app_usage_notifications">Notiser om appanvändning</string>
     <string name="update_notifications">Uppdateringsnotiser</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Bläddra i <i><u>Användarvillkoren</u></i> och <i><u>Integritetspolicyn</u></i></string>
-
+    <string name="browse_terms_of_service_and_privacy_policy">Bläddra i <i>
+            <u>Användarvillkoren</u>
+        </i> och <i>
+            <u>Integritetspolicyn</u>
+        </i>
+    </string>
     <string name="update_downloaded">Uppdatering nedladdad</string>
     <string name="view_in_google_play">Visa i Google Play Butik</string>
     <string name="version_info">Versionsinformation</string>

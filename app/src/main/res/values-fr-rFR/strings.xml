@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_short_description">Apprenez à créer des applications Java simples dans Android Studio. 📱</string>
     <string name="notification_update_title">Nouvelle mise à jour disponible .</string>
     <string name="summary_notification_update">Une nouvelle version de l\'application est disponible. Cliquez pour mettre à jour .</string>
     <string name="notification_last_time_used_title">Cela fait un moment .</string>
-    <string name="summary_notification_last_time_used">Vous nous avez manqué . Apprenons quelque chose de nouveau sur Android .</string>
-
+    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
     <string name="welcome">Bienvenue</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">Lisez et acceptez nos Conditions d\'utilisation et notre Politique de confidentialité pour continuer</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Accepter</string>
-
     <string name="home">Accueil</string>
     <string name="announcement_title">Une nouvelle application est là .</string>
     <string name="announcement_subtitle">Découvrez la dernière application Android Studio Tutorials. Apprenez Jetpack Compose, Material 3, et plus encore.</string>
@@ -21,10 +19,8 @@
     <string name="play_store">Play Store</string>
     <string name="search_tutorials_hint">Rechercher des tutoriels</string>
     <string name="search_tutorials_content_description">Rechercher des tutoriels</string>
-
     <string name="android_studio">Android Studio</string>
-
-    <string name="android_start">Démarrer un nouveau projet…</string>
+    <string name="android_start">Start a new project</string>
     <string name="android_start_project">Démarrer un nouveau projet</string>
     <string name="step1">Étape 1</string>
     <string name="summary_first_step">La première étape pour créer un nouveau projet dans Android Studio est de cliquer sur le bouton <b>Nouveau projet</b> comme indiqué sur l\'image et de continuer à l\'étape suivante.</string>
@@ -32,9 +28,7 @@
     <string name="summary_second_step">La deuxième étape consiste à sélectionner le type d\'activité qui convient à votre application. Vous pouvez choisir parmi des préréglages qui peuvent simplifier votre travail. Sélectionnez l\'un d\'eux et cliquez sur le bouton <b>Suivant</b>.</string>
     <string name="step3">Étape 3</string>
     <string name="summary_third_step">La troisième et dernière étape consiste à configurer les paramètres de votre application, tels que le nom de l\'application, le <b>nom du package</b>, le <b>langage de programmation</b> préféré et le <b>SDK minimum</b>. Vous pouvez en apprendre davantage à leur sujet sur <a href="https://developer.android.com/">Android Developers</a>.</string>
-
     <string name="basics">Principes de base</string>
-
     <string name="shortcuts">Raccourcis Android Studio</string>
     <string name="shortcuts_title">Raccourcis</string>
     <string name="description">Description</string>
@@ -58,7 +52,7 @@
     <string name="extract_field">Extraire le champ</string>
     <string name="extract_variable">Extraire la variable</string>
     <string name="extract_constant">Extraire la constante</string>
-    <string name="build_and_run">Compiler &amp; exécuter</string>
+    <string name="build_and_run">Build and run</string>
     <string name="build">Compiler</string>
     <string name="apply_changes">Appliquer les modifications (avec Instant Run)</string>
     <string name="debugging">Débogage</string>
@@ -72,7 +66,7 @@
     <string name="resume_program">Reprendre le programme</string>
     <string name="toggle_breakpoint">Basculer le point d\'arrêt</string>
     <string name="view_breakpoints">Afficher les points d\'arrêt</string>
-    <string name="navigation_and_searching">Navigation &amp; recherche</string>
+    <string name="navigation_and_searching">Navigation and searching</string>
     <string name="press_shift_twice">Appuyez deux fois sur Maj</string>
     <string name="search_everything">Tout rechercher (y compris code et menus)</string>
     <string name="find">Rechercher</string>
@@ -99,63 +93,48 @@
     <string name="open_v_hierarchy">Ouvrir la hiérarchie des méthodes</string>
     <string name="open_call_hierarchy">Ouvrir la hiérarchie des appels</string>
     <string name="writing_code">Écriture de code</string>
-    <string name="generate_code">Générer du code (getters, setters, etc.)</string>
+    <string name="generate_code">Generate code (getters, setters, and more)</string>
     <string name="override_methods">Redéfinir les méthodes</string>
     <string name="implement_methods">Implémenter les méthodes</string>
-    <string name="surround">Entourer de (if…else / try…catch / etc.)</string>
+    <string name="surround">Surround with (if/else, try/catch, and more)</string>
     <string name="delete_line">Supprimer la ligne au curseur</string>
     <string name="collapse_and_expand_code_block">Réduire/développer le bloc de code actuel</string>
     <string name="collapse_and_expand_all_code_block">Réduire/développer tous les blocs de code</string>
     <string name="duplicate_current_line">Dupliquer la ligne ou la sélection actuelle</string>
     <string name="basic_code_completion">Complétion de code de base</string>
     <string name="smart_code_completion">Complétion de code intelligente (filtre la liste des méthodes et variables par type attendu)</string>
-    <string name="version_control">Contrôle de version &amp; historique local</string>
+    <string name="version_control">Version control and local history</string>
     <string name="commit_project">Valider le projet dans VCS</string>
     <string name="update_project">Mettre à jour le projet depuis VCS</string>
     <string name="view_recent_changes">Voir les modifications récentes</string>
     <string name="open_vcs_popup">Ouvrir le pop-up VCS</string>
     <string name="more_about_shortcuts">En savoir plus sur les raccourcis</string>
-
     <string name="history_of_android">Histoire d\'Android</string>
     <string name="history">Histoire</string>
     <string name="features">Fonctionnalités</string>
-
     <string name="android_sdk">SDK Android</string>
     <string name="android_versions">Versions d\'Android</string>
-
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Instructions de configuration</string>
     <string name="use_view_binding_in_activities">Utiliser View Binding dans les activités</string>
     <string name="use_view_binding_in_fragments">Utiliser View Binding dans les fragments</string>
     <string name="more_about_view_binding">En savoir plus sur View Binding</string>
-
     <string name="permission_dialog_example">Exemple de dialogue de permission</string>
     <string name="more_about_permissions">En savoir plus sur les permissions</string>
-
     <string name="per_app_language_preferences">Préférences linguistiques par application</string>
-
     <string name="predictive_back_gesture">Geste de retour prédictif</string>
-
-    <string name="layouts">Mises en page &amp; Vues</string>
-
+    <string name="layouts">Layouts and views</string>
     <string name="linear_layout">LinearLayout</string>
-
     <string name="vertical">Vertical</string>
     <string name="horizontal">Horizontal</string>
     <string name="layout_preview">Aperçu de la mise en page</string>
     <string name="no_java_code_needed">Aucun code Java requis pour cette activité.</string>
-
     <string name="relative_layout">RelativeLayout</string>
-
     <string name="table_layout">TableLayout</string>
-
     <string name="grid_view">GridView</string>
-
     <string name="image_view">ImageView</string>
-
     <string name="web_view">WebView</string>
-
-    <string name="buttons_and_switches">Boutons &amp; Interrupteurs</string>
+    <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Boutons</string>
     <string name="button">Bouton</string>
     <string name="button_normal">Bouton 1 (normal)</string>
@@ -177,22 +156,19 @@
     <string name="floating_button_surface_icon">Bouton flottant 3 (surface)</string>
     <string name="floating_button_tertiary_icon">Bouton flottant 4 (tertiaire)</string>
     <string name="same_code_buttons">Utilisez ce code Java pour tous les types de boutons.</string>
-
     <string name="radio_buttons">Boutons radio</string>
     <string name="choose_your_option">Choisissez votre option</string>
     <string name="first_radio_option">Option 1</string>
     <string name="second_radio_option">Option 2</string>
     <string name="display_option">Afficher l\'option</string>
-
     <string name="image_buttons">Boutons d\'image</string>
-
     <string name="switches">Interrupteurs</string>
     <string name="switch_me">Activez-moi</string>
     <string name="material_switch_preference">Préférence d\'interrupteur Material</string>
     <string name="material_switch">Interrupteur Material</string>
     <string name="switch_material">Interrupteur Material</string>
     <string name="toggle_button">Bouton à bascule</string>
-    <string name="clocks_and_timers">Horloges &amp; Minuteries</string>
+    <string name="clocks_and_timers">Clocks and timers</string>
     <string name="clocks">Horloges</string>
     <string name="clock_analog">Horloge analogique</string>
     <string name="clock_text">Horloge textuelle</string>
@@ -223,7 +199,7 @@
     <string name="tooltips">Info-bulles</string>
     <string name="reviews">Avis</string>
     <string name="rating_bar">Barre d\'évaluation</string>
-    <string name="rate_us">Évaluez notre application .</string>
+    <string name="rate_us">Rate the app.</string>
     <string name="stars">%1$.1f étoiles .</string>
     <string name="in_app_review">Avis dans l\'application</string>
     <string name="progress_bars">Barres de progression</string>
@@ -342,10 +318,10 @@
     <string name="summary_preference_android_studio_image_buttons">Affiche un bouton avec une image (au lieu de texte) qui peut être pressé ou cliqué par l\'utilisateur. Par défaut, un ImageButton ressemble à un bouton normal, avec l\'arrière-plan de bouton standard qui change de couleur pendant différents états du bouton. L\'image sur la surface du bouton est définie soit par l\'attribut android:src dans l\'élément XML ImageButton, soit par la méthode ImageView.setImageResource(int).</string>
     <string name="summary_preference_android_studio_switches">Explorez les capacités des interrupteurs dans Android Studio et apprenez à les implémenter efficacement dans vos applications. Cette leçon fournit un guide complet sur l\'utilisation des interrupteurs, y compris les meilleures pratiques pour concevoir des interfaces visuellement attrayantes et conviviales.</string>
     <string name="summary_preference_android_studio_clocks">Un moyen simple d\'ajouter une horloge numérique, analogique ou textuelle dans votre application Android.</string>
-    <string name="summary_preference_android_studio_time_picker">Android TimePicker est un contrôle d\'interface utilisateur pour sélectionner l\'heure au format 24 heures ou AM/PM. Il est utilisé pour s\'assurer que les utilisateurs choisissent l\'heure valide pour la journée dans notre application. L\'interface du sélecteur d\'heure existe essentiellement en deux modes : l\'un sous forme de layout XML et l\'autre sous forme de dialogue.</string>
+    <string name="summary_preference_android_studio_time_picker">Android TimePicker is a user interface control for selecting the time in either 24-hour format or AM/PM mode. It is used to ensure that users pick the valid time for the day in the app. The time picker interface exists basically in two modes one is under XML layout and another is a dialog.</string>
     <string name="summary_preference_android_studio_date_picker">Android fournit des contrôles permettant à l\'utilisateur de choisir une heure ou une date sous forme de boîtes de dialogue prêtes à l\'emploi. Chaque sélecteur fournit des contrôles pour sélectionner chaque partie de l\'heure (heure, minute, AM/PM) ou de la date (mois, jour, année). L\'utilisation de ces sélecteurs permet de s\'assurer que vos utilisateurs peuvent choisir une heure ou une date valide, correctement formatée et ajustée aux paramètres régionaux de l\'utilisateur.</string>
     <string name="summary_preference_android_studio_chronometer">Explorez les capacités du widget Chronomètre dans Android, un outil puissant pour afficher le temps écoulé. Apprenez à configurer des écouteurs de clics pour les boutons afin de contrôler le chronomètre et découvrez les différentes méthodes disponibles pour personnaliser son comportement.</string>
-    <string name="summary_preference_android_studio_text_box">Un élément d\'interface utilisateur pour saisir et modifier du texte. Lorsque vous définissez un widget de saisie de texte, vous devez spécifier l\'attribut R.styleable.TextView_inputType…</string>
+    <string name="summary_preference_android_studio_text_box">A user interface element for entering and modifying text. When you define an edit text widget, you must specify the R.styleable.TextView_inputType attribute to ensure the correct keyboard and input behaviors.</string>
     <string name="summary_preference_android_studio_password_text_box">Un simple champ de texte avec la possibilité de masquer le texte. Est utilisé dans les écrans de connexion de la plupart des applications pour garder les mots de passe en sécurité.</string>
     <string name="summary_preference_android_studio_alert_dialog">Une boîte de dialogue est une petite fenêtre qui invite l\'utilisateur à prendre une décision ou à saisir des informations supplémentaires. Une boîte de dialogue ne remplit pas l\'écran et est normalement utilisée pour les événements modaux qui demandent aux utilisateurs d\'effectuer une action avant de pouvoir continuer.</string>
     <string name="summary_preference_android_studio_snack_bar">Les Snackbars informent les utilisateurs d\'un processus qu\'une application a effectué ou effectuera. Elles apparaissent temporairement, vers le bas de l\'écran. Elles ne devraient pas interrompre l\'expérience utilisateur, et elles ne nécessitent pas d\'intervention de l\'utilisateur pour disparaître.</string>
@@ -371,28 +347,31 @@
     <string name="summary_image_buttons">Les boutons d\'image sont des boutons qui contiennent une image au lieu de texte. Ils peuvent être utilisés dans Android pour fournir une interface utilisateur plus attrayante visuellement et interactive. Les boutons d\'image peuvent être utilisés pour déclencher des actions, naviguer vers différents écrans ou afficher des informations supplémentaires. Ils sont souvent utilisés en combinaison avec des étiquettes de texte pour fournir une communication claire à l\'utilisateur sur l\'objectif du bouton.</string>
     <string name="summary_image_view">AndroidX AppCompatImageView est une sous-classe d\'ImageView conçue pour prendre en charge diverses fonctionnalités de l\'ActionBar et de Material Design. Elle fait partie de la bibliothèque AndroidX, qui est un ensemble de bibliothèques de support offrant des versions rétrocompatibles des API du framework Android ainsi que des fonctionnalités disponibles uniquement via les API de la bibliothèque.\n\nAppCompatImageView est destiné à être utilisé comme remplacement direct d\'ImageView, permettant aux développeurs d\'utiliser le même code et les mêmes éléments d\'interface utilisateur sur différentes versions d\'Android. Il inclut la prise en charge de diverses fonctionnalités telles que la coloration, le chargement de drawables vectoriels et la gestion de la mise à l\'échelle des images.\n\nAppCompatImageView inclut également la prise en charge des fonctionnalités de Material Design telles que l\'élévation, qui permet à la vue d\'image de projeter une ombre et de paraître surélevée par rapport à la surface de la mise en page. Il inclut également la prise en charge de l\'effet d\'ondulation de Material Design, qui est un effet visuel appliqué lorsque la vue d\'image est touchée.\n\nEn résumé, AndroidX AppCompatImageView est une sous-classe polyvalente et riche en fonctionnalités d\'ImageView, conçue pour prendre en charge un large éventail de fonctionnalités et d\'éléments de design dans les applications Android.</string>
     <string name="summary_linear_layout_compat">LinearLayoutCompat est une classe de la bibliothèque de support Android appCompat v7. Elle a été ajoutée pour prendre en charge des méthodes qui ont été ajoutées dans des niveaux d\'API plus récents sur les anciens (comme les séparateurs). Si vous comparez les méthodes de LinearLayout et LinearLayoutCompat, vous pouvez voir que la mise en page Compat possède toutes les méthodes de LinearLayout sans aucune limitation de niveau d\'API. Par exemple, la méthode setShowDividers a été introduite au niveau d\'API 11. Ainsi, dans ce cas, setShowDividers (et ses paramètres) doit être invoqué en utilisant LinearLayoutCompat au lieu de LinearLayout si vous ciblez une plateforme avec un niveau d\'API inférieur à 11.</string>
-    <string name="summary_donations">Peu importe le montant de votre don, vous nous aiderez à maintenir notre application en fonctionnement et à améliorer nos fonctionnalités. Nous apprécions votre générosité et votre gentillesse .</string>
+    <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">Apprenez à utiliser les barres de progression dans Android avec cette leçon interactive. Cette leçon comprend deux sections : une pour une barre de progression horizontale et une pour une barre de progression circulaire. Dans chaque section, vous pouvez voir comment la barre de progression se met à jour au fur et à mesure qu\'un téléchargement progresse. Vous pouvez également afficher le code de la leçon en cliquant sur le bouton d\'action flottant en bas de l\'écran.</string>
     <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android est un système d\'exploitation mobile développé par Google. Il a été publié pour la première fois en version bêta le 5 novembre 2007 et la première version commerciale, Android 1.0, a été lancée le 23 septembre 2008. Android est basé sur une version modifiée du noyau Linux et d\'autres logiciels open source.\n\nAndroid Studio est l\'environnement de développement intégré (IDE) officiel pour le développement d\'applications Android. Il a été annoncé par Google lors de sa conférence I/O le 15 mai 2013 et mis à la disposition du public le 8 décembre 2014. Android Studio est basé sur IntelliJ IDEA, un IDE Java populaire.\n\nKotlin est un langage de programmation multiplateforme qui peut s\'exécuter sur la machine virtuelle Java (JVM), Android, les navigateurs et les plateformes natives. Il a été créé par JetBrains, une société de logiciels basée à Prague. Kotlin a été annoncé pour la première fois en juillet 2011 et publié en tant que projet open source en février 2012.\n\nGoogle a annoncé son soutien à Kotlin en tant que langage officiel pour le développement d\'applications Android lors de sa conférence I/O le 17 mai 2017. Depuis lors, Kotlin est devenu l\'un des langages les plus populaires pour les développeurs Android. Selon les données de Google d\'octobre 2020, plus de 70 %% des 1000 meilleures applications sur Google Play utilisent Kotlin.</string>
-    <string name="summary_android_features">Android n\'est pas seulement un système d\'exploitation, mais aussi une plateforme qui offre une gamme de fonctionnalités et de capacités aux utilisateurs et aux développeurs. Certaines des fonctionnalités d\'Android incluent :\n\n- La communication en champ proche (NFC), qui vous permet de partager des données, d\'effectuer des paiements et de vous connecter à d\'autres appareils sans fil.\n- Les claviers alternatifs, qui vous permettent de personnaliser votre méthode de saisie avec différents agencements, langues et thèmes.\n- La transmission IR, qui vous permet d\'utiliser votre téléphone comme télécommande pour les téléviseurs, les climatiseurs et d\'autres appareils.\n- Le contrôle sans contact, qui vous permet d\'effectuer des actions sur votre téléphone sans toucher l\'écran en utilisant des gestes ou des commandes vocales.\n- L\'automatisation, qui vous permet de configurer des routines et des déclencheurs pour que votre téléphone effectue certaines tâches automatiquement.\n- Les téléchargements d\'applications sans fil, qui vous permettent d\'installer des applications depuis votre ordinateur ou votre navigateur Web sans connecter votre téléphone avec un câble.\n- Le remplacement du stockage et de la batterie, qui vous donne la possibilité d\'étendre la mémoire de votre téléphone ou de remplacer facilement sa batterie.\n- L\'écran d\'accueil personnalisé, qui vous permet de personnaliser l\'apparence de votre téléphone avec des widgets, des fonds d\'écran, des icônes et des lanceurs.\n\nAndroid Studio est le meilleur outil pour développer des applications Android. Il offre de nombreuses fonctionnalités et avantages aux développeurs tels que :\n\n- Éditeur de code avec coloration syntaxique, complétion de code, refactorisation, débogage, tests et outils de linting.\n- Éditeur de mise en page avec interface glisser-déposer pour concevoir des interfaces utilisateur.\n- Émulateur avec démarrage rapide et prise en charge des instantanés pour tester les applications sur différents appareils et configurations.\n- Intégration Firebase avec des services tels que l\'authentification, la base de données, le stockage, l\'analyse, les rapports de plantage, etc.\n- Système de build basé sur Gradle avec gestion des dépendances,\npersonnalisation,\noptimisation,\nsignature,\noptions de distribution, etc.\n\nAvec Android Studio,\nvous pouvez créer des applications étonnantes pour les appareils Android en utilisant Kotlin,\nun langage de programmation moderne qui est concis,\nsûr,\nexpressif,\net interopérable avec Java.</string>
+    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">Un Chronomètre est un widget spécialisé du framework Android qui fournit une fonctionnalité de type minuterie pour afficher le temps écoulé. Il peut être configuré pour compter en avant ou en arrière, et est couramment utilisé dans les applications qui nécessitent un chronométrage, telles que les applications de chronomètre ou de compte à rebours. La classe Chronomètre est dérivée de la classe TextView, ce qui signifie qu\'elle hérite de toutes les propriétés et méthodes d\'un TextView. Cela permet aux développeurs de personnaliser facilement l\'apparence du Chronomètre, y compris la taille de son texte, sa couleur et sa police.</string>
     <string name="snack_this_is_a_snackbar">Ceci est une Snackbar .</string>
     <string name="snack_bar_clicked">cliqué</string>
     <string name="snack_copied_to_clipboard">Copié dans le presse-papiers . 📋</string>
     <string name="snack_unable_to_open_google_play_store">Impossible d\'ouvrir le Google Play Store.</string>
-    <string name="snack_rating">Merci de nous avoir évalués avec %1$.1f étoiles . ❤️</string>
+    <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Bouton d\'image cliqué .</string>
     <string name="toast_this_is_a_toast">Ceci est un Toast .</string>
     <string name="tooltip_show_code">Afficher la syntaxe du code</string>
     <string name="tooltip_show_java_code_snippet">Afficher l\'extrait de code java</string>
     <string name="tooltip_open_me">Ouvrez-moi 🌐</string>
-    <string name="hint_type">Saisissez ici…</string>
-    <string name="hint_password">Entrez votre mot de passe…</string>
-
+    <string name="hint_type">Type here</string>
+    <string name="hint_password">Enter your password</string>
     <string name="app_usage_notifications">Notifications d\'utilisation de l\'application</string>
     <string name="update_notifications">Notifications de mise à jour</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Consultez les <i><u>Conditions d\'utilisation</u></i> et la <i><u>Politique de confidentialité</u></i></string>
-
+    <string name="browse_terms_of_service_and_privacy_policy">Consultez les <i>
+            <u>Conditions d\'utilisation</u>
+        </i> et la <i>
+            <u>Politique de confidentialité</u>
+        </i>
+    </string>
     <string name="update_downloaded">Mise à jour téléchargée</string>
     <string name="view_in_google_play">Voir dans le Google Play Store</string>
     <string name="version_info">Informations sur la version</string>
@@ -407,7 +386,7 @@
     <string name="firebase_performance">Performance de la base d\'incendie</string>
     <string name="special">Spécial</string>
     <string name="wake_lock">Gardez l\'appareil éveillé [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Permet à l\'application d\'empêcher l\'appareil d\'aller dormir (p. ex., amortissement de l\'écran ou sommeil du processeur) pendant les opérations critiques pour s\'assurer qu\'il se termine sans interruption. Ceci est utilisé avec parcimonie pour conserver la batterie.</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="summary_preference_settings_firebase_crashlytics">Recueillir les rapports d\'accident pour aider à résoudre les problèmes.</string>
     <string name="summary_preference_settings_firebase_analytics">Recueille les données d\'utilisation pour améliorer \'application.</string>
     <string name="summary_preference_settings_firebase_performance">Mesure la performance de l\'application pour l\'optimisation.</string>

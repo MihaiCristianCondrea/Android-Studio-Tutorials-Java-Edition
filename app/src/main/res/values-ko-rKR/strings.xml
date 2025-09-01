@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_short_description">Android Studio에서 간단한 Java 앱을 만드는 방법을 배워보세요. 📱</string>
     <string name="notification_update_title">새로운 업데이트가 있습니다.</string>
     <string name="summary_notification_update">새로운 버전의 앱이 출시되었습니다. 클릭하여 업데이트하세요.</string>
     <string name="notification_last_time_used_title">오랜만이에요.</string>
-    <string name="summary_notification_last_time_used">보고 싶었어요. Android에 대해 새로운 것을 배워볼까요?</string>
-
+    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
     <string name="welcome">환영합니다</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">계속하시려면 서비스 약관 및 개인정보 처리방침을 읽고 동의해주세요.</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">동의</string>
-
     <string name="home">홈</string>
     <string name="announcement_title">새로운 앱이 출시되었습니다.</string>
     <string name="announcement_subtitle">최신 Android Studio 튜토리얼 앱을 확인해보세요. Jetpack Compose, Material 3 등을 배워보세요.</string>
@@ -21,10 +19,8 @@
     <string name="play_store">Play 스토어</string>
     <string name="search_tutorials_hint">튜토리얼 검색</string>
     <string name="search_tutorials_content_description">튜토리얼 검색</string>
-
     <string name="android_studio">Android Studio</string>
-
-    <string name="android_start">새 프로젝트 시작…</string>
+    <string name="android_start">Start a new project</string>
     <string name="android_start_project">새 프로젝트 시작</string>
     <string name="step1">1단계</string>
     <string name="summary_first_step">Android Studio에서 새 프로젝트를 만드는 첫 번째 단계는 이미지에 표시된 것처럼 <b>새 프로젝트</b> 버튼을 클릭하고 다음 단계로 진행하는 것입니다.</string>
@@ -32,9 +28,7 @@
     <string name="summary_second_step">두 번째 단계는 앱에 적합한 액티비티 유형을 선택하는 것입니다. 작업을 단순화할 수 있는 몇 가지 사전 설정 중에서 선택할 수 있습니다. 그중 하나를 선택하고 <b>다음</b> 버튼을 클릭하세요.</string>
     <string name="step3">3단계</string>
     <string name="summary_third_step">세 번째이자 마지막 단계는 앱 이름, <b>패키지 이름</b>, 선호하는 <b>프로그래밍 언어</b> 및 <b>최소 SDK</b>와 같은 앱 설정을 구성하는 것입니다. <a href="https://developer.android.com/">Android 개발자 사이트</a>에서 더 자세히 알아볼 수 있습니다.</string>
-
     <string name="basics">기초</string>
-
     <string name="shortcuts">Android Studio 단축키</string>
     <string name="shortcuts_title">단축키</string>
     <string name="description">설명</string>
@@ -58,7 +52,7 @@
     <string name="extract_field">필드 추출</string>
     <string name="extract_variable">변수 추출</string>
     <string name="extract_constant">상수 추출</string>
-    <string name="build_and_run">빌드 및 실행</string>
+    <string name="build_and_run">Build and run</string>
     <string name="build">빌드</string>
     <string name="apply_changes">변경사항 적용 (Instant Run 사용)</string>
     <string name="debugging">디버깅</string>
@@ -72,7 +66,7 @@
     <string name="resume_program">프로그램 재개</string>
     <string name="toggle_breakpoint">중단점 설정/해제</string>
     <string name="view_breakpoints">중단점 보기</string>
-    <string name="navigation_and_searching">탐색 및 검색</string>
+    <string name="navigation_and_searching">Navigation and searching</string>
     <string name="press_shift_twice">Shift 키 두 번 누르기</string>
     <string name="search_everything">전체 검색 (코드 및 메뉴 포함)</string>
     <string name="find">찾기</string>
@@ -99,63 +93,48 @@
     <string name="open_v_hierarchy">메서드 계층 구조 열기</string>
     <string name="open_call_hierarchy">호출 계층 구조 열기</string>
     <string name="writing_code">코드 작성</string>
-    <string name="generate_code">코드 생성 (getter, setter 등)</string>
+    <string name="generate_code">Generate code (getters, setters, and more)</string>
     <string name="override_methods">메서드 오버라이드</string>
     <string name="implement_methods">메서드 구현</string>
-    <string name="surround">코드로 감싸기 (if…else / try…catch 등)</string>
+    <string name="surround">Surround with (if/else, try/catch, and more)</string>
     <string name="delete_line">캐럿 위치의 줄 삭제</string>
     <string name="collapse_and_expand_code_block">현재 코드 블록 접기/펴기</string>
     <string name="collapse_and_expand_all_code_block">모든 코드 블록 접기/펴기</string>
     <string name="duplicate_current_line">현재 줄 또는 선택 영역 복제</string>
     <string name="basic_code_completion">기본 코드 자동 완성</string>
     <string name="smart_code_completion">스마트 코드 자동 완성 (예상 타입에 따라 메서드 및 변수 목록 필터링)</string>
-    <string name="version_control">버전 관리 및 로컬 히스토리</string>
+    <string name="version_control">Version control and local history</string>
     <string name="commit_project">프로젝트를 VCS에 커밋</string>
     <string name="update_project">VCS에서 프로젝트 업데이트</string>
     <string name="view_recent_changes">최근 변경사항 보기</string>
     <string name="open_vcs_popup">VCS 팝업 열기</string>
     <string name="more_about_shortcuts">단축키에 대해 더 알아보기</string>
-
     <string name="history_of_android">Android의 역사</string>
     <string name="history">역사</string>
     <string name="features">기능</string>
-
     <string name="android_sdk">Android SDK</string>
     <string name="android_versions">Android 버전</string>
-
     <string name="view_binding">뷰 바인딩 (View Binding)</string>
     <string name="setup_instructions">설정 지침</string>
     <string name="use_view_binding_in_activities">액티비티에서 뷰 바인딩 사용</string>
     <string name="use_view_binding_in_fragments">프래그먼트에서 뷰 바인딩 사용</string>
     <string name="more_about_view_binding">뷰 바인딩에 대해 더 알아보기</string>
-
     <string name="permission_dialog_example">권한 대화상자 예제</string>
     <string name="more_about_permissions">권한에 대해 더 알아보기</string>
-
     <string name="per_app_language_preferences">앱별 언어 설정</string>
-
     <string name="predictive_back_gesture">예측 뒤로가기 제스처</string>
-
-    <string name="layouts">레이아웃 및 뷰</string>
-
+    <string name="layouts">Layouts and views</string>
     <string name="linear_layout">리니어 레이아웃 (Linear Layout)</string>
-
     <string name="vertical">수직</string>
     <string name="horizontal">수평</string>
     <string name="layout_preview">레이아웃 미리보기</string>
     <string name="no_java_code_needed">이 액티비티에는 Java 코드가 필요하지 않습니다.</string>
-
     <string name="relative_layout">렐러티브 레이아웃 (Relative Layout)</string>
-
     <string name="table_layout">테이블 레이아웃 (Table Layout)</string>
-
     <string name="grid_view">그리드 뷰 (Grid View)</string>
-
     <string name="image_view">이미지 뷰 (Image View)</string>
-
     <string name="web_view">웹 뷰 (Web View)</string>
-
-    <string name="buttons_and_switches">버튼 및 스위치</string>
+    <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">버튼</string>
     <string name="button">버튼</string>
     <string name="button_normal">버튼 1 (일반)</string>
@@ -177,22 +156,19 @@
     <string name="floating_button_surface_icon">플로팅 버튼 3 (표면)</string>
     <string name="floating_button_tertiary_icon">플로팅 버튼 4 (3차)</string>
     <string name="same_code_buttons">모든 종류의 버튼에 이 Java 코드를 사용하세요.</string>
-
     <string name="radio_buttons">라디오 버튼</string>
     <string name="choose_your_option">옵션을 선택하세요</string>
     <string name="first_radio_option">옵션 1</string>
     <string name="second_radio_option">옵션 2</string>
     <string name="display_option">옵션 표시</string>
-
     <string name="image_buttons">이미지 버튼</string>
-
     <string name="switches">스위치</string>
     <string name="switch_me">스위치 켜기</string>
     <string name="material_switch_preference">머티리얼 스위치 환경설정</string>
     <string name="material_switch">머티리얼 스위치</string>
     <string name="switch_material">스위치 머티리얼</string>
     <string name="toggle_button">토글 버튼</string>
-    <string name="clocks_and_timers">시계 및 타이머</string>
+    <string name="clocks_and_timers">Clocks and timers</string>
     <string name="clocks">시계</string>
     <string name="clock_analog">아날로그 시계</string>
     <string name="clock_text">텍스트 시계</string>
@@ -223,7 +199,7 @@
     <string name="tooltips">툴팁</string>
     <string name="reviews">리뷰</string>
     <string name="rating_bar">별점 표시줄</string>
-    <string name="rate_us">앱을 평가해주세요.</string>
+    <string name="rate_us">Rate the app.</string>
     <string name="stars">별점 %1$.1f점.</string>
     <string name="in_app_review">인앱 리뷰</string>
     <string name="progress_bars">진행률 표시줄</string>
@@ -268,7 +244,7 @@
     <string name="ad_id">광고 ID [AD_ID]</string>
     <string name="internet">인터넷 [INTERNET]</string>
     <string name="wake_lock">기기 절전 모드 방지 [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">중요한 작업 중에 중단 없이 완료되도록 앱이 기기가 절전 모드로 전환되는 것을(예: 화면 어두워짐 또는 프로세서 절전) 방지하도록 허용합니다. 배터리 절약을 위해 드물게 사용됩니다.</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">알림 게시 [POST_NOTIFICATIONS]</string>
     <string name="runtime">런타임</string>
     <string name="access_network_state">네트워크 상태 액세스 [ACCESS_NETWORK_STATE]</string>
@@ -351,10 +327,10 @@
     <string name="summary_preference_android_studio_image_buttons">사용자가 누르거나 클릭할 수 있는 이미지(텍스트 대신)가 있는 버튼을 표시합니다. 기본적으로 ImageButton은 일반 버튼처럼 보이며, 다른 버튼 상태 동안 색상이 변경되는 표준 버튼 배경이 있습니다. 버튼 표면의 이미지는 ImageButton XML 요소의 android:src 속성이나 ImageView.setImageResource(int) 메서드로 정의됩니다.</string>
     <string name="summary_preference_android_studio_switches">Android Studio에서 스위치의 기능을 탐색하고 애플리케이션에서 효과적으로 구현하는 방법을 배워보세요. 이 강의는 시각적으로 매력적이고 사용자 친화적인 인터페이스를 디자인하기 위한 모범 사례를 포함하여 스위치 사용에 대한 포괄적인 가이드를 제공합니다.</string>
     <string name="summary_preference_android_studio_clocks">Android 앱에 디지털, 아날로그 또는 텍스트 시계를 추가하는 간단한 방법입니다.</string>
-    <string name="summary_preference_android_studio_time_picker">Android TimePicker는 24시간 형식 또는 AM/PM 모드로 시간을 선택하기 위한 사용자 인터페이스 컨트롤입니다. 사용자가 애플리케이션에서 하루 중 유효한 시간을 선택하도록 하는 데 사용됩니다. 시간 선택기 인터페이스는 기본적으로 두 가지 모드로 존재하며, 하나는 XML 레이아웃 아래에 있고 다른 하나는 대화상자입니다.</string>
+    <string name="summary_preference_android_studio_time_picker">Android TimePicker is a user interface control for selecting the time in either 24-hour format or AM/PM mode. It is used to ensure that users pick the valid time for the day in the app. The time picker interface exists basically in two modes one is under XML layout and another is a dialog.</string>
     <string name="summary_preference_android_studio_date_picker">Android는 사용자가 즉시 사용할 수 있는 대화상자로 시간이나 날짜를 선택할 수 있는 컨트롤을 제공합니다. 각 선택기는 시간(시, 분, AM/PM) 또는 날짜(월, 일, 연도)의 각 부분을 선택하기 위한 컨트롤을 제공합니다. 이러한 선택기를 사용하면 사용자가 유효하고 올바르게 서식이 지정되었으며 사용자의 로캘에 맞게 조정된 시간이나 날짜를 선택할 수 있도록 보장할 수 있습니다.</string>
     <string name="summary_preference_android_studio_chronometer">Android의 크로노미터 위젯의 기능을 탐색하세요. 경과 시간을 표시하는 강력한 도구입니다. 버튼에 대한 클릭 리스너를 설정하여 크로노미터를 제어하는 방법을 배우고 동작을 사용자 정의하는 데 사용할 수 있는 다양한 메서드를 발견하세요.</string>
-    <string name="summary_preference_android_studio_text_box">텍스트를 입력하고 수정하기 위한 사용자 인터페이스 요소입니다. 편집 텍스트 위젯을 정의할 때 R.styleable.TextView_inputType 속성을 지정해야 합니다…</string>
+    <string name="summary_preference_android_studio_text_box">A user interface element for entering and modifying text. When you define an edit text widget, you must specify the R.styleable.TextView_inputType attribute to ensure the correct keyboard and input behaviors.</string>
     <string name="summary_preference_android_studio_password_text_box">텍스트를 숨길 수 있는 기능이 있는 간단한 텍스트 상자입니다. 비밀번호를 안전하게 유지하기 위해 대부분의 앱의 로그인 화면에서 사용됩니다.</string>
     <string name="summary_preference_android_studio_alert_dialog">대화상자는 사용자에게 결정을 내리거나 추가 정보를 입력하도록 요청하는 작은 창입니다. 대화상자는 화면을 채우지 않으며 일반적으로 사용자가 계속 진행하기 전에 조치를 취해야 하는 모달 이벤트에 사용됩니다.</string>
     <string name="summary_preference_android_studio_snack_bar">스낵바는 앱이 수행했거나 수행할 프로세스를 사용자에게 알립니다. 화면 하단에 일시적으로 나타납니다. 사용자 경험을 방해해서는 안 되며, 사라지기 위해 사용자 입력이 필요하지 않습니다.</string>
@@ -380,28 +356,31 @@
     <string name="summary_image_buttons">이미지 버튼은 텍스트 대신 이미지를 포함하는 버튼입니다. Android에서 시각적으로 더 매력적이고 상호작용적인 사용자 인터페이스를 제공하는 데 사용할 수 있습니다. 이미지 버튼은 작업을 트리거하거나, 다른 화면으로 이동하거나, 추가 정보를 표시하는 데 사용할 수 있습니다. 종종 텍스트 레이블과 함께 사용하여 사용자에게 버튼의 목적을 명확하게 전달합니다.</string>
     <string name="summary_image_view">AndroidX AppCompatImageView는 ActionBar 및 Material Design의 다양한 기능을 지원하도록 설계된 ImageView의 하위 클래스입니다. 이는 Android 프레임워크 API의 이전 버전과 호환되는 버전을 제공하는 지원 라이브러리 세트인 AndroidX 라이브러리의 일부이며, 라이브러리 API를 통해서만 사용할 수 있는 기능도 제공합니다.\n\nAppCompatImageView는 ImageView의 드롭인 대체품으로 사용되도록 의도되었으며, 개발자가 Android의 여러 버전에서 동일한 코드와 UI 요소를 사용할 수 있도록 합니다. 틴팅, 벡터 드로어블 로드, 이미지 스케일링 처리 등 다양한 기능을 지원합니다.\n\nAppCompatImageView는 또한 이미지 뷰가 그림자를 드리우고 레이아웃 표면 위로 올라온 것처럼 보이게 하는 고도와 같은 Material Design 기능을 지원합니다. 또한 이미지 뷰를 터치했을 때 적용되는 시각 효과인 Material Design 리플 효과도 지원합니다.\n\n요약하자면, AndroidX AppCompatImageView는 Android 앱에서 다양한 기능과 디자인 요소를 지원하도록 설계된 ImageView의 다재다능하고 기능이 풍부한 하위 클래스입니다.</string>
     <string name="summary_linear_layout_compat">Linear Layout Compat은 Android 지원 라이브러리 appCompat v7의 클래스입니다. 이는 이전 버전에서 새로운 API 레벨에 추가된 메서드(예: 구분선)를 지원하기 위해 추가되었습니다. LinearLayout과 LinearLayoutCompat의 메서드를 비교하면 Compat 레이아웃이 API 레벨 제한 없이 Linear Layout의 모든 메서드를 가지고 있음을 알 수 있습니다. 예를 들어, setShowDividers 메서드는 API 레벨 11에서 도입되었습니다. 따라서 이 경우 API 레벨이 11 미만인 플랫폼을 대상으로 하는 경우 LinearLayout 대신 Linear Layout Compat을 사용하여 setShowDividers(및 해당 매개변수)를 호출해야 합니다.</string>
-    <string name="summary_donations">얼마를 기부하시든, 저희 앱을 계속 운영하고 기능을 개선하는 데 도움이 될 것입니다. 여러분의 관대함과 친절에 감사드립니다.</string>
+    <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">이 대화형 강의를 통해 Android에서 진행률 표시줄을 사용하는 방법을 배워보세요. 이 강의에는 수평 진행률 표시줄과 원형 진행률 표시줄의 두 섹션이 포함되어 있습니다. 각 섹션에서 다운로드가 진행됨에 따라 진행률 표시줄이 어떻게 업데이트되는지 볼 수 있습니다. 화면 하단의 플로팅 액션 버튼을 클릭하여 강의 코드를 볼 수도 있습니다.</string>
     <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android는 Google이 개발한 모바일 운영 체제입니다. 2007년 11월 5일에 베타 버전으로 처음 출시되었으며, 2008년 9월 23일에 첫 상용 버전인 Android 1.0이 출시되었습니다. Android는 수정된 버전의 Linux 커널 및 기타 오픈 소스 소프트웨어를 기반으로 합니다.\n\nAndroid Studio는 Android 앱 개발을 위한 공식 통합 개발 환경(IDE)입니다. 2013년 5월 15일 Google I/O 컨퍼런스에서 발표되었으며, 2014년 12월 8일에 공개되었습니다. Android Studio는 인기 있는 Java IDE인 IntelliJ IDEA를 기반으로 합니다.\n\nKotlin은 Java 가상 머신(JVM), Android, 브라우저 및 네이티브 플랫폼에서 실행할 수 있는 크로스 플랫폼 프로그래밍 언어입니다. 프라하에 본사를 둔 소프트웨어 회사인 JetBrains에서 만들었습니다. Kotlin은 2011년 7월에 처음 발표되었으며, 2012년 2월에 오픈 소스 프로젝트로 출시되었습니다.\n\nGoogle은 2017년 5월 17일 I/O 컨퍼런스에서 Android 앱 개발을 위한 공식 언어로 Kotlin을 지원한다고 발표했습니다. 그 이후로 Kotlin은 Android 개발자들에게 가장 인기 있는 언어 중 하나가 되었습니다. 2020년 10월 Google 데이터에 따르면 Google Play 상위 1000개 앱 중 70% 이상이 Kotlin을 사용합니다.</string>
-    <string name="summary_android_features">Android는 운영 체제일 뿐만 아니라 사용자와 개발자에게 다양한 기능과 역량을 제공하는 플랫폼이기도 합니다. Android의 일부 기능은 다음과 같습니다:\n\n- 근거리 무선 통신(NFC): 데이터를 공유하고, 결제하고, 다른 기기와 무선으로 연결할 수 있습니다.\n- 대체 키보드: 다른 레이아웃, 언어, 테마로 입력 방법을 사용자 정의할 수 있습니다.\n- IR 전송: 휴대폰을 TV, 에어컨 및 기타 가전제품의 리모컨으로 사용할 수 있습니다.\n- 비터치 제어: 제스처나 음성 명령을 사용하여 화면을 터치하지 않고 휴대폰에서 작업을 수행할 수 있습니다.\n- 자동화: 휴대폰이 특정 작업을 자동으로 수행하도록 루틴과 트리거를 설정할 수 있습니다.\n- 무선 앱 다운로드: 케이블로 휴대폰을 연결하지 않고도 컴퓨터나 웹 브라우저에서 앱을 설치할 수 있습니다.\n- 저장 공간 및 배터리 교체: 휴대폰의 메모리를 확장하거나 배터리를 쉽게 교체할 수 있는 옵션을 제공합니다.\n- 사용자 정의 홈 화면: 위젯, 배경화면, 아이콘, 런처로 휴대폰의 모양을 개인화할 수 있습니다.\n\nAndroid Studio는 Android 앱을 개발하기 위한 최고의 도구입니다. 개발자에게 다음과 같은 많은 기능과 이점을 제공합니다:\n\n- 구문 강조, 코드 완성, 리팩토링, 디버깅, 테스트 및 린팅 도구가 포함된 코드 편집기.\n- 사용자 인터페이스 설계를 위한 드래그 앤 드롭 인터페이스가 있는 레이아웃 편집기.\n- 다른 기기 및 구성에서 앱을 테스트하기 위한 빠른 부팅 및 스냅샷 지원이 있는 에뮬레이터.\n- 인증, 데이터베이스, 저장소, 분석, 비정상 종료 보고 등과 같은 서비스와의 Firebase 통합.\n- 종속성 관리, 사용자 정의, 최적화, 서명, 배포 옵션 등이 있는 Gradle 기반 빌드 시스템.\n\nAndroid Studio를 사용하면 간결하고, 안전하고, 표현력이 풍부하며, Java와 상호 운용 가능한 현대적인 프로그래밍 언어인 Kotlin을 사용하여 Android 기기를 위한 놀라운 앱을 만들 수 있습니다.</string>
+    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">크로노미터는 경과 시간을 표시하기 위한 타이머와 같은 기능을 제공하는 Android 프레임워크의 특수 위젯입니다. 카운트 업 또는 카운트 다운하도록 구성할 수 있으며, 스톱워치 또는 카운트다운 타이머 앱과 같이 시간 기록이 필요한 애플리케이션에서 일반적으로 사용됩니다. 크로노미터 클래스는 TextView 클래스에서 파생되므로 TextView의 모든 속성과 메서드를 상속합니다. 이를 통해 개발자는 텍스트 크기, 색상 및 글꼴을 포함하여 크로노미터의 모양을 쉽게 사용자 정의할 수 있습니다.</string>
     <string name="snack_this_is_a_snackbar">이것은 스낵바입니다.</string>
     <string name="snack_bar_clicked">클릭됨</string>
     <string name="snack_copied_to_clipboard">클립보드에 복사되었습니다. 📋</string>
     <string name="snack_unable_to_open_google_play_store">Google Play 스토어를 열 수 없습니다.</string>
-    <string name="snack_rating">별점 %1$.1f점으로 평가해주셔서 감사합니다. ❤️</string>
+    <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">이미지 버튼이 클릭되었습니다.</string>
     <string name="toast_this_is_a_toast">이것은 토스트 메시지입니다.</string>
     <string name="tooltip_show_code">코드 구문 보기</string>
     <string name="tooltip_show_java_code_snippet">자바 코드 스 니펫을 보여줍니다</string>
     <string name="tooltip_open_me">열기 🌐</string>
-    <string name="hint_type">여기에 입력하세요…</string>
-    <string name="hint_password">비밀번호를 입력하세요…</string>
-
+    <string name="hint_type">Type here</string>
+    <string name="hint_password">Enter your password</string>
     <string name="app_usage_notifications">앱 사용 알림</string>
     <string name="update_notifications">업데이트 알림</string>
-    <string name="browse_terms_of_service_and_privacy_policy"><i><u>서비스 약관</u></i> 및 <i><u>개인정보 처리방침</u></i> 살펴보기</string>
-
+    <string name="browse_terms_of_service_and_privacy_policy">
+        <i>
+            <u>서비스 약관</u>
+        </i> 및 <i>
+            <u>개인정보 처리방침</u>
+        </i> 살펴보기</string>
     <string name="update_downloaded">업데이트 다운로드 완료</string>
     <string name="view_in_google_play">Google Play 스토어에서 보기</string>
     <string name="version_info">버전 정보</string>

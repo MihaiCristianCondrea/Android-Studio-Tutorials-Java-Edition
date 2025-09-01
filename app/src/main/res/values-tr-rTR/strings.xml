@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_short_description">Android Studio\'da basit Java uygulamaları yapmayı öğrenin. 📱</string>
     <string name="notification_update_title">Yeni bir güncelleme mevcut.</string>
     <string name="summary_notification_update">Uygulamanın yeni bir sürümü mevcut. Güncellemek için tıklayın.</string>
     <string name="notification_last_time_used_title">Görüşmeyeli uzun zaman oldu.</string>
-    <string name="summary_notification_last_time_used">Sizi özledik. Android hakkında yeni bir şeyler öğrenelim.</string>
-
+    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
     <string name="welcome">Hoş geldiniz</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">Devam etmek için Hizmet Şartlarımızı ve Gizlilik Politikamızı okuyup kabul edin</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Kabul Et</string>
-
     <string name="home">Ana Sayfa</string>
     <string name="announcement_title">Yeni Bir Uygulama Geldi.</string>
     <string name="announcement_subtitle">En son Android Studio Eğitimleri uygulamasını inceleyin. Jetpack Compose, Material 3 ve daha fazlasını öğrenin.</string>
@@ -21,10 +19,8 @@
     <string name="play_store">Play Store</string>
     <string name="search_tutorials_hint">Eğitimleri ara</string>
     <string name="search_tutorials_content_description">Eğitimleri ara</string>
-
     <string name="android_studio">Android Studio</string>
-
-    <string name="android_start">Yeni Bir Proje Başlat…</string>
+    <string name="android_start">Start a new project</string>
     <string name="android_start_project">Yeni Bir Proje Başlat</string>
     <string name="step1">Adım 1</string>
     <string name="summary_first_step">Android Studio\'da yeni bir proje oluşturmanın ilk adımı, resimde gösterildiği gibi <b>Yeni proje</b> düğmesine tıklamak ve bir sonraki adıma geçmektir.</string>
@@ -32,9 +28,7 @@
     <string name="summary_second_step">İkinci adım, uygulamanıza uygun aktivite türünü seçmektir. Çalışmanızı basitleştirebilecek bazı ön ayarlardan birini seçebilirsiniz. Birini seçin ve <b>ileri</b> düğmesine tıklayın.</string>
     <string name="step3">Adım 3</string>
     <string name="summary_third_step">Üçüncü ve son adım, uygulama adı, <b>paket adı</b>, tercih edilen <b>programlama dili</b> ve <b>minimum SDK</b> gibi uygulama ayarlarınızı yapılandırmaktır. Bunlar hakkında daha fazla bilgiyi <a href="https://developer.android.com/">Android Geliştiricileri</a> sayfasından öğrenebilirsiniz.</string>
-
     <string name="basics">Temeller</string>
-
     <string name="shortcuts">Android Studio Kısayolları</string>
     <string name="shortcuts_title">Kısayollar</string>
     <string name="description">Açıklama</string>
@@ -58,7 +52,7 @@
     <string name="extract_field">Alan çıkar</string>
     <string name="extract_variable">Değişken çıkar</string>
     <string name="extract_constant">Sabit çıkar</string>
-    <string name="build_and_run">Derle ve çalıştır</string>
+    <string name="build_and_run">Build and run</string>
     <string name="build">Derle</string>
     <string name="apply_changes">Değişiklikleri uygula (Anında Çalıştırma ile)</string>
     <string name="debugging">Hata ayıklama</string>
@@ -72,7 +66,7 @@
     <string name="resume_program">Programı sürdür</string>
     <string name="toggle_breakpoint">Kesme noktasını değiştir</string>
     <string name="view_breakpoints">Kesme noktalarını görüntüle</string>
-    <string name="navigation_and_searching">Gezinme ve arama</string>
+    <string name="navigation_and_searching">Navigation and searching</string>
     <string name="press_shift_twice">Shift tuşuna iki kez basın</string>
     <string name="search_everything">Her şeyi ara (kod ve menüler dahil)</string>
     <string name="find">Bul</string>
@@ -99,63 +93,48 @@
     <string name="open_v_hierarchy">Metot hiyerarşisini aç</string>
     <string name="open_call_hierarchy">Çağrı hiyerarşisini aç</string>
     <string name="writing_code">Kod yazma</string>
-    <string name="generate_code">Kod oluştur (getters, setters, vb.)</string>
+    <string name="generate_code">Generate code (getters, setters, and more)</string>
     <string name="override_methods">Metotları geçersiz kıl (Override)</string>
     <string name="implement_methods">Metotları uygula (Implement)</string>
-    <string name="surround">İle çevrele (if…else / try…catch / vb.)</string>
+    <string name="surround">Surround with (if/else, try/catch, and more)</string>
     <string name="delete_line">İmleçteki satırı sil</string>
     <string name="collapse_and_expand_code_block">Mevcut kod bloğunu daralt/genişlet</string>
     <string name="collapse_and_expand_all_code_block">Tüm kod bloklarını daralt/genişlet</string>
     <string name="duplicate_current_line">Mevcut satırı veya seçimi çoğalt</string>
     <string name="basic_code_completion">Temel kod tamamlama</string>
     <string name="smart_code_completion">Akıllı kod tamamlama (beklenen türe göre metot ve değişken listesini filtreler)</string>
-    <string name="version_control">Sürüm kontrolü ve yerel geçmiş</string>
+    <string name="version_control">Version control and local history</string>
     <string name="commit_project">Projeyi VCS\'ye kaydet (Commit)</string>
     <string name="update_project">Projeyi VCS\'den güncelle</string>
     <string name="view_recent_changes">Son değişiklikleri görüntüle</string>
     <string name="open_vcs_popup">VCS açılır penceresini aç</string>
     <string name="more_about_shortcuts">Kısayollar hakkında daha fazla bilgi</string>
-
     <string name="history_of_android">Android\'in Tarihi</string>
     <string name="history">Tarihçe</string>
     <string name="features">Özellikler</string>
-
     <string name="android_sdk">Android SDK\'ları</string>
     <string name="android_versions">Android Sürümleri</string>
-
     <string name="view_binding">Görünüm Bağlama (View Binding)</string>
     <string name="setup_instructions">Kurulum talimatları</string>
     <string name="use_view_binding_in_activities">Aktivitelerde görünüm bağlama kullanımı</string>
     <string name="use_view_binding_in_fragments">Fragment\'larda görünüm bağlama kullanımı</string>
     <string name="more_about_view_binding">Görünüm Bağlama hakkında daha fazla bilgi</string>
-
     <string name="permission_dialog_example">İzin iletişim kutusu örneği</string>
     <string name="more_about_permissions">İzinler hakkında daha fazla bilgi</string>
-
     <string name="per_app_language_preferences">Uygulama başına dil tercihleri</string>
-
     <string name="predictive_back_gesture">Tahminli geri hareketi</string>
-
-    <string name="layouts">Yerleşimler ve Görünümler</string>
-
+    <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Doğrusal Yerleşim (Linear Layout)</string>
-
     <string name="vertical">Dikey</string>
     <string name="horizontal">Yatay</string>
     <string name="layout_preview">Yerleşim önizlemesi</string>
     <string name="no_java_code_needed">Bu aktivite için Java kodu gerekmez.</string>
-
     <string name="relative_layout">Göreceli Yerleşim (Relative Layout)</string>
-
     <string name="table_layout">Tablo Yerleşimi (Table Layout)</string>
-
     <string name="grid_view">Izgara Görünümü (Grid View)</string>
-
     <string name="image_view">Resim Görünümü (Image View)</string>
-
     <string name="web_view">Web Görünümü (Web View)</string>
-
-    <string name="buttons_and_switches">Butonlar ve Anahtarlar</string>
+    <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Butonlar</string>
     <string name="button">Buton</string>
     <string name="button_normal">Buton 1 (normal)</string>
@@ -177,22 +156,19 @@
     <string name="floating_button_surface_icon">Yüzen Buton 3 (yüzey)</string>
     <string name="floating_button_tertiary_icon">Yüzen Buton 4 (üçüncül)</string>
     <string name="same_code_buttons">Tüm buton türleri için bu Java kodunu kullanın.</string>
-
     <string name="radio_buttons">Radyo Butonları</string>
     <string name="choose_your_option">Seçeneğinizi belirleyin</string>
     <string name="first_radio_option">Seçenek 1</string>
     <string name="second_radio_option">Seçenek 2</string>
     <string name="display_option">Seçeneği göster</string>
-
     <string name="image_buttons">Resim Butonları</string>
-
     <string name="switches">Anahtarlar</string>
     <string name="switch_me">Beni değiştir</string>
     <string name="material_switch_preference">Materyal Anahtar Tercihi</string>
     <string name="material_switch">Materyal Anahtar</string>
     <string name="switch_material">Anahtar Materyal</string>
     <string name="toggle_button">Aç/Kapa Butonu</string>
-    <string name="clocks_and_timers">Saatler ve Zamanlayıcılar</string>
+    <string name="clocks_and_timers">Clocks and timers</string>
     <string name="clocks">Saatler</string>
     <string name="clock_analog">Analog Saat</string>
     <string name="clock_text">Metin Saati</string>
@@ -223,7 +199,7 @@
     <string name="tooltips">İpuçları</string>
     <string name="reviews">Yorumlar</string>
     <string name="rating_bar">Derecelendirme çubuğu</string>
-    <string name="rate_us">Uygulamamızı değerlendirin.</string>
+    <string name="rate_us">Rate the app.</string>
     <string name="stars">%1$.1f yıldız.</string>
     <string name="in_app_review">Uygulama İçi Yorumlar</string>
     <string name="progress_bars">İlerleme Çubukları</string>
@@ -268,7 +244,7 @@
     <string name="ad_id">Reklam kimliği [AD_ID]</string>
     <string name="internet">İnternet [INTERNET]</string>
     <string name="wake_lock">Cihazı uyanık tut [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Uygulamanın, kritik işlemler sırasında kesintisiz tamamlanmalarını sağlamak için cihazın uyku moduna geçmesini (ör. ekranın kararması veya işlemcinin uykuya geçmesi) engellemesine izin verir. Pil tasarrufu için idareli kullanılır.</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">Bildirim gönder [POST_NOTIFICATIONS]</string>
     <string name="runtime">Çalışma zamanı (Runtime)</string>
     <string name="access_network_state">Ağ durumuna eriş [ACCESS_NETWORK_STATE]</string>
@@ -351,10 +327,10 @@
     <string name="summary_preference_android_studio_image_buttons">Kullanıcının basabileceği veya tıklayabileceği bir resim içeren (metin yerine) bir buton görüntüler. Varsayılan olarak, bir ImageButton, farklı buton durumları sırasında rengi değişen standart buton arka planıyla normal bir Buton gibi görünür. Butonun yüzeyindeki resim, ImageButton XML öğesindeki android:src özelliği veya ImageView.setImageResource(int) metodu ile tanımlanır.</string>
     <string name="summary_preference_android_studio_switches">Android Studio\'daki anahtarların yeteneklerini keşfedin ve bunları uygulamalarınızda etkili bir şekilde nasıl uygulayacağınızı öğrenin. Bu ders, görsel olarak çekici ve kullanıcı dostu arayüzler tasarlamak için en iyi uygulamaları da içeren anahtar kullanımına ilişkin kapsamlı bir kılavuz sunar.</string>
     <string name="summary_preference_android_studio_clocks">Android uygulamanıza dijital, analog veya metin saati eklemenin basit bir yolu.</string>
-    <string name="summary_preference_android_studio_time_picker">Android TimePicker, zamanı 24 saat formatında veya AM/PM modunda seçmek için bir kullanıcı arayüzü kontrolüdür. Kullanıcıların uygulamamızda gün için geçerli zamanı seçmelerini sağlamak için kullanılır. Zaman seçici arayüzü temel olarak iki modda mevcuttur; biri XML düzeni altında, diğeri ise bir iletişim kutusudur.</string>
+    <string name="summary_preference_android_studio_time_picker">Android TimePicker is a user interface control for selecting the time in either 24-hour format or AM/PM mode. It is used to ensure that users pick the valid time for the day in the app. The time picker interface exists basically in two modes one is under XML layout and another is a dialog.</string>
     <string name="summary_preference_android_studio_date_picker">Android, kullanıcının hazır iletişim kutuları olarak bir zaman veya tarih seçmesi için kontroller sunar. Her seçici, zamanın (saat, dakika, AM/PM) veya tarihin (ay, gün, yıl) her bir parçasını seçmek için kontroller sağlar. Bu seçicileri kullanmak, kullanıcılarınızın geçerli, doğru biçimlendirilmiş ve kullanıcının yerel ayarına göre ayarlanmış bir zaman veya tarih seçebilmesini sağlamaya yardımcı olur.</string>
     <string name="summary_preference_android_studio_chronometer">Geçen süreyi görüntülemek için güçlü bir araç olan Android\'deki Kronometre widget\'ının yeteneklerini keşfedin. Kronometreyi kontrol etmek için butonlar için tıklama dinleyicileri nasıl kurulacağını öğrenin ve davranışını özelleştirmek için mevcut çeşitli metotları keşfedin.</string>
-    <string name="summary_preference_android_studio_text_box">Metin girmek ve değiştirmek için bir kullanıcı arayüzü öğesi. Bir düzenleme metni widget\'ı tanımladığınızda, R.styleable.TextView_inputType özelliğini belirtmelisiniz…</string>
+    <string name="summary_preference_android_studio_text_box">A user interface element for entering and modifying text. When you define an edit text widget, you must specify the R.styleable.TextView_inputType attribute to ensure the correct keyboard and input behaviors.</string>
     <string name="summary_preference_android_studio_password_text_box">Metni gizleme yeteneğine sahip basit bir metin kutusu. Şifreleri güvende tutmak için çoğu uygulamanın giriş ekranlarında kullanılır.</string>
     <string name="summary_preference_android_studio_alert_dialog">Bir iletişim kutusu, kullanıcıyı bir karar vermeye veya ek bilgi girmeye teşvik eden küçük bir penceredir. Bir iletişim kutusu ekranı doldurmaz ve normalde kullanıcıların devam etmeden önce bir eylemde bulunmalarını gerektiren modal olaylar için kullanılır.</string>
     <string name="summary_preference_android_studio_snack_bar">Snackbar\'lar, bir uygulamanın gerçekleştirdiği veya gerçekleştireceği bir işlem hakkında kullanıcıları bilgilendirir. Ekranın alt kısmına doğru geçici olarak görünürler. Kullanıcı deneyimini kesintiye uğratmamalıdırlar ve kaybolmaları için kullanıcı girişi gerektirmezler.</string>
@@ -380,28 +356,31 @@
     <string name="summary_image_buttons">Resim butonları, metin yerine bir resim içeren butonlardır. Android\'de daha görsel olarak çekici ve etkileşimli bir kullanıcı arayüzü sağlamak için kullanılabilirler. Resim butonları, eylemleri tetiklemek, farklı ekranlara gitmek veya ek bilgi görüntülemek için kullanılabilir. Genellikle, butonun amacını kullanıcıya net bir şekilde iletmek için metin etiketleriyle birlikte kullanılırlar.</string>
     <string name="summary_image_view">AndroidX AppCompatImageView, ActionBar ve Material Design\'ın çeşitli özelliklerini desteklemek için tasarlanmış bir ImageView alt sınıfıdır. AndroidX kütüphanesinin bir parçasıdır, bu kütüphane, Android çerçeve API\'lerinin geriye dönük uyumlu sürümlerini ve yalnızca kütüphane API\'leri aracılığıyla kullanılabilen özellikleri sunan bir destek kütüphaneleri setidir.\n\nAppCompatImageView, ImageView için bir tak-çalıştır yedeği olarak kullanılmak üzere tasarlanmıştır, bu da geliştiricilerin Android\'in farklı sürümlerinde aynı kodu ve UI öğelerini kullanmasına olanak tanır. Renklendirme, vektör çizimlerini yükleme ve resim ölçeklendirmeyi yönetme gibi çeşitli özellikleri destekler.\n\nAppCompatImageView ayrıca, resim görünümünün bir gölge bırakmasına ve düzenin yüzeyinin üzerinde yükseltilmiş gibi görünmesine olanak tanıyan yükseklik gibi Material Design özelliklerini de destekler. Ayrıca, resim görünümüne dokunulduğunda uygulanan bir görsel efekt olan Material Design dalgalanma efektini de destekler.\n\nÖzetle, AndroidX AppCompatImageView, Android uygulamalarında geniş bir özellik ve tasarım öğeleri yelpazesini desteklemek için tasarlanmış, çok yönlü ve zengin özelliklere sahip bir ImageView alt sınıfıdır.</string>
     <string name="summary_linear_layout_compat">Linear Layout Compat, Android destek kütüphanesi appCompat v7\'de bir sınıftır. Yeni API seviyelerinde eklenen metotları eskilerinde desteklemek için eklenmiştir (bölücüler gibi). LinearLayout ve LinearLayoutCompat\'taki metotları karşılaştırırsanız, Compat düzeninin herhangi bir API seviyesi sınırlaması olmaksızın Linear Layout\'un tüm metotlarına sahip olduğunu görebilirsiniz. Örneğin, setShowDividers metodu API seviyesi 11\'de tanıtılmıştır. Bu durumda, API seviyesi 11\'in altında bir platformu hedefliyorsanız, setShowDividers (ve parametreleri) LinearLayout yerine Linear Layout Compat kullanılarak çağrılmalıdır.</string>
-    <string name="summary_donations">Ne kadar bağış yaparsanız yapın, uygulamamızın çalışır durumda kalmasına ve özelliklerimizi geliştirmemize yardımcı olacaksınız. Cömertliğiniz ve nezaketiniz için teşekkür ederiz.</string>
+    <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">Bu etkileşimli dersle Android\'de ilerleme çubuklarını nasıl kullanacağınızı öğrenin. Bu ders iki bölüm içerir: biri yatay bir ilerleme çubuğu için, diğeri ise dairesel bir ilerleme çubuğu için. Her bölümde, bir indirme ilerledikçe ilerleme çubuğunun nasıl güncellendiğini görebilirsiniz. Ayrıca, ekranın altındaki yüzen eylem düğmesine tıklayarak dersin kodunu görüntüleyebilirsiniz.</string>
     <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android, Google tarafından geliştirilen bir mobil işletim sistemidir. İlk olarak 5 Kasım 2007\'de bir beta sürümü olarak piyasaya sürüldü ve ilk ticari sürüm olan Android 1.0, 23 Eylül 2008\'de piyasaya sürüldü. Android, Linux çekirdeğinin değiştirilmiş bir sürümüne ve diğer açık kaynaklı yazılımlara dayanmaktadır.\n\nAndroid Studio, Android uygulama geliştirme için resmi entegre geliştirme ortamıdır (IDE). 15 Mayıs 2013\'te Google I/O konferansında duyuruldu ve 8 Aralık 2014\'te halka açık kullanıma sunuldu. Android Studio, popüler bir Java IDE\'si olan IntelliJ IDEA\'ya dayanmaktadır.\n\nKotlin, Java Sanal Makinesi (JVM), Android, tarayıcı ve yerel platformlarda çalışabilen bir çapraz platform programlama dilidir. Prag merkezli bir yazılım şirketi olan JetBrains tarafından oluşturulmuştur. Kotlin ilk olarak Temmuz 2011\'de duyuruldu ve Şubat 2012\'de bir açık kaynak projesi olarak piyasaya sürüldü.\n\nGoogle, 17 Mayıs 2017\'deki I/O konferansında Android uygulama geliştirme için resmi bir dil olarak Kotlin\'e desteğini duyurdu. O zamandan beri Kotlin, Android geliştiricileri için en popüler dillerden biri haline geldi. Ekim 2020\'deki Google verilerine göre, Google Play\'deki en iyi 1000 uygulamanın %70\'inden fazlası Kotlin kullanmaktadır.</string>
-    <string name="summary_android_features">Android sadece bir işletim sistemi değil, aynı zamanda kullanıcılara ve geliştiricilere bir dizi özellik ve yetenek sunan bir platformdur. Android\'in bazı özellikleri şunlardır:\n\n- Yakın Alan İletişimi (NFC), kablosuz olarak veri paylaşmanıza, ödeme yapmanıza ve diğer cihazlarla bağlantı kurmanıza olanak tanır.\n- Alternatif klavyeler, giriş yönteminizi farklı düzenler, diller ve temalarla özelleştirmenizi sağlar.\n- IR iletimi, telefonunuzu TV\'ler, klimalar ve diğer cihazlar için bir uzaktan kumanda olarak kullanmanızı sağlar.\n- Dokunmadan kontrol, hareketler veya sesli komutlar kullanarak ekrana dokunmadan telefonunuzda eylemler gerçekleştirmenizi sağlar.\n- Otomasyon, telefonunuzun belirli görevleri otomatik olarak gerçekleştirmesi için rutinler ve tetikleyiciler ayarlamanıza olanak tanır.\n- Kablosuz uygulama indirmeleri, telefonunuzu bir kabloyla bağlamadan bilgisayarınızdan veya web tarayıcınızdan uygulamalar yüklemenizi sağlar.\n- Depolama ve pil değişimi, telefonunuzun belleğini genişletme veya pilini kolayca değiştirme seçeneği sunar.\n- Özel ana ekran, telefonunuzun görünümünü widget\'lar, duvar kağıtları, simgeler ve başlatıcılarla kişiselleştirmenizi sağlar.\n\nAndroid Studio, Android uygulamaları geliştirmek için en iyi araçtır. Geliştiricilere şu gibi birçok özellik ve fayda sunar:\n\n- Sözdizimi vurgulama, kod tamamlama, yeniden düzenleme, hata ayıklama, test etme ve linting araçlarına sahip kod düzenleyici.\n- Kullanıcı arayüzleri tasarlamak için sürükle ve bırak arayüzüne sahip düzen düzenleyici.\n- Farklı cihazlarda ve yapılandırmalarda uygulamaları test etmek için hızlı önyükleme ve anlık görüntü desteğine sahip emülatör.\n- Kimlik doğrulama, veritabanı, depolama, analitik, kilitlenme raporlama vb. gibi hizmetlerle Firebase entegrasyonu. \n- Bağımlılık yönetimi, özelleştirme, optimizasyon, imzalama, dağıtım seçenekleri vb. ile Gradle tabanlı derleme sistemi. \n\nAndroid Studio ile, kısa, güvenli, etkileyici ve Java ile birlikte çalışabilen modern bir programlama dili olan Kotlin\'i kullanarak Android cihazlar için harika uygulamalar oluşturabilirsiniz.</string>
+    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">Bir Kronometre, geçen süreyi görüntülemek için zamanlayıcı benzeri bir işlevsellik sağlayan Android çerçevesindeki özel bir widget\'tır. Yukarı veya aşağı sayacak şekilde yapılandırılabilir ve genellikle kronometre veya geri sayım sayacı uygulamaları gibi zaman tutma gerektiren uygulamalarda kullanılır. Kronometre sınıfı, TextView sınıfından türetilmiştir, bu da bir TextView\'in tüm özelliklerini ve metotlarını devraldığı anlamına gelir. Bu, geliştiricilerin metin boyutu, rengi ve yazı tipi dahil olmak üzere Kronometrenin görünümünü kolayca özelleştirmesine olanak tanır.</string>
     <string name="snack_this_is_a_snackbar">Bu bir snackbar.</string>
     <string name="snack_bar_clicked">tıklandı</string>
     <string name="snack_copied_to_clipboard">Panoya kopyalandı. 📋</string>
     <string name="snack_unable_to_open_google_play_store">Google Play Store açılamadı.</string>
-    <string name="snack_rating">Bizi %1$.1f yıldızla değerlendirdiğiniz için teşekkürler. ❤️</string>
+    <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Resim butonuna tıklandı.</string>
     <string name="toast_this_is_a_toast">Bu bir toast.</string>
     <string name="tooltip_show_code">Kod sözdizimini göster</string>
     <string name="tooltip_show_java_code_snippet">Java Kodu Snippet\'i Göster</string>
     <string name="tooltip_open_me">Beni aç 🌐</string>
-    <string name="hint_type">Buraya yazın…</string>
-    <string name="hint_password">Şifrenizi girin…</string>
-
+    <string name="hint_type">Type here</string>
+    <string name="hint_password">Enter your password</string>
     <string name="app_usage_notifications">Uygulama Kullanım Bildirimleri</string>
     <string name="update_notifications">Güncelleme Bildirimleri</string>
-    <string name="browse_terms_of_service_and_privacy_policy"><i><u>Hizmet Şartları</u></i> ve <i><u>Gizlilik Politikası</u></i>\'nı inceleyin</string>
-
+    <string name="browse_terms_of_service_and_privacy_policy">
+        <i>
+            <u>Hizmet Şartları</u>
+        </i> ve <i>
+            <u>Gizlilik Politikası</u>
+        </i>\'nı inceleyin</string>
     <string name="update_downloaded">Güncelleme indirildi</string>
     <string name="view_in_google_play">Google Play Store\'da Görüntüle</string>
     <string name="version_info">Sürüm bilgisi</string>
