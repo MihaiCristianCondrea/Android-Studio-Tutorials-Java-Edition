@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_short_description">學習如何在 Android Studio 中製作簡單的 Java 應用程式。 📱</string>
     <string name="notification_update_title">有可用的新更新！</string>
     <string name="summary_notification_update">應用程式有新版本可用。點擊更新！</string>
     <string name="notification_last_time_used_title">好久不見！</string>
-    <string name="summary_notification_last_time_used">我們想念您！一起來學習關於 Android 的新知識吧！</string>
-
+    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
     <string name="welcome">歡迎</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">請閱讀並同意我們的服務條款和隱私權政策以繼續</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">同意</string>
-
     <string name="home">首頁</string>
     <string name="announcement_title">新應用程式來了！</string>
     <string name="announcement_subtitle">快來看看最新的 Android Studio 教學應用程式。學習 Jetpack Compose、Material 3 等等。</string>
@@ -21,10 +19,8 @@
     <string name="play_store">Play 商店</string>
     <string name="search_tutorials_hint">搜尋教學</string>
     <string name="search_tutorials_content_description">搜尋教學</string>
-
     <string name="android_studio">Android Studio</string>
-
-    <string name="android_start">開始一個新專案…</string>
+    <string name="android_start">Start a new project</string>
     <string name="android_start_project">開始一個新專案</string>
     <string name="step1">步驟 1</string>
     <string name="summary_first_step">在 Android Studio 中建立新專案的第一步是點擊圖中所示的<b>新專案</b>按鈕，然後繼續下一步。</string>
@@ -32,9 +28,7 @@
     <string name="summary_second_step">第二步是選擇適合您應用程式的活動類型。您可以從一些預設選項中選擇，以簡化您的工作。選擇其中一個並點擊<b>下一步</b>按鈕。</string>
     <string name="step3">步驟 3</string>
     <string name="summary_third_step">第三步也是最後一步是設定您的應用程式，例如應用程式名稱、<b>套件名稱</b>、偏好的<b>程式語言</b>和<b>最低 SDK</b>。您可以在 <a href="https://developer.android.com/">Android 開發者網站</a>上了解更多資訊。</string>
-
     <string name="basics">基礎知識</string>
-
     <string name="shortcuts">Android Studio 快捷鍵</string>
     <string name="shortcuts_title">快捷鍵</string>
     <string name="description">描述</string>
@@ -58,7 +52,7 @@
     <string name="extract_field">提取欄位</string>
     <string name="extract_variable">提取變數</string>
     <string name="extract_constant">提取常數</string>
-    <string name="build_and_run">建置並執行</string>
+    <string name="build_and_run">Build and run</string>
     <string name="build">建置</string>
     <string name="apply_changes">套用變更 (使用 Instant Run)</string>
     <string name="debugging">偵錯</string>
@@ -72,7 +66,7 @@
     <string name="resume_program">恢復程式</string>
     <string name="toggle_breakpoint">切換中斷點</string>
     <string name="view_breakpoints">檢視中斷點</string>
-    <string name="navigation_and_searching">導覽與搜尋</string>
+    <string name="navigation_and_searching">Navigation and searching</string>
     <string name="press_shift_twice">按兩次 Shift</string>
     <string name="search_everything">搜尋所有內容 (包括程式碼和選單)</string>
     <string name="find">尋找</string>
@@ -99,63 +93,48 @@
     <string name="open_v_hierarchy">開啟方法階層</string>
     <string name="open_call_hierarchy">開啟呼叫階層</string>
     <string name="writing_code">撰寫程式碼</string>
-    <string name="generate_code">產生程式碼 (getter、setter 等)</string>
+    <string name="generate_code">Generate code (getters, setters, and more)</string>
     <string name="override_methods">覆寫方法</string>
     <string name="implement_methods">實作方法</string>
-    <string name="surround">使用…環繞 (if…else / try…catch / 等)</string>
+    <string name="surround">Surround with (if/else, try/catch, and more)</string>
     <string name="delete_line">刪除游標所在行</string>
     <string name="collapse_and_expand_code_block">摺疊/展開目前程式碼區塊</string>
     <string name="collapse_and_expand_all_code_block">摺疊/展開所有程式碼區塊</string>
     <string name="duplicate_current_line">複製目前行或選取範圍</string>
     <string name="basic_code_completion">基本程式碼完成</string>
     <string name="smart_code_completion">智慧程式碼完成 (依預期類型篩選方法和變數清單)</string>
-    <string name="version_control">版本控制與本機歷史記錄</string>
+    <string name="version_control">Version control and local history</string>
     <string name="commit_project">將專案提交至 VCS</string>
     <string name="update_project">從 VCS 更新專案</string>
     <string name="view_recent_changes">檢視最近的變更</string>
     <string name="open_vcs_popup">開啟 VCS 彈出視窗</string>
     <string name="more_about_shortcuts">更多關於快捷鍵</string>
-
     <string name="history_of_android">Android 歷史</string>
     <string name="history">歷史</string>
     <string name="features">功能</string>
-
     <string name="android_sdk">Android SDK</string>
     <string name="android_versions">Android 版本</string>
-
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">設定說明</string>
     <string name="use_view_binding_in_activities">在 Activity 中使用 View Binding</string>
     <string name="use_view_binding_in_fragments">在 Fragment 中使用 View Binding</string>
     <string name="more_about_view_binding">更多關於 View Binding</string>
-
     <string name="permission_dialog_example">權限對話方塊範例</string>
     <string name="more_about_permissions">更多關於權限</string>
-
     <string name="per_app_language_preferences">各應用程式語言偏好設定</string>
-
     <string name="predictive_back_gesture">預測性返回手勢</string>
-
-    <string name="layouts">版面配置與視圖</string>
-
+    <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Linear Layout</string>
-
     <string name="vertical">垂直</string>
     <string name="horizontal">水平</string>
     <string name="layout_preview">版面配置預覽</string>
     <string name="no_java_code_needed">此活動不需要 Java 程式碼。</string>
-
     <string name="relative_layout">Relative Layout</string>
-
     <string name="table_layout">Table Layout</string>
-
     <string name="grid_view">Grid View</string>
-
     <string name="image_view">Image View</string>
-
     <string name="web_view">Web View</string>
-
-    <string name="buttons_and_switches">按鈕與開關</string>
+    <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">按鈕</string>
     <string name="button">按鈕</string>
     <string name="button_normal">按鈕 1 (一般)</string>
@@ -177,22 +156,19 @@
     <string name="floating_button_surface_icon">浮動按鈕 3 (表面)</string>
     <string name="floating_button_tertiary_icon">浮動按鈕 4 (第三)</string>
     <string name="same_code_buttons">所有類型的按鈕都使用此 Java 程式碼。</string>
-
     <string name="radio_buttons">單選按鈕</string>
     <string name="choose_your_option">選擇您的選項</string>
     <string name="first_radio_option">選項 1</string>
     <string name="second_radio_option">選項 2</string>
     <string name="display_option">顯示選項</string>
-
     <string name="image_buttons">圖片按鈕</string>
-
     <string name="switches">開關</string>
     <string name="switch_me">切換我</string>
     <string name="material_switch_preference">Material 開關偏好設定</string>
     <string name="material_switch">Material 開關</string>
     <string name="switch_material">開關 Material</string>
     <string name="toggle_button">切換按鈕</string>
-    <string name="clocks_and_timers">時鐘與計時器</string>
+    <string name="clocks_and_timers">Clocks and timers</string>
     <string name="clocks">時鐘</string>
     <string name="clock_analog">指針時鐘</string>
     <string name="clock_text">文字時鐘</string>
@@ -223,7 +199,7 @@
     <string name="tooltips">工具提示</string>
     <string name="reviews">評論</string>
     <string name="rating_bar">評分列</string>
-    <string name="rate_us">為我們的應用程式評分！</string>
+    <string name="rate_us">Rate the app.</string>
     <string name="stars">%1$.1f 顆星！</string>
     <string name="in_app_review">應用程式內評論</string>
     <string name="progress_bars">進度列</string>
@@ -268,7 +244,7 @@
     <string name="ad_id">廣告 ID [AD_ID]</string>
     <string name="internet">網際網路 [INTERNET]</string>
     <string name="wake_lock">保持裝置喚醒 [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">允許應用程式在關鍵操作期間防止裝置進入休眠狀態 (例如螢幕變暗或處理器休眠)，以確保它們不中斷地完成。此功能會謹慎使用以節省電池電量。</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">發布通知 [POST_NOTIFICATIONS]</string>
     <string name="runtime">執行階段</string>
     <string name="access_network_state">存取網路狀態 [ACCESS_NETWORK_STATE]</string>
@@ -351,11 +327,10 @@
     <string name="summary_preference_android_studio_image_buttons">顯示一個帶有圖像（而非文字）的按鈕，使用者可以按下或點擊。預設情況下，ImageButton 看起來像一個常規的 Button，具有在不同按鈕狀態下會改變顏色的標準按鈕背景。按鈕表面的圖像可以透過 ImageButton XML 元素中的 android:src 屬性或 ImageView.setImageResource(int) 方法來定義。</string>
     <string name="summary_preference_android_studio_switches">探索 Android Studio 中開關的功能，並學習如何有效地在您的應用程式中實現它們。本課程提供了一個全面的開關使用指南，包括設計視覺上吸引人且友善的使用者介面的最佳實踐。</string>
     <string name="summary_preference_android_studio_clocks">在您的 Android 應用程式中加入數位、指針或文字時鐘的簡單方法。</string>
-    <string name="summary_preference_android_studio_time_picker">Android TimePicker 是一個用於選擇時間的使用者介面控制項，可以選擇 24 小時格式或 AM/PM 模式。它用於確保使用者在我們的應用程式中選擇當天的有效時間。時間選擇器介面基本上存在兩種模式，一種是在 XML 版面配置下，另一種是
-對話方塊。</string>
+    <string name="summary_preference_android_studio_time_picker">Android TimePicker is a user interface control for selecting the time in either 24-hour format or AM/PM mode. It is used to ensure that users pick the valid time for the day in the app. The time picker interface exists basically in two modes one is under XML layout and another is a dialog.</string>
     <string name="summary_preference_android_studio_date_picker">Android 為使用者提供了選擇時間或日期的控制項，以現成的對話方塊形式提供。每個選擇器都提供了選擇時間（時、分、AM/PM）或日期（月、日、年）各個部分的控制項。使用這些選擇器有助於確保您的使用者能夠選擇有效、格式正確且已根據使用者地區設定調整的時間或日期。</string>
     <string name="summary_preference_android_studio_chronometer">探索 Android 中 Chronometer 小工具的功能，這是一個用於顯示經過時間的強大工具。學習如何為按鈕設定點擊監聽器以控制計時器，並探索可用於自訂其行為的各種方法。</string>
-    <string name="summary_preference_android_studio_text_box">一個用於輸入和修改文字的使用者介面元素。當您定義一個編輯文字小工具時，您必須指定 R.styleable.TextView_inputType 屬性…</string>
+    <string name="summary_preference_android_studio_text_box">A user interface element for entering and modifying text. When you define an edit text widget, you must specify the R.styleable.TextView_inputType attribute to ensure the correct keyboard and input behaviors.</string>
     <string name="summary_preference_android_studio_password_text_box">一個具有隱藏文字能力的簡單文字方塊。用於大多數應用程式的登入畫面，以確保密碼安全。</string>
     <string name="summary_preference_android_studio_alert_dialog">對話方塊是一個小視窗，提示使用者做出決定或輸入其他資訊。對話方塊不會填滿整個螢幕，通常用於需要使用者在繼續之前採取行動的模態事件。</string>
     <string name="summary_preference_android_studio_snack_bar">Snack bar 會告知使用者應用程式已執行或將執行的程序。它們會暫時出現在螢幕底部。它們不應該中斷使用者體驗，也不需要使用者輸入才能消失。</string>
@@ -381,28 +356,31 @@
     <string name="summary_image_buttons">圖片按鈕是包含圖像而非文字的按鈕。它們可以在 Android 中用於提供更具視覺吸引力和互動性的使用者介面。圖片按鈕可用於觸發操作、導覽至不同畫面或顯示額外資訊。它們通常與文字標籤結合使用，以向使用者清楚傳達按鈕的用途。</string>
     <string name="summary_image_view">AndroidX AppCompatImageView 是 ImageView 的子類別，旨在支援 ActionBar 和 Material Design 的各種功能。它是 AndroidX 函式庫的一部分，該函式庫是一組支援函式庫，提供 Android 框架 API 的向後相容版本以及僅能透過函式庫 API 獲得的功能。\n\nAppCompatImageView 旨在作為 ImageView 的直接替代品，讓開發人員可以在不同版本的 Android 上使用相同的程式碼和 UI 元素。它支援各種功能，例如著色、載入向量可繪製物件以及處理圖像縮放。\n\nAppCompatImageView 還支援 Material Design 功能，例如高程，這允許圖像視圖投射陰影並看起來高於版面配置的表面。它還支援 Material Design 的漣漪效果，這是在觸摸圖像視圖時應用的視覺效果。\n\n總之，AndroidX AppCompatImageView 是 ImageView 的一個多功能且功能豐富的子類別，旨在支援 Android 應用程式中的廣泛功能和設計元素。</string>
     <string name="summary_linear_layout_compat">Linear Layout Compat 是 Android 支援函式庫 appCompat v7 中的一個類別。它被加入以支援在較舊的 API 等級上新增於較新 API 等級的方法（如分隔線）。如果您比較 LinearLayout 和 LinearLayoutCompat 中的方法，您會發現 Compat 版面配置擁有 Linear Layout 的所有方法，且沒有任何 API 等級限制。例如，setShowDividers 方法是在 API 等級 11 中引入的。因此，在這種情況下，如果您針對 API 等級低於 11 的平台，則應使用 Linear Layout Compat 而非 LinearLayout 來調用 setShowDividers（及其參數）。</string>
-    <string name="summary_donations">無論您捐贈多少，您都將幫助我們維持應用程式的運作並改善我們的功能。我們感謝您的慷慨與善意！</string>
+    <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">透過這個互動式課程，學習如何在 Android 中使用進度列。本課程包括兩個部分：一個用於水平進度列，另一個用於圓形進度列。在每個部分，您都可以看到隨著下載進度，進度列如何更新。您還可以透過點擊螢幕底部的浮動操作按鈕來查看本課程的程式碼。</string>
     <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android 是由 Google 開發的行動作業系統。它於 2007 年 11 月 5 日首次以 Beta 版本發布，而第一個商業版本 Android 1.0 則於 2008 年 9 月 23 日推出。Android 基於 Linux 核心的修改版本和其他開源軟體。\n\nAndroid Studio 是用於 Android 應用程式開發的官方整合開發環境 (IDE)。它由 Google 在 2013 年 5 月 15 日的 I/O 大會上宣布，並於 2014 年 12 月 8 日公開發布。Android Studio 基於流行的 Java IDE - IntelliJ IDEA。\n\nKotlin 是一種跨平台程式語言，可以在 Java 虛擬機器 (JVM)、Android、瀏覽器和原生平台上執行。它由位於布拉格的軟體公司 JetBrains 創建。Kotlin 於 2011 年 7 月首次宣布，並於 2012 年 2 月作為開源專案發布。\n\nGoogle 在 2017 年 5 月 17 日的 I/O 大會上宣布支持 Kotlin 作為 Android 應用程式開發的官方語言。從那時起，Kotlin 已成為 Android 開發人員最受歡迎的語言之一。根據 Google 2020 年 10 月的數據，Google Play 上排名前 1000 的應用程式中有超過 70% 使用 Kotlin。</string>
-    <string name="summary_android_features">Android 不僅是一個作業系統，也是一個為使用者和開發人員提供一系列功能和能力的平台。Android 的一些功能包括：\n\n- 近場通訊 (NFC)，可讓您無線分享資料、進行支付和與其他裝置連接。\n- 備用鍵盤，可讓您使用不同的版面配置、語言和主題來自訂輸入法。\n- 紅外線傳輸，可讓您使用手機作為電視、空調和其他電器的遙控器。\n- 非觸控控制，可讓您使用手勢或語音命令在手機上執行操作而無需觸摸螢幕。\n- 自動化，可讓您為手機設定例行公事和觸發器以自動執行某些任務。\n- 無線應用程式下載，可讓您從電腦或網頁瀏覽器安裝應用程式，而無需用電纜連接手機。\n- 儲存和電池更換，讓您可以輕鬆擴充手機記憶體或更換電池。\n- 自訂主畫面，可讓您使用小工具、桌布、圖示和啟動器來個人化手機外觀。\n\nAndroid Studio 是開發 Android 應用程式的最佳工具。它為開發人員提供了許多功能和好處，例如：\n\n- 程式碼編輯器，具有語法突顯、程式碼完成、重構、偵錯、測試和 linting 工具。\n- 版面配置編輯器，具有拖放介面用於設計使用者介面。\n- 模擬器，具有快速啟動和快照支援，用於在不同裝置和配置上測試應用程式。\n- Firebase 整合，提供身份驗證、資料庫、儲存、分析、當機報告等服務。\n- 基於 Gradle 的建置系統，具有依賴管理、自訂、最佳化、簽署、分發選項等。\n\n使用 Android Studio，您可以使用 Kotlin 為 Android 裝置創建令人驚嘆的應用程式，Kotlin 是一種現代程式語言，簡潔、安全、富有表現力且可與 Java 互通。</string>
+    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">Chronometer 是 Android 框架中的一個專用小工具，提供類似計時器的功能來顯示經過的時間。它可以被設定為向上或向下計數，通常用於需要計時的應用程式中，例如碼錶或倒數計時器應用程式。Chronometer 類別源自 TextView 類別，這意味著它繼承了 TextView 的所有屬性和方法。這使得開發人員可以輕鬆地自訂 Chronometer 的外觀，包括其文字大小、顏色和字型。</string>
     <string name="snack_this_is_a_snackbar">這是一個 Snack bar！</string>
     <string name="snack_bar_clicked">已點擊</string>
     <string name="snack_copied_to_clipboard">已複製到剪貼簿！📋</string>
     <string name="snack_unable_to_open_google_play_store">無法開啟 Google Play 商店。</string>
-    <string name="snack_rating">感謝您給我們 %1$.1f 顆星的評價！❤️</string>
+    <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">圖片按鈕已點擊！</string>
     <string name="toast_this_is_a_toast">這是一個 Toast！</string>
     <string name="tooltip_show_code">顯示程式碼語法</string>
     <string name="tooltip_show_java_code_snippet">顯示Java代碼段</string>
     <string name="tooltip_open_me">開啟我 🌐</string>
-    <string name="hint_type">在此輸入…</string>
-    <string name="hint_password">輸入您的密碼…</string>
-
+    <string name="hint_type">Type here</string>
+    <string name="hint_password">Enter your password</string>
     <string name="app_usage_notifications">應用程式使用通知</string>
     <string name="update_notifications">更新通知</string>
-    <string name="browse_terms_of_service_and_privacy_policy">瀏覽<i><u>服務條款</u></i>和<i><u>隱私權政策</u></i></string>
-
+    <string name="browse_terms_of_service_and_privacy_policy">瀏覽<i>
+            <u>服務條款</u>
+        </i>和<i>
+            <u>隱私權政策</u>
+        </i>
+    </string>
     <string name="update_downloaded">更新已下載</string>
     <string name="view_in_google_play">在 Google Play 商店中檢視</string>
     <string name="version_info">版本資訊</string>

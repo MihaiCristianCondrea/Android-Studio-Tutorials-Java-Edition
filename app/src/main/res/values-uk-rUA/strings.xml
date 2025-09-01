@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_short_description">Дізнайтеся, як створювати прості програми на Java в Android Studio. 📱</string>
     <string name="notification_update_title">Доступне нове оновлення.</string>
     <string name="summary_notification_update">Доступна нова версія програми. Натисніть, щоб оновити.</string>
     <string name="notification_last_time_used_title">Давно не бачились.</string>
-    <string name="summary_notification_last_time_used">Ми сумували за вами. Давайте дізнаємось щось нове про Android.</string>
-
+    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
     <string name="welcome">Ласкаво просимо</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">Прочитайте та погодьтеся з нашими Умовами надання послуг та Політикою конфіденційності, щоб продовжити</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Погоджуюсь</string>
-
     <string name="home">Головна</string>
     <string name="announcement_title">Новий додаток вже тут.</string>
     <string name="announcement_subtitle">Перегляньте найновіший додаток Android Studio Tutorials. Вивчайте Jetpack Compose, Material 3 та багато іншого.</string>
@@ -21,10 +19,8 @@
     <string name="play_store">Play Store</string>
     <string name="search_tutorials_hint">Пошук навчальних посібників</string>
     <string name="search_tutorials_content_description">Пошук навчальних посібників</string>
-
     <string name="android_studio">Android Studio</string>
-
-    <string name="android_start">Створити новий проєкт…</string>
+    <string name="android_start">Start a new project</string>
     <string name="android_start_project">Створити новий проєкт</string>
     <string name="step1">Крок 1</string>
     <string name="summary_first_step">Перший крок для створення нового проєкту в Android Studio — це натиснути кнопку <b>Новий проєкт</b>, як показано на зображенні, та перейти до наступного кроку.</string>
@@ -32,9 +28,7 @@
     <string name="summary_second_step">Другий крок — вибрати тип активності, який підходить для вашого додатка. Ви можете вибрати з деяких попередньо налаштованих шаблонів, які можуть спростити вашу роботу. Виберіть один з них та натисніть кнопку <b>далі</b>.</string>
     <string name="step3">Крок 3</string>
     <string name="summary_third_step">Третій і останній крок — налаштувати параметри вашого додатка, такі як назва додатка, <b>назва пакета</b>, бажана <b>мова програмування</b> та <b>мінімальна версія SDK</b>. Ви можете дізнатися більше про них на <a href="https://developer.android.com/">Android Developers</a>.</string>
-
     <string name="basics">Основи</string>
-
     <string name="shortcuts">Гарячі клавіші Android Studio</string>
     <string name="shortcuts_title">Гарячі клавіші</string>
     <string name="description">Опис</string>
@@ -58,7 +52,7 @@
     <string name="extract_field">Витягти поле</string>
     <string name="extract_variable">Витягти змінну</string>
     <string name="extract_constant">Витягти константу</string>
-    <string name="build_and_run">Зібрати та запустити</string>
+    <string name="build_and_run">Build and run</string>
     <string name="build">Зібрати</string>
     <string name="apply_changes">Застосувати зміни (з Instant Run)</string>
     <string name="debugging">Налагодження</string>
@@ -72,7 +66,7 @@
     <string name="resume_program">Продовжити програму</string>
     <string name="toggle_breakpoint">Перемкнути точку зупинки</string>
     <string name="view_breakpoints">Переглянути точки зупинки</string>
-    <string name="navigation_and_searching">Навігація та пошук</string>
+    <string name="navigation_and_searching">Navigation and searching</string>
     <string name="press_shift_twice">Натисніть Shift двічі</string>
     <string name="search_everything">Шукати все (включаючи код та меню)</string>
     <string name="find">Знайти</string>
@@ -99,63 +93,48 @@
     <string name="open_v_hierarchy">Відкрити ієрархію методів</string>
     <string name="open_call_hierarchy">Відкрити ієрархію викликів</string>
     <string name="writing_code">Написання коду</string>
-    <string name="generate_code">Згенерувати код (getters, setters, тощо)</string>
+    <string name="generate_code">Generate code (getters, setters, and more)</string>
     <string name="override_methods">Перевизначити методи</string>
     <string name="implement_methods">Реалізувати методи</string>
-    <string name="surround">Оточити (if…else / try…catch / тощо)</string>
+    <string name="surround">Surround with (if/else, try/catch, and more)</string>
     <string name="delete_line">Видалити рядок біля каретки</string>
     <string name="collapse_and_expand_code_block">Згорнути/розгорнути поточний блок коду</string>
     <string name="collapse_and_expand_all_code_block">Згорнути/розгорнути всі блоки коду</string>
     <string name="duplicate_current_line">Дублювати поточний рядок або виділення</string>
     <string name="basic_code_completion">Базове автодоповнення коду</string>
     <string name="smart_code_completion">Розумне автодоповнення коду (фільтрує список методів та змінних за очікуваним типом)</string>
-    <string name="version_control">Контроль версій та локальна історія</string>
+    <string name="version_control">Version control and local history</string>
     <string name="commit_project">Закомітити проєкт до VCS</string>
     <string name="update_project">Оновити проєкт з VCS</string>
     <string name="view_recent_changes">Переглянути останні зміни</string>
     <string name="open_vcs_popup">Відкрити спливаюче вікно VCS</string>
     <string name="more_about_shortcuts">Більше про гарячі клавіші</string>
-
     <string name="history_of_android">Історія Android</string>
     <string name="history">Історія</string>
     <string name="features">Особливості</string>
-
     <string name="android_sdk">Android SDK</string>
     <string name="android_versions">Версії Android</string>
-
     <string name="view_binding">Прив\'язка представлень (View Binding)</string>
     <string name="setup_instructions">Інструкції з налаштування</string>
     <string name="use_view_binding_in_activities">Використання прив\'язки представлень в активностях</string>
     <string name="use_view_binding_in_fragments">Використання прив\'язки представлень у фрагментах</string>
     <string name="more_about_view_binding">Більше про прив\'язку представлень</string>
-
     <string name="permission_dialog_example">Приклад діалогу дозволів</string>
     <string name="more_about_permissions">Більше про дозволи</string>
-
     <string name="per_app_language_preferences">Налаштування мови для кожної програми</string>
-
     <string name="predictive_back_gesture">Прогнозований жест "Назад"</string>
-
-    <string name="layouts">Макети та представлення</string>
-
+    <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Лінійний макет (Linear Layout)</string>
-
     <string name="vertical">Вертикально</string>
     <string name="horizontal">Горизонтально</string>
     <string name="layout_preview">Попередній перегляд макета</string>
     <string name="no_java_code_needed">Для цієї активності не потрібен код Java.</string>
-
     <string name="relative_layout">Відносний макет (Relative Layout)</string>
-
     <string name="table_layout">Табличний макет (Table Layout)</string>
-
     <string name="grid_view">Сіткове представлення (Grid View)</string>
-
     <string name="image_view">Представлення зображення (Image View)</string>
-
     <string name="web_view">Веб-представлення (Web View)</string>
-
-    <string name="buttons_and_switches">Кнопки та перемикачі</string>
+    <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Кнопки</string>
     <string name="button">Кнопка</string>
     <string name="button_normal">Кнопка 1 (звичайна)</string>
@@ -177,22 +156,19 @@
     <string name="floating_button_surface_icon">Плаваюча кнопка 3 (поверхня)</string>
     <string name="floating_button_tertiary_icon">Плаваюча кнопка 4 (третинна)</string>
     <string name="same_code_buttons">Використовуйте цей код Java для всіх типів кнопок.</string>
-
     <string name="radio_buttons">Радіокнопки</string>
     <string name="choose_your_option">Виберіть ваш варіант</string>
     <string name="first_radio_option">Варіант 1</string>
     <string name="second_radio_option">Варіант 2</string>
     <string name="display_option">Показати варіант</string>
-
     <string name="image_buttons">Кнопки-зображення</string>
-
     <string name="switches">Перемикачі</string>
     <string name="switch_me">Перемкни мене</string>
     <string name="material_switch_preference">Налаштування перемикача Material</string>
     <string name="material_switch">Перемикач Material</string>
     <string name="switch_material">Перемикач Material</string>
     <string name="toggle_button">Кнопка-перемикач</string>
-    <string name="clocks_and_timers">Годинники та таймери</string>
+    <string name="clocks_and_timers">Clocks and timers</string>
     <string name="clocks">Годинники</string>
     <string name="clock_analog">Аналоговий годинник</string>
     <string name="clock_text">Текстовий годинник</string>
@@ -223,7 +199,7 @@
     <string name="tooltips">Підказки</string>
     <string name="reviews">Відгуки</string>
     <string name="rating_bar">Рейтингова панель</string>
-    <string name="rate_us">Оцініть наш додаток.</string>
+    <string name="rate_us">Rate the app.</string>
     <string name="stars">%1$.1f зірок.</string>
     <string name="in_app_review">Відгуки в додатку</string>
     <string name="progress_bars">Індикатори прогресу</string>
@@ -268,7 +244,7 @@
     <string name="ad_id">Рекламний ID [AD_ID]</string>
     <string name="internet">Інтернет [INTERNET]</string>
     <string name="wake_lock">Тримати пристрій увімкненим [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Дозволяє додатку запобігати переходу пристрою в режим сну (наприклад, затемнення екрана або сну процесора) під час критичних операцій, щоб забезпечити їх завершення без перерв. Використовується рідко для економії заряду батареї.</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">Публікувати сповіщення [POST_NOTIFICATIONS]</string>
     <string name="runtime">Під час виконання (Runtime)</string>
     <string name="access_network_state">Доступ до стану мережі [ACCESS_NETWORK_STATE]</string>
@@ -351,10 +327,10 @@
     <string name="summary_preference_android_studio_image_buttons">Відображає кнопку із зображенням (замість тексту), яку може натиснути або клацнути користувач. За замовчуванням ImageButton виглядає як звичайна кнопка, зі стандартним фоном кнопки, який змінює колір під час різних станів кнопки. Зображення на поверхні кнопки визначається або атрибутом android:src в елементі ImageButton XML, або методом ImageView.setImageResource(int).</string>
     <string name="summary_preference_android_studio_switches">Дослідіть можливості перемикачів в Android Studio та навчіться ефективно впроваджувати їх у своїх додатках. Цей урок надає повний посібник з використання перемикачів, включаючи найкращі практики для розробки візуально привабливих та зручних для користувача інтерфейсів.</string>
     <string name="summary_preference_android_studio_clocks">Простий спосіб додати цифровий, аналоговий або текстовий годинник у ваш додаток для Android.</string>
-    <string name="summary_preference_android_studio_time_picker">Android TimePicker — це елемент керування користувацьким інтерфейсом для вибору часу у 24-годинному форматі або в режимі AM/PM. Він використовується для того, щоб користувачі вибирали правильний час дня в нашому додатку. Інтерфейс вибору часу існує в основному у двох режимах: один під макетом XML, а інший — діалог.</string>
+    <string name="summary_preference_android_studio_time_picker">Android TimePicker is a user interface control for selecting the time in either 24-hour format or AM/PM mode. It is used to ensure that users pick the valid time for the day in the app. The time picker interface exists basically in two modes one is under XML layout and another is a dialog.</string>
     <string name="summary_preference_android_studio_date_picker">Android надає елементи керування для вибору часу або дати користувачем у вигляді готових до використання діалогів. Кожен вибірник надає елементи керування для вибору кожної частини часу (година, хвилина, AM/PM) або дати (місяць, день, рік). Використання цих вибірників допомагає гарантувати, що ваші користувачі зможуть вибрати час або дату, яка є дійсною, правильно відформатованою та адаптованою до мовних налаштувань користувача.</string>
     <string name="summary_preference_android_studio_chronometer">Дослідіть можливості віджета "Хронометр" в Android, потужного інструменту для відображення минулого часу. Навчіться налаштовувати слухачів кліків для кнопок, щоб керувати хронометром, та відкрийте для себе різні методи, доступні для налаштування його поведінки.</string>
-    <string name="summary_preference_android_studio_text_box">Елемент користувацького інтерфейсу для введення та зміни тексту. Коли ви визначаєте віджет для редагування тексту, ви повинні вказати атрибут R.styleable.TextView_inputType…</string>
+    <string name="summary_preference_android_studio_text_box">A user interface element for entering and modifying text. When you define an edit text widget, you must specify the R.styleable.TextView_inputType attribute to ensure the correct keyboard and input behaviors.</string>
     <string name="summary_preference_android_studio_password_text_box">Просте текстове поле з можливістю приховування тексту. Використовується на екранах входу в більшості додатків для збереження паролів у безпеці.</string>
     <string name="summary_preference_android_studio_alert_dialog">Діалог — це невелике вікно, яке пропонує користувачеві прийняти рішення або ввести додаткову інформацію. Діалог не заповнює екран і зазвичай використовується для модальних подій, які вимагають від користувачів вчинення дії, перш ніж вони зможуть продовжити.</string>
     <string name="summary_preference_android_studio_snack_bar">Snackbar\'и інформують користувачів про процес, який додаток виконав або виконає. Вони з\'являються тимчасово, в нижній частині екрана. Вони не повинні переривати досвід користувача і не вимагають введення даних користувачем для зникнення.</string>
@@ -380,28 +356,31 @@
     <string name="summary_image_buttons">Кнопки-зображення — це кнопки, які містять зображення замість тексту. Їх можна використовувати в Android для створення більш візуально привабливого та інтерактивного користувацького інтерфейсу. Кнопки-зображення можна використовувати для запуску дій, переходу до різних екранів або відображення додаткової інформації. Вони часто використовуються в поєднанні з текстовими мітками для забезпечення чіткої комунікації з користувачем щодо призначення кнопки.</string>
     <string name="summary_image_view">AndroidX AppCompatImageView — це підклас ImageView, призначений для підтримки різних функцій ActionBar та Material Design. Він є частиною бібліотеки AndroidX, яка є набором бібліотек підтримки, що пропонують зворотно сумісні версії API фреймворку Android, а також функції, доступні лише через API бібліотеки.\n\nAppCompatImageView призначений для використання як пряма заміна ImageView, що дозволяє розробникам використовувати той самий код та елементи інтерфейсу на різних версіях Android. Він підтримує різні функції, такі як тонування, завантаження векторних ресурсів та обробка масштабування зображень.\n\nAppCompatImageView також підтримує функції Material Design, такі як підвищення (elevation), що дозволяє представленню зображення відкидати тінь і виглядати піднятим над поверхнею макета. Він також підтримує ефект брижів Material Design, який є візуальним ефектом, що застосовується при дотику до представлення зображення.\n\nПідсумовуючи, AndroidX AppCompatImageView — це універсальний та багатофункціональний підклас ImageView, призначений для підтримки широкого спектру функцій та елементів дизайну в додатках для Android.</string>
     <string name="summary_linear_layout_compat">LinearLayoutCompat — це клас у бібліотеці підтримки Android appCompat v7. Він був доданий для підтримки методів, які були додані в нових рівнях API, на старих (наприклад, роздільники). Якщо ви порівняєте методи в LinearLayout та LinearLayoutCompat, ви побачите, що макет Compat має всі методи лінійного макета без будь-яких обмежень рівня API. Наприклад, метод setShowDividers був введений на рівні API 11. Отже, в цьому випадку setShowDividers (та його параметри) слід викликати за допомогою LinearLayoutCompat замість LinearLayout, якщо ви націлюєтесь на платформу з рівнем API нижче 11.</string>
-    <string name="summary_donations">Незалежно від суми вашої пожертви, ви допоможете нам підтримувати роботу нашого додатка та покращувати наші функції. Ми цінуємо вашу щедрість та доброту.</string>
+    <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">Дізнайтеся, як використовувати індикатори прогресу в Android за допомогою цього інтерактивного уроку. Цей урок містить два розділи: один для горизонтального індикатора прогресу та один для кругового. У кожному розділі ви можете побачити, як індикатор прогресу оновлюється в міру завантаження. Ви також можете переглянути код уроку, натиснувши на плаваючу кнопку дії внизу екрана.</string>
     <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android — це мобільна операційна система, розроблена Google. Вперше вона була випущена як бета-версія 5 листопада 2007 року, а перша комерційна версія, Android 1.0, була запущена 23 вересня 2008 року. Android базується на модифікованій версії ядра Linux та іншому програмному забезпеченні з відкритим вихідним кодом.\n\nAndroid Studio — це офіційне інтегроване середовище розробки (IDE) для розробки додатків для Android. Воно було анонсовано Google на конференції I/O 15 травня 2013 року і випущено для загального користування 8 грудня 2014 року. Android Studio базується на IntelliJ IDEA, популярному Java IDE.\n\nKotlin — це кросплатформна мова програмування, яка може працювати на віртуальній машині Java (JVM), Android, у браузері та на нативних платформах. Вона була створена компанією JetBrains, що базується в Празі. Kotlin вперше був анонсований у липні 2011 року і випущений як проект з відкритим вихідним кодом у лютому 2012 року.\n\nGoogle оголосила про підтримку Kotlin як офіційної мови для розробки додатків для Android на своїй конференції I/O 17 травня 2017 року. З того часу Kotlin став однією з найпопулярніших мов для розробників Android. За даними Google на жовтень 2020 року, понад 70% з 1000 найкращих додатків у Google Play використовують Kotlin.</string>
-    <string name="summary_android_features">Android — це не лише операційна система, а й платформа, що пропонує широкий спектр функцій та можливостей для користувачів та розробників. Деякі з функцій Android включають:\n\n- Near Field Communication (NFC), що дозволяє обмінюватися даними, здійснювати платежі та підключатися до інших пристроїв бездротово.\n- Альтернативні клавіатури, що дозволяють налаштовувати спосіб введення за допомогою різних розкладок, мов та тем.\n- ІЧ-передача, що дозволяє використовувати телефон як пульт дистанційного керування для телевізорів, кондиціонерів та інших приладів.\n- Керування без дотику, що дозволяє виконувати дії на телефоні, не торкаючись екрана, за допомогою жестів або голосових команд.\n- Автоматизація, що дозволяє налаштовувати рутини та тригери для автоматичного виконання певних завдань на телефоні.\n- Бездротове завантаження додатків, що дозволяє встановлювати додатки з комп\'ютера або веб-браузера без підключення телефону за допомогою кабелю.\n- Заміна пам\'яті та акумулятора, що дає можливість легко розширити пам\'ять телефону або замінити його акумулятор.\n- Настроюваний головний екран, що дозволяє персоналізувати зовнішній вигляд телефону за допомогою віджетів, шпалер, іконок та лаунчерів.\n\nAndroid Studio — найкращий інструмент для розробки додатків для Android. Він пропонує багато функцій та переваг для розробників, таких як:\n\n- Редактор коду з підсвічуванням синтаксису, автодоповненням коду, рефакторингом, налагодженням, тестуванням та інструментами лінтингу.\n- Редактор макетів з інтерфейсом перетягування для проектування користувацьких інтерфейсів.\n- Емулятор зі швидким завантаженням та підтримкою знімків для тестування додатків на різних пристроях та конфігураціях.\n- Інтеграція з Firebase з такими сервісами, як аутентифікація, база даних, сховище, аналітика, звіти про збої тощо.\n- Система збирання на основі Gradle з керуванням залежностями,\nналаштуванням,\nоптимізацією,\nпідписанням,\nопціями розповсюдження тощо.\n\nЗ Android Studio\nви можете створювати дивовижні додатки для пристроїв Android, використовуючи Kotlin,\nсучасну мову програмування, яка є лаконічною,\nбезпечною,\nвиразною\nта сумісною з Java.</string>
+    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">Хронометр — це спеціалізований віджет у фреймворку Android, який надає функціональність, подібну до таймера, для відображення минулого часу. Його можна налаштувати на відлік часу вгору або вниз, і він зазвичай використовується в додатках, які вимагають обліку часу, таких як секундоміри або таймери зворотного відліку. Клас Chronometer походить від класу TextView, що означає, що він успадковує всі властивості та методи TextView. Це дозволяє розробникам легко налаштовувати зовнішній вигляд хронометра, включаючи розмір тексту, колір та шрифт.</string>
     <string name="snack_this_is_a_snackbar">Це snackbar.</string>
     <string name="snack_bar_clicked">натиснуто</string>
     <string name="snack_copied_to_clipboard">Скопійовано в буфер обміну. 📋</string>
     <string name="snack_unable_to_open_google_play_store">Не вдалося відкрити Google Play Store.</string>
-    <string name="snack_rating">Дякуємо за оцінку %1$.1f зірок. ❤️</string>
+    <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Натиснуто кнопку-зображення.</string>
     <string name="toast_this_is_a_toast">Це toast-повідомлення.</string>
     <string name="tooltip_show_code">Показати синтаксис коду</string>
     <string name="tooltip_show_java_code_snippet">Показати фрагмент коду Java</string>
     <string name="tooltip_open_me">Відкрий мене 🌐</string>
-    <string name="hint_type">Введіть тут…</string>
-    <string name="hint_password">Введіть ваш пароль…</string>
-
+    <string name="hint_type">Type here</string>
+    <string name="hint_password">Enter your password</string>
     <string name="app_usage_notifications">Сповіщення про використання додатка</string>
     <string name="update_notifications">Сповіщення про оновлення</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Перегляньте <i><u>Умови надання послуг</u></i> та <i><u>Політику конфіденційності</u></i></string>
-
+    <string name="browse_terms_of_service_and_privacy_policy">Перегляньте <i>
+            <u>Умови надання послуг</u>
+        </i> та <i>
+            <u>Політику конфіденційності</u>
+        </i>
+    </string>
     <string name="update_downloaded">Оновлення завантажено</string>
     <string name="view_in_google_play">Переглянути в Google Play Store</string>
     <string name="version_info">Інформація про версію</string>

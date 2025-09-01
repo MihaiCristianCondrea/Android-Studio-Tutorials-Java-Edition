@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_short_description">Alamin kung paano gumawa ng mga simpleng Java app sa Android Studio. 📱</string>
     <string name="notification_update_title">May bagong update na available.</string>
     <string name="summary_notification_update">May bagong bersyon ng app. I-click para mag-update.</string>
     <string name="notification_last_time_used_title">Matagal ka nang hindi bumibisita.</string>
-    <string name="summary_notification_last_time_used">Na-miss ka namin. Matuto tayo ng bago tungkol sa Android.</string>
-
+    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
     <string name="welcome">Maligayang pagdating</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">Basahin at sumang-ayon sa aming Mga Tuntunin ng Serbisyo at Patakaran sa Privacy para magpatuloy</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Sumang-ayon</string>
-
     <string name="home">Home</string>
     <string name="announcement_title">May Bagong App.</string>
     <string name="announcement_subtitle">Tingnan ang pinakabagong Android Studio Tutorials app. Alamin ang Jetpack Compose, Material 3, at marami pa.</string>
@@ -21,10 +19,8 @@
     <string name="play_store">Play Store</string>
     <string name="search_tutorials_hint">Maghanap ng mga tutorial</string>
     <string name="search_tutorials_content_description">Maghanap ng mga tutorial</string>
-
     <string name="android_studio">Android Studio</string>
-
-    <string name="android_start">Magsimula ng Bagong Proyekto…</string>
+    <string name="android_start">Start a new project</string>
     <string name="android_start_project">Magsimula ng Bagong Proyekto</string>
     <string name="step1">Hakbang 1</string>
     <string name="summary_first_step">Ang unang hakbang para gumawa ng bagong proyekto sa Android Studio ay i-click ang <b>Bagong proyekto</b> na button tulad ng ipinapakita sa larawan at magpatuloy sa susunod na hakbang.</string>
@@ -32,9 +28,7 @@
     <string name="summary_second_step">Ang pangalawang hakbang ay piliin ang uri ng activity na babagay sa iyong app. Maaari kang pumili mula sa ilang mga preset na maaaring pasimplehin ang iyong trabaho. Pumili ng isa sa mga ito at i-click ang <b>susunod</b> na button.</string>
     <string name="step3">Hakbang 3</string>
     <string name="summary_third_step">Ang ikatlo at huling hakbang ay i-configure ang mga setting ng iyong app, tulad ng pangalan ng app, <b>pangalan ng package</b>, gustong <b>lenggwahe ng programming</b> at <b>minimum na SDK</b>. Maaari kang matuto nang higit pa tungkol sa mga ito sa <a href="https://developer.android.com/">Android Developers</a>.</string>
-
     <string name="basics">Mga Pangunahin</string>
-
     <string name="shortcuts">Mga Shortcut sa Android Studio</string>
     <string name="shortcuts_title">Mga Shortcut</string>
     <string name="description">Paglalarawan</string>
@@ -58,7 +52,7 @@
     <string name="extract_field">I-extract ang field</string>
     <string name="extract_variable">I-extract ang variable</string>
     <string name="extract_constant">I-extract ang constant</string>
-    <string name="build_and_run">I-build at patakbuhin</string>
+    <string name="build_and_run">Build and run</string>
     <string name="build">I-build</string>
     <string name="apply_changes">I-apply ang mga pagbabago (gamit ang Instant Run)</string>
     <string name="debugging">Pag-debug</string>
@@ -72,7 +66,7 @@
     <string name="resume_program">Ipagpatuloy ang programa</string>
     <string name="toggle_breakpoint">I-toggle ang breakpoint</string>
     <string name="view_breakpoints">Tingnan ang mga breakpoint</string>
-    <string name="navigation_and_searching">Pag-navigate at paghahanap</string>
+    <string name="navigation_and_searching">Navigation and searching</string>
     <string name="press_shift_twice">Pindutin ang shift nang dalawang beses</string>
     <string name="search_everything">Hanapin ang lahat (kasama ang code at mga menu)</string>
     <string name="find">Hanapin</string>
@@ -99,63 +93,48 @@
     <string name="open_v_hierarchy">Buksan ang method hierarchy</string>
     <string name="open_call_hierarchy">Buksan ang call hierarchy</string>
     <string name="writing_code">Pagsusulat ng code</string>
-    <string name="generate_code">Gumawa ng code (getters, setters, atbp)</string>
+    <string name="generate_code">Generate code (getters, setters, and more)</string>
     <string name="override_methods">I-override ang mga method</string>
     <string name="implement_methods">I-implement ang mga method</string>
-    <string name="surround">Palibutan ng (if…else / try…catch / atbp.)</string>
+    <string name="surround">Surround with (if/else, try/catch, and more)</string>
     <string name="delete_line">Burahin ang linya sa caret</string>
     <string name="collapse_and_expand_code_block">I-collapse/i-expand ang kasalukuyang code block</string>
     <string name="collapse_and_expand_all_code_block">I-collapse/i-expand ang lahat ng code block</string>
     <string name="duplicate_current_line">Doblehin ang kasalukuyang linya o seleksyon</string>
     <string name="basic_code_completion">Pangunahing pagkumpleto ng code</string>
     <string name="smart_code_completion">Matalinong pagkumpleto ng code (sinasala ang listahan ng mga method at variable ayon sa inaasahang uri)</string>
-    <string name="version_control">Kontrol sa bersyon at lokal na kasaysayan</string>
+    <string name="version_control">Version control and local history</string>
     <string name="commit_project">I-commit ang proyekto sa VCS</string>
     <string name="update_project">I-update ang proyekto mula sa VCS</string>
     <string name="view_recent_changes">Tingnan ang mga kamakailang pagbabago</string>
     <string name="open_vcs_popup">Buksan ang VCS pop-up</string>
     <string name="more_about_shortcuts">Higit pa tungkol sa mga shortcut</string>
-
     <string name="history_of_android">Kasaysayan ng Android</string>
     <string name="history">Kasaysayan</string>
     <string name="features">Mga Tampok</string>
-
     <string name="android_sdk">Mga Android SDK</string>
     <string name="android_versions">Mga Bersyon ng Android</string>
-
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Mga tagubilin sa pag-setup</string>
     <string name="use_view_binding_in_activities">Gamitin ang view binding sa mga activity</string>
     <string name="use_view_binding_in_fragments">Gamitin ang view binding sa mga fragment</string>
     <string name="more_about_view_binding">Higit pa tungkol sa View Binding</string>
-
     <string name="permission_dialog_example">Halimbawa ng dialog ng pahintulot</string>
     <string name="more_about_permissions">Higit pa tungkol sa mga pahintulot</string>
-
     <string name="per_app_language_preferences">Mga kagustuhan sa wika bawat app</string>
-
     <string name="predictive_back_gesture">Predictive back gesture</string>
-
-    <string name="layouts">Mga Layout at View</string>
-
+    <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Linear Layout</string>
-
     <string name="vertical">Patayo</string>
     <string name="horizontal">Pahalang</string>
     <string name="layout_preview">Preview ng layout</string>
     <string name="no_java_code_needed">Walang kinakailangang Java code para sa activity na ito.</string>
-
     <string name="relative_layout">Relative Layout</string>
-
     <string name="table_layout">Table Layout</string>
-
     <string name="grid_view">Grid View</string>
-
     <string name="image_view">Image View</string>
-
     <string name="web_view">Web View</string>
-
-    <string name="buttons_and_switches">Mga Button at Switch</string>
+    <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Mga Button</string>
     <string name="button">Button</string>
     <string name="button_normal">Button 1 (normal)</string>
@@ -177,22 +156,19 @@
     <string name="floating_button_surface_icon">Floating Button 3 (ibabaw)</string>
     <string name="floating_button_tertiary_icon">Floating Button 4 (pangatlo)</string>
     <string name="same_code_buttons">Gamitin ang Java code na ito para sa lahat ng uri ng button.</string>
-
     <string name="radio_buttons">Mga Radio Button</string>
     <string name="choose_your_option">Piliin ang iyong opsyon</string>
     <string name="first_radio_option">Opsyon 1</string>
     <string name="second_radio_option">Opsyon 2</string>
     <string name="display_option">Ipakita ang opsyon</string>
-
     <string name="image_buttons">Mga Image Button</string>
-
     <string name="switches">Mga Switch</string>
     <string name="switch_me">I-switch mo ako</string>
     <string name="material_switch_preference">Kagustuhan sa Material Switch</string>
     <string name="material_switch">Material Switch</string>
     <string name="switch_material">Switch Material</string>
     <string name="toggle_button">Toggle Button</string>
-    <string name="clocks_and_timers">Mga Orasan at Timer</string>
+    <string name="clocks_and_timers">Clocks and timers</string>
     <string name="clocks">Mga Orasan</string>
     <string name="clock_analog">Analog na Orasan</string>
     <string name="clock_text">Text na Orasan</string>
@@ -223,7 +199,7 @@
     <string name="tooltips">Mga Tooltip</string>
     <string name="reviews">Mga Review</string>
     <string name="rating_bar">Rating bar</string>
-    <string name="rate_us">I-rate ang aming app.</string>
+    <string name="rate_us">Rate the app.</string>
     <string name="stars">%1$.1f na bituin.</string>
     <string name="in_app_review">Mga In-App Review</string>
     <string name="progress_bars">Mga Progress Bar</string>
@@ -268,7 +244,7 @@
     <string name="ad_id">Ad id [AD_ID]</string>
     <string name="internet">Internet [INTERNET]</string>
     <string name="wake_lock">Panatilihing gising ang device [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Pinapayagan ang app na pigilan ang device na mag-sleep (hal., pagdidilim ng screen o pag-sleep ng processor) sa mga kritikal na operasyon para masigurong matatapos ang mga ito nang walang abala. Ginagamit ito nang matipid para makatipid ng baterya.</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">Mag-post ng mga notipikasyon [POST_NOTIFICATIONS]</string>
     <string name="runtime">Runtime</string>
     <string name="access_network_state">I-access ang estado ng network [ACCESS_NETWORK_STATE]</string>
@@ -351,10 +327,10 @@
     <string name="summary_preference_android_studio_image_buttons">Nagpapakita ng isang button na may larawan (sa halip na text) na maaaring pindutin o i-click ng user. Bilang default, ang isang ImageButton ay mukhang isang regular na Button, na may standard na background ng button na nagbabago ng kulay sa panahon ng iba\'t ibang estado ng button. Ang larawan sa ibabaw ng button ay tinutukoy alinman sa pamamagitan ng android:src attribute sa ImageButton XML element o sa pamamagitan ng ImageView.setImageResource(int) method.</string>
     <string name="summary_preference_android_studio_switches">Galugarin ang mga kakayahan ng mga switch sa Android Studio at alamin kung paano epektibong i-implement ang mga ito sa iyong mga application. Nagbibigay ang araling ito ng komprehensibong gabay sa paggamit ng mga switch, kasama ang mga pinakamahusay na kasanayan para sa pagdidisenyo ng mga interface na kaakit-akit sa paningin at madaling gamitin.</string>
     <string name="summary_preference_android_studio_clocks">Isang simpleng paraan para magdagdag ng digital, analog o text na orasan sa iyong Android app.</string>
-    <string name="summary_preference_android_studio_time_picker">Ang Android TimePicker ay isang user interface control para sa pagpili ng oras sa alinman sa 24-hour format o AM/PM mode. Ginagamit ito para masigurong pipiliin ng mga user ang tamang oras para sa araw sa aming application. Ang interface ng time picker ay karaniwang umiiral sa dalawang mode, isa ay sa ilalim ng XML layout at ang isa pa ay isang dialog.</string>
+    <string name="summary_preference_android_studio_time_picker">Android TimePicker is a user interface control for selecting the time in either 24-hour format or AM/PM mode. It is used to ensure that users pick the valid time for the day in the app. The time picker interface exists basically in two modes one is under XML layout and another is a dialog.</string>
     <string name="summary_preference_android_studio_date_picker">Nagbibigay ang Android ng mga kontrol para sa user na pumili ng oras o pumili ng petsa bilang mga dialog na handa nang gamitin. Bawat picker ay nagbibigay ng mga kontrol para sa pagpili ng bawat bahagi ng oras (oras, minuto, AM/PM) o petsa (buwan, araw, taon). Ang paggamit ng mga picker na ito ay nakakatulong na masigurong makakapili ang iyong mga user ng oras o petsa na wasto, tama ang format, at na-adjust sa lokal ng user.</string>
     <string name="summary_preference_android_studio_chronometer">Galugarin ang mga kakayahan ng Chronometer widget sa Android, isang makapangyarihang tool para sa pagpapakita ng lumipas na oras. Alamin kung paano mag-set up ng mga click listener para sa mga button para kontrolin ang chronometer at tuklasin ang iba\'t ibang method na available para i-customize ang behavior nito.</string>
-    <string name="summary_preference_android_studio_text_box">Isang elemento ng user interface para sa pagpasok at pagbabago ng text. Kapag nag-define ka ng isang edit text widget, dapat mong tukuyin ang R.styleable.TextView_inputType attribute…</string>
+    <string name="summary_preference_android_studio_text_box">A user interface element for entering and modifying text. When you define an edit text widget, you must specify the R.styleable.TextView_inputType attribute to ensure the correct keyboard and input behaviors.</string>
     <string name="summary_preference_android_studio_password_text_box">Isang simpleng text box na may kakayahang itago ang text. Ginagamit sa mga login screen para sa karamihan ng mga app para mapanatiling ligtas ang mga password.</string>
     <string name="summary_preference_android_studio_alert_dialog">Ang isang dialog ay isang maliit na window na nag-uudyok sa user na gumawa ng desisyon o magpasok ng karagdagang impormasyon. Ang isang dialog ay hindi pumupuno sa screen at karaniwang ginagamit para sa mga modal na kaganapan na nangangailangan sa mga user na gumawa ng aksyon bago sila makapagpatuloy.</string>
     <string name="summary_preference_android_studio_snack_bar">Ipinapaalam ng mga snack bar sa mga user ang isang proseso na ginawa o gagawin ng isang app. Lumalabas sila pansamantala, patungo sa ibaba ng screen. Hindi nila dapat istorbohin ang karanasan ng user, at hindi nila kailangan ng input ng user para mawala.</string>
@@ -380,28 +356,31 @@
     <string name="summary_image_buttons">Ang mga image button ay mga button na naglalaman ng isang larawan sa halip na text. Maaari silang gamitin sa Android para magbigay ng isang mas kaakit-akit sa paningin at interactive na user interface. Maaaring gamitin ang mga image button para mag-trigger ng mga aksyon, mag-navigate sa iba\'t ibang screen, o magpakita ng karagdagang impormasyon. Madalas silang ginagamit kasama ng mga text label para magbigay ng malinaw na komunikasyon sa user tungkol sa layunin ng button.</string>
     <string name="summary_image_view">Ang AndroidX AppCompatImageView ay isang subclass ng ImageView na idinisenyo para suportahan ang iba\'t ibang feature ng ActionBar at Material Design. Ito ay bahagi ng AndroidX library, na isang set ng mga support library na nag-aalok ng mga backward-compatible na bersyon ng mga API ng Android framework pati na rin ang mga feature na available lamang sa pamamagitan ng mga API ng library.\n\nAng AppCompatImageView ay nilalayong gamitin bilang isang drop-in replacement para sa ImageView, na nagpapahintulot sa mga developer na gamitin ang parehong code at mga elemento ng UI sa iba\'t ibang bersyon ng Android. Kasama rito ang suporta para sa iba\'t ibang feature tulad ng tinting, pag-load ng mga vector drawable, at paghawak sa image scaling.\n\nSinusuportahan din ng AppCompatImageView ang mga feature ng Material Design tulad ng elevation, na nagpapahintulot sa image view na mag-cast ng anino at magmukhang nakataas sa ibabaw ng layout. Sinusuportahan din nito ang Material Design ripple effect, na isang visual na epekto na inilalapat kapag hinawakan ang image view.\n\nSa buod, ang AndroidX AppCompatImageView ay isang versatile at mayaman sa feature na subclass ng ImageView na idinisenyo para suportahan ang malawak na hanay ng mga feature at elemento ng disenyo sa mga Android app.</string>
     <string name="summary_linear_layout_compat">Ang Linear Layout Compat ay isang klase sa Android support library appCompat v7. Idinagdag ito para suportahan ang mga method na idinagdag sa mas bagong mga antas ng API sa mga luma (tulad ng mga divider). Kung ikukumpara mo ang mga method sa LinearLayout at LinearLayoutCompat, makikita mo na ang Compat layout ay may lahat ng mga method ng Linear Layout nang walang anumang limitasyon sa antas ng API. Halimbawa, ang method na setShowDividers ay ipinakilala sa API level 11. Kaya, sa kasong ito, ang setShowDividers (at ang mga parameter nito) ay dapat tawagin gamit ang Linear Layout Compat sa halip na LinearLayout kung nagta-target ka ng isang platform na may API level na mas mababa sa 11.</string>
-    <string name="summary_donations">Gaano man kalaki ang iyong ido-donate, matutulungan mo kaming mapanatiling tumatakbo ang aming app at mapabuti ang aming mga feature. Pinahahalagahan namin ang iyong kabutihang-loob at kabaitan.</string>
+    <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">Alamin kung paano gamitin ang mga progress bar sa Android sa interactive na araling ito. Kasama sa araling ito ang dalawang seksyon: isa para sa isang horizontal progress bar at isa para sa isang circular progress bar. Sa bawat seksyon, makikita mo kung paano nag-a-update ang progress bar habang umuusad ang isang download. Maaari mo ring tingnan ang code para sa aralin sa pamamagitan ng pag-click sa floating action button sa ibaba ng screen.</string>
     <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Ang Android ay isang mobile operating system na binuo ng Google. Unang inilabas ito bilang isang beta na bersyon noong Nobyembre 5, 2007 at ang unang komersyal na bersyon, ang Android 1.0, ay inilunsad noong Setyembre 23, 2008. Ang Android ay batay sa isang binagong bersyon ng Linux kernel at iba pang open source na software.\n\nAng Android Studio ay ang opisyal na integrated development environment (IDE) para sa pag-develop ng Android app. Inanunsyo ito ng Google sa kanilang I/O conference noong Mayo 15, 2013 at inilabas para sa pampublikong paggamit noong Disyembre 8, 2014. Ang Android Studio ay batay sa IntelliJ IDEA, isang sikat na Java IDE.\n\nAng Kotlin ay isang cross-platform na programming language na maaaring tumakbo sa Java Virtual Machine (JVM), Android, browser at mga native na platform. Nilikha ito ng JetBrains, isang kumpanya ng software na nakabase sa Prague. Unang inanunsyo ang Kotlin noong Hulyo 2011 at inilabas bilang isang open source na proyekto noong Pebrero 2012.\n\nInanunsyo ng Google ang suporta nito para sa Kotlin bilang isang opisyal na wika para sa pag-develop ng Android app sa kanilang I/O conference noong Mayo 17, 2017. Mula noon, naging isa sa pinakasikat na wika ang Kotlin para sa mga developer ng Android. Ayon sa data ng Google mula Oktubre 2020, higit sa 70% ng nangungunang 1000 app sa Google Play ay gumagamit ng Kotlin.</string>
-    <string name="summary_android_features">Ang Android ay hindi lamang isang operating system, kundi isang platform din na nag-aalok ng iba\'t ibang mga feature at kakayahan para sa mga user at developer. Ilan sa mga feature ng Android ay kinabibilangan ng:\n\n- Near Field Communication (NFC), na nagpapahintulot sa iyo na magbahagi ng data, magbayad, at kumonekta sa iba pang mga device nang wireless.\n- Mga alternatibong keyboard, na nagbibigay-daan sa iyo na i-customize ang iyong paraan ng pag-input gamit ang iba\'t ibang mga layout, wika, at tema.\n- IR transmission, na nagbibigay-daan sa iyo na gamitin ang iyong telepono bilang isang remote control para sa mga TV, air conditioner, at iba pang mga appliance.\n- No-touch control, na nagbibigay-daan sa iyo na magsagawa ng mga aksyon sa iyong telepono nang hindi hinahawakan ang screen sa pamamagitan ng paggamit ng mga kilos o voice command.\n- Automation, na nagpapahintulot sa iyo na mag-set up ng mga routine at trigger para sa iyong telepono upang awtomatikong magsagawa ng ilang mga gawain.\n- Wireless app downloads, na nagbibigay-daan sa iyo na mag-install ng mga app mula sa iyong computer o web browser nang hindi kinakailangang ikonekta ang iyong telepono gamit ang isang cable.\n- Pagpapalit ng storage at baterya, na nagbibigay sa iyo ng opsyon na palawakin ang memorya ng iyong telepono o palitan ang baterya nito nang madali.\n- Custom na home screen, na nagbibigay-daan sa iyo na i-personalize ang hitsura ng iyong telepono gamit ang mga widget, wallpaper, icon, at launcher.\n\nAng Android Studio ay ang pinakamahusay na tool para sa pag-develop ng mga Android app. Nag-aalok ito ng maraming mga feature at benepisyo para sa mga developer tulad ng:\n\n- Code editor na may syntax highlighting, code completion, refactoring, debugging, testing, at linting tools.\n- Layout editor na may drag-and-drop na interface para sa pagdidisenyo ng mga user interface.\n- Emulator na may mabilis na boot at suporta sa snapshot para sa pagsubok ng mga app sa iba\'t ibang mga device at configuration.\n- Firebase integration sa mga serbisyo tulad ng authentication, database, storage, analytics, crash reporting atbp. \n- Build system na batay sa Gradle na may dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options atbp. \n\nGamit ang Android Studio,\nmakakalikha ka ng mga kamangha-manghang app para sa mga Android device gamit ang Kotlin,\nisang modernong programming language na maikli,\nligtas,\nmalinaw,\nat interoperable sa Java.</string>
+    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">Ang isang Chronometer ay isang espesyalisadong widget sa Android framework na nagbibigay ng isang functionality na parang timer para sa pagpapakita ng lumipas na oras. Maaari itong i-configure para magbilang pataas o pababa, at karaniwang ginagamit sa mga application na nangangailangan ng timekeeping, tulad ng mga stopwatch o countdown timer app. Ang Chronometer class ay nagmula sa TextView class, na nangangahulugang namamana nito ang lahat ng mga katangian at method ng isang TextView. Nagbibigay-daan ito sa mga developer na madaling i-customize ang hitsura ng Chronometer, kasama ang laki ng text, kulay, at font nito.</string>
     <string name="snack_this_is_a_snackbar">Ito ay isang snack bar.</string>
     <string name="snack_bar_clicked">na-click</string>
     <string name="snack_copied_to_clipboard">Kinopya sa clipboard. 📋</string>
     <string name="snack_unable_to_open_google_play_store">Hindi mabuksan ang Google Play Store.</string>
-    <string name="snack_rating">Salamat sa pag-rate sa amin ng %1$.1f na bituin. ❤️</string>
+    <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Na-click ang image button.</string>
     <string name="toast_this_is_a_toast">Ito ay isang toast.</string>
     <string name="tooltip_show_code">Ipakita ang syntax ng code</string>
     <string name="tooltip_show_java_code_snippet">Ipakita ang Java Code Snippet</string>
     <string name="tooltip_open_me">Buksan mo ako 🌐</string>
-    <string name="hint_type">Mag-type dito…</string>
-    <string name="hint_password">Ilagay ang iyong password…</string>
-
+    <string name="hint_type">Type here</string>
+    <string name="hint_password">Enter your password</string>
     <string name="app_usage_notifications">Mga Notipikasyon sa Paggamit ng App</string>
     <string name="update_notifications">Mga Notipikasyon sa Update</string>
-    <string name="browse_terms_of_service_and_privacy_policy">I-browse ang <i><u>Mga Tuntunin ng Serbisyo</u></i> at <i><u>Patakaran sa Privacy</u></i></string>
-
+    <string name="browse_terms_of_service_and_privacy_policy">I-browse ang <i>
+            <u>Mga Tuntunin ng Serbisyo</u>
+        </i> at <i>
+            <u>Patakaran sa Privacy</u>
+        </i>
+    </string>
     <string name="update_downloaded">Na-download ang update</string>
     <string name="view_in_google_play">Tingnan sa Google Play Store</string>
     <string name="version_info">Impormasyon ng bersyon</string>

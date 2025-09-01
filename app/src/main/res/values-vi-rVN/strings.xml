@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_short_description">Học cách tạo các ứng dụng Java đơn giản trong Android Studio. 📱</string>
     <string name="notification_update_title">Có bản cập nhật mới.</string>
     <string name="summary_notification_update">Đã có phiên bản mới của ứng dụng. Nhấp để cập nhật.</string>
     <string name="notification_last_time_used_title">Đã lâu không gặp.</string>
-    <string name="summary_notification_last_time_used">Chúng tôi nhớ bạn. Hãy cùng tìm hiểu điều gì đó mới về Android.</string>
-
+    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
     <string name="welcome">Chào mừng</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">Đọc và đồng ý với Điều khoản dịch vụ và Chính sách quyền riêng tư của chúng tôi để tiếp tục</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Đồng ý</string>
-
     <string name="home">Trang chủ</string>
     <string name="announcement_title">Một ứng dụng mới đã ra mắt.</string>
     <string name="announcement_subtitle">Hãy xem ứng dụng Hướng dẫn Android Studio mới nhất. Tìm hiểu Jetpack Compose, Material 3, v.v.</string>
@@ -21,10 +19,8 @@
     <string name="play_store">Cửa hàng Play</string>
     <string name="search_tutorials_hint">Tìm kiếm hướng dẫn</string>
     <string name="search_tutorials_content_description">Tìm kiếm hướng dẫn</string>
-
     <string name="android_studio">Android Studio</string>
-
-    <string name="android_start">Bắt đầu một dự án mới…</string>
+    <string name="android_start">Start a new project</string>
     <string name="android_start_project">Bắt đầu một dự án mới</string>
     <string name="step1">Bước 1</string>
     <string name="summary_first_step">Bước đầu tiên để tạo một dự án mới trong Android Studio là nhấp vào nút <b>Dự án mới</b> như trong hình và tiếp tục bước tiếp theo.</string>
@@ -32,9 +28,7 @@
     <string name="summary_second_step">Bước thứ hai là chọn loại hoạt động phù hợp với ứng dụng của bạn. Bạn có thể chọn từ một số cài đặt sẵn có thể đơn giản hóa công việc của bạn. Chọn một trong số chúng và nhấp vào nút <b>tiếp theo</b>.</string>
     <string name="step3">Bước 3</string>
     <string name="summary_third_step">Bước thứ ba và cũng là bước cuối cùng là định cấu hình cài đặt ứng dụng của bạn, chẳng hạn như tên ứng dụng, <b>tên gói</b>, <b>ngôn ngữ lập trình</b> ưu tiên và <b>SDK tối thiểu</b>. Bạn có thể tìm hiểu thêm về chúng trên <a href="https://developer.android.com/">Nhà phát triển Android</a>.</string>
-
     <string name="basics">Cơ bản</string>
-
     <string name="shortcuts">Phím tắt Android Studio</string>
     <string name="shortcuts_title">Phím tắt</string>
     <string name="description">Mô tả</string>
@@ -58,7 +52,7 @@
     <string name="extract_field">Trích xuất trường</string>
     <string name="extract_variable">Trích xuất biến</string>
     <string name="extract_constant">Trích xuất hằng số</string>
-    <string name="build_and_run">Xây dựng và chạy</string>
+    <string name="build_and_run">Build and run</string>
     <string name="build">Xây dựng</string>
     <string name="apply_changes">Áp dụng thay đổi (với Instant Run)</string>
     <string name="debugging">Gỡ lỗi</string>
@@ -72,7 +66,7 @@
     <string name="resume_program">Tiếp tục chương trình</string>
     <string name="toggle_breakpoint">Chuyển đổi điểm ngắt</string>
     <string name="view_breakpoints">Xem các điểm ngắt</string>
-    <string name="navigation_and_searching">Điều hướng &amp; tìm kiếm</string>
+    <string name="navigation_and_searching">Navigation and searching</string>
     <string name="press_shift_twice">Nhấn shift hai lần</string>
     <string name="search_everything">Tìm kiếm mọi thứ (bao gồm mã và menu)</string>
     <string name="find">Tìm</string>
@@ -99,63 +93,48 @@
     <string name="open_v_hierarchy">Mở hệ thống phân cấp phương thức</string>
     <string name="open_call_hierarchy">Mở hệ thống phân cấp cuộc gọi</string>
     <string name="writing_code">Viết mã</string>
-    <string name="generate_code">Tạo mã (getters, setters, v.v.)</string>
+    <string name="generate_code">Generate code (getters, setters, and more)</string>
     <string name="override_methods">Ghi đè phương thức</string>
     <string name="implement_methods">Triển khai phương thức</string>
-    <string name="surround">Bao quanh bằng (if…else / try…catch / v.v.)</string>
+    <string name="surround">Surround with (if/else, try/catch, and more)</string>
     <string name="delete_line">Xóa dòng tại con trỏ</string>
     <string name="collapse_and_expand_code_block">Thu gọn/mở rộng khối mã hiện tại</string>
     <string name="collapse_and_expand_all_code_block">Thu gọn/mở rộng tất cả các khối mã</string>
     <string name="duplicate_current_line">Nhân đôi dòng hoặc lựa chọn hiện tại</string>
     <string name="basic_code_completion">Hoàn thành mã cơ bản</string>
     <string name="smart_code_completion">Hoàn thành mã thông minh (lọc danh sách các phương thức và biến theo loại dự kiến)</string>
-    <string name="version_control">Kiểm soát phiên bản &amp; lịch sử cục bộ</string>
+    <string name="version_control">Version control and local history</string>
     <string name="commit_project">Cam kết dự án vào VCS</string>
     <string name="update_project">Cập nhật dự án từ VCS</string>
     <string name="view_recent_changes">Xem các thay đổi gần đây</string>
     <string name="open_vcs_popup">Mở cửa sổ bật lên VCS</string>
     <string name="more_about_shortcuts">Thêm về phím tắt</string>
-
     <string name="history_of_android">Lịch sử của Android</string>
     <string name="history">Lịch sử</string>
     <string name="features">Tính năng</string>
-
     <string name="android_sdk">Các SDK Android</string>
     <string name="android_versions">Các phiên bản Android</string>
-
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Hướng dẫn cài đặt</string>
     <string name="use_view_binding_in_activities">Sử dụng View Binding trong các hoạt động</string>
     <string name="use_view_binding_in_fragments">Sử dụng View Binding trong các mảnh</string>
     <string name="more_about_view_binding">Thêm về View Binding</string>
-
     <string name="permission_dialog_example">Ví dụ về hộp thoại quyền</string>
     <string name="more_about_permissions">Thêm về quyền</string>
-
     <string name="per_app_language_preferences">Tùy chọn ngôn ngữ cho mỗi ứng dụng</string>
-
     <string name="predictive_back_gesture">Cử chỉ quay lại dự đoán</string>
-
-    <string name="layouts">Bố cục &amp; Giao diện</string>
-
+    <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Bố cục tuyến tính</string>
-
     <string name="vertical">Dọc</string>
     <string name="horizontal">Ngang</string>
     <string name="layout_preview">Xem trước bố cục</string>
     <string name="no_java_code_needed">Không cần mã Java cho hoạt động này.</string>
-
     <string name="relative_layout">Bố cục tương đối</string>
-
     <string name="table_layout">Bố cục bảng</string>
-
     <string name="grid_view">Chế độ xem lưới</string>
-
     <string name="image_view">Chế độ xem hình ảnh</string>
-
     <string name="web_view">Chế độ xem web</string>
-
-    <string name="buttons_and_switches">Nút &amp; Công tắc</string>
+    <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Các nút</string>
     <string name="button">Nút</string>
     <string name="button_normal">Nút 1 (bình thường)</string>
@@ -177,22 +156,19 @@
     <string name="floating_button_surface_icon">Nút nổi 3 (bề mặt)</string>
     <string name="floating_button_tertiary_icon">Nút nổi 4 (thứ ba)</string>
     <string name="same_code_buttons">Sử dụng mã Java này cho tất cả các loại nút.</string>
-
     <string name="radio_buttons">Nút radio</string>
     <string name="choose_your_option">Chọn tùy chọn của bạn</string>
     <string name="first_radio_option">Tùy chọn 1</string>
     <string name="second_radio_option">Tùy chọn 2</string>
     <string name="display_option">Hiển thị tùy chọn</string>
-
     <string name="image_buttons">Nút hình ảnh</string>
-
     <string name="switches">Công tắc</string>
     <string name="switch_me">Chuyển đổi tôi</string>
     <string name="material_switch_preference">Tùy chọn công tắc Material</string>
     <string name="material_switch">Công tắc Material</string>
     <string name="switch_material">Chuyển đổi Material</string>
     <string name="toggle_button">Nút bật/tắt</string>
-    <string name="clocks_and_timers">Đồng hồ &amp; Bộ hẹn giờ</string>
+    <string name="clocks_and_timers">Clocks and timers</string>
     <string name="clocks">Đồng hồ</string>
     <string name="clock_analog">Đồng hồ kim</string>
     <string name="clock_text">Đồng hồ văn bản</string>
@@ -223,7 +199,7 @@
     <string name="tooltips">Chú giải công cụ</string>
     <string name="reviews">Đánh giá</string>
     <string name="rating_bar">Thanh đánh giá</string>
-    <string name="rate_us">Đánh giá ứng dụng của chúng tôi.</string>
+    <string name="rate_us">Rate the app.</string>
     <string name="stars">%1$.1f sao.</string>
     <string name="in_app_review">Đánh giá trong ứng dụng</string>
     <string name="progress_bars">Thanh tiến trình</string>
@@ -268,7 +244,7 @@
     <string name="ad_id">ID quảng cáo [AD_ID]</string>
     <string name="internet">Internet [INTERNET]</string>
     <string name="wake_lock">Giữ thiết bị ở trạng thái thức [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Cho phép ứng dụng ngăn thiết bị chuyển sang chế độ ngủ (ví dụ: màn hình mờ hoặc bộ xử lý ngủ) trong các hoạt động quan trọng để đảm bảo chúng hoàn thành mà không bị gián đoạn. Điều này được sử dụng một cách tiết kiệm để bảo tồn pin.</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">Đăng thông báo [POST_NOTIFICATIONS]</string>
     <string name="runtime">Thời gian chạy</string>
     <string name="access_network_state">Truy cập trạng thái mạng [ACCESS_NETWORK_STATE]</string>
@@ -351,10 +327,10 @@
     <string name="summary_preference_android_studio_image_buttons">Hiển thị một nút có hình ảnh (thay vì văn bản) mà người dùng có thể nhấn hoặc nhấp vào. Theo mặc định, ImageButton trông giống như một Nút thông thường, với nền nút tiêu chuẩn thay đổi màu sắc trong các trạng thái nút khác nhau. Hình ảnh trên bề mặt của nút được xác định bằng thuộc tính android:src trong phần tử XML ImageButton hoặc bằng phương thức ImageView.setImageResource(int).</string>
     <string name="summary_preference_android_studio_switches">Khám phá khả năng của các công tắc trong Android Studio và tìm hiểu cách triển khai chúng một cách hiệu quả trong các ứng dụng của bạn. Bài học này cung cấp một hướng dẫn toàn diện về việc sử dụng các công tắc, bao gồm các phương pháp hay nhất để thiết kế các giao diện hấp dẫn về mặt hình ảnh và thân thiện với người dùng.</string>
     <string name="summary_preference_android_studio_clocks">Một cách đơn giản để thêm đồng hồ kỹ thuật số, kim hoặc văn bản vào ứng dụng Android của bạn.</string>
-    <string name="summary_preference_android_studio_time_picker">Android TimePicker là một điều khiển giao diện người dùng để chọn thời gian ở định dạng 24 giờ hoặc chế độ AM/PM. Nó được sử dụng để đảm bảo rằng người dùng chọn thời gian hợp lệ cho ngày trong ứng dụng của chúng tôi. Giao diện bộ chọn thời gian về cơ bản tồn tại ở hai chế độ, một là dưới bố cục XML và một là hộp thoại.</string>
+    <string name="summary_preference_android_studio_time_picker">Android TimePicker is a user interface control for selecting the time in either 24-hour format or AM/PM mode. It is used to ensure that users pick the valid time for the day in the app. The time picker interface exists basically in two modes one is under XML layout and another is a dialog.</string>
     <string name="summary_preference_android_studio_date_picker">Android cung cấp các điều khiển để người dùng chọn thời gian hoặc chọn ngày dưới dạng các hộp thoại sẵn sàng sử dụng. Mỗi bộ chọn cung cấp các điều khiển để chọn từng phần của thời gian (giờ, phút, AM/PM) hoặc ngày (tháng, ngày, năm). Sử dụng các bộ chọn này giúp đảm bảo rằng người dùng của bạn có thể chọn thời gian hoặc ngày hợp lệ, được định dạng chính xác và được điều chỉnh theo ngôn ngữ của người dùng.</string>
     <string name="summary_preference_android_studio_chronometer">Khám phá khả năng của tiện ích Chronometer trong Android, một công cụ mạnh mẽ để hiển thị thời gian đã trôi qua. Tìm hiểu cách thiết lập trình nghe nhấp chuột cho các nút để điều khiển đồng hồ bấm giờ và khám phá các phương pháp khác nhau có sẵn để tùy chỉnh hành vi của nó.</string>
-    <string name="summary_preference_android_studio_text_box">Một yếu tố giao diện người dùng để nhập và sửa đổi văn bản. Khi bạn xác định một tiện ích văn bản chỉnh sửa, bạn phải chỉ định thuộc tính R.styleable.TextView_inputType…</string>
+    <string name="summary_preference_android_studio_text_box">A user interface element for entering and modifying text. When you define an edit text widget, you must specify the R.styleable.TextView_inputType attribute to ensure the correct keyboard and input behaviors.</string>
     <string name="summary_preference_android_studio_password_text_box">Một hộp văn bản đơn giản có khả năng ẩn văn bản. Được sử dụng trong màn hình đăng nhập cho hầu hết các ứng dụng để giữ an toàn cho mật khẩu.</string>
     <string name="summary_preference_android_studio_alert_dialog">Hộp thoại là một cửa sổ nhỏ nhắc người dùng đưa ra quyết định hoặc nhập thông tin bổ sung. Hộp thoại không lấp đầy màn hình và thường được sử dụng cho các sự kiện phương thức yêu cầu người dùng thực hiện một hành động trước khi họ có thể tiếp tục.</string>
     <string name="summary_preference_android_studio_snack_bar">Thanh thông báo nhanh thông báo cho người dùng về một quy trình mà ứng dụng đã thực hiện hoặc sẽ thực hiện. Chúng xuất hiện tạm thời, về phía cuối màn hình. Chúng không nên làm gián đoạn trải nghiệm người dùng và chúng không yêu cầu người dùng nhập liệu để biến mất.</string>
@@ -380,28 +356,31 @@
     <string name="summary_image_buttons">Nút hình ảnh là các nút chứa hình ảnh thay vì văn bản. Chúng có thể được sử dụng trong Android để cung cấp một giao diện người dùng hấp dẫn và tương tác hơn về mặt hình ảnh. Nút hình ảnh có thể được sử dụng để kích hoạt các hành động, điều hướng đến các màn hình khác nhau hoặc hiển thị thông tin bổ sung. Chúng thường được sử dụng kết hợp với các nhãn văn bản để cung cấp thông tin liên lạc rõ ràng cho người dùng về mục đích của nút.</string>
     <string name="summary_image_view">AndroidX AppCompatImageView là một lớp con của ImageView được thiết kế để hỗ trợ các tính năng khác nhau của ActionBar và Material Design. Nó là một phần của thư viện AndroidX, là một bộ thư viện hỗ trợ cung cấp các phiên bản tương thích ngược của API khung Android cũng như các tính năng chỉ có sẵn thông qua API thư viện.\n\nAppCompatImageView được dự định sử dụng làm sự thay thế thả vào cho ImageView, cho phép các nhà phát triển sử dụng cùng một mã và các yếu tố giao diện người dùng trên các phiên bản Android khác nhau. Nó bao gồm hỗ trợ cho các tính năng khác nhau như nhuộm màu, tải các đối tượng có thể vẽ vector và xử lý tỷ lệ hình ảnh.\n\nAppCompatImageView cũng bao gồm hỗ trợ cho các tính năng của Material Design như độ cao, cho phép chế độ xem hình ảnh đổ bóng và dường như được nâng lên trên bề mặt của bố cục. Nó cũng bao gồm hỗ trợ cho hiệu ứng gợn sóng của Material Design, là một hiệu ứng hình ảnh được áp dụng khi chế độ xem hình ảnh được chạm vào.\n\nTóm lại, AndroidX AppCompatImageView là một lớp con linh hoạt và giàu tính năng của ImageView được thiết kế để hỗ trợ một loạt các tính năng và yếu tố thiết kế trong các ứng dụng Android.</string>
     <string name="summary_linear_layout_compat">Linear Layout Compat là một lớp trong thư viện hỗ trợ Android appCompat v7. Nó được thêm vào để hỗ trợ các phương thức đã được thêm vào trong các cấp API mới hơn trên các cấp cũ hơn (như dải phân cách). Nếu bạn so sánh các phương thức trong LinearLayout và LinearLayoutCompat, bạn có thể thấy rằng bố cục Compat có tất cả các phương thức của Linear Layout mà không có bất kỳ giới hạn cấp API nào. Ví dụ: phương thức setShowDividers đã được giới thiệu ở cấp API 11. Vì vậy, trong trường hợp này, setShowDividers (và các tham số của nó) nên được gọi bằng Linear Layout Compat thay vì LinearLayout nếu bạn đang nhắm mục tiêu một nền tảng có cấp API dưới 11.</string>
-    <string name="summary_donations">Bất kể bạn quyên góp bao nhiêu, bạn sẽ giúp chúng tôi duy trì hoạt động của ứng dụng và cải thiện các tính năng của chúng tôi. Chúng tôi đánh giá cao sự hào phóng và lòng tốt của bạn.</string>
+    <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">Tìm hiểu cách sử dụng thanh tiến trình trong Android với bài học tương tác này. Bài học này bao gồm hai phần: một phần cho thanh tiến trình ngang và một phần cho thanh tiến trình tròn. Trong mỗi phần, bạn có thể xem thanh tiến trình cập nhật như thế nào khi quá trình tải xuống tiến triển. Bạn cũng có thể xem mã cho bài học bằng cách nhấp vào nút hành động nổi ở cuối màn hình.</string>
     <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android là một hệ điều hành di động do Google phát triển. Nó được phát hành lần đầu tiên dưới dạng phiên bản beta vào ngày 5 tháng 11 năm 2007 và phiên bản thương mại đầu tiên, Android 1.0, được ra mắt vào ngày 23 tháng 9 năm 2008. Android dựa trên một phiên bản sửa đổi của nhân Linux và các phần mềm mã nguồn mở khác.\n\nAndroid Studio là môi trường phát triển tích hợp (IDE) chính thức để phát triển ứng dụng Android. Nó được Google công bố tại hội nghị I/O vào ngày 15 tháng 5 năm 2013 và được phát hành cho công chúng sử dụng vào ngày 8 tháng 12 năm 2014. Android Studio dựa trên IntelliJ IDEA, một IDE Java phổ biến.\n\nKotlin là một ngôn ngữ lập trình đa nền tảng có thể chạy trên Máy ảo Java (JVM), Android, trình duyệt và các nền tảng gốc. Nó được tạo ra bởi JetBrains, một công ty phần mềm có trụ sở tại Praha. Kotlin được công bố lần đầu tiên vào tháng 7 năm 2011 và được phát hành dưới dạng dự án mã nguồn mở vào tháng 2 năm 2012.\n\nGoogle đã công bố hỗ trợ Kotlin như một ngôn ngữ chính thức để phát triển ứng dụng Android tại hội nghị I/O vào ngày 17 tháng 5 năm 2017. Kể từ đó, Kotlin đã trở thành một trong những ngôn ngữ phổ biến nhất đối với các nhà phát triển Android. Theo dữ liệu của Google từ tháng 10 năm 2020, hơn 70% trong số 1000 ứng dụng hàng đầu trên Google Play sử dụng Kotlin.</string>
-    <string name="summary_android_features">Android không chỉ là một hệ điều hành, mà còn là một nền tảng cung cấp một loạt các tính năng và khả năng cho người dùng và nhà phát triển. Một số tính năng của Android bao gồm:\n\n- Giao tiếp trường gần (NFC), cho phép bạn chia sẻ dữ liệu, thanh toán và kết nối với các thiết bị khác không dây.\n- Bàn phím thay thế, cho phép bạn tùy chỉnh phương thức nhập của mình với các bố cục, ngôn ngữ và chủ đề khác nhau.\n- Truyền hồng ngoại, cho phép bạn sử dụng điện thoại làm điều khiển từ xa cho TV, máy điều hòa không khí và các thiết bị khác.\n- Điều khiển không chạm, cho phép bạn thực hiện các hành động trên điện thoại mà không cần chạm vào màn hình bằng cách sử dụng cử chỉ hoặc lệnh thoại.\n- Tự động hóa, cho phép bạn thiết lập các quy trình và trình kích hoạt để điện thoại của bạn tự động thực hiện một số tác vụ nhất định.\n- Tải xuống ứng dụng không dây, cho phép bạn cài đặt ứng dụng từ máy tính hoặc trình duyệt web mà không cần kết nối điện thoại bằng cáp.\n- Thay đổi bộ nhớ và pin, cho phép bạn tùy chọn mở rộng bộ nhớ điện thoại hoặc thay pin dễ dàng.\n- Màn hình chính tùy chỉnh, cho phép bạn cá nhân hóa giao diện điện thoại của mình bằng các tiện ích, hình nền, biểu tượng và trình khởi chạy.\n\nAndroid Studio là công cụ tốt nhất để phát triển ứng dụng Android. Nó cung cấp nhiều tính năng và lợi ích cho các nhà phát triển như:\n\n- Trình chỉnh sửa mã với tính năng tô sáng cú pháp, hoàn thành mã, tái cấu trúc, gỡ lỗi, kiểm thử và các công cụ lint.\n- Trình chỉnh sửa bố cục với giao diện kéo và thả để thiết kế giao diện người dùng.\n- Trình giả lập với hỗ trợ khởi động nhanh và ảnh chụp nhanh để kiểm tra ứng dụng trên các thiết bị và cấu hình khác nhau.\n- Tích hợp Firebase với các dịch vụ như xác thực, cơ sở dữ liệu, lưu trữ, phân tích, báo cáo sự cố, v.v.\n- Hệ thống xây dựng dựa trên Gradle với quản lý phụ thuộc, tùy chỉnh, tối ưu hóa, ký, các tùy chọn phân phối, v.v.\n\nVới Android Studio, bạn có thể tạo các ứng dụng tuyệt vời cho các thiết bị Android bằng Kotlin, một ngôn ngữ lập trình hiện đại ngắn gọn, an toàn, biểu cảm và có thể tương tác với Java.</string>
+    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">Chronometer là một tiện ích chuyên dụng trong khuôn khổ Android cung cấp chức năng giống như bộ đếm thời gian để hiển thị thời gian đã trôi qua. Nó có thể được cấu hình để đếm lên hoặc xuống, và thường được sử dụng trong các ứng dụng yêu cầu chấm công, chẳng hạn như ứng dụng đồng hồ bấm giờ hoặc đồng hồ đếm ngược. Lớp Chronometer có nguồn gốc từ lớp TextView, điều đó có nghĩa là nó kế thừa tất cả các thuộc tính và phương thức của một TextView. Điều này cho phép các nhà phát triển dễ dàng tùy chỉnh giao diện của Chronometer, bao gồm kích thước văn bản, màu sắc và phông chữ của nó.</string>
     <string name="snack_this_is_a_snackbar">Đây là một thanh thông báo nhanh.</string>
     <string name="snack_bar_clicked">đã nhấp</string>
     <string name="snack_copied_to_clipboard">Đã sao chép vào khay nhớ tạm. 📋</string>
     <string name="snack_unable_to_open_google_play_store">Không thể mở Cửa hàng Google Play.</string>
-    <string name="snack_rating">Cảm ơn bạn đã đánh giá chúng tôi %1$.1f sao. ❤️</string>
+    <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Đã nhấp vào nút hình ảnh.</string>
     <string name="toast_this_is_a_toast">Đây là một thông báo nhanh.</string>
     <string name="tooltip_show_code">Hiển thị cú pháp mã</string>
     <string name="tooltip_show_java_code_snippet">Hiển thị đoạn mã Java Code</string>
     <string name="tooltip_open_me">Mở tôi 🌐</string>
-    <string name="hint_type">Nhập ở đây…</string>
-    <string name="hint_password">Nhập mật khẩu của bạn…</string>
-
+    <string name="hint_type">Type here</string>
+    <string name="hint_password">Enter your password</string>
     <string name="app_usage_notifications">Thông báo sử dụng ứng dụng</string>
     <string name="update_notifications">Thông báo cập nhật</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Duyệt qua <i><u>Điều khoản dịch vụ</u></i> và <i><u>Chính sách quyền riêng tư</u></i></string>
-
+    <string name="browse_terms_of_service_and_privacy_policy">Duyệt qua <i>
+            <u>Điều khoản dịch vụ</u>
+        </i> và <i>
+            <u>Chính sách quyền riêng tư</u>
+        </i>
+    </string>
     <string name="update_downloaded">Đã tải xuống bản cập nhật</string>
     <string name="view_in_google_play">Xem trong Cửa hàng Google Play</string>
     <string name="version_info">Thông tin phiên bản</string>
