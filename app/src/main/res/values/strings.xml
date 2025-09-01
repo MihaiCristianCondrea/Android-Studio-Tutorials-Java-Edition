@@ -11,21 +11,21 @@
     <string name="agree">Agree</string>
 
     <string name="home">Home</string>
-    <string name="announcement_title">A New App Is Here</string>
+    <string name="announcement_title">A new app is here</string>
     <string name="announcement_subtitle">Check out the latest Android Studio Tutorials app. Learn Jetpack Compose, Material 3, and more.</string>
-    <string name="main_card_title">Discover Android Studio Tutorials</string>
-    <string name="main_card_subtitle">Featuring Kotlin and Java Editions</string>
+    <string name="main_card_title">Discover Android Studio tutorials</string>
+    <string name="main_card_subtitle">Featuring Kotlin and Java editions</string>
     <string name="main_card_description">The Kotlin Edition has been updated with dynamic lessons, AI assistant, and more. Experience the future of Android development.</string>
       <string name="get_on_google_play">Get it on Google Play</string>
-      <string name="learn_more">Learn More</string>
+      <string name="learn_more">Learn more</string>
       <string name="play_store">Play Store</string>
       <string name="search_tutorials_hint">Search tutorials</string>
       <string name="search_tutorials_content_description">Search tutorials</string>
 
     <string name="android_studio">Android Studio</string>
 
-    <string name="android_start">Start a New Project…</string>
-    <string name="android_start_project">Start a New Project</string>
+    <string name="android_start">Start a new project…</string>
+    <string name="android_start_project">Start a new project</string>
     <string name="step1">Step 1</string>
     <string name="summary_first_step">The first step to create a new project in Android Studio is to click on the <b>New project</b> button as shown in the image and continue to the next step.</string>
     <string name="step2">Step 2</string>
@@ -35,7 +35,7 @@
 
     <string name="basics">Basics</string>
 
-    <string name="shortcuts">Android Studio Shortcuts</string>
+    <string name="shortcuts">Android Studio shortcuts</string>
     <string name="shortcuts_title">Shortcuts</string>
     <string name="description">Description</string>
     <string name="general">General</string>
@@ -121,7 +121,7 @@
     <string name="features">Features</string>
 
     <string name="android_sdk">Android SDKs</string>
-    <string name="android_versions">Android Versions</string>
+    <string name="android_versions">Android versions</string>
 
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Setup instructions</string>
@@ -136,26 +136,26 @@
 
     <string name="predictive_back_gesture">Predictive back gesture</string>
 
-    <string name="layouts">Layouts &amp; Views</string>
+    <string name="layouts">Layouts &amp; views</string>
 
-    <string name="linear_layout">Linear Layout</string>
+    <string name="linear_layout">Linear layout</string>
 
     <string name="vertical">Vertical</string>
     <string name="horizontal">Horizontal</string>
     <string name="layout_preview">Layout preview</string>
     <string name="no_java_code_needed">No Java code required for this activity.</string>
 
-    <string name="relative_layout">Relative Layout</string>
+    <string name="relative_layout">Relative layout</string>
 
-    <string name="table_layout">Table Layout</string>
+    <string name="table_layout">Table layout</string>
 
-    <string name="grid_view">Grid View</string>
+    <string name="grid_view">Grid view</string>
 
-    <string name="image_view">Image View</string>
+    <string name="image_view">Image view</string>
 
-    <string name="web_view">Web View</string>
+    <string name="web_view">Web view</string>
 
-    <string name="buttons_and_switches">Buttons &amp; Switches</string>
+    <string name="buttons_and_switches">Buttons &amp; switches</string>
     <string name="buttons">Buttons</string>
     <string name="button">Button</string>
     <string name="button_normal">Button 1 (normal)</string>
@@ -164,57 +164,57 @@
     <string name="button_normal_icon">Button 4 (normal icon)</string>
     <string name="button_outlined_icon">Button 5 (outlined icon)</string>
     <string name="button_elevated_icon">Button 6 (elevated icon)</string>
-    <string name="extended_floating_button_primary">Extended Floating Button 1 (primary)</string>
-    <string name="extended_floating_button_secondary">Extended Floating Button 2 (secondary)</string>
-    <string name="extended_floating_button_surface">Extended Floating Button 3 (surface)</string>
-    <string name="extended_floating_button_tertiary">Extended Floating Button 4 (tertiary)</string>
-    <string name="extended_floating_button_primary_icon">Extended Floating Button 5 (primary icon)</string>
-    <string name="extended_floating_button_secondary_icon">Extended Floating Button 6 (secondary icon)</string>
-    <string name="extended_floating_button_surface_icon">Extended Floating Button 7 (surface icon)</string>
-    <string name="extended_floating_button_tertiary_icon">Extended Floating Button 8 (tertiary icon)</string>
-    <string name="floating_button_primary_icon">Floating Button 1 (primary)</string>
-    <string name="floating_button_secondary_icon">Floating Button 2 (secondary)</string>
-    <string name="floating_button_surface_icon">Floating Button 3 (surface)</string>
-    <string name="floating_button_tertiary_icon">Floating Button 4 (tertiary)</string>
+    <string name="extended_floating_button_primary">Extended floating button 1 (primary)</string>
+    <string name="extended_floating_button_secondary">Extended floating button 2 (secondary)</string>
+    <string name="extended_floating_button_surface">Extended floating button 3 (surface)</string>
+    <string name="extended_floating_button_tertiary">Extended floating button 4 (tertiary)</string>
+    <string name="extended_floating_button_primary_icon">Extended floating button 5 (primary icon)</string>
+    <string name="extended_floating_button_secondary_icon">Extended floating button 6 (secondary icon)</string>
+    <string name="extended_floating_button_surface_icon">Extended floating button 7 (surface icon)</string>
+    <string name="extended_floating_button_tertiary_icon">Extended floating button 8 (tertiary icon)</string>
+    <string name="floating_button_primary_icon">Floating button 1 (primary)</string>
+    <string name="floating_button_secondary_icon">Floating button 2 (secondary)</string>
+    <string name="floating_button_surface_icon">Floating button 3 (surface)</string>
+    <string name="floating_button_tertiary_icon">Floating button 4 (tertiary)</string>
     <string name="same_code_buttons">Use this Java code for all types of buttons.</string>
 
-    <string name="radio_buttons">Radio Buttons</string>
+    <string name="radio_buttons">Radio buttons</string>
     <string name="choose_your_option">Choose your option</string>
     <string name="first_radio_option">Option 1</string>
     <string name="second_radio_option">Option 2</string>
     <string name="display_option">Display option</string>
 
-    <string name="image_buttons">Image Buttons</string>
+    <string name="image_buttons">Image buttons</string>
 
     <string name="switches">Switches</string>
     <string name="switch_me">Switch me</string>
-    <string name="material_switch_preference">Material Switch Preference</string>
-    <string name="material_switch">Material Switch</string>
-    <string name="switch_material">Switch Material</string>
-    <string name="toggle_button">Toggle Button</string>
-    <string name="clocks_and_timers">Clocks &amp; Timers</string>
+    <string name="material_switch_preference">Material switch preference</string>
+    <string name="material_switch">Material switch</string>
+    <string name="switch_material">Switch material</string>
+    <string name="toggle_button">Toggle button</string>
+    <string name="clocks_and_timers">Clocks &amp; timers</string>
     <string name="clocks">Clocks</string>
-    <string name="clock_analog">Analog Clock</string>
-    <string name="clock_text">Text Clock</string>
-    <string name="clock_digital">Digital Clock</string>
-    <string name="timepicker">Time Picker</string>
-    <string name="current_time">Current Time</string>
-    <string name="change_time">Change Time</string>
-    <string name="datepicker">Date Picker</string>
-    <string name="current_date">Current Date</string>
-    <string name="change_date">Change Date</string>
+    <string name="clock_analog">Analog clock</string>
+    <string name="clock_text">Text clock</string>
+    <string name="clock_digital">Digital clock</string>
+    <string name="timepicker">Time picker</string>
+    <string name="current_time">Current time</string>
+    <string name="change_time">Change time</string>
+    <string name="datepicker">Date picker</string>
+    <string name="current_date">Current date</string>
+    <string name="change_date">Change date</string>
     <string name="chronometer">Chronometer</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="reset">Reset</string>
-    <string name="text_boxes">Text Boxes</string>
-    <string name="textbox">Text Box</string>
+    <string name="text_boxes">Text boxes</string>
+    <string name="textbox">Text box</string>
     <string name="print_text">Print text.</string>
-    <string name="password_box">Password Box</string>
+    <string name="password_box">Password box</string>
     <string name="password_show">Show password.</string>
     <string name="alerts">Alerts</string>
-    <string name="alert_dialog">Alert Dialog</string>
-    <string name="show_dialog">Show Alert Dialog</string>
+    <string name="alert_dialog">Alert dialog</string>
+    <string name="show_dialog">Show alert dialog</string>
     <string name="your_title">Your title</string>
     <string name="snack_bar">Snack bar</string>
     <string name="show_snack_bar">Show snack bar</string>
@@ -225,30 +225,30 @@
     <string name="rating_bar">Rating bar</string>
     <string name="rate_us">Rate our app.</string>
     <string name="stars">%1$.1f stars.</string>
-    <string name="in_app_review">In-App Reviews</string>
-    <string name="progress_bars">Progress Bars</string>
-    <string name="progress_bar">Progress Bar</string>
+    <string name="in_app_review">In-app reviews</string>
+    <string name="progress_bars">Progress bars</string>
+    <string name="progress_bar">Progress bar</string>
     <string name="circular">Circular</string>
     <string name="download">Download</string>
-    <string name="simple_notifications">Simple Notifications</string>
-    <string name="show_notification">Show Notification</string>
-    <string name="inbox_notifications">Inbox Notifications</string>
+    <string name="simple_notifications">Simple notifications</string>
+    <string name="show_notification">Show notification</string>
+    <string name="inbox_notifications">Inbox notifications</string>
     <string name="show_code">Show code</string>
     <string name="settings">Settings</string>
     <string name="appearance">Appearance</string>
     <string name="theme">Theme</string>
-    <string name="follow_system">Follow System Mode</string>
-    <string name="light_mode">Light Mode</string>
-    <string name="dark_mode">Dark Mode</string>
-    <string name="auto_battery_mode">Auto Battery Dark Mode</string>
+    <string name="follow_system">Follow system mode</string>
+    <string name="light_mode">Light mode</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="auto_battery_mode">Auto battery dark mode</string>
     <string name="default_tab">Default tab</string>
     <string name="bottom_navigation_bar_labels">Bottom navigation bar labels</string>
     <string name="labeled">Labeled</string>
     <string name="selected">Selected</string>
     <string name="unlabeled">Unlabeled</string>
     <string name="navigation">Navigation</string>
-    <string name="bottom_navigation">Bottom Navigation</string>
-    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="bottom_navigation">Bottom navigation</string>
+    <string name="navigation_drawer">Navigation drawer</string>
     <string name="dashboard">Dashboard</string>
     <string name="code_font">Code font</string>
     <string name="language">Language</string>
@@ -285,17 +285,17 @@
     <string name="share_subject">Try it now</string>
     <string name="share_using">Share using…</string>
     <string name="share_message">Check out this app: %1$s</string>
-    <string name="support_us">Support Us</string>
-    <string name="paid_support">Paid Support</string>
-    <string name="non_paid_support">Non-Paid Support</string>
-    <string name="web_ad">Web Ad</string>
+    <string name="support_us">Support us</string>
+    <string name="paid_support">Paid support</string>
+    <string name="non_paid_support">Non-paid support</string>
+    <string name="web_ad">Web ad</string>
     <string name="info">Info</string>
-    <string name="device_info">Device Info</string>
+    <string name="device_info">Device info</string>
     <string name="app_build">App Build: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
     <string name="manufacturer">Manufacturer:</string>
     <string name="device_model">Device Model:</string>
-    <string name="android_version">Android Version:</string>
-    <string name="api_level">API Level:</string>
+    <string name="android_version">Android version:</string>
+    <string name="api_level">API level:</string>
     <string name="about">About</string>
     <string name="app_version">Version %1$s (%2$d)</string>
     <string name="music">Music</string>
@@ -398,8 +398,8 @@
     <string name="hint_type">Type here…</string>
     <string name="hint_password">Enter your password…</string>
 
-    <string name="app_usage_notifications">App Usage Notifications</string>
-    <string name="update_notifications">Update Notifications</string>
+    <string name="app_usage_notifications">App usage notifications</string>
+    <string name="update_notifications">Update notifications</string>
     <string name="browse_terms_of_service_and_privacy_policy">Browse the <i><u>Terms of Service</u></i> and <i><u>Privacy Policy</u></i></string>
 
     <string name="update_downloaded">Update downloaded</string>
@@ -411,7 +411,7 @@
     <string name="error_loading_layout">Error loading layout</string>
     <string name="error_loading_code">Error loading code</string>
     <string name="snack_general_error">An error occurred while checking for updates</string>
-    <string name="consent_dialog_title">Data &amp; Ads Consent</string>
+    <string name="consent_dialog_title">Data &amp; ads consent</string>
     <string name="analytics_storage">Analytics storage</string>
     <string name="ad_storage">Ad storage</string>
     <string name="ad_user_data">Ad user data</string>
@@ -440,12 +440,12 @@
     <string name="daily_tip_hilt">Integrate Hilt for dependency injection.</string>
     <string name="daily_tip_unit_tests">Write unit tests with JUnit and Espresso.</string>
     <string name="daily_tip_mvvm">Follow the MVVM architecture for maintainable code.</string>
-    <string name="tip_of_the_day">Tip of the Day</string>
+    <string name="tip_of_the_day">Tip of the day</string>
     <string name="quiz_title">Quiz</string>
-    <string name="next_question">Next Question</string>
+    <string name="next_question">Next question</string>
     <string name="quiz_finished">Quiz complete. Your score: %1$d/%2$d</string>
     <string name="quiz_no_more_questions">No more questions, check further updates for more.</string>
-    <string name="quiz_reminder_title">Daily Quiz Reminder</string>
+    <string name="quiz_reminder_title">Daily quiz reminder</string>
     <string name="quiz_reminder_body">Come back for today\'s quiz.</string>
     <string name="other_apps_title">More apps by the developer</string>
     <string name="im_step1_desc">Screenshot showing the New project button in Android Studio.</string>
