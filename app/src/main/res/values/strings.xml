@@ -138,9 +138,9 @@
 
     <string name="predictive_back_gesture">Predictive back gesture</string>
 
-    <string name="room_database" translatable="false">Room database</string>
-    <string name="enter_note" translatable="false">Enter note</string>
-    <string name="add_note" translatable="false">Add note</string>
+    <string name="room_database">Room database</string>
+    <string name="enter_note">Enter note</string>
+    <string name="add_note">Add note</string>
 
     <string name="layouts">Layouts and views</string>
 
@@ -346,8 +346,8 @@
     <string name="summary_preference_android_studio_permissions">Permissions are important in Android as you can\'t do tasks, that require permissions, without requesting permissions.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Learn how to use per-app languages to make your app more accessible and user-friendly. This feature lets you choose a different language for each app on your device, without the user changing their device language.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (API level 33) introduces a predictive back gesture for Android devices such as phones, large screens, and foldables. It is part of a multi-year release; when fully implemented, this feature will let users preview the destination or other result of a back gesture before fully completing it, allowing them to decide whether to continue or stay in the current view.</string>
-    <string name="summary_preference_android_studio_room_database" translatable="false">Persist simple notes using Room, an abstraction layer over SQLite.</string>
-    <string name="summary_room_database" translatable="false">Room is a persistence library that provides an object mapping layer on top of SQLite. This example shows how to save and display notes.</string>
+    <string name="summary_preference_android_studio_room_database">Persist simple notes using Room, an abstraction layer over SQLite.</string>
+    <string name="summary_room_database">Room is a persistence library that provides an object mapping layer on top of SQLite. This example shows how to save and display notes.</string>
     <string name="summary_preference_android_studio_linear_layout">A linear layout is a view group that arranges its children in a single, linear direction, either horizontally or vertically. The orientation of the layout can be specified using the android:orientation attribute. A linear layout can be used to create a variety of user interfaces, such as lists, buttons, and text fields.</string>
     <string name="summary_preference_android_studio_relative_layout">A relative layout is a layout manager in Android that positions its child views relative to each other or to the parent layout. This makes it a very versatile layout manager, as it can be used to create a wide variety of layouts.</string>
     <string name="summary_preference_android_studio_table_layout">Table layout is the process of arranging the cells, rows, and columns of a table in a visually appealing and functional way.</string>

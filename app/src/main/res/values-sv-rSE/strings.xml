@@ -125,6 +125,9 @@
     <string name="more_about_permissions">Mer om behörigheter</string>
     <string name="per_app_language_preferences">Språkpreferenser per app</string>
     <string name="predictive_back_gesture">Förutsägande bakåtgest</string>
+    <string name="room_database">Room-databas</string>
+    <string name="enter_note">Ange anteckning</string>
+    <string name="add_note">Lägg till anteckning</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Linjär layout</string>
     <string name="vertical">Vertikal</string>
@@ -318,6 +321,8 @@
     <string name="summary_preference_android_studio_permissions">Behörigheter är viktiga i Android eftersom du inte kan utföra uppgifter som kräver behörigheter utan att begära dem.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Lär dig hur du använder språk per app för att göra din app mer tillgänglig och användarvänlig. Denna funktion låter dig välja ett annat språk för varje app på din enhet, utan att användaren ändrar enhetens språk.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (API-nivå 33) introducerar en förutsägande bakåtgest för Android-enheter som telefoner, stora skärmar och vikbara enheter. Det är en del av en flerårig lansering; när den är fullt implementerad kommer denna funktion att låta användare förhandsgranska destinationen eller annat resultat av en bakåtgest innan den slutförs helt, vilket gör att de kan bestämma sig för att fortsätta eller stanna kvar i den aktuella vyn.</string>
+    <string name="summary_preference_android_studio_room_database">Bevara enkla anteckningar med Room, ett abstraktionslager ovanpå SQLite.</string>
+    <string name="summary_room_database">Room är ett persistensbibliotek som tillhandahåller ett objektmappningslager ovanpå SQLite. Det här exemplet visar hur du sparar och visar anteckningar.</string>
     <string name="summary_preference_android_studio_linear_layout">En linjär layout är en vygrupp som arrangerar sina barn i en enda, linjär riktning, antingen horisontellt eller vertikalt. Layoutens orientering kan specificeras med attributet android:orientation. En linjär layout kan användas för att skapa en mängd olika användargränssnitt, som listor, knappar och textfält.</string>
     <string name="summary_preference_android_studio_relative_layout">En relativ layout är en layout-hanterare i Android som positionerar sina barnvyer i förhållande till varandra eller till föräldralayouten. Detta gör den till en mycket mångsidig layout-hanterare, eftersom den kan användas för att skapa en mängd olika layouter.</string>
     <string name="summary_preference_android_studio_table_layout">Tabellayout är processen att arrangera celler, rader och kolumner i en tabell på ett visuellt tilltalande och funktionellt sätt.</string>

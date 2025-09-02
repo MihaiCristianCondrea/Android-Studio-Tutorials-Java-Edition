@@ -125,6 +125,9 @@
     <string name="more_about_permissions">Mehr über Berechtigungen</string>
     <string name="per_app_language_preferences">Spracheinstellungen pro App</string>
     <string name="predictive_back_gesture">Vorhersagende Zurück-Geste</string>
+    <string name="room_database">Room-Datenbank</string>
+    <string name="enter_note">Notiz eingeben</string>
+    <string name="add_note">Notiz hinzufügen</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Lineares Layout</string>
     <string name="vertical">Vertikal</string>
@@ -309,6 +312,8 @@
     <string name="summary_preference_android_studio_permissions">Berechtigungen sind in Android wichtig, da Sie Aufgaben, die Berechtigungen erfordern, nicht ausführen können, ohne diese anzufordern.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Lernen Sie, wie Sie Sprachen pro App verwenden, um Ihre App zugänglicher und benutzerfreundlicher zu gestalten. Mit dieser Funktion können Sie für jede App auf Ihrem Gerät eine andere Sprache auswählen, ohne dass der Benutzer die Sprache seines Geräts ändern muss.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (API-Level 33) führt eine vorhersagende Zurück-Geste für Android-Geräte wie Telefone, große Bildschirme und faltbare Geräte ein. Es ist Teil einer mehrjährigen Veröffentlichung; bei vollständiger Implementierung ermöglicht diese Funktion den Benutzern, das Ziel oder ein anderes Ergebnis einer Zurück-Geste vorab anzuzeigen, bevor sie diese vollständig ausführen, sodass sie entscheiden können, ob sie fortfahren oder in der aktuellen Ansicht bleiben möchten.</string>
+    <string name="summary_preference_android_studio_room_database">Speichere einfache Notizen mit Room, einer Abstraktionsschicht über SQLite.</string>
+    <string name="summary_room_database">Room ist eine Persistenzbibliothek, die eine Objektabbildungsschicht über SQLite bereitstellt. Dieses Beispiel zeigt, wie man Notizen speichert und anzeigt.</string>
     <string name="summary_preference_android_studio_linear_layout">Ein lineares Layout ist eine Ansichtsgruppe, die ihre untergeordneten Elemente in einer einzigen, linearen Richtung anordnet, entweder horizontal oder vertikal. Die Ausrichtung des Layouts kann mit dem Attribut android:orientation angegeben werden. Ein lineares Layout kann verwendet werden, um eine Vielzahl von Benutzeroberflächen zu erstellen, wie z. B. Listen, Schaltflächen und Textfelder.</string>
     <string name="summary_preference_android_studio_relative_layout">Ein relatives Layout ist ein Layout-Manager in Android, der seine untergeordneten Ansichten relativ zueinander oder zum übergeordneten Layout positioniert. Dies macht es zu einem sehr vielseitigen Layout-Manager, da es zur Erstellung einer Vielzahl von Layouts verwendet werden kann.</string>
     <string name="summary_preference_android_studio_table_layout">Tabellenlayout ist der Prozess des Anordnens der Zellen, Zeilen und Spalten einer Tabelle auf eine visuell ansprechende und funktionale Weise.</string>

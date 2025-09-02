@@ -125,6 +125,9 @@
     <string name="more_about_permissions">Повече за разрешенията</string>
     <string name="per_app_language_preferences">Езикови предпочитания за всяко приложение</string>
     <string name="predictive_back_gesture">Предсказуем жест за връщане назад</string>
+    <string name="room_database">Room база данни</string>
+    <string name="enter_note">Въведете бележка</string>
+    <string name="add_note">Добавете бележка</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Линейно оформление (Linear Layout)</string>
     <string name="vertical">Вертикално</string>
@@ -309,6 +312,8 @@
     <string name="summary_preference_android_studio_permissions">Разрешенията са важни в Android, тъй като не можете да изпълнявате задачи, които изискват разрешения, без да ги поискате.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Научете как да използвате езици за всяко приложение, за да направите приложението си по-достъпно и удобно за потребителя. Тази функция ви позволява да изберете различен език за всяко приложение на вашето устройство, без потребителят да променя езика на устройството си.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (API ниво 33) въвежда предсказуем жест за връщане назад за Android устройства като телефони, големи екрани и сгъваеми устройства. Това е част от многогодишно издание; когато бъде напълно внедрена, тази функция ще позволи на потребителите да прегледат дестинацията или друг резултат от жеста за връщане назад, преди напълно да го завършат, което им позволява да решат дали да продължат или да останат в текущия изглед.</string>
+    <string name="summary_preference_android_studio_room_database">Запазвайте прости бележки с Room, абстракционен слой над SQLite.</string>
+    <string name="summary_room_database">Room е библиотека за персистентност, която предоставя слой за обектно картографиране върху SQLite. Този пример показва как да се запазват и показват бележки.</string>
     <string name="summary_preference_android_studio_linear_layout">Линейното оформление е група изгледи, която подрежда своите дъщерни елементи в една, линейна посока, хоризонтално или вертикално. Ориентацията на оформлението може да бъде указана с помощта на атрибута android:orientation. Линейното оформление може да се използва за създаване на разнообразни потребителски интерфейси, като списъци, бутони и текстови полета.</string>
     <string name="summary_preference_android_studio_relative_layout">Относителното оформление е мениджър на оформления в Android, който позиционира своите дъщерни изгледи спрямо един друг или спрямо родителското оформление. Това го прави много универсален мениджър на оформления, тъй като може да се използва за създаване на голямо разнообразие от оформления.</string>
     <string name="summary_preference_android_studio_table_layout">Табличното оформление е процесът на подреждане на клетките, редовете и колоните на таблица по визуално привлекателен и функционален начин.</string>

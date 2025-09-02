@@ -125,6 +125,9 @@
     <string name="more_about_permissions">En savoir plus sur les permissions</string>
     <string name="per_app_language_preferences">Préférences linguistiques par application</string>
     <string name="predictive_back_gesture">Geste de retour prédictif</string>
+    <string name="room_database">Base de données Room</string>
+    <string name="enter_note">Saisir une note</string>
+    <string name="add_note">Ajouter une note</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">LinearLayout</string>
     <string name="vertical">Vertical</string>
@@ -309,6 +312,8 @@
     <string name="summary_preference_android_studio_permissions">Les permissions sont importantes dans Android car vous ne pouvez pas effectuer de tâches nécessitant des permissions sans les demander.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Apprenez à utiliser les langues par application pour rendre votre application plus accessible et conviviale. Cette fonctionnalité vous permet de choisir une langue différente pour chaque application sur votre appareil, sans que l\'utilisateur ne change la langue de son appareil.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (niveau d\'API 33) introduit un geste de retour prédictif pour les appareils Android tels que les téléphones, les grands écrans et les appareils pliables. Il fait partie d\'une version pluriannuelle ; une fois pleinement implémentée, cette fonctionnalité permettra aux utilisateurs de prévisualiser la destination ou un autre résultat d\'un geste de retour avant de le compléter entièrement, leur permettant de décider s\'ils souhaitent continuer ou rester dans la vue actuelle.</string>
+    <string name="summary_preference_android_studio_room_database">Conservez des notes simples avec Room, une couche d’abstraction au-dessus de SQLite.</string>
+    <string name="summary_room_database">Room est une bibliothèque de persistance qui fournit une couche de mapping objet au-dessus de SQLite. Cet exemple montre comment enregistrer et afficher des notes.</string>
     <string name="summary_preference_android_studio_linear_layout">Un LinearLayout est un groupe de vues qui organise ses enfants dans une seule direction linéaire, horizontalement ou verticalement. L\'orientation de la mise en page peut être spécifiée à l\'aide de l\'attribut android:orientation. Un LinearLayout peut être utilisé pour créer une variété d\'interfaces utilisateur, telles que des listes, des boutons et des champs de texte.</string>
     <string name="summary_preference_android_studio_relative_layout">Un RelativeLayout est un gestionnaire de mise en page dans Android qui positionne ses vues enfants les unes par rapport aux autres ou par rapport à la mise en page parente. Cela en fait un gestionnaire de mise en page très polyvalent, car il peut être utilisé pour créer une grande variété de mises en page.</string>
     <string name="summary_preference_android_studio_table_layout">La mise en page de tableau est le processus d\'organisation des cellules, des lignes et des colonnes d\'un tableau de manière visuellement attrayante et fonctionnelle.</string>

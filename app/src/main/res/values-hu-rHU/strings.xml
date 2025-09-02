@@ -11,4 +11,9 @@
     <string name="im_step2_desc">Képernyőkép a projekt beállításakor az aktivitástípus választásáról.</string>
     <string name="im_step3_desc">Képernyőkép az alkalmazás neve, csomagja, nyelve és minimum SDK mezőiről.</string>
     <string name="tooltip_show_java_code_snippet">Mutasd meg a java kódrészletet</string>
+    <string name="room_database">Room adatbázis</string>
+    <string name="enter_note">Jegyzet bevitele</string>
+    <string name="add_note">Jegyzet hozzáadása</string>
+    <string name="summary_preference_android_studio_room_database">Egyszerű jegyzetek tárolása a Room használatával, amely egy absztrakciós réteg a SQLite felett.</string>
+    <string name="summary_room_database">A Room egy perzisztencia könyvtár, amely objektumtérképezési réteget biztosít a SQLite felett. Ez a példa megmutatja, hogyan lehet jegyzeteket menteni és megjeleníteni.</string>
 </resources>

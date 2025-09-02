@@ -125,6 +125,9 @@
     <string name="more_about_permissions">권한에 대해 더 알아보기</string>
     <string name="per_app_language_preferences">앱별 언어 설정</string>
     <string name="predictive_back_gesture">예측 뒤로가기 제스처</string>
+    <string name="room_database">Room 데이터베이스</string>
+    <string name="enter_note">메모 입력</string>
+    <string name="add_note">메모 추가</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">리니어 레이아웃 (Linear Layout)</string>
     <string name="vertical">수직</string>
@@ -318,6 +321,8 @@
     <string name="summary_preference_android_studio_permissions">권한이 필요한 작업을 수행하려면 권한을 요청해야 하므로 Android에서는 권한이 중요합니다.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">앱별 언어를 사용하여 앱을 더 접근성 있고 사용자 친화적으로 만드는 방법을 배워보세요. 이 기능을 사용하면 사용자가 기기 언어를 변경하지 않고도 기기의 각 앱에 대해 다른 언어를 선택할 수 있습니다.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13(API 레벨 33)은 휴대폰, 대형 화면, 폴더블과 같은 Android 기기를 위한 예측 뒤로가기 제스처를 도입합니다. 이는 다년간에 걸친 출시의 일부이며, 완전히 구현되면 이 기능을 통해 사용자는 뒤로가기 제스처의 대상이나 다른 결과를 완전히 완료하기 전에 미리 볼 수 있어 계속할지 현재 뷰에 머물지 결정할 수 있습니다.</string>
+    <string name="summary_preference_android_studio_room_database">SQLite 위에 추상화 계층인 Room을 사용하여 간단한 메모를 저장하세요.</string>
+    <string name="summary_room_database">Room은 SQLite 위에 객체 매핑 계층을 제공하는 퍼시스턴스 라이브러리입니다. 이 예제는 메모를 저장하고 표시하는 방법을 보여줍니다.</string>
     <string name="summary_preference_android_studio_linear_layout">리니어 레이아웃은 자식들을 단일 선형 방향(수평 또는 수직)으로 배열하는 뷰 그룹입니다. 레이아웃의 방향은 android:orientation 속성을 사용하여 지정할 수 있습니다. 리니어 레이아웃은 목록, 버튼, 텍스트 필드 등 다양한 사용자 인터페이스를 만드는 데 사용할 수 있습니다.</string>
     <string name="summary_preference_android_studio_relative_layout">렐러티브 레이아웃은 자식 뷰를 서로 또는 부모 레이아웃에 상대적으로 배치하는 Android의 레이아웃 관리자입니다. 이는 다양한 레이아웃을 만드는 데 사용할 수 있으므로 매우 다재다능한 레이아웃 관리자입니다.</string>
     <string name="summary_preference_android_studio_table_layout">테이블 레이아웃은 테이블의 셀, 행, 열을 시각적으로 매력적이고 기능적인 방식으로 배열하는 과정입니다.</string>

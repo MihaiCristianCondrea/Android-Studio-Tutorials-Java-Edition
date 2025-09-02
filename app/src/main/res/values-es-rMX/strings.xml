@@ -125,6 +125,9 @@
     <string name="more_about_permissions">Más sobre permisos</string>
     <string name="per_app_language_preferences">Preferencias de idioma por app</string>
     <string name="predictive_back_gesture">Gesto de retroceso predictivo</string>
+    <string name="room_database">Base de datos Room</string>
+    <string name="enter_note">Introducir nota</string>
+    <string name="add_note">Agregar nota</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Diseño Lineal</string>
     <string name="vertical">Vertical</string>
@@ -318,6 +321,8 @@
     <string name="summary_preference_android_studio_permissions">Los permisos son importantes en Android, ya que no puedes realizar tareas que los requieran sin solicitarlos.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Aprende a usar los idiomas por app para hacer tu aplicación más accesible y fácil de usar. Esta función te permite elegir un idioma diferente para cada app en tu dispositivo, sin que el usuario cambie el idioma de su dispositivo.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (nivel de API 33) introduce un gesto de retroceso predictivo para dispositivos Android como teléfonos, pantallas grandes y plegables. Es parte de un lanzamiento de varios años; cuando esté completamente implementado, esta función permitirá a los usuarios previsualizar el destino u otro resultado de un gesto de retroceso antes de completarlo por completo, permitiéndoles decidir si continuar o quedarse en la vista actual.</string>
+    <string name="summary_preference_android_studio_room_database">Conserva notas simples usando Room, una capa de abstracción sobre SQLite.</string>
+    <string name="summary_room_database">Room es una biblioteca de persistencia que proporciona una capa de mapeo de objetos sobre SQLite. Este ejemplo muestra cómo guardar y mostrar notas.</string>
     <string name="summary_preference_android_studio_linear_layout">Un diseño lineal es un grupo de vistas que organiza a sus hijos en una única dirección lineal, ya sea horizontal o vertical. La orientación del diseño se puede especificar usando el atributo android:orientation. Se puede usar un diseño lineal para crear una variedad de interfaces de usuario, como listas, botones y campos de texto.</string>
     <string name="summary_preference_android_studio_relative_layout">Un diseño relativo es un administrador de diseño en Android que posiciona sus vistas secundarias en relación entre sí o con el diseño principal. Esto lo convierte en un administrador de diseño muy versátil, ya que se puede utilizar para crear una amplia variedad de diseños.</string>
     <string name="summary_preference_android_studio_table_layout">El diseño de tabla es el proceso de organizar las celdas, filas y columnas de una tabla de una manera visualmente atractiva y funcional.</string>

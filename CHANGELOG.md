@@ -7,6 +7,7 @@
 - **Minor**: Added a search function for lessons.
 - **Patch**: Optimized app performance for smoother operation.
 - **Patch**: Updated several components to improve compatibility.
+- **New**: Added a Room database lesson demonstrating entity, DAO, and code viewer integration.
 
 # Version 5.0.1:
 
