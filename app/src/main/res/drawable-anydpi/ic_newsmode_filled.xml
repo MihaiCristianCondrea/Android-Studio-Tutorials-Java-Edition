@@ -2,10 +2,9 @@
     android:width="24dp"
     android:height="24dp"
     android:autoMirrored="true"
-    android:tint="?attr/colorControlNormal"
-    android:viewportWidth="960"
-    android:viewportHeight="960">
+    android:viewportWidth="24"
+    android:viewportHeight="24">
     <path
-        android:fillColor="@android:color/white"
-        android:pathData="M160,840Q127,840 103.5,816.5Q80,793 80,760L80,200Q80,167 103.5,143.5Q127,120 160,120L800,120Q833,120 856.5,143.5Q880,167 880,200L880,760Q880,793 856.5,816.5Q833,840 800,840L160,840ZM240,680L720,680L720,600L240,600L240,680ZM240,520L400,520L400,280L240,280L240,520ZM480,520L720,520L720,440L480,440L480,520ZM480,360L720,360L720,280L480,280L480,360Z" />
+        android:fillColor="?attr/colorSecondary"
+        android:pathData="M4,21Q3.17,21 2.59,20.41Q2,19.82 2,19L2,5Q2,4.17 2.59,3.59Q3.17,3 4,3L20,3Q20.82,3 21.41,3.59Q22,4.17 22,5L22,19Q22,19.82 21.41,20.41Q20.82,21 20,21L4,21ZM6,17L18,17L18,15L6,15L6,17ZM6,13L10,13L10,7L6,7L6,13ZM12,13L18,13L18,11L12,11L12,13ZM12,9L18,9L18,7L12,7L12,9Z" />
 </vector>
