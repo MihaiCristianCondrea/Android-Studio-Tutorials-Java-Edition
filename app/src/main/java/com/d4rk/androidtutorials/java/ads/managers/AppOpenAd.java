@@ -5,6 +5,7 @@ import android.app.Application;
 import android.app.Application.ActivityLifecycleCallbacks;
 import android.content.Context;
 import android.os.Bundle;
+import android.webkit.CookieManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,6 +37,16 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
         this.registerActivityLifecycleCallbacks(this);
         MobileAds.initialize(this, initializationStatus -> {
         });
+        // Pre-warm the WebView system on the main thread. Some ad SDK calls such
+        // as CookieManager.getInstance() may occur on background threads which
+        // can cause deadlocks if the WebView provider has not been initialized
+        // yet. Initializing it here prevents the "AdWorker" threads from
+        // blocking on WebViewFactory.getProvider.
+        try {
+            CookieManager.getInstance();
+        } catch (Exception ignored) {
+            // Ignore WebView initialization errors; ads will simply not use cookies.
+        }
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
         appOpenAdManager = new AppOpenAdManager();
     }
