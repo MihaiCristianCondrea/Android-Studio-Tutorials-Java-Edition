@@ -39,6 +39,7 @@ public class MainViewModel extends ViewModel {
     private final BuildShortcutIntentUseCase buildShortcutIntentUseCase;
     private final GetAppUpdateManagerUseCase getAppUpdateManagerUseCase;
     private final MutableLiveData<MainUiState> uiState = new MutableLiveData<>();
+    private final MutableLiveData<Boolean> isLoading = new MutableLiveData<>(false);
 
     @Inject
     public MainViewModel(ApplyThemeSettingsUseCase applyThemeSettingsUseCase,
@@ -80,6 +81,7 @@ public class MainViewModel extends ViewModel {
     public void applySettings(String[] themeValues,
                               String[] bottomNavBarLabelsValues,
                               String[] defaultTabValues) {
+        isLoading.setValue(true);
         boolean changedTheme = applyThemeSettingsUseCase.invoke(themeValues);
 
         String labelVisibilityStr = getBottomNavLabelVisibilityUseCase.invoke();
@@ -99,6 +101,7 @@ public class MainViewModel extends ViewModel {
 
         uiState.setValue(new MainUiState(visibilityMode, startFragmentId, changedTheme));
         applyLanguageSettingsUseCase.invoke();
+        isLoading.setValue(false);
     }
 
     /**
@@ -134,6 +137,13 @@ public class MainViewModel extends ViewModel {
      */
     public LiveData<MainUiState> getUiState() {
         return uiState;
+    }
+
+    /**
+     * Expose loading state to toggle progress indicators.
+     */
+    public LiveData<Boolean> getLoadingState() {
+        return isLoading;
     }
 
     /**
