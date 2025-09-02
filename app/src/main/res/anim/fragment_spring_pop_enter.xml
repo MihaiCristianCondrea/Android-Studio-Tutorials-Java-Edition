@@ -3,11 +3,11 @@
     <translate
         android:fromXDelta="-100%"
         android:toXDelta="0%"
-        android:duration="300"
+        android:duration="250"
         android:interpolator="@interpolator/fragment_spring" />
     <alpha
         android:fromAlpha="0"
         android:toAlpha="1"
-        android:duration="300"
+        android:duration="250"
         android:interpolator="@interpolator/fragment_spring" />
 </set>

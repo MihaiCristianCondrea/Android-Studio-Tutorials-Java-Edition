@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.SparseIntArray;
 import android.view.View;
 
 import androidx.activity.OnBackPressedCallback;
@@ -74,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
     private StartupViewModel startupViewModel;
     private ConsentInformation consentInformation;
     private NavController navController;
+    private final SparseIntArray navOrder = new SparseIntArray();
+    private int currentNavIndex;
     private AppUpdateNotificationsManager appUpdateNotificationsManager;
     private AppUpdateManager appUpdateManager;
     private InstallStateUpdatedListener installStateUpdatedListener;
@@ -227,23 +230,47 @@ public class MainActivity extends AppCompatActivity {
                 navGraph.setStartDestination(uiState.getDefaultNavDestination());
                 navController.setGraph(navGraph);
 
-                NavOptions springNavOptions = new NavOptions.Builder()
+                navOrder.put(R.id.navigation_home, 0);
+                navOrder.put(R.id.navigation_android_studio, 1);
+                navOrder.put(R.id.navigation_about, 2);
+                currentNavIndex = navOrder.get(navController.getCurrentDestination().getId());
+
+                NavOptions forwardOptions = new NavOptions.Builder()
                         .setEnterAnim(R.anim.fragment_spring_enter)
                         .setExitAnim(R.anim.fragment_spring_exit)
                         .setPopEnterAnim(R.anim.fragment_spring_pop_enter)
                         .setPopExitAnim(R.anim.fragment_spring_pop_exit)
                         .build();
 
+                NavOptions backwardOptions = new NavOptions.Builder()
+                        .setEnterAnim(R.anim.fragment_spring_pop_enter)
+                        .setExitAnim(R.anim.fragment_spring_pop_exit)
+                        .setPopEnterAnim(R.anim.fragment_spring_enter)
+                        .setPopExitAnim(R.anim.fragment_spring_exit)
+                        .build();
+
                 if (useRail) {
                     NavigationUI.setupWithNavController(mBinding.navRail, navController);
                     mBinding.navRail.setOnItemSelectedListener(item -> {
-                        navController.navigate(item.getItemId(), null, springNavOptions);
+                        if (item.getItemId() == navController.getCurrentDestination().getId()) {
+                            return true;
+                        }
+                        int newIndex = navOrder.get(item.getItemId());
+                        NavOptions options = newIndex > currentNavIndex ? forwardOptions : backwardOptions;
+                        navController.navigate(item.getItemId(), null, options);
+                        currentNavIndex = newIndex;
                         return true;
                     });
                 } else {
                     NavigationUI.setupWithNavController(navBarView, navController);
                     navBarView.setOnItemSelectedListener(item -> {
-                        navController.navigate(item.getItemId(), null, springNavOptions);
+                        if (item.getItemId() == navController.getCurrentDestination().getId()) {
+                            return true;
+                        }
+                        int newIndex = navOrder.get(item.getItemId());
+                        NavOptions options = newIndex > currentNavIndex ? forwardOptions : backwardOptions;
+                        navController.navigate(item.getItemId(), null, options);
+                        currentNavIndex = newIndex;
                         return true;
                     });
                 }
