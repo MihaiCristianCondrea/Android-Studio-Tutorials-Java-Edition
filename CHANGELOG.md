@@ -1,5 +1,7 @@
 # Version 5.0.2:
 
+- **New**: Added a new lesson on using bottom navigation.
+- **New**: Added a new lesson on using navigation drawer.
 - **Major**: Introduced new font styling and improved code visualization.
 - **Minor**: Set **Google Sans Code** as the default font.
 - **Minor**: Added a search function for lessons.
