@@ -1,5 +1,6 @@
 # Version 5.0.2:
 
+- **New**: Added a Room database lesson demonstrating entity & DAO.
 - **New**: Added a new lesson on using bottom navigation.
 - **New**: Added a new lesson on using navigation drawer.
 - **Major**: Introduced new font styling and improved code visualization.
@@ -7,7 +8,6 @@
 - **Minor**: Added a search function for lessons.
 - **Patch**: Optimized app performance for smoother operation.
 - **Patch**: Updated several components to improve compatibility.
-- **New**: Added a Room database lesson demonstrating entity, DAO, and code viewer integration.
 
 # Version 5.0.1:
 
