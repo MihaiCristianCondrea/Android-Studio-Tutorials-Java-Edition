@@ -21,6 +21,8 @@
       <string name="play_store">Play Store</string>
       <string name="search_tutorials_hint">Search tutorials</string>
       <string name="search_tutorials_content_description">Search tutorials</string>
+      <string name="search_lessons_hint">Search lessons</string>
+      <string name="search_lessons_content_description">Search lessons</string>
 
     <string name="android_studio">Android Studio</string>
 

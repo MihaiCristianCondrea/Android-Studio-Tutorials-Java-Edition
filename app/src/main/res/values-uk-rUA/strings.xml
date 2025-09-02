@@ -19,6 +19,8 @@
     <string name="play_store">Play Store</string>
     <string name="search_tutorials_hint">Пошук навчальних посібників</string>
     <string name="search_tutorials_content_description">Пошук навчальних посібників</string>
+    <string name="search_lessons_hint">Пошук уроків</string>
+    <string name="search_lessons_content_description">Пошук уроків</string>
     <string name="android_studio">Android Studio</string>
     <string name="android_start">Start a new project</string>
     <string name="android_start_project">Створити новий проєкт</string>

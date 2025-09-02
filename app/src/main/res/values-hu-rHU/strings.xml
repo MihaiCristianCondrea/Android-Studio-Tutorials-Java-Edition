@@ -5,6 +5,8 @@
     <string name="play_store">Play Áruház</string>
     <string name="search_tutorials_hint">Oktatóanyagok keresése</string>
     <string name="search_tutorials_content_description">Oktatóanyagok keresése</string>
+    <string name="search_lessons_hint">Leckék keresése</string>
+    <string name="search_lessons_content_description">Leckék keresése</string>
     <string name="im_step1_desc">Képernyőkép az Új projekt gombbal az Android Studioban.</string>
     <string name="im_step2_desc">Képernyőkép a projekt beállításakor az aktivitástípus választásáról.</string>
     <string name="im_step3_desc">Képernyőkép az alkalmazás neve, csomagja, nyelve és minimum SDK mezőiről.</string>

@@ -19,6 +19,8 @@
     <string name="play_store">متجر Play</string>
     <string name="search_tutorials_hint">ابحث عن الدروس</string>
     <string name="search_tutorials_content_description">ابحث عن الدروس</string>
+    <string name="search_lessons_hint">ابحث عن الدروس</string>
+    <string name="search_lessons_content_description">ابحث عن الدروس</string>
     <string name="android_studio">أندرويد ستوديو</string>
     <string name="android_start">Start a new project</string>
     <string name="android_start_project">ابدأ مشروع جديد</string>

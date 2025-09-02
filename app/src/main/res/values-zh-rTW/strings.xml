@@ -19,6 +19,8 @@
     <string name="play_store">Play 商店</string>
     <string name="search_tutorials_hint">搜尋教學</string>
     <string name="search_tutorials_content_description">搜尋教學</string>
+    <string name="search_lessons_hint">搜尋課程</string>
+    <string name="search_lessons_content_description">搜尋課程</string>
     <string name="android_studio">Android Studio</string>
     <string name="android_start">Start a new project</string>
     <string name="android_start_project">開始一個新專案</string>
