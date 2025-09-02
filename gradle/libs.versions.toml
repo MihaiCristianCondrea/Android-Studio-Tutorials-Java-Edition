@@ -29,8 +29,8 @@ multidex = "2.0.1"
 playServicesAds = "24.5.0"
 codeview = "1.3.9"
 hilt = "2.57.1"
-room = "2.6.1"
-glide = "4.16.0"
+room = "2.7.2"
+glide = "5.0.4"
 
 [libraries]
 aboutlibraries = { module = "com.mikepenz:aboutlibraries", version.ref = "aboutlibraries" }
