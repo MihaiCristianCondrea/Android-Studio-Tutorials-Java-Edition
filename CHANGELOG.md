@@ -1,13 +1,10 @@
-# Version 5.0.3:
-
-- Improved lesson UI with a top app bar and share action in the Start a New Project tutorial.
-- Added translations for the Start a New Project lesson across supported languages.
-- Removed Google Play Instant Apps integration ahead of its deprecation in December 2025.
-
 # Version 5.0.2:
 
-- Added new font style and visualization for the codes
-- Updated small components for better compatibiliy.
+- **Major**: Introduced new font styling and improved code visualization.
+- **Minor**: Set **Google Sans Code** as the default font.
+- **Minor**: Added a search function for lessons.
+- **Patch**: Optimized app performance for smoother operation.
+- **Patch**: Updated several components to improve compatibility.
 
 # Version 5.0.1:
 
