@@ -20,8 +20,10 @@ import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 import com.google.android.gms.ads.AdRequest;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
@@ -61,14 +63,15 @@ public class ButtonsTabLayoutFragment extends Fragment {
         for (Map.Entry<Integer, CodeView> entry : buttonXMLResources.entrySet()) {
             Integer resourceId = entry.getKey();
             CodeView codeView = entry.getValue();
-            try (InputStream inputStream = getResources().openRawResource(resourceId)) {
-                byte[] bytes = new byte[inputStream.available()];
-                int result = inputStream.read(bytes);
-                if (result != -1) {
-                    String text = new String(bytes, StandardCharsets.UTF_8);
-                    codeView.setText(text);
-                    CodeHighlighter.applyXmlTheme(codeView);
+            try (InputStream inputStream = getResources().openRawResource(resourceId);
+                 BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
+                StringBuilder builder = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    builder.append(line).append('\n');
                 }
+                codeView.setText(builder.toString());
+                CodeHighlighter.applyXmlTheme(codeView);
             } catch (IOException e) {
                 Log.e("ButtonsTab", "Error reading button resource", e);
             }
