@@ -10,6 +10,8 @@
     <string name="play_store">Play Store</string>
     <string name="search_tutorials_hint">Cari tutorial</string>
     <string name="search_tutorials_content_description">Cari tutorial</string>
+    <string name="search_lessons_hint">Cari pelajaran</string>
+    <string name="search_lessons_content_description">Cari pelajaran</string>
     <string name="update_downloaded">Pembaruan diunduh</string>
     <string name="view_in_google_play">Lihat di Google Play Store</string>
     <string name="version_info">Info versi</string>

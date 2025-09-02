@@ -19,6 +19,8 @@
     <string name="play_store">Play Butik</string>
     <string name="search_tutorials_hint">Sök handledningar</string>
     <string name="search_tutorials_content_description">Sök handledningar</string>
+    <string name="search_lessons_hint">Sök lektioner</string>
+    <string name="search_lessons_content_description">Sök lektioner</string>
     <string name="android_studio">Android Studio</string>
     <string name="android_start">Start a new project</string>
     <string name="android_start_project">Starta ett nytt projekt</string>

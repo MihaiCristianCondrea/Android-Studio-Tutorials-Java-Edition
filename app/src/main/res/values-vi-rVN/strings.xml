@@ -19,6 +19,8 @@
     <string name="play_store">Cửa hàng Play</string>
     <string name="search_tutorials_hint">Tìm kiếm hướng dẫn</string>
     <string name="search_tutorials_content_description">Tìm kiếm hướng dẫn</string>
+    <string name="search_lessons_hint">Tìm kiếm bài học</string>
+    <string name="search_lessons_content_description">Tìm kiếm bài học</string>
     <string name="android_studio">Android Studio</string>
     <string name="android_start">Start a new project</string>
     <string name="android_start_project">Bắt đầu một dự án mới</string>

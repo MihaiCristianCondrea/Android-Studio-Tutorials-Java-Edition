@@ -5,6 +5,8 @@
     <string name="play_store">Play Store</string>
     <string name="search_tutorials_hint">Cerca tutorial</string>
     <string name="search_tutorials_content_description">Cerca tutorial</string>
+    <string name="search_lessons_hint">Cerca lezioni</string>
+    <string name="search_lessons_content_description">Cerca lezioni</string>
     <string name="im_step1_desc">Screenshot che mostra il pulsante Nuovo progetto in Android Studio.</string>
     <string name="im_step2_desc">Screenshot che mostra la selezione del tipo di attività durante la configurazione del progetto.</string>
     <string name="im_step3_desc">Screenshot che mostra i campi nome app, pacchetto, lingua e SDK minimo.</string>

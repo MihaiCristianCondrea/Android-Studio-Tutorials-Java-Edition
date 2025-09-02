@@ -19,6 +19,8 @@
     <string name="play_store">প্লে স্টোর</string>
     <string name="search_tutorials_hint">টিউটোরিয়াল খুঁজুন</string>
     <string name="search_tutorials_content_description">টিউটোরিয়াল খুঁজুন</string>
+    <string name="search_lessons_hint">পাঠ খুঁজুন</string>
+    <string name="search_lessons_content_description">পাঠ খুঁজুন</string>
     <string name="android_studio">অ্যান্ড্রয়েড স্টুডিও</string>
     <string name="android_start">Start a new project</string>
     <string name="android_start_project">একটি নতুন প্রকল্প শুরু করুন</string>
