@@ -127,6 +127,9 @@
     <string name="more_about_permissions">เพิ่มเติมเกี่ยวกับสิทธิ์การเข้าถึง</string>
     <string name="per_app_language_preferences">การตั้งค่าภาษาสำหรับแต่ละแอป</string>
     <string name="predictive_back_gesture">ท่าทางการย้อนกลับแบบคาดเดา</string>
+    <string name="room_database">ฐานข้อมูล Room</string>
+    <string name="enter_note">ป้อนบันทึก</string>
+    <string name="add_note">เพิ่มบันทึก</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Linear Layout</string>
     <string name="vertical">แนวตั้ง</string>
@@ -320,6 +323,8 @@
     <string name="summary_preference_android_studio_permissions">สิทธิ์การเข้าถึงมีความสำคัญใน Android เนื่องจากคุณไม่สามารถทำงานที่ต้องการสิทธิ์ได้หากไม่ขอสิทธิ์เหล่านั้น</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">เรียนรู้วิธีใช้ภาษาสำหรับแต่ละแอปเพื่อทำให้แอปของคุณเข้าถึงได้ง่ายและเป็นมิตรกับผู้ใช้มากขึ้น ฟีเจอร์นี้ช่วยให้คุณเลือกภาษาที่แตกต่างกันสำหรับแต่ละแอปบนอุปกรณ์ของคุณ โดยที่ผู้ใช้ไม่ต้องเปลี่ยนภาษาของอุปกรณ์</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (API level 33) นำเสนอท่าทางการย้อนกลับแบบคาดเดาสำหรับอุปกรณ์ Android เช่น โทรศัพท์, หน้าจอขนาดใหญ่, และอุปกรณ์พับได้ เป็นส่วนหนึ่งของการเปิดตัวที่ใช้เวลาหลายปี; เมื่อใช้งานอย่างสมบูรณ์แล้ว, ฟีเจอร์นี้จะช่วยให้ผู้ใช้สามารถดูตัวอย่างปลายทางหรือผลลัพธ์อื่นของท่าทางการย้อนกลับก่อนที่จะทำอย่างสมบูรณ์, ทำให้พวกเขาสามารถตัดสินใจว่าจะดำเนินการต่อหรืออยู่ในมุมมองปัจจุบัน</string>
+    <string name="summary_preference_android_studio_room_database">จัดเก็บบันทึกง่าย ๆ ด้วย Room ซึ่งเป็นเลเยอร์นามธรรมบน SQLite.</string>
+    <string name="summary_room_database">Room เป็นไลบรารีการจัดเก็บถาวรที่ให้เลเยอร์การแมปออบเจ็กต์บน SQLite ตัวอย่างนี้แสดงวิธีบันทึกและแสดงบันทึก.</string>
     <string name="summary_preference_android_studio_linear_layout">linear layout คือกลุ่มของวิวที่จัดเรียงองค์ประกอบย่อยในทิศทางเดียว, ไม่ว่าจะเป็นแนวนอนหรือแนวตั้ง ทิศทางของเลย์เอาต์สามารถระบุได้โดยใช้แอตทริบิวต์ android:orientation สามารถใช้ linear layout เพื่อสร้างอินเทอร์เฟซผู้ใช้ที่หลากหลาย เช่น รายการ, ปุ่ม, และช่องข้อความ</string>
     <string name="summary_preference_android_studio_relative_layout">relative layout คือตัวจัดการเลย์เอาต์ใน Android ที่จัดตำแหน่งวิวลูกหลานโดยสัมพันธ์กันหรือสัมพันธ์กับเลย์เอาต์หลัก ทำให้เป็นตัวจัดการเลย์เอาต์ที่หลากหลายมาก, เนื่องจากสามารถใช้สร้างเลย์เอาต์ได้หลากหลายรูปแบบ</string>
     <string name="summary_preference_android_studio_table_layout">table layout คือกระบวนการจัดเรียงเซลล์, แถว, และคอลัมน์ของตารางในลักษณะที่สวยงามและใช้งานได้ดี</string>

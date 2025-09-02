@@ -133,6 +133,9 @@
     <string name="more_about_permissions">Mai multe despre permisiuni</string>
     <string name="per_app_language_preferences">Preferințe de limbă per aplicație</string>
     <string name="predictive_back_gesture">Gest de revenire predictiv</string>
+    <string name="room_database">Baza de date Room</string>
+    <string name="enter_note">Introduceți notă</string>
+    <string name="add_note">Adăugați notă</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Aranjament liniar</string>
     <string name="vertical">Vertical</string>
@@ -319,6 +322,8 @@
     <string name="summary_preference_android_studio_permissions">Permisiunile sunt importante în Android, deoarece nu puteți efectua sarcini care necesită permisiuni, fără a le solicita.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Aflați cum să utilizați limbile per aplicație pentru a vă face aplicația mai accesibilă și mai ușor de utilizat. Această funcție vă permite să alegeți o limbă diferită pentru fiecare aplicație de pe dispozitivul dvs., fără ca utilizatorul să-și schimbe limba dispozitivului.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (nivel API 33) introduce un gest de revenire predictiv pentru dispozitivele Android, cum ar fi telefoanele, ecranele mari și dispozitivele pliabile. Face parte dintr-o lansare multi-anuală; odată implementată complet, această funcționalitate va permite utilizatorilor să previzualizeze destinația sau alt rezultat al unui gest de revenire înainte de a-l finaliza complet, permițându-le să decidă dacă să continue sau să rămână în vizualizarea curentă.</string>
+    <string name="summary_preference_android_studio_room_database">Păstrează note simple folosind Room, un strat de abstractizare peste SQLite.</string>
+    <string name="summary_room_database">Room este o bibliotecă de persistență care oferă un strat de mapare a obiectelor peste SQLite. Acest exemplu arată cum să salvezi și să afișezi note.</string>
     <string name="summary_preference_android_studio_linear_layout">Un aspect liniar este un grup de vizualizări care își aranjează copiii într-o singură direcție liniară, fie orizontal, fie vertical. Orientarea aspectului poate fi specificată utilizând atributul android:orientation. Un aspect liniar poate fi utilizat pentru a crea o varietate de interfețe de utilizator, cum ar fi liste, butoane și câmpuri de text.</string>
     <string name="summary_preference_android_studio_relative_layout">Un aspect relativ este un manager de aspect în Android care își poziționează vizualizările copilului una față de cealaltă sau față de aspectul părinte. Acest lucru îl face un manager de aspect foarte versatil, deoarece poate fi utilizat pentru a crea o mare varietate de aspecte.</string>
     <string name="summary_preference_android_studio_table_layout">Aranjamentul tabelului este procesul de aranjare a celulelor, rândurilor și coloanelor unui tabel într-un mod vizual atrăgător și funcțional.</string>

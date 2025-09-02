@@ -125,6 +125,9 @@
     <string name="more_about_permissions">اجازتوں کے بارے میں مزید</string>
     <string name="per_app_language_preferences">فی ایپ زبان کی ترجیحات</string>
     <string name="predictive_back_gesture">پیش گوئی والا بیک اشارہ</string>
+    <string name="room_database">Room ڈیٹا بیس</string>
+    <string name="enter_note">نوٹ درج کریں</string>
+    <string name="add_note">نوٹ شامل کریں</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">لینیئر لے آؤٹ</string>
     <string name="vertical">عمودی</string>
@@ -318,6 +321,8 @@
     <string name="summary_preference_android_studio_permissions">اینڈرائیڈ میں اجازتیں اہم ہیں کیونکہ آپ اجازتوں کی درخواست کیے بغیر وہ کام نہیں کر سکتے جن کے لیے اجازتوں کی ضرورت ہوتی ہے۔</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">فی ایپ زبانوں کا استعمال کرکے اپنی ایپ کو مزید قابل رسائی اور صارف دوست بنانے کا طریقہ سیکھیں۔ یہ خصوصیت آپ کو اپنے ڈیوائس پر ہر ایپ کے لیے ایک مختلف زبان منتخب کرنے دیتی ہے، بغیر صارف کے اپنے ڈیوائس کی زبان کو تبدیل کیے۔</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">اینڈرائیڈ 13 (API لیول 33) اینڈرائیڈ ڈیوائسز جیسے فونز، بڑی اسکرینوں، اور فولڈ ایبلز کے لیے ایک پیش گوئی والا بیک اشارہ متعارف کراتا ہے۔ یہ ایک کثیر سالہ ریلیز کا حصہ ہے؛ جب مکمل طور پر نافذ ہو جائے گا، تو یہ فیچر صارفین کو بیک اشارے کی منزل یا دیگر نتائج کا پیش منظر دیکھنے دے گا، اسے مکمل کرنے سے پہلے، جس سے وہ فیصلہ کر سکیں گے کہ آیا جاری رکھنا ہے یا موجودہ ویو میں رہنا ہے۔</string>
+    <string name="summary_preference_android_studio_room_database">SQLite کے اوپر ایک abstraction layer Room کا استعمال کرتے ہوئے سادہ نوٹس محفوظ کریں۔</string>
+    <string name="summary_room_database">Room ایک persistent لائبریری ہے جو SQLite کے اوپر object mapping layer فراہم کرتی ہے۔ یہ مثال دکھاتی ہے کہ نوٹس کو کیسے محفوظ اور دکھایا جائے۔</string>
     <string name="summary_preference_android_studio_linear_layout">لینیئر لے آؤٹ ایک ویو گروپ ہے جو اپنے بچوں کو ایک ہی، لکیری سمت میں، یا تو افقی یا عمودی طور پر ترتیب دیتا ہے۔ لے آؤٹ کی سمت بندی android:orientation وصف کا استعمال کرکے بیان کی جاسکتی ہے۔ لینیئر لے آؤٹ کا استعمال مختلف قسم کے یوزر انٹرفیس بنانے کے لیے کیا جاسکتا ہے، جیسے فہرستیں، بٹن، اور ٹیکسٹ فیلڈز۔</string>
     <string name="summary_preference_android_studio_relative_layout">ریلیٹو لے آؤٹ اینڈرائیڈ میں ایک لے آؤٹ مینیجر ہے جو اپنے چائلڈ ویوز کو ایک دوسرے کے نسبت یا پیرنٹ لے آؤٹ کے نسبت پوزیشن کرتا ہے۔ یہ اسے ایک بہت ورسٹائل لے آؤٹ مینیجر بناتا ہے، کیونکہ اسے مختلف قسم کے لے آؤٹس بنانے کے لیے استعمال کیا جاسکتا ہے۔</string>
     <string name="summary_preference_android_studio_table_layout">ٹیبل لے آؤٹ ایک ٹیبل کے سیلز، قطاروں، اور کالموں کو بصری طور پر دلکش اور فعال طریقے سے ترتیب دینے کا عمل ہے۔</string>

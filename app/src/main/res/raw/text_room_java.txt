@@ -1,0 +1,28 @@
+// Define a Note entity with auto-generated id
+@Entity
+public class Note {
+    @PrimaryKey(autoGenerate = true)
+    public int id;
+    public String text;
+}
+
+// Data access object to insert and query notes
+@Dao
+public interface NoteDao {
+    @Insert
+    void insert(Note note);
+
+    @Query("SELECT * FROM note")
+    List<Note> getAll();
+}
+
+// Database that holds the notes
+@Database(entities = {Note.class}, version = 1, exportSchema = false)
+public abstract class AppDatabase extends RoomDatabase {
+    public abstract NoteDao noteDao();
+}
+
+// Usage inside an Activity
+AppDatabase db = Room.databaseBuilder(this, AppDatabase.class, "notes.db").build();
+db.noteDao().insert(new Note("Hello Room!"));
+

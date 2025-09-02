@@ -125,6 +125,9 @@
     <string name="more_about_permissions">المزيد عن الأذونات</string>
     <string name="per_app_language_preferences">تفضيلات اللغة لكل تطبيق</string>
     <string name="predictive_back_gesture">إيماءة الرجوع التنبؤية</string>
+    <string name="room_database">قاعدة بيانات Room</string>
+    <string name="enter_note">أدخل ملاحظة</string>
+    <string name="add_note">أضف ملاحظة</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">تخطيط خطي (Linear Layout)</string>
     <string name="vertical">رأسي</string>
@@ -318,6 +321,8 @@
     <string name="summary_preference_android_studio_permissions">الأذونات مهمة في أندرويد لأنك متقدرش تعمل مهام بتحتاج لأذونات من غير ما تطلبها.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">اتعلم إزاي تستخدم اللغات لكل تطبيق عشان تخلي تطبيقك أكتر سهولة في الوصول والاستخدام. الميزة دي بتخليك تختار لغة مختلفة لكل تطبيق على جهازك، من غير ما المستخدم يغير لغة جهازه.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">أندرويد 13 (API level 33) بيقدم إيماءة رجوع تنبؤية لأجهزة أندرويد زي الموبايلات، والشاشات الكبيرة، والأجهزة القابلة للطي. دي جزء من إصدار على مدار سنين؛ ولما يتم تنفيذها بالكامل، الميزة دي هتخلي المستخدمين يشوفوا معاينة للوجهة أو نتيجة تانية لإيماءة الرجوع قبل ما يكملوها تمامًا، وده يسمحلهم يقرروا إذا كانوا هيكملوا أو هيفضلوا في الواجهة الحالية.</string>
+    <string name="summary_preference_android_studio_room_database">خزّن ملاحظات بسيطة باستخدام Room، وهي طبقة تجريدية فوق SQLite.</string>
+    <string name="summary_room_database">Room هي مكتبة حفظ توفر طبقة ربط كائنات فوق SQLite. يوضح هذا المثال كيفية حفظ الملاحظات وعرضها.</string>
     <string name="summary_preference_android_studio_linear_layout">التخطيط الخطي (Linear layout) هو مجموعة عرض بترتب عناصرها الفرعية في اتجاه خطي واحد، إما أفقي أو رأسي. يمكن تحديد اتجاه التخطيط باستخدام السمة android:orientation. يمكن استخدام التخطيط الخطي لإنشاء مجموعة متنوعة من واجهات المستخدم، زي القوائم والأزرار وحقول النص.</string>
     <string name="summary_preference_android_studio_relative_layout">التخطيط النسبي (Relative layout) هو مدير تخطيط في أندرويد بيحدد موضع العناصر الفرعية بالنسبة لبعضها البعض أو بالنسبة للتخطيط الأب. ده بيخليه مدير تخطيط متعدد الاستخدامات جدًا، لأنه ممكن يستخدم لإنشاء مجموعة واسعة من التخطيطات.</string>
     <string name="summary_preference_android_studio_table_layout">تخطيط الجدول هو عملية ترتيب الخلايا والصفوف والأعمدة في جدول بطريقة جذابة بصريًا وعملية.</string>

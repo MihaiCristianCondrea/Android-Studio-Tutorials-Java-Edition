@@ -125,6 +125,9 @@
     <string name="more_about_permissions">Mais sobre permissões</string>
     <string name="per_app_language_preferences">Preferências de idioma por aplicativo</string>
     <string name="predictive_back_gesture">Gesto de volta preditivo</string>
+    <string name="room_database">Banco de dados Room</string>
+    <string name="enter_note">Inserir nota</string>
+    <string name="add_note">Adicionar nota</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Layout Linear</string>
     <string name="vertical">Vertical</string>
@@ -318,6 +321,8 @@
     <string name="summary_preference_android_studio_permissions">As permissões são importantes no Android, pois você não pode realizar tarefas que exigem permissões sem solicitá-las.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Aprenda a usar idiomas por aplicativo para tornar seu aplicativo mais acessível e amigável. Este recurso permite que você escolha um idioma diferente para cada aplicativo em seu dispositivo, sem que o usuário altere o idioma do dispositivo.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">O Android 13 (nível de API 33) introduz um gesto de volta preditivo para dispositivos Android, como telefones, telas grandes e dobráveis. Faz parte de um lançamento de vários anos; quando totalmente implementado, este recurso permitirá que os usuários visualizem o destino ou outro resultado de um gesto de volta antes de concluí-lo totalmente, permitindo que decidam se devem continuar ou permanecer na visualização atual.</string>
+    <string name="summary_preference_android_studio_room_database">Persista notas simples usando o Room, uma camada de abstração sobre o SQLite.</string>
+    <string name="summary_room_database">O Room é uma biblioteca de persistência que fornece uma camada de mapeamento de objetos sobre o SQLite. Este exemplo mostra como salvar e exibir notas.</string>
     <string name="summary_preference_android_studio_linear_layout">Um layout linear é um grupo de visualizações que organiza seus filhos em uma única direção linear, seja horizontal ou verticalmente. A orientação do layout pode ser especificada usando o atributo android:orientation. Um layout linear pode ser usado para criar uma variedade de interfaces de usuário, como listas, botões e campos de texto.</string>
     <string name="summary_preference_android_studio_relative_layout">Um layout relativo é um gerenciador de layout no Android que posiciona suas visualizações filhas em relação umas às outras ou ao layout pai. Isso o torna um gerenciador de layout muito versátil, pois pode ser usado para criar uma ampla variedade de layouts.</string>
     <string name="summary_preference_android_studio_table_layout">O layout de tabela é o processo de organizar as células, linhas e colunas de uma tabela de uma forma visualmente atraente e funcional.</string>

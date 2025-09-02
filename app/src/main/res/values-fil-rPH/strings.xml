@@ -125,6 +125,9 @@
     <string name="more_about_permissions">Higit pa tungkol sa mga pahintulot</string>
     <string name="per_app_language_preferences">Mga kagustuhan sa wika bawat app</string>
     <string name="predictive_back_gesture">Predictive back gesture</string>
+    <string name="room_database">Database ng Room</string>
+    <string name="enter_note">Maglagay ng tala</string>
+    <string name="add_note">Magdagdag ng tala</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Linear Layout</string>
     <string name="vertical">Patayo</string>
@@ -318,6 +321,8 @@
     <string name="summary_preference_android_studio_permissions">Mahalaga ang mga pahintulot sa Android dahil hindi ka makakagawa ng mga gawain na nangangailangan ng mga pahintulot, nang hindi humihingi ng mga pahintulot.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Alamin kung paano gamitin ang mga wika bawat app para gawing mas accessible at user-friendly ang iyong app. Hinahayaan ka ng feature na ito na pumili ng ibang wika para sa bawat app sa iyong device, nang hindi binabago ng user ang wika ng kanilang device.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Ipinapakilala ng Android 13 (API level 33) ang isang predictive back gesture para sa mga Android device tulad ng mga telepono, malalaking screen, at mga foldable. Bahagi ito ng isang multi-year release; kapag ganap na naipatupad, hahayaan ng feature na ito ang mga user na i-preview ang destinasyon o iba pang resulta ng isang back gesture bago ito tuluyang kumpletuhin, na nagpapahintulot sa kanila na magpasya kung magpapatuloy o mananatili sa kasalukuyang view.</string>
+    <string name="summary_preference_android_studio_room_database">Panatilihin ang simpleng mga tala gamit ang Room, isang abstraction layer sa ibabaw ng SQLite.</string>
+    <string name="summary_room_database">Ang Room ay isang persistence library na nagbibigay ng object mapping layer sa ibabaw ng SQLite. Ipinapakita ng halimbawang ito kung paano mag-save at magpakita ng mga tala.</string>
     <string name="summary_preference_android_studio_linear_layout">Ang isang linear layout ay isang view group na nag-aayos ng mga anak nito sa iisang, linear na direksyon, alinman sa pahalang o patayo. Ang oryentasyon ng layout ay maaaring tukuyin gamit ang android:orientation attribute. Maaaring gamitin ang isang linear layout para gumawa ng iba\'t ibang user interface, tulad ng mga listahan, button, at text field.</string>
     <string name="summary_preference_android_studio_relative_layout">Ang isang relative layout ay isang layout manager sa Android na nagpoposisyon sa mga child view nito na may kaugnayan sa isa\'t isa o sa parent layout. Ginagawa nitong isang napaka-versatile na layout manager, dahil maaari itong gamitin para gumawa ng malawak na iba\'t ibang mga layout.</string>
     <string name="summary_preference_android_studio_table_layout">Ang table layout ay ang proseso ng pag-aayos ng mga cell, row, at column ng isang table sa isang paraan na kaakit-akit sa paningin at gumagana.</string>

@@ -29,6 +29,7 @@ multidex = "2.0.1"
 playServicesAds = "24.5.0"
 codeview = "1.3.9"
 hilt = "2.57.1"
+room = "2.6.1"
 
 [libraries]
 aboutlibraries = { module = "com.mikepenz:aboutlibraries", version.ref = "aboutlibraries" }
@@ -67,3 +68,5 @@ volley = { module = "com.android.volley:volley", version.ref = "volley" }
 codeview = { module = "io.github.amrdeveloper:codeview", version.ref = "codeview" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }

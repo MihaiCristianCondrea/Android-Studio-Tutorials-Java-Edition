@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="get_on_google_play">Pobierz z Google Play</string>
     <string name="learn_more">Dowiedz się więcej</string>
     <string name="play_store">Sklep Play</string>
@@ -11,4 +11,9 @@
     <string name="im_step2_desc">Zrzut ekranu pokazujący wybór typu aktywności podczas konfiguracji projektu.</string>
     <string name="im_step3_desc">Zrzut ekranu pokazujący pola nazwy aplikacji, pakietu, języka i minimalnego SDK.</string>
     <string name="tooltip_show_java_code_snippet">Pokaż fragment kodu Java</string>
+    <string name="room_database">Baza danych Room</string>
+    <string name="enter_note">Wpisz notatkę</string>
+    <string name="add_note">Dodaj notatkę</string>
+    <string name="summary_preference_android_studio_room_database">Przechowuj proste notatki za pomocą Room, warstwy abstrakcji nad SQLite.</string>
+    <string name="summary_room_database">Room to biblioteka trwałości, która zapewnia warstwę mapowania obiektów na SQLite. Ten przykład pokazuje, jak zapisywać i wyświetlać notatki.</string>
 </resources>

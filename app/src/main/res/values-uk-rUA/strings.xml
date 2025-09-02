@@ -125,6 +125,9 @@
     <string name="more_about_permissions">Більше про дозволи</string>
     <string name="per_app_language_preferences">Налаштування мови для кожної програми</string>
     <string name="predictive_back_gesture">Прогнозований жест "Назад"</string>
+    <string name="room_database">База даних Room</string>
+    <string name="enter_note">Введіть нотатку</string>
+    <string name="add_note">Додати нотатку</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Лінійний макет (Linear Layout)</string>
     <string name="vertical">Вертикально</string>
@@ -318,6 +321,8 @@
     <string name="summary_preference_android_studio_permissions">Дозволи важливі в Android, оскільки ви не можете виконувати завдання, які вимагають дозволів, без їх запиту.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Дізнайтеся, як використовувати мови для кожної програми, щоб зробити ваш додаток більш доступним та зручним для користувача. Ця функція дозволяє вибрати іншу мову для кожної програми на вашому пристрої, без того, щоб користувач змінював мову свого пристрою.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (API рівень 33) вводить прогнозований жест "Назад" для пристроїв Android, таких як телефони, великі екрани та складні пристрої. Це частина багаторічного випуску; коли функція буде повністю реалізована, вона дозволить користувачам переглядати кінцевий пункт призначення або інший результат жесту "Назад" перед його повним завершенням, що дасть їм змогу вирішити, чи продовжувати, чи залишатися в поточному представленні.</string>
+    <string name="summary_preference_android_studio_room_database">Зберігайте прості нотатки за допомогою Room — шару абстракції над SQLite.</string>
+    <string name="summary_room_database">Room — це бібліотека персистентності, яка забезпечує шар об’єктного відображення поверх SQLite. Цей приклад показує, як зберігати та відображати нотатки.</string>
     <string name="summary_preference_android_studio_linear_layout">Лінійний макет — це група представлень, яка розташовує свої дочірні елементи в одному лінійному напрямку, або по горизонталі, або по вертикалі. Орієнтацію макета можна вказати за допомогою атрибута android:orientation. Лінійний макет можна використовувати для створення різноманітних користувацьких інтерфейсів, таких як списки, кнопки та текстові поля.</string>
     <string name="summary_preference_android_studio_relative_layout">Відносний макет — це менеджер макетів в Android, який позиціонує свої дочірні представлення відносно один одного або відносно батьківського макета. Це робить його дуже універсальним менеджером макетів, оскільки його можна використовувати для створення широкого спектру макетів.</string>
     <string name="summary_preference_android_studio_table_layout">Табличний макет — це процес розташування комірок, рядків та стовпців таблиці у візуально привабливий та функціональний спосіб.</string>

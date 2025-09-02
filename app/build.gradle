@@ -96,6 +96,8 @@ dependencies {
     implementation libs.codeview
     implementation libs.hilt.android
     annotationProcessor libs.hilt.compiler
+    implementation libs.androidx.room.runtime
+    annotationProcessor libs.androidx.room.compiler
 
     // Testing
     testImplementation libs.junit

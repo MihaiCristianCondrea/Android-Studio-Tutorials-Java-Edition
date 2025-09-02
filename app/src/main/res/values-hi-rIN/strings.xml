@@ -133,6 +133,9 @@
     <string name="more_about_permissions">अनुमति के बारे में और जानें</string>
     <string name="per_app_language_preferences">प्रति-ऐप भाषा प्राथमिकताएं</string>
     <string name="predictive_back_gesture">भविष्यवाणी करने वाली बैक जेस्चर</string>
+    <string name="room_database">Room डेटाबेस</string>
+    <string name="enter_note">नोट दर्ज करें</string>
+    <string name="add_note">नोट जोड़ें</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">लीनियर लेआउट</string>
     <string name="vertical">ऊर्ध्वाधर</string>
@@ -319,6 +322,8 @@
     <string name="summary_preference_android_studio_permissions">Android में अनुमतियां महत्वपूर्ण हैं क्योंकि आप अनुमतियों का अनुरोध किए बिना, उन कार्यों को नहीं कर सकते हैं जिनके लिए अनुमतियों की आवश्यकता होती है।</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">सीखें कि अपने ऐप को अधिक सुलभ और उपयोगकर्ता के अनुकूल बनाने के लिए प्रति-ऐप भाषाओं का उपयोग कैसे करें। यह सुविधा आपको अपने डिवाइस पर प्रत्येक ऐप के लिए एक अलग भाषा चुनने देती है, बिना उपयोगकर्ता के अपनी डिवाइस भाषा बदले।</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (API स्तर 33) Android उपकरणों जैसे फोन, बड़ी स्क्रीन और फोल्डेबल के लिए एक भविष्यवाणी करने वाली बैक जेस्चर पेश करता है। यह कई वर्षों की रिलीज़ का हिस्सा है; जब पूरी तरह से लागू हो जाएगा, तो यह सुविधा उपयोगकर्ताओं को एक बैक जेस्चर को पूरी तरह से पूरा करने से पहले गंतव्य या अन्य परिणाम का पूर्वावलोकन करने देगी, जिससे उन्हें यह तय करने की अनुमति मिलेगी कि जारी रखना है या वर्तमान दृश्य में रहना है।</string>
+    <string name="summary_preference_android_studio_room_database">SQLite के ऊपर एक abstraction layer Room का उपयोग करके सरल नोट सुरक्षित रखें।</string>
+    <string name="summary_room_database">Room एक persistence लाइब्रेरी है जो SQLite के ऊपर object mapping layer प्रदान करती है। यह उदाहरण दिखाता है कि नोट्स कैसे सहेजें और प्रदर्शित करें।</string>
     <string name="summary_preference_android_studio_linear_layout">एक लीनियर लेआउट एक व्यू ग्रुप है जो अपने बच्चों को एक ही, रैखिक दिशा में, या तो क्षैतिज या ऊर्ध्वाधर रूप से व्यवस्थित करता है। लेआउट का ओरिएंटेशन android:orientation विशेषता का उपयोग करके निर्दिष्ट किया जा सकता है। एक लीनियर लेआउट का उपयोग विभिन्न प्रकार के उपयोगकर्ता इंटरफ़ेस बनाने के लिए किया जा सकता है, जैसे सूचियां, बटन और टेक्स्ट फ़ील्ड।</string>
     <string name="summary_preference_android_studio_relative_layout">एक रिलेटिव लेआउट Android में एक लेआउट मैनेजर है जो अपने चाइल्ड व्यू को एक दूसरे के सापेक्ष या पैरेंट लेआउट के सापेक्ष रखता है। यह इसे एक बहुत ही बहुमुखी लेआउट मैनेजर बनाता है, क्योंकि इसका उपयोग विभिन्न प्रकार के लेआउट बनाने के लिए किया जा सकता है।</string>
     <string name="summary_preference_android_studio_table_layout">टेबल लेआउट एक तालिका की कोशिकाओं, पंक्तियों और कॉलम को एक दृश्य रूप से आकर्षक और कार्यात्मक तरीके से व्यवस्थित करने की प्रक्रिया है।</string>

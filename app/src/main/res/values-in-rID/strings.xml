@@ -133,6 +133,9 @@
     <string name="more_about_permissions">Selengkapnya tentang izin</string>
     <string name="per_app_language_preferences">Preferensi bahasa per aplikasi</string>
     <string name="predictive_back_gesture">Gerakan kembali prediktif</string>
+    <string name="room_database">Basis data Room</string>
+    <string name="enter_note">Masukkan catatan</string>
+    <string name="add_note">Tambahkan catatan</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Tata Letak Linear</string>
     <string name="vertical">Vertikal</string>
@@ -319,6 +322,8 @@
     <string name="summary_preference_android_studio_permissions">Izin penting di Android karena Anda tidak dapat melakukan tugas yang memerlukan izin tanpa meminta izin.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Pelajari cara menggunakan bahasa per aplikasi untuk membuat aplikasi Anda lebih mudah diakses dan ramah pengguna. Fitur ini memungkinkan Anda memilih bahasa yang berbeda untuk setiap aplikasi di perangkat Anda, tanpa pengguna harus mengubah bahasa perangkat mereka.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (level API 33) memperkenalkan gerakan kembali prediktif untuk perangkat Android seperti ponsel, layar besar, dan perangkat lipat. Ini adalah bagian dari rilis multi-tahun; ketika sepenuhnya diterapkan, fitur ini akan memungkinkan pengguna untuk melihat pratinjau tujuan atau hasil lain dari gerakan kembali sebelum menyelesaikannya sepenuhnya, memungkinkan mereka untuk memutuskan apakah akan melanjutkan atau tetap berada di tampilan saat ini.</string>
+    <string name="summary_preference_android_studio_room_database">Simpan catatan sederhana menggunakan Room, lapisan abstraksi di atas SQLite.</string>
+    <string name="summary_room_database">Room adalah pustaka penyimpanan yang menyediakan lapisan pemetaan objek di atas SQLite. Contoh ini menunjukkan cara menyimpan dan menampilkan catatan.</string>
     <string name="summary_preference_android_studio_linear_layout">Tata letak linear adalah grup tampilan yang mengatur turunannya dalam satu arah, baik secara horizontal maupun vertikal. Orientasi tata letak dapat ditentukan menggunakan atribut android:orientation. Tata letak linear dapat digunakan untuk membuat berbagai antarmuka pengguna, seperti daftar, tombol, dan bidang teks.</string>
     <string name="summary_preference_android_studio_relative_layout">Tata letak relatif adalah manajer tata letak di Android yang menempatkan tampilan turunannya relatif satu sama lain atau ke tata letak induk. Ini menjadikannya manajer tata letak yang sangat serbaguna, karena dapat digunakan untuk membuat berbagai macam tata letak.</string>
     <string name="summary_preference_android_studio_table_layout">Tata letak tabel adalah proses pengaturan sel, baris, dan kolom tabel dengan cara yang menarik secara visual dan fungsional.</string>

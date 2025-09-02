@@ -125,6 +125,9 @@
     <string name="more_about_permissions">İzinler hakkında daha fazla bilgi</string>
     <string name="per_app_language_preferences">Uygulama başına dil tercihleri</string>
     <string name="predictive_back_gesture">Tahminli geri hareketi</string>
+    <string name="room_database">Room veritabanı</string>
+    <string name="enter_note">Not girin</string>
+    <string name="add_note">Not ekle</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Doğrusal Yerleşim (Linear Layout)</string>
     <string name="vertical">Dikey</string>
@@ -318,6 +321,8 @@
     <string name="summary_preference_android_studio_permissions">İzinler Android\'de önemlidir çünkü izin gerektiren görevleri izin istemeden yapamazsınız.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Uygulamanızı daha erişilebilir ve kullanıcı dostu hale getirmek için uygulama başına dilleri nasıl kullanacağınızı öğrenin. Bu özellik, kullanıcının cihaz dilini değiştirmeden cihazınızdaki her uygulama için farklı bir dil seçmenize olanak tanır.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (API seviyesi 33), telefonlar, büyük ekranlar ve katlanabilir cihazlar gibi Android cihazlar için tahminli bir geri hareketi sunar. Bu, çok yıllık bir sürümün bir parçasıdır; tam olarak uygulandığında, bu özellik kullanıcıların bir geri hareketinin hedefini veya diğer sonucunu tamamen tamamlamadan önce önizlemesine olanak tanıyacak ve devam edip etmeyeceklerine veya mevcut görünümde kalacaklarına karar vermelerini sağlayacaktır.</string>
+    <string name="summary_preference_android_studio_room_database">SQLite üzerinde bir soyutlama katmanı olan Room\'u kullanarak basit notları kalıcı hale getirin.</string>
+    <string name="summary_room_database">Room, SQLite üzerinde nesne eşleme katmanı sağlayan bir kalıcılık kütüphanesidir. Bu örnek, notları nasıl kaydedeceğinizi ve görüntüleyeceğinizi gösterir.</string>
     <string name="summary_preference_android_studio_linear_layout">Doğrusal yerleşim, alt öğelerini tek bir doğrusal yönde (yatay veya dikey) düzenleyen bir görünüm grubudur. Yerleşimin yönü android:orientation özelliği kullanılarak belirtilebilir. Doğrusal yerleşim, listeler, düğmeler ve metin alanları gibi çeşitli kullanıcı arayüzleri oluşturmak için kullanılabilir.</string>
     <string name="summary_preference_android_studio_relative_layout">Göreceli yerleşim, alt görünümlerini birbirlerine veya ana yerleşime göre konumlandıran bir Android yerleşim yöneticisidir. Bu, onu çok yönlü bir yerleşim yöneticisi yapar, çünkü çok çeşitli yerleşimler oluşturmak için kullanılabilir.</string>
     <string name="summary_preference_android_studio_table_layout">Tablo yerleşimi, bir tablonun hücrelerini, satırlarını ve sütunlarını görsel olarak çekici ve işlevsel bir şekilde düzenleme sürecidir.</string>

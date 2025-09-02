@@ -125,6 +125,9 @@
     <string name="more_about_permissions">Thêm về quyền</string>
     <string name="per_app_language_preferences">Tùy chọn ngôn ngữ cho mỗi ứng dụng</string>
     <string name="predictive_back_gesture">Cử chỉ quay lại dự đoán</string>
+    <string name="room_database">Cơ sở dữ liệu Room</string>
+    <string name="enter_note">Nhập ghi chú</string>
+    <string name="add_note">Thêm ghi chú</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Bố cục tuyến tính</string>
     <string name="vertical">Dọc</string>
@@ -318,6 +321,8 @@
     <string name="summary_preference_android_studio_permissions">Quyền rất quan trọng trong Android vì bạn không thể thực hiện các tác vụ yêu cầu quyền mà không yêu cầu quyền.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Tìm hiểu cách sử dụng ngôn ngữ cho mỗi ứng dụng để làm cho ứng dụng của bạn dễ tiếp cận và thân thiện với người dùng hơn. Tính năng này cho phép bạn chọn một ngôn ngữ khác nhau cho mỗi ứng dụng trên thiết bị của mình mà không cần người dùng thay đổi ngôn ngữ thiết bị của họ.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (API cấp 33) giới thiệu một cử chỉ quay lại dự đoán cho các thiết bị Android như điện thoại, màn hình lớn và thiết bị gập. Đây là một phần của bản phát hành kéo dài nhiều năm; khi được triển khai đầy đủ, tính năng này sẽ cho phép người dùng xem trước đích đến hoặc kết quả khác của cử chỉ quay lại trước khi hoàn thành hoàn toàn, cho phép họ quyết định tiếp tục hay ở lại chế độ xem hiện tại.</string>
+    <string name="summary_preference_android_studio_room_database">Lưu trữ các ghi chú đơn giản bằng Room, một lớp trừu tượng trên SQLite.</string>
+    <string name="summary_room_database">Room là thư viện lưu trữ cung cấp lớp ánh xạ đối tượng trên SQLite. Ví dụ này cho thấy cách lưu và hiển thị ghi chú.</string>
     <string name="summary_preference_android_studio_linear_layout">Bố cục tuyến tính là một nhóm chế độ xem sắp xếp các phần tử con của nó theo một hướng tuyến tính duy nhất, theo chiều ngang hoặc chiều dọc. Hướng của bố cục có thể được chỉ định bằng thuộc tính android:orientation. Bố cục tuyến tính có thể được sử dụng để tạo nhiều giao diện người dùng khác nhau, chẳng hạn như danh sách, nút và trường văn bản.</string>
     <string name="summary_preference_android_studio_relative_layout">Bố cục tương đối là một trình quản lý bố cục trong Android định vị các chế độ xem con của nó tương đối với nhau hoặc với bố cục mẹ. Điều này làm cho nó trở thành một trình quản lý bố cục rất linh hoạt, vì nó có thể được sử dụng để tạo ra nhiều loại bố cục khác nhau.</string>
     <string name="summary_preference_android_studio_table_layout">Bố cục bảng là quá trình sắp xếp các ô, hàng và cột của một bảng một cách hấp dẫn về mặt hình ảnh và chức năng.</string>

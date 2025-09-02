@@ -125,6 +125,9 @@
     <string name="more_about_permissions">অনুমতি সম্পর্কে আরও</string>
     <string name="per_app_language_preferences">প্রতি-অ্যাপ ভাষা পছন্দ</string>
     <string name="predictive_back_gesture">ভবিষ্যদ্বাণীমূলক ব্যাক অঙ্গভঙ্গি</string>
+    <string name="room_database">Room ডাটাবেস</string>
+    <string name="enter_note">নোট লিখুন</string>
+    <string name="add_note">নোট যোগ করুন</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">লিনিয়ার লেআউট</string>
     <string name="vertical">উল্লম্ব</string>
@@ -309,6 +312,8 @@
     <string name="summary_preference_android_studio_permissions">অ্যান্ড্রয়েডে অনুমতিগুলি গুরুত্বপূর্ণ কারণ আপনি অনুমতিগুলির জন্য অনুরোধ না করে অনুমতিগুলির প্রয়োজন এমন কাজগুলি করতে পারবেন না।</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">আপনার অ্যাপটিকে আরও অ্যাক্সেসযোগ্য এবং ব্যবহারকারী-বান্ধব করতে কীভাবে প্রতি-অ্যাপ ভাষা ব্যবহার করতে হয় তা শিখুন। এই বৈশিষ্ট্যটি আপনাকে আপনার ডিভাইসের প্রতিটি অ্যাপের জন্য একটি ভিন্ন ভাষা চয়ন করতে দেয়, ব্যবহারকারীকে তাদের ডিভাইসের ভাষা পরিবর্তন না করেই।</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">অ্যান্ড্রয়েড ১৩ (API স্তর ৩৩) ফোন, বড় পর্দা এবং ভাঁজযোগ্য ডিভাইসের মতো অ্যান্ড্রয়েড ডিভাইসগুলির জন্য একটি ভবিষ্যদ্বাণীমূলক ব্যাক অঙ্গভঙ্গি প্রবর্তন করে। এটি একটি বহু-বছরের রিলিজের অংশ; সম্পূর্ণরূপে বাস্তবায়িত হলে, এই বৈশিষ্ট্যটি ব্যবহারকারীদের একটি ব্যাক অঙ্গভঙ্গির গন্তব্য বা অন্যান্য ফলাফল সম্পূর্ণরূপে সম্পন্ন করার আগে তার পূর্বরূপ দেখতে দেবে, যা তাদের সিদ্ধান্ত নিতে দেবে যে চালিয়ে যেতে হবে নাকি বর্তমান ভিউতে থাকতে হবে।</string>
+    <string name="summary_preference_android_studio_room_database">SQLite-এর উপর একটি বিমূর্ত স্তর Room ব্যবহার করে সাধারণ নোট স্থায়ী করুন।</string>
+    <string name="summary_room_database">Room একটি পার্সিস্টেন্স লাইব্রেরি যা SQLite-এর উপর অবজেক্ট ম্যাপিং স্তর প্রদান করে। এই উদাহরণটি কীভাবে নোট সংরক্ষণ ও প্রদর্শন করতে হয় তা দেখায়।</string>
     <string name="summary_preference_android_studio_linear_layout">একটি লিনিয়ার লেআউট হল একটি ভিউ গ্রুপ যা তার চাইল্ডগুলিকে একটি একক, রৈখিক দিকে, হয় অনুভূমিকভাবে বা উল্লম্বভাবে সাজায়। লেআউটের ওরিয়েন্টেশন android:orientation অ্যাট্রিবিউট ব্যবহার করে নির্দিষ্ট করা যেতে পারে। একটি লিনিয়ার লেআউট বিভিন্ন ব্যবহারকারী ইন্টারফেস তৈরি করতে ব্যবহার করা যেতে পারে, যেমন তালিকা, বোতাম এবং টেক্সট ফিল্ড।</string>
     <string name="summary_preference_android_studio_relative_layout">একটি রিলেটিভ লেআউট হল অ্যান্ড্রয়েডের একটি লেআউট ম্যানেজার যা তার চাইল্ড ভিউগুলিকে একে অপরের বা প্যারেন্ট লেআউটের সাপেক্ষে অবস্থান করে। এটি এটিকে একটি খুব বহুমুখী লেআউট ম্যানেজার করে তোলে, কারণ এটি বিভিন্ন ধরণের লেআউট তৈরি করতে ব্যবহার করা যেতে পারে।</string>
     <string name="summary_preference_android_studio_table_layout">টেবিল লেআউট হল একটি টেবিলের সেল, সারি এবং কলামগুলিকে দৃশ্যত আকর্ষণীয় এবং কার্যকরী উপায়ে সাজানোর প্রক্রিয়া।</string>

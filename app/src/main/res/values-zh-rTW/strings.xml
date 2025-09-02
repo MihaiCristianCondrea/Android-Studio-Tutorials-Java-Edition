@@ -125,6 +125,9 @@
     <string name="more_about_permissions">更多關於權限</string>
     <string name="per_app_language_preferences">各應用程式語言偏好設定</string>
     <string name="predictive_back_gesture">預測性返回手勢</string>
+    <string name="room_database">Room 資料庫</string>
+    <string name="enter_note">輸入筆記</string>
+    <string name="add_note">新增筆記</string>
     <string name="layouts">Layouts and views</string>
     <string name="linear_layout">Linear Layout</string>
     <string name="vertical">垂直</string>
@@ -318,6 +321,8 @@
     <string name="summary_preference_android_studio_permissions">權限在 Android 中非常重要，因為您無法在未請求權限的情況下執行需要權限的任務。</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">學習如何使用各應用程式語言，讓您的應用程式更易於存取且更友善。此功能讓您可以為裝置上的每個應用程式選擇不同的語言，而無需使用者變更其裝置語言。</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (API 等級 33) 為手機、大螢幕和摺疊式裝置等 Android 裝置引入了預測性返回手勢。這是一個多年發布計畫的一部分；當完全實作時，此功能將讓使用者在完全完成返回手勢之前預覽目的地或其他結果，讓他們決定是繼續還是停留在目前視圖中。</string>
+    <string name="summary_preference_android_studio_room_database">使用 Room（SQLite 之上的抽象層）保存簡單筆記。</string>
+    <string name="summary_room_database">Room 是一個在 SQLite 上提供物件對應層的持久性函式庫。本例示範如何儲存並顯示筆記。</string>
     <string name="summary_preference_android_studio_linear_layout">線性版面配置 (Linear Layout) 是一個視圖群組，它將其子項目排列在單一的線性方向上，可以是水平或垂直的。版面配置的方向可以使用 android:orientation 屬性來指定。線性版面配置可用於建立各種使用者介面，例如清單、按鈕和文字欄位。</string>
     <string name="summary_preference_android_studio_relative_layout">相對版面配置 (Relative Layout) 是 Android 中的一個版面配置管理員，它根據子視圖彼此之間或與父版面配置的相對位置來定位它們。這使其成為一個非常靈活的版面配置管理員，因為它可以用於建立各種各樣的版面配置。</string>
     <string name="summary_preference_android_studio_table_layout">表格版面配置 (Table Layout) 是以視覺上吸引人且功能性的方式排列表格的儲存格、列和欄的過程。</string>

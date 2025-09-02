@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="get_on_google_play">Google Play で入手しよう</string>
     <string name="learn_more">詳しく見る</string>
     <string name="play_store">Play ストア</string>
@@ -11,4 +11,9 @@
     <string name="im_step2_desc">プロジェクト設定中のアクティビティタイプ選択を示すスクリーンショット。</string>
     <string name="im_step3_desc">アプリ名、パッケージ、言語、最小 SDK の入力欄を示すスクリーンショット。</string>
     <string name="tooltip_show_java_code_snippet">Javaコードスニペットを表示します</string>
+    <string name="room_database">Room データベース</string>
+    <string name="enter_note">メモを入力</string>
+    <string name="add_note">メモを追加</string>
+    <string name="summary_preference_android_studio_room_database">SQLite の上にある抽象化レイヤーである Room を使用して簡単なメモを保持します。</string>
+    <string name="summary_room_database">Room は SQLite 上にオブジェクトマッピングレイヤーを提供する永続化ライブラリです。この例ではメモを保存して表示する方法を示します。</string>
 </resources>
