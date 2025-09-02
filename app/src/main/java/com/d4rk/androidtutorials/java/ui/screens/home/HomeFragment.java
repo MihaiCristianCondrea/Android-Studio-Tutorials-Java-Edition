@@ -57,6 +57,7 @@ public class HomeFragment extends Fragment {
                 itemBinding.appName.setText(app.name());
                 itemBinding.appDescription.setVisibility(android.view.View.GONE);
                 itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName())));
+                itemBinding.shareButton.setOnClickListener(v -> shareApp(app));
                 promotedContainer.addView(itemBinding.getRoot());
             }
         });
@@ -89,6 +90,16 @@ public class HomeFragment extends Fragment {
         shareIntent.setType("text/plain");
         shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, tip);
         startActivity(android.content.Intent.createChooser(shareIntent, getString(com.d4rk.androidtutorials.java.R.string.share_using)));
+    }
+
+    private void shareApp(com.d4rk.androidtutorials.java.data.model.PromotedApp app) {
+        android.content.Intent sharingIntent = new android.content.Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareLink = homeViewModel.getPromotedAppIntent(app.packageName()).getData().toString();
+        String shareMessage = getString(com.d4rk.androidtutorials.java.R.string.share_message, shareLink);
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareMessage);
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(com.d4rk.androidtutorials.java.R.string.share_subject));
+        startActivity(android.content.Intent.createChooser(sharingIntent, getString(com.d4rk.androidtutorials.java.R.string.share_using)));
     }
 
     private void loadImage(String url, android.widget.ImageView imageView) {

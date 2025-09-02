@@ -12,6 +12,16 @@
         android:layout_height="match_parent"
         android:padding="8dp">
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/share_button"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/share"
+            app:icon="@drawable/ic_share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/app_icon"
             android:layout_width="48dp"
