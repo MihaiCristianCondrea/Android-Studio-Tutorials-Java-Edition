@@ -52,13 +52,15 @@ public class RoomActivity extends UpNavigationActivity {
         binding.buttonAdd.setOnClickListener(v -> {
             String text = String.valueOf(binding.editTextNote.getText()).trim();
             if (!text.isEmpty()) {
-                executor.execute(() -> {
-                    db.noteDao().insert(new Note(text));
-                    runOnUiThread(() -> {
-                        binding.editTextNote.setText("");
-                        loadNotes();
+                if (!executor.isShutdown()) {
+                    executor.execute(() -> {
+                        db.noteDao().insert(new Note(text));
+                        runOnUiThread(() -> {
+                            binding.editTextNote.setText("");
+                            loadNotes();
+                        });
                     });
-                });
+                }
             }
         });
 
@@ -68,10 +70,18 @@ public class RoomActivity extends UpNavigationActivity {
     }
 
     private void loadNotes() {
-        executor.execute(() -> {
-            List<Note> notes = db.noteDao().getAll();
-            runOnUiThread(() -> adapter.setNotes(notes));
-        });
+        if (!executor.isShutdown()) {
+            executor.execute(() -> {
+                List<Note> notes = db.noteDao().getAll();
+                runOnUiThread(() -> adapter.setNotes(notes));
+            });
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        executor.shutdown();
     }
 
     private static class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHolder> {
