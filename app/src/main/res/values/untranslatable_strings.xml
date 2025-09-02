@@ -42,6 +42,7 @@
     <string name="noto_sans_mono" translatable="false">Noto Sans Mono</string>
     <string name="poppins" translatable="false">Poppins</string>
     <string name="roboto_mono" translatable="false">Roboto Mono</string>
+    <string name="google_sans_code" translatable="false">Google Sans Code</string>
     <string name="arch" translatable="false">Arch:</string>
     <string name="copyright" translatable="false">Copyright ©2023-2025, D4rK</string>
     <string name="summary_preference_settings_license" translatable="false">General Public License-3.0</string>

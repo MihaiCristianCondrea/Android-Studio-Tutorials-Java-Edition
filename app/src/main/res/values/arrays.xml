@@ -76,6 +76,7 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
     </string-array>
     <string-array name="code_font_entries">
         <item>@string/audiowide</item>
@@ -84,6 +85,7 @@
         <item>@string/noto_sans_mono</item>
         <item>@string/poppins</item>
         <item>@string/roboto_mono</item>
+        <item>@string/google_sans_code</item>
     </string-array>
     <string-array name="preference_bottom_navigation_bar_labels_entries">
         <item>@string/labeled</item>
