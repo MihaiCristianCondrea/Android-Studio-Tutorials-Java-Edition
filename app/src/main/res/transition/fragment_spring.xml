@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
     <changeBounds
-        android:duration="300"
+        android:duration="250"
         android:interpolator="@interpolator/fragment_spring" />
     <fade
-        android:duration="300"
+        android:duration="250"
         android:interpolator="@interpolator/fragment_spring" />
 </transitionSet>
