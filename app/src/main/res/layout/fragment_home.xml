@@ -168,15 +168,6 @@
                     android:text="@string/other_apps_title"
                     android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
 
-                <androidx.appcompat.widget.SearchView
-                    android:id="@+id/search_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:queryHint="@string/search_tutorials_hint"
-                    android:contentDescription="@string/search_tutorials_content_description"
-                    android:iconifiedByDefault="false" />
-
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
