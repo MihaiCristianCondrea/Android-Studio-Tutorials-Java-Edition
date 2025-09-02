@@ -78,6 +78,15 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://developer.android.com/guide/navigation/predictive-back-gesture" />
         </androidx.preference.Preference>
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_data_thresholding"
+            app:summary="@string/summary_preference_android_studio_room_database"
+            app:title="@string/room_database">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room.RoomActivity"
+                android:targetPackage="com.d4rk.androidtutorials.java" />
+        </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
         app:icon="@drawable/ic_category_layout_tinted"
