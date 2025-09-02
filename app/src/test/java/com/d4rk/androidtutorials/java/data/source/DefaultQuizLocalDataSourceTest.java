@@ -5,6 +5,9 @@ import android.content.res.AssetManager;
 import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
+import org.robolectric.annotation.Config;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -14,6 +17,8 @@ import java.util.List;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+@RunWith(RobolectricTestRunner.class)
+@Config(manifest = Config.NONE, sdk = 33)
 public class DefaultQuizLocalDataSourceTest {
 
     @Test

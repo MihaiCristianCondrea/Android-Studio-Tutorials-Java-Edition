@@ -5,7 +5,10 @@ import android.app.PendingIntent;
 import android.content.Context;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
+import org.robolectric.RobolectricTestRunner;
+import org.robolectric.annotation.Config;
 
 import java.lang.reflect.Field;
 import java.util.concurrent.TimeUnit;
@@ -13,6 +16,8 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+@RunWith(RobolectricTestRunner.class)
+@Config(manifest = Config.NONE, sdk = 33)
 public class AppUsageNotificationsManagerTest {
 
     @Test

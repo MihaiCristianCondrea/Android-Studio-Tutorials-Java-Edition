@@ -8,7 +8,10 @@ import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 
 import org.json.JSONObject;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
+import org.robolectric.RobolectricTestRunner;
+import org.robolectric.annotation.Config;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -16,6 +19,8 @@ import java.util.List;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+@RunWith(RobolectricTestRunner.class)
+@Config(manifest = Config.NONE, sdk = 33)
 public class DefaultHomeRemoteDataSourceTest {
 
     @Test

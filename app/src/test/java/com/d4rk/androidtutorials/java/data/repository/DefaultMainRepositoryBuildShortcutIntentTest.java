@@ -6,11 +6,16 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
+import org.robolectric.annotation.Config;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
 
+@RunWith(RobolectricTestRunner.class)
+@Config(manifest = Config.NONE, sdk = 33)
 public class DefaultMainRepositoryBuildShortcutIntentTest {
 
     private DefaultMainRepository createRepository() {
