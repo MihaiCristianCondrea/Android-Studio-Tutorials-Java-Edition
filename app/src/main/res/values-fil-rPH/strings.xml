@@ -5,6 +5,8 @@
     <string name="summary_notification_update">May bagong bersyon ng app. I-click para mag-update.</string>
     <string name="notification_last_time_used_title">Matagal ka nang hindi bumibisita.</string>
     <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="menu">Menu</string>
+    <string name="press_back_again_to_exit">Pindutin muli upang lumabas</string>
     <string name="welcome">Maligayang pagdating</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Sumang-ayon</string>

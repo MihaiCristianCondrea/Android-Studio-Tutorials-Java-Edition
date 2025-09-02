@@ -5,6 +5,8 @@
     <string name="summary_notification_update">Eine neue Version der App ist verfügbar. Zum Aktualisieren klicken.</string>
     <string name="notification_last_time_used_title">Schon eine Weile her.</string>
     <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="menu">Menü</string>
+    <string name="press_back_again_to_exit">Drücken Sie erneut zurück, um zu verlassen</string>
     <string name="welcome">Willkommen</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Zustimmen</string>

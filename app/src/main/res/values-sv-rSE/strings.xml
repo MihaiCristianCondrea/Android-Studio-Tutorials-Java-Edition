@@ -5,6 +5,8 @@
     <string name="summary_notification_update">En ny version av appen finns tillgänglig. Klicka för att uppdatera.</string>
     <string name="notification_last_time_used_title">Det var ett tag sen.</string>
     <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="menu">Meny</string>
+    <string name="press_back_again_to_exit">Tryck tillbaka igen för att avsluta</string>
     <string name="welcome">Välkommen</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Godkänn</string>

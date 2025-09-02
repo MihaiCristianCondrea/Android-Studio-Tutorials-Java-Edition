@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/ic_menu"
+            app:navigationContentDescription="@string/menu"
             app:shapeAppearanceOverlay="@style/ShapeTokens.Clover"
             app:title="@string/app_name" />
     </com.google.android.material.appbar.AppBarLayout>
@@ -26,7 +27,7 @@
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
-        app:layout_constraintBottom_toTopOf="@+id/ad_view"
+        app:layout_constraintBottom_toTopOf="@+id/ad_container"
         app:menu="@menu/bottom_nav_menu" />
 
     <androidx.fragment.app.FragmentContainerView
@@ -37,17 +38,30 @@
         app:defaultNavHost="true"
         app:layout_constraintStart_toEndOf="@id/nav_rail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/ad_view"
+        app:layout_constraintBottom_toTopOf="@+id/ad_container"
         app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
         app:navGraph="@navigation/mobile_navigation" />
 
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/ad_view"
+    <FrameLayout
+        android:id="@+id/ad_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:adSize="FULL_BANNER"
-        app:adUnitId="@string/ad_banner_unit_id"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view" />
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view">
+
+        <View
+            android:id="@+id/ad_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:adSize="FULL_BANNER"
+            app:adUnitId="@string/ad_banner_unit_id" />
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -56,4 +70,14 @@
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_nav_menu" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseIntArray;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -42,7 +43,6 @@ import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigationrail.NavigationRailView;
 import com.google.android.material.snackbar.Snackbar;
@@ -80,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
     private AppUpdateNotificationsManager appUpdateNotificationsManager;
     private AppUpdateManager appUpdateManager;
     private InstallStateUpdatedListener installStateUpdatedListener;
+    private long backPressedTime;
+    private static final long BACK_PRESS_INTERVAL = 2000;
     private final DefaultLifecycleObserver lifecycleObserver = new DefaultLifecycleObserver() {
         @Override
         public void onResume(@NonNull LifecycleOwner owner) {
@@ -88,11 +90,13 @@ public class MainActivity extends AppCompatActivity {
                 if (ConsentUtils.canShowAds(MainActivity.this)) {
                     if (mBinding.adView.getVisibility() != View.VISIBLE) {
                         MobileAds.initialize(MainActivity.this);
+                        mBinding.adPlaceholder.setVisibility(View.GONE);
                         mBinding.adView.setVisibility(View.VISIBLE);
                         mBinding.adView.loadAd(new AdRequest.Builder().build());
                     }
                 } else {
                     mBinding.adView.setVisibility(View.GONE);
+                    mBinding.adPlaceholder.setVisibility(View.VISIBLE);
                 }
             }
         }
@@ -149,15 +153,15 @@ public class MainActivity extends AppCompatActivity {
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                new MaterialAlertDialogBuilder(MainActivity.this)
-                        .setTitle(R.string.alert_dialog_close)
-                        .setMessage(R.string.summary_alert_dialog_close)
-                        .setPositiveButton(android.R.string.yes, (dialog, which) -> {
-                            finish();
-                            moveTaskToBack(true);
-                        })
-                        .setNegativeButton(android.R.string.no, null)
-                        .show();            }
+                long currentTime = System.currentTimeMillis();
+                if (currentTime - backPressedTime < BACK_PRESS_INTERVAL) {
+                    finish();
+                    moveTaskToBack(true);
+                } else {
+                    backPressedTime = currentTime;
+                    Toast.makeText(MainActivity.this, R.string.press_back_again_to_exit, Toast.LENGTH_SHORT).show();
+                }
+            }
         });
     }
 
@@ -214,10 +218,12 @@ public class MainActivity extends AppCompatActivity {
                 if (mBinding.adView != null) {
                     if (ConsentUtils.canShowAds(this)) {
                         MobileAds.initialize(this);
+                        mBinding.adPlaceholder.setVisibility(View.GONE);
                         mBinding.adView.setVisibility(View.VISIBLE);
                         mBinding.adView.loadAd(new AdRequest.Builder().build());
                     } else {
                         mBinding.adView.setVisibility(View.GONE);
+                        mBinding.adPlaceholder.setVisibility(View.VISIBLE);
                     }
                 }
             }
@@ -287,6 +293,9 @@ public class MainActivity extends AppCompatActivity {
                 recreate();
             }
         });
+
+        mainViewModel.getLoadingState().observe(this, isLoading ->
+                mBinding.progressBar.setVisibility(Boolean.TRUE.equals(isLoading) ? View.VISIBLE : View.GONE));
     }
 
     private void setupUpdateNotifications() {
