@@ -28,7 +28,7 @@
             app:title="@string/bottom_navigation_bar_labels"
             app:useSimpleSummaryProvider="true" />
         <androidx.preference.ListPreference
-            app:defaultValue="0"
+            app:defaultValue="6"
             app:entries="@array/code_font_entries"
             app:entryValues="@array/code_font_values"
             app:icon="@drawable/ic_font_download"
