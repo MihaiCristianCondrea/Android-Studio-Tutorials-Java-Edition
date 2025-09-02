@@ -1,9 +1,11 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -24,6 +26,7 @@ import java.util.concurrent.Executors;
  * Demonstrates basic Room usage by inserting and reading notes.
  */
 public class RoomActivity extends UpNavigationActivity {
+    private final Handler handler = new Handler();
     private ActivityRoomBinding binding;
     private NotesAdapter adapter;
     private AppDatabase db;
@@ -58,6 +61,10 @@ public class RoomActivity extends UpNavigationActivity {
                 });
             }
         });
+
+        binding.floatingButtonShowSyntax.setOnClickListener(v ->
+                startActivity(new Intent(RoomActivity.this, RoomCodeActivity.class)));
+        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 
     private void loadNotes() {

@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 /**
  * The Room database that holds the notes.
  */
-@Database(entities = {Note.class}, version = 1)
+@Database(entities = {Note.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     private static volatile AppDatabase INSTANCE;
 
