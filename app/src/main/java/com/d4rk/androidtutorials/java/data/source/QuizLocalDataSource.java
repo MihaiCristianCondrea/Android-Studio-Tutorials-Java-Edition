@@ -8,5 +8,10 @@ import java.util.List;
  * Contract for reading quiz data from local storage.
  */
 public interface QuizLocalDataSource {
-    List<QuizQuestion> loadQuestions();
+
+    interface QuestionsCallback {
+        void onResult(List<QuizQuestion> questions);
+    }
+
+    void loadQuestions(QuestionsCallback callback);
 }

@@ -224,9 +224,9 @@ public class AppModule {
 
     @Provides
     @Singleton
-    public QuizLocalDataSource provideQuizLocalDataSource(Application application) {
+    public QuizLocalDataSource provideQuizLocalDataSource(Application application, ExecutorService executorService) {
         AssetManager manager = application.getAssets();
-        return new DefaultQuizLocalDataSource(manager);
+        return new DefaultQuizLocalDataSource(manager, executorService);
     }
 
     @Provides

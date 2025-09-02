@@ -6,6 +6,8 @@ import com.d4rk.androidtutorials.java.data.source.QuizLocalDataSource;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
 
@@ -19,18 +21,23 @@ public class DefaultQuizRepositoryTest {
         }
 
         @Override
-        public List<QuizQuestion> loadQuestions() {
-            return questions;
+        public void loadQuestions(QuestionsCallback callback) {
+            callback.onResult(questions);
         }
     }
 
     @Test
-    public void loadQuestionsReturnsLocalData() {
+    public void loadQuestionsReturnsLocalData() throws InterruptedException {
         List<QuizQuestion> expected = List.of(
                 new QuizQuestion("Q", new String[]{"A", "B"}, 0)
         );
         FakeQuizLocalDataSource local = new FakeQuizLocalDataSource(expected);
         DefaultQuizRepository repository = new DefaultQuizRepository(local);
-        assertEquals(expected, repository.loadQuestions());
+        CountDownLatch latch = new CountDownLatch(1);
+        repository.loadQuestions(result -> {
+            assertEquals(expected, result);
+            latch.countDown();
+        });
+        assertTrue(latch.await(1, TimeUnit.SECONDS));
     }
 }

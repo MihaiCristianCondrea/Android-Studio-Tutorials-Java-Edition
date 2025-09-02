@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
 import com.d4rk.androidtutorials.java.domain.quiz.LoadQuizQuestionsUseCase;
 
+import java.util.Collections;
 import java.util.List;
 
 import dagger.hilt.android.lifecycle.HiltViewModel;
@@ -18,7 +19,7 @@ import javax.inject.Inject;
 @HiltViewModel
 public class QuizViewModel extends ViewModel {
 
-    private final List<QuizQuestion> questions;
+    private final MutableLiveData<List<QuizQuestion>> questions = new MutableLiveData<>(Collections.emptyList());
     private final MutableLiveData<Integer> currentIndex = new MutableLiveData<>(0);
     private final MutableLiveData<Integer> score = new MutableLiveData<>(0);
     private final LoadQuizQuestionsUseCase loadQuizQuestionsUseCase;
@@ -26,13 +27,14 @@ public class QuizViewModel extends ViewModel {
     @Inject
     public QuizViewModel(LoadQuizQuestionsUseCase loadQuizQuestionsUseCase) {
         this.loadQuizQuestionsUseCase = loadQuizQuestionsUseCase;
-        questions = loadQuizQuestionsUseCase.invoke();
+        loadQuizQuestionsUseCase.invoke(result -> questions.postValue(result));
     }
 
     public QuizQuestion getCurrentQuestion() {
-        if (questions.isEmpty()) return null;
+        List<QuizQuestion> list = questions.getValue();
+        if (list == null || list.isEmpty()) return null;
         int index = currentIndex.getValue();
-        return questions.get(Math.min(index, questions.size() - 1));
+        return list.get(Math.min(index, list.size() - 1));
     }
 
     public LiveData<Integer> getCurrentIndex() {
@@ -41,6 +43,10 @@ public class QuizViewModel extends ViewModel {
 
     public LiveData<Integer> getScore() {
         return score;
+    }
+
+    public LiveData<List<QuizQuestion>> getQuestions() {
+        return questions;
     }
 
     public void answer(int optionIndex) {
@@ -52,6 +58,7 @@ public class QuizViewModel extends ViewModel {
     }
 
     public int getTotalQuestions() {
-        return questions.size();
+        List<QuizQuestion> list = questions.getValue();
+        return list != null ? list.size() : 0;
     }
 }
