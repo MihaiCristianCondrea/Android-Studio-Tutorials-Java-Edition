@@ -17,7 +17,7 @@ import org.robolectric.annotation.Config;
 import static org.junit.Assert.*;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(manifest = Config.NONE, sdk = 33)
+@Config(sdk = 33)
 public class DefaultMainRepositoryApplyThemeSettingsTest {
 
     private static final String[] DARK_MODE_VALUES = {
