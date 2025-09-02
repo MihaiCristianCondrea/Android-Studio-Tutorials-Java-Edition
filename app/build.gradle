@@ -60,6 +60,7 @@ dependencies {
     implementation libs.review
     implementation libs.app.update
     implementation libs.volley
+    implementation libs.glide
 
     // Firebase
     implementation platform(libs.firebase.bom)
@@ -98,6 +99,7 @@ dependencies {
     annotationProcessor libs.hilt.compiler
     implementation libs.androidx.room.runtime
     annotationProcessor libs.androidx.room.compiler
+    annotationProcessor libs.glide.compiler
 
     // Testing
     testImplementation libs.junit

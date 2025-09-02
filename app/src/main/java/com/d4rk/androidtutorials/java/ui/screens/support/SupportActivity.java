@@ -3,17 +3,12 @@ package com.d4rk.androidtutorials.java.ui.screens.support;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.MenuItem;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.android.billingclient.api.ProductDetails;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
 
 import java.util.List;
@@ -21,7 +16,7 @@ import java.util.List;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class SupportActivity extends AppCompatActivity {
+public class SupportActivity extends BaseActivity {
 
     private ActivitySupportBinding binding;
     private SupportViewModel supportViewModel;
@@ -31,15 +26,6 @@ public class SupportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySupportBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
-
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
 
         supportViewModel = new ViewModelProvider(this).get(SupportViewModel.class);
 
@@ -81,12 +67,5 @@ public class SupportActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+    // Up navigation handled by BaseActivity
 }

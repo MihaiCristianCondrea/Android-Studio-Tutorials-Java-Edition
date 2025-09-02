@@ -16,6 +16,7 @@ import com.google.android.gms.ads.MobileAds;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
+import com.bumptech.glide.Glide;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
@@ -103,14 +104,9 @@ public class HomeFragment extends Fragment {
     }
 
     private void loadImage(String url, android.widget.ImageView imageView) {
-        com.android.volley.toolbox.ImageRequest request = new com.android.volley.toolbox.ImageRequest(
-                url,
-                imageView::setImageBitmap,
-                0,
-                0,
-                android.widget.ImageView.ScaleType.CENTER_INSIDE,
-                android.graphics.Bitmap.Config.ARGB_8888,
-                error -> {});
-        com.android.volley.toolbox.Volley.newRequestQueue(requireContext()).add(request);
+        Glide.with(imageView.getContext())
+                .load(url)
+                .centerInside()
+                .into(imageView);
     }
 }

@@ -5,6 +5,7 @@ import android.app.Application;
 import android.app.Application.ActivityLifecycleCallbacks;
 import android.content.Context;
 import android.os.Bundle;
+import android.webkit.CookieManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,9 +21,9 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.appopen.AppOpenAd.AppOpenAdLoadCallback;
 
-import dagger.hilt.android.HiltAndroidApp;
-
 import java.util.Date;
+
+import dagger.hilt.android.HiltAndroidApp;
 
 @SuppressWarnings("ALL")
 @HiltAndroidApp
@@ -33,11 +34,14 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
     @Override
     public void onCreate() {
         super.onCreate();
-        this.registerActivityLifecycleCallbacks(this);
-        MobileAds.initialize(this, initializationStatus -> {
-        });
+        registerActivityLifecycleCallbacks(this);
+        MobileAds.initialize(
+                this,
+                initializationStatus -> {
+                });
+        CookieManager.getInstance();
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
-        appOpenAdManager = new AppOpenAdManager();
+        appOpenAdManager = new AppOpenAdManager(this);
     }
 
     @OnLifecycleEvent(Event.ON_START)
@@ -90,8 +94,10 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
         private boolean isLoadingAd = false;
         private boolean isShowingAd = false;
         private long loadTime = 0;
+        private final Application application;
 
-        public AppOpenAdManager() {
+        public AppOpenAdManager(Application application) {
+            this.application = application;
         }
 
         private void loadAd(Context context) {
@@ -140,7 +146,7 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
             }
             if (!isAdAvailable()) {
                 onShowAdCompleteListener.onShowAdComplete();
-                loadAd(activity);
+                loadAd(application.getApplicationContext());
                 return;
             }
             appOpenAd.setFullScreenContentCallback(
@@ -150,7 +156,7 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
                             appOpenAd = null;
                             isShowingAd = false;
                             onShowAdCompleteListener.onShowAdComplete();
-                            loadAd(activity);
+                            loadAd(application.getApplicationContext());
                         }
 
                         @Override
@@ -158,7 +164,7 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
                             appOpenAd = null;
                             isShowingAd = false;
                             onShowAdCompleteListener.onShowAdComplete();
-                            loadAd(activity);
+                            loadAd(application.getApplicationContext());
                         }
 
                         @Override

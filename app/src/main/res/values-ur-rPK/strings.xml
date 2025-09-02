@@ -5,6 +5,8 @@
     <string name="summary_notification_update">ایپ کا نیا ورژن دستیاب ہے۔ اپڈیٹ کرنے کے لیے کلک کریں.</string>
     <string name="notification_last_time_used_title">کافی وقت ہو گیا ہے.</string>
     <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="menu">مینو</string>
+    <string name="press_back_again_to_exit">باہر نکلنے کے لئے دوبارہ دبائیں</string>
     <string name="welcome">خوش آمدید</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">اتفاق کریں</string>

@@ -5,6 +5,8 @@
     <string name="summary_notification_update">Đã có phiên bản mới của ứng dụng. Nhấp để cập nhật.</string>
     <string name="notification_last_time_used_title">Đã lâu không gặp.</string>
     <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="menu">Menu</string>
+    <string name="press_back_again_to_exit">Nhấn lại một lần nữa để thoát</string>
     <string name="welcome">Chào mừng</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Đồng ý</string>
