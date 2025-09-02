@@ -4,6 +4,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.JsonRequest;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 
 import org.json.JSONObject;
@@ -40,7 +41,7 @@ public class DefaultHomeRemoteDataSourceTest {
         String json = "{\"data\":{\"apps\":[{\"name\":\"Name1\",\"packageName\":\"pkg1\",\"iconLogo\":\"icon1\"},{\"name\":\"Name2\",\"packageName\":\"com.d4rk.androidtutorials.other\",\"iconLogo\":\"icon2\"}]}}";
         JSONObject response = new JSONObject(json);
 
-        Field listenerField = Request.class.getDeclaredField("mListener");
+        Field listenerField = JsonRequest.class.getDeclaredField("mListener");
         listenerField.setAccessible(true);
         @SuppressWarnings("unchecked")
         com.android.volley.Response.Listener<JSONObject> listener =

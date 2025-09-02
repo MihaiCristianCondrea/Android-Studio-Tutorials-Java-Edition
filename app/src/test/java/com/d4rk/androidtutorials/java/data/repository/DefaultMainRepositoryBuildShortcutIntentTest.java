@@ -2,28 +2,22 @@ package com.d4rk.androidtutorials.java.data.repository;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.*;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest = Config.NONE, sdk = 33)
 public class DefaultMainRepositoryBuildShortcutIntentTest {
 
     private DefaultMainRepository createRepository() {
-        Context context = mock(Context.class);
-        SharedPreferences prefs = mock(SharedPreferences.class);
-        when(context.getApplicationContext()).thenReturn(context);
-        when(context.getSharedPreferences(anyString(), anyInt())).thenReturn(prefs);
-        when(context.getPackageName()).thenReturn("com.d4rk.androidtutorials");
+        Context context = RuntimeEnvironment.getApplication();
         return new DefaultMainRepository(context);
     }
 

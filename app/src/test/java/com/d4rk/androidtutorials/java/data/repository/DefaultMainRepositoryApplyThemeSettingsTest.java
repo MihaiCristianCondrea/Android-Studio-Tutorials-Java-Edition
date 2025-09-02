@@ -4,17 +4,17 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.*;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest = Config.NONE, sdk = 33)
@@ -28,14 +28,9 @@ public class DefaultMainRepositoryApplyThemeSettingsTest {
     };
 
     private DefaultMainRepository createRepository(String prefValue) {
-        Context context = mock(Context.class);
-        SharedPreferences prefs = mock(SharedPreferences.class);
-        when(context.getApplicationContext()).thenReturn(context);
-        when(context.getSharedPreferences(anyString(), anyInt())).thenReturn(prefs);
-        when(context.getPackageName()).thenReturn("com.d4rk.androidtutorials");
-        when(context.getString(R.string.key_theme)).thenReturn("theme");
-        when(context.getString(R.string.default_value_theme)).thenReturn("MODE_NIGHT_FOLLOW_SYSTEM");
-        when(prefs.getString(eq("theme"), anyString())).thenReturn(prefValue);
+        Context context = RuntimeEnvironment.getApplication();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        prefs.edit().clear().putString(context.getString(R.string.key_theme), prefValue).apply();
         return new DefaultMainRepository(context);
     }
 
