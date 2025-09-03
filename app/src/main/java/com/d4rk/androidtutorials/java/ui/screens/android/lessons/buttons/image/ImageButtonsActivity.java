@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.image;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
@@ -13,7 +14,7 @@ import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.snackbar.Snackbar;
 
 public class ImageButtonsActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivityImageButtonsBinding binding;
 
     @Override
@@ -36,5 +37,12 @@ public class ImageButtonsActivity extends UpNavigationActivity {
         });
 
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
+    }
+    
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
     }
 }

@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +27,7 @@ import java.util.concurrent.Executors;
  * Demonstrates basic Room usage by inserting and reading notes.
  */
 public class RoomActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivityRoomBinding binding;
     private NotesAdapter adapter;
     private AppDatabase db;
@@ -82,6 +83,7 @@ public class RoomActivity extends UpNavigationActivity {
     protected void onDestroy() {
         super.onDestroy();
         executor.shutdown();
+        handler.removeCallbacksAndMessages(null);
     }
 
     private static class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHolder> {
@@ -119,4 +121,5 @@ public class RoomActivity extends UpNavigationActivity {
             }
         }
     }
+    
 }

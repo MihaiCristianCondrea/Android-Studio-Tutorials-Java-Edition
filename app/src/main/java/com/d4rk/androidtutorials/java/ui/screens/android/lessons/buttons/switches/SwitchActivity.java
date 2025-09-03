@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.switch
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
@@ -15,7 +16,7 @@ import com.google.android.material.snackbar.Snackbar;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class SwitchActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivitySwitchBinding binding;
 
     @Override
@@ -42,5 +43,12 @@ public class SwitchActivity extends UpNavigationActivity {
             startActivity(intent);
         });
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
+    }
+    
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
     }
 }

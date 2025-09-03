@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
@@ -16,7 +17,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class DatePickerActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private final Calendar calendar = Calendar.getInstance();
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
     private ActivityDatePickerBinding binding;
@@ -53,5 +54,12 @@ public class DatePickerActivity extends UpNavigationActivity {
 
     private void updateDateInView() {
         binding.dateTextView.setText(dateFormat.format(calendar.getTime()));
+    }
+    
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
     }
 }

@@ -4,6 +4,7 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
@@ -16,7 +17,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class TimePickerActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private final Calendar calendar = Calendar.getInstance();
     private ActivityTimePickerBinding binding;
 
@@ -55,5 +56,12 @@ public class TimePickerActivity extends UpNavigationActivity {
         String timeFormat = "HH:mm";
         SimpleDateFormat sdf = new SimpleDateFormat(timeFormat, Locale.getDefault());
         binding.timeTextView.setText(sdf.format(calendar.getTime()));
+    }
+    
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
     }
 }
