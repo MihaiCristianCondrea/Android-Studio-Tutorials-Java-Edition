@@ -6,12 +6,15 @@
     <string name="summary_notification_update">Az alkalmazás új verziója elérhető. Koppints a frissítéshez.</string>
     <string name="notification_last_time_used_title">Rég nem találkoztunk.</string>
     <string name="summary_notification_last_time_used">Rég volt—tanulj valami újat az Androidról.</string>
+
     <string name="menu">Menü</string>
     <string name="press_back_again_to_exit">Nyomja meg újra a Back gombot a kilépéshez</string>
+
 
     <string name="welcome">Üdvözöljük</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">A folytatáshoz olvassa el és fogadja el a Szolgáltatási feltételeket és az Adatvédelmi irányelveket</string>
     <string name="agree">Elfogadom</string>
+
 
     <string name="home">Kezdőlap</string>
     <string name="announcement_title">Megérkezett egy új app</string>
@@ -20,6 +23,29 @@
     <string name="main_card_title">Fedezd fel az Android Studio oktatóanyagokat</string>
     <string name="main_card_subtitle">Kotlin és Java kiadásokkal</string>
     <string name="main_card_description">A Kotlin kiadás frissült dinamikus leckékkel, AI asszisztenssel és még sok mással. Tapasztald meg az Android fejlesztés jövőjét.</string>
+    <string name="get_on_google_play">Szerezd meg a Google Playen</string>
+    <string name="learn_more">Tudj meg többet</string>
+    <string name="play_store">Play Áruház</string>
+    <string name="search_tutorials_hint">Oktatóanyagok keresése</string>
+    <string name="search_tutorials_content_description">Oktatóanyagok keresése</string>
+    <string name="search_lessons_hint">Leckék keresése</string>
+    <string name="search_lessons_content_description">Leckék keresése</string>
+
+    <string name="android_studio">Android Studio</string>
+
+
+    <string name="android_start">Új projekt indítása</string>
+    <string name="android_start_project">Új projekt indítása</string>
+    <string name="step1">1. lépés</string>
+    <string name="summary_first_step">Az első lépés az új projekt létrehozásához az Android Studioban, hogy a képen látható <b>Új projekt</b> gombra kattintasz, majd továbblépsz a következő lépésre.</string>
+    <string name="step2">2. lépés</string>
+    <string name="summary_second_step">A második lépés a te alkalmazásodhoz illő aktivitástípus kiválasztása. Választhatsz néhány előre beállított sablon közül, amelyek megkönnyíthetik a munkád. Válaszd ki az egyiket, majd kattints a <b>tovább</b> gombra.</string>
+    <string name="step3">3. lépés</string>
+    <string name="summary_third_step">A harmadik, egyben utolsó lépés az alkalmazás beállításainak konfigurálása, mint például az alkalmazás neve, a <b>csomagnév</b>, a preferált <b>programozási nyelv</b> és a <b>minimális SDK</b>. További információkat az <a href="https://developer.android.com/">Android Developers</a> oldalon találsz.</string>
+
+
+    <string name="basics">Alapok</string>
+
     <string name="shortcuts">Android Studio gyorsbillentyűk</string>
     <string name="shortcuts_title">Gyorsbillentyűk</string>
     <string name="description">Leírás</string>
@@ -53,25 +79,6 @@
     <string name="smart_step_into">Intelligens belépés</string>
     <string name="step_out">Kilépés</string>
 
-    <string name="get_on_google_play">Szerezd meg a Google Playen</string>
-    <string name="learn_more">Tudj meg többet</string>
-    <string name="play_store">Play Áruház</string>
-    <string name="search_tutorials_hint">Oktatóanyagok keresése</string>
-    <string name="search_tutorials_content_description">Oktatóanyagok keresése</string>
-    <string name="search_lessons_hint">Leckék keresése</string>
-    <string name="search_lessons_content_description">Leckék keresése</string>
-    <string name="android_studio">Android Studio</string>
-
-    <string name="android_start">Új projekt indítása</string>
-    <string name="android_start_project">Új projekt indítása</string>
-    <string name="step1">1. lépés</string>
-    <string name="summary_first_step">Az első lépés az új projekt létrehozásához az Android Studioban, hogy a képen látható <b>Új projekt</b> gombra kattintasz, majd továbblépsz a következő lépésre.</string>
-    <string name="step2">2. lépés</string>
-    <string name="summary_second_step">A második lépés a te alkalmazásodhoz illő aktivitástípus kiválasztása. Választhatsz néhány előre beállított sablon közül, amelyek megkönnyíthetik a munkád. Válaszd ki az egyiket, majd kattints a <b>tovább</b> gombra.</string>
-    <string name="step3">3. lépés</string>
-    <string name="summary_third_step">A harmadik, egyben utolsó lépés az alkalmazás beállításainak konfigurálása, mint például az alkalmazás neve, a <b>csomagnév</b>, a preferált <b>programozási nyelv</b> és a <b>minimális SDK</b>. További információkat az <a href="https://developer.android.com/">Android Developers</a> oldalon találsz.</string>
-
-    <string name="basics">Alapok</string>
     <string name="run_to_cursor">Futtatás a kurzorig</string>
     <string name="evaluate_expression">Kifejezés kiértékelése</string>
     <string name="resume_program">Program folytatása</string>
@@ -120,12 +127,15 @@
     <string name="view_recent_changes">Legutóbbi változások megtekintése</string>
     <string name="open_vcs_popup">VCS felugró ablak megnyitása</string>
     <string name="more_about_shortcuts">További információk a gyorsbillentyűkről</string>
+
     <string name="history_of_android">Az Android története</string>
     <string name="history">Történet</string>
     <string name="features">Funkciók</string>
 
+
     <string name="android_sdk">Android SDK-k</string>
     <string name="android_versions">Android-verziók</string>
+
 
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Beállítási utasítások</string>
@@ -133,103 +143,46 @@
     <string name="use_view_binding_in_fragments">View Binding használata a fragmentekben</string>
     <string name="more_about_view_binding">További információ a View Bindingről</string>
 
+
     <string name="permission_dialog_example">Engedélykérő párbeszéd példája</string>
     <string name="more_about_permissions">További információ az engedélyekről</string>
 
+
     <string name="per_app_language_preferences">Alkalmazásonkénti nyelvi beállítások</string>
 
+
     <string name="predictive_back_gesture">Prediktív visszalépési gesztus</string>
-    <string name="snack_this_is_a_snackbar">Ez egy snackbar.</string>
-    <string name="snack_bar_clicked">kattintva</string>
-    <string name="snack_copied_to_clipboard">Vágólapra másolva. 📋</string>
-    <string name="snack_unable_to_open_google_play_store">Nem sikerült megnyitni a Google Play Áruházat.</string>
-    <string name="snack_rating">Köszönjük a %1$.1f csillagos értékelést. ❤️</string>
-    <string name="snack_image_button">Kép gomb megnyomva.</string>
-    <string name="toast_this_is_a_toast">Ez egy toast.</string>
-    <string name="tooltip_show_code">Kódszintaxis megjelenítése</string>
-    <string name="tooltip_show_java_code_snippet">Java kódrészlet megjelenítése</string>
-    <string name="tooltip_open_me">Nyiss meg 🌐</string>
-    <string name="hint_type">Írj ide</string>
-    <string name="hint_password">Add meg a jelszavad</string>
 
-    <string name="app_usage_notifications">Alkalmazáshasználati értesítések</string>
-    <string name="update_notifications">Frissítési értesítések</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Tekintsd meg a <i><u>Szolgáltatási feltételeket</u></i> és az <i><u>Adatvédelmi szabályzatot</u></i></string>
-
-    <string name="update_downloaded">Frissítés letöltve</string>
-    <string name="view_in_google_play">Megtekintés a Google Play Áruházban</string>
-    <string name="version_info">Verzióinformáció</string>
-    <string name="beta_program">Béta program</string>
-    <string name="open_source_licenses">Nyílt forráskódú licencek</string>
-    <string name="version">Verzió %1$s</string>
-    <string name="error_loading_layout">Hiba a layout betöltésekor</string>
-    <string name="error_loading_code">Hiba a kód betöltésekor</string>
-    <string name="snack_general_error">Hiba történt a frissítések keresése közben</string>
-    <string name="consent_dialog_title">Adatok és hirdetések hozzájárulása</string>
-    <string name="analytics_storage">Analitikai tárolás</string>
-    <string name="ad_storage">Hirdetési tárolás</string>
-    <string name="ad_user_data">Hirdetési felhasználói adatok</string>
-    <string name="ad_personalization">Hirdetések személyre szabása</string>
-    <string name="consent_settings">Hozzájárulási beállítások</string>
-    <string name="summary_consent_analytics_storage">Lehetővé teszi névtelen használati statisztikák gyűjtését.</string>
-    <string name="summary_consent_ad_storage">Engedélyezi hirdetési adatok tárolását az eszközön.</string>
-    <string name="summary_consent_ad_user_data">Lehetővé teszi felhasználói adatok megosztását hirdetésekhez.</string>
-    <string name="summary_consent_ad_personalization">Személyre szabott hirdetési ajánlásokat tesz lehetővé.</string>
-    <string name="daily_tip_constraintlayout">Használd a ConstraintLayoutot reszponzív UI-k készítéséhez.</string>
-    <string name="daily_tip_viewbinding">Használd a ViewBindinget a biztonságosabb UI-kódhoz.</string>
-    <string name="daily_tip_recyclerview">Valósíts meg RecyclerView-t a gördülékeny listákhoz.</string>
-    <string name="daily_tip_material_design3">Használd a Material Design 3 komponenseit modern megjelenéshez.</string>
-    <string name="daily_tip_profile_app">Profilozd rendszeresen az appot a teljesítmény nyomon követéséhez.</string>
-    <string name="daily_tip_extract_components">Tartsd rendezettnek a layoutokat újrafelhasználható komponensek kivonásával.</string>
-    <string name="daily_tip_use_string_resources">Használj szöveg erőforrásokat minden szöveghez a lokalizálás megkönnyítéséhez.</string>
-    <string name="daily_tip_optimize_webp">Optimalizáld a képeket WebP-vel az APK méretének csökkentéséhez.</string>
-    <string name="daily_tip_enable_proguard">Kapcsold be a ProGuardot a kiadási build-ek zsugorításához és obfuszkálásához.</string>
-    <string name="daily_tip_prefer_compose">Ha modern eszközöket célozol, részesítsd előnyben a Compose-t az új UI-hoz.</string>
-    <string name="daily_tip_livedata_viewmodel">Használd a LiveData és ViewModel előnyeit reaktív UI-khoz.</string>
-    <string name="daily_tip_workmanager">Használd a WorkManagert megbízható háttérfeladatokhoz.</string>
-    <string name="daily_tip_github_actions">Használd a GitHub Actions-t automatizált build ellenőrzésekhez.</string>
-    <string name="daily_tip_emulator_screen_sizes">Teszteld az appot különböző képernyőméreteken az emulátorban.</string>
-    <string name="daily_tip_update_dependencies">Tartsd naprakészen a függőségeket a legújabb funkciók és javítások érdekében.</string>
-    <string name="daily_tip_kotlin_coroutines">Használd a Kotlin Coroutinekat az aszinkron műveletekhez.</string>
-    <string name="daily_tip_hilt">Integráld a Hiltet a függőséginjekcióhoz.</string>
-    <string name="daily_tip_unit_tests">Írj egységteszteket JUnittal és Espresso-val.</string>
-    <string name="daily_tip_mvvm">Kövesd az MVVM architektúrát a karbantartható kódért.</string>
-    <string name="tip_of_the_day">A nap tippje</string>
-    <string name="quiz_title">Kvíz</string>
-    <string name="next_question">Következő kérdés</string>
-    <string name="quiz_finished">Kvíz kész. Pontszámod: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Nincs több kérdés, továbbiakért nézd meg a frissítéseket.</string>
-    <string name="quiz_reminder_title">Napi kvíz emlékeztető</string>
-    <string name="quiz_reminder_body">Gyere vissza a mai kvízért.</string>
-    <string name="other_apps_title">A fejlesztő további alkalmazásai</string>
-
-    <string name="im_step1_desc">Képernyőkép az Új projekt gombbal az Android Studioban.</string>
-    <string name="im_step2_desc">Képernyőkép a projekt beállításakor az aktivitástípus választásáról.</string>
-    <string name="im_step3_desc">Képernyőkép az alkalmazás neve, csomagja, nyelve és minimum SDK mezőiről.</string>
     <string name="room_database">Room adatbázis</string>
     <string name="enter_note">Jegyzet bevitele</string>
     <string name="add_note">Jegyzet hozzáadása</string>
-    <string name="summary_preference_android_studio_room_database">Egyszerű jegyzetek tárolása a Room használatával, amely egy absztrakciós réteg a SQLite felett.</string>
-    <string name="summary_room_database">A Room egy perzisztencia könyvtár, amely objektumtérképezési réteget biztosít a SQLite felett. Ez a példa megmutatja, hogyan lehet jegyzeteket menteni és megjeleníteni.</string>
 
     <string name="layouts">Elrendezések és nézetek</string>
 
+
     <string name="linear_layout">Lineáris elrendezés</string>
+
 
     <string name="vertical">Függőleges</string>
     <string name="horizontal">Vízszintes</string>
     <string name="layout_preview">Elrendezés előnézete</string>
     <string name="no_java_code_needed">Ehhez az aktivitáshoz nincs szükség Java kódra.</string>
 
+
     <string name="relative_layout">Relatív elrendezés</string>
+
 
     <string name="table_layout">Táblázatos elrendezés</string>
 
+
     <string name="grid_view">Rácsnézet</string>
+
 
     <string name="image_view">Képnézet</string>
 
+
     <string name="web_view">Webnézet</string>
+
 
     <string name="buttons_and_switches">Gombok és kapcsolók</string>
     <string name="buttons">Gombok</string>
@@ -254,13 +207,16 @@
     <string name="floating_button_tertiary_icon">Lebegő gomb 4 (harmadlagos)</string>
     <string name="same_code_buttons">Használd ezt a Java kódot minden gombtípushoz.</string>
 
+
     <string name="radio_buttons">Rádiógombok</string>
     <string name="choose_your_option">Válassz egy lehetőséget</string>
     <string name="first_radio_option">1. opció</string>
     <string name="second_radio_option">2. opció</string>
     <string name="display_option">Opció megjelenítése</string>
 
+
     <string name="image_buttons">Képgombok</string>
+
 
     <string name="switches">Kapcsolók</string>
     <string name="switch_me">Kapcsolj át</string>
@@ -416,6 +372,9 @@
     <string name="summary_preference_android_studio_permissions">A jogosultságok fontosak Androidban, mivel jogosultságot igénylő feladatokat nem végezhetsz el azok kérése nélkül.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Tanuld meg, hogyan használhatsz alkalmazásonként különböző nyelveket, hogy alkalmazásod hozzáférhetőbb és felhasználóbarátabb legyen. Ez a funkció lehetővé teszi, hogy minden alkalmazáshoz más nyelvet válassz a készüléken, anélkül hogy a felhasználó megváltoztatná a készülék nyelvét.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Az Android 13 (API szint 33) bevezeti az előrejelző visszalépési gesztust olyan Android eszközökre, mint a telefonok, a nagy képernyők és az összehajtható eszközök. Ez egy többéves kiadás része; teljes megvalósításakor a funkció lehetővé teszi, hogy a felhasználók előre megtekintsék a visszalépési gesztus célját vagy más eredményét, mielőtt teljesen végrehajtanák, így eldönthetik, hogy folytatják-e vagy maradnak az aktuális nézetben.</string>
+    <string name="summary_preference_android_studio_room_database">Egyszerű jegyzetek tárolása a Room használatával, amely egy absztrakciós réteg a SQLite felett.</string>
+    <string name="summary_room_database">A Room egy perzisztencia könyvtár, amely objektumtérképezési réteget biztosít a SQLite felett. Ez a példa megmutatja, hogyan lehet jegyzeteket menteni és megjeleníteni.</string>
+
     <string name="summary_preference_android_studio_linear_layout">A lineáris elrendezés olyan nézetcsoport, amely gyermekeit egyetlen, vízszintesen vagy függőlegesen elrendezi. Az elrendezés orientációja az android:orientation attribútum segítségével határozható meg. Lineáris elrendezés használható különféle felhasználói interfészek, például listák, gombok és szövegmezők létrehozásához.</string>
     <string name="summary_preference_android_studio_relative_layout">A relatív elrendezés az Android elrendezési kezelője, amely gyermekek nézeteit egymáshoz vagy a szülő elrendezéséhez viszonyítva helyezi el. Ez teszi nagyon sokoldalú elrendezési kezelővé, mivel felhasználható az elrendezések széles választékának létrehozására.</string>
     <string name="summary_preference_android_studio_table_layout">A táblázat elrendezése a táblázat celláinak, sorának és oszlopainak vizuálisan vonzó és funkcionális módon történő elrendezésének folyamata.</string>
@@ -461,9 +420,79 @@
     <string name="summary_android_history">Az Android egy mobil operációs rendszer, amelyet a Google fejlesztett. Először 2007. november 5-én adták ki béta verzióként, az első kereskedelmi verziót, az Android 1.0-t pedig 2008. szeptember 23-án indították. Az Android a Linux kernel módosított verzióján és más nyílt forráskódú szoftvereken alapul.\n\nAz Android Studio az Android-alkalmazás-fejlesztés hivatalos integrált fejlesztőkörnyezete (IDE). A Google a 2013. május 15-i I/O konferenciáján jelentette be, és 2014. december 8-án tette elérhetővé a nagyközönség számára. Az Android Studio az IntelliJ IDEA-ra épül, egy népszerű Java IDE-re.\n\nA Kotlin egy többplatformos programozási nyelv, amely a Java virtuális gépen (JVM), Androidon, böngészőben és natív platformokon is fut. A JetBrains, egy prágai székhelyű szoftvercég hozta létre. A Kotlin első bejelentése 2011 júliusában történt, és 2012 februárjában adták ki nyílt forráskódú projektként.\n\nA Google 2017. május 17-én, az I/O konferencián jelentette be, hogy hivatalosan támogatja a Kotlin nyelvet az Android-alkalmazás-fejlesztéshez. Azóta a Kotlin az egyik legnépszerűbb nyelvvé vált az Android fejlesztők körében. A Google 2020 októberi adatai szerint az első 1000 alkalmazás több mint 70%-a a Google Playen Kotlin nyelvet használ.</string>
     <string name="summary_android_features">Az Android nemcsak egy operációs rendszer, hanem egy olyan platform is, amely számos funkciót és lehetőséget kínál a felhasználók és a fejlesztők számára. Néhány Android funkció:\n\n- Near Field Communication (NFC), amely lehetővé teszi adatok megosztását, fizetések végrehajtását és más eszközökkel való vezeték nélküli kapcsolatot.\n- Alternatív billentyűzetek, amelyek lehetővé teszik a beviteli módszer testreszabását különböző kiosztásokkal, nyelvekkel és témákkal.\n- Infravörös (IR) átvitel, amellyel a telefonodat távirányítóként használhatod tévékhez, légkondicionálókhoz és más eszközökhöz.\n- Érintés nélküli vezérlés, amely lehetővé teszi műveletek végrehajtását a telefonon a képernyő megérintése nélkül, gesztusok vagy hangparancsok használatával.\n- Automatizálás, amellyel rutint és triggert állíthatsz be, hogy a telefon bizonyos feladatokat automatikusan végrehajtson.\n- Vezeték nélküli alkalmazásletöltések, amelyek lehetővé teszik az alkalmazások telepítését a számítógépről vagy a web böngészőből anélkül, hogy kábellel csatlakoztatnád a telefont.\n- Tárhely- és akkumulátorcsere, amely lehetőséget ad a telefon memóriájának bővítésére vagy az akkumulátor egyszerű cseréjére.\n- Testreszabható kezdőképernyő, amellyel személyre szabhatod a telefon megjelenését widgetekkel, háttérképekkel, ikonokkal és launcherekkel.\n\nAz Android Studio a legjobb eszköz Android alkalmazások fejlesztéséhez. Sok funkciót és előnyt kínál a fejlesztőknek, például:\n\n- Kódszerkesztő szintaxiskiemeléssel, kódkiegészítéssel, refaktoringgal, hibakereséssel, teszteléssel és lint eszközökkel.\n- Layout szerkesztő drag-and-drop felülettel a felhasználói felületek tervezéséhez.\n- Emulátor gyors indítással és pillanatkép támogatással különböző eszközökön és konfigurációkban való teszteléshez.\n- Firebase integráció olyan szolgáltatásokkal, mint hitelesítés, adatbázis, tárhely, analitika, hibajelentés és még sok más. \n- Gradle-alapú build rendszer függőségkezeléssel,\nszemélyre szabással,\noptimalizálással,\n aláírással,\nterjesztési lehetőségekkel és további funkciókkal. \n\nAz Android Studio segítségével lenyűgöző alkalmazásokat készíthetsz Android eszközökre Kotlin használatával,\na modern programozási nyelvvel, amely tömör,\nbiztonságos,\nkifejező,\nés kompatibilis a Java-val.</string>
     <string name="summary_chronometer">A Chronometer egy speciális widget az Android keretrendszerben, amely időzítő-szerű funkcionalitást biztosít az eltelt idő megjelenítéséhez. Beállítható felfelé vagy lefelé számolásra, és gyakran használják olyan alkalmazásokban, amelyek időmérést igényelnek, például stopper- vagy visszaszámláló alkalmazások. A Chronometer osztály a TextView osztályból származik, ami azt jelenti, hogy örökli a TextView összes tulajdonságát és metódusát. Ez lehetővé teszi a fejlesztők számára, hogy könnyen testre szabják a Chronometer megjelenését, beleértve a szöveg méretét, színét és betűtípusát.</string>
+    <string name="snack_this_is_a_snackbar">Ez egy snackbar.</string>
+    <string name="snack_bar_clicked">kattintva</string>
+    <string name="snack_copied_to_clipboard">Vágólapra másolva. 📋</string>
+    <string name="snack_unable_to_open_google_play_store">Nem sikerült megnyitni a Google Play Áruházat.</string>
+    <string name="snack_rating">Köszönjük a %1$.1f csillagos értékelést. ❤️</string>
+    <string name="snack_image_button">Kép gomb megnyomva.</string>
+    <string name="toast_this_is_a_toast">Ez egy toast.</string>
+    <string name="tooltip_show_code">Kódszintaxis megjelenítése</string>
+    <string name="tooltip_show_java_code_snippet">Java kódrészlet megjelenítése</string>
+    <string name="tooltip_open_me">Nyiss meg 🌐</string>
+    <string name="hint_type">Írj ide</string>
+    <string name="hint_password">Add meg a jelszavad</string>
+
+
+    <string name="app_usage_notifications">Alkalmazáshasználati értesítések</string>
+    <string name="update_notifications">Frissítési értesítések</string>
+    <string name="browse_terms_of_service_and_privacy_policy">Tekintsd meg a <i><u>Szolgáltatási feltételeket</u></i> és az <i><u>Adatvédelmi szabályzatot</u></i></string>
+
+
+    <string name="update_downloaded">Frissítés letöltve</string>
+    <string name="view_in_google_play">Megtekintés a Google Play Áruházban</string>
+    <string name="version_info">Verzióinformáció</string>
+    <string name="beta_program">Béta program</string>
+    <string name="open_source_licenses">Nyílt forráskódú licencek</string>
+    <string name="version">Verzió %1$s</string>
+    <string name="error_loading_layout">Hiba a layout betöltésekor</string>
+    <string name="error_loading_code">Hiba a kód betöltésekor</string>
+    <string name="snack_general_error">Hiba történt a frissítések keresése közben</string>
+    <string name="consent_dialog_title">Adatok és hirdetések hozzájárulása</string>
+    <string name="analytics_storage">Analitikai tárolás</string>
+    <string name="ad_storage">Hirdetési tárolás</string>
+    <string name="ad_user_data">Hirdetési felhasználói adatok</string>
+    <string name="ad_personalization">Hirdetések személyre szabása</string>
+    <string name="consent_settings">Hozzájárulási beállítások</string>
+    <string name="summary_consent_analytics_storage">Lehetővé teszi névtelen használati statisztikák gyűjtését.</string>
+    <string name="summary_consent_ad_storage">Engedélyezi hirdetési adatok tárolását az eszközön.</string>
+    <string name="summary_consent_ad_user_data">Lehetővé teszi felhasználói adatok megosztását hirdetésekhez.</string>
+    <string name="summary_consent_ad_personalization">Személyre szabott hirdetési ajánlásokat tesz lehetővé.</string>
+    <string name="daily_tip_constraintlayout">Használd a ConstraintLayoutot reszponzív UI-k készítéséhez.</string>
+    <string name="daily_tip_viewbinding">Használd a ViewBindinget a biztonságosabb UI-kódhoz.</string>
+    <string name="daily_tip_recyclerview">Valósíts meg RecyclerView-t a gördülékeny listákhoz.</string>
+    <string name="daily_tip_material_design3">Használd a Material Design 3 komponenseit modern megjelenéshez.</string>
+    <string name="daily_tip_profile_app">Profilozd rendszeresen az appot a teljesítmény nyomon követéséhez.</string>
+    <string name="daily_tip_extract_components">Tartsd rendezettnek a layoutokat újrafelhasználható komponensek kivonásával.</string>
+    <string name="daily_tip_use_string_resources">Használj szöveg erőforrásokat minden szöveghez a lokalizálás megkönnyítéséhez.</string>
+    <string name="daily_tip_optimize_webp">Optimalizáld a képeket WebP-vel az APK méretének csökkentéséhez.</string>
+    <string name="daily_tip_enable_proguard">Kapcsold be a ProGuardot a kiadási build-ek zsugorításához és obfuszkálásához.</string>
+    <string name="daily_tip_prefer_compose">Ha modern eszközöket célozol, részesítsd előnyben a Compose-t az új UI-hoz.</string>
+    <string name="daily_tip_livedata_viewmodel">Használd a LiveData és ViewModel előnyeit reaktív UI-khoz.</string>
+    <string name="daily_tip_workmanager">Használd a WorkManagert megbízható háttérfeladatokhoz.</string>
+    <string name="daily_tip_github_actions">Használd a GitHub Actions-t automatizált build ellenőrzésekhez.</string>
+    <string name="daily_tip_emulator_screen_sizes">Teszteld az appot különböző képernyőméreteken az emulátorban.</string>
+    <string name="daily_tip_update_dependencies">Tartsd naprakészen a függőségeket a legújabb funkciók és javítások érdekében.</string>
+    <string name="daily_tip_kotlin_coroutines">Használd a Kotlin Coroutinekat az aszinkron műveletekhez.</string>
+    <string name="daily_tip_hilt">Integráld a Hiltet a függőséginjekcióhoz.</string>
+    <string name="daily_tip_unit_tests">Írj egységteszteket JUnittal és Espresso-val.</string>
+    <string name="daily_tip_mvvm">Kövesd az MVVM architektúrát a karbantartható kódért.</string>
+    <string name="tip_of_the_day">A nap tippje</string>
+    <string name="quiz_title">Kvíz</string>
+    <string name="next_question">Következő kérdés</string>
+    <string name="quiz_finished">Kvíz kész. Pontszámod: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Nincs több kérdés, továbbiakért nézd meg a frissítéseket.</string>
+    <string name="quiz_reminder_title">Napi kvíz emlékeztető</string>
+    <string name="quiz_reminder_body">Gyere vissza a mai kvízért.</string>
+    <string name="other_apps_title">A fejlesztő további alkalmazásai</string>
+
+    <string name="im_step1_desc">Képernyőkép az Új projekt gombbal az Android Studioban.</string>
+    <string name="im_step2_desc">Képernyőkép a projekt beállításakor az aktivitástípus választásáról.</string>
+    <string name="im_step3_desc">Képernyőkép az alkalmazás neve, csomagja, nyelve és minimum SDK mezőiről.</string>
     <string name="networking">Networking</string>
     <string name="retrofit">Retrofit</string>
     <string name="fetch_data">Fetch data</string>
     <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
     <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
+
 </resources>

@@ -6,11 +6,14 @@
     <string name="summary_notification_update">Налична е нова версия на приложението. Кликнете, за да актуализирате.</string>
     <string name="notification_last_time_used_title">Отдавна не сме се виждали.</string>
     <string name="summary_notification_last_time_used">Отдавна не сте били тук—научете нещо ново за Android.</string>
+
     <string name="menu">Меню</string>
     <string name="press_back_again_to_exit">Натиснете отново назад, за да излезете</string>
+
     <string name="welcome">Добре дошли</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Съгласен съм</string>
+
     <string name="home">Начало</string>
     <string name="announcement_title">Ново приложение е тук.</string>
     <string name="announcement_subtitle">Разгледайте най-новото приложение Android Studio Tutorials. Научете Jetpack Compose, Material 3 и още.</string>
@@ -25,7 +28,9 @@
     <string name="search_tutorials_content_description">Търсене на уроци</string>
     <string name="search_lessons_hint">Търсене на уроци</string>
     <string name="search_lessons_content_description">Търсене на уроци</string>
+
     <string name="android_studio">Android Studio</string>
+
     <string name="android_start">Стартиране на нов проект</string>
     <string name="android_start_project">Стартиране на нов проект</string>
     <string name="step1">Стъпка 1</string>
@@ -34,7 +39,9 @@
     <string name="summary_second_step">Втората стъпка е да изберете типа активност, който подхожда на вашето приложение. Можете да избирате от някои предварително зададени настройки, които могат да опростят работата ви. Изберете една от тях и кликнете върху бутона <b>Напред</b>.</string>
     <string name="step3">Стъпка 3</string>
     <string name="summary_third_step">Третата и последна стъпка е да конфигурирате настройките на приложението си, като име на приложението, <b>име на пакета</b>, предпочитан <b>език за програмиране</b> и <b>минимален SDK</b>. Можете да научите повече за тях на <a href="https://developer.android.com/">Android Developers</a>.</string>
+
     <string name="basics">Основи</string>
+
     <string name="shortcuts">Клавишни комбинации в Android Studio</string>
     <string name="shortcuts_title">Клавишни комбинации</string>
     <string name="description">Описание</string>
@@ -115,34 +122,50 @@
     <string name="view_recent_changes">Преглед на последните промени</string>
     <string name="open_vcs_popup">Отваряне на изскачащ прозорец за VCS</string>
     <string name="more_about_shortcuts">Повече за клавишните комбинации</string>
+
     <string name="history_of_android">История на Android</string>
     <string name="history">История</string>
     <string name="features">Характеристики</string>
+
     <string name="android_sdk">Android SDK-та</string>
     <string name="android_versions">Версии на Android</string>
+
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Инструкции за настройка</string>
     <string name="use_view_binding_in_activities">Използване на View Binding в активности</string>
     <string name="use_view_binding_in_fragments">Използване на View Binding във фрагменти</string>
     <string name="more_about_view_binding">Повече за View Binding</string>
+
     <string name="permission_dialog_example">Пример за диалогов прозорец за разрешения</string>
     <string name="more_about_permissions">Повече за разрешенията</string>
+
     <string name="per_app_language_preferences">Езикови предпочитания за всяко приложение</string>
+
     <string name="predictive_back_gesture">Предсказуем жест за връщане назад</string>
+
     <string name="room_database">Room база данни</string>
     <string name="enter_note">Въведете бележка</string>
     <string name="add_note">Добавете бележка</string>
+
     <string name="layouts">Оформления и изгледи</string>
+
     <string name="linear_layout">Линейно оформление (Linear Layout)</string>
+
     <string name="vertical">Вертикално</string>
     <string name="horizontal">Хоризонтално</string>
     <string name="layout_preview">Визуализация на оформлението</string>
     <string name="no_java_code_needed">За тази активност не е необходим Java код.</string>
+
     <string name="relative_layout">Относително оформление (Relative Layout)</string>
+
     <string name="table_layout">Таблично оформление (Table Layout)</string>
+
     <string name="grid_view">Мрежов изглед (Grid View)</string>
+
     <string name="image_view">Изглед на изображение (Image View)</string>
+
     <string name="web_view">Уеб изглед (Web View)</string>
+
     <string name="buttons_and_switches">Бутони и превключватели</string>
     <string name="buttons">Бутони</string>
     <string name="button">Бутон</string>
@@ -165,12 +188,15 @@
     <string name="floating_button_surface_icon">Плаващ бутон 3 (повърхностен)</string>
     <string name="floating_button_tertiary_icon">Плаващ бутон 4 (третичен)</string>
     <string name="same_code_buttons">Използвайте този Java код за всички типове бутони.</string>
+
     <string name="radio_buttons">Радио бутони</string>
     <string name="choose_your_option">Изберете вашата опция</string>
     <string name="first_radio_option">Опция 1</string>
     <string name="second_radio_option">Опция 2</string>
     <string name="display_option">Показване на опция</string>
+
     <string name="image_buttons">Бутони с изображение</string>
+
     <string name="switches">Превключватели</string>
     <string name="switch_me">Превключи ме</string>
     <string name="material_switch_preference">Предпочитание за Material превключвател</string>
@@ -240,14 +266,20 @@
     <string name="notifications">Известия</string>
     <string name="notification_settings">Настройки на известията</string>
     <string name="firebase">Firebase</string>
+    <string name="firebase_crashlytics">Катастрофа</string>
+    <string name="firebase_analytics">Анализ на пожарната база</string>
+    <string name="firebase_performance">Firebase Performance</string>
     <string name="privacy_and_security">Поверителност и сигурност</string>
     <string name="privacy_policy">Политика за поверителност</string>
     <string name="terms_of_service">Условия за ползване</string>
     <string name="code_of_conduct">Кодекс на поведение</string>
     <string name="permissions">Разрешения</string>
     <string name="normal">Нормални</string>
+    <string name="special">Специални</string>
     <string name="ad_id">Рекламен идентификатор [AD_ID]</string>
     <string name="internet">Интернет [INTERNET]</string>
+    <string name="wake_lock">Дръж устройството будно.</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">Публикуване на известия [POST_NOTIFICATIONS]</string>
     <string name="runtime">По време на изпълнение</string>
     <string name="access_network_state">Достъп до състоянието на мрежата [ACCESS_NETWORK_STATE]</string>
@@ -308,6 +340,9 @@
     <string name="summary_preference_permissions_access_notification_policy">Позволява на приложението да осъществява достъп и да променя политиката за известия на устройството, контролирайки как и кога се показват известията на потребителя и предоставяйки персонализирани функции за управление на известията.</string>
     <string name="summary_preference_permissions_foreground_service">Позволява на приложението да създава и използва услуги, които се изпълняват на преден план, давайки им приоритет пред други фонови процеси и подобрявайки производителността и надеждността.</string>
     <string name="summary_preference_settings_language">Задаване на езика на приложението.</string>
+    <string name="summary_preference_settings_firebase_crashlytics">Събиране на доклади за катастрофа, за да помогне за отстраняване на проблеми.</string>
+    <string name="summary_preference_settings_firebase_analytics">Събира данни за използването за подобряване на приложението.</string>
+    <string name="summary_preference_settings_firebase_performance">Мерки изпълнение на приложението за оптимизиране.</string>
     <string name="summary_preference_android_studio_start">Научете основите за това как да стартирате нов проект в Android Studio, как да го конфигурирате, как да зададете пакет, нива на API и много други…</string>
     <string name="summary_preference_android_studio_shortcuts">Android Studio включва клавишни комбинации за много често срещани действия. Имайте предвид, че тъй като Android Studio е базирано на IntelliJ IDEA, можете да намерите допълнителни клавишни комбинации в справочната документация за клавиатурните карти на IntelliJ IDEA.</string>
     <string name="summary_preference_android_studio_history_of_android">Научете за историята на Android, от бета версията му през 2007 г. до превръщането му в най-популярната мобилна операционна система в света. Открийте функциите, които правят Android уникален, и предимствата от използването на Android Studio за разработване на вашите приложения с Java.</string>
@@ -375,6 +410,7 @@
     <string name="tooltip_open_me">Отвори ме 🌐</string>
     <string name="hint_type">Type here</string>
     <string name="hint_password">Enter your password</string>
+
     <string name="app_usage_notifications">Известия за използване на приложението</string>
     <string name="update_notifications">Известия за актуализации</string>
     <string name="browse_terms_of_service_and_privacy_policy">Разгледайте <i>
@@ -383,6 +419,7 @@
             <u>Политиката за поверителност</u>
         </i>
     </string>
+
     <string name="update_downloaded">Актуализацията е изтеглена</string>
     <string name="view_in_google_play">Преглед в Google Play Store</string>
     <string name="version_info">Информация за версията</string>
@@ -392,15 +429,6 @@
     <string name="error_loading_layout">Грешка при зареждане на оформлението</string>
     <string name="error_loading_code">Грешка при зареждане на кода</string>
     <string name="snack_general_error">Възникна грешка при проверката за актуализации</string>
-    <string name="firebase_crashlytics">Катастрофа</string>
-    <string name="firebase_analytics">Анализ на пожарната база</string>
-    <string name="firebase_performance">Firebase Performance</string>
-    <string name="special">Специални</string>
-    <string name="wake_lock">Дръж устройството будно.</string>
-    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
-    <string name="summary_preference_settings_firebase_crashlytics">Събиране на доклади за катастрофа, за да помогне за отстраняване на проблеми.</string>
-    <string name="summary_preference_settings_firebase_analytics">Събира данни за използването за подобряване на приложението.</string>
-    <string name="summary_preference_settings_firebase_performance">Мерки изпълнение на приложението за оптимизиране.</string>
     <string name="consent_dialog_title">Съгласие за данните и рекламите</string>
     <string name="analytics_storage">Съхранение на анализатори</string>
     <string name="ad_storage">Рекламно съхранение</string>
@@ -446,4 +474,5 @@
     <string name="fetch_data">Fetch data</string>
     <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
     <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
+
 </resources>
