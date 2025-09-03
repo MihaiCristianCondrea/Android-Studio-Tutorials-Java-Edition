@@ -13,6 +13,7 @@
     <string name="home">首頁</string>
     <string name="announcement_title">新應用程式來了！</string>
     <string name="announcement_subtitle">快來看看最新的 Android Studio 教學應用程式。學習 Jetpack Compose、Material 3 等等。</string>
+    <string name="profile_picture_desc">開發人員個人資料圖片</string>
     <string name="main_card_title">探索 Android Studio 教學</string>
     <string name="main_card_subtitle">包含 Kotlin 和 Java 版本</string>
     <string name="main_card_description">Kotlin 版本已更新，增加了動態課程、AI 助理等功能。體驗 Android 開發的未來！</string>

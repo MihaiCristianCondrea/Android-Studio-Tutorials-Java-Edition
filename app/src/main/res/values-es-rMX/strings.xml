@@ -13,6 +13,7 @@
     <string name="home">Inicio</string>
     <string name="announcement_title">Llegó una nueva app.</string>
     <string name="announcement_subtitle">Échale un ojo a la nueva app de Tutoriales de Android Studio. Aprende Jetpack Compose, Material 3 y más.</string>
+    <string name="profile_picture_desc">Foto de perfil de desarrollador</string>
     <string name="main_card_title">Descubre los Tutoriales de Android Studio</string>
     <string name="main_card_subtitle">Con ediciones de Kotlin y Java</string>
     <string name="main_card_description">La edición de Kotlin ha sido actualizada con lecciones dinámicas, asistente de IA y más. Experimenta el futuro del desarrollo de Android.</string>

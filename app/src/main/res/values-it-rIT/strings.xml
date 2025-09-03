@@ -18,4 +18,5 @@
     <string name="add_note">Aggiungi nota</string>
     <string name="summary_preference_android_studio_room_database">Mantieni semplici note utilizzando Room, un livello di astrazione sopra SQLite.</string>
     <string name="summary_room_database">Room è una libreria di persistenza che fornisce un livello di mapping degli oggetti sopra SQLite. Questo esempio mostra come salvare e visualizzare note.</string>
+    <string name="profile_picture_desc">Immagine del profilo sviluppatore</string>
 </resources>

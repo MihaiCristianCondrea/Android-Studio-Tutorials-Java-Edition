@@ -2,6 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="announcement_title">Aplikasi Baru Telah Tiba.</string>
     <string name="announcement_subtitle">Lihat aplikasi Android Studio Tutorials terbaru.</string>
+    <string name="profile_picture_desc">Gambar profil pengembang</string>
     <string name="main_card_title">Temukan Tutorial Android Studio</string>
     <string name="main_card_subtitle">Menampilkan Edisi Kotlin dan Java</string>
     <string name="main_card_description">Edisi Kotlin telah diperbarui dengan pelajaran dinamis, asisten AI, dan banyak lagi. Rasakan masa depan pengembangan Android.</string>

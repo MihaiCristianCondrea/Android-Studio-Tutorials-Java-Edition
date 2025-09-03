@@ -13,6 +13,7 @@
     <string name="home">Hem</string>
     <string name="announcement_title">En ny app har kommit.</string>
     <string name="announcement_subtitle">Kolla in den senaste appen Android Studio Tutorials. Lär dig Jetpack Compose, Material 3 och mer.</string>
+    <string name="profile_picture_desc">Utvecklarprofilbild</string>
     <string name="main_card_title">Upptäck Android Studio Tutorials</string>
     <string name="main_card_subtitle">Med Kotlin- och Java-utgåvor</string>
     <string name="main_card_description">Kotlin-utgåvan har uppdaterats med dynamiska lektioner, AI-assistent och mer. Upplev framtiden för Android-utveckling.</string>

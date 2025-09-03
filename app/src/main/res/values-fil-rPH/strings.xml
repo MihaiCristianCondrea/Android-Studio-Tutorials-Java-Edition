@@ -13,6 +13,7 @@
     <string name="home">Home</string>
     <string name="announcement_title">May Bagong App.</string>
     <string name="announcement_subtitle">Tingnan ang pinakabagong Android Studio Tutorials app. Alamin ang Jetpack Compose, Material 3, at marami pa.</string>
+    <string name="profile_picture_desc">Larawan ng profile ng developer</string>
     <string name="main_card_title">Tuklasin ang Android Studio Tutorials</string>
     <string name="main_card_subtitle">Nagtatampok ng mga Edisyon ng Kotlin at Java</string>
     <string name="main_card_description">Ang Kotlin Edition ay na-update na may mga dynamic na aralin, AI assistant, at marami pa. Damhin ang hinaharap ng Android development.</string>

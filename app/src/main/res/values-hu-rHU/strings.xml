@@ -18,4 +18,5 @@
     <string name="add_note">Jegyzet hozzáadása</string>
     <string name="summary_preference_android_studio_room_database">Egyszerű jegyzetek tárolása a Room használatával, amely egy absztrakciós réteg a SQLite felett.</string>
     <string name="summary_room_database">A Room egy perzisztencia könyvtár, amely objektumtérképezési réteget biztosít a SQLite felett. Ez a példa megmutatja, hogyan lehet jegyzeteket menteni és megjeleníteni.</string>
+    <string name="profile_picture_desc">Fejlesztő profilkép</string>
 </resources>

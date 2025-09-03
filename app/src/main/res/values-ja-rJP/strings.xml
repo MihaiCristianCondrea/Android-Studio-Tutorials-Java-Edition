@@ -18,4 +18,5 @@
     <string name="add_note">メモを追加</string>
     <string name="summary_preference_android_studio_room_database">SQLite の上にある抽象化レイヤーである Room を使用して簡単なメモを保持します。</string>
     <string name="summary_room_database">Room は SQLite 上にオブジェクトマッピングレイヤーを提供する永続化ライブラリです。この例ではメモを保存して表示する方法を示します。</string>
+    <string name="profile_picture_desc">開発者プロフィール写真</string>
 </resources>

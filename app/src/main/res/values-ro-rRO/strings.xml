@@ -2,6 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="announcement_title">A sosit o aplicație nouă.</string>
     <string name="announcement_subtitle">Descoperă cea mai recentă aplicație Android Studio Tutorials.</string>
+    <string name="profile_picture_desc">Poza de profil pentru dezvoltatori</string>
     <string name="main_card_title">Descoperă Tutorialele Android Studio</string>
     <string name="main_card_subtitle">Disponibilă în edițiile Kotlin și Java</string>
     <string name="main_card_description">Ediția Kotlin a fost actualizată cu lecții dinamice, asistent AI și multe altele. Experimentează viitorul dezvoltării Android.</string>

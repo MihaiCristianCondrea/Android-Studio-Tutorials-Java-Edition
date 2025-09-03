@@ -2,6 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="announcement_title">एक नया ऐप यहाँ है.</string>
     <string name="announcement_subtitle">नवीनतम Android Studio ट्यूटोरियल ऐप देखें।</string>
+    <string name="profile_picture_desc">डेवलपर प्रोफ़ाइल चित्र</string>
     <string name="main_card_title">Android Studio ट्यूटोरियल खोजें</string>
     <string name="main_card_subtitle">कोटलिन और जावा संस्करणों की विशेषता</string>
     <string name="main_card_description">कोटलिन संस्करण को गतिशील पाठों, एआई सहायक और बहुत कुछ के साथ अपडेट किया गया है। एंड्रॉइड डेवलपमेंट के भविष्य का अनुभव करें.</string>

@@ -13,6 +13,7 @@
     <string name="home">Ana Sayfa</string>
     <string name="announcement_title">Yeni Bir Uygulama Geldi.</string>
     <string name="announcement_subtitle">En son Android Studio Eğitimleri uygulamasını inceleyin. Jetpack Compose, Material 3 ve daha fazlasını öğrenin.</string>
+    <string name="profile_picture_desc">Geliştirici Profil Resmi</string>
     <string name="main_card_title">Android Studio Eğitimlerini Keşfedin</string>
     <string name="main_card_subtitle">Kotlin ve Java Sürümleriyle</string>
     <string name="main_card_description">Kotlin Sürümü dinamik dersler, yapay zeka asistanı ve daha fazlasıyla güncellendi. Android geliştirmenin geleceğini deneyimleyin.</string>
