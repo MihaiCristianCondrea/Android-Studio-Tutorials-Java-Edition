@@ -13,6 +13,7 @@
     <string name="home">Головна</string>
     <string name="announcement_title">Новий додаток вже тут.</string>
     <string name="announcement_subtitle">Перегляньте найновіший додаток Android Studio Tutorials. Вивчайте Jetpack Compose, Material 3 та багато іншого.</string>
+    <string name="profile_picture_desc">Зображення профілю розробника</string>
     <string name="main_card_title">Відкрийте для себе посібники з Android Studio</string>
     <string name="main_card_subtitle">З версіями на Kotlin та Java</string>
     <string name="main_card_description">Версія на Kotlin оновлена динамічними уроками, ШІ-асистентом та іншим. Відчуйте майбутнє розробки на Android.</string>

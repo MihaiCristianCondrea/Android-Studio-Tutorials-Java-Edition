@@ -13,6 +13,7 @@
     <string name="home">الرئيسية</string>
     <string name="announcement_title">تطبيق جديد وصل.</string>
     <string name="announcement_subtitle">شوف أحدث تطبيق لشروحات أندرويد ستوديو. اتعلم Jetpack Compose، و Material 3، وغيرهم.</string>
+    <string name="profile_picture_desc">صورة ملف تعريف المطور</string>
     <string name="main_card_title">اكتشف شروحات أندرويد ستوديو</string>
     <string name="main_card_subtitle">بإصدارات Kotlin و Java</string>
     <string name="main_card_description">تم تحديث إصدار Kotlin بدروس ديناميكية ومساعد ذكاء اصطناعي والمزيد. جرب مستقبل تطوير تطبيقات أندرويد.</string>

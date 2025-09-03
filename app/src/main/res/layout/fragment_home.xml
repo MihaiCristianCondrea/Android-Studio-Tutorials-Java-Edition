@@ -48,7 +48,8 @@
                         android:layout_height="48dp"
                         android:layout_marginEnd="16dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/dev_logo" />
+                        android:src="@drawable/dev_logo"
+                        android:contentDescription="@string/profile_picture_desc" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="0dp"

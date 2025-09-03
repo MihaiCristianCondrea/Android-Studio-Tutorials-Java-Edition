@@ -13,6 +13,7 @@
     <string name="home">หน้าแรก</string>
     <string name="announcement_title">แอปใหม่มาแล้ว.</string>
     <string name="announcement_subtitle">พบกับแอป Android Studio Tutorials ล่าสุด เรียนรู้ Jetpack Compose, Material 3 และอื่นๆ</string>
+    <string name="profile_picture_desc">รูปโปรไฟล์นักพัฒนา</string>
     <string name="main_card_title">ค้นพบ Android Studio Tutorials</string>
     <string name="main_card_subtitle">นำเสนอฉบับ Kotlin และ Java</string>
     <string name="main_card_description">ฉบับ Kotlin ได้รับการอัปเดตด้วยบทเรียนแบบไดนามิก, ผู้ช่วย AI และอื่นๆ สัมผัสอนาคตของการพัฒนา Android.</string>

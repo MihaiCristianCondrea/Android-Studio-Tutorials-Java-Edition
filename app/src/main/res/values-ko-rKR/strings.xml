@@ -13,6 +13,7 @@
     <string name="home">홈</string>
     <string name="announcement_title">새로운 앱이 출시되었습니다.</string>
     <string name="announcement_subtitle">최신 Android Studio 튜토리얼 앱을 확인해보세요. Jetpack Compose, Material 3 등을 배워보세요.</string>
+    <string name="profile_picture_desc">개발자 프로필 사진</string>
     <string name="main_card_title">Android Studio 튜토리얼 살펴보기</string>
     <string name="main_card_subtitle">Kotlin 및 Java 에디션 제공</string>
     <string name="main_card_description">Kotlin 에디션이 동적 강의, AI 어시스턴트 등으로 업데이트되었습니다. Android 개발의 미래를 경험해보세요.</string>

@@ -13,6 +13,7 @@
     <string name="home">Trang chủ</string>
     <string name="announcement_title">Một ứng dụng mới đã ra mắt.</string>
     <string name="announcement_subtitle">Hãy xem ứng dụng Hướng dẫn Android Studio mới nhất. Tìm hiểu Jetpack Compose, Material 3, v.v.</string>
+    <string name="profile_picture_desc">Hình ảnh hồ sơ nhà phát triển</string>
     <string name="main_card_title">Khám phá Hướng dẫn Android Studio</string>
     <string name="main_card_subtitle">Bao gồm các phiên bản Kotlin và Java</string>
     <string name="main_card_description">Phiên bản Kotlin đã được cập nhật với các bài học động, trợ lý AI, v.v. Trải nghiệm tương lai của phát triển Android.</string>

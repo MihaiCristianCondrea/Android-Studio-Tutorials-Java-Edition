@@ -2,6 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="announcement_title">Новое приложение уже здесь.</string>
     <string name="announcement_subtitle">Оцените последнее приложение Android Studio Tutorials.</string>
+    <string name="profile_picture_desc">Изображение профиля разработчика</string>
     <string name="main_card_title">Откройте для себя уроки Android Studio</string>
     <string name="main_card_subtitle">Включая версии на Kotlin и Java</string>
     <string name="main_card_description">Версия Kotlin была обновлена динамическими уроками, помощником с ИИ и многим другим. Ощутите будущее разработки Android.</string>

@@ -18,4 +18,5 @@
     <string name="add_note">Dodaj notatkę</string>
     <string name="summary_preference_android_studio_room_database">Przechowuj proste notatki za pomocą Room, warstwy abstrakcji nad SQLite.</string>
     <string name="summary_room_database">Room to biblioteka trwałości, która zapewnia warstwę mapowania obiektów na SQLite. Ten przykład pokazuje, jak zapisywać i wyświetlać notatki.</string>
+    <string name="profile_picture_desc">Zdjęcie profilowe programisty</string>
 </resources>
