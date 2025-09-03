@@ -1,10 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="image_view_preview_desc">Pratinjau tampilan gambar</string>
+    <string name="app_short_description">Pelajari cara membuat aplikasi sederhana di Android Studio. 📱</string>
     <string name="notification_update_title">Pembaruan baru tersedia.</string>
     <string name="summary_notification_update">Versi baru aplikasi tersedia. Klik untuk memperbarui.</string>
     <string name="notification_last_time_used_title">Sudah cukup lama.</string>
     <string name="summary_notification_last_time_used">Sudah lama—pelajari sesuatu yang baru tentang Android.</string>
+
+    <string name="menu">Menu</string>
+    <string name="press_back_again_to_exit">Tekan kembali lagi untuk keluar</string>
+
+    <string name="welcome">Selamat datang</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
+    <string name="agree">Setuju</string>
+
+    <string name="home">Beranda</string>
     <string name="announcement_title">Aplikasi Baru Telah Tiba.</string>
     <string name="announcement_subtitle">Lihat aplikasi Android Studio Tutorials terbaru.</string>
     <string name="profile_picture_desc">Gambar profil pengembang</string>
@@ -18,33 +28,20 @@
     <string name="search_tutorials_content_description">Cari tutorial</string>
     <string name="search_lessons_hint">Cari pelajaran</string>
     <string name="search_lessons_content_description">Cari pelajaran</string>
-    <string name="update_downloaded">Pembaruan diunduh</string>
-    <string name="view_in_google_play">Lihat di Google Play Store</string>
-    <string name="version_info">Info versi</string>
-    <string name="beta_program">Program beta</string>
-    <string name="open_source_licenses">Lisensi sumber terbuka</string>
-    <string name="version">Versi %1$s</string>
-    <string name="error_loading_layout">Kesalahan memuat tata letak</string>
-    <string name="error_loading_code">Kesalahan memuat kode</string>
-    <string name="app_short_description">Pelajari cara membuat aplikasi sederhana di Android Studio. 📱</string>
-    <string name="app_usage_notifications">Notifikasi Penggunaan Aplikasi</string>
-    <string name="update_notifications">Notifikasi Pembaruan</string>
-    <string name="welcome">Selamat datang</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Jelajahi <i>
-            <u>Ketentuan Layanan</u>
-        </i> dan <i>
-            <u>Kebijakan Privasi</u>
-        </i>
-    </string>
-    <string name="agree">Setuju</string>
-    <string name="home">Beranda</string>
+
     <string name="android_studio">Android Studio</string>
+
     <string name="android_start">Mulai Proyek Baru</string>
     <string name="android_start_project">Mulai Proyek Baru</string>
     <string name="step1">Langkah 1</string>
+    <string name="summary_first_step">Langkah pertama untuk membuat proyek baru di Android Studio adalah mengeklik tombol <b>Proyek baru</b> seperti yang ditunjukkan pada gambar dan melanjutkan ke langkah berikutnya.</string>
     <string name="step2">Langkah 2</string>
+    <string name="summary_second_step">Langkah kedua adalah memilih jenis aktivitas yang sesuai dengan aplikasi Anda. Anda dapat memilih dari beberapa preset yang dapat menyederhanakan pekerjaan Anda. Pilih salah satunya dan klik tombol <b>berikutnya</b>.</string>
     <string name="step3">Langkah 3</string>
+    <string name="summary_third_step">Langkah ketiga dan terakhir adalah mengonfigurasi pengaturan aplikasi Anda, seperti nama aplikasi, <b>nama paket</b>, <b>bahasa pemrograman</b> yang disukai, dan <b>SDK minimum</b>. Anda dapat mempelajari lebih lanjut tentangnya di <a href="https://developer.android.com/">Android Developers</a>.</string>
+
     <string name="basics">Dasar-dasar</string>
+
     <string name="shortcuts">Pintasan Android Studio</string>
     <string name="shortcuts_title">Pintasan</string>
     <string name="description">Deskripsi</string>
@@ -125,34 +122,50 @@
     <string name="view_recent_changes">Lihat perubahan terbaru</string>
     <string name="open_vcs_popup">Buka pop-up VCS</string>
     <string name="more_about_shortcuts">Selengkapnya tentang pintasan</string>
+
     <string name="history_of_android">Sejarah Android</string>
     <string name="history">Sejarah</string>
     <string name="features">Fitur</string>
+
     <string name="android_sdk">Android SDK</string>
     <string name="android_versions">Versi Android</string>
+
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Instruksi penyiapan</string>
     <string name="use_view_binding_in_activities">Gunakan view binding di aktivitas</string>
     <string name="use_view_binding_in_fragments">Gunakan view binding di fragmen</string>
     <string name="more_about_view_binding">Selengkapnya tentang View Binding</string>
+
     <string name="permission_dialog_example">Contoh dialog izin</string>
     <string name="more_about_permissions">Selengkapnya tentang izin</string>
+
     <string name="per_app_language_preferences">Preferensi bahasa per aplikasi</string>
+
     <string name="predictive_back_gesture">Gerakan kembali prediktif</string>
+
     <string name="room_database">Basis data Room</string>
     <string name="enter_note">Masukkan catatan</string>
     <string name="add_note">Tambahkan catatan</string>
+
     <string name="layouts">Layouts and views</string>
+
     <string name="linear_layout">Tata Letak Linear</string>
+
     <string name="vertical">Vertikal</string>
     <string name="horizontal">Horizontal</string>
-    <string name="no_java_code_needed">Tidak ada kode Java yang diperlukan untuk aktivitas ini.</string>
-    <string name="relative_layout">Tata Letak Relatif</string>
-    <string name="table_layout">Tata Letak Tabel</string>
-    <string name="grid_view">Tampilan Kisi</string>
-    <string name="image_view">Tampilan Gambar</string>
-    <string name="web_view">Tampilan Web</string>
     <string name="layout_preview">Pratinjau tata letak</string>
+    <string name="no_java_code_needed">Tidak ada kode Java yang diperlukan untuk aktivitas ini.</string>
+
+    <string name="relative_layout">Tata Letak Relatif</string>
+
+    <string name="table_layout">Tata Letak Tabel</string>
+
+    <string name="grid_view">Tampilan Kisi</string>
+
+    <string name="image_view">Tampilan Gambar</string>
+
+    <string name="web_view">Tampilan Web</string>
+
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Tombol</string>
     <string name="button">Tombol</string>
@@ -175,12 +188,15 @@
     <string name="floating_button_surface_icon">Tombol Mengambang 3 (permukaan)</string>
     <string name="floating_button_tertiary_icon">Tombol Mengambang 4 (tersier)</string>
     <string name="same_code_buttons">Gunakan kode Java ini untuk semua jenis tombol.</string>
+
     <string name="radio_buttons">Tombol Radio</string>
     <string name="choose_your_option">Pilih opsi Anda</string>
     <string name="first_radio_option">Opsi 1</string>
     <string name="second_radio_option">Opsi 2</string>
     <string name="display_option">Tampilkan opsi</string>
+
     <string name="image_buttons">Tombol Gambar</string>
+
     <string name="switches">Sakelar</string>
     <string name="switch_me">Alihkan saya</string>
     <string name="material_switch_preference">Preferensi Sakelar Material</string>
@@ -250,14 +266,20 @@
     <string name="notifications">Notifikasi</string>
     <string name="notification_settings">Pengaturan notifikasi</string>
     <string name="firebase">Firebase</string>
+    <string name="firebase_crashlytics">Firebase Crashlytics</string>
+    <string name="firebase_analytics">Analisis Firebase</string>
+    <string name="firebase_performance">Performance Firebase</string>
     <string name="privacy_and_security">Privasi dan keamanan</string>
     <string name="privacy_policy">Kebijakan privasi</string>
     <string name="terms_of_service">Ketentuan layanan</string>
     <string name="code_of_conduct">Kode etik</string>
     <string name="permissions">Izin</string>
     <string name="normal">Normal</string>
+    <string name="special">Khusus</string>
     <string name="ad_id">ID iklan [AD_ID]</string>
     <string name="internet">Internet [INTERNET]</string>
+    <string name="wake_lock">Jauhkan perangkat terjaga [WAKE _ LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">Kirim notifikasi [POST_NOTIFICATIONS]</string>
     <string name="runtime">Runtime</string>
     <string name="access_network_state">Akses status jaringan [ACCESS_NETWORK_STATE]</string>
@@ -318,6 +340,9 @@
     <string name="summary_preference_permissions_access_notification_policy">Memungkinkan aplikasi untuk mengakses dan memodifikasi kebijakan notifikasi perangkat, mengontrol bagaimana dan kapan notifikasi ditampilkan kepada pengguna dan menyediakan fitur manajemen notifikasi kustom.</string>
     <string name="summary_preference_permissions_foreground_service">Memungkinkan aplikasi untuk membuat dan menggunakan layanan yang berjalan di latar depan, memberi mereka prioritas di atas proses latar belakang lainnya dan meningkatkan kinerja serta keandalan.</string>
     <string name="summary_preference_settings_language">Atur bahasa aplikasi.</string>
+    <string name="summary_preference_settings_firebase_crashlytics">Mengumpulkan laporan kecelakaan untuk membantu memperbaiki masalah.</string>
+    <string name="summary_preference_settings_firebase_analytics">Gather menggunakan data untuk perbaikan aplikasi.</string>
+    <string name="summary_preference_settings_firebase_performance">Mengukur kinerja aplikasi untuk optimisasi.</string>
     <string name="summary_preference_android_studio_start">Pelajari dasar-dasar cara memulai proyek Android Studio baru, cara mengonfigurasi, cara mengatur paket, level API, dan banyak lagi…</string>
     <string name="summary_preference_android_studio_shortcuts">Android Studio menyertakan pintasan keyboard untuk banyak tindakan umum. Ingatlah, karena Android Studio didasarkan pada IntelliJ IDEA, Anda dapat menemukan pintasan tambahan dalam dokumentasi referensi keymap IntelliJ IDEA.</string>
     <string name="summary_preference_android_studio_history_of_android">Pelajari tentang sejarah Android, dari rilis beta pada tahun 2007 hingga menjadi sistem operasi seluler paling populer di dunia. Temukan fitur-fitur yang membuat Android unik dan manfaat menggunakan Android Studio untuk mengembangkan aplikasi Anda dengan Java.</string>
@@ -360,18 +385,12 @@
     <string name="summary_alert_dialog_require_restart">Agar efektif, harap mulai ulang aplikasi.</string>
     <string name="summary_sdk">Android Software Development Kit (SDK) adalah kumpulan alat yang memungkinkan pengembang membuat aplikasi Android. Ini mencakup seperangkat pustaka, debugger, emulator handset, dan dokumentasi. SDK juga mencakup pustaka API dan seperangkat dokumentasi API. Paket yang Anda unduh memiliki pustaka, yang membantu Anda dalam membuat aplikasi Anda.\n\nIni adalah ikhtisar semua versi Android dan pengenal yang sesuai untuk pengembang Android. Siapa pun dipersilakan untuk membuka masalah atau pull request. Selamat mengembangkan.</string>
     <string name="summary_view_binding">View binding adalah fitur yang memungkinkan Anda menulis kode yang berinteraksi dengan tampilan dengan lebih mudah. Setelah view binding diaktifkan dalam modul, itu menghasilkan kelas binding untuk setiap file layout XML yang ada di modul tersebut. Sebuah instance dari kelas binding berisi referensi langsung ke semua tampilan yang memiliki ID dalam layout yang sesuai.</string>
-    <string name="summary_first_step">Langkah pertama untuk membuat proyek baru di Android Studio adalah mengeklik tombol <b>Proyek baru</b> seperti yang ditunjukkan pada gambar dan melanjutkan ke langkah berikutnya.</string>
-    <string name="summary_second_step">Langkah kedua adalah memilih jenis aktivitas yang sesuai dengan aplikasi Anda. Anda dapat memilih dari beberapa preset yang dapat menyederhanakan pekerjaan Anda. Pilih salah satunya dan klik tombol <b>berikutnya</b>.</string>
-    <string name="summary_third_step">Langkah ketiga dan terakhir adalah mengonfigurasi pengaturan aplikasi Anda, seperti nama aplikasi, <b>nama paket</b>, <b>bahasa pemrograman</b> yang disukai, dan <b>SDK minimum</b>. Anda dapat mempelajari lebih lanjut tentangnya di <a href="https://developer.android.com/">Android Developers</a>.</string>
     <string name="summary_enable_binding">View binding diaktifkan berdasarkan modul per modul. Untuk mengaktifkan view binding dalam modul, atur opsi build viewBinding ke true di file build.gradle tingkat modul, seperti yang ditunjukkan dalam contoh berikut:</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="summary_toggle">Anda dapat menambahkan tombol toggle dasar ke tata letak Anda dengan objek ToggleButton. Android 4.0 (level API 14) memperkenalkan jenis tombol toggle lain yang disebut sakelar yang menyediakan kontrol slider, yang dapat Anda tambahkan dengan objek Switch. SwitchCompat adalah versi widget Switch yang berjalan di perangkat hingga API 7.</string>
     <string name="summary_clocks">Catatan Penting: Jam digital telah didepresiasi di versi API 17. Dari level API 17, Anda dapat menggunakan TextClock alih-alih jam digital. Di bawah ini adalah deskripsi Jam Teks di Android.</string>
     <string name="summary_buttons">Tombol adalah elemen penting dari setiap aplikasi Android. Mereka memungkinkan pengguna untuk berinteraksi dengan aplikasi dan melakukan tindakan seperti mengirimkan formulir, memulai aktivitas baru, atau melakukan pembelian.\n\nDi Android Studio, tombol dibuat menggunakan kelas Button dan dapat disesuaikan dengan berbagai cara, termasuk mengatur teks, warna, dan ukurannya. Mereka juga dapat dikonfigurasi untuk memicu tindakan yang berbeda saat diklik, seperti memulai aktivitas baru atau menampilkan pesan pop-up.\n\nTombol dapat ditempatkan di mana saja dalam tata letak aplikasi dan dapat digunakan bersama dengan elemen UI lainnya seperti bidang teks dan daftar untuk membuat aplikasi yang berfungsi penuh dan ramah pengguna.\n\nSecara keseluruhan, tombol adalah alat yang sederhana namun kuat untuk membangun aplikasi Android yang menarik dan interaktif.</string>
     <string name="summary_permissions">Misalnya, jika aplikasi Anda perlu mengunduh sesuatu, aplikasi tersebut akan memerlukan izin Internet.\n\nLihatlah situs web Pengembang Android untuk semua izin dan referensi ke dokumentasi resmi.\n\nAplikasi Android harus meminta izin untuk mengakses fitur atau data tertentu di perangkat. Izin ini digunakan untuk melindungi privasi pengguna dan perangkat. Ketika aplikasi diinstal, pengguna diminta untuk memberikan atau menolak izin yang diminta aplikasi. Aplikasi hanya akan memiliki akses ke fitur atau data yang dimintanya izin.\n\nAda dua jenis izin: normal dan berbahaya. Izin normal tidak menimbulkan risiko terhadap privasi pengguna. Ini termasuk hal-hal seperti akses internet dan getaran. Izin berbahaya, di sisi lain, berpotensi mengakses informasi atau tindakan sensitif dan karenanya lebih dibatasi. Ini termasuk izin seperti akses ke lokasi pengguna, kamera, dan kontak.\n\nPenting bagi pengembang aplikasi untuk hanya meminta izin yang mutlak diperlukan agar aplikasi mereka berfungsi dengan benar. Ini membantu melindungi privasi pengguna dan juga membuat aplikasi lebih ramah pengguna.</string>
     <string name="summary_image_buttons">Tombol gambar adalah tombol yang berisi gambar alih-alih teks. Mereka dapat digunakan di Android untuk menyediakan antarmuka pengguna yang lebih menarik secara visual dan interaktif. Tombol gambar dapat digunakan untuk memicu tindakan, menavigasi ke layar yang berbeda, atau menampilkan informasi tambahan. Mereka sering digunakan dalam kombinasi dengan label teks untuk memberikan komunikasi yang jelas kepada pengguna tentang tujuan tombol.</string>
-    <string name="menu">Menu</string>
-    <string name="press_back_again_to_exit">Tekan kembali lagi untuk keluar</string>
     <string name="summary_image_view">AndroidX AppCompatImageView adalah subkelas dari ImageView yang dirancang untuk mendukung berbagai fitur ActionBar dan Material Design. Ini adalah bagian dari pustaka AndroidX, yang merupakan seperangkat pustaka dukungan yang menawarkan versi API kerangka kerja Android yang kompatibel ke belakang serta fitur yang hanya tersedia melalui API pustaka.\n\nAppCompatImageView dimaksudkan untuk digunakan sebagai pengganti drop-in untuk ImageView, memungkinkan pengembang untuk menggunakan kode dan elemen UI yang sama di berbagai versi Android. Ini termasuk dukungan untuk berbagai fitur seperti pewarnaan, pemuatan drawable vektor, dan penanganan penskalaan gambar.\n\nAppCompatImageView juga menyertakan dukungan untuk fitur Material Design seperti elevasi, yang memungkinkan tampilan gambar untuk menghasilkan bayangan dan tampak terangkat di atas permukaan tata letak. Ini juga menyertakan dukungan untuk efek riak Material Design, yang merupakan efek visual yang diterapkan saat tampilan gambar disentuh.\n\nSingkatnya, AndroidX AppCompatImageView adalah subkelas ImageView yang serbaguna dan kaya fitur yang dirancang untuk mendukung berbagai fitur dan elemen desain dalam aplikasi Android.</string>
     <string name="summary_linear_layout_compat">Linear Layout Compat adalah kelas dalam pustaka dukungan Android appCompat v7. Ini ditambahkan untuk mendukung metode yang ditambahkan di level API yang lebih baru pada yang lama (seperti pembagi). Jika Anda membandingkan metode di LinearLayout dan LinearLayoutCompat, Anda dapat melihat bahwa tata letak Compat memiliki semua metode dari Tata Letak Linear tanpa batasan level API. Misalnya, metode setShowDividers diperkenalkan pada level API 11. Jadi, dalam kasus ini, setShowDividers (dan parameternya) harus dipanggil menggunakan Linear Layout Compat alih-alih LinearLayout jika Anda menargetkan platform dengan level API di bawah 11.</string>
     <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
@@ -391,16 +410,25 @@
     <string name="tooltip_open_me">Buka saya 🌐</string>
     <string name="hint_type">Type here</string>
     <string name="hint_password">Enter your password</string>
+
+    <string name="app_usage_notifications">Notifikasi Penggunaan Aplikasi</string>
+    <string name="update_notifications">Notifikasi Pembaruan</string>
+    <string name="browse_terms_of_service_and_privacy_policy">Jelajahi <i>
+            <u>Ketentuan Layanan</u>
+        </i> dan <i>
+            <u>Kebijakan Privasi</u>
+        </i>
+    </string>
+
+    <string name="update_downloaded">Pembaruan diunduh</string>
+    <string name="view_in_google_play">Lihat di Google Play Store</string>
+    <string name="version_info">Info versi</string>
+    <string name="beta_program">Program beta</string>
+    <string name="open_source_licenses">Lisensi sumber terbuka</string>
+    <string name="version">Versi %1$s</string>
+    <string name="error_loading_layout">Kesalahan memuat tata letak</string>
+    <string name="error_loading_code">Kesalahan memuat kode</string>
     <string name="snack_general_error">Terjadi kesalahan saat memeriksa pembaruan</string>
-    <string name="firebase_crashlytics">Firebase Crashlytics</string>
-    <string name="firebase_analytics">Analisis Firebase</string>
-    <string name="firebase_performance">Performance Firebase</string>
-    <string name="special">Khusus</string>
-    <string name="wake_lock">Jauhkan perangkat terjaga [WAKE _ LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
-    <string name="summary_preference_settings_firebase_crashlytics">Mengumpulkan laporan kecelakaan untuk membantu memperbaiki masalah.</string>
-    <string name="summary_preference_settings_firebase_analytics">Gather menggunakan data untuk perbaikan aplikasi.</string>
-    <string name="summary_preference_settings_firebase_performance">Mengukur kinerja aplikasi untuk optimisasi.</string>
     <string name="consent_dialog_title">Konsen Data &amp; Ads</string>
     <string name="analytics_storage">Penyimpanan analisis</string>
     <string name="ad_storage">penyimpanan Ad</string>
@@ -446,4 +474,5 @@
     <string name="fetch_data">Fetch data</string>
     <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
     <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
+
 </resources>

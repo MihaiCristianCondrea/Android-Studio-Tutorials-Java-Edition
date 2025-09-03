@@ -6,12 +6,15 @@
     <string name="summary_notification_update">Dostępna jest nowa wersja aplikacji. Kliknij, aby zaktualizować.</string>
     <string name="notification_last_time_used_title">Dawno Cię nie było.</string>
     <string name="summary_notification_last_time_used">Minęło trochę czasu—dowiedz się czegoś nowego o Androidzie.</string>
+
     <string name="menu">Menu</string>
     <string name="press_back_again_to_exit">Wciśnij ponownie, aby wyjść</string>
+
 
     <string name="welcome">Witaj</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Przeczytaj i zaakceptuj Warunki korzystania z usługi oraz Politykę prywatności, aby kontynuować</string>
     <string name="agree">Zgadzam się</string>
+
 
     <string name="home">Strona główna</string>
     <string name="announcement_title">Nowa aplikacja już jest</string>
@@ -20,6 +23,29 @@
     <string name="main_card_title">Odkryj samouczki Android Studio</string>
     <string name="main_card_subtitle">Zawiera edycje Kotlin i Java</string>
     <string name="main_card_description">Edycja Kotlin została zaktualizowana o dynamiczne lekcje, asystenta AI i więcej. Doświadcz przyszłości tworzenia aplikacji na Androida.</string>
+    <string name="get_on_google_play">Pobierz z Google Play</string>
+    <string name="learn_more">Dowiedz się więcej</string>
+    <string name="play_store">Sklep Play</string>
+    <string name="search_tutorials_hint">Wyszukaj samouczki</string>
+    <string name="search_tutorials_content_description">Wyszukaj samouczki</string>
+    <string name="search_lessons_hint">Wyszukaj lekcje</string>
+    <string name="search_lessons_content_description">Wyszukaj lekcje</string>
+
+    <string name="android_studio">Android Studio</string>
+
+
+    <string name="android_start">Rozpocznij nowy projekt</string>
+    <string name="android_start_project">Rozpocznij nowy projekt</string>
+    <string name="step1">Krok 1</string>
+    <string name="summary_first_step">Pierwszym krokiem do utworzenia nowego projektu w Android Studio jest kliknięcie przycisku <b>Nowy projekt</b> widocznego na obrazku i przejście do następnego kroku.</string>
+    <string name="step2">Krok 2</string>
+    <string name="summary_second_step">Drugim krokiem jest wybranie typu aktywności odpowiedniego dla Twojej aplikacji. Możesz wybrać jedną z gotowych konfiguracji, które ułatwią Ci pracę. Wybierz jedną i kliknij przycisk <b>dalej</b>.</string>
+    <string name="step3">Krok 3</string>
+    <string name="summary_third_step">Trzecim i ostatnim krokiem jest skonfigurowanie ustawień aplikacji, takich jak nazwa aplikacji, <b>nazwa pakietu</b>, preferowany <b>język programowania</b> oraz <b>minimalne SDK</b>. Więcej informacji znajdziesz na <a href="https://developer.android.com/">Android Developers</a>.</string>
+
+
+    <string name="basics">Podstawy</string>
+
     <string name="shortcuts">Skróty w Android Studio</string>
     <string name="shortcuts_title">Skróty</string>
     <string name="description">Opis</string>
@@ -53,25 +79,6 @@
     <string name="smart_step_into">Inteligentne wejście</string>
     <string name="step_out">Wyjdź</string>
 
-    <string name="get_on_google_play">Pobierz z Google Play</string>
-    <string name="learn_more">Dowiedz się więcej</string>
-    <string name="play_store">Sklep Play</string>
-    <string name="search_tutorials_hint">Wyszukaj samouczki</string>
-    <string name="search_tutorials_content_description">Wyszukaj samouczki</string>
-    <string name="search_lessons_hint">Wyszukaj lekcje</string>
-    <string name="search_lessons_content_description">Wyszukaj lekcje</string>
-    <string name="android_studio">Android Studio</string>
-
-    <string name="android_start">Rozpocznij nowy projekt</string>
-    <string name="android_start_project">Rozpocznij nowy projekt</string>
-    <string name="step1">Krok 1</string>
-    <string name="summary_first_step">Pierwszym krokiem do utworzenia nowego projektu w Android Studio jest kliknięcie przycisku <b>Nowy projekt</b> widocznego na obrazku i przejście do następnego kroku.</string>
-    <string name="step2">Krok 2</string>
-    <string name="summary_second_step">Drugim krokiem jest wybranie typu aktywności odpowiedniego dla Twojej aplikacji. Możesz wybrać jedną z gotowych konfiguracji, które ułatwią Ci pracę. Wybierz jedną i kliknij przycisk <b>dalej</b>.</string>
-    <string name="step3">Krok 3</string>
-    <string name="summary_third_step">Trzecim i ostatnim krokiem jest skonfigurowanie ustawień aplikacji, takich jak nazwa aplikacji, <b>nazwa pakietu</b>, preferowany <b>język programowania</b> oraz <b>minimalne SDK</b>. Więcej informacji znajdziesz na <a href="https://developer.android.com/">Android Developers</a>.</string>
-
-    <string name="basics">Podstawy</string>
     <string name="run_to_cursor">Uruchom do kursora</string>
     <string name="evaluate_expression">Oceń wyrażenie</string>
     <string name="resume_program">Wznów program</string>
@@ -120,12 +127,15 @@
     <string name="view_recent_changes">Wyświetl ostatnie zmiany</string>
     <string name="open_vcs_popup">Otwórz okno VCS</string>
     <string name="more_about_shortcuts">Więcej o skrótach</string>
+
     <string name="history_of_android">Historia Androida</string>
     <string name="history">Historia</string>
     <string name="features">Funkcje</string>
 
+
     <string name="android_sdk">Android SDK</string>
     <string name="android_versions">Wersje Androida</string>
+
 
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Instrukcje konfiguracji</string>
@@ -133,103 +143,46 @@
     <string name="use_view_binding_in_fragments">Użyj View Binding we fragmentach</string>
     <string name="more_about_view_binding">Więcej o View Binding</string>
 
+
     <string name="permission_dialog_example">Przykład okna dialogowego uprawnień</string>
     <string name="more_about_permissions">Więcej o uprawnieniach</string>
 
+
     <string name="per_app_language_preferences">Preferencje językowe dla poszczególnych aplikacji</string>
 
+
     <string name="predictive_back_gesture">Predykcyjny gest cofania</string>
-    <string name="snack_this_is_a_snackbar">To jest snackbar.</string>
-    <string name="snack_bar_clicked">kliknięto</string>
-    <string name="snack_copied_to_clipboard">Skopiowano do schowka. 📋</string>
-    <string name="snack_unable_to_open_google_play_store">Nie można otworzyć Sklepu Google Play.</string>
-    <string name="snack_rating">Dziękujemy za ocenę %1$.1f gwiazdek. ❤️</string>
-    <string name="snack_image_button">Kliknięto przycisk obrazu.</string>
-    <string name="toast_this_is_a_toast">To jest toast.</string>
-    <string name="tooltip_show_code">Pokaż składnię kodu</string>
-    <string name="tooltip_show_java_code_snippet">Pokaż fragment kodu Java</string>
-    <string name="tooltip_open_me">Otwórz mnie 🌐</string>
-    <string name="hint_type">Wpisz tutaj</string>
-    <string name="hint_password">Wpisz swoje hasło</string>
 
-    <string name="app_usage_notifications">Powiadomienia o użyciu aplikacji</string>
-    <string name="update_notifications">Powiadomienia o aktualizacjach</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Przeglądaj <i><u>Warunki korzystania</u></i> i <i><u>Politykę prywatności</u></i></string>
-
-    <string name="update_downloaded">Aktualizacja pobrana</string>
-    <string name="view_in_google_play">Zobacz w Sklepie Google Play</string>
-    <string name="version_info">Informacje o wersji</string>
-    <string name="beta_program">Program beta</string>
-    <string name="open_source_licenses">Licencje open source</string>
-    <string name="version">Wersja %1$s</string>
-    <string name="error_loading_layout">Błąd podczas wczytywania układu</string>
-    <string name="error_loading_code">Błąd podczas wczytywania kodu</string>
-    <string name="snack_general_error">Wystąpił błąd podczas sprawdzania aktualizacji</string>
-    <string name="consent_dialog_title">Zgoda na dane i reklamy</string>
-    <string name="analytics_storage">Przechowywanie analityki</string>
-    <string name="ad_storage">Przechowywanie reklam</string>
-    <string name="ad_user_data">Dane użytkownika do reklam</string>
-    <string name="ad_personalization">Personalizacja reklam</string>
-    <string name="consent_settings">Ustawienia zgód</string>
-    <string name="summary_consent_analytics_storage">Pozwala na zbieranie anonimowych statystyk użycia.</string>
-    <string name="summary_consent_ad_storage">Zezwala na przechowywanie danych reklam na urządzeniu.</string>
-    <string name="summary_consent_ad_user_data">Pozwala udostępniać dane użytkownika do reklam.</string>
-    <string name="summary_consent_ad_personalization">Umożliwia spersonalizowane rekomendacje reklam.</string>
-    <string name="daily_tip_constraintlayout">Używaj ConstraintLayout do tworzenia responsywnych interfejsów.</string>
-    <string name="daily_tip_viewbinding">Wykorzystaj ViewBinding dla bezpieczniejszego kodu UI.</string>
-    <string name="daily_tip_recyclerview">Zaimplementuj RecyclerView dla płynnych list przewijania.</string>
-    <string name="daily_tip_material_design3">Używaj komponentów Material Design 3 dla nowoczesnego wyglądu.</string>
-    <string name="daily_tip_profile_app">Regularnie profiluj aplikację, aby śledzić wydajność.</string>
-    <string name="daily_tip_extract_components">Organizuj układy, wyodrębniając wielokrotnego użytku komponenty.</string>
-    <string name="daily_tip_use_string_resources">Używaj zasobów string dla całego tekstu, by ułatwić lokalizację.</string>
-    <string name="daily_tip_optimize_webp">Optymalizuj obrazy za pomocą WebP, aby zmniejszyć rozmiar APK.</string>
-    <string name="daily_tip_enable_proguard">Włącz ProGuard, aby zmniejszyć i zaciemnić wydania.</string>
-    <string name="daily_tip_prefer_compose">Preferuj Compose dla nowych UI, jeśli celujesz w nowoczesne urządzenia.</string>
-    <string name="daily_tip_livedata_viewmodel">Wykorzystaj LiveData i ViewModel dla reaktywnych UI.</string>
-    <string name="daily_tip_workmanager">Używaj WorkManager do niezawodnych zadań w tle.</string>
-    <string name="daily_tip_github_actions">Wykorzystaj GitHub Actions do zautomatyzowanych kontroli buildów.</string>
-    <string name="daily_tip_emulator_screen_sizes">Testuj aplikację na różnych rozmiarach ekranów w emulatorze.</string>
-    <string name="daily_tip_update_dependencies">Aktualizuj zależności, aby mieć najnowsze funkcje i poprawki.</string>
-    <string name="daily_tip_kotlin_coroutines">Wykorzystaj Kotlin Coroutines do operacji asynchronicznych.</string>
-    <string name="daily_tip_hilt">Zintegruj Hilt do wstrzykiwania zależności.</string>
-    <string name="daily_tip_unit_tests">Pisz testy jednostkowe za pomocą JUnit i Espresso.</string>
-    <string name="daily_tip_mvvm">Stosuj architekturę MVVM dla łatwego w utrzymaniu kodu.</string>
-    <string name="tip_of_the_day">Porada dnia</string>
-    <string name="quiz_title">Quiz</string>
-    <string name="next_question">Następne pytanie</string>
-    <string name="quiz_finished">Quiz ukończony. Twój wynik: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Brak kolejnych pytań, sprawdź przyszłe aktualizacje, by zobaczyć więcej.</string>
-    <string name="quiz_reminder_title">Codzienne przypomnienie o quizie</string>
-    <string name="quiz_reminder_body">Wróć na dzisiejszy quiz.</string>
-    <string name="other_apps_title">Więcej aplikacji tego dewelopera</string>
-
-    <string name="im_step1_desc">Zrzut ekranu pokazujący przycisk Nowy projekt w Android Studio.</string>
-    <string name="im_step2_desc">Zrzut ekranu pokazujący wybór typu aktywności podczas konfiguracji projektu.</string>
-    <string name="im_step3_desc">Zrzut ekranu pokazujący pola nazwy aplikacji, pakietu, języka i minimalnego SDK.</string>
     <string name="room_database">Baza danych Room</string>
     <string name="enter_note">Wpisz notatkę</string>
     <string name="add_note">Dodaj notatkę</string>
-    <string name="summary_preference_android_studio_room_database">Przechowuj proste notatki za pomocą Room, warstwy abstrakcji nad SQLite.</string>
-    <string name="summary_room_database">Room to biblioteka trwałości, która zapewnia warstwę mapowania obiektów na SQLite. Ten przykład pokazuje, jak zapisywać i wyświetlać notatki.</string>
 
     <string name="layouts">Układy i widoki</string>
 
+
     <string name="linear_layout">Układ liniowy</string>
+
 
     <string name="vertical">Pionowy</string>
     <string name="horizontal">Poziomy</string>
     <string name="layout_preview">Podgląd układu</string>
     <string name="no_java_code_needed">Do tej aktywności nie jest wymagany kod Java.</string>
 
+
     <string name="relative_layout">Układ względny</string>
+
 
     <string name="table_layout">Układ tabelaryczny</string>
 
+
     <string name="grid_view">Widok siatki</string>
+
 
     <string name="image_view">Widok obrazu</string>
 
+
     <string name="web_view">Widok internetowy</string>
+
 
     <string name="buttons_and_switches">Przyciski i przełączniki</string>
     <string name="buttons">Przyciski</string>
@@ -254,13 +207,16 @@
     <string name="floating_button_tertiary_icon">Przycisk pływający 4 (trzeciorzędny)</string>
     <string name="same_code_buttons">Użyj tego kodu Java dla wszystkich typów przycisków.</string>
 
+
     <string name="radio_buttons">Przyciski radiowe</string>
     <string name="choose_your_option">Wybierz opcję</string>
     <string name="first_radio_option">Opcja 1</string>
     <string name="second_radio_option">Opcja 2</string>
     <string name="display_option">Wyświetl opcję</string>
 
+
     <string name="image_buttons">Przyciski graficzne</string>
+
 
     <string name="switches">Przełączniki</string>
     <string name="switch_me">Przełącz mnie</string>
@@ -416,6 +372,9 @@
     <string name="summary_preference_android_studio_permissions">Uprawnienia są ważne w Androidzie, ponieważ zadań wymagających uprawnień nie można wykonać bez ich żądania.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Dowiedz się, jak używać języków przypisanych do poszczególnych aplikacji, aby uczynić aplikację bardziej dostępną i przyjazną dla użytkownika. Ta funkcja pozwala wybrać inny język dla każdej aplikacji na urządzeniu, bez zmiany języka całego urządzenia przez użytkownika.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (poziom API 33) wprowadza przewidywalny gest cofania dla urządzeń z Androidem, takich jak telefony, duże ekrany i składane urządzenia. Jest to część wieloletniego wdrożenia; gdy funkcja zostanie w pełni zaimplementowana, pozwoli użytkownikom podglądać miejsce docelowe lub inny wynik gestu cofania przed jego pełnym wykonaniem, dzięki czemu będą mogli zdecydować, czy kontynuować, czy pozostać w bieżącym widoku.</string>
+    <string name="summary_preference_android_studio_room_database">Przechowuj proste notatki za pomocą Room, warstwy abstrakcji nad SQLite.</string>
+    <string name="summary_room_database">Room to biblioteka trwałości, która zapewnia warstwę mapowania obiektów na SQLite. Ten przykład pokazuje, jak zapisywać i wyświetlać notatki.</string>
+
     <string name="summary_preference_android_studio_linear_layout">Liniowy układ to grupa widokowa, która ułoży swoje dzieci w jednym, liniowym kierunku, poziomo lub pionowo. Orientację układu można określić za pomocą atrybutu android:orientation. Do tworzenia różnych interfejsów użytkownika, takich jak listy, przyciski i pola tekstowe.</string>
     <string name="summary_preference_android_studio_relative_layout">Względny układ jest kierownikiem układu na Androidzie, który pozycjonuje swoje dziecko w stosunku do siebie lub układy rodzica. To sprawia, że ​​jest to bardzo wszechstronny menedżer układu, ponieważ można go użyć do tworzenia szerokiej gamy układów.</string>
     <string name="summary_preference_android_studio_table_layout">Układ tabeli to proces układania komórek, wierszy i kolumn tabeli w sposób atrakcyjny i funkcjonalny wizualnie.</string>
@@ -461,9 +420,79 @@
     <string name="summary_android_history">Android to mobilny system operacyjny opracowany przez Google. Został po raz pierwszy wydany jako wersja beta 5 listopada 2007 r., a pierwsza komercyjna wersja, Android 1.0, została uruchomiona 23 września 2008 r. Android opiera się na zmodyfikowanej wersji jądra Linux i innym oprogramowaniu open source.\n\nAndroid Studio to oficjalne zintegrowane środowisko programistyczne (IDE) do tworzenia aplikacji na Androida. Zostało ogłoszone przez Google na konferencji I/O 15 maja 2013 r. i udostępnione publicznie 8 grudnia 2014 r. Android Studio bazuje na IntelliJ IDEA, popularnym środowisku Java IDE.\n\nKotlin to wieloplatformowy język programowania, który może działać na maszynie wirtualnej Java (JVM), Androidzie, w przeglądarce i na platformach natywnych. Został stworzony przez JetBrains, firmę programistyczną z siedzibą w Pradze. Kotlin został po raz pierwszy ogłoszony w lipcu 2011 r. i wydany jako projekt open source w lutym 2012 r.\n\nGoogle ogłosiło wsparcie dla Kotlina jako oficjalnego języka do tworzenia aplikacji na Androida na konferencji I/O 17 maja 2017 r. Od tego czasu Kotlin stał się jednym z najpopularniejszych języków wśród deweloperów Androida. Według danych Google z października 2020 r. ponad 70% z 1000 najlepszych aplikacji w Google Play używa Kotlina.</string>
     <string name="summary_android_features">Android to nie tylko system operacyjny, ale także platforma oferująca szereg funkcji i możliwości dla użytkowników i deweloperów. Do funkcji Androida należą:\n\n- Near Field Communication (NFC), która umożliwia udostępnianie danych, dokonywanie płatności i łączenie się z innymi urządzeniami bezprzewodowo.\n- Alternatywne klawiatury, które pozwalają dostosować metodę wprowadzania za pomocą różnych układów, języków i motywów.\n- Transmisja podczerwieni, która pozwala używać telefonu jako pilota do telewizorów, klimatyzatorów i innych urządzeń.\n- Sterowanie bezdotykowe, które pozwala wykonywać czynności na telefonie bez dotykania ekranu, używając gestów lub poleceń głosowych.\n- Automatyzacja, która umożliwia ustawianie rutyn i wyzwalaczy, aby telefon automatycznie wykonywał określone zadania.\n- Bezprzewodowe pobieranie aplikacji, które pozwala instalować aplikacje z komputera lub przeglądarki internetowej bez podłączania telefonu kablem.\n- Wymiana pamięci i baterii, która daje możliwość łatwego rozszerzenia pamięci telefonu lub wymiany jego baterii.\n- Personalizowany ekran główny, który pozwala dostosować wygląd telefonu za pomocą widżetów, tapet, ikon i launcherów.\n\nAndroid Studio to najlepsze narzędzie do tworzenia aplikacji na Androida. Oferuje ono wiele funkcji i korzyści dla deweloperów, takich jak:\n\n- Edytor kodu z podświetlaniem składni, uzupełnianiem kodu, refaktoryzacją, debugowaniem, testowaniem i narzędziami lint.\n- Edytor układu z interfejsem drag-and-drop do projektowania interfejsów użytkownika.\n- Emulator z szybkim uruchamianiem i obsługą migawek do testowania aplikacji na różnych urządzeniach i konfiguracjach.\n- Integracja z Firebase z usługami takimi jak uwierzytelnianie, baza danych, przechowywanie, analityka, raportowanie awarii i wiele innych. \n- System budowania oparty na Gradle z zarządzaniem zależnościami,\npersonalizacją,\noptymalizacją,\npodpisywaniem,\nopcje dystrybucji i więcej. \n\nDzięki Android Studio możesz tworzyć niesamowite aplikacje na urządzenia z Androidem, używając Kotlina,\nnowoczesnego języka programowania, który jest zwięzły,\nbezpieczny,\nekspresyjny\ni współdziała z Javą.</string>
     <string name="summary_chronometer">Chronometr to specjalizowany widget w frameworku Android, który zapewnia funkcjonalność podobną do timera do wyświetlania upływającego czasu. Można go skonfigurować do liczenia w górę lub w dół i jest powszechnie używany w aplikacjach wymagających pomiaru czasu, takich jak stopery lub liczniki czasu. Klasa Chronometer pochodzi od klasy TextView, co oznacza, że dziedziczy wszystkie właściwości i metody TextView. Dzięki temu deweloperzy mogą łatwo dostosować wygląd Chronometru, w tym rozmiar tekstu, kolor i czcionkę.</string>
+    <string name="snack_this_is_a_snackbar">To jest snackbar.</string>
+    <string name="snack_bar_clicked">kliknięto</string>
+    <string name="snack_copied_to_clipboard">Skopiowano do schowka. 📋</string>
+    <string name="snack_unable_to_open_google_play_store">Nie można otworzyć Sklepu Google Play.</string>
+    <string name="snack_rating">Dziękujemy za ocenę %1$.1f gwiazdek. ❤️</string>
+    <string name="snack_image_button">Kliknięto przycisk obrazu.</string>
+    <string name="toast_this_is_a_toast">To jest toast.</string>
+    <string name="tooltip_show_code">Pokaż składnię kodu</string>
+    <string name="tooltip_show_java_code_snippet">Pokaż fragment kodu Java</string>
+    <string name="tooltip_open_me">Otwórz mnie 🌐</string>
+    <string name="hint_type">Wpisz tutaj</string>
+    <string name="hint_password">Wpisz swoje hasło</string>
+
+
+    <string name="app_usage_notifications">Powiadomienia o użyciu aplikacji</string>
+    <string name="update_notifications">Powiadomienia o aktualizacjach</string>
+    <string name="browse_terms_of_service_and_privacy_policy">Przeglądaj <i><u>Warunki korzystania</u></i> i <i><u>Politykę prywatności</u></i></string>
+
+
+    <string name="update_downloaded">Aktualizacja pobrana</string>
+    <string name="view_in_google_play">Zobacz w Sklepie Google Play</string>
+    <string name="version_info">Informacje o wersji</string>
+    <string name="beta_program">Program beta</string>
+    <string name="open_source_licenses">Licencje open source</string>
+    <string name="version">Wersja %1$s</string>
+    <string name="error_loading_layout">Błąd podczas wczytywania układu</string>
+    <string name="error_loading_code">Błąd podczas wczytywania kodu</string>
+    <string name="snack_general_error">Wystąpił błąd podczas sprawdzania aktualizacji</string>
+    <string name="consent_dialog_title">Zgoda na dane i reklamy</string>
+    <string name="analytics_storage">Przechowywanie analityki</string>
+    <string name="ad_storage">Przechowywanie reklam</string>
+    <string name="ad_user_data">Dane użytkownika do reklam</string>
+    <string name="ad_personalization">Personalizacja reklam</string>
+    <string name="consent_settings">Ustawienia zgód</string>
+    <string name="summary_consent_analytics_storage">Pozwala na zbieranie anonimowych statystyk użycia.</string>
+    <string name="summary_consent_ad_storage">Zezwala na przechowywanie danych reklam na urządzeniu.</string>
+    <string name="summary_consent_ad_user_data">Pozwala udostępniać dane użytkownika do reklam.</string>
+    <string name="summary_consent_ad_personalization">Umożliwia spersonalizowane rekomendacje reklam.</string>
+    <string name="daily_tip_constraintlayout">Używaj ConstraintLayout do tworzenia responsywnych interfejsów.</string>
+    <string name="daily_tip_viewbinding">Wykorzystaj ViewBinding dla bezpieczniejszego kodu UI.</string>
+    <string name="daily_tip_recyclerview">Zaimplementuj RecyclerView dla płynnych list przewijania.</string>
+    <string name="daily_tip_material_design3">Używaj komponentów Material Design 3 dla nowoczesnego wyglądu.</string>
+    <string name="daily_tip_profile_app">Regularnie profiluj aplikację, aby śledzić wydajność.</string>
+    <string name="daily_tip_extract_components">Organizuj układy, wyodrębniając wielokrotnego użytku komponenty.</string>
+    <string name="daily_tip_use_string_resources">Używaj zasobów string dla całego tekstu, by ułatwić lokalizację.</string>
+    <string name="daily_tip_optimize_webp">Optymalizuj obrazy za pomocą WebP, aby zmniejszyć rozmiar APK.</string>
+    <string name="daily_tip_enable_proguard">Włącz ProGuard, aby zmniejszyć i zaciemnić wydania.</string>
+    <string name="daily_tip_prefer_compose">Preferuj Compose dla nowych UI, jeśli celujesz w nowoczesne urządzenia.</string>
+    <string name="daily_tip_livedata_viewmodel">Wykorzystaj LiveData i ViewModel dla reaktywnych UI.</string>
+    <string name="daily_tip_workmanager">Używaj WorkManager do niezawodnych zadań w tle.</string>
+    <string name="daily_tip_github_actions">Wykorzystaj GitHub Actions do zautomatyzowanych kontroli buildów.</string>
+    <string name="daily_tip_emulator_screen_sizes">Testuj aplikację na różnych rozmiarach ekranów w emulatorze.</string>
+    <string name="daily_tip_update_dependencies">Aktualizuj zależności, aby mieć najnowsze funkcje i poprawki.</string>
+    <string name="daily_tip_kotlin_coroutines">Wykorzystaj Kotlin Coroutines do operacji asynchronicznych.</string>
+    <string name="daily_tip_hilt">Zintegruj Hilt do wstrzykiwania zależności.</string>
+    <string name="daily_tip_unit_tests">Pisz testy jednostkowe za pomocą JUnit i Espresso.</string>
+    <string name="daily_tip_mvvm">Stosuj architekturę MVVM dla łatwego w utrzymaniu kodu.</string>
+    <string name="tip_of_the_day">Porada dnia</string>
+    <string name="quiz_title">Quiz</string>
+    <string name="next_question">Następne pytanie</string>
+    <string name="quiz_finished">Quiz ukończony. Twój wynik: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Brak kolejnych pytań, sprawdź przyszłe aktualizacje, by zobaczyć więcej.</string>
+    <string name="quiz_reminder_title">Codzienne przypomnienie o quizie</string>
+    <string name="quiz_reminder_body">Wróć na dzisiejszy quiz.</string>
+    <string name="other_apps_title">Więcej aplikacji tego dewelopera</string>
+
+    <string name="im_step1_desc">Zrzut ekranu pokazujący przycisk Nowy projekt w Android Studio.</string>
+    <string name="im_step2_desc">Zrzut ekranu pokazujący wybór typu aktywności podczas konfiguracji projektu.</string>
+    <string name="im_step3_desc">Zrzut ekranu pokazujący pola nazwy aplikacji, pakietu, języka i minimalnego SDK.</string>
     <string name="networking">Networking</string>
     <string name="retrofit">Retrofit</string>
     <string name="fetch_data">Fetch data</string>
     <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
     <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
+
 </resources>

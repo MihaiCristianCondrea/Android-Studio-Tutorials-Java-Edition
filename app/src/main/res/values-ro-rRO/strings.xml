@@ -6,6 +6,15 @@
     <string name="summary_notification_update">Este disponibilă o nouă versiune a aplicației. Apasă pentru a actualiza.</string>
     <string name="notification_last_time_used_title">A trecut ceva timp.</string>
     <string name="summary_notification_last_time_used">A trecut ceva timp—învață ceva nou despre Android.</string>
+
+    <string name="menu">Meniu</string>
+    <string name="press_back_again_to_exit">Apăsați din nou pentru a ieși</string>
+
+    <string name="welcome">Bun venit</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
+    <string name="agree">Sunt de acord</string>
+
+    <string name="home">Acasă</string>
     <string name="announcement_title">A sosit o aplicație nouă.</string>
     <string name="announcement_subtitle">Descoperă cea mai recentă aplicație Android Studio Tutorials.</string>
     <string name="profile_picture_desc">Poza de profil pentru dezvoltatori</string>
@@ -19,32 +28,20 @@
     <string name="search_tutorials_content_description">Caută tutoriale</string>
     <string name="search_lessons_hint">Caută lecții</string>
     <string name="search_lessons_content_description">Caută lecții</string>
-    <string name="update_downloaded">Actualizare descărcată</string>
-    <string name="view_in_google_play">Vezi în Magazinul Google Play</string>
-    <string name="version_info">Informații versiune</string>
-    <string name="beta_program">Program beta</string>
-    <string name="open_source_licenses">Licențe open source</string>
-    <string name="version">Versiunea %1$s</string>
-    <string name="error_loading_layout">Eroare la încărcarea aspectului</string>
-    <string name="error_loading_code">Eroare la încărcarea codului</string>
-    <string name="app_usage_notifications">Notificări de utilizare a aplicației</string>
-    <string name="update_notifications">Notificări de actualizare</string>
-    <string name="welcome">Bun venit</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Răsfoiți <i>
-            <u>Termenii de utilizare</u>
-        </i> și <i>
-            <u>Politica de confidențialitate</u>
-        </i>
-    </string>
-    <string name="agree">Sunt de acord</string>
-    <string name="home">Acasă</string>
+
     <string name="android_studio">Android Studio</string>
+
     <string name="android_start">Porniți un proiect nou</string>
     <string name="android_start_project">Porniți un proiect nou</string>
     <string name="step1">Pasul 1</string>
+    <string name="summary_first_step">Primul pas pentru a crea un proiect nou în Android Studio este să faceți clic pe butonul <b>Proiect nou</b>, așa cum se arată în imagine, și să continuați la pasul următor.</string>
     <string name="step2">Pasul 2</string>
+    <string name="summary_second_step">Al doilea pas este să selectați tipul de activitate care se potrivește aplicației dumneavoastră. Puteți alege dintre câteva presetări care vă pot simplifica munca. Selectați una dintre ele și faceți clic pe butonul <b>Următorul</b>.</string>
     <string name="step3">Pasul 3</string>
+    <string name="summary_third_step">Al treilea și ultimul pas este să configurați setările aplicației, cum ar fi numele aplicației, <b>numele pachetului</b>, <b>limba de programare</b> preferată și <b>SDK-ul minim</b>. Puteți afla mai multe despre ele pe <a href="https://developer.android.com/">Android Developers</a>.</string>
+
     <string name="basics">Noțiuni de bază</string>
+
     <string name="shortcuts">Comenzi rapide Android Studio</string>
     <string name="shortcuts_title">Comenzi rapide</string>
     <string name="description">Descriere</string>
@@ -125,41 +122,57 @@
     <string name="view_recent_changes">Vezi modificările recente</string>
     <string name="open_vcs_popup">Deschide pop-up-ul VCS</string>
     <string name="more_about_shortcuts">Mai multe despre comenzi rapide</string>
+
     <string name="history_of_android">Istoria Android</string>
     <string name="history">Istoric</string>
     <string name="features">Funcționalități</string>
+
     <string name="android_sdk">Android SDK-uri</string>
     <string name="android_versions">Versiuni Android</string>
+
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Instrucțiuni de configurare</string>
     <string name="use_view_binding_in_activities">Utilizați view binding în activități</string>
     <string name="use_view_binding_in_fragments">Utilizați view binding în fragmente</string>
     <string name="more_about_view_binding">Mai multe despre View Binding</string>
+
     <string name="permission_dialog_example">Exemplu de dialog de permisiuni</string>
     <string name="more_about_permissions">Mai multe despre permisiuni</string>
+
     <string name="per_app_language_preferences">Preferințe de limbă per aplicație</string>
+
     <string name="predictive_back_gesture">Gest de revenire predictiv</string>
+
     <string name="room_database">Baza de date Room</string>
     <string name="enter_note">Introduceți notă</string>
     <string name="add_note">Adăugați notă</string>
+
     <string name="layouts">Dispuneri și vizualizări</string>
 
+
     <string name="linear_layout">Aranjament liniar</string>
+
 
     <string name="vertical">Vertical</string>
     <string name="horizontal">Orizontal</string>
     <string name="layout_preview">Previzualizare layout</string>
     <string name="no_java_code_needed">Nu este necesar cod Java pentru această activitate.</string>
 
+
     <string name="relative_layout">Aranjament relativ</string>
+
 
     <string name="table_layout">Aranjament tabel</string>
 
+
     <string name="grid_view">Vizualizare grilă</string>
+
 
     <string name="image_view">Vizualizare imagine</string>
 
+
     <string name="web_view">Vizualizare web</string>
+
 
     <string name="buttons_and_switches">Butoane și comutatoare</string>
     <string name="buttons">Butoane</string>
@@ -183,12 +196,15 @@
     <string name="floating_button_surface_icon">Buton plutitor 3 (suprafață)</string>
     <string name="floating_button_tertiary_icon">Buton plutitor 4 (terțiar)</string>
     <string name="same_code_buttons">Folosiți acest cod Java pentru toate tipurile de butoane.</string>
+
     <string name="radio_buttons">Butoane radio</string>
     <string name="choose_your_option">Alegeți opțiunea</string>
     <string name="first_radio_option">Opțiunea 1</string>
     <string name="second_radio_option">Opțiunea 2</string>
     <string name="display_option">Afișează opțiunea</string>
+
     <string name="image_buttons">Butoane imagine</string>
+
     <string name="switches">Comutatoare</string>
     <string name="switch_me">Comută-mă</string>
     <string name="material_switch_preference">Preferință Comutator Material</string>
@@ -258,14 +274,20 @@
     <string name="notifications">Notificări</string>
     <string name="notification_settings">Setări notificări</string>
     <string name="firebase">Firebase</string>
+    <string name="firebase_crashlytics">Baza de foc Crashlytics</string>
+    <string name="firebase_analytics">Analiza bazei de foc</string>
+    <string name="firebase_performance">Performanță baza de foc</string>
     <string name="privacy_and_security">Confidențialitate și securitate</string>
     <string name="privacy_policy">Politica de confidențialitate</string>
     <string name="terms_of_service">Termeni și condiții</string>
     <string name="code_of_conduct">Cod de conduită</string>
     <string name="permissions">Permisiuni</string>
     <string name="normal">Normal</string>
+    <string name="special">Special</string>
     <string name="ad_id">ID-ul reclamei [AD_ID]</string>
     <string name="internet">Internet [INTERNET]</string>
+    <string name="wake_lock">Păstrați dispozitivul treaz [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Permite aplicației să împiedice dispozitivul să intre în repaus—de exemplu, prin estomparea ecranului sau adormirea procesorului—în timpul operațiunilor critice pentru a se asigura că acestea se finalizează fără întreruperi. Este folosită rar pentru a conserva bateria.</string>
     <string name="post_notifications">Postează notificări [POST_NOTIFICATIONS]</string>
     <string name="runtime">Runtime</string>
     <string name="access_network_state">Accesează starea rețelei [ACCESS_NETWORK_STATE]</string>
@@ -326,6 +348,9 @@
     <string name="summary_preference_permissions_access_notification_policy">Permite aplicației să acceseze și să modifice politica de notificări a dispozitivului, controlând modul și momentul în care notificările sunt afișate utilizatorului și oferind funcții personalizate de gestionare a notificărilor.</string>
     <string name="summary_preference_permissions_foreground_service">Permite aplicației să creeze și să utilizeze servicii care rulează în prim plan, acordându-le prioritate față de alte procese din fundal și îmbunătățind performanța și fiabilitatea.</string>
     <string name="summary_preference_settings_language">Setați limba aplicației.</string>
+    <string name="summary_preference_settings_firebase_crashlytics">Colecta rapoarte de accident pentru a ajuta la rezolvarea problemelor.</string>
+    <string name="summary_preference_settings_firebase_analytics">Adună date de utilizare pentru îmbunătățirea aplicației.</string>
+    <string name="summary_preference_settings_firebase_performance">Măsoară performanța aplicației pentru optimizare.</string>
     <string name="summary_preference_android_studio_start">Află elementele de bază despre cum să începi un nou proiect Android Studio, cum să configurezi, cum să setezi pachetul, nivelurile API și multe altele…</string>
     <string name="summary_preference_android_studio_shortcuts">Android Studio include comenzi rapide de la tastatură pentru multe acțiuni comune. Rețineți că, deoarece Android Studio se bazează pe IntelliJ IDEA, puteți găsi comenzi rapide suplimentare în documentația de referință a hărții tastaturii IntelliJ IDEA.</string>
     <string name="summary_preference_android_studio_history_of_android">Află despre istoria Android, de la lansarea sa beta în 2007 până la a deveni cel mai popular sistem de operare mobil din lume. Descoperă funcționalitățile care fac Android unic și beneficiile utilizării Android Studio pentru a-ți dezvolta aplicațiile cu Java.</string>
@@ -368,18 +393,12 @@
     <string name="summary_alert_dialog_require_restart">Pentru a produce efect, vă rugăm să reporniți aplicația.</string>
     <string name="summary_sdk">Kitul de dezvoltare software Android (SDK) este o colecție de instrumente care permit dezvoltatorilor să creeze aplicații Android. Acesta include un set de biblioteci, un depanator, un emulator de telefon și documentație. SDK-ul include, de asemenea, o bibliotecă API și un set de documentație API. Pachetele pe care le descărcați conțin biblioteci, care vă ajută la crearea aplicației.\n\nAceasta este o prezentare generală a tuturor versiunilor Android și a identificatorilor corespunzători pentru dezvoltatorii Android. Oricine este binevenit să deschidă o problemă sau să trimită o cerere de extragere. Dezvoltare plăcută.</string>
     <string name="summary_view_binding">Binding-ul vizualizărilor este o funcție care vă permite să scrieți mai ușor cod care interacționează cu vizualizările. Odată ce binding-ul vizualizărilor este activat într-un modul, acesta generează o clasă de binding pentru fiecare fișier de aspect XML prezent în acel modul. O instanță a unei clase de binding conține referințe directe către toate vizualizările care au un ID în aspectul corespunzător.</string>
-    <string name="summary_first_step">Primul pas pentru a crea un proiect nou în Android Studio este să faceți clic pe butonul <b>Proiect nou</b>, așa cum se arată în imagine, și să continuați la pasul următor.</string>
-    <string name="summary_second_step">Al doilea pas este să selectați tipul de activitate care se potrivește aplicației dumneavoastră. Puteți alege dintre câteva presetări care vă pot simplifica munca. Selectați una dintre ele și faceți clic pe butonul <b>Următorul</b>.</string>
-    <string name="summary_third_step">Al treilea și ultimul pas este să configurați setările aplicației, cum ar fi numele aplicației, <b>numele pachetului</b>, <b>limba de programare</b> preferată și <b>SDK-ul minim</b>. Puteți afla mai multe despre ele pe <a href="https://developer.android.com/">Android Developers</a>.</string>
     <string name="summary_enable_binding">Binding-ul vizualizărilor este activat pe bază de modul. Pentru a activa binding-ul vizualizărilor într-un modul, setați opțiunea de compilare viewBinding la true în fișierul build.gradle la nivel de modul, așa cum se arată în exemplul următor:</string>
-    <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="summary_toggle">Puteți adăuga un buton de comutare de bază la aspectul dvs. cu obiectul ToggleButton. Android 4.0 (API nivel 14) introduce un alt tip de buton de comutare numit switch care oferă un control glisant, pe care îl puteți adăuga cu un obiect Switch. SwitchCompat este o versiune a widget-ului Switch care rulează pe dispozitive până la API 7.</string>
     <string name="summary_clocks">Notă importantă: Ceasul digital este depreciat în versiunea API 17. Începând cu nivelul API 17, puteți utiliza TextClock în loc de ceas digital. Mai jos este descrierea ceasului Text în Android.</string>
     <string name="summary_buttons">Butoanele sunt un element esențial al oricărei aplicații Android. Acestea permit utilizatorilor să interacționeze cu aplicația și să efectueze acțiuni precum trimiterea unui formular, începerea unei noi activități sau efectuarea unei achiziții.\n\nÎn Android Studio, butoanele sunt create utilizând clasa Button și pot fi personalizate în diverse moduri, inclusiv setarea textului, culorii și dimensiunii acestora. De asemenea, ele pot fi configurate pentru a declanșa diferite acțiuni atunci când sunt apăsate, cum ar fi începerea unei noi activități sau afișarea unui mesaj pop-up.\n\nButoanele pot fi plasate oriunde în aspectul unei aplicații și pot fi utilizate împreună cu alte elemente UI, cum ar fi câmpurile de text și listele, pentru a crea o aplicație complet funcțională și ușor de utilizat.\n\nÎn general, butoanele sunt un instrument simplu, dar puternic, pentru construirea de aplicații Android atractive și interactive.</string>
     <string name="summary_permissions">De exemplu, dacă aplicația dvs. trebuie să descarce ceva, va necesita permisiunea Internet.\n\nAruncați o privire pe site-ul web Android Developers pentru toate permisiunile și o referință la documentația oficială.\n\nAplicațiile Android trebuie să solicite permisiunea de a accesa anumite funcționalități sau date pe un dispozitiv. Aceste permisiuni sunt utilizate pentru a proteja confidențialitatea utilizatorului și a dispozitivului. Când o aplicație este instalată, utilizatorului i se solicită să acorde sau să refuze permisiunile pe care le solicită aplicația. Aplicația va avea acces doar la funcționalitățile sau datele pentru care a solicitat permisiunea.\n\nExistă două tipuri de permisiuni: normale și periculoase. Permisiunile normale nu prezintă un risc pentru confidențialitatea utilizatorului. Acestea includ lucruri precum accesul la internet și vibrarea. Permisiunile periculoase, pe de altă parte, pot accesa potențial informații sau acțiuni sensibile și sunt, prin urmare, mai restricționate. Acestea includ permisiuni precum accesul la locația utilizatorului, camera și contactele.\n\nEste important ca dezvoltatorii de aplicații să solicite doar permisiunile care sunt absolut necesare pentru ca aplicația lor să funcționeze corect. Acest lucru ajută la protejarea confidențialității utilizatorului și, de asemenea, face aplicația mai ușor de utilizat.</string>
     <string name="summary_image_buttons">Butoanele imagine sunt butoane care conțin o imagine în loc de text. Ele pot fi utilizate în Android pentru a oferi o interfață de utilizator mai atractivă vizual și interactivă. Butoanele imagine pot fi utilizate pentru a declanșa acțiuni, a naviga la diferite ecrane sau a afișa informații suplimentare. Ele sunt adesea utilizate în combinație cu etichete text pentru a oferi o comunicare clară utilizatorului despre scopul butonului.</string>
-    <string name="menu">Meniu</string>
-    <string name="press_back_again_to_exit">Apăsați din nou pentru a ieși</string>
     <string name="summary_image_view">AndroidX AppCompatImageView este o subclasă a ImageView care este proiectată să suporte diverse funcționalități ale ActionBar și Material Design. Face parte din biblioteca AndroidX, care este un set de biblioteci de suport ce oferă versiuni compatibile înapoi ale API-urilor framework-ului Android, precum și funcționalități disponibile doar prin API-urile bibliotecii.\n\nAppCompatImageView este conceput pentru a fi utilizat ca înlocuitor direct pentru ImageView, permițând dezvoltatorilor să utilizeze același cod și elemente UI în diferite versiuni de Android. Acesta include suport pentru diverse funcționalități, cum ar fi colorarea (tinting), încărcarea resurselor vectoriale (vector drawables) și gestionarea scalării imaginii.\n\nAppCompatImageView include, de asemenea, suport pentru funcționalități Material Design, cum ar fi elevația, care permite vizualizării imaginii să proiecteze o umbră și să pară ridicată deasupra suprafeței aspectului. Include, de asemenea, suport pentru efectul Material Design ripple, care este un efect vizual aplicat atunci când vizualizarea imaginii este atinsă.\n\nPe scurt, AndroidX AppCompatImageView este o subclasă versatilă și bogată în funcționalități a ImageView, concepută pentru a suporta o gamă largă de funcționalități și elemente de design în aplicațiile Android.</string>
     <string name="summary_linear_layout_compat">Linear Layout Compat este o clasă din biblioteca de suport Android appCompat v7. A fost adăugată pentru a suporta metodele care au fost adăugate în niveluri API mai noi pe cele vechi (cum ar fi divizoarele). Dacă comparați metodele din LinearLayout și LinearLayoutCompat, puteți vedea că aspectul Compat are toate metodele LinearLayout fără nicio limitare a nivelului API. De exemplu, metoda setShowDividers a fost introdusă la nivelul API 11. Prin urmare, în acest caz, setShowDividers (și parametrii săi) ar trebui să fie invocate utilizând Linear Layout Compat în loc de LinearLayout dacă vizați o platformă cu nivel API sub 11.</string>
     <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
@@ -399,16 +418,25 @@
     <string name="tooltip_open_me">Deschide-mă 🌐</string>
     <string name="hint_type">Type here</string>
     <string name="hint_password">Enter your password</string>
+
+    <string name="app_usage_notifications">Notificări de utilizare a aplicației</string>
+    <string name="update_notifications">Notificări de actualizare</string>
+    <string name="browse_terms_of_service_and_privacy_policy">Răsfoiți <i>
+            <u>Termenii de utilizare</u>
+        </i> și <i>
+            <u>Politica de confidențialitate</u>
+        </i>
+    </string>
+
+    <string name="update_downloaded">Actualizare descărcată</string>
+    <string name="view_in_google_play">Vezi în Magazinul Google Play</string>
+    <string name="version_info">Informații versiune</string>
+    <string name="beta_program">Program beta</string>
+    <string name="open_source_licenses">Licențe open source</string>
+    <string name="version">Versiunea %1$s</string>
+    <string name="error_loading_layout">Eroare la încărcarea aspectului</string>
+    <string name="error_loading_code">Eroare la încărcarea codului</string>
     <string name="snack_general_error">A apărut o eroare la verificarea actualizărilor</string>
-    <string name="firebase_crashlytics">Baza de foc Crashlytics</string>
-    <string name="firebase_analytics">Analiza bazei de foc</string>
-    <string name="firebase_performance">Performanță baza de foc</string>
-    <string name="special">Special</string>
-    <string name="wake_lock">Păstrați dispozitivul treaz [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Permite aplicației să împiedice dispozitivul să intre în repaus—de exemplu, prin estomparea ecranului sau adormirea procesorului—în timpul operațiunilor critice pentru a se asigura că acestea se finalizează fără întreruperi. Este folosită rar pentru a conserva bateria.</string>
-    <string name="summary_preference_settings_firebase_crashlytics">Colecta rapoarte de accident pentru a ajuta la rezolvarea problemelor.</string>
-    <string name="summary_preference_settings_firebase_analytics">Adună date de utilizare pentru îmbunătățirea aplicației.</string>
-    <string name="summary_preference_settings_firebase_performance">Măsoară performanța aplicației pentru optimizare.</string>
     <string name="consent_dialog_title">Consimțământ privind datele și anunțurile</string>
     <string name="analytics_storage">Stocare analitică</string>
     <string name="ad_storage">Stocare ad</string>
@@ -454,4 +482,5 @@
     <string name="fetch_data">Fetch data</string>
     <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
     <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
+
 </resources>

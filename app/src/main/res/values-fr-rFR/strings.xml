@@ -6,11 +6,14 @@
     <string name="summary_notification_update">Une nouvelle version de l\'application est disponible. Cliquez pour mettre à jour .</string>
     <string name="notification_last_time_used_title">Cela fait un moment .</string>
     <string name="summary_notification_last_time_used">Ça fait un moment—apprenez quelque chose de nouveau sur Android.</string>
+
     <string name="menu">Menu</string>
     <string name="press_back_again_to_exit">Appuyez à nouveau pour quitter</string>
+
     <string name="welcome">Bienvenue</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Accepter</string>
+
     <string name="home">Accueil</string>
     <string name="announcement_title">Une nouvelle application est là .</string>
     <string name="announcement_subtitle">Découvrez la dernière application Android Studio Tutorials. Apprenez Jetpack Compose, Material 3, et plus encore.</string>
@@ -25,7 +28,9 @@
     <string name="search_tutorials_content_description">Rechercher des tutoriels</string>
     <string name="search_lessons_hint">Rechercher des leçons</string>
     <string name="search_lessons_content_description">Rechercher des leçons</string>
+
     <string name="android_studio">Android Studio</string>
+
     <string name="android_start">Démarrer un nouveau projet</string>
     <string name="android_start_project">Démarrer un nouveau projet</string>
     <string name="step1">Étape 1</string>
@@ -34,7 +39,9 @@
     <string name="summary_second_step">La deuxième étape consiste à sélectionner le type d\'activité qui convient à votre application. Vous pouvez choisir parmi des préréglages qui peuvent simplifier votre travail. Sélectionnez l\'un d\'eux et cliquez sur le bouton <b>Suivant</b>.</string>
     <string name="step3">Étape 3</string>
     <string name="summary_third_step">La troisième et dernière étape consiste à configurer les paramètres de votre application, tels que le nom de l\'application, le <b>nom du package</b>, le <b>langage de programmation</b> préféré et le <b>SDK minimum</b>. Vous pouvez en apprendre davantage à leur sujet sur <a href="https://developer.android.com/">Android Developers</a>.</string>
+
     <string name="basics">Principes de base</string>
+
     <string name="shortcuts">Raccourcis Android Studio</string>
     <string name="shortcuts_title">Raccourcis</string>
     <string name="description">Description</string>
@@ -115,34 +122,50 @@
     <string name="view_recent_changes">Voir les modifications récentes</string>
     <string name="open_vcs_popup">Ouvrir le pop-up VCS</string>
     <string name="more_about_shortcuts">En savoir plus sur les raccourcis</string>
+
     <string name="history_of_android">Histoire d\'Android</string>
     <string name="history">Histoire</string>
     <string name="features">Fonctionnalités</string>
+
     <string name="android_sdk">SDK Android</string>
     <string name="android_versions">Versions d\'Android</string>
+
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Instructions de configuration</string>
     <string name="use_view_binding_in_activities">Utiliser View Binding dans les activités</string>
     <string name="use_view_binding_in_fragments">Utiliser View Binding dans les fragments</string>
     <string name="more_about_view_binding">En savoir plus sur View Binding</string>
+
     <string name="permission_dialog_example">Exemple de dialogue de permission</string>
     <string name="more_about_permissions">En savoir plus sur les permissions</string>
+
     <string name="per_app_language_preferences">Préférences linguistiques par application</string>
+
     <string name="predictive_back_gesture">Geste de retour prédictif</string>
+
     <string name="room_database">Base de données Room</string>
     <string name="enter_note">Saisir une note</string>
     <string name="add_note">Ajouter une note</string>
+
     <string name="layouts">Dispositions et vues</string>
+
     <string name="linear_layout">Disposition linéaire</string>
+
     <string name="vertical">Vertical</string>
     <string name="horizontal">Horizontal</string>
     <string name="layout_preview">Aperçu de la disposition</string>
     <string name="no_java_code_needed">Aucun code Java n\'est requis pour cette activité.</string>
+
     <string name="relative_layout">Disposition relative</string>
+
     <string name="table_layout">Disposition en tableau</string>
+
     <string name="grid_view">Vue en grille</string>
+
     <string name="image_view">Vue d\'image</string>
+
     <string name="web_view">Vue Web</string>
+
     <string name="buttons_and_switches">Boutons et interrupteurs</string>
     <string name="buttons">Boutons</string>
     <string name="button">Bouton</string>
@@ -165,12 +188,15 @@
     <string name="floating_button_surface_icon">Bouton flottant 3 (surface)</string>
     <string name="floating_button_tertiary_icon">Bouton flottant 4 (tertiaire)</string>
     <string name="same_code_buttons">Utilisez ce code Java pour tous les types de boutons.</string>
+
     <string name="radio_buttons">Boutons radio</string>
     <string name="choose_your_option">Choisissez votre option</string>
     <string name="first_radio_option">Option 1</string>
     <string name="second_radio_option">Option 2</string>
     <string name="display_option">Afficher l\'option</string>
+
     <string name="image_buttons">Boutons d\'image</string>
+
     <string name="switches">Interrupteurs</string>
     <string name="switch_me">Activez-moi</string>
     <string name="material_switch_preference">Préférence d\'interrupteur Material</string>
@@ -240,14 +266,20 @@
     <string name="notifications">Notifications</string>
     <string name="notification_settings">Paramètres des notifications</string>
     <string name="firebase">Firebase</string>
+    <string name="firebase_crashlytics">Crashlys de la base de feu</string>
+    <string name="firebase_analytics">Analyse de Firebase</string>
+    <string name="firebase_performance">Performance de la base d\'incendie</string>
     <string name="privacy_and_security">Confidentialité et sécurité</string>
     <string name="privacy_policy">Politique de confidentialité</string>
     <string name="terms_of_service">Conditions d\'utilisation</string>
     <string name="code_of_conduct">Code de conduite</string>
     <string name="permissions">Permissions</string>
     <string name="normal">Normal</string>
+    <string name="special">Spécial</string>
     <string name="ad_id">ID publicitaire [AD_ID]</string>
     <string name="internet">Internet [INTERNET]</string>
+    <string name="wake_lock">Gardez l\'appareil éveillé [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">Publier des notifications [POST_NOTIFICATIONS]</string>
     <string name="runtime">Exécution</string>
     <string name="access_network_state">Accéder à l\'état du réseau [ACCESS_NETWORK_STATE]</string>
@@ -308,6 +340,9 @@
     <string name="summary_preference_permissions_access_notification_policy">Permet à l\'application d\'accéder et de modifier la politique de notification de l\'appareil, contrôlant comment et quand les notifications sont affichées à l\'utilisateur et fournissant des fonctionnalités de gestion des notifications personnalisées.</string>
     <string name="summary_preference_permissions_foreground_service">Permet à l\'application de créer et d\'utiliser des services qui s\'exécutent en premier plan, leur donnant la priorité sur d\'autres processus d\'arrière-plan et améliorant les performances et la fiabilité.</string>
     <string name="summary_preference_settings_language">Définir la langue de l\'application.</string>
+    <string name="summary_preference_settings_firebase_crashlytics">Recueillir les rapports d\'accident pour aider à résoudre les problèmes.</string>
+    <string name="summary_preference_settings_firebase_analytics">Recueille les données d\'utilisation pour améliorer \'application.</string>
+    <string name="summary_preference_settings_firebase_performance">Mesure la performance de l\'application pour l\'optimisation.</string>
     <string name="summary_preference_android_studio_start">Apprenez les bases pour démarrer un nouveau projet Android Studio, comment le configurer, définir le package, les niveaux d\'API et bien plus encore…</string>
     <string name="summary_preference_android_studio_shortcuts">Android Studio inclut des raccourcis clavier pour de nombreuses actions courantes. Gardez à l\'esprit que, comme Android Studio est basé sur IntelliJ IDEA, vous pouvez trouver des raccourcis supplémentaires dans la documentation de référence du mappage clavier d\'IntelliJ IDEA.</string>
     <string name="summary_preference_android_studio_history_of_android">Découvrez l\'histoire d\'Android, de sa version bêta en 2007 à sa transformation en système d\'exploitation mobile le plus populaire au monde. Découvrez les fonctionnalités qui rendent Android unique et les avantages d\'utiliser Android Studio pour développer vos applications avec Java.</string>
@@ -375,6 +410,7 @@
     <string name="tooltip_open_me">Ouvrez-moi 🌐</string>
     <string name="hint_type">Type here</string>
     <string name="hint_password">Enter your password</string>
+
     <string name="app_usage_notifications">Notifications d\'utilisation de l\'application</string>
     <string name="update_notifications">Notifications de mise à jour</string>
     <string name="browse_terms_of_service_and_privacy_policy">Consultez les <i>
@@ -383,6 +419,7 @@
             <u>Politique de confidentialité</u>
         </i>
     </string>
+
     <string name="update_downloaded">Mise à jour téléchargée</string>
     <string name="view_in_google_play">Voir dans le Google Play Store</string>
     <string name="version_info">Informations sur la version</string>
@@ -392,15 +429,6 @@
     <string name="error_loading_layout">Erreur de chargement de la mise en page</string>
     <string name="error_loading_code">Erreur de chargement du code</string>
     <string name="snack_general_error">Une erreur s\'est produite lors de la vérification des mises à jour.</string>
-    <string name="firebase_crashlytics">Crashlys de la base de feu</string>
-    <string name="firebase_analytics">Analyse de Firebase</string>
-    <string name="firebase_performance">Performance de la base d\'incendie</string>
-    <string name="special">Spécial</string>
-    <string name="wake_lock">Gardez l\'appareil éveillé [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
-    <string name="summary_preference_settings_firebase_crashlytics">Recueillir les rapports d\'accident pour aider à résoudre les problèmes.</string>
-    <string name="summary_preference_settings_firebase_analytics">Recueille les données d\'utilisation pour améliorer \'application.</string>
-    <string name="summary_preference_settings_firebase_performance">Mesure la performance de l\'application pour l\'optimisation.</string>
     <string name="consent_dialog_title">Consentement aux données et annonces</string>
     <string name="analytics_storage">Stockage analytique</string>
     <string name="ad_storage">Stockage publicitaire</string>
@@ -446,4 +474,5 @@
     <string name="fetch_data">Fetch data</string>
     <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
     <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
+
 </resources>

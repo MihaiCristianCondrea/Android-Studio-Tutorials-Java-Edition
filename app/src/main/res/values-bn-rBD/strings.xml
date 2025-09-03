@@ -6,11 +6,14 @@
     <string name="summary_notification_update">অ্যাপটির একটি নতুন সংস্করণ উপলব্ধ। আপডেট করতে ক্লিক করুন.</string>
     <string name="notification_last_time_used_title">অনেক দিন হয়ে গেছে.</string>
     <string name="summary_notification_last_time_used">অনেক দিন হয়ে গেছে—অ্যান্ড্রয়েড সম্পর্কে নতুন কিছু শিখুন।</string>
+
     <string name="menu">মেনু</string>
     <string name="press_back_again_to_exit">প্রস্থান করতে আবার ফিরে টিপুন</string>
+
     <string name="welcome">স্বাগতম</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">সম্মত</string>
+
     <string name="home">হোম</string>
     <string name="announcement_title">একটি নতুন অ্যাপ এসেছে.</string>
     <string name="announcement_subtitle">সর্বশেষ অ্যান্ড্রয়েড স্টুডিও টিউটোরিয়াল অ্যাপটি দেখুন। জেটপ্যাক কম্পোজ, ম্যাটেরিয়াল ৩ এবং আরও অনেক কিছু শিখুন।</string>
@@ -25,7 +28,9 @@
     <string name="search_tutorials_content_description">টিউটোরিয়াল খুঁজুন</string>
     <string name="search_lessons_hint">পাঠ খুঁজুন</string>
     <string name="search_lessons_content_description">পাঠ খুঁজুন</string>
+
     <string name="android_studio">অ্যান্ড্রয়েড স্টুডিও</string>
+
     <string name="android_start">একটি নতুন প্রকল্প শুরু করুন</string>
     <string name="android_start_project">একটি নতুন প্রকল্প শুরু করুন</string>
     <string name="step1">ধাপ ১</string>
@@ -34,7 +39,9 @@
     <string name="summary_second_step">দ্বিতীয় ধাপ হল আপনার অ্যাপের জন্য উপযুক্ত কার্যকলাপের ধরন নির্বাচন করা। আপনি কিছু প্রিসেট থেকে বেছে নিতে পারেন যা আপনার কাজকে সহজ করতে পারে। তাদের মধ্যে একটি নির্বাচন করুন এবং <b>পরবর্তী</b> বোতামে ক্লিক করুন।</string>
     <string name="step3">ধাপ ৩</string>
     <string name="summary_third_step">তৃতীয় এবং চূড়ান্ত ধাপ হল আপনার অ্যাপের সেটিংস কনফিগার করা, যেমন অ্যাপের নাম, <b>প্যাকেজের নাম</b>, পছন্দের <b>প্রোগ্রামিং ভাষা</b> এবং <b>সর্বনিম্ন SDK</b>। আপনি তাদের সম্পর্কে আরও জানতে পারেন <a href="https://developer.android.com/">অ্যান্ড্রয়েড ডেভেলপারস</a>-এ।</string>
+
     <string name="basics">মৌলিক বিষয়</string>
+
     <string name="shortcuts">অ্যান্ড্রয়েড স্টুডিও শর্টকাট</string>
     <string name="shortcuts_title">শর্টকাট</string>
     <string name="description">বর্ণনা</string>
@@ -115,34 +122,50 @@
     <string name="view_recent_changes">সাম্প্রতিক পরিবর্তন দেখুন</string>
     <string name="open_vcs_popup">VCS পপ-আপ খুলুন</string>
     <string name="more_about_shortcuts">শর্টকাট সম্পর্কে আরও</string>
+
     <string name="history_of_android">অ্যান্ড্রয়েডের ইতিহাস</string>
     <string name="history">ইতিহাস</string>
     <string name="features">বৈশিষ্ট্য</string>
+
     <string name="android_sdk">অ্যান্ড্রয়েড SDKs</string>
     <string name="android_versions">অ্যান্ড্রয়েড সংস্করণ</string>
+
     <string name="view_binding">ভিউ বাইন্ডিং</string>
     <string name="setup_instructions">সেটআপ নির্দেশাবলী</string>
     <string name="use_view_binding_in_activities">ক্রিয়াকলাপে ভিউ বাইন্ডিং ব্যবহার করুন</string>
     <string name="use_view_binding_in_fragments">ফ্র্যাগমেন্টে ভিউ বাইন্ডিং ব্যবহার করুন</string>
     <string name="more_about_view_binding">ভিউ বাইন্ডিং সম্পর্কে আরও</string>
+
     <string name="permission_dialog_example">অনুমতি ডায়ালগের উদাহরণ</string>
     <string name="more_about_permissions">অনুমতি সম্পর্কে আরও</string>
+
     <string name="per_app_language_preferences">প্রতি-অ্যাপ ভাষা পছন্দ</string>
+
     <string name="predictive_back_gesture">ভবিষ্যদ্বাণীমূলক ব্যাক অঙ্গভঙ্গি</string>
+
     <string name="room_database">Room ডাটাবেস</string>
     <string name="enter_note">নোট লিখুন</string>
     <string name="add_note">নোট যোগ করুন</string>
+
     <string name="layouts">Layouts and views</string>
+
     <string name="linear_layout">লিনিয়ার লেআউট</string>
+
     <string name="vertical">উল্লম্ব</string>
     <string name="horizontal">অনুভূমিক</string>
     <string name="layout_preview">লেআউট প্রিভিউ</string>
     <string name="no_java_code_needed">এই কার্যকলাপের জন্য কোন জাভা কোডের প্রয়োজন নেই।</string>
+
     <string name="relative_layout">রিলেটিভ লেআউট</string>
+
     <string name="table_layout">টেবিল লেআউট</string>
+
     <string name="grid_view">গ্রিড ভিউ</string>
+
     <string name="image_view">ইমেজ ভিউ</string>
+
     <string name="web_view">ওয়েব ভিউ</string>
+
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">বোতাম</string>
     <string name="button">বোতাম</string>
@@ -165,12 +188,15 @@
     <string name="floating_button_surface_icon">ফ্লোটিং বোতাম ৩ (সারফেস)</string>
     <string name="floating_button_tertiary_icon">ফ্লোটিং বোতাম ৪ (টারশিয়ারি)</string>
     <string name="same_code_buttons">সব ধরনের বোতামের জন্য এই জাভা কোড ব্যবহার করুন।</string>
+
     <string name="radio_buttons">রেডিও বোতাম</string>
     <string name="choose_your_option">আপনার বিকল্প নির্বাচন করুন</string>
     <string name="first_radio_option">বিকল্প ১</string>
     <string name="second_radio_option">বিকল্প ২</string>
     <string name="display_option">বিকল্প প্রদর্শন করুন</string>
+
     <string name="image_buttons">ইমেজ বোতাম</string>
+
     <string name="switches">সুইচ</string>
     <string name="switch_me">আমাকে সুইচ করুন</string>
     <string name="material_switch_preference">ম্যাটেরিয়াল সুইচ পছন্দ</string>
@@ -240,14 +266,20 @@
     <string name="notifications">বিজ্ঞপ্তি</string>
     <string name="notification_settings">বিজ্ঞপ্তি সেটিংস</string>
     <string name="firebase">ফায়ারবেস</string>
+    <string name="firebase_crashlytics">ফায়ারবেথ অ্যাকসিটিভ</string>
+    <string name="firebase_analytics">অগ্নিময় এনালিস্ট</string>
+    <string name="firebase_performance">জর্মন</string>
     <string name="privacy_and_security">গোপনীয়তা এবং নিরাপত্তা</string>
     <string name="privacy_policy">গোপনীয়তা নীতি</string>
     <string name="terms_of_service">পরিষেবার শর্তাবলী</string>
     <string name="code_of_conduct">আচরণবিধি</string>
     <string name="permissions">অনুমতি</string>
     <string name="normal">সাধারণ</string>
+    <string name="special">বিশেষ</string>
     <string name="ad_id">বিজ্ঞাপন আইডি [AD_ID]</string>
     <string name="internet">ইন্টারনেট [INTERNET]</string>
+    <string name="wake_lock">/_সহায়তা/_সম্বন্ধে</string>
+    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
     <string name="post_notifications">বিজ্ঞপ্তি পোস্ট করুন [POST_NOTIFICATIONS]</string>
     <string name="runtime">রানটাইম</string>
     <string name="access_network_state">নেটওয়ার্ক অবস্থা অ্যাক্সেস করুন [ACCESS_NETWORK_STATE]</string>
@@ -308,6 +340,9 @@
     <string name="summary_preference_permissions_access_notification_policy">অ্যাপটিকে ডিভাইসের বিজ্ঞপ্তি নীতি অ্যাক্সেস এবং পরিবর্তন করার অনুমতি দেয়, ব্যবহারকারীকে কখন এবং কীভাবে বিজ্ঞপ্তিগুলি দেখানো হয় তা নিয়ন্ত্রণ করে এবং কাস্টম বিজ্ঞপ্তি পরিচালনার বৈশিষ্ট্যগুলি প্রদান করে।</string>
     <string name="summary_preference_permissions_foreground_service">অ্যাপটিকে ফোরগ্রাউন্ডে চলমান পরিষেবা তৈরি এবং ব্যবহার করার অনুমতি দেয়, অন্যান্য পটভূমি প্রক্রিয়াগুলির উপর তাদের অগ্রাধিকার দেয় এবং কর্মক্ষমতা এবং নির্ভরযোগ্যতা উন্নত করে।</string>
     <string name="summary_preference_settings_language">অ্যাপ্লিকেশন ভাষা সেট করুন।</string>
+    <string name="summary_preference_settings_firebase_crashlytics">সমস্যার সমাধানের জন্য ক্র্যাশ প্রতিবেদন সংগ্রহ করুন।</string>
+    <string name="summary_preference_settings_firebase_analytics">অ্যাপ্লিকেশনের উন্নতির জন্য তথ্য সংগ্রহ করুন ।</string>
+    <string name="summary_preference_settings_firebase_performance">গতিবৃদ্ধির জন্য অ্যাপটি পরিমাপ করা।</string>
     <string name="summary_preference_android_studio_start">একটি নতুন অ্যান্ড্রয়েড স্টুডিও প্রকল্প কীভাবে শুরু করতে হয়, কীভাবে কনফিগার করতে হয়, কীভাবে প্যাকেজ, API স্তর এবং আরও অনেক কিছু সেট করতে হয় তার ভিত্তি শিখুন…</string>
     <string name="summary_preference_android_studio_shortcuts">অ্যান্ড্রয়েড স্টুডিওতে অনেক সাধারণ কাজের জন্য কীবোর্ড শর্টকাট অন্তর্ভুক্ত রয়েছে। মনে রাখবেন, যেহেতু অ্যান্ড্রয়েড স্টুডিও ইন্টেলিজে আইডিয়ার উপর ভিত্তি করে তৈরি, তাই আপনি ইন্টেলিজে আইডিয়া কীম্যাপ রেফারেন্স ডকুমেন্টেশনে অতিরিক্ত শর্টকাট খুঁজে পেতে পারেন।</string>
     <string name="summary_preference_android_studio_history_of_android">২০০৭ সালে এর বিটা রিলিজ থেকে শুরু করে বিশ্বের সবচেয়ে জনপ্রিয় মোবাইল অপারেটিং সিস্টেম হয়ে ওঠা পর্যন্ত অ্যান্ড্রয়েডের ইতিহাস সম্পর্কে জানুন। অ্যান্ড্রয়েডকে অনন্য করে তোলে এমন বৈশিষ্ট্যগুলি এবং জাভা দিয়ে আপনার অ্যাপ তৈরি করতে অ্যান্ড্রয়েড স্টুডিও ব্যবহারের সুবিধাগুলি আবিষ্কার করুন।</string>
@@ -375,6 +410,7 @@
     <string name="tooltip_open_me">আমাকে খুলুন 🌐</string>
     <string name="hint_type">Type here</string>
     <string name="hint_password">Enter your password</string>
+
     <string name="app_usage_notifications">অ্যাপ ব্যবহারের বিজ্ঞপ্তি</string>
     <string name="update_notifications">আপডেট বিজ্ঞপ্তি</string>
     <string name="browse_terms_of_service_and_privacy_policy">
@@ -383,6 +419,7 @@
         </i> এবং <i>
             <u>গোপনীয়তা নীতি</u>
         </i> ব্রাউজ করুন</string>
+
     <string name="update_downloaded">আপডেট ডাউনলোড করা হয়েছে</string>
     <string name="view_in_google_play">গুগল প্লে স্টোরে দেখুন</string>
     <string name="version_info">সংস্করণের তথ্য</string>
@@ -392,15 +429,6 @@
     <string name="error_loading_layout">লেআউট লোড করতে ত্রুটি</string>
     <string name="error_loading_code">কোড লোড করতে ত্রুটি</string>
     <string name="snack_general_error">আপডেট পরীক্ষা করার সময় একটি ত্রুটি ঘটেছে</string>
-    <string name="firebase_crashlytics">ফায়ারবেথ অ্যাকসিটিভ</string>
-    <string name="firebase_analytics">অগ্নিময় এনালিস্ট</string>
-    <string name="firebase_performance">জর্মন</string>
-    <string name="special">বিশেষ</string>
-    <string name="wake_lock">/_সহায়তা/_সম্বন্ধে</string>
-    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
-    <string name="summary_preference_settings_firebase_crashlytics">সমস্যার সমাধানের জন্য ক্র্যাশ প্রতিবেদন সংগ্রহ করুন।</string>
-    <string name="summary_preference_settings_firebase_analytics">অ্যাপ্লিকেশনের উন্নতির জন্য তথ্য সংগ্রহ করুন ।</string>
-    <string name="summary_preference_settings_firebase_performance">গতিবৃদ্ধির জন্য অ্যাপটি পরিমাপ করা।</string>
     <string name="consent_dialog_title">তথ্য &amp; প্রতিরোধ করো</string>
     <string name="analytics_storage">বিশ্লেষণের সামগ্রী</string>
     <string name="ad_storage">অ্যাড-হকName</string>
@@ -446,4 +474,5 @@
     <string name="fetch_data">Fetch data</string>
     <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
     <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
+
 </resources>

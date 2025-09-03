@@ -6,12 +6,15 @@
     <string name="summary_notification_update">È disponibile una nuova versione dell\'app. Tocca per aggiornare.</string>
     <string name="notification_last_time_used_title">È passato un po\'.</string>
     <string name="summary_notification_last_time_used">È passato un po\'—impara qualcosa di nuovo su Android.</string>
+
     <string name="menu">Menu</string>
     <string name="press_back_again_to_exit">Premi di nuovo per uscire</string>
+
 
     <string name="welcome">Benvenuto</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Leggi e accetta i Termini di servizio e l\'Informativa sulla privacy per continuare</string>
     <string name="agree">Accetto</string>
+
 
     <string name="home">Home</string>
     <string name="announcement_title">È arrivata una nuova app</string>
@@ -20,6 +23,29 @@
     <string name="main_card_title">Scopri i tutorial di Android Studio</string>
     <string name="main_card_subtitle">Con edizioni Kotlin e Java</string>
     <string name="main_card_description">L\'edizione Kotlin è stata aggiornata con lezioni dinamiche, assistente AI e altro. Vivi il futuro dello sviluppo Android.</string>
+    <string name="get_on_google_play">Scaricalo su Google Play</string>
+    <string name="learn_more">Scopri di più</string>
+    <string name="play_store">Play Store</string>
+    <string name="search_tutorials_hint">Cerca tutorial</string>
+    <string name="search_tutorials_content_description">Cerca tutorial</string>
+    <string name="search_lessons_hint">Cerca lezioni</string>
+    <string name="search_lessons_content_description">Cerca lezioni</string>
+
+    <string name="android_studio">Android Studio</string>
+
+
+    <string name="android_start">Avvia un nuovo progetto</string>
+    <string name="android_start_project">Avvia un nuovo progetto</string>
+    <string name="step1">Passaggio 1</string>
+    <string name="summary_first_step">Il primo passaggio per creare un nuovo progetto in Android Studio è cliccare sul pulsante <b>Nuovo progetto</b> come mostrato nell\'immagine e proseguire con il passaggio successivo.</string>
+    <string name="step2">Passaggio 2</string>
+    <string name="summary_second_step">Il secondo passaggio è selezionare il tipo di attività che si adatta alla tua app. Puoi scegliere tra alcuni preset che possono semplificare il lavoro. Selezionane uno e fai clic sul pulsante <b>successivo</b>.</string>
+    <string name="step3">Passaggio 3</string>
+    <string name="summary_third_step">Il terzo e ultimo passaggio è configurare le impostazioni dell\'app, come il nome dell\'app, il <b>nome del pacchetto</b>, il <b>linguaggio di programmazione</b> preferito e l\'<b>SDK minimo</b>. Puoi saperne di più su <a href="https://developer.android.com/">Android Developers</a>.</string>
+
+
+    <string name="basics">Nozioni di base</string>
+
     <string name="shortcuts">Scorciatoie di Android Studio</string>
     <string name="shortcuts_title">Scorciatoie</string>
     <string name="description">Descrizione</string>
@@ -53,25 +79,6 @@
     <string name="smart_step_into">Entra intelligente</string>
     <string name="step_out">Esci</string>
 
-    <string name="get_on_google_play">Scaricalo su Google Play</string>
-    <string name="learn_more">Scopri di più</string>
-    <string name="play_store">Play Store</string>
-    <string name="search_tutorials_hint">Cerca tutorial</string>
-    <string name="search_tutorials_content_description">Cerca tutorial</string>
-    <string name="search_lessons_hint">Cerca lezioni</string>
-    <string name="search_lessons_content_description">Cerca lezioni</string>
-    <string name="android_studio">Android Studio</string>
-
-    <string name="android_start">Avvia un nuovo progetto</string>
-    <string name="android_start_project">Avvia un nuovo progetto</string>
-    <string name="step1">Passaggio 1</string>
-    <string name="summary_first_step">Il primo passaggio per creare un nuovo progetto in Android Studio è cliccare sul pulsante <b>Nuovo progetto</b> come mostrato nell\'immagine e proseguire con il passaggio successivo.</string>
-    <string name="step2">Passaggio 2</string>
-    <string name="summary_second_step">Il secondo passaggio è selezionare il tipo di attività che si adatta alla tua app. Puoi scegliere tra alcuni preset che possono semplificare il lavoro. Selezionane uno e fai clic sul pulsante <b>successivo</b>.</string>
-    <string name="step3">Passaggio 3</string>
-    <string name="summary_third_step">Il terzo e ultimo passaggio è configurare le impostazioni dell\'app, come il nome dell\'app, il <b>nome del pacchetto</b>, il <b>linguaggio di programmazione</b> preferito e l\'<b>SDK minimo</b>. Puoi saperne di più su <a href="https://developer.android.com/">Android Developers</a>.</string>
-
-    <string name="basics">Nozioni di base</string>
     <string name="run_to_cursor">Esegui fino al cursore</string>
     <string name="evaluate_expression">Valuta espressione</string>
     <string name="resume_program">Riprendi programma</string>
@@ -120,12 +127,15 @@
     <string name="view_recent_changes">Visualizza modifiche recenti</string>
     <string name="open_vcs_popup">Apri pop-up VCS</string>
     <string name="more_about_shortcuts">Altri dettagli sulle scorciatoie</string>
+
     <string name="history_of_android">Storia di Android</string>
     <string name="history">Storia</string>
     <string name="features">Funzionalità</string>
 
+
     <string name="android_sdk">Android SDK</string>
     <string name="android_versions">Versioni di Android</string>
+
 
     <string name="view_binding">View Binding</string>
     <string name="setup_instructions">Istruzioni di configurazione</string>
@@ -133,103 +143,46 @@
     <string name="use_view_binding_in_fragments">Usa View Binding nei frammenti</string>
     <string name="more_about_view_binding">Ulteriori informazioni su View Binding</string>
 
+
     <string name="permission_dialog_example">Esempio di dialogo per i permessi</string>
     <string name="more_about_permissions">Ulteriori informazioni sui permessi</string>
 
+
     <string name="per_app_language_preferences">Preferenze di lingua per app</string>
 
+
     <string name="predictive_back_gesture">Gesto indietro predittivo</string>
-    <string name="snack_this_is_a_snackbar">Questo è uno snackbar.</string>
-    <string name="snack_bar_clicked">cliccato</string>
-    <string name="snack_copied_to_clipboard">Copiato negli appunti. 📋</string>
-    <string name="snack_unable_to_open_google_play_store">Impossibile aprire Google Play Store.</string>
-    <string name="snack_rating">Grazie per la tua valutazione di %1$.1f stelle. ❤️</string>
-    <string name="snack_image_button">Pulsante immagine cliccato.</string>
-    <string name="toast_this_is_a_toast">Questo è un toast.</string>
-    <string name="tooltip_show_code">Mostra sintassi del codice</string>
-    <string name="tooltip_show_java_code_snippet">Mostra frammento di codice Java</string>
-    <string name="tooltip_open_me">Aprimi 🌐</string>
-    <string name="hint_type">Digita qui</string>
-    <string name="hint_password">Inserisci la tua password</string>
 
-    <string name="app_usage_notifications">Notifiche sull\'utilizzo dell\'app</string>
-    <string name="update_notifications">Notifiche di aggiornamento</string>
-    <string name="browse_terms_of_service_and_privacy_policy">Consulta i <i><u>Termini di servizio</u></i> e la <i><u>Informativa sulla privacy</u></i></string>
-
-    <string name="update_downloaded">Aggiornamento scaricato</string>
-    <string name="view_in_google_play">Vedi su Google Play Store</string>
-    <string name="version_info">Informazioni sulla versione</string>
-    <string name="beta_program">Programma beta</string>
-    <string name="open_source_licenses">Licenze open source</string>
-    <string name="version">Versione %1$s</string>
-    <string name="error_loading_layout">Errore durante il caricamento del layout</string>
-    <string name="error_loading_code">Errore durante il caricamento del codice</string>
-    <string name="snack_general_error">Si è verificato un errore durante la verifica degli aggiornamenti</string>
-    <string name="consent_dialog_title">Consenso per dati e annunci</string>
-    <string name="analytics_storage">Archiviazione analitica</string>
-    <string name="ad_storage">Archiviazione degli annunci</string>
-    <string name="ad_user_data">Dati utente per annunci</string>
-    <string name="ad_personalization">Personalizzazione degli annunci</string>
-    <string name="consent_settings">Impostazioni del consenso</string>
-    <string name="summary_consent_analytics_storage">Consente la raccolta di statistiche di utilizzo anonime.</string>
-    <string name="summary_consent_ad_storage">Permette di archiviare i dati degli annunci sul dispositivo.</string>
-    <string name="summary_consent_ad_user_data">Consente la condivisione dei dati utente per gli annunci.</string>
-    <string name="summary_consent_ad_personalization">Abilita raccomandazioni pubblicitarie personalizzate.</string>
-    <string name="daily_tip_constraintlayout">Usa ConstraintLayout per creare UI reattive.</string>
-    <string name="daily_tip_viewbinding">Sfrutta ViewBinding per un codice UI più sicuro.</string>
-    <string name="daily_tip_recyclerview">Implementa RecyclerView per liste a scorrimento fluido.</string>
-    <string name="daily_tip_material_design3">Usa i componenti Material Design 3 per un aspetto moderno.</string>
-    <string name="daily_tip_profile_app">Analizza regolarmente la tua app per monitorare le prestazioni.</string>
-    <string name="daily_tip_extract_components">Mantieni i layout organizzati estraendo componenti riutilizzabili.</string>
-    <string name="daily_tip_use_string_resources">Usa risorse stringa per tutto il testo per semplificare la localizzazione.</string>
-    <string name="daily_tip_optimize_webp">Ottimizza le immagini con WebP per ridurre la dimensione dell\'APK.</string>
-    <string name="daily_tip_enable_proguard">Abilita ProGuard per ridurre e offuscare le build di rilascio.</string>
-    <string name="daily_tip_prefer_compose">Preferisci Compose per nuove UI se miri a dispositivi moderni.</string>
-    <string name="daily_tip_livedata_viewmodel">Sfrutta LiveData e ViewModel per UI reattive.</string>
-    <string name="daily_tip_workmanager">Usa WorkManager per attività in background affidabili.</string>
-    <string name="daily_tip_github_actions">Utilizza GitHub Actions per controlli di build automatizzati.</string>
-    <string name="daily_tip_emulator_screen_sizes">Testa la tua app su diverse dimensioni di schermo con l\'emulatore.</string>
-    <string name="daily_tip_update_dependencies">Mantieni aggiornate le dipendenze per le ultime funzionalità e correzioni.</string>
-    <string name="daily_tip_kotlin_coroutines">Sfrutta le coroutine di Kotlin per operazioni asincrone.</string>
-    <string name="daily_tip_hilt">Integra Hilt per l\'iniezione delle dipendenze.</string>
-    <string name="daily_tip_unit_tests">Scrivi test unitari con JUnit ed Espresso.</string>
-    <string name="daily_tip_mvvm">Segui l\'architettura MVVM per un codice manutenibile.</string>
-    <string name="tip_of_the_day">Suggerimento del giorno</string>
-    <string name="quiz_title">Quiz</string>
-    <string name="next_question">Prossima domanda</string>
-    <string name="quiz_finished">Quiz completato. Il tuo punteggio: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Nessun\'altra domanda, controlla gli aggiornamenti futuri per altro.</string>
-    <string name="quiz_reminder_title">Promemoria quiz giornaliero</string>
-    <string name="quiz_reminder_body">Torna per il quiz di oggi.</string>
-    <string name="other_apps_title">Altre app dello sviluppatore</string>
-
-    <string name="im_step1_desc">Screenshot che mostra il pulsante Nuovo progetto in Android Studio.</string>
-    <string name="im_step2_desc">Screenshot che mostra la selezione del tipo di attività durante la configurazione del progetto.</string>
-    <string name="im_step3_desc">Screenshot che mostra i campi nome app, pacchetto, lingua e SDK minimo.</string>
     <string name="room_database">Database Room</string>
     <string name="enter_note">Inserisci nota</string>
     <string name="add_note">Aggiungi nota</string>
-    <string name="summary_preference_android_studio_room_database">Mantieni semplici note utilizzando Room, un livello di astrazione sopra SQLite.</string>
-    <string name="summary_room_database">Room è una libreria di persistenza che fornisce un livello di mapping degli oggetti sopra SQLite. Questo esempio mostra come salvare e visualizzare note.</string>
 
     <string name="layouts">Layout e viste</string>
 
+
     <string name="linear_layout">Layout lineare</string>
+
 
     <string name="vertical">Verticale</string>
     <string name="horizontal">Orizzontale</string>
     <string name="layout_preview">Anteprima del layout</string>
     <string name="no_java_code_needed">Nessun codice Java richiesto per questa attività.</string>
 
+
     <string name="relative_layout">Layout relativo</string>
+
 
     <string name="table_layout">Layout tabella</string>
 
+
     <string name="grid_view">Vista griglia</string>
+
 
     <string name="image_view">Vista immagine</string>
 
+
     <string name="web_view">Vista Web</string>
+
 
     <string name="buttons_and_switches">Pulsanti e interruttori</string>
     <string name="buttons">Pulsanti</string>
@@ -254,13 +207,16 @@
     <string name="floating_button_tertiary_icon">Pulsante flottante 4 (terziario)</string>
     <string name="same_code_buttons">Usa questo codice Java per tutti i tipi di pulsanti.</string>
 
+
     <string name="radio_buttons">Pulsanti di opzione</string>
     <string name="choose_your_option">Scegli la tua opzione</string>
     <string name="first_radio_option">Opzione 1</string>
     <string name="second_radio_option">Opzione 2</string>
     <string name="display_option">Mostra opzione</string>
 
+
     <string name="image_buttons">Pulsanti immagine</string>
+
 
     <string name="switches">Interruttori</string>
     <string name="switch_me">Commutami</string>
@@ -416,6 +372,9 @@
     <string name="summary_preference_android_studio_permissions">Le autorizzazioni sono importanti in Android: non puoi eseguire attività che le richiedono senza richiederle.</string>
     <string name="summary_preference_android_studio_per_app_language_preferences">Scopri come usare le lingue per app per rendere la tua app più accessibile e facile da usare. Questa funzione ti consente di scegliere una lingua diversa per ogni app sul tuo dispositivo, senza che l\'utente cambi la lingua del dispositivo.</string>
     <string name="summary_preference_android_studio_predictive_back_gesture">Android 13 (livello API 33) introduce un gesto di ritorno predittivo per dispositivi Android come telefoni, grandi schermi e pieghevoli. È parte di un rilascio pluriennale; quando sarà completamente implementata, questa funzionalità permetterà agli utenti di visualizzare in anteprima la destinazione o l\'altro risultato di un gesto di ritorno prima di completarlo, consentendo loro di decidere se continuare o rimanere nella vista corrente.</string>
+    <string name="summary_preference_android_studio_room_database">Mantieni semplici note utilizzando Room, un livello di astrazione sopra SQLite.</string>
+    <string name="summary_room_database">Room è una libreria di persistenza che fornisce un livello di mapping degli oggetti sopra SQLite. Questo esempio mostra come salvare e visualizzare note.</string>
+
     <string name="summary_preference_android_studio_linear_layout">Un layout lineare è un gruppo di vista che organizza i suoi figli in una singola direzione lineare, orizzontalmente o verticalmente. L\'orientamento del layout può essere specificato utilizzando l\'attributo android:orientation. Un layout lineare può essere utilizzato per creare una varietà di interfacce utente, come elenchi, pulsanti e campi di testo.</string>
     <string name="summary_preference_android_studio_relative_layout">Un layout relativo è un gestore di layout in Android che posiziona le viste dei suoi figli l\'una rispetto all\'altra o al layout del genitore. Questo lo rende un gestore di layout molto versatile, in quanto può essere utilizzato per creare un\'ampia varietà di layout.</string>
     <string name="summary_preference_android_studio_table_layout">Il layout della tabella è il processo di disposizione delle celle, delle righe e delle colonne di una tabella in modo visivamente accattivante e funzionale.</string>
@@ -461,9 +420,79 @@
     <string name="summary_android_history">Android è un sistema operativo mobile sviluppato da Google. È stato rilasciato per la prima volta come versione beta il 5 novembre 2007 e la prima versione commerciale, Android 1.0, è stata lanciata il 23 settembre 2008. Android si basa su una versione modificata del kernel Linux e su altri software open source.\n\nAndroid Studio è l\'ambiente di sviluppo integrato (IDE) ufficiale per lo sviluppo di app Android. È stato annunciato da Google alla conferenza I/O del 15 maggio 2013 ed è stato rilasciato per l\'uso pubblico l\'8 dicembre 2014. Android Studio si basa su IntelliJ IDEA, un popolare IDE Java.\n\nKotlin è un linguaggio di programmazione multipiattaforma che può essere eseguito sulla Java Virtual Machine (JVM), su Android, nel browser e su piattaforme native. È stato creato da JetBrains, una società di software con sede a Praga. Kotlin è stato annunciato per la prima volta nel luglio 2011 e rilasciato come progetto open source nel febbraio 2012.\n\nGoogle ha annunciato il supporto ufficiale per Kotlin come linguaggio per lo sviluppo di app Android alla conferenza I/O del 17 maggio 2017. Da allora Kotlin è diventato uno dei linguaggi più popolari per gli sviluppatori Android. Secondo i dati di Google dell\'ottobre 2020, oltre il 70% delle prime 1000 app su Google Play usa Kotlin.</string>
     <string name="summary_android_features">Android non è solo un sistema operativo, ma anche una piattaforma che offre una gamma di funzionalità e capacità per utenti e sviluppatori. Alcune delle funzionalità di Android includono:\n\n- Near Field Communication (NFC), che consente di condividere dati, effettuare pagamenti e connettersi con altri dispositivi in modalità wireless.\n- Tastiere alternative, che permettono di personalizzare il metodo di input con layout, lingue e temi diversi.\n- Trasmissione IR, che consente di usare il telefono come telecomando per TV, condizionatori e altri apparecchi.\n- Controllo senza tocco, che permette di eseguire azioni sul telefono senza toccare lo schermo, usando gesti o comandi vocali.\n- Automazione, che consente di impostare routine e trigger affinché il telefono esegua automaticamente determinate attività.\n- Download di app wireless, che permettono di installare app dal computer o dal browser web senza collegare il telefono con un cavo.\n- Sostituzione di memoria e batteria, che offre la possibilità di espandere la memoria del telefono o sostituirne facilmente la batteria.\n- Schermata iniziale personalizzata, che consente di personalizzare l\'aspetto del telefono con widget, sfondi, icone e launcher.\n\nAndroid Studio è il miglior strumento per sviluppare app Android. Offre molte funzionalità e vantaggi per gli sviluppatori, come:\n\n- Editor di codice con evidenziazione della sintassi, completamento del codice, refactoring, strumenti di debug, test e lint.\n- Editor di layout con interfaccia drag-and-drop per progettare le interfacce utente.\n- Emulatore con avvio rapido e supporto per snapshot per testare le app su diversi dispositivi e configurazioni.\n- Integrazione con Firebase con servizi come autenticazione, database, archiviazione, analisi, segnalazione di crash e altro. \n- Sistema di build basato su Gradle con gestione delle dipendenze,\npersonalizzazione,\nottimizzazione,\nfirma,\nopzioni di distribuzione e altro. \n\nCon Android Studio puoi creare app straordinarie per dispositivi Android usando Kotlin,\nun linguaggio di programmazione moderno che è conciso,\nsicuro,\nespressivo\ne interoperabile con Java.</string>
     <string name="summary_chronometer">Un Chronometer è un widget specializzato nel framework Android che fornisce una funzionalità simile a un timer per visualizzare il tempo trascorso. Può essere configurato per contare in avanti o all\'indietro ed è comunemente utilizzato nelle applicazioni che richiedono il cronometro, come quelle di stopwatch o di conto alla rovescia. La classe Chronometer deriva dalla classe TextView, il che significa che eredita tutte le proprietà e i metodi di una TextView. Ciò consente agli sviluppatori di personalizzare facilmente l\'aspetto del Chronometer, inclusi dimensione del testo, colore e carattere.</string>
+    <string name="snack_this_is_a_snackbar">Questo è uno snackbar.</string>
+    <string name="snack_bar_clicked">cliccato</string>
+    <string name="snack_copied_to_clipboard">Copiato negli appunti. 📋</string>
+    <string name="snack_unable_to_open_google_play_store">Impossibile aprire Google Play Store.</string>
+    <string name="snack_rating">Grazie per la tua valutazione di %1$.1f stelle. ❤️</string>
+    <string name="snack_image_button">Pulsante immagine cliccato.</string>
+    <string name="toast_this_is_a_toast">Questo è un toast.</string>
+    <string name="tooltip_show_code">Mostra sintassi del codice</string>
+    <string name="tooltip_show_java_code_snippet">Mostra frammento di codice Java</string>
+    <string name="tooltip_open_me">Aprimi 🌐</string>
+    <string name="hint_type">Digita qui</string>
+    <string name="hint_password">Inserisci la tua password</string>
+
+
+    <string name="app_usage_notifications">Notifiche sull\'utilizzo dell\'app</string>
+    <string name="update_notifications">Notifiche di aggiornamento</string>
+    <string name="browse_terms_of_service_and_privacy_policy">Consulta i <i><u>Termini di servizio</u></i> e la <i><u>Informativa sulla privacy</u></i></string>
+
+
+    <string name="update_downloaded">Aggiornamento scaricato</string>
+    <string name="view_in_google_play">Vedi su Google Play Store</string>
+    <string name="version_info">Informazioni sulla versione</string>
+    <string name="beta_program">Programma beta</string>
+    <string name="open_source_licenses">Licenze open source</string>
+    <string name="version">Versione %1$s</string>
+    <string name="error_loading_layout">Errore durante il caricamento del layout</string>
+    <string name="error_loading_code">Errore durante il caricamento del codice</string>
+    <string name="snack_general_error">Si è verificato un errore durante la verifica degli aggiornamenti</string>
+    <string name="consent_dialog_title">Consenso per dati e annunci</string>
+    <string name="analytics_storage">Archiviazione analitica</string>
+    <string name="ad_storage">Archiviazione degli annunci</string>
+    <string name="ad_user_data">Dati utente per annunci</string>
+    <string name="ad_personalization">Personalizzazione degli annunci</string>
+    <string name="consent_settings">Impostazioni del consenso</string>
+    <string name="summary_consent_analytics_storage">Consente la raccolta di statistiche di utilizzo anonime.</string>
+    <string name="summary_consent_ad_storage">Permette di archiviare i dati degli annunci sul dispositivo.</string>
+    <string name="summary_consent_ad_user_data">Consente la condivisione dei dati utente per gli annunci.</string>
+    <string name="summary_consent_ad_personalization">Abilita raccomandazioni pubblicitarie personalizzate.</string>
+    <string name="daily_tip_constraintlayout">Usa ConstraintLayout per creare UI reattive.</string>
+    <string name="daily_tip_viewbinding">Sfrutta ViewBinding per un codice UI più sicuro.</string>
+    <string name="daily_tip_recyclerview">Implementa RecyclerView per liste a scorrimento fluido.</string>
+    <string name="daily_tip_material_design3">Usa i componenti Material Design 3 per un aspetto moderno.</string>
+    <string name="daily_tip_profile_app">Analizza regolarmente la tua app per monitorare le prestazioni.</string>
+    <string name="daily_tip_extract_components">Mantieni i layout organizzati estraendo componenti riutilizzabili.</string>
+    <string name="daily_tip_use_string_resources">Usa risorse stringa per tutto il testo per semplificare la localizzazione.</string>
+    <string name="daily_tip_optimize_webp">Ottimizza le immagini con WebP per ridurre la dimensione dell\'APK.</string>
+    <string name="daily_tip_enable_proguard">Abilita ProGuard per ridurre e offuscare le build di rilascio.</string>
+    <string name="daily_tip_prefer_compose">Preferisci Compose per nuove UI se miri a dispositivi moderni.</string>
+    <string name="daily_tip_livedata_viewmodel">Sfrutta LiveData e ViewModel per UI reattive.</string>
+    <string name="daily_tip_workmanager">Usa WorkManager per attività in background affidabili.</string>
+    <string name="daily_tip_github_actions">Utilizza GitHub Actions per controlli di build automatizzati.</string>
+    <string name="daily_tip_emulator_screen_sizes">Testa la tua app su diverse dimensioni di schermo con l\'emulatore.</string>
+    <string name="daily_tip_update_dependencies">Mantieni aggiornate le dipendenze per le ultime funzionalità e correzioni.</string>
+    <string name="daily_tip_kotlin_coroutines">Sfrutta le coroutine di Kotlin per operazioni asincrone.</string>
+    <string name="daily_tip_hilt">Integra Hilt per l\'iniezione delle dipendenze.</string>
+    <string name="daily_tip_unit_tests">Scrivi test unitari con JUnit ed Espresso.</string>
+    <string name="daily_tip_mvvm">Segui l\'architettura MVVM per un codice manutenibile.</string>
+    <string name="tip_of_the_day">Suggerimento del giorno</string>
+    <string name="quiz_title">Quiz</string>
+    <string name="next_question">Prossima domanda</string>
+    <string name="quiz_finished">Quiz completato. Il tuo punteggio: %1$d/%2$d</string>
+    <string name="quiz_no_more_questions">Nessun\'altra domanda, controlla gli aggiornamenti futuri per altro.</string>
+    <string name="quiz_reminder_title">Promemoria quiz giornaliero</string>
+    <string name="quiz_reminder_body">Torna per il quiz di oggi.</string>
+    <string name="other_apps_title">Altre app dello sviluppatore</string>
+
+    <string name="im_step1_desc">Screenshot che mostra il pulsante Nuovo progetto in Android Studio.</string>
+    <string name="im_step2_desc">Screenshot che mostra la selezione del tipo di attività durante la configurazione del progetto.</string>
+    <string name="im_step3_desc">Screenshot che mostra i campi nome app, pacchetto, lingua e SDK minimo.</string>
     <string name="networking">Networking</string>
     <string name="retrofit">Retrofit</string>
     <string name="fetch_data">Fetch data</string>
     <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
     <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
+
 </resources>
