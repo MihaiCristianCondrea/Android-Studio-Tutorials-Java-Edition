@@ -6,9 +6,54 @@
     <string name="summary_notification_update">アプリの新しいバージョンが利用できます。タップして更新してください。</string>
     <string name="notification_last_time_used_title">しばらくぶりですね。</string>
     <string name="summary_notification_last_time_used">しばらくぶりです—Android について新しいことを学びましょう。</string>
-    <string name="get_on_google_play">Google Play で入手しよう</string>
     <string name="menu">メニュー</string>
     <string name="press_back_again_to_exit">もう一度押して終了します</string>
+
+    <string name="welcome">ようこそ</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">続行するには利用規約とプライバシーポリシーを読み同意してください</string>
+    <string name="agree">同意する</string>
+
+    <string name="home">ホーム</string>
+    <string name="announcement_title">新しいアプリが登場</string>
+    <string name="announcement_subtitle">最新の Android Studio Tutorials アプリをチェック。Jetpack Compose、Material 3 などを学べます。</string>
+    <string name="profile_picture_desc">開発者のプロフィール写真</string>
+    <string name="main_card_title">Android Studio のチュートリアルを発見</string>
+    <string name="main_card_subtitle">Kotlin 版と Java 版を収録</string>
+    <string name="main_card_description">Kotlin 版は動的なレッスンや AI アシスタントなどで更新されました。Android 開発の未来を体験してください。</string>
+    <string name="shortcuts">Android Studio のショートカット</string>
+    <string name="shortcuts_title">ショートカット</string>
+    <string name="description">説明</string>
+    <string name="general">一般</string>
+    <string name="save_all">すべて保存</string>
+    <string name="synchronize">同期</string>
+    <string name="maximize">エディタを最大化/最小化</string>
+    <string name="add_to_favorites">お気に入りに追加</string>
+    <string name="file_inspect">現在のプロファイルで現在のファイルを検査</string>
+    <string name="quick_switch_theme">テーマを素早く切り替え</string>
+    <string name="open_settings">設定ダイアログを開く</string>
+    <string name="open_project">プロジェクト構造ダイアログを開く</string>
+    <string name="switch_tabs">タブとツールウィンドウを切り替え</string>
+    <string name="refactoring">リファクタリング</string>
+    <string name="move">移動</string>
+    <string name="safe_delete">安全に削除</string>
+    <string name="rename">名前を変更</string>
+    <string name="change_signature">シグネチャを変更</string>
+    <string name="inline">インライン</string>
+    <string name="extract_method">メソッドを抽出</string>
+    <string name="extract_field">フィールドを抽出</string>
+    <string name="extract_variable">変数を抽出</string>
+    <string name="extract_constant">定数を抽出</string>
+    <string name="build_and_run">ビルドして実行</string>
+    <string name="build">ビルド</string>
+    <string name="apply_changes">変更を適用 (Instant Run)</string>
+    <string name="debugging">デバッグ</string>
+    <string name="debug">デバッグ</string>
+    <string name="step_over">ステップオーバー</string>
+    <string name="step_into">ステップイン</string>
+    <string name="smart_step_into">スマートステップイン</string>
+    <string name="step_out">ステップアウト</string>
+
+    <string name="get_on_google_play">Google Play で入手しよう</string>
     <string name="learn_more">詳しく見る</string>
     <string name="play_store">Play ストア</string>
     <string name="search_tutorials_hint">チュートリアルを検索</string>
@@ -24,5 +69,4 @@
     <string name="add_note">メモを追加</string>
     <string name="summary_preference_android_studio_room_database">SQLite の上にある抽象化レイヤーである Room を使用して簡単なメモを保持します。</string>
     <string name="summary_room_database">Room は SQLite 上にオブジェクトマッピングレイヤーを提供する永続化ライブラリです。この例ではメモを保存して表示する方法を示します。</string>
-    <string name="profile_picture_desc">開発者プロフィール写真</string>
 </resources>

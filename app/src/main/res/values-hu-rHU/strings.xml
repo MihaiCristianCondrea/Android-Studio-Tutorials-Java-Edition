@@ -6,9 +6,54 @@
     <string name="summary_notification_update">Az alkalmazás új verziója elérhető. Koppints a frissítéshez.</string>
     <string name="notification_last_time_used_title">Rég nem találkoztunk.</string>
     <string name="summary_notification_last_time_used">Rég volt—tanulj valami újat az Androidról.</string>
-    <string name="get_on_google_play">Szerezd meg a Google Playen</string>
     <string name="menu">Menü</string>
     <string name="press_back_again_to_exit">Nyomja meg újra a Back gombot a kilépéshez</string>
+
+    <string name="welcome">Üdvözöljük</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">A folytatáshoz olvassa el és fogadja el a Szolgáltatási feltételeket és az Adatvédelmi irányelveket</string>
+    <string name="agree">Elfogadom</string>
+
+    <string name="home">Kezdőlap</string>
+    <string name="announcement_title">Megérkezett egy új app</string>
+    <string name="announcement_subtitle">Tekintsd meg a legújabb Android Studio Tutorials alkalmazást. Tanulj Jetpack Compose-ról, Material 3-ról és még többről.</string>
+    <string name="profile_picture_desc">Fejlesztő profilképe</string>
+    <string name="main_card_title">Fedezd fel az Android Studio oktatóanyagokat</string>
+    <string name="main_card_subtitle">Kotlin és Java kiadásokkal</string>
+    <string name="main_card_description">A Kotlin kiadás frissült dinamikus leckékkel, AI asszisztenssel és még sok mással. Tapasztald meg az Android fejlesztés jövőjét.</string>
+    <string name="shortcuts">Android Studio gyorsbillentyűk</string>
+    <string name="shortcuts_title">Gyorsbillentyűk</string>
+    <string name="description">Leírás</string>
+    <string name="general">Általános</string>
+    <string name="save_all">Összes mentése</string>
+    <string name="synchronize">Szinkronizálás</string>
+    <string name="maximize">Szerkesztő maximalizálása/minimalizálása</string>
+    <string name="add_to_favorites">Hozzáadás a kedvencekhez</string>
+    <string name="file_inspect">Aktuális fájl vizsgálata az aktuális profillal</string>
+    <string name="quick_switch_theme">Gyors téma váltás</string>
+    <string name="open_settings">Beállítások párbeszédablak megnyitása</string>
+    <string name="open_project">Projektstruktúra párbeszédablak megnyitása</string>
+    <string name="switch_tabs">Váltás lapok és eszközablak között</string>
+    <string name="refactoring">Refaktorálás</string>
+    <string name="move">Áthelyezés</string>
+    <string name="safe_delete">Biztonságos törlés</string>
+    <string name="rename">Átnevezés</string>
+    <string name="change_signature">Aláírás módosítása</string>
+    <string name="inline">Inline</string>
+    <string name="extract_method">Metódus kibontása</string>
+    <string name="extract_field">Mező kibontása</string>
+    <string name="extract_variable">Változó kibontása</string>
+    <string name="extract_constant">Konstans kibontása</string>
+    <string name="build_and_run">Fordítás és futtatás</string>
+    <string name="build">Fordítás</string>
+    <string name="apply_changes">Változások alkalmazása (Instant Run-nal)</string>
+    <string name="debugging">Hibakeresés</string>
+    <string name="debug">Debug</string>
+    <string name="step_over">Túllépés</string>
+    <string name="step_into">Belépés</string>
+    <string name="smart_step_into">Intelligens belépés</string>
+    <string name="step_out">Kilépés</string>
+
+    <string name="get_on_google_play">Szerezd meg a Google Playen</string>
     <string name="learn_more">Tudj meg többet</string>
     <string name="play_store">Play Áruház</string>
     <string name="search_tutorials_hint">Oktatóanyagok keresése</string>
@@ -24,5 +69,4 @@
     <string name="add_note">Jegyzet hozzáadása</string>
     <string name="summary_preference_android_studio_room_database">Egyszerű jegyzetek tárolása a Room használatával, amely egy absztrakciós réteg a SQLite felett.</string>
     <string name="summary_room_database">A Room egy perzisztencia könyvtár, amely objektumtérképezési réteget biztosít a SQLite felett. Ez a példa megmutatja, hogyan lehet jegyzeteket menteni és megjeleníteni.</string>
-    <string name="profile_picture_desc">Fejlesztő profilkép</string>
 </resources>

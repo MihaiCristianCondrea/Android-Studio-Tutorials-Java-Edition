@@ -6,9 +6,54 @@
     <string name="summary_notification_update">È disponibile una nuova versione dell\'app. Tocca per aggiornare.</string>
     <string name="notification_last_time_used_title">È passato un po\'.</string>
     <string name="summary_notification_last_time_used">È passato un po\'—impara qualcosa di nuovo su Android.</string>
-    <string name="get_on_google_play">Scaricalo su Google Play</string>
     <string name="menu">Menu</string>
     <string name="press_back_again_to_exit">Premi di nuovo per uscire</string>
+
+    <string name="welcome">Benvenuto</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Leggi e accetta i Termini di servizio e l\'Informativa sulla privacy per continuare</string>
+    <string name="agree">Accetto</string>
+
+    <string name="home">Home</string>
+    <string name="announcement_title">È arrivata una nuova app</string>
+    <string name="announcement_subtitle">Scopri la nuova app Android Studio Tutorials. Impara Jetpack Compose, Material 3 e altro.</string>
+    <string name="profile_picture_desc">Immagine del profilo dello sviluppatore</string>
+    <string name="main_card_title">Scopri i tutorial di Android Studio</string>
+    <string name="main_card_subtitle">Con edizioni Kotlin e Java</string>
+    <string name="main_card_description">L\'edizione Kotlin è stata aggiornata con lezioni dinamiche, assistente AI e altro. Vivi il futuro dello sviluppo Android.</string>
+    <string name="shortcuts">Scorciatoie di Android Studio</string>
+    <string name="shortcuts_title">Scorciatoie</string>
+    <string name="description">Descrizione</string>
+    <string name="general">Generale</string>
+    <string name="save_all">Salva tutto</string>
+    <string name="synchronize">Sincronizza</string>
+    <string name="maximize">Massimizza/minimizza l\'editor</string>
+    <string name="add_to_favorites">Aggiungi ai preferiti</string>
+    <string name="file_inspect">Ispeziona il file corrente con il profilo attuale</string>
+    <string name="quick_switch_theme">Cambio rapido tema</string>
+    <string name="open_settings">Apri finestra impostazioni</string>
+    <string name="open_project">Apri finestra struttura progetto</string>
+    <string name="switch_tabs">Passa tra schede e finestra strumenti</string>
+    <string name="refactoring">Refactoring</string>
+    <string name="move">Sposta</string>
+    <string name="safe_delete">Eliminazione sicura</string>
+    <string name="rename">Rinomina</string>
+    <string name="change_signature">Cambia firma</string>
+    <string name="inline">Inline</string>
+    <string name="extract_method">Estrai metodo</string>
+    <string name="extract_field">Estrai campo</string>
+    <string name="extract_variable">Estrai variabile</string>
+    <string name="extract_constant">Estrai costante</string>
+    <string name="build_and_run">Compila ed esegui</string>
+    <string name="build">Compila</string>
+    <string name="apply_changes">Applica modifiche (con Instant Run)</string>
+    <string name="debugging">Debugging</string>
+    <string name="debug">Debug</string>
+    <string name="step_over">Passa sopra</string>
+    <string name="step_into">Entra</string>
+    <string name="smart_step_into">Entra intelligente</string>
+    <string name="step_out">Esci</string>
+
+    <string name="get_on_google_play">Scaricalo su Google Play</string>
     <string name="learn_more">Scopri di più</string>
     <string name="play_store">Play Store</string>
     <string name="search_tutorials_hint">Cerca tutorial</string>
@@ -24,5 +69,4 @@
     <string name="add_note">Aggiungi nota</string>
     <string name="summary_preference_android_studio_room_database">Mantieni semplici note utilizzando Room, un livello di astrazione sopra SQLite.</string>
     <string name="summary_room_database">Room è una libreria di persistenza che fornisce un livello di mapping degli oggetti sopra SQLite. Questo esempio mostra come salvare e visualizzare note.</string>
-    <string name="profile_picture_desc">Immagine del profilo sviluppatore</string>
 </resources>
