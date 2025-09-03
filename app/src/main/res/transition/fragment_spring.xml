@@ -2,8 +2,8 @@
 <transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
     <changeBounds
         android:duration="250"
-        android:interpolator="@interpolator/fragment_spring" />
+        android:interpolator="@anim/fragment_spring_interpolator" />
     <fade
         android:duration="250"
-        android:interpolator="@interpolator/fragment_spring" />
+        android:interpolator="@anim/fragment_spring_interpolator" />
 </transitionSet>

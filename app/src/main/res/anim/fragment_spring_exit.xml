@@ -4,10 +4,10 @@
         android:fromXDelta="0%"
         android:toXDelta="-100%"
         android:duration="250"
-        android:interpolator="@interpolator/fragment_spring" />
+        android:interpolator="@anim/fragment_spring_interpolator" />
     <alpha
         android:fromAlpha="1"
         android:toAlpha="0"
         android:duration="250"
-        android:interpolator="@interpolator/fragment_spring" />
+        android:interpolator="@anim/fragment_spring_interpolator" />
 </set>
