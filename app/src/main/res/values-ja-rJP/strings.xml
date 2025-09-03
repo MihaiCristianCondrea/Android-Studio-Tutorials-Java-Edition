@@ -148,4 +148,46 @@
     <string name="add_note">メモを追加</string>
     <string name="summary_preference_android_studio_room_database">SQLite の上にある抽象化レイヤーである Room を使用して簡単なメモを保持します。</string>
     <string name="summary_room_database">Room は SQLite 上にオブジェクトマッピングレイヤーを提供する永続化ライブラリです。この例ではメモを保存して表示する方法を示します。</string>
+
+    <string name="layouts">レイアウトとビュー</string>
+
+    <string name="linear_layout">リニアレイアウト</string>
+
+    <string name="vertical">縦</string>
+    <string name="horizontal">横</string>
+    <string name="layout_preview">レイアウトのプレビュー</string>
+    <string name="no_java_code_needed">このアクティビティには Java コードは不要です。</string>
+
+    <string name="relative_layout">相対レイアウト</string>
+
+    <string name="table_layout">テーブルレイアウト</string>
+
+    <string name="grid_view">グリッドビュー</string>
+
+    <string name="image_view">イメージビュー</string>
+
+    <string name="web_view">Webビュー</string>
+
+    <string name="buttons_and_switches">ボタンとスイッチ</string>
+    <string name="buttons">ボタン</string>
+    <string name="button">ボタン</string>
+    <string name="button_normal">ボタン1（標準）</string>
+    <string name="button_outlined">ボタン2（アウトライン）</string>
+    <string name="button_elevated">ボタン3（エレベーテッド）</string>
+    <string name="button_normal_icon">ボタン4（標準アイコン）</string>
+    <string name="button_outlined_icon">ボタン5（アウトラインアイコン）</string>
+    <string name="button_elevated_icon">ボタン6（エレベーテッドアイコン）</string>
+    <string name="extended_floating_button_primary">拡張フローティングボタン1（プライマリ）</string>
+    <string name="extended_floating_button_secondary">拡張フローティングボタン2（セカンダリ）</string>
+    <string name="extended_floating_button_surface">拡張フローティングボタン3（サーフェス）</string>
+    <string name="extended_floating_button_tertiary">拡張フローティングボタン4（ターシャリ）</string>
+    <string name="extended_floating_button_primary_icon">拡張フローティングボタン5（プライマリアイコン）</string>
+    <string name="extended_floating_button_secondary_icon">拡張フローティングボタン6（セカンダリアイコン）</string>
+    <string name="extended_floating_button_surface_icon">拡張フローティングボタン7（サーフェスアイコン）</string>
+    <string name="extended_floating_button_tertiary_icon">拡張フローティングボタン8（ターシャリアイコン）</string>
+    <string name="floating_button_primary_icon">フローティングボタン1（プライマリ）</string>
+    <string name="floating_button_secondary_icon">フローティングボタン2（セカンダリ）</string>
+    <string name="floating_button_surface_icon">フローティングボタン3（サーフェス）</string>
+    <string name="floating_button_tertiary_icon">フローティングボタン4（ターシャリ）</string>
+    <string name="same_code_buttons">すべての種類のボタンにこの Java コードを使用します。</string>
 </resources>

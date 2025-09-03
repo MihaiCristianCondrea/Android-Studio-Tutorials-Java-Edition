@@ -148,4 +148,46 @@
     <string name="add_note">Dodaj notatkę</string>
     <string name="summary_preference_android_studio_room_database">Przechowuj proste notatki za pomocą Room, warstwy abstrakcji nad SQLite.</string>
     <string name="summary_room_database">Room to biblioteka trwałości, która zapewnia warstwę mapowania obiektów na SQLite. Ten przykład pokazuje, jak zapisywać i wyświetlać notatki.</string>
+
+    <string name="layouts">Układy i widoki</string>
+
+    <string name="linear_layout">Układ liniowy</string>
+
+    <string name="vertical">Pionowy</string>
+    <string name="horizontal">Poziomy</string>
+    <string name="layout_preview">Podgląd układu</string>
+    <string name="no_java_code_needed">Do tej aktywności nie jest wymagany kod Java.</string>
+
+    <string name="relative_layout">Układ względny</string>
+
+    <string name="table_layout">Układ tabelaryczny</string>
+
+    <string name="grid_view">Widok siatki</string>
+
+    <string name="image_view">Widok obrazu</string>
+
+    <string name="web_view">Widok internetowy</string>
+
+    <string name="buttons_and_switches">Przyciski i przełączniki</string>
+    <string name="buttons">Przyciski</string>
+    <string name="button">Przycisk</string>
+    <string name="button_normal">Przycisk 1 (standardowy)</string>
+    <string name="button_outlined">Przycisk 2 (z obramowaniem)</string>
+    <string name="button_elevated">Przycisk 3 (uniesiony)</string>
+    <string name="button_normal_icon">Przycisk 4 (standardowy z ikoną)</string>
+    <string name="button_outlined_icon">Przycisk 5 (z obramowaniem i ikoną)</string>
+    <string name="button_elevated_icon">Przycisk 6 (uniesiony z ikoną)</string>
+    <string name="extended_floating_button_primary">Rozszerzony przycisk pływający 1 (podstawowy)</string>
+    <string name="extended_floating_button_secondary">Rozszerzony przycisk pływający 2 (drugorzędny)</string>
+    <string name="extended_floating_button_surface">Rozszerzony przycisk pływający 3 (powierzchniowy)</string>
+    <string name="extended_floating_button_tertiary">Rozszerzony przycisk pływający 4 (trzeciorzędny)</string>
+    <string name="extended_floating_button_primary_icon">Rozszerzony przycisk pływający 5 (ikona podstawowa)</string>
+    <string name="extended_floating_button_secondary_icon">Rozszerzony przycisk pływający 6 (ikona drugorzędna)</string>
+    <string name="extended_floating_button_surface_icon">Rozszerzony przycisk pływający 7 (ikona powierzchniowa)</string>
+    <string name="extended_floating_button_tertiary_icon">Rozszerzony przycisk pływający 8 (ikona trzeciorzędna)</string>
+    <string name="floating_button_primary_icon">Przycisk pływający 1 (podstawowy)</string>
+    <string name="floating_button_secondary_icon">Przycisk pływający 2 (drugorzędny)</string>
+    <string name="floating_button_surface_icon">Przycisk pływający 3 (powierzchniowy)</string>
+    <string name="floating_button_tertiary_icon">Przycisk pływający 4 (trzeciorzędny)</string>
+    <string name="same_code_buttons">Użyj tego kodu Java dla wszystkich typów przycisków.</string>
 </resources>

@@ -148,4 +148,46 @@
     <string name="add_note">Jegyzet hozzáadása</string>
     <string name="summary_preference_android_studio_room_database">Egyszerű jegyzetek tárolása a Room használatával, amely egy absztrakciós réteg a SQLite felett.</string>
     <string name="summary_room_database">A Room egy perzisztencia könyvtár, amely objektumtérképezési réteget biztosít a SQLite felett. Ez a példa megmutatja, hogyan lehet jegyzeteket menteni és megjeleníteni.</string>
+
+    <string name="layouts">Elrendezések és nézetek</string>
+
+    <string name="linear_layout">Lineáris elrendezés</string>
+
+    <string name="vertical">Függőleges</string>
+    <string name="horizontal">Vízszintes</string>
+    <string name="layout_preview">Elrendezés előnézete</string>
+    <string name="no_java_code_needed">Ehhez az aktivitáshoz nincs szükség Java kódra.</string>
+
+    <string name="relative_layout">Relatív elrendezés</string>
+
+    <string name="table_layout">Táblázatos elrendezés</string>
+
+    <string name="grid_view">Rácsnézet</string>
+
+    <string name="image_view">Képnézet</string>
+
+    <string name="web_view">Webnézet</string>
+
+    <string name="buttons_and_switches">Gombok és kapcsolók</string>
+    <string name="buttons">Gombok</string>
+    <string name="button">Gomb</string>
+    <string name="button_normal">1. gomb (normál)</string>
+    <string name="button_outlined">2. gomb (körvonalas)</string>
+    <string name="button_elevated">3. gomb (emelt)</string>
+    <string name="button_normal_icon">4. gomb (normál ikon)</string>
+    <string name="button_outlined_icon">5. gomb (körvonalas ikon)</string>
+    <string name="button_elevated_icon">6. gomb (emelt ikon)</string>
+    <string name="extended_floating_button_primary">Kiterjesztett lebegő gomb 1 (elsődleges)</string>
+    <string name="extended_floating_button_secondary">Kiterjesztett lebegő gomb 2 (másodlagos)</string>
+    <string name="extended_floating_button_surface">Kiterjesztett lebegő gomb 3 (felület)</string>
+    <string name="extended_floating_button_tertiary">Kiterjesztett lebegő gomb 4 (harmadlagos)</string>
+    <string name="extended_floating_button_primary_icon">Kiterjesztett lebegő gomb 5 (elsődleges ikon)</string>
+    <string name="extended_floating_button_secondary_icon">Kiterjesztett lebegő gomb 6 (másodlagos ikon)</string>
+    <string name="extended_floating_button_surface_icon">Kiterjesztett lebegő gomb 7 (felületi ikon)</string>
+    <string name="extended_floating_button_tertiary_icon">Kiterjesztett lebegő gomb 8 (harmadlagos ikon)</string>
+    <string name="floating_button_primary_icon">Lebegő gomb 1 (elsődleges)</string>
+    <string name="floating_button_secondary_icon">Lebegő gomb 2 (másodlagos)</string>
+    <string name="floating_button_surface_icon">Lebegő gomb 3 (felület)</string>
+    <string name="floating_button_tertiary_icon">Lebegő gomb 4 (harmadlagos)</string>
+    <string name="same_code_buttons">Használd ezt a Java kódot minden gombtípushoz.</string>
 </resources>

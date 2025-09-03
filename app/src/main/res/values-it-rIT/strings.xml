@@ -148,4 +148,46 @@
     <string name="add_note">Aggiungi nota</string>
     <string name="summary_preference_android_studio_room_database">Mantieni semplici note utilizzando Room, un livello di astrazione sopra SQLite.</string>
     <string name="summary_room_database">Room è una libreria di persistenza che fornisce un livello di mapping degli oggetti sopra SQLite. Questo esempio mostra come salvare e visualizzare note.</string>
+
+    <string name="layouts">Layout e viste</string>
+
+    <string name="linear_layout">Layout lineare</string>
+
+    <string name="vertical">Verticale</string>
+    <string name="horizontal">Orizzontale</string>
+    <string name="layout_preview">Anteprima del layout</string>
+    <string name="no_java_code_needed">Nessun codice Java richiesto per questa attività.</string>
+
+    <string name="relative_layout">Layout relativo</string>
+
+    <string name="table_layout">Layout tabella</string>
+
+    <string name="grid_view">Vista griglia</string>
+
+    <string name="image_view">Vista immagine</string>
+
+    <string name="web_view">Vista Web</string>
+
+    <string name="buttons_and_switches">Pulsanti e interruttori</string>
+    <string name="buttons">Pulsanti</string>
+    <string name="button">Pulsante</string>
+    <string name="button_normal">Pulsante 1 (normale)</string>
+    <string name="button_outlined">Pulsante 2 (con contorno)</string>
+    <string name="button_elevated">Pulsante 3 (elevato)</string>
+    <string name="button_normal_icon">Pulsante 4 (normale con icona)</string>
+    <string name="button_outlined_icon">Pulsante 5 (con contorno e icona)</string>
+    <string name="button_elevated_icon">Pulsante 6 (elevato con icona)</string>
+    <string name="extended_floating_button_primary">Pulsante flottante esteso 1 (primario)</string>
+    <string name="extended_floating_button_secondary">Pulsante flottante esteso 2 (secondario)</string>
+    <string name="extended_floating_button_surface">Pulsante flottante esteso 3 (superficie)</string>
+    <string name="extended_floating_button_tertiary">Pulsante flottante esteso 4 (terziario)</string>
+    <string name="extended_floating_button_primary_icon">Pulsante flottante esteso 5 (icona primaria)</string>
+    <string name="extended_floating_button_secondary_icon">Pulsante flottante esteso 6 (icona secondaria)</string>
+    <string name="extended_floating_button_surface_icon">Pulsante flottante esteso 7 (icona superficie)</string>
+    <string name="extended_floating_button_tertiary_icon">Pulsante flottante esteso 8 (icona terziaria)</string>
+    <string name="floating_button_primary_icon">Pulsante flottante 1 (primario)</string>
+    <string name="floating_button_secondary_icon">Pulsante flottante 2 (secondario)</string>
+    <string name="floating_button_surface_icon">Pulsante flottante 3 (superficie)</string>
+    <string name="floating_button_tertiary_icon">Pulsante flottante 4 (terziario)</string>
+    <string name="same_code_buttons">Usa questo codice Java per tutti i tipi di pulsanti.</string>
 </resources>
