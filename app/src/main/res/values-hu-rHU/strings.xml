@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="image_view_preview_desc">Képnézet előnézete</string>
+    <string name="app_short_description">Tanuld meg, hogyan készíts egyszerű Java alkalmazásokat az Android Studioban. 📱</string>
+    <string name="notification_update_title">Új frissítés érhető el.</string>
+    <string name="summary_notification_update">Az alkalmazás új verziója elérhető. Koppints a frissítéshez.</string>
+    <string name="notification_last_time_used_title">Rég nem találkoztunk.</string>
+    <string name="summary_notification_last_time_used">Rég volt—tanulj valami újat az Androidról.</string>
     <string name="get_on_google_play">Szerezd meg a Google Playen</string>
     <string name="menu">Menü</string>
     <string name="press_back_again_to_exit">Nyomja meg újra a Back gombot a kilépéshez</string>

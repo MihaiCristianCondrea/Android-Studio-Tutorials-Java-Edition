@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="image_view_preview_desc">معاينة عرض الصورة</string>
     <string name="app_short_description">اتعلم إزاي تعمل تطبيقات جافا بسيطة في أندرويد ستوديو. 📱</string>
     <string name="notification_update_title">فيه تحديث جديد متاح.</string>
     <string name="summary_notification_update">إصدار جديد من التطبيق متاح. اضغط للتحديث.</string>
     <string name="notification_last_time_used_title">بقالك فترة مدخلتش.</string>
-    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="summary_notification_last_time_used">بقالك فترة—اتعلم حاجة جديدة عن أندرويد.</string>
     <string name="menu">القائمة</string>
     <string name="press_back_again_to_exit">اضغط مرة أخرى للخروج</string>
     <string name="welcome">أهلاً بك</string>

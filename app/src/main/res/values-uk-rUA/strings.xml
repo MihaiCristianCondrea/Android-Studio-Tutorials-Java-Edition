@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="image_view_preview_desc">Попередній перегляд зображення</string>
     <string name="app_short_description">Дізнайтеся, як створювати прості програми на Java в Android Studio. 📱</string>
     <string name="notification_update_title">Доступне нове оновлення.</string>
     <string name="summary_notification_update">Доступна нова версія програми. Натисніть, щоб оновити.</string>
     <string name="notification_last_time_used_title">Давно не бачились.</string>
-    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="summary_notification_last_time_used">Давно не бачились—дізнайтеся щось нове про Android.</string>
     <string name="menu">Меню</string>
     <string name="press_back_again_to_exit">Натисніть ще раз, щоб вийти</string>
     <string name="welcome">Ласкаво просимо</string>

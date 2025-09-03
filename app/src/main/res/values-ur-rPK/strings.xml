@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="image_view_preview_desc">تصویر ویو کا پیش نظارہ</string>
     <string name="app_short_description">اینڈرائیڈ اسٹوڈیو میں سادہ جاوا ایپس بنانا سیکھیں۔ 📱</string>
     <string name="notification_update_title">ایک نئی اپڈیٹ دستیاب ہے.</string>
     <string name="summary_notification_update">ایپ کا نیا ورژن دستیاب ہے۔ اپڈیٹ کرنے کے لیے کلک کریں.</string>
     <string name="notification_last_time_used_title">کافی وقت ہو گیا ہے.</string>
-    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="summary_notification_last_time_used">کافی وقت ہو گیا ہے—اینڈرائیڈ کے بارے میں کچھ نیا سیکھیں۔</string>
     <string name="menu">مینو</string>
     <string name="press_back_again_to_exit">باہر نکلنے کے لئے دوبارہ دبائیں</string>
     <string name="welcome">خوش آمدید</string>

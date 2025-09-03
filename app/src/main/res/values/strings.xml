@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="image_view_preview_desc">Image view preview</string>
     <string name="app_short_description">Learn how to make simple Java apps in Android Studio. 📱</string>
     <string name="notification_update_title">A new update is available.</string>
     <string name="summary_notification_update">A new version of the app is available. Tap to update.</string>

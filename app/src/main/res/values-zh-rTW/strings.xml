@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="image_view_preview_desc">圖片檢視預覽</string>
     <string name="app_short_description">學習如何在 Android Studio 中製作簡單的 Java 應用程式。 📱</string>
     <string name="notification_update_title">有可用的新更新！</string>
     <string name="summary_notification_update">應用程式有新版本可用。點擊更新！</string>
     <string name="notification_last_time_used_title">好久不見！</string>
-    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="summary_notification_last_time_used">好久不見—學點新的 Android 知識吧。</string>
     <string name="menu">選單</string>
     <string name="press_back_again_to_exit">再按一次返回鍵退出</string>
     <string name="welcome">歡迎</string>

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="image_view_preview_desc">画像ビューのプレビュー</string>
+    <string name="app_short_description">Android Studio でシンプルな Java アプリを作る方法を学ぼう。 📱</string>
+    <string name="notification_update_title">新しいアップデートがあります。</string>
+    <string name="summary_notification_update">アプリの新しいバージョンが利用できます。タップして更新してください。</string>
+    <string name="notification_last_time_used_title">しばらくぶりですね。</string>
+    <string name="summary_notification_last_time_used">しばらくぶりです—Android について新しいことを学びましょう。</string>
     <string name="get_on_google_play">Google Play で入手しよう</string>
     <string name="menu">メニュー</string>
     <string name="press_back_again_to_exit">もう一度押して終了します</string>

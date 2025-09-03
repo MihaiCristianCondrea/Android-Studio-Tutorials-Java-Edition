@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="image_view_preview_desc">이미지 뷰 미리보기</string>
     <string name="app_short_description">Android Studio에서 간단한 Java 앱을 만드는 방법을 배워보세요. 📱</string>
     <string name="notification_update_title">새로운 업데이트가 있습니다.</string>
     <string name="summary_notification_update">새로운 버전의 앱이 출시되었습니다. 클릭하여 업데이트하세요.</string>
     <string name="notification_last_time_used_title">오랜만이에요.</string>
-    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="summary_notification_last_time_used">오랜만이네요—Android에 대해 새로운 것을 배워보세요.</string>
     <string name="menu">메뉴</string>
     <string name="press_back_again_to_exit">뒤로가기를 한 번 더 누르면 종료됩니다</string>
     <string name="welcome">환영합니다</string>
