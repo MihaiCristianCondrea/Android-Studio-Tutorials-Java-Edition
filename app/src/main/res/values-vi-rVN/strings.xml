@@ -441,4 +441,9 @@
     <string name="im_step1_desc">Ảnh chụp màn hình hiển thị nút Dự án mới trong Android Studio.</string>
     <string name="im_step2_desc">Ảnh chụp màn hình hiển thị lựa chọn loại hoạt động khi thiết lập dự án.</string>
     <string name="im_step3_desc">Ảnh chụp màn hình hiển thị các trường tên ứng dụng, gói, ngôn ngữ và SDK tối thiểu.</string>
+    <string name="networking">Networking</string>
+    <string name="retrofit">Retrofit</string>
+    <string name="fetch_data">Fetch data</string>
+    <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
+    <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
 </resources>

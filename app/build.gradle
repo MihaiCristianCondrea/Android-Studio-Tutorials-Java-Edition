@@ -100,6 +100,8 @@ dependencies {
     implementation libs.androidx.room.runtime
     annotationProcessor libs.androidx.room.compiler
     annotationProcessor libs.glide.compiler
+    implementation libs.retrofit2
+    implementation libs.retrofit2.converter.gson
 
     // Testing
     testImplementation libs.junit

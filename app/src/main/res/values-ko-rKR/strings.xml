@@ -441,4 +441,9 @@
     <string name="im_step1_desc">Android Studio에서 새 프로젝트 버튼을 보여주는 스크린샷.</string>
     <string name="im_step2_desc">프로젝트 설정 중 액티비티 유형 선택을 보여주는 스크린샷.</string>
     <string name="im_step3_desc">앱 이름, 패키지, 언어 및 최소 SDK 필드를 보여주는 스크린샷.</string>
+    <string name="networking">Networking</string>
+    <string name="retrofit">Retrofit</string>
+    <string name="fetch_data">Fetch data</string>
+    <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
+    <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
 </resources>

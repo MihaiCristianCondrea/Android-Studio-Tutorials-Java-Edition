@@ -449,4 +449,9 @@
     <string name="im_step1_desc">Captură de ecran cu butonul Proiect nou în Android Studio.</string>
     <string name="im_step2_desc">Captură de ecran cu selectarea tipului de activitate în timpul configurării proiectului.</string>
     <string name="im_step3_desc">Captură de ecran cu câmpurile nume aplicație, pachet, limbă și SDK minim.</string>
+    <string name="networking">Networking</string>
+    <string name="retrofit">Retrofit</string>
+    <string name="fetch_data">Fetch data</string>
+    <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
+    <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
 </resources>

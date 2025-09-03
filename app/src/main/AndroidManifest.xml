@@ -317,6 +317,18 @@
             android:parentActivityName=".ui.screens.android.lessons.data.room.RoomActivity" />
 
         <activity
+            android:name=".ui.screens.android.lessons.networking.retrofit.RetrofitActivity"
+            android:exported="false"
+            android:label="@string/retrofit"
+            android:parentActivityName=".ui.screens.main.MainActivity" />
+
+        <activity
+            android:name=".ui.screens.android.lessons.networking.retrofit.RetrofitCodeActivity"
+            android:exported="false"
+            android:label="@string/retrofit"
+            android:parentActivityName=".ui.screens.android.lessons.networking.retrofit.RetrofitActivity" />
+
+        <activity
             android:name=".ui.screens.settings.SettingsActivity"
             android:exported="false"
             android:label="@string/settings"
