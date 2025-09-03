@@ -132,7 +132,7 @@
     <string name="room_database">Room-Datenbank</string>
     <string name="enter_note">Notiz eingeben</string>
     <string name="add_note">Notiz hinzufügen</string>
-    <string name="layouts">Layouts and views</string>
+    <string name="layouts">Layouts und Ansichten</string>
     <string name="linear_layout">Lineares Layout</string>
     <string name="vertical">Vertikal</string>
     <string name="horizontal">Horizontal</string>
@@ -143,7 +143,7 @@
     <string name="grid_view">Rasteransicht</string>
     <string name="image_view">Bildansicht</string>
     <string name="web_view">Webansicht</string>
-    <string name="buttons_and_switches">Buttons and switches</string>
+    <string name="buttons_and_switches">Schaltflächen und Schalter</string>
     <string name="buttons">Schaltflächen</string>
     <string name="button">Schaltfläche</string>
     <string name="button_normal">Schaltfläche 1 (normal)</string>

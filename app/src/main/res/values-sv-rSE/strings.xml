@@ -132,7 +132,7 @@
     <string name="room_database">Room-databas</string>
     <string name="enter_note">Ange anteckning</string>
     <string name="add_note">Lägg till anteckning</string>
-    <string name="layouts">Layouts and views</string>
+    <string name="layouts">Layouter och vyer</string>
     <string name="linear_layout">Linjär layout</string>
     <string name="vertical">Vertikal</string>
     <string name="horizontal">Horisontell</string>
@@ -143,7 +143,7 @@
     <string name="grid_view">Rutnätsvy</string>
     <string name="image_view">Bildvy</string>
     <string name="web_view">Webbvy</string>
-    <string name="buttons_and_switches">Buttons and switches</string>
+    <string name="buttons_and_switches">Knappar och strömbrytare</string>
     <string name="buttons">Knappar</string>
     <string name="button">Knapp</string>
     <string name="button_normal">Knapp 1 (normal)</string>
