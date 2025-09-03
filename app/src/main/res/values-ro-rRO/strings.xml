@@ -405,7 +405,7 @@
     <string name="firebase_performance">Performanță baza de foc</string>
     <string name="special">Special</string>
     <string name="wake_lock">Păstrați dispozitivul treaz [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
+    <string name="summary_preference_permissions_wake_lock">Permite aplicației să împiedice dispozitivul să intre în repaus—de exemplu, prin estomparea ecranului sau adormirea procesorului—în timpul operațiunilor critice pentru a se asigura că acestea se finalizează fără întreruperi. Este folosită rar pentru a conserva bateria.</string>
     <string name="summary_preference_settings_firebase_crashlytics">Colecta rapoarte de accident pentru a ajuta la rezolvarea problemelor.</string>
     <string name="summary_preference_settings_firebase_analytics">Adună date de utilizare pentru îmbunătățirea aplicației.</string>
     <string name="summary_preference_settings_firebase_performance">Măsoară performanța aplicației pentru optimizare.</string>
