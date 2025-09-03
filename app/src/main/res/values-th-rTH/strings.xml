@@ -443,4 +443,9 @@
     <string name="im_step1_desc">ภาพหน้าจอแสดงปุ่มโปรเจ็กต์ใหม่ใน Android Studio.</string>
     <string name="im_step2_desc">ภาพหน้าจอแสดงการเลือกประเภทกิจกรรมระหว่างตั้งค่าโปรเจ็กต์.</string>
     <string name="im_step3_desc">ภาพหน้าจอแสดงช่องชื่อแอป แพ็กเกจ ภาษา และ SDK ขั้นต่ำ.</string>
+    <string name="networking">Networking</string>
+    <string name="retrofit">Retrofit</string>
+    <string name="fetch_data">Fetch data</string>
+    <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
+    <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
 </resources>

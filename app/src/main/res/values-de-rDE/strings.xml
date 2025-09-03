@@ -441,4 +441,9 @@
     <string name="im_step1_desc">Screenshot mit der Schaltfläche Neues Projekt in Android Studio.</string>
     <string name="im_step2_desc">Screenshot mit der Auswahl des Aktivitätstyps während der Projekteinrichtung.</string>
     <string name="im_step3_desc">Screenshot mit Feldern für App-Name, Paket, Sprache und minimale SDK.</string>
+    <string name="networking">Networking</string>
+    <string name="retrofit">Retrofit</string>
+    <string name="fetch_data">Fetch data</string>
+    <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
+    <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
 </resources>

@@ -322,6 +322,19 @@
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
+        app:icon="@drawable/ic_category_network_tinted"
+        app:title="@string/networking">
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_signal_cellular"
+            app:summary="@string/summary_preference_android_studio_retrofit"
+            app:title="@string/retrofit">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retrofit.RetrofitActivity"
+                android:targetPackage="com.d4rk.androidtutorials.java" />
+        </androidx.preference.Preference>
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory
         app:icon="@drawable/ic_category_notification_tinted"
         app:title="@string/notifications">
         <androidx.preference.Preference

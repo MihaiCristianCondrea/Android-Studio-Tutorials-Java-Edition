@@ -23,5 +23,10 @@
     "question": "What component shows a scrollable list of items?",
     "options": ["RecyclerView", "TextView", "ImageView", "Button"],
     "answer": 0
+  },
+  {
+    "question": "Which library simplifies HTTP requests by turning APIs into interfaces?",
+    "options": ["Volley", "Retrofit", "Glide", "Room"],
+    "answer": 1
   }
 ]
