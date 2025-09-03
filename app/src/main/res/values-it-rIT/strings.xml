@@ -60,6 +60,23 @@
     <string name="search_tutorials_content_description">Cerca tutorial</string>
     <string name="search_lessons_hint">Cerca lezioni</string>
     <string name="search_lessons_content_description">Cerca lezioni</string>
+    <string name="android_studio">Android Studio</string>
+
+    <string name="android_start">Avvia un nuovo progetto</string>
+    <string name="android_start_project">Avvia un nuovo progetto</string>
+    <string name="step1">Passaggio 1</string>
+    <string name="summary_first_step">Il primo passaggio per creare un nuovo progetto in Android Studio è cliccare sul pulsante <b>Nuovo progetto</b> come mostrato nell\'immagine e proseguire con il passaggio successivo.</string>
+    <string name="step2">Passaggio 2</string>
+    <string name="summary_second_step">Il secondo passaggio è selezionare il tipo di attività che si adatta alla tua app. Puoi scegliere tra alcuni preset che possono semplificare il lavoro. Selezionane uno e fai clic sul pulsante <b>successivo</b>.</string>
+    <string name="step3">Passaggio 3</string>
+    <string name="summary_third_step">Il terzo e ultimo passaggio è configurare le impostazioni dell\'app, come il nome dell\'app, il <b>nome del pacchetto</b>, il <b>linguaggio di programmazione</b> preferito e l\'<b>SDK minimo</b>. Puoi saperne di più su <a href="https://developer.android.com/">Android Developers</a>.</string>
+
+    <string name="basics">Nozioni di base</string>
+    <string name="run_to_cursor">Esegui fino al cursore</string>
+    <string name="evaluate_expression">Valuta espressione</string>
+    <string name="resume_program">Riprendi programma</string>
+    <string name="toggle_breakpoint">Attiva/disattiva breakpoint</string>
+    <string name="view_breakpoints">Visualizza breakpoint</string>
     <string name="im_step1_desc">Screenshot che mostra il pulsante Nuovo progetto in Android Studio.</string>
     <string name="im_step2_desc">Screenshot che mostra la selezione del tipo di attività durante la configurazione del progetto.</string>
     <string name="im_step3_desc">Screenshot che mostra i campi nome app, pacchetto, lingua e SDK minimo.</string>

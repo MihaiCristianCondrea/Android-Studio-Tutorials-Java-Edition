@@ -26,7 +26,7 @@
     <string name="search_lessons_hint">Tìm kiếm bài học</string>
     <string name="search_lessons_content_description">Tìm kiếm bài học</string>
     <string name="android_studio">Android Studio</string>
-    <string name="android_start">Start a new project</string>
+    <string name="android_start">Bắt đầu một dự án mới</string>
     <string name="android_start_project">Bắt đầu một dự án mới</string>
     <string name="step1">Bước 1</string>
     <string name="summary_first_step">Bước đầu tiên để tạo một dự án mới trong Android Studio là nhấp vào nút <b>Dự án mới</b> như trong hình và tiếp tục bước tiếp theo.</string>

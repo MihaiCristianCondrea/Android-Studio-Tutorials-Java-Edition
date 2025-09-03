@@ -60,6 +60,23 @@
     <string name="search_tutorials_content_description">チュートリアルを検索</string>
     <string name="search_lessons_hint">レッスンを検索</string>
     <string name="search_lessons_content_description">レッスンを検索</string>
+    <string name="android_studio">Android Studio</string>
+
+    <string name="android_start">新しいプロジェクトを開始する</string>
+    <string name="android_start_project">新しいプロジェクトを開始する</string>
+    <string name="step1">ステップ 1</string>
+    <string name="summary_first_step">Android Studio で新しいプロジェクトを作成する最初のステップは、画像のように<b>新規プロジェクト</b>ボタンをクリックし、次のステップへ進むことです。</string>
+    <string name="step2">ステップ 2</string>
+    <string name="summary_second_step">2 番目のステップはアプリに合ったアクティビティの種類を選択することです。作業を簡単にするいくつかのプリセットから選べます。1 つを選んで<b>次へ</b>ボタンをクリックします。</string>
+    <string name="step3">ステップ 3</string>
+    <string name="summary_third_step">3 つ目で最後のステップは、アプリ名、<b>パッケージ名</b>、希望する<b>プログラミング言語</b>、<b>最小 SDK</b> などのアプリ設定を構成することです。詳しくは <a href="https://developer.android.com/">Android Developers</a> をご覧ください。</string>
+
+    <string name="basics">基本</string>
+    <string name="run_to_cursor">カーソルまで実行</string>
+    <string name="evaluate_expression">式を評価</string>
+    <string name="resume_program">プログラムを再開</string>
+    <string name="toggle_breakpoint">ブレークポイントの切り替え</string>
+    <string name="view_breakpoints">ブレークポイントを表示</string>
     <string name="im_step1_desc">Android Studio の新規プロジェクトボタンを示すスクリーンショット。</string>
     <string name="im_step2_desc">プロジェクト設定中のアクティビティタイプ選択を示すスクリーンショット。</string>
     <string name="im_step3_desc">アプリ名、パッケージ、言語、最小 SDK の入力欄を示すスクリーンショット。</string>

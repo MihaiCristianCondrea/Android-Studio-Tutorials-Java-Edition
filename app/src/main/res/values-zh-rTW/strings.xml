@@ -26,7 +26,7 @@
     <string name="search_lessons_hint">搜尋課程</string>
     <string name="search_lessons_content_description">搜尋課程</string>
     <string name="android_studio">Android Studio</string>
-    <string name="android_start">Start a new project</string>
+    <string name="android_start">開始一個新專案</string>
     <string name="android_start_project">開始一個新專案</string>
     <string name="step1">步驟 1</string>
     <string name="summary_first_step">在 Android Studio 中建立新專案的第一步是點擊圖中所示的<b>新專案</b>按鈕，然後繼續下一步。</string>

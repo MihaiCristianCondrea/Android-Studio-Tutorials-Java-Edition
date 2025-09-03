@@ -60,6 +60,23 @@
     <string name="search_tutorials_content_description">Oktatóanyagok keresése</string>
     <string name="search_lessons_hint">Leckék keresése</string>
     <string name="search_lessons_content_description">Leckék keresése</string>
+    <string name="android_studio">Android Studio</string>
+
+    <string name="android_start">Új projekt indítása</string>
+    <string name="android_start_project">Új projekt indítása</string>
+    <string name="step1">1. lépés</string>
+    <string name="summary_first_step">Az első lépés az új projekt létrehozásához az Android Studioban, hogy a képen látható <b>Új projekt</b> gombra kattintasz, majd továbblépsz a következő lépésre.</string>
+    <string name="step2">2. lépés</string>
+    <string name="summary_second_step">A második lépés a te alkalmazásodhoz illő aktivitástípus kiválasztása. Választhatsz néhány előre beállított sablon közül, amelyek megkönnyíthetik a munkád. Válaszd ki az egyiket, majd kattints a <b>tovább</b> gombra.</string>
+    <string name="step3">3. lépés</string>
+    <string name="summary_third_step">A harmadik, egyben utolsó lépés az alkalmazás beállításainak konfigurálása, mint például az alkalmazás neve, a <b>csomagnév</b>, a preferált <b>programozási nyelv</b> és a <b>minimális SDK</b>. További információkat az <a href="https://developer.android.com/">Android Developers</a> oldalon találsz.</string>
+
+    <string name="basics">Alapok</string>
+    <string name="run_to_cursor">Futtatás a kurzorig</string>
+    <string name="evaluate_expression">Kifejezés kiértékelése</string>
+    <string name="resume_program">Program folytatása</string>
+    <string name="toggle_breakpoint">Töréspont be/ki</string>
+    <string name="view_breakpoints">Töréspontok megtekintése</string>
     <string name="im_step1_desc">Képernyőkép az Új projekt gombbal az Android Studioban.</string>
     <string name="im_step2_desc">Képernyőkép a projekt beállításakor az aktivitástípus választásáról.</string>
     <string name="im_step3_desc">Képernyőkép az alkalmazás neve, csomagja, nyelve és minimum SDK mezőiről.</string>
