@@ -492,8 +492,44 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="Fix typo in untranslatable strings&#10;&#10;The commit removes an unnecessary &quot;&gt;&quot; character from the &quot;changelog&quot; string resource.">
+    <list default="true" id="a86d8b5b-95c7-4937-808e-d4f6dfee35c9" name="Changes" comment="Update Android Gradle Plugin and improve accessibility">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_alert_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_alert_dialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_bottom_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bottom_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_buttons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_buttons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_chronometer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_chronometer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_clock.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_clock.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_date_picker.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_date_picker.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_grid_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_grid_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_buttons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_buttons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_images.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_images.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_linear_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_linear_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_navigation_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_navigation_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_notification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_notification.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_password_box.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_password_box.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_permissions_tutorial.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_permissions_tutorial.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_progress_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_progress_bar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_radio_buttons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_radio_buttons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_rating_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_rating_bar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_relative_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_relative_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_retrofit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_retrofit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_room.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shortcuts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_snack_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_snack_bar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_switch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_switch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_table_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_table_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_text_box.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_text_box.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_time_picker.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_time_picker.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_toast.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_toast.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_binding_tutorial.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_binding_tutorial.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_webview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_webview.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_buttons_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_buttons_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_code.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_linear_layout_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_linear_layout_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_same_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_same_code.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -567,7 +603,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="codex/fix-ci-compilation-errors-in-supportrepository" />
+        <entry key="$PROJECT_DIR$" value="codex/create-roomactivity-with-note-entity-and-dao" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -627,7 +663,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Suggestions&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -724,17 +760,6 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="com.d4rk.androidtutorials.java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="com.d4rk.androidtutorials.java" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -779,38 +804,6 @@
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
       <updated>1691941043028</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Refractored all app source code">
-      <option name="closed" value="true" />
-      <created>1717420959153</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1717420959153</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Refractored all app source code">
-      <option name="closed" value="true" />
-      <created>1717421054137</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1717421054137</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Updated funding">
-      <option name="closed" value="true" />
-      <created>1717421314815</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1717421314815</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added the new nav drawer">
-      <option name="closed" value="true" />
-      <created>1717432569851</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1717432569851</updated>
     </task>
     <task id="LOCAL-00010" summary="chore: Updated .gitignore&#10;&#10;Updated the .gitignore file to exclude additional files and directories from version cont">
       <option name="closed" value="true" />
@@ -1108,7 +1101,63 @@
       <option name="project" value="LOCAL" />
       <updated>1756662534505</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Update version and changelog for v5.0.2&#10;&#10;This commit updates the application version to 5.0.2 and versionCode to 42.&#10;&#10;The changelog for v5.0.2 includes:&#10;- New font styling and improved code visualization.&#10;- Google Sans Code set as the default font.&#10;- Added a search function for lessons.&#10;- Optimized app performance.&#10;- Updated components for better compatibility.">
+      <option name="closed" value="true" />
+      <created>1756800245734</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1756800245734</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Add Google Sans Code font&#10;&#10;This commit adds the Google Sans Code font file to the project resources.">
+      <option name="closed" value="true" />
+      <created>1756800330720</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1756800330720</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Add bottom navigation and navigation drawer lessons&#10;&#10;New lessons have been added to the changelog:&#10;- Using bottom navigation&#10;- Using navigation drawer">
+      <option name="closed" value="true" />
+      <created>1756800496163</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1756800496163</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Fix typos in Spanish and Turkish translations&#10;&#10;- Corrected &quot;interfaz&quot; in `summary_preference_android_studio_time_picker`, `summary_preference_android_studio_text_box`, and `summary_android_features` for es-rMX and es-rGQ.&#10;- Corrected apostrophe in `summary_preference_android_studio_room_database` for tr-rTR.&#10;- Removed unused `tools` namespace from Italian, Hungarian, Japanese, and Polish `strings.xml`.">
+      <option name="closed" value="true" />
+      <created>1756804452017</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1756804452019</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Update Room database lesson in changelog&#10;&#10;The Room database lesson in the changelog was updated to remove the mention of code viewer integration.">
+      <option name="closed" value="true" />
+      <created>1756805744174</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1756805744174</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Initialize CookieManager&#10;&#10;CookieManager is initialized in the Application class to ensure it's ready when needed.">
+      <option name="closed" value="true" />
+      <created>1756806369016</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1756806369016</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Update Android Gradle Plugin and improve accessibility">
+      <option name="closed" value="true" />
+      <created>1756907578655</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1756907578655</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1116,32 +1165,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: Updated dependencies and configurations&#10;&#10;Significantly enhanced app stability and performance:&#10;&#10;- Updated Android Gradle Plugin to version 8.10.1.&#10;- Updated various dependencies to their latest versions, including Firebase BOM, ConstraintLayout, GridLayout, Kotlinx Serialization, Lifecycle components, Navigation components, Core KTX, and Play Services Ads.&#10;- Updated `google-services.json` with new project information.&#10;- Modified `AndroidManifest.xml` to update Google Analytics and AdMob configurations.&#10;- Updated `AppOpenAd.java` to use the new AppOpenAd load callback.&#10;- Updated Gradle wrapper to version 8.14.1.&#10;- Incremented app version code to 35 and version name to 5.0.1.&#10;- Updated CHANGELOG.md." />
-    <MESSAGE value="feat: Add new languages support and update .gitignore" />
-    <MESSAGE value="refactor: Updated URLs for Privacy Policy, Terms of Service, and Code of Conduct and updated dependencies&#10;&#10;Updated the URLs for the Privacy Policy, Terms of Service, and Code of Conduct across various parts of the application and documentation.&#10;&#10;The old Google Sites URLs have been replaced with new GitHub Pages URLs to reflect the new location of these documents.&#10;&#10;- Updated links in `preferences_settings.xml`&#10;- Updated links in `StartupActivity.java`&#10;- Updated links in `WebViewActivity.java` and its corresponding raw text file&#10;- Updated links in `HelpActivity.java`&#10;- Updated links in `README.md`&#10;&#10;Additionally, the following dependencies and Gradle wrapper were updated:&#10;- `appcompat` to `1.7.1`&#10;- `firebaseBom` to `33.15.0`&#10;- `lifecycle` (livedata, runtime, viewmodel) to `2.9.1`&#10;- `playServicesAds` to `24.4.0`&#10;- Gradle wrapper to `8.14.2`" />
-    <MESSAGE value="refactor: Update app configurations and target SDK&#10;&#10;- Updated the target SDK to 36.&#10;- Removed manifest placeholders for analytics and ad storage, as these are now handled directly in `AndroidManifest.xml`.&#10;- Added new AdMob and Firebase Performance metadata to `AndroidManifest.xml`.&#10;- Ensured Google Analytics screen reporting and storage are enabled by default.&#10;- Set ad user data and personalization signals to follow `eu_consent_policy`." />
-    <MESSAGE value="refactor: Update app configurations and target SDK&#10;&#10;- Updated the target SDK to 36.&#10;- Removed manifest placeholders for analytics and ad storage, as these are now handled directly in `AndroidManifest.xml`.&#10;- Added new AdMob and Firebase Performance metadata to `AndroidManifest.xml`.&#10;- Ensured Google Analytics screen reporting and storage are enabled by default.&#10;- Set ad user data and personalization signals to follow `eu_consent_policy`.&#10;- Corrected a constructor call in `HomeViewModel.java`." />
-    <MESSAGE value="refactor: Improved startup activity and minor UI updates&#10;&#10;Significantly enhanced app stability and user experience:&#10;&#10;- Refactored the startup activity to ensure a smoother app launch.&#10;- Updated the &quot;Get on Google Play&quot; button text to &quot;Play Store&quot; for brevity.&#10;- Removed the &quot;same_code_switches&quot; string as it was no longer in use." />
-    <MESSAGE value="refactor: Improved settings screen icons and added new icons&#10;&#10;Significantly enhanced user experience and visual consistency:&#10;&#10;- Replaced existing icons on the settings screen with improved versions for better clarity and visual appeal.&#10;- Added new icons for various settings options to enhance discoverability and user interaction.&#10;- Changed icon sizes to 24dp for better consistency and alignment with Material Design guidelines.&#10;- Removed unnecessary icon tinting from PreferenceCategory to simplify the visual hierarchy and improve readability." />
     <MESSAGE value="refactor: Updated permissions screen and dependencies&#10;&#10;Enhanced user experience and app stability:&#10;&#10;- Reorganized permissions on the permissions screen into &quot;Normal,&quot; &quot;Runtime,&quot; and &quot;Special&quot; categories for better clarity.&#10;- Added &quot;Wake Lock&quot; permission to the &quot;Normal&quot; category with a detailed summary.&#10;- Updated the app version code to 38.&#10;- Added `WAKE_LOCK` permission to `AndroidManifest.xml`." />
     <MESSAGE value="refactor: Added daily tips to arrays.xml&#10;&#10;Enhanced user experience:&#10;&#10;- Moved the `daily_tips` string array from `strings.xml` to `arrays.xml` for better resource organization." />
     <MESSAGE value="refactor: Added new languages, fixed Play Store link, and updated version code&#10;&#10;Enhanced user experience and app functionality:&#10;&#10;- Added support for Arabic, Bengali, Brazilian Portuguese, Filipino, Korean, Spanish (Mexico), Swedish, Thai, Traditional Chinese, Urdu, and Vietnamese languages.&#10;- Corrected the Play Store link in `HomeRepository.java` to point to the correct application ID.&#10;- Updated the app version code to 39.&#10;- Fixed minor typos in French translations.&#10;- Removed unnecessary &quot;&gt;&quot; character from the `ad_banner_unit_id` string." />
@@ -1160,19 +1190,26 @@
     <MESSAGE value="Refactor: Update test dependencies to use version catalog" />
     <MESSAGE value="Refactor: Update progress bar styles" />
     <MESSAGE value="Fix typo in untranslatable strings&#10;&#10;The commit removes an unnecessary &quot;&gt;&quot; character from the &quot;changelog&quot; string resource." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix typo in untranslatable strings&#10;&#10;The commit removes an unnecessary &quot;&gt;&quot; character from the &quot;changelog&quot; string resource." />
+    <MESSAGE value="Update version and changelog for v5.0.2&#10;&#10;This commit updates the application version to 5.0.2 and versionCode to 42.&#10;&#10;The changelog for v5.0.2 includes:&#10;- New font styling and improved code visualization.&#10;- Google Sans Code set as the default font.&#10;- Added a search function for lessons.&#10;- Optimized app performance.&#10;- Updated components for better compatibility." />
+    <MESSAGE value="Add Google Sans Code font&#10;&#10;This commit adds the Google Sans Code font file to the project resources." />
+    <MESSAGE value="Add bottom navigation and navigation drawer lessons&#10;&#10;New lessons have been added to the changelog:&#10;- Using bottom navigation&#10;- Using navigation drawer" />
+    <MESSAGE value="Fix typos in Spanish and Turkish translations&#10;&#10;- Corrected &quot;interfaz&quot; in `summary_preference_android_studio_time_picker`, `summary_preference_android_studio_text_box`, and `summary_android_features` for es-rMX and es-rGQ.&#10;- Corrected apostrophe in `summary_preference_android_studio_room_database` for tr-rTR.&#10;- Removed unused `tools` namespace from Italian, Hungarian, Japanese, and Polish `strings.xml`." />
+    <MESSAGE value="Update Room database lesson in changelog&#10;&#10;The Room database lesson in the changelog was updated to remove the mention of code viewer integration." />
+    <MESSAGE value="Initialize CookieManager&#10;&#10;CookieManager is initialized in the Application class to ensure it's ready when needed." />
+    <MESSAGE value="Update Android Gradle Plugin and improve accessibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Android Gradle Plugin and improve accessibility" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.d4rk.androidtutorials.java">
           <value>
-            <CheckInfo lastCheckTimestamp="1756645431482" />
+            <CheckInfo lastCheckTimestamp="1756905314552" />
           </value>
         </entry>
         <entry key="com.d4rk.androidtutorials.java.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1756645431482" />
+            <CheckInfo lastCheckTimestamp="1756905314549" />
           </value>
         </entry>
       </map>

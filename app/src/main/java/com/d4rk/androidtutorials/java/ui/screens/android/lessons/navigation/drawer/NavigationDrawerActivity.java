@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.core.view.GravityCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityNavigationDrawerBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
@@ -27,7 +27,7 @@ public class NavigationDrawerActivity extends UpNavigationActivity {
         edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
 
         binding.navigationView.setNavigationItemSelectedListener(item -> {
-            binding.textView.setText(getString(R.string.selected) + " " + item.getTitle());
+            binding.textView.setText(getString(R.string.selected) + " " + item.getTitle()); // FIXME: Do not concatenate text displayed with `setText`. Use resource string with placeholders.
             binding.drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         });

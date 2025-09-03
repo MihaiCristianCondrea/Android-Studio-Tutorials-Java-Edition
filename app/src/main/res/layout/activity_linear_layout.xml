@@ -133,5 +133,6 @@
         android:tooltipText="@string/tooltip_show_java_code_snippet"
         app:icon="@drawable/ic_code"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:targetApi="26" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -69,7 +69,8 @@
                     android:layout_height="match_parent"
                     android:padding="24dp"
                     android:text="@string/switch_me"
-                    android:tooltipText="@string/switch_me" />
+                    android:tooltipText="@string/switch_me"
+                    tools:targetApi="26" />
             </androidx.cardview.widget.CardView>
 
             <com.google.android.material.textview.MaterialTextView
@@ -132,5 +133,6 @@
         android:tooltipText="@string/tooltip_show_java_code_snippet"
         app:icon="@drawable/ic_code"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:targetApi="26" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <me.zhanghai.android.fastscroll.FastScrollScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scroll_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -70,7 +71,8 @@
             android:text="@string/more_about_permissions"
             android:tooltipText="@string/more_about_permissions"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_view_lottie_animation" />
+            app:layout_constraintTop_toBottomOf="@id/card_view_lottie_animation"
+            tools:targetApi="26" />
 
         <com.google.android.gms.ads.AdView
             android:id="@+id/ad_view_bottom"

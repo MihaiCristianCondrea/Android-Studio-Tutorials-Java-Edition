@@ -141,7 +141,8 @@
             android:text="@string/more_about_view_binding"
             android:tooltipText="@string/more_about_view_binding"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bindingFragmentsCard" />
+            app:layout_constraintTop_toBottomOf="@id/bindingFragmentsCard"
+            tools:targetApi="26" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/lottie_animation"
