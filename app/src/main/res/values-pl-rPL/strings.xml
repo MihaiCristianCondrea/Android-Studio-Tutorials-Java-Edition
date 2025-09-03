@@ -6,9 +6,54 @@
     <string name="summary_notification_update">Dostępna jest nowa wersja aplikacji. Kliknij, aby zaktualizować.</string>
     <string name="notification_last_time_used_title">Dawno Cię nie było.</string>
     <string name="summary_notification_last_time_used">Minęło trochę czasu—dowiedz się czegoś nowego o Androidzie.</string>
-    <string name="get_on_google_play">Pobierz z Google Play</string>
     <string name="menu">Menu</string>
     <string name="press_back_again_to_exit">Wciśnij ponownie, aby wyjść</string>
+
+    <string name="welcome">Witaj</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Przeczytaj i zaakceptuj Warunki korzystania z usługi oraz Politykę prywatności, aby kontynuować</string>
+    <string name="agree">Zgadzam się</string>
+
+    <string name="home">Strona główna</string>
+    <string name="announcement_title">Nowa aplikacja już jest</string>
+    <string name="announcement_subtitle">Sprawdź najnowszą aplikację Android Studio Tutorials. Poznaj Jetpack Compose, Material 3 i nie tylko.</string>
+    <string name="profile_picture_desc">Zdjęcie profilowe dewelopera</string>
+    <string name="main_card_title">Odkryj samouczki Android Studio</string>
+    <string name="main_card_subtitle">Zawiera edycje Kotlin i Java</string>
+    <string name="main_card_description">Edycja Kotlin została zaktualizowana o dynamiczne lekcje, asystenta AI i więcej. Doświadcz przyszłości tworzenia aplikacji na Androida.</string>
+    <string name="shortcuts">Skróty w Android Studio</string>
+    <string name="shortcuts_title">Skróty</string>
+    <string name="description">Opis</string>
+    <string name="general">Ogólne</string>
+    <string name="save_all">Zapisz wszystko</string>
+    <string name="synchronize">Synchronizuj</string>
+    <string name="maximize">Maksymalizuj/minimalizuj edytor</string>
+    <string name="add_to_favorites">Dodaj do ulubionych</string>
+    <string name="file_inspect">Sprawdź bieżący plik z bieżącym profilem</string>
+    <string name="quick_switch_theme">Szybko przełącz motyw</string>
+    <string name="open_settings">Otwórz okno ustawień</string>
+    <string name="open_project">Otwórz okno struktury projektu</string>
+    <string name="switch_tabs">Przełączaj między kartami i oknem narzędzi</string>
+    <string name="refactoring">Refaktoryzacja</string>
+    <string name="move">Przenieś</string>
+    <string name="safe_delete">Bezpieczne usuwanie</string>
+    <string name="rename">Zmień nazwę</string>
+    <string name="change_signature">Zmień sygnaturę</string>
+    <string name="inline">Wstaw w miejscu</string>
+    <string name="extract_method">Wyodrębnij metodę</string>
+    <string name="extract_field">Wyodrębnij pole</string>
+    <string name="extract_variable">Wyodrębnij zmienną</string>
+    <string name="extract_constant">Wyodrębnij stałą</string>
+    <string name="build_and_run">Buduj i uruchom</string>
+    <string name="build">Buduj</string>
+    <string name="apply_changes">Zastosuj zmiany (z Instant Run)</string>
+    <string name="debugging">Debugowanie</string>
+    <string name="debug">Debuguj</string>
+    <string name="step_over">Przeskocz</string>
+    <string name="step_into">Wejdź</string>
+    <string name="smart_step_into">Inteligentne wejście</string>
+    <string name="step_out">Wyjdź</string>
+
+    <string name="get_on_google_play">Pobierz z Google Play</string>
     <string name="learn_more">Dowiedz się więcej</string>
     <string name="play_store">Sklep Play</string>
     <string name="search_tutorials_hint">Wyszukaj samouczki</string>
@@ -24,5 +69,4 @@
     <string name="add_note">Dodaj notatkę</string>
     <string name="summary_preference_android_studio_room_database">Przechowuj proste notatki za pomocą Room, warstwy abstrakcji nad SQLite.</string>
     <string name="summary_room_database">Room to biblioteka trwałości, która zapewnia warstwę mapowania obiektów na SQLite. Ten przykład pokazuje, jak zapisywać i wyświetlać notatki.</string>
-    <string name="profile_picture_desc">Zdjęcie profilowe programisty</string>
 </resources>
