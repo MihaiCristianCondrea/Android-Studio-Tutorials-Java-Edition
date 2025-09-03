@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 
 import androidx.annotation.RequiresApi;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
@@ -20,7 +21,7 @@ import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 public class InboxNotificationActivity extends UpNavigationActivity {
     private final String notificationChannelId = "inbox_notification";
     private final int notificationId = 1;
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivityNotificationBinding binding;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -54,5 +55,12 @@ public class InboxNotificationActivity extends UpNavigationActivity {
             startActivity(intent);
         });
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
+    }
+    
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
     }
 }

@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.button
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
@@ -14,7 +15,7 @@ import com.google.android.material.snackbar.Snackbar;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class ButtonsActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivityButtonsBinding binding;
 
     @Override
@@ -47,5 +48,12 @@ public class ButtonsActivity extends UpNavigationActivity {
         binding.floatingButtonTertiary.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.floating_button_tertiary_icon) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());
         binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(ButtonsActivity.this, ButtonsCodeActivity.class)));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
+    }
+    
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
     }
 }

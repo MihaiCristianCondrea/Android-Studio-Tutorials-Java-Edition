@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.navigation.bot
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.R;
@@ -12,7 +13,7 @@ import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 public class BottomNavigationActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivityBottomNavigationBinding binding;
 
     @Override
@@ -35,5 +36,12 @@ public class BottomNavigationActivity extends UpNavigationActivity {
             startActivity(intent);
         });
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
+    }
+    
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
     }
 }

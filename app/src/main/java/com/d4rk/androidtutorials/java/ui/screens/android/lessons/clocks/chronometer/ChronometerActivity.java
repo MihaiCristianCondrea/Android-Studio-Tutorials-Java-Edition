@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.chronom
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.SystemClock;
 
 import androidx.annotation.Nullable;
@@ -13,7 +14,7 @@ import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 public class ChronometerActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivityChronometerBinding binding;
 
     @Override
@@ -35,5 +36,12 @@ public class ChronometerActivity extends UpNavigationActivity {
         binding.buttonStart.setOnClickListener(v -> binding.chronometer.start());
         binding.buttonStop.setOnClickListener(v -> binding.chronometer.stop());
         binding.buttonReset.setOnClickListener(v -> binding.chronometer.setBase(SystemClock.elapsedRealtime()));
+    }
+    
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
     }
 }

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 
@@ -15,7 +16,7 @@ import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.google.android.material.snackbar.Snackbar;
 
 public class PasswordBoxActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivityPasswordBoxBinding binding;
 
     @Override
@@ -63,5 +64,12 @@ public class PasswordBoxActivity extends UpNavigationActivity {
     private void addKeyListener() {
         binding.buttonShowPassword.setOnClickListener(v ->
                 Snackbar.make(binding.getRoot(), binding.editText.getText(), Snackbar.LENGTH_LONG).show());
+    }
+    
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
     }
 }

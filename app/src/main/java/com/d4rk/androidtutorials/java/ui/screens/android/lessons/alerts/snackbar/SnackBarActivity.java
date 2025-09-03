@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.alerts.snackba
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
@@ -13,7 +14,7 @@ import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.snackbar.Snackbar;
 
 public class SnackBarActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivitySnackBarBinding binding;
 
     @Override
@@ -38,5 +39,12 @@ public class SnackBarActivity extends UpNavigationActivity {
         });
 
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
+    }
+    
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
     }
 }
