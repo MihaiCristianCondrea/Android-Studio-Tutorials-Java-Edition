@@ -376,14 +376,14 @@
     <string name="snack_bar_clicked">klickad</string>
     <string name="snack_copied_to_clipboard">Kopierad till urklipp. 📋</string>
     <string name="snack_unable_to_open_google_play_store">Kunde inte öppna Google Play Butik.</string>
-    <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
+    <string name="snack_rating">Tack för ditt betyg på %1$.1f stjärnor. ❤️</string>
     <string name="snack_image_button">Bildknapp klickad.</string>
     <string name="toast_this_is_a_toast">Detta är en toast.</string>
     <string name="tooltip_show_code">Visa kodsyntax</string>
     <string name="tooltip_show_java_code_snippet">Visa Java -kodavsnitt</string>
     <string name="tooltip_open_me">Öppna mig 🌐</string>
-    <string name="hint_type">Type here</string>
-    <string name="hint_password">Enter your password</string>
+    <string name="hint_type">Skriv här</string>
+    <string name="hint_password">Ange ditt lösenord</string>
     <string name="app_usage_notifications">Notiser om appanvändning</string>
     <string name="update_notifications">Uppdateringsnotiser</string>
     <string name="browse_terms_of_service_and_privacy_policy">Bläddra i <i>

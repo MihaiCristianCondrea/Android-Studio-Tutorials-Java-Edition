@@ -376,14 +376,14 @@
     <string name="snack_bar_clicked">clicado</string>
     <string name="snack_copied_to_clipboard">Copiado para a área de transferência. 📋</string>
     <string name="snack_unable_to_open_google_play_store">Não foi possível abrir a Google Play Store.</string>
-    <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
+    <string name="snack_rating">Obrigado pela sua avaliação de %1$.1f estrelas. ❤️</string>
     <string name="snack_image_button">Botão de imagem clicado.</string>
     <string name="toast_this_is_a_toast">Isto é um toast.</string>
     <string name="tooltip_show_code">Mostrar sintaxe do código</string>
     <string name="tooltip_show_java_code_snippet">Mostrar trecho de código Java</string>
     <string name="tooltip_open_me">Abra-me 🌐</string>
-    <string name="hint_type">Type here</string>
-    <string name="hint_password">Enter your password</string>
+    <string name="hint_type">Digite aqui</string>
+    <string name="hint_password">Insira sua senha</string>
     <string name="app_usage_notifications">Notificações de Uso do Aplicativo</string>
     <string name="update_notifications">Notificações de Atualização</string>
     <string name="browse_terms_of_service_and_privacy_policy">Navegue pelos <i>
