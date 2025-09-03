@@ -120,6 +120,25 @@
     <string name="view_recent_changes">Wyświetl ostatnie zmiany</string>
     <string name="open_vcs_popup">Otwórz okno VCS</string>
     <string name="more_about_shortcuts">Więcej o skrótach</string>
+    <string name="history_of_android">Historia Androida</string>
+    <string name="history">Historia</string>
+    <string name="features">Funkcje</string>
+
+    <string name="android_sdk">Android SDK</string>
+    <string name="android_versions">Wersje Androida</string>
+
+    <string name="view_binding">View Binding</string>
+    <string name="setup_instructions">Instrukcje konfiguracji</string>
+    <string name="use_view_binding_in_activities">Użyj View Binding w aktywnościach</string>
+    <string name="use_view_binding_in_fragments">Użyj View Binding we fragmentach</string>
+    <string name="more_about_view_binding">Więcej o View Binding</string>
+
+    <string name="permission_dialog_example">Przykład okna dialogowego uprawnień</string>
+    <string name="more_about_permissions">Więcej o uprawnieniach</string>
+
+    <string name="per_app_language_preferences">Preferencje językowe dla poszczególnych aplikacji</string>
+
+    <string name="predictive_back_gesture">Predykcyjny gest cofania</string>
     <string name="im_step1_desc">Zrzut ekranu pokazujący przycisk Nowy projekt w Android Studio.</string>
     <string name="im_step2_desc">Zrzut ekranu pokazujący wybór typu aktywności podczas konfiguracji projektu.</string>
     <string name="im_step3_desc">Zrzut ekranu pokazujący pola nazwy aplikacji, pakietu, języka i minimalnego SDK.</string>
