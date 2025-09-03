@@ -397,7 +397,7 @@
     <string name="firebase_performance">Firebase Performance</string>
     <string name="special">Especial</string>
     <string name="wake_lock">Mantenga el dispositivo despierto [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
+    <string name="summary_preference_permissions_wake_lock">Permite que la aplicación evite que el dispositivo entre en reposo — por ejemplo, atenuando la pantalla o poniendo el procesador en suspensión — durante operaciones críticas para garantizar que se completen sin interrupciones. Se usa con moderación para ahorrar batería.</string>
     <string name="summary_preference_settings_firebase_crashlytics">Recoger informes de fallos para ayudar a solucionar problemas.</string>
     <string name="summary_preference_settings_firebase_analytics">Reúne los datos de uso para la mejora de aplicaciones.</string>
     <string name="summary_preference_settings_firebase_performance">Mide el rendimiento de aplicación para la optimización.</string>

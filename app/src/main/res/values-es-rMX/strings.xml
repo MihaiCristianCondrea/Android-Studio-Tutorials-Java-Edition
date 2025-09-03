@@ -253,7 +253,7 @@
     <string name="ad_id">ID de anuncio [AD_ID]</string>
     <string name="internet">Internet [INTERNET]</string>
     <string name="wake_lock">Mantener dispositivo despierto [WAKE_LOCK]</string>
-    <string name="summary_preference_permissions_wake_lock">Allows the app to prevent the device from going to sleep—for example, screen dimming or processor sleeping—during critical operations to ensure they complete without interruption. This is used sparingly to conserve battery.</string>
+    <string name="summary_preference_permissions_wake_lock">Permite que la aplicación evite que el dispositivo entre en reposo — por ejemplo, atenuando la pantalla o poniendo el procesador en suspensión — durante operaciones críticas para garantizar que se completen sin interrupciones. Se usa con moderación para ahorrar batería.</string>
     <string name="post_notifications">Publicar notificaciones [POST_NOTIFICATIONS]</string>
     <string name="runtime">Tiempo de ejecución</string>
     <string name="access_network_state">Acceder al estado de la red [ACCESS_NETWORK_STATE]</string>
