@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="image_view_preview_desc">Paunang tingin sa image view</string>
     <string name="app_short_description">Alamin kung paano gumawa ng mga simpleng Java app sa Android Studio. 📱</string>
     <string name="notification_update_title">May bagong update na available.</string>
     <string name="summary_notification_update">May bagong bersyon ng app. I-click para mag-update.</string>
     <string name="notification_last_time_used_title">Matagal ka nang hindi bumibisita.</string>
-    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="summary_notification_last_time_used">Matagal ka nang hindi bumibisita—matuto ng bagong bagay tungkol sa Android.</string>
     <string name="menu">Menu</string>
     <string name="press_back_again_to_exit">Pindutin muli upang lumabas</string>
     <string name="welcome">Maligayang pagdating</string>

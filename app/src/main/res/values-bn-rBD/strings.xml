@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="image_view_preview_desc">ইমেজ ভিউ প্রিভিউ</string>
     <string name="app_short_description">অ্যান্ড্রয়েড স্টুডিওতে কীভাবে সহজ জাভা অ্যাপ তৈরি করতে হয় তা শিখুন। 📱</string>
     <string name="notification_update_title">একটি নতুন আপডেট উপলব্ধ.</string>
     <string name="summary_notification_update">অ্যাপটির একটি নতুন সংস্করণ উপলব্ধ। আপডেট করতে ক্লিক করুন.</string>
     <string name="notification_last_time_used_title">অনেক দিন হয়ে গেছে.</string>
-    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="summary_notification_last_time_used">অনেক দিন হয়ে গেছে—অ্যান্ড্রয়েড সম্পর্কে নতুন কিছু শিখুন।</string>
     <string name="menu">মেনু</string>
     <string name="press_back_again_to_exit">প্রস্থান করতে আবার ফিরে টিপুন</string>
     <string name="welcome">স্বাগতম</string>

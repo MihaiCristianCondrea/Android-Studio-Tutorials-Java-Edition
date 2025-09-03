@@ -60,6 +60,7 @@
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/im_image_view"
+                    android:contentDescription="@string/image_view_preview_desc"
                     tools:ignore="ImageContrastCheck" />
             </com.google.android.material.card.MaterialCardView>
         </androidx.appcompat.widget.LinearLayoutCompat>

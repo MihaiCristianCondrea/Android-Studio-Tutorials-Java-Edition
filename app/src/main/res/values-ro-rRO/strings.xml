@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="image_view_preview_desc">Previzualizare imagine</string>
+    <string name="app_short_description">Învață cum să faci aplicații simple în Android Studio. 📱</string>
+    <string name="notification_update_title">O nouă actualizare disponibilă.</string>
+    <string name="summary_notification_update">Este disponibilă o nouă versiune a aplicației. Apasă pentru a actualiza.</string>
+    <string name="notification_last_time_used_title">A trecut ceva timp.</string>
+    <string name="summary_notification_last_time_used">A trecut ceva timp—învață ceva nou despre Android.</string>
     <string name="announcement_title">A sosit o aplicație nouă.</string>
     <string name="announcement_subtitle">Descoperă cea mai recentă aplicație Android Studio Tutorials.</string>
     <string name="profile_picture_desc">Poza de profil pentru dezvoltatori</string>
@@ -21,7 +27,6 @@
     <string name="version">Versiunea %1$s</string>
     <string name="error_loading_layout">Eroare la încărcarea aspectului</string>
     <string name="error_loading_code">Eroare la încărcarea codului</string>
-    <string name="app_short_description">Învață cum să faci aplicații simple în Android Studio. 📱</string>
     <string name="app_usage_notifications">Notificări de utilizare a aplicației</string>
     <string name="update_notifications">Notificări de actualizare</string>
     <string name="welcome">Bun venit</string>
@@ -286,8 +291,6 @@
     <string name="made_in">Realizat cu ❤ în România.</string>
     <string name="alert_dialog_close">Închide?</string>
     <string name="alert_dialog_require_restart">Necesită repornire.</string>
-    <string name="notification_last_time_used_title">A trecut ceva timp.</string>
-    <string name="notification_update_title">O nouă actualizare disponibilă.</string>
     <string name="question_1">Ce este Android Studio Tutorials: Java Edition?</string>
     <string name="question_2">Cum pot descărca Android Studio Tutorials: Java Edition?</string>
     <string name="question_3">Este Android Studio Tutorials: Java Edition disponibilă pentru dispozitivele iOS?</string>
@@ -367,10 +370,8 @@
     <string name="summary_buttons">Butoanele sunt un element esențial al oricărei aplicații Android. Acestea permit utilizatorilor să interacționeze cu aplicația și să efectueze acțiuni precum trimiterea unui formular, începerea unei noi activități sau efectuarea unei achiziții.\n\nÎn Android Studio, butoanele sunt create utilizând clasa Button și pot fi personalizate în diverse moduri, inclusiv setarea textului, culorii și dimensiunii acestora. De asemenea, ele pot fi configurate pentru a declanșa diferite acțiuni atunci când sunt apăsate, cum ar fi începerea unei noi activități sau afișarea unui mesaj pop-up.\n\nButoanele pot fi plasate oriunde în aspectul unei aplicații și pot fi utilizate împreună cu alte elemente UI, cum ar fi câmpurile de text și listele, pentru a crea o aplicație complet funcțională și ușor de utilizat.\n\nÎn general, butoanele sunt un instrument simplu, dar puternic, pentru construirea de aplicații Android atractive și interactive.</string>
     <string name="summary_permissions">De exemplu, dacă aplicația dvs. trebuie să descarce ceva, va necesita permisiunea Internet.\n\nAruncați o privire pe site-ul web Android Developers pentru toate permisiunile și o referință la documentația oficială.\n\nAplicațiile Android trebuie să solicite permisiunea de a accesa anumite funcționalități sau date pe un dispozitiv. Aceste permisiuni sunt utilizate pentru a proteja confidențialitatea utilizatorului și a dispozitivului. Când o aplicație este instalată, utilizatorului i se solicită să acorde sau să refuze permisiunile pe care le solicită aplicația. Aplicația va avea acces doar la funcționalitățile sau datele pentru care a solicitat permisiunea.\n\nExistă două tipuri de permisiuni: normale și periculoase. Permisiunile normale nu prezintă un risc pentru confidențialitatea utilizatorului. Acestea includ lucruri precum accesul la internet și vibrarea. Permisiunile periculoase, pe de altă parte, pot accesa potențial informații sau acțiuni sensibile și sunt, prin urmare, mai restricționate. Acestea includ permisiuni precum accesul la locația utilizatorului, camera și contactele.\n\nEste important ca dezvoltatorii de aplicații să solicite doar permisiunile care sunt absolut necesare pentru ca aplicația lor să funcționeze corect. Acest lucru ajută la protejarea confidențialității utilizatorului și, de asemenea, face aplicația mai ușor de utilizat.</string>
     <string name="summary_image_buttons">Butoanele imagine sunt butoane care conțin o imagine în loc de text. Ele pot fi utilizate în Android pentru a oferi o interfață de utilizator mai atractivă vizual și interactivă. Butoanele imagine pot fi utilizate pentru a declanșa acțiuni, a naviga la diferite ecrane sau a afișa informații suplimentare. Ele sunt adesea utilizate în combinație cu etichete text pentru a oferi o comunicare clară utilizatorului despre scopul butonului.</string>
-    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
     <string name="menu">Meniu</string>
     <string name="press_back_again_to_exit">Apăsați din nou pentru a ieși</string>
-    <string name="summary_notification_update">Este disponibilă o nouă versiune a aplicației. Apasă pentru a actualiza.</string>
     <string name="summary_image_view">AndroidX AppCompatImageView este o subclasă a ImageView care este proiectată să suporte diverse funcționalități ale ActionBar și Material Design. Face parte din biblioteca AndroidX, care este un set de biblioteci de suport ce oferă versiuni compatibile înapoi ale API-urilor framework-ului Android, precum și funcționalități disponibile doar prin API-urile bibliotecii.\n\nAppCompatImageView este conceput pentru a fi utilizat ca înlocuitor direct pentru ImageView, permițând dezvoltatorilor să utilizeze același cod și elemente UI în diferite versiuni de Android. Acesta include suport pentru diverse funcționalități, cum ar fi colorarea (tinting), încărcarea resurselor vectoriale (vector drawables) și gestionarea scalării imaginii.\n\nAppCompatImageView include, de asemenea, suport pentru funcționalități Material Design, cum ar fi elevația, care permite vizualizării imaginii să proiecteze o umbră și să pară ridicată deasupra suprafeței aspectului. Include, de asemenea, suport pentru efectul Material Design ripple, care este un efect vizual aplicat atunci când vizualizarea imaginii este atinsă.\n\nPe scurt, AndroidX AppCompatImageView este o subclasă versatilă și bogată în funcționalități a ImageView, concepută pentru a suporta o gamă largă de funcționalități și elemente de design în aplicațiile Android.</string>
     <string name="summary_linear_layout_compat">Linear Layout Compat este o clasă din biblioteca de suport Android appCompat v7. A fost adăugată pentru a suporta metodele care au fost adăugate în niveluri API mai noi pe cele vechi (cum ar fi divizoarele). Dacă comparați metodele din LinearLayout și LinearLayoutCompat, puteți vedea că aspectul Compat are toate metodele LinearLayout fără nicio limitare a nivelului API. De exemplu, metoda setShowDividers a fost introdusă la nivelul API 11. Prin urmare, în acest caz, setShowDividers (și parametrii săi) ar trebui să fie invocate utilizând Linear Layout Compat în loc de LinearLayout dacă vizați o platformă cu nivel API sub 11.</string>
     <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>

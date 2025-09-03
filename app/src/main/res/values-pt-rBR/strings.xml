@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="image_view_preview_desc">Prévia da visualização de imagem</string>
     <string name="app_short_description">Aprenda a criar aplicativos Java simples no Android Studio. 📱</string>
     <string name="notification_update_title">Nova atualização disponível.</string>
     <string name="summary_notification_update">Uma nova versão do aplicativo está disponível. Clique para atualizar.</string>
     <string name="notification_last_time_used_title">Faz um tempo.</string>
-    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="summary_notification_last_time_used">Faz um tempo—aprenda algo novo sobre o Android.</string>
     <string name="menu">Menu</string>
     <string name="press_back_again_to_exit">Pressione novamente para sair</string>
     <string name="welcome">Bem-vindo</string>

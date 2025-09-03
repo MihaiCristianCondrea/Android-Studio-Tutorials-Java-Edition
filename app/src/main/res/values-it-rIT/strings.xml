@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="image_view_preview_desc">Anteprima della vista immagine</string>
+    <string name="app_short_description">Impara a creare semplici app Java in Android Studio. 📱</string>
+    <string name="notification_update_title">È disponibile un nuovo aggiornamento.</string>
+    <string name="summary_notification_update">È disponibile una nuova versione dell\'app. Tocca per aggiornare.</string>
+    <string name="notification_last_time_used_title">È passato un po\'.</string>
+    <string name="summary_notification_last_time_used">È passato un po\'—impara qualcosa di nuovo su Android.</string>
     <string name="get_on_google_play">Scaricalo su Google Play</string>
     <string name="menu">Menu</string>
     <string name="press_back_again_to_exit">Premi di nuovo per uscire</string>

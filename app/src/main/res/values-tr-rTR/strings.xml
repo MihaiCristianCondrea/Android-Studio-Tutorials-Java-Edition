@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="image_view_preview_desc">Görüntü görünümü önizlemesi</string>
     <string name="app_short_description">Android Studio\'da basit Java uygulamaları yapmayı öğrenin. 📱</string>
     <string name="notification_update_title">Yeni bir güncelleme mevcut.</string>
     <string name="summary_notification_update">Uygulamanın yeni bir sürümü mevcut. Güncellemek için tıklayın.</string>
     <string name="notification_last_time_used_title">Görüşmeyeli uzun zaman oldu.</string>
-    <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
+    <string name="summary_notification_last_time_used">Uzun zaman oldu—Android hakkında yeni bir şey öğren.</string>
     <string name="menu">Menü</string>
     <string name="press_back_again_to_exit">Çıkmak için tekrar basın</string>
     <string name="welcome">Hoş geldiniz</string>
