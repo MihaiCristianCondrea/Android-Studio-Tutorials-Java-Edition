@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.d4rk.androidtutorials.java.R;
@@ -18,7 +20,6 @@ import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActiv
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.textview.MaterialTextView;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -74,7 +75,7 @@ public class RoomActivity extends UpNavigationActivity {
         if (!executor.isShutdown()) {
             executor.execute(() -> {
                 List<Note> notes = db.noteDao().getAll();
-                runOnUiThread(() -> adapter.setNotes(notes));
+                runOnUiThread(() -> adapter.submitList(notes));
             });
         }
     }
@@ -86,13 +87,23 @@ public class RoomActivity extends UpNavigationActivity {
         handler.removeCallbacksAndMessages(null);
     }
 
-    private static class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHolder> {
-        private List<Note> notes = new ArrayList<>();
-
-        void setNotes(List<Note> notes) {
-            this.notes = notes;
-            notifyDataSetChanged();
+    private static class NotesAdapter extends ListAdapter<Note, NotesAdapter.NoteViewHolder> {
+        NotesAdapter() {
+            super(DIFF_CALLBACK);
         }
+
+        private static final DiffUtil.ItemCallback<Note> DIFF_CALLBACK =
+                new DiffUtil.ItemCallback<Note>() {
+                    @Override
+                    public boolean areItemsTheSame(@NonNull Note oldItem, @NonNull Note newItem) {
+                        return oldItem.id == newItem.id;
+                    }
+
+                    @Override
+                    public boolean areContentsTheSame(@NonNull Note oldItem, @NonNull Note newItem) {
+                        return oldItem.text.equals(newItem.text);
+                    }
+                };
 
         @NonNull
         @Override
@@ -104,12 +115,7 @@ public class RoomActivity extends UpNavigationActivity {
 
         @Override
         public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
-            holder.textView.setText(notes.get(position).getText());
-        }
-
-        @Override
-        public int getItemCount() {
-            return notes.size();
+            holder.textView.setText(getItem(position).getText());
         }
 
         static class NoteViewHolder extends RecyclerView.ViewHolder {
