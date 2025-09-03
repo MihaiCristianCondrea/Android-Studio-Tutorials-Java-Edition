@@ -120,6 +120,25 @@
     <string name="view_recent_changes">Legutóbbi változások megtekintése</string>
     <string name="open_vcs_popup">VCS felugró ablak megnyitása</string>
     <string name="more_about_shortcuts">További információk a gyorsbillentyűkről</string>
+    <string name="history_of_android">Az Android története</string>
+    <string name="history">Történet</string>
+    <string name="features">Funkciók</string>
+
+    <string name="android_sdk">Android SDK-k</string>
+    <string name="android_versions">Android-verziók</string>
+
+    <string name="view_binding">View Binding</string>
+    <string name="setup_instructions">Beállítási utasítások</string>
+    <string name="use_view_binding_in_activities">View Binding használata az aktivitásokban</string>
+    <string name="use_view_binding_in_fragments">View Binding használata a fragmentekben</string>
+    <string name="more_about_view_binding">További információ a View Bindingről</string>
+
+    <string name="permission_dialog_example">Engedélykérő párbeszéd példája</string>
+    <string name="more_about_permissions">További információ az engedélyekről</string>
+
+    <string name="per_app_language_preferences">Alkalmazásonkénti nyelvi beállítások</string>
+
+    <string name="predictive_back_gesture">Prediktív visszalépési gesztus</string>
     <string name="im_step1_desc">Képernyőkép az Új projekt gombbal az Android Studioban.</string>
     <string name="im_step2_desc">Képernyőkép a projekt beállításakor az aktivitástípus választásáról.</string>
     <string name="im_step3_desc">Képernyőkép az alkalmazás neve, csomagja, nyelve és minimum SDK mezőiről.</string>

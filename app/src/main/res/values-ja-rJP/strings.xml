@@ -120,6 +120,25 @@
     <string name="view_recent_changes">最近の変更を表示</string>
     <string name="open_vcs_popup">VCS ポップアップを開く</string>
     <string name="more_about_shortcuts">ショートカットの詳細</string>
+    <string name="history_of_android">Android の歴史</string>
+    <string name="history">歴史</string>
+    <string name="features">機能</string>
+
+    <string name="android_sdk">Android SDK</string>
+    <string name="android_versions">Android のバージョン</string>
+
+    <string name="view_binding">View Binding</string>
+    <string name="setup_instructions">セットアップ手順</string>
+    <string name="use_view_binding_in_activities">アクティビティで View Binding を使用</string>
+    <string name="use_view_binding_in_fragments">フラグメントで View Binding を使用</string>
+    <string name="more_about_view_binding">View Binding について詳しく</string>
+
+    <string name="permission_dialog_example">権限ダイアログの例</string>
+    <string name="more_about_permissions">権限についてさらに詳しく</string>
+
+    <string name="per_app_language_preferences">アプリごとの言語設定</string>
+
+    <string name="predictive_back_gesture">予測型戻るジェスチャー</string>
     <string name="im_step1_desc">Android Studio の新規プロジェクトボタンを示すスクリーンショット。</string>
     <string name="im_step2_desc">プロジェクト設定中のアクティビティタイプ選択を示すスクリーンショット。</string>
     <string name="im_step3_desc">アプリ名、パッケージ、言語、最小 SDK の入力欄を示すスクリーンショット。</string>
