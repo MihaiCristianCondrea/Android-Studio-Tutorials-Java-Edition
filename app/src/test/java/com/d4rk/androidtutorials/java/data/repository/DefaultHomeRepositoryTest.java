@@ -1,5 +1,8 @@
 package com.d4rk.androidtutorials.java.data.repository;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 import com.d4rk.androidtutorials.java.data.source.HomeLocalDataSource;
 import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource;
@@ -7,8 +10,6 @@ import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource;
 import org.junit.Test;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class DefaultHomeRepositoryTest {
 
@@ -56,7 +57,7 @@ public class DefaultHomeRepositoryTest {
         assertEquals("play/pkg", repository.getAppPlayStoreUrl("pkg"));
         assertEquals("tip", repository.getDailyTip());
 
-        final List<PromotedApp>[] result = new List[1];
+        final List<PromotedApp>[] result = new List[1]; // FIXME: Unchecked assignment: 'java.util.List[]' to 'java.util.List<com.d4rk.androidtutorials.java.data.model.PromotedApp>[]'
         repository.fetchPromotedApps(apps -> result[0] = apps);
         assertTrue(remote.called);
         assertEquals(promoted, result[0]);
