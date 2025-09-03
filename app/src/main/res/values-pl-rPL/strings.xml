@@ -60,6 +60,23 @@
     <string name="search_tutorials_content_description">Wyszukaj samouczki</string>
     <string name="search_lessons_hint">Wyszukaj lekcje</string>
     <string name="search_lessons_content_description">Wyszukaj lekcje</string>
+    <string name="android_studio">Android Studio</string>
+
+    <string name="android_start">Rozpocznij nowy projekt</string>
+    <string name="android_start_project">Rozpocznij nowy projekt</string>
+    <string name="step1">Krok 1</string>
+    <string name="summary_first_step">Pierwszym krokiem do utworzenia nowego projektu w Android Studio jest kliknięcie przycisku <b>Nowy projekt</b> widocznego na obrazku i przejście do następnego kroku.</string>
+    <string name="step2">Krok 2</string>
+    <string name="summary_second_step">Drugim krokiem jest wybranie typu aktywności odpowiedniego dla Twojej aplikacji. Możesz wybrać jedną z gotowych konfiguracji, które ułatwią Ci pracę. Wybierz jedną i kliknij przycisk <b>dalej</b>.</string>
+    <string name="step3">Krok 3</string>
+    <string name="summary_third_step">Trzecim i ostatnim krokiem jest skonfigurowanie ustawień aplikacji, takich jak nazwa aplikacji, <b>nazwa pakietu</b>, preferowany <b>język programowania</b> oraz <b>minimalne SDK</b>. Więcej informacji znajdziesz na <a href="https://developer.android.com/">Android Developers</a>.</string>
+
+    <string name="basics">Podstawy</string>
+    <string name="run_to_cursor">Uruchom do kursora</string>
+    <string name="evaluate_expression">Oceń wyrażenie</string>
+    <string name="resume_program">Wznów program</string>
+    <string name="toggle_breakpoint">Przełącz punkt przerwania</string>
+    <string name="view_breakpoints">Wyświetl punkty przerwania</string>
     <string name="im_step1_desc">Zrzut ekranu pokazujący przycisk Nowy projekt w Android Studio.</string>
     <string name="im_step2_desc">Zrzut ekranu pokazujący wybór typu aktywności podczas konfiguracji projektu.</string>
     <string name="im_step3_desc">Zrzut ekranu pokazujący pola nazwy aplikacji, pakietu, języka i minimalnego SDK.</string>

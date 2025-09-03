@@ -26,7 +26,7 @@
     <string name="search_lessons_hint">Maghanap ng mga aralin</string>
     <string name="search_lessons_content_description">Maghanap ng mga aralin</string>
     <string name="android_studio">Android Studio</string>
-    <string name="android_start">Start a new project</string>
+    <string name="android_start">Magsimula ng Bagong Proyekto</string>
     <string name="android_start_project">Magsimula ng Bagong Proyekto</string>
     <string name="step1">Hakbang 1</string>
     <string name="summary_first_step">Ang unang hakbang para gumawa ng bagong proyekto sa Android Studio ay i-click ang <b>Bagong proyekto</b> na button tulad ng ipinapakita sa larawan at magpatuloy sa susunod na hakbang.</string>

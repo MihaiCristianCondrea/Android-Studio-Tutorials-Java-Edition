@@ -26,7 +26,7 @@
     <string name="search_lessons_hint">পাঠ খুঁজুন</string>
     <string name="search_lessons_content_description">পাঠ খুঁজুন</string>
     <string name="android_studio">অ্যান্ড্রয়েড স্টুডিও</string>
-    <string name="android_start">Start a new project</string>
+    <string name="android_start">একটি নতুন প্রকল্প শুরু করুন</string>
     <string name="android_start_project">একটি নতুন প্রকল্প শুরু করুন</string>
     <string name="step1">ধাপ ১</string>
     <string name="summary_first_step">অ্যান্ড্রয়েড স্টুডিওতে একটি নতুন প্রকল্প তৈরি করার প্রথম ধাপ হল ছবিতে দেখানো হিসাবে <b>নতুন প্রকল্প</b> বোতামে ক্লিক করা এবং পরবর্তী ধাপে এগিয়ে যাওয়া।</string>

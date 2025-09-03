@@ -26,7 +26,7 @@
     <string name="search_lessons_hint">Pesquisar lições</string>
     <string name="search_lessons_content_description">Pesquisar lições</string>
     <string name="android_studio">Android Studio</string>
-    <string name="android_start">Start a new project</string>
+    <string name="android_start">Iniciar um Novo Projeto</string>
     <string name="android_start_project">Iniciar um Novo Projeto</string>
     <string name="step1">Passo 1</string>
     <string name="summary_first_step">O primeiro passo para criar um novo projeto no Android Studio é clicar no botão <b>Novo projeto</b> como mostrado na imagem e continuar para o próximo passo.</string>
