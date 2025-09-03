@@ -141,7 +141,7 @@
     <string name="room_database">База данных Room</string>
     <string name="enter_note">Введите заметку</string>
     <string name="add_note">Добавить заметку</string>
-    <string name="layouts">Layouts and views</string>
+    <string name="layouts">Макеты и представления</string>
     <string name="linear_layout">Линейный макет</string>
     <string name="vertical">Вертикальный</string>
     <string name="horizontal">Горизонтальный</string>
@@ -152,7 +152,7 @@
     <string name="image_view">Вид изображения</string>
     <string name="web_view">Веб-представление</string>
     <string name="layout_preview">Предварительный просмотр макета</string>
-    <string name="buttons_and_switches">Buttons and switches</string>
+    <string name="buttons_and_switches">Кнопки и переключатели</string>
     <string name="buttons">Кнопки</string>
     <string name="button">Кнопка</string>
     <string name="button_normal">Кнопка 1 (обычная)</string>

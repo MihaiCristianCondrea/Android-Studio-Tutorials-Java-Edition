@@ -142,18 +142,26 @@
     <string name="room_database">Baza de date Room</string>
     <string name="enter_note">Introduceți notă</string>
     <string name="add_note">Adăugați notă</string>
-    <string name="layouts">Layouts and views</string>
+    <string name="layouts">Dispuneri și vizualizări</string>
+
     <string name="linear_layout">Aranjament liniar</string>
+
     <string name="vertical">Vertical</string>
     <string name="horizontal">Orizontal</string>
+    <string name="layout_preview">Previzualizare layout</string>
     <string name="no_java_code_needed">Nu este necesar cod Java pentru această activitate.</string>
+
     <string name="relative_layout">Aranjament relativ</string>
+
     <string name="table_layout">Aranjament tabel</string>
+
     <string name="grid_view">Vizualizare grilă</string>
+
     <string name="image_view">Vizualizare imagine</string>
+
     <string name="web_view">Vizualizare web</string>
-    <string name="layout_preview">Previzualizare aspect</string>
-    <string name="buttons_and_switches">Buttons and switches</string>
+
+    <string name="buttons_and_switches">Butoane și comutatoare</string>
     <string name="buttons">Butoane</string>
     <string name="button">Buton</string>
     <string name="button_normal">Buton 1 (normal)</string>

@@ -132,7 +132,7 @@
     <string name="room_database">Banco de dados Room</string>
     <string name="enter_note">Inserir nota</string>
     <string name="add_note">Adicionar nota</string>
-    <string name="layouts">Layouts and views</string>
+    <string name="layouts">Layouts e visualizações</string>
     <string name="linear_layout">Layout Linear</string>
     <string name="vertical">Vertical</string>
     <string name="horizontal">Horizontal</string>
@@ -143,7 +143,7 @@
     <string name="grid_view">Visualização em Grade</string>
     <string name="image_view">Visualização de Imagem</string>
     <string name="web_view">Visualização da Web</string>
-    <string name="buttons_and_switches">Buttons and switches</string>
+    <string name="buttons_and_switches">Botões e interruptores</string>
     <string name="buttons">Botões</string>
     <string name="button">Botão</string>
     <string name="button_normal">Botão 1 (normal)</string>

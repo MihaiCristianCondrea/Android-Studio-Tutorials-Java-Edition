@@ -132,7 +132,7 @@
     <string name="room_database">База даних Room</string>
     <string name="enter_note">Введіть нотатку</string>
     <string name="add_note">Додати нотатку</string>
-    <string name="layouts">Layouts and views</string>
+    <string name="layouts">Макети та представлення</string>
     <string name="linear_layout">Лінійний макет (Linear Layout)</string>
     <string name="vertical">Вертикально</string>
     <string name="horizontal">Горизонтально</string>
@@ -143,7 +143,7 @@
     <string name="grid_view">Сіткове представлення (Grid View)</string>
     <string name="image_view">Представлення зображення (Image View)</string>
     <string name="web_view">Веб-представлення (Web View)</string>
-    <string name="buttons_and_switches">Buttons and switches</string>
+    <string name="buttons_and_switches">Кнопки та перемикачі</string>
     <string name="buttons">Кнопки</string>
     <string name="button">Кнопка</string>
     <string name="button_normal">Кнопка 1 (звичайна)</string>
