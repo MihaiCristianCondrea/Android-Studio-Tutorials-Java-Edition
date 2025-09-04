@@ -471,7 +471,7 @@
     <string name="daily_tip_livedata_viewmodel">Sfrutta LiveData e ViewModel per UI reattive.</string>
     <string name="daily_tip_workmanager">Usa WorkManager per attività in background affidabili.</string>
     <string name="daily_tip_github_actions">Utilizza GitHub Actions per controlli di build automatizzati.</string>
-    <string name="daily_tip_emulator_screen_sizes">Testa la tua app su diverse dimensioni di schermo con l\'emulatore.</string>
+    <string name="daily_tip_emulator_screen_sizes">Testa la tua app su diverse dimensioni di schermo con l'emulatore.</string>
     <string name="daily_tip_update_dependencies">Mantieni aggiornate le dipendenze per le ultime funzionalità e correzioni.</string>
     <string name="daily_tip_kotlin_coroutines">Sfrutta le coroutine di Kotlin per operazioni asincrone.</string>
     <string name="daily_tip_hilt">Integra Hilt per l\'iniezione delle dipendenze.</string>
