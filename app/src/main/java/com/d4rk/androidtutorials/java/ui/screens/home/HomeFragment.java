@@ -19,6 +19,7 @@ import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 import com.bumptech.glide.Glide;
 import dagger.hilt.android.AndroidEntryPoint;
+import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 
 @AndroidEntryPoint
 public class HomeFragment extends Fragment {
@@ -52,19 +53,20 @@ public class HomeFragment extends Fragment {
             binding.scrollView.clearFocus();
             promotedContainer.clearFocus();
             promotedContainer.removeAllViews();
-            java.util.List<com.d4rk.androidtutorials.java.data.model.PromotedApp> apps = state.promotedApps();
+            java.util.List<PromotedApp> apps = state.promotedApps();
             int adPosition = new java.util.Random().nextInt(apps.size() + 1);
             for (int i = 0; i < apps.size(); i++) {
                 if (i == adPosition) {
                     addPromotedAd(promotedContainer);
                 }
+                PromotedApp app = apps.get(i);
                 com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding itemBinding =
                         com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding.inflate(inflater, promotedContainer, false);
-                loadImage(apps.get(i).iconUrl(), itemBinding.appIcon);
-                itemBinding.appName.setText(apps.get(i).name());
+                loadImage(app.iconUrl(), itemBinding.appIcon);
+                itemBinding.appName.setText(app.name());
                 itemBinding.appDescription.setVisibility(android.view.View.GONE);
-                itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(apps.get(i).packageName())));
-                itemBinding.shareButton.setOnClickListener(v -> shareApp(apps.get(i)));
+                itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName())));
+                itemBinding.shareButton.setOnClickListener(v -> shareApp(app));
                 promotedContainer.addView(itemBinding.getRoot());
             }
             if (adPosition == apps.size()) {
