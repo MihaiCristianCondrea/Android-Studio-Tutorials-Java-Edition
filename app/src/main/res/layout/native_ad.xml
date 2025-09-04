@@ -19,6 +19,8 @@
                 android:id="@+id/ad_media"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
+                android:minWidth="120dp"
+                android:minHeight="120dp"
                 android:visibility="gone" />
 
             <LinearLayout
