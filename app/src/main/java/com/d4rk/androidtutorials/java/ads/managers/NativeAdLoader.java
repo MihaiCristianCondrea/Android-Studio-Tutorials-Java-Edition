@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.LayoutRes;
 
 import com.d4rk.androidtutorials.java.R;
 import com.google.android.gms.ads.AdLoader;
@@ -23,10 +24,20 @@ import com.google.android.gms.ads.nativead.NativeAdView;
 public class NativeAdLoader {
 
     public static void load(@NonNull Context context, @NonNull ViewGroup container) {
+        load(context, container, R.layout.native_ad);
+    }
+
+    public static void load(@NonNull Context context, @NonNull ViewGroup container, @LayoutRes int layoutRes) {
         AdLoader adLoader = new AdLoader.Builder(context, context.getString(R.string.native_ad_banner_unit_id))
                 .forNativeAd(nativeAd -> {
                     LayoutInflater inflater = LayoutInflater.from(context);
-                    NativeAdView adView = (NativeAdView) inflater.inflate(R.layout.native_ad, container, false);
+                    NativeAdView adView = (NativeAdView) inflater.inflate(layoutRes, container, false);
+                    adView.setLayoutParams(new ViewGroup.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT));
+                    adView.setPadding(container.getPaddingLeft(), container.getPaddingTop(),
+                            container.getPaddingRight(), container.getPaddingBottom());
+                    container.setPadding(0, 0, 0, 0);
                     populateNativeAdView(nativeAd, adView);
                     container.removeAllViews();
                     container.addView(adView);
