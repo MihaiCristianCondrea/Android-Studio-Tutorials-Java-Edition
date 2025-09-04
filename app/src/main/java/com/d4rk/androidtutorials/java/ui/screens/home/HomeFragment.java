@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.d4rk.androidtutorials.java.databinding.FragmentHomeBinding;
+import com.d4rk.androidtutorials.java.ads.managers.NativeAdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
@@ -51,15 +52,23 @@ public class HomeFragment extends Fragment {
             binding.scrollView.clearFocus();
             promotedContainer.clearFocus();
             promotedContainer.removeAllViews();
-            for (com.d4rk.androidtutorials.java.data.model.PromotedApp app : state.promotedApps()) {
+            java.util.List<com.d4rk.androidtutorials.java.data.model.PromotedApp> apps = state.promotedApps();
+            int adPosition = new java.util.Random().nextInt(apps.size() + 1);
+            for (int i = 0; i < apps.size(); i++) {
+                if (i == adPosition) {
+                    addPromotedAd(promotedContainer);
+                }
                 com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding itemBinding =
                         com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding.inflate(inflater, promotedContainer, false);
-                loadImage(app.iconUrl(), itemBinding.appIcon);
-                itemBinding.appName.setText(app.name());
+                loadImage(apps.get(i).iconUrl(), itemBinding.appIcon);
+                itemBinding.appName.setText(apps.get(i).name());
                 itemBinding.appDescription.setVisibility(android.view.View.GONE);
-                itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName())));
-                itemBinding.shareButton.setOnClickListener(v -> shareApp(app));
+                itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(apps.get(i).packageName())));
+                itemBinding.shareButton.setOnClickListener(v -> shareApp(apps.get(i)));
                 promotedContainer.addView(itemBinding.getRoot());
+            }
+            if (adPosition == apps.size()) {
+                addPromotedAd(promotedContainer);
             }
         });
         new FastScrollerBuilder(binding.scrollView)
@@ -108,5 +117,18 @@ public class HomeFragment extends Fragment {
                 .load(url)
                 .centerInside()
                 .into(imageView);
+    }
+
+    private void addPromotedAd(ViewGroup container) {
+        android.widget.FrameLayout adContainer = new android.widget.FrameLayout(requireContext());
+        ViewGroup.MarginLayoutParams params = new ViewGroup.MarginLayoutParams(dpToPx(160), dpToPx(180));
+        params.setMarginEnd(dpToPx(8));
+        adContainer.setLayoutParams(params);
+        NativeAdLoader.load(requireContext(), adContainer, com.d4rk.androidtutorials.java.R.layout.promoted_native_ad);
+        container.addView(adContainer);
+    }
+
+    private int dpToPx(int dp) {
+        return Math.round(dp * requireContext().getResources().getDisplayMetrics().density);
     }
 }
