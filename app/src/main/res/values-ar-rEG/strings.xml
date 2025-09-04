@@ -430,6 +430,8 @@
     <string name="daily_tip_hilt">ادمج Hilt لحقن التبعيات.</string>
     <string name="daily_tip_unit_tests">اكتب اختبارات الوحدة باستخدام JUnit و Espresso.</string>
     <string name="daily_tip_mvvm">اتبع بنية MVVM لكود قابل للصيانة.</string>
+    <string name="daily_tip_accessibility">صمّم لإمكانية الوصول باستخدام أوصاف المحتوى وتباين مناسب.</string>
+    <string name="daily_tip_battery_optimization">قلّل العمل الخلفي غير الضروري لتحسين عمر البطارية.</string>
     <string name="tip_of_the_day">نصيحة اليوم</string>
     <string name="quiz_title">اختبار</string>
     <string name="next_question">السؤال التالي</string>

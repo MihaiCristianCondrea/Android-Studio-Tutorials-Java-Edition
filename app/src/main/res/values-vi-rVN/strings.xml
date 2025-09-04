@@ -430,6 +430,8 @@
     <string name="daily_tip_hilt">Tích hợp Hilt để tiêm phụ thuộc.</string>
     <string name="daily_tip_unit_tests">Viết các bài kiểm tra đơn vị với JUnit và Espresso.</string>
     <string name="daily_tip_mvvm">Tuân theo kiến trúc MVVM để có mã có thể bảo trì.</string>
+    <string name="daily_tip_accessibility">Thiết kế có tính đến khả năng tiếp cận với mô tả nội dung và độ tương phản phù hợp.</string>
+    <string name="daily_tip_battery_optimization">Giảm công việc nền không cần thiết để cải thiện thời lượng pin.</string>
     <string name="tip_of_the_day">Mẹo trong ngày</string>
     <string name="quiz_title">Câu đố</string>
     <string name="next_question">Câu hỏi tiếp theo</string>

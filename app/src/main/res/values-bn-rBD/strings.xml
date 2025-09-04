@@ -458,6 +458,8 @@
     <string name="daily_tip_hilt">নির্ভরতার ইঞ্জেকশনের জন্য সমন্বিত হাইট।</string>
     <string name="daily_tip_unit_tests">JUN এবং এসপ্রেসোতে ইউনিট পরীক্ষা করো।</string>
     <string name="daily_tip_mvvm">যোগ্য কোডের জন্য এমভিএম স্থাপত্য অনুসরণ করুন।</string>
+    <string name="daily_tip_accessibility">কন্টেন্ট বর্ণনা এবং সঠিক কনট্রাস্ট দিয়ে অ্যাক্সেসিবিলিটির জন্য নকশা করুন।</string>
+    <string name="daily_tip_battery_optimization">অপ্রয়োজনীয় ব্যাকগ্রাউন্ড কাজ কমিয়ে ব্যাটারির স্থায়িত্ব বাড়ান।</string>
     <string name="tip_of_the_day">আজকের উপদেশ</string>
     <string name="quiz_title">কুইজ</string>
     <string name="next_question">পরবর্তী প্রশ্ন</string>

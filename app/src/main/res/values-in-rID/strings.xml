@@ -458,6 +458,8 @@
     <string name="daily_tip_hilt">Integrasikan Hilt untuk injeksi ketergantungan.</string>
     <string name="daily_tip_unit_tests">Tes unit tulis dengan JUnit dan Espresso.</string>
     <string name="daily_tip_mvvm">Ikuti arsitektur MVVM untuk kode yang dapat dipertahankan.</string>
+    <string name="daily_tip_accessibility">Rancang dengan aksesibilitas menggunakan deskripsi konten dan kontras yang tepat.</string>
+    <string name="daily_tip_battery_optimization">Kurangi pekerjaan latar belakang yang tidak perlu untuk meningkatkan daya tahan baterai.</string>
     <string name="tip_of_the_day">Tip Hari</string>
     <string name="quiz_title">Kuis</string>
     <string name="next_question">Pertanyaan Selanjutnya</string>

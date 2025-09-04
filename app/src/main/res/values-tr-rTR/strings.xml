@@ -430,6 +430,8 @@
     <string name="daily_tip_hilt">Bağımlılık enjeksiyonu için Hilt\'i entegre edin.</string>
     <string name="daily_tip_unit_tests">JUnit ve Espresso ile birim testleri yazın.</string>
     <string name="daily_tip_mvvm">Bakımı kolay kod için MVVM mimarisini takip edin.</string>
+    <string name="daily_tip_accessibility">İçerik açıklamaları ve uygun kontrastla erişilebilirlik için tasarlayın.</string>
+    <string name="daily_tip_battery_optimization">Pil ömrünü artırmak için gereksiz arka plan çalışmalarını azaltın.</string>
     <string name="tip_of_the_day">Günün İpucu</string>
     <string name="quiz_title">Test</string>
     <string name="next_question">Sonraki Soru</string>

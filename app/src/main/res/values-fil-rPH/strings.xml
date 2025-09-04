@@ -430,6 +430,8 @@
     <string name="daily_tip_hilt">I-integrate ang Hilt para sa dependency injection.</string>
     <string name="daily_tip_unit_tests">Sumulat ng mga unit test gamit ang JUnit at Espresso.</string>
     <string name="daily_tip_mvvm">Sundin ang arkitektura ng MVVM para sa code na madaling i-maintain.</string>
+    <string name="daily_tip_accessibility">Magdisenyo para maging accessible gamit ang mga paglalarawan ng nilalaman at tamang contrast.</string>
+    <string name="daily_tip_battery_optimization">Bawasan ang hindi kinakailangang gawa sa background upang mapahaba ang buhay ng baterya.</string>
     <string name="tip_of_the_day">Tip ng Araw</string>
     <string name="quiz_title">Pagsusulit</string>
     <string name="next_question">Susunod na Tanong</string>

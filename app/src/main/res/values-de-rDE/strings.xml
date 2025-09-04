@@ -458,6 +458,8 @@
     <string name="daily_tip_hilt">Integrieren Sie Hilt für Abhängigkeitsinjektion.</string>
     <string name="daily_tip_unit_tests">Schreibeinheitstests mit JUnit und Espresso.</string>
     <string name="daily_tip_mvvm">Folgen Sie der MVVM-Architektur für den Aufrechterhaltungscode.</string>
+    <string name="daily_tip_accessibility">Entwickle barrierefrei mit Inhaltsbeschreibungen und ausreichendem Kontrast.</string>
+    <string name="daily_tip_battery_optimization">Reduziere unnötige Hintergrundarbeit, um die Akkulaufzeit zu verbessern.</string>
     <string name="tip_of_the_day">Tipp des Tages</string>
     <string name="quiz_title">Quiz</string>
     <string name="next_question">Nächste Frage</string>

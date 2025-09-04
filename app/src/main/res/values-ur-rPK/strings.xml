@@ -430,6 +430,8 @@
     <string name="daily_tip_hilt">انحصار انجیکشن کے لیے Hilt کو مربوط کریں۔</string>
     <string name="daily_tip_unit_tests">JUnit اور Espresso کے ساتھ یونٹ ٹیسٹ لکھیں۔</string>
     <string name="daily_tip_mvvm">قابل دیکھ بھال کوڈ کے لیے MVVM آرکیٹیکچر کی پیروی کریں۔</string>
+    <string name="daily_tip_accessibility">رسائی کے لیے مواد کی وضاحتوں اور مناسب کنٹراسٹ کے ساتھ ڈیزائن کریں۔</string>
+    <string name="daily_tip_battery_optimization">بیٹری کی زندگی بہتر بنانے کے لیے غیر ضروری پس منظر کا کام کم کریں۔</string>
     <string name="tip_of_the_day">آج کی ٹپ</string>
     <string name="quiz_title">کوئز</string>
     <string name="next_question">اگلا سوال</string>

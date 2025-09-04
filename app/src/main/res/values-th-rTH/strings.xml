@@ -432,6 +432,8 @@
     <string name="daily_tip_hilt">ผสานรวม Hilt สำหรับการฉีดการพึ่งพา</string>
     <string name="daily_tip_unit_tests">เขียนการทดสอบหน่วยด้วย JUnit และ Espresso</string>
     <string name="daily_tip_mvvm">ปฏิบัติตามสถาปัตยกรรม MVVM เพื่อโค้ดที่บำรุงรักษาง่าย</string>
+    <string name="daily_tip_accessibility">ออกแบบโดยคำนึงถึงการเข้าถึงด้วยคำอธิบายเนื้อหาและความคมชัดที่เหมาะสม.</string>
+    <string name="daily_tip_battery_optimization">ลดงานเบื้องหลังที่ไม่จำเป็นเพื่อยืดอายุการใช้งานแบตเตอรี่.</string>
     <string name="tip_of_the_day">เคล็ดลับประจำวัน</string>
     <string name="quiz_title">แบบทดสอบ</string>
     <string name="next_question">คำถามถัดไป</string>

@@ -24,7 +24,7 @@
     <string name="russian" translatable="false">Русский</string>
     <string name="spanish" translatable="false">Español</string>
     <string name="turkish" translatable="false">Türkçe</string>
-    <string name="swedish" translatable="false">Svenska</string>"
+    <string name="swedish" translatable="false">Svenska</string>
     <string name="ukrainian" translatable="false">Українська</string>
     <string name="traditional_chinese" translatable="false">中文</string>
     <string name="thai" translatable="false">ไทย</string>
@@ -49,11 +49,11 @@
 
 
     <string name="eula_title" translatable="false">EULA</string>
-    <string name="changelog" translatable="false">CHANGELOG</string>
-    <string name="loading_eula" translatable="false">>Loading EULA</string>
-    <string name="error_loading_eula" translatable="false">>Error loading EULA</string>
-    <string name="loading_changelog" translatable="false">>Loading changelog</string>
-    <string name="error_loading_changelog" translatable="false">>Error loading changelog</string>
+    <string name="changelog" translatable="false">Changelog</string>
+    <string name="loading_eula" translatable="false">Loading EULA</string>
+    <string name="error_loading_eula" translatable="false">Error loading EULA</string>
+    <string name="loading_changelog" translatable="false">Loading changelog</string>
+    <string name="error_loading_changelog" translatable="false">Error loading changelog</string>
 
     <string name="ad_banner_unit_id" translatable="false">ca-app-pub-5294151573817700/3821250346</string>
 </resources>
