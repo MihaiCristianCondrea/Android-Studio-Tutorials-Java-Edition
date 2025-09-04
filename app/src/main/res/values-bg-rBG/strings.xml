@@ -255,7 +255,7 @@
     <string name="default_tab">Раздел по подразбиране</string>
     <string name="bottom_navigation_bar_labels">Етикети на долната навигационна лента</string>
     <string name="labeled">С етикети</string>
-    <string name="selected">Избрани</string>
+    <string name="selected">Избрани %1$s</string>
     <string name="unlabeled">Без етикети</string>
     <string name="navigation">Навигация</string>
     <string name="bottom_navigation">Долна навигация</string>

@@ -255,7 +255,7 @@
     <string name="default_tab">Default tab</string>
     <string name="bottom_navigation_bar_labels">Bottom navigation bar labels</string>
     <string name="labeled">Labeled</string>
-    <string name="selected">Selected</string>
+    <string name="selected">Selected %1$s</string>
     <string name="unlabeled">Unlabeled</string>
     <string name="navigation">Navigation</string>
     <string name="bottom_navigation">Bottom navigation</string>

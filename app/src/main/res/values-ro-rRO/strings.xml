@@ -263,7 +263,7 @@
     <string name="default_tab">Filă implicită</string>
     <string name="bottom_navigation_bar_labels">Etichete bară de navigare inferioară</string>
     <string name="labeled">Etichetate</string>
-    <string name="selected">Selectat</string>
+    <string name="selected">Selectat %1$s</string>
     <string name="unlabeled">Neetichetate</string>
     <string name="navigation">Navigare</string>
     <string name="bottom_navigation">Navigare de jos</string>

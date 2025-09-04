@@ -229,7 +229,7 @@
     <string name="default_tab">التبويب الافتراضي</string>
     <string name="bottom_navigation_bar_labels">عناوين شريط التنقل السفلي</string>
     <string name="labeled">معنون</string>
-    <string name="selected">المحدد</string>
+    <string name="selected">المحدد %1$s</string>
     <string name="unlabeled">غير معنون</string>
     <string name="navigation">التنقل</string>
     <string name="bottom_navigation">شريط التنقل السفلي</string>

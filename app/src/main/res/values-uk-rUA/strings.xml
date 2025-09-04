@@ -229,7 +229,7 @@
     <string name="default_tab">Вкладка за замовчуванням</string>
     <string name="bottom_navigation_bar_labels">Підписи нижньої навігаційної панелі</string>
     <string name="labeled">З підписами</string>
-    <string name="selected">Вибрані</string>
+    <string name="selected">Вибрані %1$s</string>
     <string name="unlabeled">Без підписів</string>
     <string name="navigation">Навігація</string>
     <string name="bottom_navigation">Нижня навігація</string>

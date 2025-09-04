@@ -276,7 +276,7 @@
     <string name="default_tab">Domyślna karta</string>
     <string name="bottom_navigation_bar_labels">Etykiety dolnego paska nawigacji</string>
     <string name="labeled">Z etykietą</string>
-    <string name="selected">Wybrane</string>
+    <string name="selected">Wybrane %1$s</string>
     <string name="unlabeled">Bez etykiet</string>
     <string name="navigation">Nawigacja</string>
     <string name="bottom_navigation">Dolna nawigacja</string>

@@ -26,7 +26,7 @@ public class BottomNavigationActivity extends UpNavigationActivity {
         edgeToEdgeDelegate.applyEdgeToEdgeBottomBar(binding.container, binding.bottomNav);
 
         binding.bottomNav.setOnItemSelectedListener(item -> {
-            binding.textView.setText(getString(R.string.selected) + " " + item.getTitle()); // FIXME: Do not concatenate text displayed with `setText`. Use resource string with placeholders.
+            binding.textView.setText(getString(R.string.selected, item.getTitle()));
             return true;
         });
 

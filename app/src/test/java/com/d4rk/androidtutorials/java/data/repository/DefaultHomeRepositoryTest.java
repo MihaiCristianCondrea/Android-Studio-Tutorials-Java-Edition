@@ -10,6 +10,7 @@ import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class DefaultHomeRepositoryTest {
 
@@ -57,9 +58,9 @@ public class DefaultHomeRepositoryTest {
         assertEquals("play/pkg", repository.getAppPlayStoreUrl("pkg"));
         assertEquals("tip", repository.getDailyTip());
 
-        final List<PromotedApp>[] result = new List[1]; // FIXME: Unchecked assignment: 'java.util.List[]' to 'java.util.List<com.d4rk.androidtutorials.java.data.model.PromotedApp>[]'
-        repository.fetchPromotedApps(apps -> result[0] = apps);
+        AtomicReference<List<PromotedApp>> result = new AtomicReference<>();
+        repository.fetchPromotedApps(result::set);
         assertTrue(remote.called);
-        assertEquals(promoted, result[0]);
+        assertEquals(promoted, result.get());
     }
 }
