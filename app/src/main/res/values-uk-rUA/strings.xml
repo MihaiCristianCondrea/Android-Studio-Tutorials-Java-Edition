@@ -430,6 +430,8 @@
     <string name="daily_tip_hilt">Інтегруйте Hilt для впровадження залежностей.</string>
     <string name="daily_tip_unit_tests">Пишіть юніт-тести з JUnit та Espresso.</string>
     <string name="daily_tip_mvvm">Дотримуйтесь архітектури MVVM для коду, який легко підтримувати.</string>
+    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
+    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
     <string name="tip_of_the_day">Порада дня</string>
     <string name="quiz_title">Вікторина</string>
     <string name="next_question">Наступне запитання</string>

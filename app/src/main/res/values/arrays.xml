@@ -127,5 +127,7 @@
         <item>@string/daily_tip_hilt</item>
         <item>@string/daily_tip_unit_tests</item>
         <item>@string/daily_tip_mvvm</item>
+        <item>@string/daily_tip_accessibility</item>
+        <item>@string/daily_tip_battery_optimization</item>
     </string-array>
 </resources>

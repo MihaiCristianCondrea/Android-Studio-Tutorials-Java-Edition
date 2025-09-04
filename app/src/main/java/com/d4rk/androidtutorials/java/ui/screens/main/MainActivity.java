@@ -242,17 +242,17 @@ public class MainActivity extends AppCompatActivity {
                 currentNavIndex = navOrder.get(navController.getCurrentDestination().getId());
 
                 NavOptions forwardOptions = new NavOptions.Builder()
-                        .setEnterAnim(R.anim.fragment_spring_enter)
-                        .setExitAnim(R.anim.fragment_spring_exit)
-                        .setPopEnterAnim(R.anim.fragment_spring_pop_enter)
-                        .setPopExitAnim(R.anim.fragment_spring_pop_exit)
+                        .setEnterAnim(R.anim.fragment_spring_in)
+                        .setExitAnim(R.anim.fragment_spring_out)
+                        .setPopEnterAnim(R.anim.fragment_spring_in)
+                        .setPopExitAnim(R.anim.fragment_spring_out)
                         .build();
 
                 NavOptions backwardOptions = new NavOptions.Builder()
-                        .setEnterAnim(R.anim.fragment_spring_pop_enter)
-                        .setExitAnim(R.anim.fragment_spring_pop_exit)
-                        .setPopEnterAnim(R.anim.fragment_spring_enter)
-                        .setPopExitAnim(R.anim.fragment_spring_exit)
+                        .setEnterAnim(R.anim.fragment_spring_in)
+                        .setExitAnim(R.anim.fragment_spring_out)
+                        .setPopEnterAnim(R.anim.fragment_spring_in)
+                        .setPopExitAnim(R.anim.fragment_spring_out)
                         .build();
 
                 if (useRail) {

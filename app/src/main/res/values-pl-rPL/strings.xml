@@ -477,6 +477,8 @@
     <string name="daily_tip_hilt">Zintegruj Hilt do wstrzykiwania zależności.</string>
     <string name="daily_tip_unit_tests">Pisz testy jednostkowe za pomocą JUnit i Espresso.</string>
     <string name="daily_tip_mvvm">Stosuj architekturę MVVM dla łatwego w utrzymaniu kodu.</string>
+    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
+    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
     <string name="tip_of_the_day">Porada dnia</string>
     <string name="quiz_title">Quiz</string>
     <string name="next_question">Następne pytanie</string>
