@@ -432,8 +432,8 @@
     <string name="daily_tip_hilt">ผสานรวม Hilt สำหรับการฉีดการพึ่งพา</string>
     <string name="daily_tip_unit_tests">เขียนการทดสอบหน่วยด้วย JUnit และ Espresso</string>
     <string name="daily_tip_mvvm">ปฏิบัติตามสถาปัตยกรรม MVVM เพื่อโค้ดที่บำรุงรักษาง่าย</string>
-    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
-    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
+    <string name="daily_tip_accessibility">ทดสอบบริการการช่วยการเข้าถึง เช่น TalkBack เพื่อสนับสนุนผู้ใช้ทุกคน</string>
+    <string name="daily_tip_battery_optimization">ปฏิบัติตามแนวทางการเพิ่มประสิทธิภาพแบตเตอรี่เพื่อให้การใช้พลังงานต่ำ</string>
     <string name="tip_of_the_day">เคล็ดลับประจำวัน</string>
     <string name="quiz_title">แบบทดสอบ</string>
     <string name="next_question">คำถามถัดไป</string>

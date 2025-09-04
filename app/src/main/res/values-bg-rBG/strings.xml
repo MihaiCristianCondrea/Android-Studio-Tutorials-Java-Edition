@@ -458,8 +458,8 @@
     <string name="daily_tip_hilt">Интегрирай Хилт за инжектиране на зависимост.</string>
     <string name="daily_tip_unit_tests">Пиши тестове с JUnit и Espresso.</string>
     <string name="daily_tip_mvvm">Следвайте MVVM архитектурата за поддържане на код.</string>
-    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
-    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
+    <string name="daily_tip_accessibility">Тествайте услуги за достъпност като TalkBack, за да подкрепите всички потребители.</string>
+    <string name="daily_tip_battery_optimization">Спазвайте указанията за оптимизация на батерията, за да поддържате ниско потреблението на енергия.</string>
     <string name="tip_of_the_day">Съвет на деня</string>
     <string name="quiz_title">Тест</string>
     <string name="next_question">Следващ въпрос</string>

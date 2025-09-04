@@ -458,8 +458,8 @@
     <string name="daily_tip_hilt">নির্ভরতার ইঞ্জেকশনের জন্য সমন্বিত হাইট।</string>
     <string name="daily_tip_unit_tests">JUN এবং এসপ্রেসোতে ইউনিট পরীক্ষা করো।</string>
     <string name="daily_tip_mvvm">যোগ্য কোডের জন্য এমভিএম স্থাপত্য অনুসরণ করুন।</string>
-    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
-    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
+    <string name="daily_tip_accessibility">সকল ব্যবহারকারীকে সহায়তা করতে TalkBack এর মতো অ্যাক্সেসিবিলিটি পরিষেবা পরীক্ষা করুন।</string>
+    <string name="daily_tip_battery_optimization">শক্তি ব্যবহার কম রাখতে ব্যাটারি অপ্টিমাইজেশনের নির্দেশিকা অনুসরণ করুন।</string>
     <string name="tip_of_the_day">আজকের উপদেশ</string>
     <string name="quiz_title">কুইজ</string>
     <string name="next_question">পরবর্তী প্রশ্ন</string>

@@ -430,8 +430,8 @@
     <string name="daily_tip_hilt">Integrera Hilt för beroendeinjektion.</string>
     <string name="daily_tip_unit_tests">Skriv enhetstester med JUnit och Espresso.</string>
     <string name="daily_tip_mvvm">Följ MVVM-arkitekturen för underhållbar kod.</string>
-    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
-    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
+    <string name="daily_tip_accessibility">Testa tillgänglighetstjänster som TalkBack för att stödja alla användare.</string>
+    <string name="daily_tip_battery_optimization">Följ riktlinjerna för batterioptimering för att hålla strömförbrukningen låg.</string>
     <string name="tip_of_the_day">Dagens tips</string>
     <string name="quiz_title">Quiz</string>
     <string name="next_question">Nästa fråga</string>

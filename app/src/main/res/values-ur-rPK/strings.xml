@@ -430,8 +430,8 @@
     <string name="daily_tip_hilt">انحصار انجیکشن کے لیے Hilt کو مربوط کریں۔</string>
     <string name="daily_tip_unit_tests">JUnit اور Espresso کے ساتھ یونٹ ٹیسٹ لکھیں۔</string>
     <string name="daily_tip_mvvm">قابل دیکھ بھال کوڈ کے لیے MVVM آرکیٹیکچر کی پیروی کریں۔</string>
-    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
-    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
+    <string name="daily_tip_accessibility">تمام صارفین کی مدد کے لیے TalkBack جیسی سہولیات کو جانچیں۔</string>
+    <string name="daily_tip_battery_optimization">توانائی کے استعمال کو کم رکھنے کے لیے بیٹری کی اصلاح کے رہنما اصولوں پر عمل کریں۔</string>
     <string name="tip_of_the_day">آج کی ٹپ</string>
     <string name="quiz_title">کوئز</string>
     <string name="next_question">اگلا سوال</string>

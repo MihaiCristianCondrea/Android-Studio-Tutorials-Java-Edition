@@ -430,8 +430,8 @@
     <string name="daily_tip_hilt">Bağımlılık enjeksiyonu için Hilt\'i entegre edin.</string>
     <string name="daily_tip_unit_tests">JUnit ve Espresso ile birim testleri yazın.</string>
     <string name="daily_tip_mvvm">Bakımı kolay kod için MVVM mimarisini takip edin.</string>
-    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
-    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
+    <string name="daily_tip_accessibility">Tüm kullanıcıları desteklemek için TalkBack gibi erişilebilirlik hizmetlerini test edin.</string>
+    <string name="daily_tip_battery_optimization">Güç kullanımını düşük tutmak için pil optimizasyonu yönergelerine uyun.</string>
     <string name="tip_of_the_day">Günün İpucu</string>
     <string name="quiz_title">Test</string>
     <string name="next_question">Sonraki Soru</string>

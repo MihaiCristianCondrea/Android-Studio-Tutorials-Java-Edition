@@ -477,8 +477,8 @@
     <string name="daily_tip_hilt">依存性注入には Hilt を統合。</string>
     <string name="daily_tip_unit_tests">JUnit と Espresso でユニットテストを書く。</string>
     <string name="daily_tip_mvvm">保守性の高いコードのために MVVM アーキテクチャに従う。</string>
-    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
-    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
+    <string name="daily_tip_accessibility">すべてのユーザーをサポートするため、TalkBack などのアクセシビリティサービスをテストしましょう。</string>
+    <string name="daily_tip_battery_optimization">電力使用を抑えるため、バッテリー最適化のガイドラインに従ってください。</string>
     <string name="tip_of_the_day">今日のヒント</string>
     <string name="quiz_title">クイズ</string>
     <string name="next_question">次の質問</string>

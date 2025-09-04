@@ -459,8 +459,8 @@
     <string name="daily_tip_hilt">निर्भरता इंजेक्शन के लिए हिल्ट को एकीकृत करें।</string>
     <string name="daily_tip_unit_tests">JUnit and Espresso के साथ यूनिट परीक्षण लिखें।</string>
     <string name="daily_tip_mvvm">रखरखाव योग्य कोड के लिए MVVM वास्तुकला का पालन करें।</string>
-    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
-    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
+    <string name="daily_tip_accessibility">सभी उपयोगकर्ताओं का समर्थन करने के लिए TalkBack जैसी एक्सेसिबिलिटी सेवाओं का परीक्षण करें।</string>
+    <string name="daily_tip_battery_optimization">ऊर्जा उपयोग कम रखने के लिए बैटरी अनुकूलन दिशानिर्देशों का पालन करें।</string>
     <string name="tip_of_the_day">दिन का सुझाव</string>
     <string name="quiz_title">प्रश्नोत्तरी</string>
     <string name="next_question">अगला प्रश्न</string>

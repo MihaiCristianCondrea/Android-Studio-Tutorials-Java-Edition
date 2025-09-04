@@ -430,8 +430,8 @@
     <string name="daily_tip_hilt">整合 Hilt 進行依賴注入。</string>
     <string name="daily_tip_unit_tests">使用 JUnit 和 Espresso 編寫單元測試。</string>
     <string name="daily_tip_mvvm">遵循 MVVM 架構以獲得可維護的程式碼。</string>
-    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
-    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
+    <string name="daily_tip_accessibility">測試 TalkBack 等無障礙服務以支援所有使用者。</string>
+    <string name="daily_tip_battery_optimization">遵循電池最佳化指南以維持低電力使用。</string>
     <string name="tip_of_the_day">今日提示</string>
     <string name="quiz_title">小測驗</string>
     <string name="next_question">下一題</string>

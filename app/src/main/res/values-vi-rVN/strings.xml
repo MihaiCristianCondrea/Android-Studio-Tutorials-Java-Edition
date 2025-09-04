@@ -430,8 +430,8 @@
     <string name="daily_tip_hilt">Tích hợp Hilt để tiêm phụ thuộc.</string>
     <string name="daily_tip_unit_tests">Viết các bài kiểm tra đơn vị với JUnit và Espresso.</string>
     <string name="daily_tip_mvvm">Tuân theo kiến trúc MVVM để có mã có thể bảo trì.</string>
-    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
-    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
+    <string name="daily_tip_accessibility">Kiểm tra các dịch vụ trợ năng như TalkBack để hỗ trợ mọi người dùng.</string>
+    <string name="daily_tip_battery_optimization">Tuân thủ các hướng dẫn tối ưu hóa pin để giữ mức tiêu thụ điện năng thấp.</string>
     <string name="tip_of_the_day">Mẹo trong ngày</string>
     <string name="quiz_title">Câu đố</string>
     <string name="next_question">Câu hỏi tiếp theo</string>

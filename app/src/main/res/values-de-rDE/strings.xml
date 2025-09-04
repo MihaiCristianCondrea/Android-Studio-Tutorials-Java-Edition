@@ -458,8 +458,8 @@
     <string name="daily_tip_hilt">Integrieren Sie Hilt für Abhängigkeitsinjektion.</string>
     <string name="daily_tip_unit_tests">Schreibeinheitstests mit JUnit und Espresso.</string>
     <string name="daily_tip_mvvm">Folgen Sie der MVVM-Architektur für den Aufrechterhaltungscode.</string>
-    <string name="daily_tip_accessibility">Test accessibility services like TalkBack to support all users.</string>
-    <string name="daily_tip_battery_optimization">Respect battery optimization guidelines to keep power usage low.</string>
+    <string name="daily_tip_accessibility">Testen Sie Bedienungshilfen wie TalkBack, um alle Nutzer zu unterstützen.</string>
+    <string name="daily_tip_battery_optimization">Befolgen Sie die Richtlinien zur Akkuoptimierung, um den Stromverbrauch niedrig zu halten.</string>
     <string name="tip_of_the_day">Tipp des Tages</string>
     <string name="quiz_title">Quiz</string>
     <string name="next_question">Nächste Frage</string>
