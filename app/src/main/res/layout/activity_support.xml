@@ -120,14 +120,13 @@
                 app:layout_columnWeight="1"
                 app:layout_rowWeight="1" />
 
-            <com.google.android.gms.ads.AdView
+            <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
                 android:id="@+id/large_banner_ad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                app:adSize="MEDIUM_RECTANGLE"
-                app:adUnitId="@string/ad_banner_unit_id" />
+/>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </me.zhanghai.android.fastscroll.FastScrollScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

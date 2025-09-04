@@ -24,7 +24,6 @@
         android:id="@+id/nav_rail"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
         app:layout_constraintBottom_toTopOf="@+id/ad_container"
@@ -54,13 +53,11 @@
             android:layout_height="match_parent"
             android:background="@android:color/darker_gray" />
 
-        <com.google.android.gms.ads.AdView
+        <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
             android:id="@+id/ad_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"
-            app:adSize="FULL_BANNER"
-            app:adUnitId="@string/ad_banner_unit_id" />
+/>
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -75,7 +72,6 @@
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
