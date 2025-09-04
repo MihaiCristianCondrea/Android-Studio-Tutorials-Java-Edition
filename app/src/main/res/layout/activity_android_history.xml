@@ -30,13 +30,11 @@
             app:layout_constraintTop_toBottomOf="@id/text_view_history"
             tools:ignore="VisualLintLongText" />
 
-        <com.google.android.gms.ads.AdView
+        <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
             android:id="@+id/ad_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
-            app:adSize="MEDIUM_RECTANGLE"
-            app:adUnitId="@string/ad_banner_unit_id"
             app:layout_constraintTop_toBottomOf="@id/text_view_android_history" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -59,13 +57,11 @@
             app:layout_constraintTop_toBottomOf="@id/text_view_features"
             tools:ignore="VisualLintLongText" />
 
-        <com.google.android.gms.ads.AdView
+        <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
             android:id="@+id/ad_view_bottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
-            app:adSize="FULL_BANNER"
-            app:adUnitId="@string/ad_banner_unit_id"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_view_android_features" />

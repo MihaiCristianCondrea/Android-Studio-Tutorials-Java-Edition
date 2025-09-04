@@ -40,12 +40,10 @@
             android:text="@string/summary_enable_binding"
             app:layout_constraintTop_toBottomOf="@id/bindingSetupText" />
 
-        <com.google.android.gms.ads.AdView
+        <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
             android:id="@+id/ad_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:adSize="MEDIUM_RECTANGLE"
-            app:adUnitId="@string/ad_banner_unit_id"
             app:layout_constraintTop_toBottomOf="@id/bindingInstructionText" />
 
         <com.google.android.material.card.MaterialCardView
@@ -153,13 +151,11 @@
             app:lottie_loop="false"
             app:lottie_rawRes="@raw/anim_jetpack" />
 
-        <com.google.android.gms.ads.AdView
+        <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
             android:id="@+id/ad_view_bottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
-            app:adSize="FULL_BANNER"
-            app:adUnitId="@string/ad_banner_unit_id"
             app:layout_constraintTop_toBottomOf="@id/lottie_animation" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </me.zhanghai.android.fastscroll.FastScrollScrollView>

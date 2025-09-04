@@ -69,13 +69,11 @@
                     android:contentDescription="@string/im_step1_desc" />
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.gms.ads.AdView
+            <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
                 android:id="@+id/ad_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                app:adSize="MEDIUM_RECTANGLE"
-                app:adUnitId="@string/ad_banner_unit_id"
                 app:layout_constraintTop_toBottomOf="@id/card_view_first_step" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -168,13 +166,11 @@
                 app:lottie_rawRes="@raw/anim_programmer"
                 app:lottie_speed="0.5" />
 
-            <com.google.android.gms.ads.AdView
+            <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
                 android:id="@+id/ad_view_bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"
-                app:adSize="FULL_BANNER"
-                app:adUnitId="@string/ad_banner_unit_id"
                 app:layout_constraintTop_toBottomOf="@id/lottie_animation" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </me.zhanghai.android.fastscroll.FastScrollScrollView>

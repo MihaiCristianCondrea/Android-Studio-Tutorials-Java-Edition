@@ -143,14 +143,13 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.gms.ads.AdView
+            <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
                 android:id="@+id/large_banner_ad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                app:adSize="MEDIUM_RECTANGLE"
-                app:adUnitId="@string/ad_banner_unit_id" />
+/>
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/other_apps_section"
@@ -215,13 +214,12 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.gms.ads.AdView
+            <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
                 android:id="@+id/small_banner_ad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:adSize="MEDIUM_RECTANGLE"
-                app:adUnitId="@string/ad_banner_unit_id" />
+/>
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/learningAnimation"

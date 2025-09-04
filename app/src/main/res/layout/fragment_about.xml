@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <me.zhanghai.android.fastscroll.FastScrollScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scroll_view"
@@ -169,13 +168,11 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.gms.ads.AdView
+        <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
             android:id="@+id/ad_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            ads:adSize="MEDIUM_RECTANGLE"
-            ads:adUnitId="@string/ad_banner_unit_id"
             app:layout_constraintTop_toBottomOf="@id/card_view_about" />
 
         <com.airbnb.lottie.LottieAnimationView

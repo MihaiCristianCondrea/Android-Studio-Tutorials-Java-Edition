@@ -26,13 +26,11 @@
         </me.zhanghai.android.fastscroll.FastScrollScrollView>
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.gms.ads.AdView
+    <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
         android:id="@+id/ad_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        app:adSize="FULL_BANNER"
-        app:adUnitId="@string/ad_banner_unit_id"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -18,13 +18,11 @@
             android:text="@string/summary_permissions"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.gms.ads.AdView
+        <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
             android:id="@+id/ad_view_large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
-            app:adSize="MEDIUM_RECTANGLE"
-            app:adUnitId="@string/ad_banner_unit_id"
             app:layout_constraintTop_toBottomOf="@id/text_view_permissions_beginning" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -74,13 +72,11 @@
             app:layout_constraintTop_toBottomOf="@id/card_view_lottie_animation"
             tools:targetApi="26" />
 
-        <com.google.android.gms.ads.AdView
+        <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
             android:id="@+id/ad_view_bottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
-            app:adSize="FULL_BANNER"
-            app:adUnitId="@string/ad_banner_unit_id"
             app:layout_constraintTop_toBottomOf="@id/button_more" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </me.zhanghai.android.fastscroll.FastScrollScrollView>
