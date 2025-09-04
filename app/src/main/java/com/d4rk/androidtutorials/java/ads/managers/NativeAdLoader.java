@@ -36,33 +36,56 @@ public class NativeAdLoader {
     }
 
     private static void populateNativeAdView(@NonNull NativeAd nativeAd, @NonNull NativeAdView adView) {
-        adView.setMediaView((MediaView) adView.findViewById(R.id.ad_media));
-        adView.setHeadlineView(adView.findViewById(R.id.ad_headline));
-        adView.setBodyView(adView.findViewById(R.id.ad_body));
-        adView.setCallToActionView(adView.findViewById(R.id.ad_call_to_action));
-        adView.setIconView(adView.findViewById(R.id.ad_app_icon));
+        MediaView mediaView = adView.findViewById(R.id.ad_media);
+        TextView headlineView = adView.findViewById(R.id.ad_headline);
+        TextView bodyView = adView.findViewById(R.id.ad_body);
+        Button callToActionView = adView.findViewById(R.id.ad_call_to_action);
+        ImageView iconView = adView.findViewById(R.id.ad_app_icon);
 
-        ((TextView) adView.getHeadlineView()).setText(nativeAd.getHeadline());
+        adView.setMediaView(mediaView);
+        adView.setHeadlineView(headlineView);
+        adView.setBodyView(bodyView);
+        adView.setCallToActionView(callToActionView);
+        adView.setIconView(iconView);
 
-        if (nativeAd.getBody() == null) {
-            adView.getBodyView().setVisibility(View.GONE);
-        } else {
-            adView.getBodyView().setVisibility(View.VISIBLE);
-            ((TextView) adView.getBodyView()).setText(nativeAd.getBody());
+        if (headlineView != null) {
+            headlineView.setText(nativeAd.getHeadline());
         }
 
-        if (nativeAd.getCallToAction() == null) {
-            adView.getCallToActionView().setVisibility(View.GONE);
-        } else {
-            adView.getCallToActionView().setVisibility(View.VISIBLE);
-            ((Button) adView.getCallToActionView()).setText(nativeAd.getCallToAction());
+        if (bodyView != null) {
+            if (nativeAd.getBody() == null) {
+                bodyView.setVisibility(View.GONE);
+            } else {
+                bodyView.setVisibility(View.VISIBLE);
+                bodyView.setText(nativeAd.getBody());
+            }
         }
 
-        if (nativeAd.getIcon() == null) {
-            adView.getIconView().setVisibility(View.GONE);
-        } else {
-            ((ImageView) adView.getIconView()).setImageDrawable(nativeAd.getIcon().getDrawable());
-            adView.getIconView().setVisibility(View.VISIBLE);
+        if (callToActionView != null) {
+            if (nativeAd.getCallToAction() == null) {
+                callToActionView.setVisibility(View.GONE);
+            } else {
+                callToActionView.setVisibility(View.VISIBLE);
+                callToActionView.setText(nativeAd.getCallToAction());
+            }
+        }
+
+        if (iconView != null) {
+            if (nativeAd.getIcon() == null) {
+                iconView.setVisibility(View.GONE);
+            } else {
+                iconView.setImageDrawable(nativeAd.getIcon().getDrawable());
+                iconView.setVisibility(View.VISIBLE);
+            }
+        }
+
+        if (mediaView != null) {
+            if (nativeAd.getMediaContent() == null) {
+                mediaView.setVisibility(View.GONE);
+            } else {
+                mediaView.setMediaContent(nativeAd.getMediaContent());
+                mediaView.setVisibility(View.VISIBLE);
+            }
         }
 
         adView.setNativeAd(nativeAd);
