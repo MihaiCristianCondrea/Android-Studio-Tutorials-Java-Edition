@@ -458,6 +458,8 @@
     <string name="daily_tip_hilt">Intégrer Hilt pour injection de dépendance.</string>
     <string name="daily_tip_unit_tests">Écrire des tests unitaires avec Junit et Espresso.</string>
     <string name="daily_tip_mvvm">Suivez l\'architecture MVVM pour maintenir le code.</string>
+    <string name="daily_tip_accessibility">Concevez en tenant compte de l\'accessibilité avec des descriptions de contenu et un contraste adéquat.</string>
+    <string name="daily_tip_battery_optimization">Réduisez le travail en arrière-plan inutile pour améliorer l\'autonomie de la batterie.</string>
     <string name="tip_of_the_day">Astuce du jour</string>
     <string name="quiz_title">Quiz</string>
     <string name="next_question">Question suivante</string>

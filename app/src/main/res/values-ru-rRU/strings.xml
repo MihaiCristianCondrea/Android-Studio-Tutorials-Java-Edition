@@ -458,6 +458,8 @@
     <string name="daily_tip_hilt">Интегрируйте Hilt для инъекций зависимости.</string>
     <string name="daily_tip_unit_tests">Пишите единичные тесты с JUnit и Espresso.</string>
     <string name="daily_tip_mvvm">Следуйте архитектуре MVVM для поддерживающего кода.</string>
+    <string name="daily_tip_accessibility">Проектируйте с учетом доступности, используя описания содержимого и правильный контраст.</string>
+    <string name="daily_tip_battery_optimization">Сократите ненужную фоновую работу, чтобы увеличить время работы батареи.</string>
     <string name="tip_of_the_day">День Победы</string>
     <string name="quiz_title">Викторина</string>
     <string name="next_question">Следующий вопрос</string>

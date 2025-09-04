@@ -430,6 +430,8 @@
     <string name="daily_tip_hilt">종속성 주입을 위해 Hilt를 통합하세요.</string>
     <string name="daily_tip_unit_tests">JUnit과 Espresso로 단위 테스트를 작성하세요.</string>
     <string name="daily_tip_mvvm">유지보수가 용이한 코드를 위해 MVVM 아키텍처를 따르세요.</string>
+    <string name="daily_tip_accessibility">콘텐츠 설명과 적절한 대비로 접근성을 고려해 디자인하세요.</string>
+    <string name="daily_tip_battery_optimization">불필요한 백그라운드 작업을 줄여 배터리 수명을 향상시키세요.</string>
     <string name="tip_of_the_day">오늘의 팁</string>
     <string name="quiz_title">퀴즈</string>
     <string name="next_question">다음 질문</string>

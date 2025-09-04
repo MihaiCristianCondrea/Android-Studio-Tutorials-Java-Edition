@@ -466,6 +466,8 @@
     <string name="daily_tip_hilt">Integraţi Hilt pentru injectarea dependenţei.</string>
     <string name="daily_tip_unit_tests">Scrieţi teste de unitate cu JUnit şi Espresso.</string>
     <string name="daily_tip_mvvm">Urmăriți arhitectura MVVM pentru un cod durabil.</string>
+    <string name="daily_tip_accessibility">Proiectează pentru accesibilitate cu descrieri de conținut și contrast corespunzător.</string>
+    <string name="daily_tip_battery_optimization">Reduceți munca de fundal inutilă pentru a îmbunătăți durata bateriei.</string>
     <string name="tip_of_the_day">Sfat al zilei</string>
     <string name="quiz_title">Chestionar</string>
     <string name="next_question">Întrebarea următoare</string>

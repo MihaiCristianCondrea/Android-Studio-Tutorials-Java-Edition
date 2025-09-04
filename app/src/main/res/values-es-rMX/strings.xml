@@ -430,6 +430,8 @@
     <string name="daily_tip_hilt">Integra Hilt para la inyección de dependencias.</string>
     <string name="daily_tip_unit_tests">Escribe pruebas unitarias con JUnit y Espresso.</string>
     <string name="daily_tip_mvvm">Sigue la arquitectura MVVM para un código mantenible.</string>
+    <string name="daily_tip_accessibility">Diseña para la accesibilidad con descripciones de contenido y contraste adecuado.</string>
+    <string name="daily_tip_battery_optimization">Reduce el trabajo en segundo plano innecesario para mejorar la duración de la batería.</string>
     <string name="tip_of_the_day">Consejo del día</string>
     <string name="quiz_title">Cuestionario</string>
     <string name="next_question">Siguiente pregunta</string>

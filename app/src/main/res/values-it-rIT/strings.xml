@@ -477,6 +477,8 @@
     <string name="daily_tip_hilt">Integra Hilt per l\'iniezione delle dipendenze.</string>
     <string name="daily_tip_unit_tests">Scrivi test unitari con JUnit ed Espresso.</string>
     <string name="daily_tip_mvvm">Segui l\'architettura MVVM per un codice manutenibile.</string>
+    <string name="daily_tip_accessibility">Progetta per l'accessibilità con descrizioni dei contenuti e contrasto adeguato.</string>
+    <string name="daily_tip_battery_optimization">Riduci il lavoro in background non necessario per migliorare la durata della batteria.</string>
     <string name="tip_of_the_day">Suggerimento del giorno</string>
     <string name="quiz_title">Quiz</string>
     <string name="next_question">Prossima domanda</string>

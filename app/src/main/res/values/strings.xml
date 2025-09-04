@@ -2,9 +2,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="image_view_preview_desc">Image view preview</string>
     <string name="app_short_description">Learn how to make simple Java apps in Android Studio. 📱</string>
-    <string name="notification_update_title">A new update is available.</string>
+    <string name="notification_update_title">A new update is available</string>
     <string name="summary_notification_update">A new version of the app is available. Tap to update.</string>
-    <string name="notification_last_time_used_title">It\'s been a while.</string>
+    <string name="notification_last_time_used_title">It\'s been a while</string>
     <string name="summary_notification_last_time_used">It\'s been a while—learn something new about Android.</string>
 
     <string name="menu">Menu</string>
@@ -52,7 +52,7 @@
     <string name="add_to_favorites">Add to favorites</string>
     <string name="file_inspect">Inspect current file with current profile</string>
     <string name="quick_switch_theme">Quick switch theme</string>
-    <string name="open_settings">Open settings dialogue</string>
+    <string name="open_settings">Open settings dialog</string>
     <string name="open_project">Open project structure dialog</string>
     <string name="switch_tabs">Switch between tabs and tool window</string>
     <string name="refactoring">Refactoring</string>
@@ -154,7 +154,7 @@
     <string name="vertical">Vertical</string>
     <string name="horizontal">Horizontal</string>
     <string name="layout_preview">Layout preview</string>
-    <string name="no_java_code_needed">No Java code required for this activity.</string>
+    <string name="no_java_code_needed">No Java code required for this activity</string>
 
     <string name="relative_layout">Relative layout</string>
 
@@ -220,9 +220,9 @@
     <string name="reset">Reset</string>
     <string name="text_boxes">Text boxes</string>
     <string name="textbox">Text box</string>
-    <string name="print_text">Print text.</string>
+    <string name="print_text">Print text</string>
     <string name="password_box">Password box</string>
-    <string name="password_show">Show password.</string>
+    <string name="password_show">Show password</string>
     <string name="alerts">Alerts</string>
     <string name="alert_dialog">Alert dialog</string>
     <string name="show_dialog">Show alert dialog</string>
@@ -234,8 +234,8 @@
     <string name="tooltips">Tooltips</string>
     <string name="reviews">Reviews</string>
     <string name="rating_bar">Rating bar</string>
-    <string name="rate_us">Rate the app.</string>
-    <string name="stars">%1$.1f stars.</string>
+    <string name="rate_us">Rate the app</string>
+    <string name="stars">%1$.1f stars</string>
     <string name="in_app_review">In-app reviews</string>
     <string name="progress_bars">Progress bars</string>
     <string name="progress_bar">Progress bar</string>
@@ -330,7 +330,7 @@
     <string name="summary_preference_faq_6">If you have a question or problem with Android Studio Tutorials: Java Edition, contact support through the app\'s support page or by email at d4rk7355608@gmail.com. The support team will work to resolve any issues you experience.</string>
     <string name="summary_preference_faq_7">You can disable Firebase analytics and crashlytics by going to the settings menu in the app and toggle the switch for these features.</string>
     <string name="summary_preference_faq_8">You can check for updates to Android Studio Tutorials: Java Edition by going to the settings menu in the app and selecting the \"Check for updates\" option.</string>
-    <string name="summary_preference_faq_9">ou can support the development of Android Studio Tutorials: Java Edition by leaving a positive review on the Google Play Store, sharing the app with friends and colleagues, and supporting the developers through the \"Share\" option in the settings menu.</string>
+    <string name="summary_preference_faq_9">You can support the development of Android Studio Tutorials: Java Edition by leaving a positive review on the Google Play Store, sharing the app with friends and colleagues, and supporting the developers through the \"Share\" option in the settings menu.</string>
     <string name="summary_preference_permissions_ad_id">Allows the app to retrieve and use the advertising identifier associated with the user\'s device, providing personalized ads, measuring ad effectiveness, and showing ads on Android 13 or later devices.</string>
     <string name="summary_preference_permissions_internet">Allows the app to establish an internet connection to send error reports or check for updates.</string>
     <string name="summary_preference_permissions_post_notifications">Allows the app to display notifications on the devices with Android 13 or later.</string>
@@ -453,6 +453,8 @@
     <string name="daily_tip_hilt">Integrate Hilt for dependency injection.</string>
     <string name="daily_tip_unit_tests">Write unit tests with JUnit and Espresso.</string>
     <string name="daily_tip_mvvm">Follow the MVVM architecture for maintainable code.</string>
+    <string name="daily_tip_accessibility">Design for accessibility with content descriptions and proper contrast.</string>
+    <string name="daily_tip_battery_optimization">Reduce unnecessary background work to improve battery life.</string>
     <string name="tip_of_the_day">Tip of the day</string>
     <string name="quiz_title">Quiz</string>
     <string name="next_question">Next question</string>

@@ -430,6 +430,8 @@
     <string name="daily_tip_hilt">整合 Hilt 進行依賴注入。</string>
     <string name="daily_tip_unit_tests">使用 JUnit 和 Espresso 編寫單元測試。</string>
     <string name="daily_tip_mvvm">遵循 MVVM 架構以獲得可維護的程式碼。</string>
+    <string name="daily_tip_accessibility">使用內容描述和適當的對比來設計無障礙性。</string>
+    <string name="daily_tip_battery_optimization">減少不必要的背景作業以改善電池續航。</string>
     <string name="tip_of_the_day">今日提示</string>
     <string name="quiz_title">小測驗</string>
     <string name="next_question">下一題</string>
