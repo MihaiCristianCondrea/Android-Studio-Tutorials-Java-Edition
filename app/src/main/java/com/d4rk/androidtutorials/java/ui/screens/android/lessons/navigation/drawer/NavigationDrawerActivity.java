@@ -27,7 +27,7 @@ public class NavigationDrawerActivity extends UpNavigationActivity {
         edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
 
         binding.navigationView.setNavigationItemSelectedListener(item -> {
-            binding.textView.setText(getString(R.string.selected) + " " + item.getTitle()); // FIXME: Do not concatenate text displayed with `setText`. Use resource string with placeholders.
+            binding.textView.setText(getString(R.string.selected, item.getTitle()));
             binding.drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         });

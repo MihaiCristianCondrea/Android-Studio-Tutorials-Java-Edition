@@ -229,7 +229,7 @@
     <string name="default_tab">Standardflik</string>
     <string name="bottom_navigation_bar_labels">Etiketter i nedre navigeringsfältet</string>
     <string name="labeled">Med etikett</string>
-    <string name="selected">Vald</string>
+    <string name="selected">Vald %1$s</string>
     <string name="unlabeled">Utan etikett</string>
     <string name="navigation">Navigering</string>
     <string name="bottom_navigation">Nedre navigering</string>

@@ -276,7 +276,7 @@
     <string name="default_tab">デフォルトタブ</string>
     <string name="bottom_navigation_bar_labels">ボトムナビゲーションバーのラベル</string>
     <string name="labeled">ラベル付き</string>
-    <string name="selected">選択済み</string>
+    <string name="selected">選択済み %1$s</string>
     <string name="unlabeled">ラベルなし</string>
     <string name="navigation">ナビゲーション</string>
     <string name="bottom_navigation">ボトムナビゲーション</string>

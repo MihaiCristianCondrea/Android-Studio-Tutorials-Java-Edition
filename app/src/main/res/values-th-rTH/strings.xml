@@ -231,7 +231,7 @@
     <string name="default_tab">แท็บเริ่มต้น</string>
     <string name="bottom_navigation_bar_labels">ป้ายกำกับแถบนำทางด้านล่าง</string>
     <string name="labeled">มีป้ายกำกับ</string>
-    <string name="selected">ที่เลือก</string>
+    <string name="selected">ที่เลือก %1$s</string>
     <string name="unlabeled">ไม่มีป้ายกำกับ</string>
     <string name="navigation">การนำทาง</string>
     <string name="bottom_navigation">แถบนำทางด้านล่าง</string>

@@ -255,7 +255,7 @@
     <string name="default_tab">ডিফল্ট ট্যাব</string>
     <string name="bottom_navigation_bar_labels">নিচের নেভিগেশন বার লেবেল</string>
     <string name="labeled">লেবেলযুক্ত</string>
-    <string name="selected">নির্বাচিত</string>
+    <string name="selected">নির্বাচিত %1$s</string>
     <string name="unlabeled">লেবেলবিহীন</string>
     <string name="navigation">নেভিগেশন</string>
     <string name="bottom_navigation">নীচের নেভিগেশন</string>

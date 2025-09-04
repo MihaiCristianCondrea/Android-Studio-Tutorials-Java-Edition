@@ -229,7 +229,7 @@
     <string name="default_tab">پہلے سے طے شدہ ٹیب</string>
     <string name="bottom_navigation_bar_labels">نیچے نیویگیشن بار کے لیبلز</string>
     <string name="labeled">لیبل شدہ</string>
-    <string name="selected">منتخب</string>
+    <string name="selected">منتخب %1$s</string>
     <string name="unlabeled">بغیر لیبل کے</string>
     <string name="navigation">نیوی گیشن</string>
     <string name="bottom_navigation">نیچے کی نیوی گیشن</string>
