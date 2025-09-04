@@ -23,7 +23,7 @@ import com.google.android.gms.ads.nativead.NativeAdView;
 public class NativeAdLoader {
 
     public static void load(@NonNull Context context, @NonNull ViewGroup container) {
-        AdLoader adLoader = new AdLoader.Builder(context, context.getString(R.string.ad_banner_unit_id))
+        AdLoader adLoader = new AdLoader.Builder(context, context.getString(R.string.native_ad_banner_unit_id))
                 .forNativeAd(nativeAd -> {
                     LayoutInflater inflater = LayoutInflater.from(context);
                     NativeAdView adView = (NativeAdView) inflater.inflate(R.layout.native_ad, container, false);
