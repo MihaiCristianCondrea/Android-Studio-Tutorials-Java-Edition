@@ -23,8 +23,9 @@
     <string name="main_card_description">The Kotlin Edition has been updated with dynamic lessons, AI assistant, and more. Experience the future of Android development.</string>
       <string name="get_on_google_play">Get it on Google Play</string>
       <string name="learn_more">Learn more</string>
-      <string name="play_store">Play Store</string>
-      <string name="search_tutorials_hint">Search tutorials</string>
+    <string name="play_store">Play Store</string>
+    <string name="ad">Ad</string>
+    <string name="search_tutorials_hint">Search tutorials</string>
       <string name="search_tutorials_content_description">Search tutorials</string>
       <string name="search_lessons_hint">Search lessons</string>
       <string name="search_lessons_content_description">Search lessons</string>
