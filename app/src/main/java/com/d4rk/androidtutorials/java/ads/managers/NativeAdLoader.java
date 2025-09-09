@@ -52,12 +52,14 @@ public class NativeAdLoader {
         TextView bodyView = adView.findViewById(R.id.ad_body);
         Button callToActionView = adView.findViewById(R.id.ad_call_to_action);
         ImageView iconView = adView.findViewById(R.id.ad_app_icon);
+        TextView attributionView = adView.findViewById(R.id.ad_attribution);
 
         adView.setMediaView(mediaView);
         adView.setHeadlineView(headlineView);
         adView.setBodyView(bodyView);
         adView.setCallToActionView(callToActionView);
         adView.setIconView(iconView);
+        adView.setAdvertiserView(attributionView);
 
         if (headlineView != null) {
             headlineView.setText(nativeAd.getHeadline());
@@ -78,6 +80,15 @@ public class NativeAdLoader {
             } else {
                 callToActionView.setVisibility(View.VISIBLE);
                 callToActionView.setText(nativeAd.getCallToAction());
+            }
+        }
+
+        if (attributionView != null) {
+            String adLabel = adView.getContext().getString(R.string.ad);
+            if (nativeAd.getAdvertiser() == null) {
+                attributionView.setText(adLabel);
+            } else {
+                attributionView.setText(adLabel + " " + nativeAd.getAdvertiser());
             }
         }
 
