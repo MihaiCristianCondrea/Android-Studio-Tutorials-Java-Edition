@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.d4rk.androidtutorials.java.databinding.FragmentHomeBinding;
-import com.d4rk.androidtutorials.java.ads.managers.NativeAdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
@@ -54,11 +53,7 @@ public class HomeFragment extends Fragment {
             promotedContainer.clearFocus();
             promotedContainer.removeAllViews();
             java.util.List<PromotedApp> apps = state.promotedApps();
-            int adPosition = new java.util.Random().nextInt(apps.size() + 1);
             for (int i = 0; i < apps.size(); i++) {
-                if (i == adPosition) {
-                    addPromotedAd(promotedContainer);
-                }
                 PromotedApp app = apps.get(i);
                 com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding itemBinding =
                         com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding.inflate(inflater, promotedContainer, false);
@@ -68,9 +63,6 @@ public class HomeFragment extends Fragment {
                 itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName())));
                 itemBinding.shareButton.setOnClickListener(v -> shareApp(app));
                 promotedContainer.addView(itemBinding.getRoot());
-            }
-            if (adPosition == apps.size()) {
-                addPromotedAd(promotedContainer);
             }
         });
         new FastScrollerBuilder(binding.scrollView)
@@ -119,18 +111,5 @@ public class HomeFragment extends Fragment {
                 .load(url)
                 .centerInside()
                 .into(imageView);
-    }
-
-    private void addPromotedAd(ViewGroup container) {
-        android.widget.FrameLayout adContainer = new android.widget.FrameLayout(requireContext());
-        ViewGroup.MarginLayoutParams params = new ViewGroup.MarginLayoutParams(dpToPx(160), dpToPx(180));
-        params.setMarginEnd(dpToPx(8));
-        adContainer.setLayoutParams(params);
-        NativeAdLoader.load(requireContext(), adContainer, com.d4rk.androidtutorials.java.R.layout.promoted_native_ad);
-        container.addView(adContainer);
-    }
-
-    private int dpToPx(int dp) {
-        return Math.round(dp * requireContext().getResources().getDisplayMetrics().density);
     }
 }
