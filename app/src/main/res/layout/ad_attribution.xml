@@ -7,5 +7,5 @@
     android:paddingHorizontal="4dp"
     android:paddingVertical="2dp"
     android:text="@string/ad"
-    android:textColor="?attr/colorPrimary"
+    android:textColor="?attr/colorOutline"
     android:textAppearance="@style/TextAppearance.Material3.LabelSmall" />

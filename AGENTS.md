@@ -20,3 +20,4 @@ You are an experienced Android app developer.
 ## Native ads
 - Native ad XML layouts should wrap their content in a `MaterialCardView` with the ID `ad_card` using `@style/Widget.Material3.CardView.Outlined` and appropriate rounded corner overlays.
 - Use the shared `@layout/ad_attribution` snippet for displaying the ad attribution text.
+- Place the attribution include as the first child of the ad card and override its padding, background, or text color attributes to fit each layout.

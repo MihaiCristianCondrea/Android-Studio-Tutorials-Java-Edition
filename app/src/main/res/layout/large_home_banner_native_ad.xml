@@ -5,18 +5,25 @@
     android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ad_card"
         style="@style/Widget.Material3.CardView.Outlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="24dp">
+
+        <include
+            layout="@layout/ad_attribution"
+            android:layout_margin="16dp"
+            android:layout_gravity="top|start"
+            android:background="@drawable/bg_ad_attribution_large"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:orientation="vertical">
-
-            <include layout="@layout/ad_attribution" />
 
             <com.google.android.material.card.MaterialCardView
                 style="@style/Widget.Material3.CardView.Filled"

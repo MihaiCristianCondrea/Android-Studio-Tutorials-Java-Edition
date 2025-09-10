@@ -20,7 +20,12 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <include layout="@layout/ad_attribution" />
+            <include
+                layout="@layout/ad_attribution"
+                android:background="@drawable/bg_ad_attribution_small"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="2dp"
+                android:textColor="?attr/colorPrimary" />
 
             <LinearLayout
                 android:layout_width="match_parent"
