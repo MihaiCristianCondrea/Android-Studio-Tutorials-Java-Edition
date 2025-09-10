@@ -58,7 +58,9 @@ public class NativeAdLoader {
         adView.setHeadlineView(headlineView);
         adView.setBodyView(bodyView);
         adView.setCallToActionView(callToActionView);
-        adView.setIconView(iconView);
+        if (iconView != null) {
+            adView.setIconView(iconView);
+        }
         adView.setAdvertiserView(attributionView);
 
         if (headlineView != null) {
