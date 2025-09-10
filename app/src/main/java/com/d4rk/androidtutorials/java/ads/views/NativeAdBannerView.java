@@ -19,7 +19,7 @@ import com.d4rk.androidtutorials.java.ads.managers.NativeAdLoader;
  */
 public class NativeAdBannerView extends FrameLayout {
 
-    private int layoutRes = R.layout.native_ad;
+    private int layoutRes = R.layout.large_home_banner_native_ad;
 
     public NativeAdBannerView(@NonNull Context context) {
         super(context);
@@ -39,7 +39,7 @@ public class NativeAdBannerView extends FrameLayout {
     private void init(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         if (attrs != null) {
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.NativeAdBannerView, defStyleAttr, 0);
-            layoutRes = a.getResourceId(R.styleable.NativeAdBannerView_nativeAdLayout, R.layout.native_ad);
+            layoutRes = a.getResourceId(R.styleable.NativeAdBannerView_nativeAdLayout, R.layout.large_home_banner_native_ad);
             a.recycle();
         }
     }
