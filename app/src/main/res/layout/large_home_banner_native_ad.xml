@@ -16,12 +16,7 @@
             android:layout_margin="16dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/ad_attribution"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ad"
-                android:textAppearance="@style/TextAppearance.Material3.LabelSmall" />
+            <include layout="@layout/ad_attribution" />
 
             <com.google.android.material.card.MaterialCardView
                 style="@style/Widget.Material3.CardView.Filled"

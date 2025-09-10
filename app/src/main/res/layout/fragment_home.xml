@@ -216,22 +216,11 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/ad_card"
-                style="@style/Widget.Material3.CardView.Outlined"
+            <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
+                android:id="@+id/small_banner_ad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="16dp"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewBottomRounded">
-
-                <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
-                    android:id="@+id/small_banner_ad"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:nativeAdLayout="@layout/small_home_banner_native_ad" />
-            </com.google.android.material.card.MaterialCardView>
+                app:nativeAdLayout="@layout/small_home_banner_native_ad" />
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/learningAnimation"
