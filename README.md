@@ -51,6 +51,8 @@ operations through a small set of use cases. This pattern was inspired by the
 implemented in a simplified form to avoid adding heavy dependencies. The result keeps the UI
 simple and ensures a clear separation of concerns across the whole app.
 
+For detailed guidance, see [Recommendations for Android architecture](docs/android-architecture-recommendations.md).
+
 ## Feedback
 
 We are constantly updating and improving Android Studio Tutorials: Java Edition to give you the best possible experience. If you have suggested features or improvements, please leave a review. If something isn't working correctly, let us know so we can fix it.
