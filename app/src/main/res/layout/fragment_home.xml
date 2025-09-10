@@ -150,7 +150,7 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                app:nativeAdLayout="@layout/native_ad" />
+                app:nativeAdLayout="@layout/large_home_banner_native_ad" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/other_apps_section"
@@ -188,7 +188,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="0dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRounded">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -219,9 +220,7 @@
                 android:id="@+id/small_banner_ad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                app:nativeAdLayout="@layout/native_ad" />
+                app:nativeAdLayout="@layout/small_home_banner_native_ad" />
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/learningAnimation"

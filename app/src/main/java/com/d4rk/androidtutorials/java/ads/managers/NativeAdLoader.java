@@ -24,7 +24,7 @@ import com.google.android.gms.ads.nativead.NativeAdView;
 public class NativeAdLoader {
 
     public static void load(@NonNull Context context, @NonNull ViewGroup container) {
-        load(context, container, R.layout.native_ad);
+        load(context, container, R.layout.large_home_banner_native_ad);
     }
 
     public static void load(@NonNull Context context, @NonNull ViewGroup container, @LayoutRes int layoutRes) {
@@ -58,7 +58,9 @@ public class NativeAdLoader {
         adView.setHeadlineView(headlineView);
         adView.setBodyView(bodyView);
         adView.setCallToActionView(callToActionView);
-        adView.setIconView(iconView);
+        if (iconView != null) {
+            adView.setIconView(iconView);
+        }
         adView.setAdvertiserView(attributionView);
 
         if (headlineView != null) {
