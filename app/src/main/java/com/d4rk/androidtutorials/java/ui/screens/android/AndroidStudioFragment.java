@@ -19,7 +19,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
+import androidx.core.view.MenuHost;
+import androidx.core.view.MenuProvider;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Lifecycle;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -41,6 +45,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 import java.util.Set;
 
@@ -54,7 +59,6 @@ public class AndroidStudioFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        setHasOptionsMenu(true);
         return inflater.inflate(R.layout.fragment_android_studio, container, false);
     }
 
@@ -70,6 +74,49 @@ public class AndroidStudioFragment extends Fragment {
         allItems.clear();
         allItems.addAll(loadItems());
         populateAdapter(allItems);
+
+        MenuHost menuHost = requireActivity();
+        menuHost.addMenuProvider(new MenuProvider() {
+            @Override
+            public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {
+                menuInflater.inflate(R.menu.menu_android_studio, menu);
+                MenuItem searchItem = menu.findItem(R.id.action_search);
+                SearchView searchView = (SearchView) searchItem.getActionView();
+                if (searchView != null) {
+                    searchView.setQueryHint(getString(R.string.search_lessons_hint));
+                    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                        @Override
+                        public boolean onQueryTextSubmit(String query) {
+                            filterLessons(query);
+                            return true;
+                        }
+
+                        @Override
+                        public boolean onQueryTextChange(String newText) {
+                            filterLessons(newText);
+                            return true;
+                        }
+                    });
+                }
+                searchItem.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
+                    @Override
+                    public boolean onMenuItemActionExpand(@NonNull MenuItem item) {
+                        return true;
+                    }
+
+                    @Override
+                    public boolean onMenuItemActionCollapse(@NonNull MenuItem item) {
+                        filterLessons("");
+                        return true;
+                    }
+                });
+            }
+
+            @Override
+            public boolean onMenuItemSelected(@NonNull MenuItem menuItem) {
+                return false;
+            }
+        }, getViewLifecycleOwner(), Lifecycle.State.RESUMED);
     }
 
     private void ensureMobileAdsInitialized() {
@@ -81,8 +128,7 @@ public class AndroidStudioFragment extends Fragment {
 
     private List<Object> loadItems() {
         List<Object> items = new ArrayList<>();
-        XmlResourceParser parser = getResources().getXml(R.xml.preferences_android_studio);
-        try {
+        try (XmlResourceParser parser = getResources().getXml(R.xml.preferences_android_studio)) {
             int event = parser.getEventType();
             Lesson currentLesson = null;
             while (event != XmlPullParser.END_DOCUMENT) {
@@ -124,8 +170,6 @@ public class AndroidStudioFragment extends Fragment {
                 event = parser.next();
             }
         } catch (XmlPullParserException | IOException ignored) {
-        } finally {
-            parser.close();
         }
         return items;
     }
@@ -167,40 +211,6 @@ public class AndroidStudioFragment extends Fragment {
         adapter.setItems(items);
     }
 
-    @Override
-    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.menu_android_studio, menu);
-        MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) searchItem.getActionView();
-        searchView.setQueryHint(getString(R.string.search_lessons_hint));
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                filterLessons(query);
-                return true;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                filterLessons(newText);
-                return true;
-            }
-        });
-        searchItem.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
-            @Override
-            public boolean onMenuItemActionExpand(MenuItem item) {
-                return true;
-            }
-
-            @Override
-            public boolean onMenuItemActionCollapse(MenuItem item) {
-                filterLessons("");
-                return true;
-            }
-        });
-    }
-
     private void filterLessons(String query) {
         String lower = query == null ? "" : query.toLowerCase();
         if (lower.isEmpty()) {
@@ -214,8 +224,7 @@ public class AndroidStudioFragment extends Fragment {
             if (item instanceof Category) {
                 lastCategory = (Category) item;
                 categoryAdded = false;
-            } else if (item instanceof Lesson) {
-                Lesson l = (Lesson) item;
+            } else if (item instanceof Lesson l) {
                 if (l.title != null && l.title.toLowerCase().contains(lower)) {
                     if (lastCategory != null && !categoryAdded) {
                         filtered.add(lastCategory);
@@ -253,11 +262,11 @@ public class AndroidStudioFragment extends Fragment {
         @Override
         public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,
                                    @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-            RecyclerView.Adapter<?> adapter = parent.getAdapter();
-            if (!(adapter instanceof LessonsAdapter)) return;
+            LessonsAdapter adapter = (LessonsAdapter) parent.getAdapter();
+            if (adapter == null) return;
             int position = parent.getChildAdapterPosition(view);
             if (position == RecyclerView.NO_POSITION) return;
-            int type = ((LessonsAdapter) adapter).getItemViewType(position);
+            int type = adapter.getItemViewType(position);
             if (type == LessonsAdapter.TYPE_LESSON || type == LessonsAdapter.TYPE_AD) {
                 outRect.bottom = spacing;
             }
@@ -271,9 +280,49 @@ public class AndroidStudioFragment extends Fragment {
         private final List<Object> items = new ArrayList<>();
 
         void setItems(List<Object> newItems) {
+            DiffUtil.DiffResult diff = DiffUtil.calculateDiff(new DiffUtil.Callback() {
+                @Override
+                public int getOldListSize() {
+                    return items.size();
+                }
+
+                @Override
+                public int getNewListSize() {
+                    return newItems.size();
+                }
+
+                @Override
+                public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
+                    Object oldItem = items.get(oldItemPosition);
+                    Object newItem = newItems.get(newItemPosition);
+                    if (oldItem instanceof Lesson oldLesson && newItem instanceof Lesson newLesson) {
+                        return Objects.equals(oldLesson.title, newLesson.title);
+                    }
+                    if (oldItem instanceof Category oldCat && newItem instanceof Category newCat) {
+                        return Objects.equals(oldCat.title, newCat.title);
+                    }
+                    return oldItem instanceof AdItem && newItem instanceof AdItem;
+                }
+
+                @Override
+                public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
+                    Object oldItem = items.get(oldItemPosition);
+                    Object newItem = newItems.get(newItemPosition);
+                    if (oldItem instanceof Lesson oldLesson && newItem instanceof Lesson newLesson) {
+                        return Objects.equals(oldLesson.title, newLesson.title)
+                                && Objects.equals(oldLesson.summary, newLesson.summary)
+                                && oldLesson.iconRes == newLesson.iconRes;
+                    }
+                    if (oldItem instanceof Category oldCat && newItem instanceof Category newCat) {
+                        return Objects.equals(oldCat.title, newCat.title)
+                                && oldCat.iconRes == newCat.iconRes;
+                    }
+                    return true;
+                }
+            });
             items.clear();
             items.addAll(newItems);
-            notifyDataSetChanged();
+            diff.dispatchUpdatesTo(this);
         }
 
         @Override
@@ -307,7 +356,9 @@ public class AndroidStudioFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-            int type = getItemViewType(position);
+            int pos = holder.getBindingAdapterPosition();
+            if (pos == RecyclerView.NO_POSITION) return;
+            int type = getItemViewType(pos);
             if (type == TYPE_AD) {
                 AdHolder adHolder = (AdHolder) holder;
                 adHolder.adView.loadAd(new AdRequest.Builder().build(), new AdListener() {
@@ -317,12 +368,12 @@ public class AndroidStudioFragment extends Fragment {
                     }
                 });
             } else if (type == TYPE_CATEGORY) {
-                Category category = (Category) items.get(position);
+                Category category = (Category) items.get(pos);
                 ((CategoryHolder) holder).bind(category);
             } else {
-                Lesson lesson = (Lesson) items.get(position);
-                boolean first = position > 0 && getItemViewType(position - 1) == TYPE_CATEGORY;
-                boolean last = position == getItemCount() - 1 || getItemViewType(position + 1) == TYPE_CATEGORY;
+                Lesson lesson = (Lesson) items.get(pos);
+                boolean first = pos > 0 && getItemViewType(pos - 1) == TYPE_CATEGORY;
+                boolean last = pos == getItemCount() - 1 || getItemViewType(pos + 1) == TYPE_CATEGORY;
                 ((LessonHolder) holder).bind(lesson, first, last);
             }
         }
