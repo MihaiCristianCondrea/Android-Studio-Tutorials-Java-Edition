@@ -53,6 +53,8 @@ import com.d4rk.androidtutorials.java.ui.screens.about.repository.AboutRepositor
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
 import com.d4rk.androidtutorials.java.ui.screens.settings.repository.SettingsRepository;
 import com.d4rk.androidtutorials.java.ui.screens.startup.repository.StartupRepository;
+import com.d4rk.androidtutorials.java.ui.screens.onboarding.repository.DefaultOnboardingRepository;
+import com.d4rk.androidtutorials.java.data.repository.OnboardingRepository;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -260,6 +262,12 @@ public class AppModule {
     @Singleton
     public SupportRepository provideSupportRepository(Application application) {
         return new DefaultSupportRepository(application);
+    }
+
+    @Provides
+    @Singleton
+    public OnboardingRepository provideOnboardingRepository(Application application) {
+        return new DefaultOnboardingRepository(application);
     }
 
     @Provides
