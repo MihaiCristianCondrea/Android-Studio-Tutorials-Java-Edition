@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.main;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,8 +37,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
 import com.d4rk.androidtutorials.java.notifications.managers.AppUpdateNotificationsManager;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFragment;
-import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
-import com.d4rk.androidtutorials.java.ui.screens.startup.dialogs.ConsentDialogFragment;
+import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
@@ -53,9 +53,7 @@ import com.google.android.play.core.install.InstallStateUpdatedListener;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
-import com.google.android.ump.ConsentInformation;
-import com.google.android.ump.ConsentRequestParameters;
-import com.google.android.ump.UserMessagingPlatform;
+import androidx.preference.PreferenceManager;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
@@ -72,8 +70,6 @@ public class MainActivity extends AppCompatActivity {
             );
     private ActivityMainBinding mBinding;
     private MainViewModel mainViewModel;
-    private StartupViewModel startupViewModel;
-    private ConsentInformation consentInformation;
     private NavController navController;
     private final SparseIntArray navOrder = new SparseIntArray();
     private int currentNavIndex;
@@ -106,25 +102,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!prefs.getBoolean(getString(R.string.key_onboarding_complete), false)) {
+            startActivity(new Intent(this, StartupActivity.class));
+            finish();
+            return;
+        }
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
 
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        startupViewModel = new ViewModelProvider(this).get(StartupViewModel.class);
-        consentInformation = UserMessagingPlatform.getConsentInformation(this);
-        ConsentRequestParameters params = new ConsentRequestParameters.Builder()
-                .setTagForUnderAgeOfConsent(false)
-                .build();
-        startupViewModel.requestConsentInfoUpdate(
-                this,
-                params,
-                () -> {
-                    if (consentInformation.isConsentFormAvailable()) {
-                        startupViewModel.loadConsentForm(this, null);
-                    }
-                },
-                null
-        );
 
         setupActionBar();
         observeViewModel();
@@ -135,10 +122,6 @@ public class MainActivity extends AppCompatActivity {
         String[] bottomNavBarLabelsValues = getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
         String[] defaultTabValues = getResources().getStringArray(R.array.preference_default_tab_values);
         mainViewModel.applySettings(themeValues, bottomNavBarLabelsValues, defaultTabValues);
-        if (mainViewModel.shouldShowStartupScreen()) {
-            mainViewModel.markStartupScreenShown();
-            showConsentDialog();
-        }
 
         launcherShortcuts();
 
@@ -302,12 +285,6 @@ public class MainActivity extends AppCompatActivity {
         appUpdateNotificationsManager = new AppUpdateNotificationsManager(this);
     }
 
-    private void showConsentDialog() {
-        ConsentDialogFragment dialog = new ConsentDialogFragment();
-        dialog.setConsentListener((analytics, adStorage, adUserData, adPersonalization) ->
-                ConsentUtils.updateFirebaseConsent(this, analytics, adStorage, adUserData, adPersonalization));
-        dialog.show(getSupportFragmentManager(), "consent_dialog");
-    }
 
     @Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {

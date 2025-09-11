@@ -40,21 +40,25 @@
         <activity
             android:name=".ui.screens.startup.StartupActivity"
             android:exported="true"
-            android:theme="@style/SplashScreenTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/SplashScreenTheme" />
 
         <activity
             android:name=".ui.screens.main.MainActivity"
             android:exported="true"
             android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <meta-data
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
+
+        <activity
+            android:name=".ui.screens.onboarding.OnboardingActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name="com.mikepenz.aboutlibraries.ui.LibsActivity"

@@ -338,6 +338,10 @@
     <string name="summary_preference_permissions_access_network_state">Allows the app to check network connectivity and retrieve information about Wi-Fi, including enabled status and connected Wi-Fi device names.</string>
     <string name="summary_preference_permissions_billing">Allows the app to use the Google Play Billing Library to handle in-app purchases and donations.</string>
     <string name="summary_preference_permissions_check_license">Allows the app to verify its compliance with the license agreement and enforce licensing terms to protect intellectual property.</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+    <string name="bottom_navigation_labels">Bottom navigation labels</string>
+    <string name="data_dialog_message">We collect data to improve your experience.</string>
     <string name="summary_preference_permissions_access_notification_policy">Allows the app to access and modify the device\'s notification policy, controlling how and when notifications are displayed to the user and providing custom notification management features.</string>
     <string name="summary_preference_permissions_foreground_service">Allows the app to create and use services that run in the foreground, giving them priority over other background processes and improving performance and reliability.</string>
     <string name="summary_preference_settings_language">Set application language.</string>

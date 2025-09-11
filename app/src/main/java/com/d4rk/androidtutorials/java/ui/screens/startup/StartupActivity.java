@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityStartupBinding;
-import com.d4rk.androidtutorials.java.ui.screens.main.MainActivity;
+import com.d4rk.androidtutorials.java.ui.screens.onboarding.OnboardingActivity;
 import com.google.android.ump.ConsentRequestParameters;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 
@@ -41,7 +41,7 @@ public class StartupActivity extends AppCompatActivity {
         );
 
         binding.floatingButtonAgree.setOnClickListener(v -> {
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, OnboardingActivity.class));
             finish();
         });
     }
