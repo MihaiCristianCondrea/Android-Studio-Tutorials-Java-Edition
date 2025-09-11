@@ -1,18 +1,24 @@
 package com.d4rk.androidtutorials.java.ui.screens.android;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
+import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView;
+import com.google.android.gms.ads.AdRequest;
 
 public class AndroidStudioFragment extends PreferenceFragmentCompat {
 
@@ -25,6 +31,21 @@ public class AndroidStudioFragment extends PreferenceFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.preferences_android_studio, rootKey);
+    }
+
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_android_studio, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        NativeAdBannerView nativeAdView = view.findViewById(R.id.native_ad_view);
+        if (nativeAdView != null) {
+            nativeAdView.loadAd(new AdRequest.Builder().build());
+        }
     }
 
     @Override
