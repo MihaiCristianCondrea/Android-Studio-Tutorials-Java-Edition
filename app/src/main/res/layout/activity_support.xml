@@ -126,15 +126,19 @@
                 android:id="@+id/support_native_ad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
                 app:nativeAdLayout="@layout/ad_support" />
 
             <com.google.android.gms.ads.AdView
                 android:id="@+id/banner_ad_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
                 ads:adSize="FULL_BANNER"
                 ads:adUnitId="@string/ad_banner_unit_id" />
         </androidx.appcompat.widget.LinearLayoutCompat>
