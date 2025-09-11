@@ -41,6 +41,7 @@ public class NativeAdLoader {
                     populateNativeAdView(nativeAd, adView);
                     container.removeAllViews();
                     container.addView(adView);
+                    container.requestLayout();
                 })
                 .build();
         adLoader.loadAd(new AdRequest.Builder().build());
