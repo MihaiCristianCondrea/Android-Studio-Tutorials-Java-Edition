@@ -125,21 +125,26 @@ public class AndroidStudioFragment extends Fragment {
 
     private void populateAdapter(List<Object> source) {
         List<Object> items = new ArrayList<>();
+        List<Integer> eligible = new ArrayList<>();
         int lessonCount = 0;
+        boolean firstInCategory = true;
         for (Object item : source) {
-            if (item instanceof Lesson) {
+            if (item instanceof Category) {
+                firstInCategory = true;
+            } else if (item instanceof Lesson) {
+                if (!firstInCategory) {
+                    eligible.add(lessonCount);
+                }
                 lessonCount++;
+                firstInCategory = false;
             }
         }
         int adCount = lessonCount / 3;
-        List<Integer> indices = new ArrayList<>();
-        for (int i = 0; i < lessonCount; i++) {
-            indices.add(i);
+        Collections.shuffle(eligible, new Random());
+        if (adCount > eligible.size()) {
+            adCount = eligible.size();
         }
-        Collections.shuffle(indices, new Random());
-        indices = indices.subList(0, adCount);
-        Collections.sort(indices);
-        Set<Integer> adPositions = new HashSet<>(indices);
+        Set<Integer> adPositions = new HashSet<>(eligible.subList(0, adCount));
         int lessonIndex = 0;
         for (Object item : source) {
             if (item instanceof Lesson) {

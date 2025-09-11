@@ -10,8 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewBottomRounded">
 
         <LinearLayout
@@ -25,7 +23,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
