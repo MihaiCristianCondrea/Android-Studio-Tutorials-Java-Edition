@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewBottomRounded">
+        app:cardCornerRadius="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,8 +27,8 @@
                 android:gravity="center_vertical">
 
                 <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="16dp">
 
                     <com.google.android.gms.ads.nativead.MediaView

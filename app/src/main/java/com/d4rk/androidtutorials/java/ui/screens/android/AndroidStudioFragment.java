@@ -1,9 +1,12 @@
 package com.d4rk.androidtutorials.java.ui.screens.android;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.XmlResourceParser;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -26,6 +29,9 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.shape.CornerFamily;
+import com.google.android.material.shape.ShapeAppearanceModel;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -60,6 +66,7 @@ public class AndroidStudioFragment extends Fragment {
         list.setLayoutManager(new LinearLayoutManager(requireContext()));
         adapter = new LessonsAdapter();
         list.setAdapter(adapter);
+        list.addItemDecoration(new LessonAdSpacingDecoration(requireContext()));
         allItems.clear();
         allItems.addAll(loadItems());
         populateAdapter(allItems);
@@ -235,10 +242,32 @@ public class AndroidStudioFragment extends Fragment {
         int iconRes;
     }
 
+    private static class LessonAdSpacingDecoration extends RecyclerView.ItemDecoration {
+        private final int spacing;
+
+        LessonAdSpacingDecoration(@NonNull Context context) {
+            spacing = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2,
+                    context.getResources().getDisplayMetrics());
+        }
+
+        @Override
+        public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,
+                                   @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+            RecyclerView.Adapter<?> adapter = parent.getAdapter();
+            if (!(adapter instanceof LessonsAdapter)) return;
+            int position = parent.getChildAdapterPosition(view);
+            if (position == RecyclerView.NO_POSITION) return;
+            int type = ((LessonsAdapter) adapter).getItemViewType(position);
+            if (type == LessonsAdapter.TYPE_LESSON || type == LessonsAdapter.TYPE_AD) {
+                outRect.bottom = spacing;
+            }
+        }
+    }
+
     private static class LessonsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-        private static final int TYPE_LESSON = 0;
-        private static final int TYPE_AD = 1;
-        private static final int TYPE_CATEGORY = 2;
+        static final int TYPE_LESSON = 0;
+        static final int TYPE_AD = 1;
+        static final int TYPE_CATEGORY = 2;
         private final List<Object> items = new ArrayList<>();
 
         void setItems(List<Object> newItems) {
@@ -292,7 +321,9 @@ public class AndroidStudioFragment extends Fragment {
                 ((CategoryHolder) holder).bind(category);
             } else {
                 Lesson lesson = (Lesson) items.get(position);
-                ((LessonHolder) holder).bind(lesson);
+                boolean first = position > 0 && getItemViewType(position - 1) == TYPE_CATEGORY;
+                boolean last = position == getItemCount() - 1 || getItemViewType(position + 1) == TYPE_CATEGORY;
+                ((LessonHolder) holder).bind(lesson, first, last);
             }
         }
 
@@ -310,18 +341,20 @@ public class AndroidStudioFragment extends Fragment {
         }
 
         static class LessonHolder extends RecyclerView.ViewHolder {
+            final MaterialCardView card;
             final ImageView icon;
             final TextView title;
             final TextView summary;
 
             LessonHolder(@NonNull View itemView) {
                 super(itemView);
+                card = (MaterialCardView) itemView;
                 icon = itemView.findViewById(R.id.lesson_icon);
                 title = itemView.findViewById(R.id.lesson_title);
                 summary = itemView.findViewById(R.id.lesson_summary);
             }
 
-            void bind(Lesson lesson) {
+            void bind(Lesson lesson, boolean first, boolean last) {
                 if (lesson.iconRes != 0) {
                     icon.setImageResource(lesson.iconRes);
                     icon.setVisibility(View.VISIBLE);
@@ -340,6 +373,20 @@ public class AndroidStudioFragment extends Fragment {
                         v.getContext().startActivity(lesson.intent);
                     }
                 });
+                applyCorners(first, last);
+            }
+
+            private void applyCorners(boolean first, boolean last) {
+                float dp4 = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4,
+                        itemView.getResources().getDisplayMetrics());
+                float dp24 = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24,
+                        itemView.getResources().getDisplayMetrics());
+                ShapeAppearanceModel.Builder builder = card.getShapeAppearanceModel().toBuilder()
+                        .setTopLeftCorner(CornerFamily.ROUNDED, first ? dp24 : dp4)
+                        .setTopRightCorner(CornerFamily.ROUNDED, first ? dp24 : dp4)
+                        .setBottomLeftCorner(CornerFamily.ROUNDED, last ? dp24 : dp4)
+                        .setBottomRightCorner(CornerFamily.ROUNDED, last ? dp24 : dp4);
+                card.setShapeAppearanceModel(builder.build());
             }
         }
 
