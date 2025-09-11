@@ -4,8 +4,6 @@ plugins {
     id 'com.google.firebase.crashlytics'
     id 'com.mikepenz.aboutlibraries.plugin'
     id 'com.google.dagger.hilt.android'
-    id 'org.jetbrains.kotlin.android'
-    id 'org.jetbrains.kotlin.kapt'
 }
 
 android {
@@ -42,18 +40,9 @@ android {
         targetCompatibility JavaVersion.VERSION_21
     }
 
-    kotlinOptions {
-        jvmTarget = '21'
-    }
-
     buildFeatures {
         viewBinding true
         buildConfig true
-        compose true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion '1.5.11'
     }
 
     bundle {
@@ -96,9 +85,6 @@ dependencies {
     implementation libs.androidx.lifecycle.livedata
     implementation libs.androidx.lifecycle.viewmodel
     implementation libs.androidx.multidex
-
-    implementation libs.kotlinx.serialization.json
-
     implementation libs.aboutlibraries
     implementation libs.core
 
@@ -108,18 +94,12 @@ dependencies {
     implementation libs.codeview
     implementation libs.hilt.android
     annotationProcessor libs.hilt.compiler
-    kapt libs.hilt.compiler
     implementation libs.androidx.room.runtime
     annotationProcessor libs.androidx.room.compiler
     annotationProcessor libs.glide.compiler
     implementation libs.retrofit2
     implementation libs.retrofit2.converter.gson
 
-    implementation platform(libs.compose.bom)
-    implementation libs.compose.ui
-    implementation libs.compose.material3
-    implementation libs.compose.foundation
-    implementation libs.compose.activity
 
     // Testing
     testImplementation libs.junit

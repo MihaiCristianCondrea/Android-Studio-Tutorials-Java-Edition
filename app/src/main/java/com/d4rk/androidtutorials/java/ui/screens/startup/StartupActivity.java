@@ -9,12 +9,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityStartupBinding;
 import com.d4rk.androidtutorials.java.ui.screens.main.MainActivity;
-import com.d4rk.androidtutorials.java.ui.screens.onboarding.OnboardingActivity;
-import com.d4rk.androidtutorials.java.data.repository.OnboardingRepository;
 import com.google.android.ump.ConsentRequestParameters;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
-
-import javax.inject.Inject;
 
 import dagger.hilt.android.AndroidEntryPoint;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
@@ -22,20 +18,11 @@ import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 @AndroidEntryPoint
 public class StartupActivity extends AppCompatActivity {
 
-    @Inject
-    OnboardingRepository onboardingRepository;
-
     private StartupViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (onboardingRepository.isOnboardingComplete()) {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-            return;
-        }
-
         ActivityStartupBinding binding = ActivityStartupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -54,7 +41,7 @@ public class StartupActivity extends AppCompatActivity {
         );
 
         binding.floatingButtonAgree.setOnClickListener(v -> {
-            startActivity(new Intent(this, OnboardingActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             finish();
         });
     }

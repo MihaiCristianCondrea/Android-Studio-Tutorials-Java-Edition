@@ -472,7 +472,4 @@
     <string name="fetch_data">Fetch data</string>
     <string name="summary_preference_android_studio_retrofit">Make HTTP requests with Retrofit.</string>
     <string name="summary_retrofit">Retrofit is a type-safe HTTP client for Android and Java. This example fetches data from a web service.</string>
-    <string name="next">Next</string>
-    <string name="back">Back</string>
-    <string name="finish">Finish</string>
 </resources>

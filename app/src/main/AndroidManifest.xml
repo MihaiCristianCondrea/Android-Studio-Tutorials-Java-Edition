@@ -57,10 +57,6 @@
         </activity>
 
         <activity
-            android:name=".ui.screens.onboarding.OnboardingActivity"
-            android:exported="false" />
-
-        <activity
             android:name="com.mikepenz.aboutlibraries.ui.LibsActivity"
             android:exported="false"
             android:theme="@style/AppTheme" />

@@ -20,5 +20,4 @@
     <string name="key_consent_ad_storage" translatable="false">consent_ad_storage</string>
     <string name="key_consent_ad_user_data" translatable="false">consent_ad_user_data</string>
     <string name="key_consent_ad_personalization" translatable="false">consent_ad_personalization</string>
-    <string name="key_onboarding_complete" translatable="false">onboarding_complete</string>
 </resources>
