@@ -35,6 +35,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        ads:adSize="BANNER"
+        ads:adSize="FULL_BANNER"
         ads:adUnitId="@string/ad_banner_unit_id" />
 </androidx.constraintlayout.widget.ConstraintLayout>
