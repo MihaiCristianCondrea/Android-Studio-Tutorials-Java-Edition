@@ -77,7 +77,9 @@ public class NativeAdLoader {
         ImageView iconView = adView.findViewById(R.id.ad_app_icon);
         TextView attributionView = adView.findViewById(R.id.ad_attribution);
 
-        adView.setMediaView(mediaView);
+        if (mediaView != null) {
+            adView.setMediaView(mediaView);
+        }
         adView.setHeadlineView(headlineView);
         adView.setBodyView(bodyView);
         adView.setCallToActionView(callToActionView);
