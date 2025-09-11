@@ -36,6 +36,7 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.ShapeAppearanceModel;
+import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -54,6 +55,7 @@ public class AndroidStudioFragment extends Fragment {
     private static boolean mobileAdsInitialized = false;
     private final List<Object> allItems = new ArrayList<>();
     private LessonsAdapter adapter;
+    private boolean showAds;
 
     @Nullable
     @Override
@@ -65,15 +67,20 @@ public class AndroidStudioFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ensureMobileAdsInitialized();
+        showAds = ConsentUtils.canShowAds(requireContext());
+        if (showAds) {
+            ensureMobileAdsInitialized();
+        }
         RecyclerView list = view.findViewById(R.id.lessons_list);
         list.setLayoutManager(new LinearLayoutManager(requireContext()));
         adapter = new LessonsAdapter();
         list.setAdapter(adapter);
-        list.addItemDecoration(new LessonAdSpacingDecoration(requireContext()));
+        if (showAds) {
+            list.addItemDecoration(new LessonAdSpacingDecoration(requireContext()));
+        }
         allItems.clear();
         allItems.addAll(loadItems());
-        populateAdapter(allItems);
+        populateAdapter(allItems, showAds);
 
         MenuHost menuHost = requireActivity();
         menuHost.addMenuProvider(new MenuProvider() {
@@ -87,14 +94,14 @@ public class AndroidStudioFragment extends Fragment {
                     searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                         @Override
                         public boolean onQueryTextSubmit(String query) {
-                            filterLessons(query);
-                            return true;
+            filterLessons(query);
+            return true;
                         }
 
                         @Override
                         public boolean onQueryTextChange(String newText) {
-                            filterLessons(newText);
-                            return true;
+            filterLessons(newText);
+            return true;
                         }
                     });
                 }
@@ -174,7 +181,7 @@ public class AndroidStudioFragment extends Fragment {
         return items;
     }
 
-    private void populateAdapter(List<Object> source) {
+    private void populateAdapter(List<Object> source, boolean showAds) {
         List<Object> items = new ArrayList<>();
         List<Integer> eligible = new ArrayList<>();
         int lessonCount = 0;
@@ -190,7 +197,7 @@ public class AndroidStudioFragment extends Fragment {
                 firstInCategory = false;
             }
         }
-        int adCount = lessonCount / 3;
+        int adCount = showAds ? lessonCount / 3 : 0;
         Collections.shuffle(eligible, new Random());
         if (adCount > eligible.size()) {
             adCount = eligible.size();
@@ -214,7 +221,7 @@ public class AndroidStudioFragment extends Fragment {
     private void filterLessons(String query) {
         String lower = query == null ? "" : query.toLowerCase();
         if (lower.isEmpty()) {
-            populateAdapter(allItems);
+        populateAdapter(allItems, showAds);
             return;
         }
         List<Object> filtered = new ArrayList<>();
@@ -234,7 +241,7 @@ public class AndroidStudioFragment extends Fragment {
                 }
             }
         }
-        populateAdapter(filtered);
+        populateAdapter(filtered, showAds);
     }
 
     private static class AdItem {}
