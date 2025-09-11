@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.d4rk.androidtutorials.java.databinding.FragmentHomeBinding;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -29,7 +30,6 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
-        initializeAds();
         return binding.getRoot();
     }
 
@@ -37,6 +37,7 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+        initializeAds();
         homeViewModel.setAnnouncements(
                 getString(com.d4rk.androidtutorials.java.R.string.announcement_title),
                 getString(com.d4rk.androidtutorials.java.R.string.announcement_subtitle)
@@ -84,9 +85,17 @@ public class HomeFragment extends Fragment {
     }
 
     private void initializeAds() {
-        MobileAds.initialize(requireContext());
-        binding.smallBannerAd.loadAd(new AdRequest.Builder().build());
-        binding.largeBannerAd.loadAd(new AdRequest.Builder().build());
+        if (ConsentUtils.canShowAds(requireContext())) {
+            MobileAds.initialize(requireContext());
+            binding.smallBannerAd.setVisibility(View.VISIBLE);
+            binding.largeBannerAd.setVisibility(View.VISIBLE);
+            AdRequest request = new AdRequest.Builder().build();
+            binding.smallBannerAd.loadAd(request);
+            binding.largeBannerAd.loadAd(request);
+        } else {
+            binding.smallBannerAd.setVisibility(View.GONE);
+            binding.largeBannerAd.setVisibility(View.GONE);
+        }
     }
 
     private void shareTip(String tip) {
