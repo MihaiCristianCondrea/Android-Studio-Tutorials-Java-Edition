@@ -30,7 +30,8 @@ public class SupportActivity extends BaseActivity {
         supportViewModel = new ViewModelProvider(this).get(SupportViewModel.class);
 
         AdRequest adRequest = supportViewModel.initMobileAds();
-        binding.largeBannerAd.loadAd(adRequest);
+        binding.supportNativeAd.loadAd(adRequest);
+        binding.bannerAdView.loadAd(adRequest);
 
         binding.buttonWebAd.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/3p8bpjj"))));
