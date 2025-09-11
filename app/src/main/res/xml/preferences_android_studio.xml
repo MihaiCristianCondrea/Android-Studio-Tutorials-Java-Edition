@@ -14,7 +14,6 @@
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
-    <com.d4rk.androidtutorials.java.ads.preferences.NativeAdPreference/>
     <androidx.preference.PreferenceCategory
         app:icon="@drawable/ic_category_build_tinted"
         app:title="@string/basics">

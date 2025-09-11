@@ -13,6 +13,12 @@ import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.ads.preferences.NativeAdPreference;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 public class AndroidStudioFragment extends PreferenceFragmentCompat {
 
@@ -25,6 +31,55 @@ public class AndroidStudioFragment extends PreferenceFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.preferences_android_studio, rootKey);
+
+        PreferenceScreen screen = getPreferenceScreen();
+        if (screen == null) {
+            return;
+        }
+
+        List<PreferenceCategory> categories = new ArrayList<>();
+        for (int i = 0; i < screen.getPreferenceCount(); i++) {
+            Preference pref = screen.getPreference(i);
+            if (pref instanceof PreferenceCategory category) {
+                categories.add(category);
+            }
+        }
+
+        int lessonCount = 0;
+        for (PreferenceCategory category : categories) {
+            lessonCount += category.getPreferenceCount();
+        }
+
+        int adCount = lessonCount / 3;
+        if (adCount <= 0) {
+            return;
+        }
+
+        List<Integer> adPositions = new ArrayList<>();
+        for (int i = 0; i < lessonCount; i++) {
+            adPositions.add(i);
+        }
+        Collections.shuffle(adPositions, new Random());
+        adPositions = adPositions.subList(0, adCount);
+        Collections.sort(adPositions);
+
+        int nextAd = 0;
+        int current = 0;
+        for (PreferenceCategory category : categories) {
+            List<Preference> originals = new ArrayList<>();
+            for (int i = 0; i < category.getPreferenceCount(); i++) {
+                originals.add(category.getPreference(i));
+            }
+            category.removeAll();
+            for (Preference lesson : originals) {
+                if (nextAd < adPositions.size() && current == adPositions.get(nextAd)) {
+                    category.addPreference(new NativeAdPreference(requireContext()));
+                    nextAd++;
+                }
+                category.addPreference(lesson);
+                current++;
+            }
+        }
     }
 
     @Override
@@ -84,7 +139,13 @@ public class AndroidStudioFragment extends PreferenceFragmentCompat {
             category.setVisible(visible);
             return visible;
         } else {
-            boolean matches = pref.getTitle().toString().toLowerCase().contains(query);
+            CharSequence title = pref.getTitle();
+            if (title == null) {
+                boolean visible = query.isEmpty();
+                pref.setVisible(visible);
+                return visible;
+            }
+            boolean matches = title.toString().toLowerCase().contains(query);
             pref.setVisible(matches);
             return matches;
         }

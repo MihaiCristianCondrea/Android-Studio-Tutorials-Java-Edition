@@ -20,6 +20,7 @@ public class NativeAdPreference extends Preference {
     public NativeAdPreference(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         setLayoutResource(R.layout.native_ad_preference);
+        setSelectable(false);
     }
 
     public NativeAdPreference(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
