@@ -24,7 +24,6 @@ import java.util.List;
 public class HomeViewModel extends ViewModel {
 
     private final GetDailyTipUseCase getDailyTipUseCase;
-    private final GetPromotedAppsUseCase getPromotedAppsUseCase;
     private final GetPlayStoreUrlUseCase getPlayStoreUrlUseCase;
     private final GetAppPlayStoreUrlUseCase getAppPlayStoreUrlUseCase;
 
@@ -37,7 +36,6 @@ public class HomeViewModel extends ViewModel {
                          GetPlayStoreUrlUseCase getPlayStoreUrlUseCase,
                          GetAppPlayStoreUrlUseCase getAppPlayStoreUrlUseCase) {
         this.getDailyTipUseCase = getDailyTipUseCase;
-        this.getPromotedAppsUseCase = getPromotedAppsUseCase;
         this.getPlayStoreUrlUseCase = getPlayStoreUrlUseCase;
         this.getAppPlayStoreUrlUseCase = getAppPlayStoreUrlUseCase;
 
