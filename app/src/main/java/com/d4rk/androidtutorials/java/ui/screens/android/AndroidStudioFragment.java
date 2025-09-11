@@ -33,13 +33,15 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class AndroidStudioFragment extends Fragment {
 
     private static boolean mobileAdsInitialized = false;
-    private final List<Lesson> allLessons = new ArrayList<>();
+    private final List<Object> allItems = new ArrayList<>();
     private LessonsAdapter adapter;
 
     @Nullable
@@ -58,9 +60,9 @@ public class AndroidStudioFragment extends Fragment {
         list.setLayoutManager(new LinearLayoutManager(requireContext()));
         adapter = new LessonsAdapter();
         list.setAdapter(adapter);
-        allLessons.clear();
-        allLessons.addAll(loadLessons());
-        populateAdapter(allLessons);
+        allItems.clear();
+        allItems.addAll(loadItems());
+        populateAdapter(allItems);
     }
 
     private void ensureMobileAdsInitialized() {
@@ -70,23 +72,29 @@ public class AndroidStudioFragment extends Fragment {
         }
     }
 
-    private List<Lesson> loadLessons() {
-        List<Lesson> lessons = new ArrayList<>();
+    private List<Object> loadItems() {
+        List<Object> items = new ArrayList<>();
         XmlResourceParser parser = getResources().getXml(R.xml.preferences_android_studio);
         try {
             int event = parser.getEventType();
-            Lesson current = null;
+            Lesson currentLesson = null;
             while (event != XmlPullParser.END_DOCUMENT) {
                 if (event == XmlPullParser.START_TAG) {
                     String name = parser.getName();
-                    if (name.endsWith("Preference") && !name.endsWith("PreferenceCategory")) {
-                        current = new Lesson();
+                    if (name.endsWith("PreferenceCategory")) {
+                        Category category = new Category();
                         int titleRes = parser.getAttributeResourceValue("http://schemas.android.com/apk/res-auto", "title", 0);
-                        if (titleRes != 0) current.title = getString(titleRes);
+                        if (titleRes != 0) category.title = getString(titleRes);
+                        category.iconRes = parser.getAttributeResourceValue("http://schemas.android.com/apk/res-auto", "icon", 0);
+                        items.add(category);
+                    } else if (name.endsWith("Preference") && !name.endsWith("PreferenceCategory")) {
+                        currentLesson = new Lesson();
+                        int titleRes = parser.getAttributeResourceValue("http://schemas.android.com/apk/res-auto", "title", 0);
+                        if (titleRes != 0) currentLesson.title = getString(titleRes);
                         int summaryRes = parser.getAttributeResourceValue("http://schemas.android.com/apk/res-auto", "summary", 0);
-                        if (summaryRes != 0) current.summary = getString(summaryRes);
-                        current.iconRes = parser.getAttributeResourceValue("http://schemas.android.com/apk/res-auto", "icon", 0);
-                    } else if ("intent".equals(name) && current != null) {
+                        if (summaryRes != 0) currentLesson.summary = getString(summaryRes);
+                        currentLesson.iconRes = parser.getAttributeResourceValue("http://schemas.android.com/apk/res-auto", "icon", 0);
+                    } else if ("intent".equals(name) && currentLesson != null) {
                         Intent intent = new Intent();
                         String action = parser.getAttributeValue("http://schemas.android.com/apk/res/android", "action");
                         if (action != null) intent.setAction(action);
@@ -97,13 +105,13 @@ public class AndroidStudioFragment extends Fragment {
                         }
                         String data = parser.getAttributeValue("http://schemas.android.com/apk/res/android", "data");
                         if (data != null) intent.setData(Uri.parse(data));
-                        current.intent = intent;
+                        currentLesson.intent = intent;
                     }
                 } else if (event == XmlPullParser.END_TAG) {
                     String name = parser.getName();
-                    if (current != null && name.endsWith("Preference") && !name.endsWith("PreferenceCategory")) {
-                        lessons.add(current);
-                        current = null;
+                    if (currentLesson != null && name.endsWith("Preference") && !name.endsWith("PreferenceCategory")) {
+                        items.add(currentLesson);
+                        currentLesson = null;
                     }
                 }
                 event = parser.next();
@@ -112,26 +120,37 @@ public class AndroidStudioFragment extends Fragment {
         } finally {
             parser.close();
         }
-        return lessons;
+        return items;
     }
 
-    private void populateAdapter(List<Lesson> lessons) {
+    private void populateAdapter(List<Object> source) {
         List<Object> items = new ArrayList<>();
-        int adCount = lessons.size() / 3;
-        List<Integer> positions = new ArrayList<>();
-        for (int i = 0; i < lessons.size(); i++) {
-            positions.add(i);
-        }
-        Collections.shuffle(positions, new Random());
-        positions = positions.subList(0, adCount);
-        Collections.sort(positions);
-        int adIndex = 0;
-        for (int i = 0; i < lessons.size(); i++) {
-            if (adIndex < positions.size() && i == positions.get(adIndex)) {
-                items.add(new AdItem());
-                adIndex++;
+        int lessonCount = 0;
+        for (Object item : source) {
+            if (item instanceof Lesson) {
+                lessonCount++;
             }
-            items.add(lessons.get(i));
+        }
+        int adCount = lessonCount / 3;
+        List<Integer> indices = new ArrayList<>();
+        for (int i = 0; i < lessonCount; i++) {
+            indices.add(i);
+        }
+        Collections.shuffle(indices, new Random());
+        indices = indices.subList(0, adCount);
+        Collections.sort(indices);
+        Set<Integer> adPositions = new HashSet<>(indices);
+        int lessonIndex = 0;
+        for (Object item : source) {
+            if (item instanceof Lesson) {
+                if (adPositions.contains(lessonIndex)) {
+                    items.add(new AdItem());
+                }
+                items.add(item);
+                lessonIndex++;
+            } else {
+                items.add(item);
+            }
         }
         adapter.setItems(items);
     }
@@ -172,10 +191,26 @@ public class AndroidStudioFragment extends Fragment {
 
     private void filterLessons(String query) {
         String lower = query == null ? "" : query.toLowerCase();
-        List<Lesson> filtered = new ArrayList<>();
-        for (Lesson l : allLessons) {
-            if (l.title != null && l.title.toLowerCase().contains(lower)) {
-                filtered.add(l);
+        if (lower.isEmpty()) {
+            populateAdapter(allItems);
+            return;
+        }
+        List<Object> filtered = new ArrayList<>();
+        Category lastCategory = null;
+        boolean categoryAdded = false;
+        for (Object item : allItems) {
+            if (item instanceof Category) {
+                lastCategory = (Category) item;
+                categoryAdded = false;
+            } else if (item instanceof Lesson) {
+                Lesson l = (Lesson) item;
+                if (l.title != null && l.title.toLowerCase().contains(lower)) {
+                    if (lastCategory != null && !categoryAdded) {
+                        filtered.add(lastCategory);
+                        categoryAdded = true;
+                    }
+                    filtered.add(l);
+                }
             }
         }
         populateAdapter(filtered);
@@ -190,9 +225,15 @@ public class AndroidStudioFragment extends Fragment {
         Intent intent;
     }
 
+    private static class Category {
+        String title;
+        int iconRes;
+    }
+
     private static class LessonsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         private static final int TYPE_LESSON = 0;
         private static final int TYPE_AD = 1;
+        private static final int TYPE_CATEGORY = 2;
         private final List<Object> items = new ArrayList<>();
 
         void setItems(List<Object> newItems) {
@@ -204,7 +245,9 @@ public class AndroidStudioFragment extends Fragment {
         @Override
         public int getItemViewType(int position) {
             Object item = items.get(position);
-            return item instanceof Lesson ? TYPE_LESSON : TYPE_AD;
+            if (item instanceof Lesson) return TYPE_LESSON;
+            if (item instanceof Category) return TYPE_CATEGORY;
+            return TYPE_AD;
         }
 
         @NonNull
@@ -217,6 +260,10 @@ public class AndroidStudioFragment extends Fragment {
                         ViewGroup.LayoutParams.WRAP_CONTENT));
                 adView.setNativeAdLayout(R.layout.android_studio_list_native_ad);
                 return new AdHolder(adView);
+            } else if (viewType == TYPE_CATEGORY) {
+                View view = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.android_studio_category_item, parent, false);
+                return new CategoryHolder(view);
             } else {
                 View view = LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.android_studio_lesson_item, parent, false);
@@ -226,7 +273,8 @@ public class AndroidStudioFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-            if (getItemViewType(position) == TYPE_AD) {
+            int type = getItemViewType(position);
+            if (type == TYPE_AD) {
                 AdHolder adHolder = (AdHolder) holder;
                 adHolder.adView.loadAd(new AdRequest.Builder().build(), new AdListener() {
                     @Override
@@ -234,6 +282,9 @@ public class AndroidStudioFragment extends Fragment {
                         adHolder.adView.setVisibility(View.GONE);
                     }
                 });
+            } else if (type == TYPE_CATEGORY) {
+                Category category = (Category) items.get(position);
+                ((CategoryHolder) holder).bind(category);
             } else {
                 Lesson lesson = (Lesson) items.get(position);
                 ((LessonHolder) holder).bind(lesson);
@@ -284,6 +335,27 @@ public class AndroidStudioFragment extends Fragment {
                         v.getContext().startActivity(lesson.intent);
                     }
                 });
+            }
+        }
+
+        static class CategoryHolder extends RecyclerView.ViewHolder {
+            final ImageView icon;
+            final TextView title;
+
+            CategoryHolder(@NonNull View itemView) {
+                super(itemView);
+                icon = itemView.findViewById(R.id.category_icon);
+                title = itemView.findViewById(R.id.category_title);
+            }
+
+            void bind(Category category) {
+                if (category.iconRes != 0) {
+                    icon.setImageResource(category.iconRes);
+                    icon.setVisibility(View.VISIBLE);
+                } else {
+                    icon.setVisibility(View.GONE);
+                }
+                title.setText(category.title);
             }
         }
     }
