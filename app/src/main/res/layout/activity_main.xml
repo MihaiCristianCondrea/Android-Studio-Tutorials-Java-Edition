@@ -56,7 +56,7 @@
         <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
             android:id="@+id/ad_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:nativeAdLayout="@layout/bottom_app_bar_native_ad" />
     </FrameLayout>
 
