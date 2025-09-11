@@ -20,7 +20,7 @@ import com.google.android.gms.ads.AdRequest;
  */
 public class NativeAdBannerView extends FrameLayout {
 
-    private int layoutRes = R.layout.large_home_banner_native_ad;
+    private int layoutRes = R.layout.ad_home_banner_large;
 
     public NativeAdBannerView(@NonNull Context context) {
         super(context);
@@ -40,7 +40,7 @@ public class NativeAdBannerView extends FrameLayout {
     private void init(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         if (attrs != null) {
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.NativeAdBannerView, defStyleAttr, 0);
-            layoutRes = a.getResourceId(R.styleable.NativeAdBannerView_nativeAdLayout, R.layout.large_home_banner_native_ad);
+            layoutRes = a.getResourceId(R.styleable.NativeAdBannerView_nativeAdLayout, R.layout.ad_home_banner_large);
             a.recycle();
         }
     }

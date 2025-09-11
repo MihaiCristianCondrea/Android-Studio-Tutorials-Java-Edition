@@ -57,7 +57,7 @@
             android:id="@+id/ad_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:nativeAdLayout="@layout/bottom_app_bar_native_ad" />
+            app:nativeAdLayout="@layout/ad_bottom_app_bar" />
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
