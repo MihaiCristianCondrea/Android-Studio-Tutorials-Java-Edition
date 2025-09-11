@@ -13,11 +13,8 @@
     <string name="agree">同意</string>
     <string name="home">首頁</string>
     <string name="announcement_title">新應用程式來了！</string>
-    <string name="announcement_subtitle">快來看看最新的 Android Studio 教學應用程式。學習 Jetpack Compose、Material 3 等等。</string>
     <string name="profile_picture_desc">開發人員個人資料圖片</string>
     <string name="main_card_title">探索 Android Studio 教學</string>
-    <string name="main_card_subtitle">包含 Kotlin 和 Java 版本</string>
-    <string name="main_card_description">Kotlin 版本已更新，增加了動態課程、AI 助理等功能。體驗 Android 開發的未來！</string>
     <string name="get_on_google_play">在 Google Play 上取得</string>
     <string name="learn_more">瞭解更多</string>
     <string name="play_store">Play 商店</string>
@@ -370,8 +367,6 @@
     <string name="summary_linear_layout_compat">Linear Layout Compat 是 Android 支援函式庫 appCompat v7 中的一個類別。它被加入以支援在較舊的 API 等級上新增於較新 API 等級的方法（如分隔線）。如果您比較 LinearLayout 和 LinearLayoutCompat 中的方法，您會發現 Compat 版面配置擁有 Linear Layout 的所有方法，且沒有任何 API 等級限制。例如，setShowDividers 方法是在 API 等級 11 中引入的。因此，在這種情況下，如果您針對 API 等級低於 11 的平台，則應使用 Linear Layout Compat 而非 LinearLayout 來調用 setShowDividers（及其參數）。</string>
     <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">透過這個互動式課程，學習如何在 Android 中使用進度列。本課程包括兩個部分：一個用於水平進度列，另一個用於圓形進度列。在每個部分，您都可以看到隨著下載進度，進度列如何更新。您還可以透過點擊螢幕底部的浮動操作按鈕來查看本課程的程式碼。</string>
-    <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android 是由 Google 開發的行動作業系統。它於 2007 年 11 月 5 日首次以 Beta 版本發布，而第一個商業版本 Android 1.0 則於 2008 年 9 月 23 日推出。Android 基於 Linux 核心的修改版本和其他開源軟體。\n\nAndroid Studio 是用於 Android 應用程式開發的官方整合開發環境 (IDE)。它由 Google 在 2013 年 5 月 15 日的 I/O 大會上宣布，並於 2014 年 12 月 8 日公開發布。Android Studio 基於流行的 Java IDE - IntelliJ IDEA。\n\nKotlin 是一種跨平台程式語言，可以在 Java 虛擬機器 (JVM)、Android、瀏覽器和原生平台上執行。它由位於布拉格的軟體公司 JetBrains 創建。Kotlin 於 2011 年 7 月首次宣布，並於 2012 年 2 月作為開源專案發布。\n\nGoogle 在 2017 年 5 月 17 日的 I/O 大會上宣布支持 Kotlin 作為 Android 應用程式開發的官方語言。從那時起，Kotlin 已成為 Android 開發人員最受歡迎的語言之一。根據 Google 2020 年 10 月的數據，Google Play 上排名前 1000 的應用程式中有超過 70% 使用 Kotlin。</string>
-    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">Chronometer 是 Android 框架中的一個專用小工具，提供類似計時器的功能來顯示經過的時間。它可以被設定為向上或向下計數，通常用於需要計時的應用程式中，例如碼錶或倒數計時器應用程式。Chronometer 類別源自 TextView 類別，這意味著它繼承了 TextView 的所有屬性和方法。這使得開發人員可以輕鬆地自訂 Chronometer 的外觀，包括其文字大小、顏色和字型。</string>
     <string name="snack_this_is_a_snackbar">這是一個 Snack bar！</string>
     <string name="snack_bar_clicked">已點擊</string>
@@ -421,13 +416,11 @@
     <string name="daily_tip_use_string_resources">對所有文字使用字串資源以簡化本地化。</string>
     <string name="daily_tip_optimize_webp">使用 WebP 優化圖像以減少 APK 大小。</string>
     <string name="daily_tip_enable_proguard">啟用 ProGuard 來縮減和混淆發布版本。</string>
-    <string name="daily_tip_prefer_compose">如果目標是現代裝置，請優先使用 Compose 建立新 UI。</string>
     <string name="daily_tip_livedata_viewmodel">利用 LiveData 和 ViewModel 實現響應式 UI。</string>
     <string name="daily_tip_workmanager">使用 WorkManager 執行可靠的背景任務。</string>
     <string name="daily_tip_github_actions">利用 GitHub Actions 進行自動化建置檢查。</string>
     <string name="daily_tip_emulator_screen_sizes">使用模擬器在不同螢幕尺寸上測試您的應用程式。</string>
     <string name="daily_tip_update_dependencies">保持依賴項更新以獲得最新的功能和修復。</string>
-    <string name="daily_tip_kotlin_coroutines">利用 Kotlin 協程進行非同步操作。</string>
     <string name="daily_tip_hilt">整合 Hilt 進行依賴注入。</string>
     <string name="daily_tip_unit_tests">使用 JUnit 和 Espresso 編寫單元測試。</string>
     <string name="daily_tip_mvvm">遵循 MVVM 架構以獲得可維護的程式碼。</string>

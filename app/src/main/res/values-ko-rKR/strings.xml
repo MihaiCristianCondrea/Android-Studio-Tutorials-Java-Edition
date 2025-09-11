@@ -13,11 +13,8 @@
     <string name="agree">동의</string>
     <string name="home">홈</string>
     <string name="announcement_title">새로운 앱이 출시되었습니다.</string>
-    <string name="announcement_subtitle">최신 Android Studio 튜토리얼 앱을 확인해보세요. Jetpack Compose, Material 3 등을 배워보세요.</string>
     <string name="profile_picture_desc">개발자 프로필 사진</string>
     <string name="main_card_title">Android Studio 튜토리얼 살펴보기</string>
-    <string name="main_card_subtitle">Kotlin 및 Java 에디션 제공</string>
-    <string name="main_card_description">Kotlin 에디션이 동적 강의, AI 어시스턴트 등으로 업데이트되었습니다. Android 개발의 미래를 경험해보세요.</string>
     <string name="get_on_google_play">Google Play에서 다운로드</string>
     <string name="learn_more">자세히 알아보기</string>
     <string name="play_store">Play 스토어</string>
@@ -370,8 +367,6 @@
     <string name="summary_linear_layout_compat">Linear Layout Compat은 Android 지원 라이브러리 appCompat v7의 클래스입니다. 이는 이전 버전에서 새로운 API 레벨에 추가된 메서드(예: 구분선)를 지원하기 위해 추가되었습니다. LinearLayout과 LinearLayoutCompat의 메서드를 비교하면 Compat 레이아웃이 API 레벨 제한 없이 Linear Layout의 모든 메서드를 가지고 있음을 알 수 있습니다. 예를 들어, setShowDividers 메서드는 API 레벨 11에서 도입되었습니다. 따라서 이 경우 API 레벨이 11 미만인 플랫폼을 대상으로 하는 경우 LinearLayout 대신 Linear Layout Compat을 사용하여 setShowDividers(및 해당 매개변수)를 호출해야 합니다.</string>
     <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">이 대화형 강의를 통해 Android에서 진행률 표시줄을 사용하는 방법을 배워보세요. 이 강의에는 수평 진행률 표시줄과 원형 진행률 표시줄의 두 섹션이 포함되어 있습니다. 각 섹션에서 다운로드가 진행됨에 따라 진행률 표시줄이 어떻게 업데이트되는지 볼 수 있습니다. 화면 하단의 플로팅 액션 버튼을 클릭하여 강의 코드를 볼 수도 있습니다.</string>
-    <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android는 Google이 개발한 모바일 운영 체제입니다. 2007년 11월 5일에 베타 버전으로 처음 출시되었으며, 2008년 9월 23일에 첫 상용 버전인 Android 1.0이 출시되었습니다. Android는 수정된 버전의 Linux 커널 및 기타 오픈 소스 소프트웨어를 기반으로 합니다.\n\nAndroid Studio는 Android 앱 개발을 위한 공식 통합 개발 환경(IDE)입니다. 2013년 5월 15일 Google I/O 컨퍼런스에서 발표되었으며, 2014년 12월 8일에 공개되었습니다. Android Studio는 인기 있는 Java IDE인 IntelliJ IDEA를 기반으로 합니다.\n\nKotlin은 Java 가상 머신(JVM), Android, 브라우저 및 네이티브 플랫폼에서 실행할 수 있는 크로스 플랫폼 프로그래밍 언어입니다. 프라하에 본사를 둔 소프트웨어 회사인 JetBrains에서 만들었습니다. Kotlin은 2011년 7월에 처음 발표되었으며, 2012년 2월에 오픈 소스 프로젝트로 출시되었습니다.\n\nGoogle은 2017년 5월 17일 I/O 컨퍼런스에서 Android 앱 개발을 위한 공식 언어로 Kotlin을 지원한다고 발표했습니다. 그 이후로 Kotlin은 Android 개발자들에게 가장 인기 있는 언어 중 하나가 되었습니다. 2020년 10월 Google 데이터에 따르면 Google Play 상위 1000개 앱 중 70% 이상이 Kotlin을 사용합니다.</string>
-    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">크로노미터는 경과 시간을 표시하기 위한 타이머와 같은 기능을 제공하는 Android 프레임워크의 특수 위젯입니다. 카운트 업 또는 카운트 다운하도록 구성할 수 있으며, 스톱워치 또는 카운트다운 타이머 앱과 같이 시간 기록이 필요한 애플리케이션에서 일반적으로 사용됩니다. 크로노미터 클래스는 TextView 클래스에서 파생되므로 TextView의 모든 속성과 메서드를 상속합니다. 이를 통해 개발자는 텍스트 크기, 색상 및 글꼴을 포함하여 크로노미터의 모양을 쉽게 사용자 정의할 수 있습니다.</string>
     <string name="snack_this_is_a_snackbar">이것은 스낵바입니다.</string>
     <string name="snack_bar_clicked">클릭됨</string>
@@ -421,13 +416,11 @@
     <string name="daily_tip_use_string_resources">현지화를 단순화하기 위해 모든 텍스트에 문자열 리소스를 사용하세요.</string>
     <string name="daily_tip_optimize_webp">APK 크기를 줄이기 위해 WebP로 이미지를 최적화하세요.</string>
     <string name="daily_tip_enable_proguard">릴리스 빌드를 축소하고 난독화하기 위해 ProGuard를 활성화하세요.</string>
-    <string name="daily_tip_prefer_compose">최신 기기를 대상으로 하는 경우 새로운 UI에 Compose를 선호하세요.</string>
     <string name="daily_tip_livedata_viewmodel">반응형 UI를 위해 LiveData와 ViewModel을 활용하세요.</string>
     <string name="daily_tip_workmanager">안정적인 백그라운드 작업을 위해 WorkManager를 사용하세요.</string>
     <string name="daily_tip_github_actions">자동화된 빌드 검사를 위해 GitHub Actions를 활용하세요.</string>
     <string name="daily_tip_emulator_screen_sizes">에뮬레이터로 다양한 화면 크기에서 앱을 테스트하세요.</string>
     <string name="daily_tip_update_dependencies">최신 기능과 수정 사항을 위해 종속성을 업데이트 상태로 유지하세요.</string>
-    <string name="daily_tip_kotlin_coroutines">비동기 작업을 위해 Kotlin 코루틴을 활용하세요.</string>
     <string name="daily_tip_hilt">종속성 주입을 위해 Hilt를 통합하세요.</string>
     <string name="daily_tip_unit_tests">JUnit과 Espresso로 단위 테스트를 작성하세요.</string>
     <string name="daily_tip_mvvm">유지보수가 용이한 코드를 위해 MVVM 아키텍처를 따르세요.</string>

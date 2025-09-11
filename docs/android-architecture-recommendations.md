@@ -21,7 +21,6 @@ Our recommended layered architecture favors separation of concerns. It drives th
 | **Use a clearly defined data layer.**<br/>Strongly recommended | The data layer exposes application data to the rest of the app and contains the vast majority of business logic of your app.<br/>You should create repositories even if they just contain a single data source.<br/>In small apps, you can choose to place data layer types in a `data` package or module. |
 | **Use a clearly defined UI layer.**<br/>Strongly recommended | The UI layer displays the application data on the screen and serves as the primary point of user interaction.<br/>In small apps, you can choose to place UI layer types in a `ui` package or module.<br/>More UI layer best practices here. |
 | **The data layer should expose application data using a repository.**<br/>Strongly recommended | Components in the UI layer such as Activities, Fragments, or ViewModels shouldn't interact directly with a data source. Examples of data sources are databases, SharedPreferences, Firebase APIs, GPS, Bluetooth, or network status providers. |
-| **Use coroutines and flows.**<br/>Strongly recommended | Use Kotlin coroutines and flows to communicate between layers. Java code can access these APIs through interoperability. |
 | **Use a domain layer.**<br/>Recommended in big apps | Use a domain layer (use cases) if you need to reuse business logic that interacts with the data layer across multiple ViewModels, or you want to simplify the business logic complexity of a particular ViewModel. |
 
 ## UI layer
@@ -32,10 +31,9 @@ The role of the UI layer is to display the application data on the screen and se
 | --- | --- |
 | **Follow Unidirectional Data Flow (UDF).**<br/>Strongly recommended | Follow UDF principles, where ViewModels expose UI state using the observer pattern and receive actions from the UI through method calls. |
 | **Use AAC ViewModels if their benefits apply to your app.**<br/>Strongly recommended | Use AndroidX ViewModels to handle business logic and fetch application data to expose UI state to the UI. |
-| **Use lifecycle-aware UI state collection.**<br/>Strongly recommended | Collect UI state from the UI using the appropriate lifecycle-aware coroutine builder: `repeatOnLifecycle` in the View system and `collectAsStateWithLifecycle` in Jetpack Compose. |
+| **Use lifecycle-aware UI state collection.**<br/>Strongly recommended | Collect UI state from the UI using lifecycle-aware APIs such as `repeatOnLifecycle`. |
 | **Do not send events from the ViewModel to the UI.**<br/>Strongly recommended | Process the event immediately in the ViewModel and cause a state update with the result of handling the event. |
-| **Use a single-activity application.**<br/>Recommended | Use Navigation Fragments or Navigation Compose to navigate between screens and deep link to your app if your app has more than one screen. |
-| **Use Jetpack Compose.**<br/>Recommended | Use Jetpack Compose to build new apps for phones, tablets, foldables, and Wear OS. Compose code lives in Kotlin but can be integrated with Java-based projects. |
+| **Use a single-activity application.**<br/>Recommended | Use Navigation Fragments to navigate between screens and deep link to your app if your app has more than one screen. |
 
 The following snippet outlines how to collect the UI state in a lifecycle-aware manner from a Java `Fragment`:
 
@@ -49,35 +47,9 @@ public class MyFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(this).get(MyViewModel.class);
 
-        LifecycleOwner owner = getViewLifecycleOwner();
-        LifecycleOwnerKt.getLifecycleScope(owner).launch(() ->
-            LifecycleKt.repeatOnLifecycle(owner.getLifecycle(), Lifecycle.State.STARTED, () ->
-                viewModel.getUiState().collect(value -> {
-                    // Process item
-                    return Unit.INSTANCE;
-                })
-            )
-        );
-    }
-}
-```
-
-```kotlin
-// Compose (Kotlin)
-class MyFragment : Fragment() {
-
-    private val viewModel: MyViewModel by viewModel()
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.uiState.collect {
-                    // Process item
-                }
-            }
-        }
+        viewModel.getUiState().observe(getViewLifecycleOwner(), value -> {
+            // Process item
+        });
     }
 }
 ```
@@ -89,11 +61,11 @@ ViewModels are responsible for providing the UI state and access to the data lay
 | Recommendation | Description |
 | --- | --- |
 | **ViewModels should be agnostic of the Android lifecycle.**<br/>Strongly recommended | ViewModels shouldn't hold a reference to any lifecycle-related type. Don't pass `Activity`, `Fragment`, `Context`, or `Resources` as a dependency. If something needs a `Context` in the ViewModel, evaluate if it is in the right layer. |
-| **Use coroutines and flows.**<br/>Strongly recommended | The ViewModel interacts with the data or domain layers using Kotlin flows for receiving application data and suspend functions to perform actions using `viewModelScope`. |
-| **Use ViewModels at screen level.**<br/>Strongly recommended | Do not use ViewModels in reusable pieces of UI. Use ViewModels in screen-level composables, Activities, Fragments, or destinations/graphs when using Jetpack Navigation. |
+| **Expose observable data.**<br/>Strongly recommended | Use `LiveData` or other observable classes to expose application data from the ViewModel. |
+| **Use ViewModels at screen level.**<br/>Strongly recommended | Do not use ViewModels in reusable pieces of UI. Use ViewModels in screen-level Activities, Fragments, or destinations/graphs when using Jetpack Navigation. |
 | **Use plain state holder classes in reusable UI components.**<br/>Strongly recommended | Use plain state holder classes for handling complexity in reusable UI components. By doing this, the state can be hoisted and controlled externally. |
 | **Do not use AndroidViewModel.**<br/>Recommended | Use the `ViewModel` class, not `AndroidViewModel`. The `Application` class shouldn't be used in the ViewModel. Instead, move the dependency to the UI or the data layer. |
-| **Expose a UI state.**<br/>Recommended | ViewModels should expose data to the UI through a single property called `uiState`. You should make `uiState` a `StateFlow`. Use the `stateIn` operator with the `WhileSubscribed(5000)` policy when the data comes as a stream. For simpler cases, expose a `MutableStateFlow` as an immutable `StateFlow`. |
+| **Expose a UI state.**<br/>Recommended | ViewModels should expose data to the UI through a single `LiveData` or other observable property representing the UI state. |
 
 The following snippet outlines how to expose UI state from a ViewModel in Java:
 
@@ -101,21 +73,15 @@ The following snippet outlines how to expose UI state from a ViewModel in Java:
 @HiltViewModel
 public class BookmarksViewModel extends ViewModel {
 
-    private final StateFlow<NewsFeedUiState> feedState;
+    private final MutableLiveData<NewsFeedUiState> feedState = new MutableLiveData<>();
 
     @Inject
     public BookmarksViewModel(NewsRepository newsRepository) {
-        feedState = newsRepository
-            .getNewsResourcesStream()
-            .mapToFeedState(savedNewsResourcesState)
-            .stateIn(
-                ViewModelKt.getViewModelScope(this),
-                SharingStarted.Companion.WhileSubscribed(5000),
-                NewsFeedUiState.Loading
-            );
+        feedState.setValue(NewsFeedUiState.loading());
+        // fetch data from repository and post updates
     }
 
-    public StateFlow<NewsFeedUiState> getFeedState() {
+    public LiveData<NewsFeedUiState> getFeedState() {
         return feedState;
     }
 }
@@ -168,9 +134,9 @@ The following are some best practices for testing:
 
 | Recommendation | Description |
 | --- | --- |
-| **Know what to test.**<br/>Strongly recommended | Unless the project is roughly as simple as a hello world app, you should test it, at minimum with: unit test ViewModels (including flows), unit test data layer entities (repositories and data sources), and UI navigation tests that are useful as regression tests in CI. |
+| **Know what to test.**<br/>Strongly recommended | Unless the project is roughly as simple as a hello world app, you should test it, at minimum with: unit test ViewModels (including observable data), unit test data layer entities (repositories and data sources), and UI navigation tests that are useful as regression tests in CI. |
 | **Prefer fakes to mocks.**<br/>Strongly recommended | Read more in the “Use test doubles in Android” documentation. |
-| **Test StateFlows.**<br/>Strongly recommended | When testing `StateFlow`, assert on the `value` property whenever possible. Create a collectJob if using `WhileSubscribed`. For more information, check the “What to test in Android” guide. |
+| **Test LiveData.**<br/>Strongly recommended | When testing `LiveData`, observe it and assert on emitted values. |
 
 ## Models
 
@@ -188,5 +154,5 @@ When naming your codebase, you should be aware of the following best practices:
 | --- | --- |
 | **Naming methods.**<br/>Optional | Methods should be a verb phrase. For example, `makePayment()`. |
 | **Naming properties.**<br/>Optional | Properties should be a noun phrase. For example, `inProgressTopicSelection`. |
-| **Naming streams of data.**<br/>Optional | When a class exposes a `Flow` stream, `LiveData`, or any other stream, the naming convention is `get{Model}Stream()`. For example, `getAuthorStream(): Flow<Author>`. If the function returns a list of models the model name should be in the plural: `getAuthorsStream(): Flow<List<Author>>`. |
+| **Naming streams of data.**<br/>Optional | When a class exposes a stream such as `LiveData`, the naming convention is `get{Model}Stream()`. For example, `getAuthorStream(): LiveData<Author>`. If the function returns a list of models the model name should be in the plural: `getAuthorsStream(): LiveData<List<Author>>`. |
 | **Naming interfaces implementations.**<br/>Optional | Names for the implementations of interfaces should be meaningful. Use `Default` as the prefix if a better name cannot be found. For example, for a `NewsRepository` interface, you could have an `OfflineFirstNewsRepository` or `InMemoryNewsRepository`. If you can find no good name, use `DefaultNewsRepository`. Fake implementations should be prefixed with `Fake`, as in `FakeAuthorsRepository`. |

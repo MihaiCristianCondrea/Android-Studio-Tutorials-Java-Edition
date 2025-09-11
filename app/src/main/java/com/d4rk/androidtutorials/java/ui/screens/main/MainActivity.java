@@ -18,9 +18,6 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.pm.ShortcutInfoCompat;
-import androidx.core.content.pm.ShortcutManagerCompat;
-import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
@@ -123,7 +120,6 @@ public class MainActivity extends AppCompatActivity {
         String[] defaultTabValues = getResources().getStringArray(R.array.preference_default_tab_values);
         mainViewModel.applySettings(themeValues, bottomNavBarLabelsValues, defaultTabValues);
 
-        launcherShortcuts();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1);
@@ -162,18 +158,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void launcherShortcuts() {
-        boolean isInstalled = mainViewModel.isAndroidTutorialsInstalled();
-
-        ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(this, "shortcut_id")
-                .setShortLabel(getString(R.string.shortcut_kotlin_edition_short))
-                .setLongLabel(getString(R.string.shortcut_kotlin_edition_long))
-                .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_kotlin_edition))
-                .setIntent(mainViewModel.getShortcutIntent(isInstalled))
-                .build();
-
-        ShortcutManagerCompat.pushDynamicShortcut(this, shortcut);
-    }
 
     private boolean shouldUseNavigationRail() {
         return getResources().getConfiguration().smallestScreenWidthDp >= 600;

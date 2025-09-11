@@ -18,11 +18,8 @@
 
     <string name="home">ホーム</string>
     <string name="announcement_title">新しいアプリが登場</string>
-    <string name="announcement_subtitle">最新の Android Studio Tutorials アプリをチェック。Jetpack Compose、Material 3 などを学べます。</string>
     <string name="profile_picture_desc">開発者のプロフィール写真</string>
     <string name="main_card_title">Android Studio のチュートリアルを発見</string>
-    <string name="main_card_subtitle">Kotlin 版と Java 版を収録</string>
-    <string name="main_card_description">Kotlin 版は動的なレッスンや AI アシスタントなどで更新されました。Android 開発の未来を体験してください。</string>
     <string name="get_on_google_play">Google Play で入手しよう</string>
     <string name="learn_more">詳しく見る</string>
     <string name="play_store">Play ストア</string>
@@ -418,8 +415,6 @@
     <string name="summary_linear_layout_compat">Linear Layout Compat は Android サポートライブラリ appCompat v7 のクラスです。これは、新しい API レベルで追加されたメソッドを古いものでもサポートするために追加されました（たとえば、区切り線）。LinearLayout と LinearLayoutCompat のメソッドを比較すると、Compat レイアウトには LinearLayout のすべてのメソッドが API レベルの制限なしで含まれていることがわかります。例えば、setShowDividers メソッドは API レベル 11 で導入されました。そのため、API レベル 11 未満のプラットフォームを対象とする場合は、setShowDividers（およびそのパラメータ）を LinearLayout の代わりに Linear Layout Compat を使用して呼び出す必要があります。</string>
     <string name="summary_donations">寄付はアプリの運用と機能改善に役立ちます。ご支援ありがとうございます。</string>
     <string name="summary_progress_bar">このインタラクティブなレッスンで、Android のプログレスバーの使い方を学びましょう。レッスンには横向きのプログレスバーと円形のプログレスバーの 2 つのセクションが含まれています。各セクションでは、ダウンロードの進行に伴ってプログレスバーがどのように更新されるかを見ることができます。また、画面下部のフローティングアクションボタンをクリックしてレッスンのコードを表示することもできます。</string>
-    <string name="summary_android_history">Android は Google が開発したモバイルオペレーティングシステムです。2007 年 11 月 5 日にベータ版として初めてリリースされ、最初の商用版である Android 1.0 は 2008 年 9 月 23 日にリリースされました。Android は Linux カーネルの修正版とその他のオープンソースソフトウェアを基にしています。\n\nAndroid Studio は Android アプリ開発のための公式統合開発環境 (IDE) です。2013 年 5 月 15 日の Google I/O カンファレンスで発表され、2014 年 12 月 8 日に一般公開されました。Android Studio は人気の Java IDE である IntelliJ IDEA をベースにしています。\n\nKotlin は、Java 仮想マシン (JVM)、Android、ブラウザ、ネイティブプラットフォームで実行できるクロスプラットフォームのプログラミング言語です。プラハに拠点を置くソフトウェア会社 JetBrains によって作成されました。Kotlin は 2011 年 7 月に初めて発表され、2012 年 2 月にオープンソースプロジェクトとしてリリースされました。\n\nGoogle は 2017 年 5 月 17 日の I/O カンファレンスで、Android アプリ開発の公式言語として Kotlin をサポートすることを発表しました。それ以来、Kotlin は Android 開発者の間で最も人気のある言語の 1 つになりました。Google の 2020 年 10 月のデータによると、Google Play 上位 1000 アプリの 70% 以上が Kotlin を使用しています。</string>
-    <string name="summary_android_features">Android は単なるオペレーティングシステムではなく、ユーザーと開発者のためにさまざまな機能と能力を提供するプラットフォームでもあります。Android の機能には次のようなものがあります:\n\n- 近距離無線通信 (NFC): データの共有、支払い、他のデバイスとのワイヤレス接続が可能。\n- 代替キーボード: さまざまなレイアウト、言語、テーマで入力方法をカスタマイズできる。\n- 赤外線 (IR) 送信: テレビやエアコンなどの家電のリモコンとして電話を使用できる。\n- タッチなし操作: ジェスチャーや音声コマンドを使用して、画面に触れずに電話を操作できる。\n- 自動化: ルーチンやトリガーを設定し、電話が特定のタスクを自動的に実行するようにできる。\n- ワイヤレスアプリダウンロード: ケーブルで電話を接続せずに、コンピュータや Web ブラウザからアプリをインストールできる。\n- ストレージとバッテリーの交換: 電話のメモリを拡張したり、バッテリーを簡単に交換したりできる。\n- カスタムホーム画面: ウィジェット、壁紙、アイコン、ランチャーで電話の外観をカスタマイズできる。\n\nAndroid Studio は Android アプリを開発するための最良のツールです。開発者に次のような多くの機能と利点を提供します:\n\n- 構文ハイライト、コード補完、リファクタリング、デバッグ、テスト、Lint ツールを備えたコードエディタ。\n- ドラッグアンドドロップインターフェースを備えたレイアウトエディタで UI を設計。\n- さまざまなデバイスや構成でアプリをテストするための高速起動とスナップショットをサポートするエミュレータ。\n- 認証、データベース、ストレージ、分析、クラッシュレポートなどのサービスを備えた Firebase 統合。 \n- 依存関係管理、\nカスタマイズ、\n最適化、\n署名、\n配布オプションなどを備えた Gradle ベースのビルドシステム。 \n\nAndroid Studio を使えば、簡潔で安全で表現力があり、Java と相互運用可能な最新のプログラミング言語である Kotlin を使用して、Android デバイス向けの素晴らしいアプリを作成できます。</string>
     <string name="summary_chronometer">クロノメータは Android フレームワークの特殊なウィジェットで、経過時間を表示するタイマーのような機能を提供します。カウントアップまたはカウントダウンに設定でき、ストップウォッチやカウントダウンタイマーなど時間計測が必要なアプリでよく使用されます。Chronometer クラスは TextView クラスから派生しているため、TextView のすべてのプロパティとメソッドを継承します。これにより、開発者は文字サイズ、色、フォントなど、クロノメータの外観を簡単にカスタマイズできます。</string>
     <string name="snack_this_is_a_snackbar">これはスナックバーです。</string>
     <string name="snack_bar_clicked">クリックされました</string>
@@ -468,13 +463,11 @@
     <string name="daily_tip_use_string_resources">ローカライズを簡単にするためにすべてのテキストに文字列リソースを使用。</string>
     <string name="daily_tip_optimize_webp">WebP で画像を最適化して APK サイズを削減。</string>
     <string name="daily_tip_enable_proguard">リリースビルドを縮小して難読化するために ProGuard を有効に。</string>
-    <string name="daily_tip_prefer_compose">最新デバイスをターゲットにする場合は新しい UI に Compose を優先。</string>
     <string name="daily_tip_livedata_viewmodel">LiveData と ViewModel を活用してリアクティブな UI を実現。</string>
     <string name="daily_tip_workmanager">信頼性の高いバックグラウンドタスクには WorkManager を使用。</string>
     <string name="daily_tip_github_actions">自動ビルドチェックに GitHub Actions を利用。</string>
     <string name="daily_tip_emulator_screen_sizes">エミュレーターで異なる画面サイズのアプリをテスト。</string>
     <string name="daily_tip_update_dependencies">最新の機能と修正のために依存関係を更新し続ける。</string>
-    <string name="daily_tip_kotlin_coroutines">非同期処理には Kotlin コルーチンを活用。</string>
     <string name="daily_tip_hilt">依存性注入には Hilt を統合。</string>
     <string name="daily_tip_unit_tests">JUnit と Espresso でユニットテストを書く。</string>
     <string name="daily_tip_mvvm">保守性の高いコードのために MVVM アーキテクチャに従う。</string>

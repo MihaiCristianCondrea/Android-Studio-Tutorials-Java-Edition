@@ -40,7 +40,7 @@
         <activity
             android:name=".ui.screens.startup.StartupActivity"
             android:exported="true"
-            android:theme="@style/SplashScreenTheme" />
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".ui.screens.main.MainActivity"

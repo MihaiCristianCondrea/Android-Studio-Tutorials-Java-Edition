@@ -6,9 +6,11 @@
 
 **Learn how to make simple apps in Android Studio.**
 
-Android Studio Tutorials: Java Edition is the sister project of [Android Studio Tutorials: Kotlin Edition](https://github.com/D4rK7355608/com.d4rk.androidtutorials). This guide provides practical examples and complete source code to help you build your first Android application using Android Studio and Java.
+Android Studio Tutorials: Java Edition provides practical examples and complete source code to help you build your first Android application using Android Studio with Java and XML.
 
 Our app is designed to be easy to use and lightweight. Plus, it's free and open‑source!
+
+> **Note:** This project is built solely with Java and XML. Kotlin and Jetpack Compose are not used.
 
 ## Features
 

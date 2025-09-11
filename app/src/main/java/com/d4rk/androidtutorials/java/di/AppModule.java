@@ -29,11 +29,9 @@ import com.d4rk.androidtutorials.java.domain.home.GetPlayStoreUrlUseCase;
 import com.d4rk.androidtutorials.java.domain.home.GetAppPlayStoreUrlUseCase;
 import com.d4rk.androidtutorials.java.domain.main.ApplyLanguageSettingsUseCase;
 import com.d4rk.androidtutorials.java.domain.main.ApplyThemeSettingsUseCase;
-import com.d4rk.androidtutorials.java.domain.main.BuildShortcutIntentUseCase;
 import com.d4rk.androidtutorials.java.domain.main.GetAppUpdateManagerUseCase;
 import com.d4rk.androidtutorials.java.domain.main.GetBottomNavLabelVisibilityUseCase;
 import com.d4rk.androidtutorials.java.domain.main.GetDefaultTabPreferenceUseCase;
-import com.d4rk.androidtutorials.java.domain.main.IsAppInstalledUseCase;
 import com.d4rk.androidtutorials.java.domain.main.MarkStartupScreenShownUseCase;
 import com.d4rk.androidtutorials.java.domain.main.ShouldShowStartupScreenUseCase;
 import com.d4rk.androidtutorials.java.domain.quiz.LoadQuizQuestionsUseCase;
@@ -169,16 +167,6 @@ public class AppModule {
     @Provides
     public MarkStartupScreenShownUseCase provideMarkStartupScreenShownUseCase(MainRepository repository) {
         return new MarkStartupScreenShownUseCase(repository);
-    }
-
-    @Provides
-    public IsAppInstalledUseCase provideIsAppInstalledUseCase(MainRepository repository) {
-        return new IsAppInstalledUseCase(repository);
-    }
-
-    @Provides
-    public BuildShortcutIntentUseCase provideBuildShortcutIntentUseCase(MainRepository repository) {
-        return new BuildShortcutIntentUseCase(repository);
     }
 
     @Provides
