@@ -11,19 +11,19 @@ import androidx.annotation.NonNull;
 
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
-import com.d4rk.androidtutorials.java.databinding.BottomSheetMenuBinding;
+import com.d4rk.androidtutorials.java.databinding.DialogBottomSheetMenuBinding;
 import com.d4rk.androidtutorials.java.ui.screens.settings.SettingsActivity;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class BottomSheetMenuFragment extends BottomSheetDialogFragment {
 
-    private BottomSheetMenuBinding binding;
+    private DialogBottomSheetMenuBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = BottomSheetMenuBinding.inflate(inflater, container, false);
+        binding = DialogBottomSheetMenuBinding.inflate(inflater, container, false);
 
         binding.menuSettings.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), SettingsActivity.class);

@@ -29,7 +29,7 @@ public class NativeAdLoader {
     private static final String TAG = "NativeAdLoader";
 
     public static void load(@NonNull Context context, @NonNull ViewGroup container) {
-        load(context, container, R.layout.large_home_banner_native_ad, null);
+        load(context, container, R.layout.ad_home_banner_large, null);
     }
 
     public static void load(@NonNull Context context, @NonNull ViewGroup container, @LayoutRes int layoutRes) {

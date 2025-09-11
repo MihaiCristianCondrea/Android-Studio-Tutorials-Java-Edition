@@ -88,6 +88,6 @@
     </style>
 
     <style name="switchPreferenceCompatStyle" parent="@style/Preference.SwitchPreferenceCompat.Material">
-        <item name="widgetLayout">@layout/preference_switch_widget_layout</item>
+        <item name="widgetLayout">@layout/widget_preference_switch</item>
     </style>
 </resources>

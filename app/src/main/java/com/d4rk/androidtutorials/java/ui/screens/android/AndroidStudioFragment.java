@@ -341,15 +341,15 @@ public class AndroidStudioFragment extends Fragment {
                 adView.setLayoutParams(new RecyclerView.LayoutParams(
                         ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.WRAP_CONTENT));
-                adView.setNativeAdLayout(R.layout.android_studio_list_native_ad);
+                adView.setNativeAdLayout(R.layout.ad_android_studio_list);
                 return new AdHolder(adView);
             } else if (viewType == TYPE_CATEGORY) {
                 View view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.android_studio_category_item, parent, false);
+                        .inflate(R.layout.item_android_studio_category, parent, false);
                 return new CategoryHolder(view);
             } else {
                 View view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.android_studio_lesson_item, parent, false);
+                        .inflate(R.layout.item_android_studio_lesson, parent, false);
                 return new LessonHolder(view);
             }
         }

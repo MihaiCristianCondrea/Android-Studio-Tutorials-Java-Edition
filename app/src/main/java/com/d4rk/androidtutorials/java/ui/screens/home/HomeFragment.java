@@ -55,8 +55,8 @@ public class HomeFragment extends Fragment {
             java.util.List<PromotedApp> apps = state.promotedApps();
             for (int i = 0; i < apps.size(); i++) {
                 PromotedApp app = apps.get(i);
-                com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding itemBinding =
-                        com.d4rk.androidtutorials.java.databinding.PromotedAppItemBinding.inflate(inflater, promotedContainer, false);
+                com.d4rk.androidtutorials.java.databinding.ItemPromotedAppBinding itemBinding =
+                        com.d4rk.androidtutorials.java.databinding.ItemPromotedAppBinding.inflate(inflater, promotedContainer, false);
                 loadImage(app.iconUrl(), itemBinding.appIcon);
                 itemBinding.appName.setText(app.name());
                 itemBinding.appDescription.setVisibility(android.view.View.GONE);
