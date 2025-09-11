@@ -29,18 +29,18 @@ public class BottomLabelsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(requireActivity()).get(OnboardingViewModel.class);
-        binding.buttonNext.setOnClickListener(v -> {
-            int checkedId = binding.labelsGroup.getCheckedRadioButtonId();
-            String[] values = getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
-            String value = values[0];
-            if (checkedId == R.id.radio_selected) {
-                value = values[1];
-            } else if (checkedId == R.id.radio_unlabeled) {
-                value = values[2];
-            }
-            viewModel.setBottomNavLabels(value);
-            ((OnboardingActivity) requireActivity()).nextPage();
-        });
+    }
+
+    public void saveSelection() {
+        int checkedId = binding.labelsGroup.getCheckedRadioButtonId();
+        String[] values = getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
+        String value = values[0];
+        if (checkedId == R.id.radio_selected) {
+            value = values[1];
+        } else if (checkedId == R.id.radio_unlabeled) {
+            value = values[2];
+        }
+        viewModel.setBottomNavLabels(value);
     }
 
     @Override

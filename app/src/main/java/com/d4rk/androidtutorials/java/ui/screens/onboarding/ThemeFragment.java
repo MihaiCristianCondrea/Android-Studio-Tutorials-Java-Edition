@@ -29,20 +29,20 @@ public class ThemeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(requireActivity()).get(OnboardingViewModel.class);
-        binding.buttonNext.setOnClickListener(v -> {
-            int checkedId = binding.themeGroup.getCheckedRadioButtonId();
-            String[] values = getResources().getStringArray(R.array.preference_theme_values);
-            String value = values[0];
-            if (checkedId == R.id.radio_light) {
-                value = values[1];
-            } else if (checkedId == R.id.radio_dark) {
-                value = values[2];
-            } else if (checkedId == R.id.radio_auto_battery) {
-                value = values[3];
-            }
-            viewModel.setTheme(value);
-            ((OnboardingActivity) requireActivity()).nextPage();
-        });
+    }
+
+    public void saveSelection() {
+        int checkedId = binding.themeGroup.getCheckedRadioButtonId();
+        String[] values = getResources().getStringArray(R.array.preference_theme_values);
+        String value = values[0];
+        if (checkedId == R.id.radio_light) {
+            value = values[1];
+        } else if (checkedId == R.id.radio_dark) {
+            value = values[2];
+        } else if (checkedId == R.id.radio_auto_battery) {
+            value = values[3];
+        }
+        viewModel.setTheme(value);
     }
 
     @Override

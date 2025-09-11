@@ -29,18 +29,18 @@ public class StartPageFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(requireActivity()).get(OnboardingViewModel.class);
-        binding.buttonNext.setOnClickListener(v -> {
-            int checkedId = binding.startPageGroup.getCheckedRadioButtonId();
-            String[] values = getResources().getStringArray(R.array.preference_default_tab_values);
-            String value = values[0];
-            if (checkedId == R.id.radio_android_studio) {
-                value = values[1];
-            } else if (checkedId == R.id.radio_about) {
-                value = values[2];
-            }
-            viewModel.setDefaultTab(value);
-            ((OnboardingActivity) requireActivity()).nextPage();
-        });
+    }
+
+    public void saveSelection() {
+        int checkedId = binding.startPageGroup.getCheckedRadioButtonId();
+        String[] values = getResources().getStringArray(R.array.preference_default_tab_values);
+        String value = values[0];
+        if (checkedId == R.id.radio_android_studio) {
+            value = values[1];
+        } else if (checkedId == R.id.radio_about) {
+            value = values[2];
+        }
+        viewModel.setDefaultTab(value);
     }
 
     @Override

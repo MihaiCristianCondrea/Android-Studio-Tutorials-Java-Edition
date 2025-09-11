@@ -340,6 +340,7 @@
     <string name="summary_preference_permissions_check_license">Allows the app to verify its compliance with the license agreement and enforce licensing terms to protect intellectual property.</string>
     <string name="next">Next</string>
     <string name="finish">Finish</string>
+    <string name="back">Back</string>
     <string name="bottom_navigation_labels">Bottom navigation labels</string>
     <string name="data_dialog_message">We collect data to improve your experience.</string>
     <string name="summary_preference_permissions_access_notification_policy">Allows the app to access and modify the device\'s notification policy, controlling how and when notifications are displayed to the user and providing custom notification management features.</string>

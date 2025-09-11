@@ -13,11 +13,5 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/data_dialog_message" />
-
-        <Button
-            android:id="@+id/button_finish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/finish" />
     </LinearLayout>
 </ScrollView>
