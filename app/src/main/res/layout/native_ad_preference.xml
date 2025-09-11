@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/native_ad_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:nativeAdLayout="@layout/android_studio_list_native_ad" />
