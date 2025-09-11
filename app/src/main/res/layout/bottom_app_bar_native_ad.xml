@@ -56,8 +56,8 @@
                 style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="64dp"
-                android:minHeight="36dp"
+                android:minWidth="88dp"
+                android:minHeight="40dp"
                 android:layout_marginStart="8dp" />
         </LinearLayout>
     </LinearLayout>
