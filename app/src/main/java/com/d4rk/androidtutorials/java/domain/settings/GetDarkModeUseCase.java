@@ -2,7 +2,9 @@ package com.d4rk.androidtutorials.java.domain.settings;
 
 import com.d4rk.androidtutorials.java.data.repository.SettingsRepository;
 
-/** Returns the stored dark mode preference value. */
+/**
+ * Returns the stored dark mode preference value.
+ */
 public class GetDarkModeUseCase {
     private final SettingsRepository repository;
 

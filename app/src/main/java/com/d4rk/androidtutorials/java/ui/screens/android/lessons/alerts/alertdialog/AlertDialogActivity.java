@@ -45,8 +45,8 @@ public class AlertDialogActivity extends UpNavigationActivity {
                 .setPositiveButton(android.R.string.ok, null)
                 .setNegativeButton(android.R.string.cancel, null);
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

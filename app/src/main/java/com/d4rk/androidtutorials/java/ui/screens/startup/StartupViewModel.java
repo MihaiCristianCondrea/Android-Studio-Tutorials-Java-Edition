@@ -26,7 +26,7 @@ public class StartupViewModel extends ViewModel {
 
     @Inject
     public StartupViewModel(RequestConsentInfoUseCase requestConsentInfoUseCase,
-                             LoadConsentFormUseCase loadConsentFormUseCase) {
+                            LoadConsentFormUseCase loadConsentFormUseCase) {
         this.requestConsentInfoUseCase = requestConsentInfoUseCase;
         this.loadConsentFormUseCase = loadConsentFormUseCase;
     }

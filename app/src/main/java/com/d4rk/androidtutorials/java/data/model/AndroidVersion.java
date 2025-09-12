@@ -6,4 +6,5 @@ public record AndroidVersion(
         String codeName,
         String codenameLiteral,
         String year
-) {}
+) {
+}

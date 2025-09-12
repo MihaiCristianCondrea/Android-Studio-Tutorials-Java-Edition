@@ -13,7 +13,7 @@ public final class CodeViewUtils {
      * Apply common read–only settings to the provided CodeViews.
      *
      * @param typeface the typeface to set on each CodeView
-     * @param views one or more CodeView instances to configure
+     * @param views    one or more CodeView instances to configure
      */
     public static void applyDefaults(Typeface typeface, CodeView... views) {
         for (CodeView view : views) {

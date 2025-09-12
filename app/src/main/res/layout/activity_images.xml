@@ -58,9 +58,9 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/image_view_preview_desc"
                     android:scaleType="centerCrop"
                     android:src="@drawable/im_image_view"
-                    android:contentDescription="@string/image_view_preview_desc"
                     tools:ignore="ImageContrastCheck" />
             </com.google.android.material.card.MaterialCardView>
         </androidx.appcompat.widget.LinearLayoutCompat>

@@ -27,7 +27,9 @@ public class QuizReminderManager {
         );
     }
 
-    /** Schedule a repeating daily reminder. */
+    /**
+     * Schedule a repeating daily reminder.
+     */
     public void scheduleDailyReminder() {
         long trigger = System.currentTimeMillis() + TimeUnit.DAYS.toMillis(1);
         alarmManager.setRepeating(

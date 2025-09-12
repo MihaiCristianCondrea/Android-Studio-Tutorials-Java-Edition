@@ -1,32 +1,62 @@
 [
   {
     "question": "What language is primarily used for Android app development?",
-    "options": ["Python", "Java", "Swift", "Ruby"],
+    "options": [
+      "Python",
+      "Java",
+      "Swift",
+      "Ruby"
+    ],
     "answer": 1
   },
   {
     "question": "Which file declares your app's activities?",
-    "options": ["build.gradle", "AndroidManifest.xml", "strings.xml", "MainActivity.java"],
+    "options": [
+      "build.gradle",
+      "AndroidManifest.xml",
+      "strings.xml",
+      "MainActivity.java"
+    ],
     "answer": 1
   },
   {
     "question": "Where do you store string resources?",
-    "options": ["AndroidManifest.xml", "build.gradle", "strings.xml", "colors.xml"],
+    "options": [
+      "AndroidManifest.xml",
+      "build.gradle",
+      "strings.xml",
+      "colors.xml"
+    ],
     "answer": 2
   },
   {
     "question": "Which layout allows positioning views relative to others?",
-    "options": ["LinearLayout", "ConstraintLayout", "FrameLayout", "TableLayout"],
+    "options": [
+      "LinearLayout",
+      "ConstraintLayout",
+      "FrameLayout",
+      "TableLayout"
+    ],
     "answer": 1
   },
   {
     "question": "What component shows a scrollable list of items?",
-    "options": ["RecyclerView", "TextView", "ImageView", "Button"],
+    "options": [
+      "RecyclerView",
+      "TextView",
+      "ImageView",
+      "Button"
+    ],
     "answer": 0
   },
   {
     "question": "Which library simplifies HTTP requests by turning APIs into interfaces?",
-    "options": ["Volley", "Retrofit", "Glide", "Room"],
+    "options": [
+      "Volley",
+      "Retrofit",
+      "Glide",
+      "Room"
+    ],
     "answer": 1
   }
 ]

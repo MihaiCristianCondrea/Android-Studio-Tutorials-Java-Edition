@@ -54,8 +54,8 @@ public class DatePickerActivity extends UpNavigationActivity {
     private void updateDateInView() {
         binding.dateTextView.setText(dateFormat.format(calendar.getTime()));
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

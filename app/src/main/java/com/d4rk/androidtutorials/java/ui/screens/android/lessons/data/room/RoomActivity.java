@@ -29,10 +29,10 @@ import java.util.concurrent.Executors;
  */
 public class RoomActivity extends UpNavigationActivity {
     private final Handler handler = new Handler(Looper.getMainLooper());
+    private final ExecutorService executor = Executors.newSingleThreadExecutor();
     private ActivityRoomBinding binding;
     private NotesAdapter adapter;
     private AppDatabase db;
-    private final ExecutorService executor = Executors.newSingleThreadExecutor();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,10 +88,6 @@ public class RoomActivity extends UpNavigationActivity {
     }
 
     private static class NotesAdapter extends ListAdapter<Note, NotesAdapter.NoteViewHolder> {
-        NotesAdapter() {
-            super(DIFF_CALLBACK);
-        }
-
         private static final DiffUtil.ItemCallback<Note> DIFF_CALLBACK =
                 new DiffUtil.ItemCallback<Note>() {
                     @Override
@@ -104,6 +100,10 @@ public class RoomActivity extends UpNavigationActivity {
                         return oldItem.text.equals(newItem.text);
                     }
                 };
+
+        NotesAdapter() {
+            super(DIFF_CALLBACK);
+        }
 
         @NonNull
         @Override
@@ -127,5 +127,5 @@ public class RoomActivity extends UpNavigationActivity {
             }
         }
     }
-    
+
 }

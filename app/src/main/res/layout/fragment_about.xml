@@ -13,12 +13,12 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_view_about"
             style="@style/Widget.Material3.CardView.Elevated"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRounded"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="24dp"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRounded">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -31,10 +31,10 @@
                     android:layout_height="48dp"
                     android:layout_marginTop="8dp"
                     android:clickable="true"
+                    android:contentDescription="@string/app_name"
                     android:focusable="true"
                     android:src="@mipmap/ic_launcher"
                     android:tooltipText="@string/tooltip_open_me"
-                    android:contentDescription="@string/app_name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"

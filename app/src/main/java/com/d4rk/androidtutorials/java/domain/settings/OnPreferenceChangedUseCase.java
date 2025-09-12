@@ -2,7 +2,9 @@ package com.d4rk.androidtutorials.java.domain.settings;
 
 import com.d4rk.androidtutorials.java.data.repository.SettingsRepository;
 
-/** Handles a preference change and returns true if theme changed. */
+/**
+ * Handles a preference change and returns true if theme changed.
+ */
 public class OnPreferenceChangedUseCase {
     private final SettingsRepository repository;
 

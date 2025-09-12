@@ -56,6 +56,7 @@ import dagger.hilt.android.AndroidEntryPoint;
 @AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
 
+    private static final long BACK_PRESS_INTERVAL = 2000;
     private final ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher =
             registerForActivityResult(
                     new ActivityResultContracts.StartIntentSenderForResult(),
@@ -65,16 +66,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
             );
-    private ActivityMainBinding mBinding;
-    private MainViewModel mainViewModel;
-    private NavController navController;
     private final SparseIntArray navOrder = new SparseIntArray();
-    private int currentNavIndex;
-    private AppUpdateNotificationsManager appUpdateNotificationsManager;
-    private AppUpdateManager appUpdateManager;
-    private InstallStateUpdatedListener installStateUpdatedListener;
-    private long backPressedTime;
-    private static final long BACK_PRESS_INTERVAL = 2000;
+    private ActivityMainBinding mBinding;
     private final DefaultLifecycleObserver lifecycleObserver = new DefaultLifecycleObserver() {
         @Override
         public void onResume(@NonNull LifecycleOwner owner) {
@@ -94,6 +87,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+    private MainViewModel mainViewModel;
+    private NavController navController;
+    private int currentNavIndex;
+    private AppUpdateNotificationsManager appUpdateNotificationsManager;
+    private AppUpdateManager appUpdateManager;
+    private InstallStateUpdatedListener installStateUpdatedListener;
+    private long backPressedTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
                                             == UpdateAvailability.UPDATE_AVAILABLE;
                             if (updateAvailable
                                     && appUpdateInfo.isUpdateTypeAllowed(
-                                            AppUpdateType.IMMEDIATE)) {
+                                    AppUpdateType.IMMEDIATE)) {
                                 startImmediateUpdate(appUpdateInfo);
                             }
                         })

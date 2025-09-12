@@ -14,6 +14,24 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class DefaultHomeRepositoryTest {
 
+    @Test
+    public void repositoryDelegatesToDataSources() {
+        List<PromotedApp> promoted = List.of(new PromotedApp("Name", "pkg", "icon"));
+        FakeHomeRemoteDataSource remote = new FakeHomeRemoteDataSource(promoted);
+        FakeHomeLocalDataSource local = new FakeHomeLocalDataSource();
+
+        DefaultHomeRepository repository = new DefaultHomeRepository(remote, local);
+
+        assertEquals("play", repository.getPlayStoreUrl());
+        assertEquals("play/pkg", repository.getAppPlayStoreUrl("pkg"));
+        assertEquals("tip", repository.getDailyTip());
+
+        AtomicReference<List<PromotedApp>> result = new AtomicReference<>();
+        repository.fetchPromotedApps(result::set);
+        assertTrue(remote.called);
+        assertEquals(promoted, result.get());
+    }
+
     private static class FakeHomeLocalDataSource implements HomeLocalDataSource {
         @Override
         public String getPlayStoreUrl() {
@@ -44,23 +62,5 @@ public class DefaultHomeRepositoryTest {
             called = true;
             callback.onResult(apps);
         }
-    }
-
-    @Test
-    public void repositoryDelegatesToDataSources() {
-        List<PromotedApp> promoted = List.of(new PromotedApp("Name", "pkg", "icon"));
-        FakeHomeRemoteDataSource remote = new FakeHomeRemoteDataSource(promoted);
-        FakeHomeLocalDataSource local = new FakeHomeLocalDataSource();
-
-        DefaultHomeRepository repository = new DefaultHomeRepository(remote, local);
-
-        assertEquals("play", repository.getPlayStoreUrl());
-        assertEquals("play/pkg", repository.getAppPlayStoreUrl("pkg"));
-        assertEquals("tip", repository.getDailyTip());
-
-        AtomicReference<List<PromotedApp>> result = new AtomicReference<>();
-        repository.fetchPromotedApps(result::set);
-        assertTrue(remote.called);
-        assertEquals(promoted, result.get());
     }
 }

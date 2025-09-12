@@ -40,8 +40,8 @@ public class TextboxActivity extends UpNavigationActivity {
             }
         });
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

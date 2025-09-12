@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Képnézet előnézete</string>
     <string name="app_short_description">Tanuld meg, hogyan készíts egyszerű Java alkalmazásokat az Android Studioban. 📱</string>
     <string name="notification_update_title">Új frissítés érhető el.</string>

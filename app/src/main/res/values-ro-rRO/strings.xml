@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Previzualizare imagine</string>
     <string name="app_short_description">Învață cum să faci aplicații simple în Android Studio. 📱</string>
     <string name="notification_update_title">O nouă actualizare disponibilă.</string>

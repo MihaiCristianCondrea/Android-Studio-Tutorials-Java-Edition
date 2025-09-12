@@ -46,8 +46,8 @@ public class RatingBarActivity extends UpNavigationActivity {
         formattedString = String.format(getString(R.string.snack_rating), rating);
         Toast.makeText(this, formattedString, Toast.LENGTH_SHORT).show();
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

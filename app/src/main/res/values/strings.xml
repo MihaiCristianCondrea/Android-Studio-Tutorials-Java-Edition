@@ -21,14 +21,14 @@
     <string name="main_card_title">Discover Android Studio tutorials</string>
     <string name="main_card_subtitle">Featuring Kotlin and Java editions</string>
     <string name="main_card_description">The Kotlin Edition has been updated with dynamic lessons, AI assistant, and more. Experience the future of Android development.</string>
-      <string name="get_on_google_play">Get it on Google Play</string>
-      <string name="learn_more">Learn more</string>
+    <string name="get_on_google_play">Get it on Google Play</string>
+    <string name="learn_more">Learn more</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Ad</string>
     <string name="search_tutorials_hint">Search tutorials</string>
-      <string name="search_tutorials_content_description">Search tutorials</string>
-      <string name="search_lessons_hint">Search lessons</string>
-      <string name="search_lessons_content_description">Search lessons</string>
+    <string name="search_tutorials_content_description">Search tutorials</string>
+    <string name="search_lessons_hint">Search lessons</string>
+    <string name="search_lessons_content_description">Search lessons</string>
 
     <string name="android_studio">Android Studio</string>
 
@@ -391,7 +391,7 @@
     <string name="summary_alert_dialog_require_restart">To take effect, please restart the app.</string>
     <string name="summary_sdk">The Android Software Development Kit (SDK) is a collection of tools that allow developers to create Android apps. It includes a set of libraries, a debugger, a handset emulator, and documentation. The SDK also includes an API library and a set of API documentation. The packages you download have libraries, which helps you in creating your app.\n\nThis is an overview of all Android versions and their corresponding identifiers for Android developers. Anyone is welcome to open an issue or pull request. Happy developing.</string>
     <string name="summary_view_binding">View binding is a feature that allows you to more easily write code that interacts with views. Once view binding is enabled in a module, it generates a binding class for each XML layout file present in that module. An instance of a binding class contains direct references to all views that have an ID in the corresponding layout.</string>
-   <string name="summary_enable_binding">View binding is enabled on a module by module basis. To enable view binding in a module, set the viewBinding build option to true in the module-level build.gradle file, as shown in the following example:</string>
+    <string name="summary_enable_binding">View binding is enabled on a module by module basis. To enable view binding in a module, set the viewBinding build option to true in the module-level build.gradle file, as shown in the following example:</string>
     <string name="summary_toggle">You can add a basic toggle button to your layout with the ToggleButton object. Android 4.0 (API level 14) introduces another kind of toggle button called a switch that provides a slider control, which you can add with a Switch object. SwitchCompat is a version of the Switch widget which runs on devices back to API 7.</string>
     <string name="summary_clocks">Important Note: Digital clock is deprecated in version API 17. From API level 17 you can use TextClock instead of digital clock. Below is the description of Text clock in android.</string>
     <string name="summary_buttons">Buttons are an essential element of any Android app. They allow users to interact with the app and perform actions such as submitting a form, starting a new activity, or making a purchase.\n\nIn Android Studio, buttons are created using the Button class and can be customized in a variety of ways, including setting their text, color, and size. They can also be configured to trigger different actions when clicked, such as starting a new activity or displaying a pop-up message.\n\nButtons can be placed anywhere in an app\'s layout and can be used in conjunction with other UI elements such as text fields and lists to create a fully functional and user-friendly app.\n\nOverall, buttons are a simple but powerful tool for building engaging and interactive Android apps.</string>

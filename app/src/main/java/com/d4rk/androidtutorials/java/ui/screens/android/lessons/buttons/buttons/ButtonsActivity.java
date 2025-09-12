@@ -48,8 +48,8 @@ public class ButtonsActivity extends UpNavigationActivity {
         binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(ButtonsActivity.this, ButtonsCodeActivity.class)));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

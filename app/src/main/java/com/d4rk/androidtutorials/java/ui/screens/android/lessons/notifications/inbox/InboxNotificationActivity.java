@@ -56,8 +56,8 @@ public class InboxNotificationActivity extends UpNavigationActivity {
         });
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

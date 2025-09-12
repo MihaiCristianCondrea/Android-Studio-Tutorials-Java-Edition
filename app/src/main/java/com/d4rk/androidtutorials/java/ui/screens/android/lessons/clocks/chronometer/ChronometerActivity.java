@@ -37,8 +37,8 @@ public class ChronometerActivity extends UpNavigationActivity {
         binding.buttonStop.setOnClickListener(v -> binding.chronometer.stop());
         binding.buttonReset.setOnClickListener(v -> binding.chronometer.setBase(SystemClock.elapsedRealtime()));
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

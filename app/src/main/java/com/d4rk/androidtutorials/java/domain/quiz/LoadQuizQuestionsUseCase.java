@@ -5,13 +5,11 @@ import com.d4rk.androidtutorials.java.data.repository.QuizRepository;
 
 import java.util.List;
 
-/** Loads quiz questions from assets. */
+/**
+ * Loads quiz questions from assets.
+ */
 public class LoadQuizQuestionsUseCase {
     private final QuizRepository repository;
-
-    public interface Callback {
-        void onResult(List<QuizQuestion> questions);
-    }
 
     public LoadQuizQuestionsUseCase(QuizRepository repository) {
         this.repository = repository;
@@ -19,5 +17,9 @@ public class LoadQuizQuestionsUseCase {
 
     public void invoke(Callback callback) {
         repository.loadQuestions(callback::onResult);
+    }
+
+    public interface Callback {
+        void onResult(List<QuizQuestion> questions);
     }
 }

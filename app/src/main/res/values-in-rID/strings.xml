@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Pratinjau tampilan gambar</string>
     <string name="app_short_description">Pelajari cara membuat aplikasi sederhana di Android Studio. 📱</string>
     <string name="notification_update_title">Pembaruan baru tersedia.</string>

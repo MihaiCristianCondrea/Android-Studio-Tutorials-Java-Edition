@@ -5,7 +5,9 @@ import android.app.Activity;
 import com.d4rk.androidtutorials.java.data.repository.HelpRepository;
 import com.google.android.play.core.review.ReviewInfo;
 
-/** Launches the in-app review flow. */
+/**
+ * Launches the in-app review flow.
+ */
 public class LaunchReviewFlowUseCase {
     private final HelpRepository repository;
 

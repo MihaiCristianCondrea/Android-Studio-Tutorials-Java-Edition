@@ -4,7 +4,9 @@ import android.content.SharedPreferences;
 
 import com.d4rk.androidtutorials.java.data.repository.SettingsRepository;
 
-/** Unregisters a listener for preference changes. */
+/**
+ * Unregisters a listener for preference changes.
+ */
 public class UnregisterPreferenceChangeListenerUseCase {
     private final SettingsRepository repository;
 

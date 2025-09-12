@@ -29,8 +29,8 @@ public class RelativeLayoutActivity extends UpNavigationActivity {
         binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(RelativeLayoutActivity.this, RelativeLayoutCodeActivity.class)));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

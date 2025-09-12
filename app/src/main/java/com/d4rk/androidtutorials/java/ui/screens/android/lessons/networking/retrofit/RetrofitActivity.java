@@ -23,18 +23,9 @@ import retrofit2.http.GET;
  * Demonstrates a simple HTTP request using Retrofit.
  */
 public class RetrofitActivity extends UpNavigationActivity {
-    private ActivityRetrofitBinding binding;
     private final Handler handler = new Handler(Looper.getMainLooper());
+    private ActivityRetrofitBinding binding;
     private JsonPlaceholderApi api;
-
-    interface JsonPlaceholderApi {
-        @GET("todos/1")
-        Call<Todo> getTodo();
-    }
-
-    static class Todo {
-        public String title;
-    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -81,5 +72,14 @@ public class RetrofitActivity extends UpNavigationActivity {
     protected void onDestroy() {
         super.onDestroy();
         handler.removeCallbacksAndMessages(null);
+    }
+
+    interface JsonPlaceholderApi {
+        @GET("todos/1")
+        Call<Todo> getTodo();
+    }
+
+    static class Todo {
+        public String title;
     }
 }

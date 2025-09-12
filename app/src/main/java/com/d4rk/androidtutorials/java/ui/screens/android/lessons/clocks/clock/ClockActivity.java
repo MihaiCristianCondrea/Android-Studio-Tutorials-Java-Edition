@@ -29,8 +29,8 @@ public class ClockActivity extends UpNavigationActivity {
         binding.floatingButtonShowSyntax.setOnClickListener(view -> startActivity(new Intent(this, ClockCodeActivity.class)));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

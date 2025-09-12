@@ -2,7 +2,9 @@ package com.d4rk.androidtutorials.java.domain.about;
 
 import com.d4rk.androidtutorials.java.data.repository.AboutRepository;
 
-/** Provides current year as a string. */
+/**
+ * Provides current year as a string.
+ */
 public class GetCurrentYearUseCase {
     private final AboutRepository repository;
 

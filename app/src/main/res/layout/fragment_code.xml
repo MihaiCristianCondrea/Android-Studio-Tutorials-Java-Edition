@@ -11,9 +11,9 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="2dp"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRounded"
         app:layout_constraintBottom_toTopOf="@id/ad_view"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRounded">
 
         <me.zhanghai.android.fastscroll.FastScrollScrollView
             android:id="@+id/scroll_view"
@@ -36,8 +36,8 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        app:nativeAdLayout="@layout/ad_lesson_code"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:nativeAdLayout="@layout/ad_lesson_code" />
 </androidx.constraintlayout.widget.ConstraintLayout>

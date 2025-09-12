@@ -9,8 +9,11 @@ import java.util.List;
 
 public interface SupportRepository {
     void initBillingClient(Runnable onConnected);
+
     void queryProductDetails(List<String> productIds, OnProductDetailsListener listener);
+
     BillingFlowLauncher initiatePurchase(String productId);
+
     AdRequest initMobileAds();
 
     interface OnProductDetailsListener {

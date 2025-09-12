@@ -86,7 +86,8 @@ public class OnboardingActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onTabReselected(TabLayout.Tab tab) { }
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
         });
 
         binding.buttonBack.setOnClickListener(v -> {

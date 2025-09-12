@@ -9,9 +9,9 @@ import java.util.List;
  */
 public interface HomeRemoteDataSource {
 
+    void fetchPromotedApps(PromotedAppsCallback callback);
+
     interface PromotedAppsCallback {
         void onResult(List<PromotedApp> apps);
     }
-
-    void fetchPromotedApps(PromotedAppsCallback callback);
 }

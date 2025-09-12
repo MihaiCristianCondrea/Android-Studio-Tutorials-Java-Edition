@@ -48,8 +48,8 @@ public class ProgressBarActivity extends UpNavigationActivity {
                 startActivity(new Intent(this, ProgressBarCodeActivity.class)));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

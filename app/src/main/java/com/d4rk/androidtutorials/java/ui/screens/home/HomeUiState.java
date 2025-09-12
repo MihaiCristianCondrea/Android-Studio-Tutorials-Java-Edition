@@ -12,5 +12,6 @@ public record HomeUiState(
         String announcementSubtitle,
         String dailyTip,
         List<PromotedApp> promotedApps
-) {}
+) {
+}
 

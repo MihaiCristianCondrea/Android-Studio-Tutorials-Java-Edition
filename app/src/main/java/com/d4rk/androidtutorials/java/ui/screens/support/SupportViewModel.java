@@ -39,7 +39,7 @@ public class SupportViewModel extends ViewModel {
     }
 
     public void queryProductDetails(List<String> productIds,
-                                   SupportRepository.OnProductDetailsListener listener) {
+                                    SupportRepository.OnProductDetailsListener listener) {
         queryProductDetailsUseCase.invoke(productIds, listener);
     }
 

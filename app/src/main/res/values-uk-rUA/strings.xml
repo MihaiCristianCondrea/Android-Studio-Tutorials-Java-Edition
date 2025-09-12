@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Попередній перегляд зображення</string>
     <string name="app_short_description">Дізнайтеся, як створювати прості програми на Java в Android Studio. 📱</string>
     <string name="notification_update_title">Доступне нове оновлення.</string>

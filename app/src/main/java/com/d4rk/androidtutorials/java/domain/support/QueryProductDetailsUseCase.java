@@ -4,7 +4,9 @@ import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 
 import java.util.List;
 
-/** Queries in-app product details. */
+/**
+ * Queries in-app product details.
+ */
 public class QueryProductDetailsUseCase {
     private final SupportRepository repository;
 

@@ -56,8 +56,8 @@ public class TimePickerActivity extends UpNavigationActivity {
         SimpleDateFormat sdf = new SimpleDateFormat(timeFormat, Locale.getDefault());
         binding.timeTextView.setText(sdf.format(calendar.getTime()));
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

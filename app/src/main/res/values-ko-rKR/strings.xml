@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">이미지 뷰 미리보기</string>
     <string name="app_short_description">Android Studio에서 간단한 Java 앱을 만드는 방법을 배워보세요. 📱</string>
     <string name="notification_update_title">새로운 업데이트가 있습니다.</string>
