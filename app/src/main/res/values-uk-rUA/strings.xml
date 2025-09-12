@@ -13,8 +13,11 @@
     <string name="agree">Погоджуюсь</string>
     <string name="home">Головна</string>
     <string name="announcement_title">Новий додаток вже тут.</string>
+    <string name="announcement_subtitle">Перегляньте останній додаток Android Studio. Вивчіть Jetpack Compose, Material 3 та багато іншого.</string>
     <string name="profile_picture_desc">Зображення профілю розробника</string>
     <string name="main_card_title">Відкрийте для себе посібники з Android Studio</string>
+    <string name="main_card_subtitle">Із виданнями Kotlin та Java</string>
+    <string name="main_card_description">Видання Kotlin було оновлено динамічними уроками, асистентом AI тощо. Переживайте майбутнє розвитку Android.</string>
     <string name="get_on_google_play">Завантажте з Google Play</string>
     <string name="learn_more">Дізнайтеся більше</string>
     <string name="play_store">Play Store</string>
@@ -309,6 +312,11 @@
     <string name="summary_preference_permissions_access_network_state">Дозволяє додатку перевіряти підключення до мережі та отримувати інформацію про Wi-Fi, включаючи статус увімкнення та назви підключених пристроїв Wi-Fi.</string>
     <string name="summary_preference_permissions_billing">Дозволяє додатку використовувати бібліотеку Google Play Billing для обробки покупок у додатку та пожертвувань.</string>
     <string name="summary_preference_permissions_check_license">Дозволяє додатку перевіряти відповідність ліцензійній угоді та забезпечувати дотримання умов ліцензування для захисту інтелектуальної власності.</string>
+    <string name="next">Наступний</string>
+    <string name="finish">Закінчити</string>
+    <string name="back">Спинка</string>
+    <string name="bottom_navigation_labels">Нижні навігаційні етикетки</string>
+    <string name="data_dialog_message">Ми збираємо дані для покращення вашого досвіду.</string>
     <string name="summary_preference_permissions_access_notification_policy">Дозволяє додатку отримувати доступ до політики сповіщень пристрою та змінювати її, контролюючи, як і коли сповіщення відображаються користувачеві, та надаючи власні функції керування сповіщеннями.</string>
     <string name="summary_preference_permissions_foreground_service">Дозволяє додатку створювати та використовувати служби, що працюють на передньому плані, надаючи їм пріоритет над іншими фоновими процесами та покращуючи продуктивність і надійність.</string>
     <string name="summary_preference_settings_language">Встановити мову програми.</string>
@@ -416,11 +424,13 @@
     <string name="daily_tip_use_string_resources">Використовуйте рядкові ресурси для всього тексту, щоб спростити локалізацію.</string>
     <string name="daily_tip_optimize_webp">Оптимізуйте зображення за допомогою WebP, щоб зменшити розмір APK.</string>
     <string name="daily_tip_enable_proguard">Увімкніть ProGuard, щоб зменшити та обфускувати релізні збірки.</string>
+    <string name="daily_tip_prefer_compose">Віддайте перевагу макетам XML для широкої сумісності пристроїв.</string>
     <string name="daily_tip_livedata_viewmodel">Використовуйте LiveData та ViewModel для реактивних інтерфейсів.</string>
     <string name="daily_tip_workmanager">Використовуйте WorkManager для надійних фонових завдань.</string>
     <string name="daily_tip_github_actions">Використовуйте GitHub Actions для автоматизованих перевірок збірки.</string>
     <string name="daily_tip_emulator_screen_sizes">Тестуйте свій додаток на різних розмірах екрана за допомогою емулятора.</string>
     <string name="daily_tip_update_dependencies">Оновлюйте залежності, щоб отримувати найновіші функції та виправлення.</string>
+    <string name="daily_tip_kotlin_coroutines">Використовуйте виконавець для асинхронних операцій.</string>
     <string name="daily_tip_hilt">Інтегруйте Hilt для впровадження залежностей.</string>
     <string name="daily_tip_unit_tests">Пишіть юніт-тести з JUnit та Espresso.</string>
     <string name="daily_tip_mvvm">Дотримуйтесь архітектури MVVM для коду, який легко підтримувати.</string>

@@ -18,8 +18,11 @@
 
     <string name="home">ホーム</string>
     <string name="announcement_title">新しいアプリが登場</string>
+    <string name="announcement_subtitle">最新のAndroid Studioチュートリアルアプリをご覧ください。 Jetpack Compose、Material 3などを学びます。</string>
     <string name="profile_picture_desc">開発者のプロフィール写真</string>
     <string name="main_card_title">Android Studio のチュートリアルを発見</string>
+    <string name="main_card_subtitle">KotlinとJavaエディションをフィーチャー</string>
+    <string name="main_card_description">Kotlinエディションは、動的なレッスン、AIアシスタントなどで更新されました。 Android開発の未来を体験してください。</string>
     <string name="get_on_google_play">Google Play で入手しよう</string>
     <string name="learn_more">詳しく見る</string>
     <string name="play_store">Play ストア</string>
@@ -356,6 +359,11 @@
     <string name="summary_preference_permissions_access_network_state">アプリがネットワーク接続を確認し、Wi‑Fi の有効状態や接続されている Wi‑Fi デバイス名などの情報を取得できるようにします。</string>
     <string name="summary_preference_permissions_billing">アプリが Google Play Billing Library を使用してアプリ内購入や寄付を処理できるようにします。</string>
     <string name="summary_preference_permissions_check_license">アプリがライセンス契約への準拠を確認し、知的財産を保護するためにライセンス条件を適用できるようにします。</string>
+    <string name="next">次</string>
+    <string name="finish">仕上げる</string>
+    <string name="back">戻る</string>
+    <string name="bottom_navigation_labels">ボトムナビゲーションラベル</string>
+    <string name="data_dialog_message">私たちはあなたの経験を改善するためにデータを収集します。</string>
     <string name="summary_preference_permissions_access_notification_policy">アプリがデバイスの通知ポリシーにアクセスして変更できるようにし、通知が表示される方法やタイミングを制御して、カスタム通知管理機能を提供します。</string>
     <string name="summary_preference_permissions_foreground_service">アプリがフォアグラウンドで実行されるサービスを作成・使用できるようにし、他のバックグラウンドプロセスより優先度を与えてパフォーマンスと信頼性を向上させます。</string>
     <string name="summary_preference_settings_language">アプリの言語を設定します。</string>
@@ -463,11 +471,13 @@
     <string name="daily_tip_use_string_resources">ローカライズを簡単にするためにすべてのテキストに文字列リソースを使用。</string>
     <string name="daily_tip_optimize_webp">WebP で画像を最適化して APK サイズを削減。</string>
     <string name="daily_tip_enable_proguard">リリースビルドを縮小して難読化するために ProGuard を有効に。</string>
+    <string name="daily_tip_prefer_compose">幅広いデバイスの互換性のためにXMLレイアウトをお勧めします。</string>
     <string name="daily_tip_livedata_viewmodel">LiveData と ViewModel を活用してリアクティブな UI を実現。</string>
     <string name="daily_tip_workmanager">信頼性の高いバックグラウンドタスクには WorkManager を使用。</string>
     <string name="daily_tip_github_actions">自動ビルドチェックに GitHub Actions を利用。</string>
     <string name="daily_tip_emulator_screen_sizes">エミュレーターで異なる画面サイズのアプリをテスト。</string>
     <string name="daily_tip_update_dependencies">最新の機能と修正のために依存関係を更新し続ける。</string>
+    <string name="daily_tip_kotlin_coroutines">非同期操作にはexecutorserviceを使用します。</string>
     <string name="daily_tip_hilt">依存性注入には Hilt を統合。</string>
     <string name="daily_tip_unit_tests">JUnit と Espresso でユニットテストを書く。</string>
     <string name="daily_tip_mvvm">保守性の高いコードのために MVVM アーキテクチャに従う。</string>

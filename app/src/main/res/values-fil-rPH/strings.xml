@@ -13,8 +13,11 @@
     <string name="agree">Sumang-ayon</string>
     <string name="home">Home</string>
     <string name="announcement_title">May Bagong App.</string>
+    <string name="announcement_subtitle">Suriin ang pinakabagong Android Studio Tutorials app. Alamin ang Jetpack Compose, Materyal 3, at marami pa.</string>
     <string name="profile_picture_desc">Larawan ng profile ng developer</string>
     <string name="main_card_title">Tuklasin ang Android Studio Tutorials</string>
+    <string name="main_card_subtitle">Nagtatampok ng mga edisyon ng Kotlin at Java</string>
+    <string name="main_card_description">Ang edisyon ng Kotlin ay na -update na may mga dynamic na aralin, katulong sa AI, at marami pa. Karanasan ang hinaharap ng pag -unlad ng Android.</string>
     <string name="get_on_google_play">Kunin ito sa Google Play</string>
     <string name="learn_more">Matuto pa</string>
     <string name="play_store">Play Store</string>
@@ -309,6 +312,11 @@
     <string name="summary_preference_permissions_access_network_state">Pinapayagan ang app na suriin ang koneksyon sa network at kumuha ng impormasyon tungkol sa Wi-Fi, kasama ang status ng pagiging-enable at mga pangalan ng konektadong Wi-Fi device.</string>
     <string name="summary_preference_permissions_billing">Pinapayagan ang app na gamitin ang Google Play Billing Library para pangasiwaan ang mga in-app na pagbili at donasyon.</string>
     <string name="summary_preference_permissions_check_license">Pinapayagan ang app na i-verify ang pagsunod nito sa kasunduan sa lisensya at ipatupad ang mga tuntunin sa paglilisensya para protektahan ang intelektwal na ari-arian.</string>
+    <string name="next">Susunod</string>
+    <string name="finish">Tapusin</string>
+    <string name="back">Balik</string>
+    <string name="bottom_navigation_labels">Mga label sa nabigasyon sa ibaba</string>
+    <string name="data_dialog_message">Kinokolekta namin ang data upang mapagbuti ang iyong karanasan.</string>
     <string name="summary_preference_permissions_access_notification_policy">Pinapayagan ang app na i-access at baguhin ang patakaran sa notipikasyon ng device, na kinokontrol kung paano at kailan ipinapakita ang mga notipikasyon sa user at nagbibigay ng mga custom na feature sa pamamahala ng notipikasyon.</string>
     <string name="summary_preference_permissions_foreground_service">Pinapayagan ang app na lumikha at gumamit ng mga serbisyo na tumatakbo sa foreground, na nagbibigay sa kanila ng priyoridad sa iba pang mga proseso sa background at nagpapabuti ng performance at reliability.</string>
     <string name="summary_preference_settings_language">Itakda ang wika ng application.</string>
@@ -416,11 +424,13 @@
     <string name="daily_tip_use_string_resources">Gamitin ang mga string resource para sa lahat ng text para pasimplehin ang localization.</string>
     <string name="daily_tip_optimize_webp">I-optimize ang mga imahe gamit ang WebP para bawasan ang laki ng APK.</string>
     <string name="daily_tip_enable_proguard">I-enable ang ProGuard para paliitin at i-obfuscate ang mga release build.</string>
+    <string name="daily_tip_prefer_compose">Mas gusto ang mga layout ng XML para sa malawak na pagiging tugma ng aparato.</string>
     <string name="daily_tip_livedata_viewmodel">Samantalahin ang LiveData at ViewModel para sa mga reactive na UI.</string>
     <string name="daily_tip_workmanager">Gamitin ang WorkManager para sa maaasahang mga gawain sa background.</string>
     <string name="daily_tip_github_actions">Gamitin ang GitHub Actions para sa mga automated na build check.</string>
     <string name="daily_tip_emulator_screen_sizes">Subukan ang iyong app sa iba\'t ibang laki ng screen gamit ang emulator.</string>
     <string name="daily_tip_update_dependencies">Panatilihing updated ang mga dependency para sa mga pinakabagong feature at pag-aayos.</string>
+    <string name="daily_tip_kotlin_coroutines">Gumamit ng executiveervice para sa mga asynchronous operation.</string>
     <string name="daily_tip_hilt">I-integrate ang Hilt para sa dependency injection.</string>
     <string name="daily_tip_unit_tests">Sumulat ng mga unit test gamit ang JUnit at Espresso.</string>
     <string name="daily_tip_mvvm">Sundin ang arkitektura ng MVVM para sa code na madaling i-maintain.</string>

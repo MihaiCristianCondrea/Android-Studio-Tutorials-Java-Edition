@@ -18,8 +18,11 @@
 
     <string name="home">Kezdőlap</string>
     <string name="announcement_title">Megérkezett egy új app</string>
+    <string name="announcement_subtitle">Nézze meg a legújabb Android Studio oktatóanyag -alkalmazást. Tanulja meg a JetPack komponálását, a 3. anyagot és még sok más.</string>
     <string name="profile_picture_desc">Fejlesztő profilképe</string>
     <string name="main_card_title">Fedezd fel az Android Studio oktatóanyagokat</string>
+    <string name="main_card_subtitle">A Kotlin és a Java Editions szereplője</string>
+    <string name="main_card_description">A Kotlin -kiadás frissített dinamikus leckékkel, AI asszisztenssel és még sok mással. Tapasztalja meg az Android fejlesztésének jövőjét.</string>
     <string name="get_on_google_play">Szerezd meg a Google Playen</string>
     <string name="learn_more">Tudj meg többet</string>
     <string name="play_store">Play Áruház</string>
@@ -356,6 +359,11 @@
     <string name="summary_preference_permissions_access_network_state">Lehetővé teszi az alkalmazás számára a hálózati kapcsolat ellenőrzését és a Wi‑Fi-ről szóló információk lekérését, beleértve az engedélyezett állapotot és a csatlakoztatott Wi‑Fi eszközök nevét.</string>
     <string name="summary_preference_permissions_billing">Lehetővé teszi az alkalmazás számára a Google Play Billing Library használatát az alkalmazáson belüli vásárlások és adományok kezeléséhez.</string>
     <string name="summary_preference_permissions_check_license">Lehetővé teszi az alkalmazás számára, hogy ellenőrizze a licencmegállapodásnak való megfelelést és érvényesítse a licencfeltételeket a szellemi tulajdon védelmében.</string>
+    <string name="next">Következő</string>
+    <string name="finish">Befejez</string>
+    <string name="back">Vissza</string>
+    <string name="bottom_navigation_labels">Alsó navigációs címkék</string>
+    <string name="data_dialog_message">Adatokat gyűjtünk az Ön tapasztalatainak javítása érdekében.</string>
     <string name="summary_preference_permissions_access_notification_policy">Lehetővé teszi az alkalmazás számára, hogy hozzáférjen és módosítsa az eszköz értesítési szabályzatát, szabályozva, hogy mikor és hogyan jelenjenek meg az értesítések, valamint egyéni értesítéskezelési funkciókat nyújtson.</string>
     <string name="summary_preference_permissions_foreground_service">Lehetővé teszi az alkalmazás számára, hogy előtérben futó szolgáltatásokat hozzon létre és használjon, prioritást adva nekik más háttérfolyamatokkal szemben, javítva a teljesítményt és a megbízhatóságot.</string>
     <string name="summary_preference_settings_language">Alkalmazás nyelvének beállítása.</string>
@@ -463,11 +471,13 @@
     <string name="daily_tip_use_string_resources">Használj szöveg erőforrásokat minden szöveghez a lokalizálás megkönnyítéséhez.</string>
     <string name="daily_tip_optimize_webp">Optimalizáld a képeket WebP-vel az APK méretének csökkentéséhez.</string>
     <string name="daily_tip_enable_proguard">Kapcsold be a ProGuardot a kiadási build-ek zsugorításához és obfuszkálásához.</string>
+    <string name="daily_tip_prefer_compose">Inkább az XML elrendezéseket részesítse előnyben az eszköz széles kompatibilitásához.</string>
     <string name="daily_tip_livedata_viewmodel">Használd a LiveData és ViewModel előnyeit reaktív UI-khoz.</string>
     <string name="daily_tip_workmanager">Használd a WorkManagert megbízható háttérfeladatokhoz.</string>
     <string name="daily_tip_github_actions">Használd a GitHub Actions-t automatizált build ellenőrzésekhez.</string>
     <string name="daily_tip_emulator_screen_sizes">Teszteld az appot különböző képernyőméreteken az emulátorban.</string>
     <string name="daily_tip_update_dependencies">Tartsd naprakészen a függőségeket a legújabb funkciók és javítások érdekében.</string>
+    <string name="daily_tip_kotlin_coroutines">Használja az ExecutorService -t aszinkron műveletekhez.</string>
     <string name="daily_tip_hilt">Integráld a Hiltet a függőséginjekcióhoz.</string>
     <string name="daily_tip_unit_tests">Írj egységteszteket JUnittal és Espresso-val.</string>
     <string name="daily_tip_mvvm">Kövesd az MVVM architektúrát a karbantartható kódért.</string>

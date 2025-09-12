@@ -13,8 +13,11 @@
     <string name="agree">Concordo</string>
     <string name="home">Início</string>
     <string name="announcement_title">Um Novo Aplicativo Chegou.</string>
+    <string name="announcement_subtitle">Confira o mais recente aplicativo Tutoriais do Android Studio. Aprenda o jetpack compor, material 3 e muito mais.</string>
     <string name="profile_picture_desc">Imagem do perfil do desenvolvedor</string>
     <string name="main_card_title">Descubra os Tutoriais do Android Studio</string>
+    <string name="main_card_subtitle">Apresentando Kotlin e Java Editions</string>
+    <string name="main_card_description">A edição Kotlin foi atualizada com lições dinâmicas, assistente de IA e muito mais. Experimente o futuro do desenvolvimento do Android.</string>
     <string name="get_on_google_play">Disponível no Google Play</string>
     <string name="learn_more">Saiba mais</string>
     <string name="play_store">Play Store</string>
@@ -309,6 +312,11 @@
     <string name="summary_preference_permissions_access_network_state">Permite que o aplicativo verifique a conectividade da rede e recupere informações sobre o Wi-Fi, incluindo o status de ativação e os nomes dos dispositivos Wi-Fi conectados.</string>
     <string name="summary_preference_permissions_billing">Permite que o aplicativo use a Biblioteca de Faturamento do Google Play para lidar com compras e doações no aplicativo.</string>
     <string name="summary_preference_permissions_check_license">Permite que o aplicativo verifique sua conformidade com o contrato de licença e imponha os termos de licenciamento para proteger a propriedade intelectual.</string>
+    <string name="next">Próximo</string>
+    <string name="finish">Terminar</string>
+    <string name="back">Voltar</string>
+    <string name="bottom_navigation_labels">Rótulos de navegação inferior</string>
+    <string name="data_dialog_message">Coletamos dados para melhorar sua experiência.</string>
     <string name="summary_preference_permissions_access_notification_policy">Permite que o aplicativo acesse e modifique a política de notificação do dispositivo, controlando como e quando as notificações são exibidas para o usuário e fornecendo recursos de gerenciamento de notificação personalizados.</string>
     <string name="summary_preference_permissions_foreground_service">Permite que o aplicativo crie e use serviços que são executados em primeiro plano, dando-lhes prioridade sobre outros processos em segundo plano e melhorando o desempenho e a confiabilidade.</string>
     <string name="summary_preference_settings_language">Definir o idioma do aplicativo.</string>
@@ -416,11 +424,13 @@
     <string name="daily_tip_use_string_resources">Use recursos de string para todo o texto para simplificar a localização.</string>
     <string name="daily_tip_optimize_webp">Otimize as imagens com WebP para reduzir o tamanho do APK.</string>
     <string name="daily_tip_enable_proguard">Habilite o ProGuard para reduzir e ofuscar as compilações de lançamento.</string>
+    <string name="daily_tip_prefer_compose">Prefira os layouts XML para a ampla compatibilidade do dispositivo.</string>
     <string name="daily_tip_livedata_viewmodel">Aproveite o LiveData e o ViewModel para UIs reativas.</string>
     <string name="daily_tip_workmanager">Use o WorkManager para tarefas em segundo plano confiáveis.</string>
     <string name="daily_tip_github_actions">Utilize o GitHub Actions para verificações de compilação automatizadas.</string>
     <string name="daily_tip_emulator_screen_sizes">Teste seu aplicativo em diferentes tamanhos de tela com o emulador.</string>
     <string name="daily_tip_update_dependencies">Mantenha as dependências atualizadas para os recursos e correções mais recentes.</string>
+    <string name="daily_tip_kotlin_coroutines">Use o ExecorService para operações assíncronas.</string>
     <string name="daily_tip_hilt">Integre o Hilt para injeção de dependência.</string>
     <string name="daily_tip_unit_tests">Escreva testes unitários com JUnit e Espresso.</string>
     <string name="daily_tip_mvvm">Siga a arquitetura MVVM para um código de fácil manutenção.</string>

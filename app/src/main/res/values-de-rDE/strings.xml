@@ -16,8 +16,11 @@
 
     <string name="home">Startseite</string>
     <string name="announcement_title">Eine neue App ist da.</string>
+    <string name="announcement_subtitle">Schauen Sie sich die neueste App Android Studio Tutorials an. Lernen Sie Jetpack Compose, Material 3 und mehr.</string>
     <string name="profile_picture_desc">Entwicklerprofilbild</string>
     <string name="main_card_title">Entdecke Android Studio Tutorials</string>
+    <string name="main_card_subtitle">Mit Kotlin- und Java -Editionen</string>
+    <string name="main_card_description">Die Kotlin -Ausgabe wurde mit dynamischen Lektionen, KI -Assistenten und mehr aktualisiert. Erleben Sie die Zukunft der Android -Entwicklung.</string>
     <string name="get_on_google_play">Jetzt bei Google Play</string>
     <string name="learn_more">Mehr erfahren</string>
     <string name="play_store">Play Store</string>
@@ -335,6 +338,11 @@
     <string name="summary_preference_permissions_access_network_state">Ermöglicht der App, die Netzwerkverbindung zu überprüfen und Informationen über WLAN abzurufen, einschließlich des Aktivierungsstatus und der Namen verbundener WLAN-Geräte.</string>
     <string name="summary_preference_permissions_billing">Ermöglicht der App, die Google Play Billing Library zu verwenden, um In-App-Käufe und Spenden abzuwickeln.</string>
     <string name="summary_preference_permissions_check_license">Ermöglicht der App, ihre Übereinstimmung mit der Lizenzvereinbarung zu überprüfen und Lizenzbedingungen zum Schutz des geistigen Eigentums durchzusetzen.</string>
+    <string name="next">Weiter</string>
+    <string name="finish">Beenden</string>
+    <string name="back">Zurück</string>
+    <string name="bottom_navigation_labels">Bottom Navigation Labels</string>
+    <string name="data_dialog_message">Wir sammeln Daten, um Ihre Erfahrung zu verbessern.</string>
     <string name="summary_preference_permissions_access_notification_policy">Ermöglicht der App, auf die Benachrichtigungsrichtlinie des Geräts zuzugreifen und diese zu ändern, wodurch gesteuert wird, wie und wann Benachrichtigungen dem Benutzer angezeigt werden, und benutzerdefinierte Benachrichtigungsverwaltungsfunktionen bereitgestellt werden.</string>
     <string name="summary_preference_permissions_foreground_service">Ermöglicht der App, Dienste zu erstellen und zu verwenden, die im Vordergrund ausgeführt werden, wodurch sie Vorrang vor anderen Hintergrundprozessen erhalten und Leistung sowie Zuverlässigkeit verbessert werden.</string>
     <string name="summary_preference_settings_language">Anwendungssprache festlegen.</string>
@@ -444,12 +452,13 @@
     <string name="daily_tip_use_string_resources">Verwenden Sie String-Ressourcen für alle Texte, um die Lokalisierung zu vereinfachen.</string>
     <string name="daily_tip_optimize_webp">Optimieren Sie Bilder mit WebP, um die APK-Größe zu reduzieren.</string>
     <string name="daily_tip_enable_proguard">ProGuard zu schrumpfen und obfuscate Release baut.</string>
-    <string name="daily_tip_prefer_compose">Ersetzen Sie sich für neue UI, wenn Sie moderne Geräte ansprechen.</string>
+    <string name="daily_tip_prefer_compose">Bevorzugen Sie XML -Layouts für breite Gerätekompatibilität.</string>
     <string name="daily_tip_livedata_viewmodel">Nutzen Sie LiveData und ViewModel für reaktive UIs.</string>
     <string name="daily_tip_workmanager">Verwenden Sie WorkManager für zuverlässige Hintergrundaufgaben.</string>
     <string name="daily_tip_github_actions">GitHub verwenden Aktionen für automatisierte Build-Checks.</string>
     <string name="daily_tip_emulator_screen_sizes">Testen Sie Ihre App auf verschiedenen Bildschirmgrößen mit dem Emulator.</string>
     <string name="daily_tip_update_dependencies">Halten Sie Abhängigkeiten für die neuesten Funktionen und Fixes aktualisiert.</string>
+    <string name="daily_tip_kotlin_coroutines">Verwenden Sie Executorservice für asynchrone Operationen.</string>
     <string name="daily_tip_hilt">Integrieren Sie Hilt für Abhängigkeitsinjektion.</string>
     <string name="daily_tip_unit_tests">Schreibeinheitstests mit JUnit und Espresso.</string>
     <string name="daily_tip_mvvm">Folgen Sie der MVVM-Architektur für den Aufrechterhaltungscode.</string>

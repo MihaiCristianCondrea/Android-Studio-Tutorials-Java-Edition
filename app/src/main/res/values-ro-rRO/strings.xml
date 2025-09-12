@@ -16,9 +16,11 @@
 
     <string name="home">Acasă</string>
     <string name="announcement_title">A sosit o aplicație nouă.</string>
-    <string name="announcement_subtitle">Descoperă cea mai recentă aplicație Android Studio Tutorials.</string>
+    <string name="announcement_subtitle">Consultați cea mai recentă aplicație Android Studio Tutorials. Aflați Jetpack Compose, Material 3 și multe altele.</string>
     <string name="profile_picture_desc">Poza de profil pentru dezvoltatori</string>
     <string name="main_card_title">Descoperă Tutorialele Android Studio</string>
+    <string name="main_card_subtitle">Cu ediții Kotlin și Java</string>
+    <string name="main_card_description">Ediția Kotlin a fost actualizată cu lecții dinamice, asistent AI și multe altele. Experimentați viitorul dezvoltării Android.</string>
     <string name="get_on_google_play">Ia-l de pe Google Play</string>
     <string name="learn_more">Află mai multe</string>
     <string name="play_store">Magazin Play</string>
@@ -344,6 +346,11 @@
     <string name="summary_preference_permissions_access_network_state">Permite aplicației să verifice conectivitatea la rețea și să preia informații despre Wi-Fi, inclusiv starea activată și numele dispozitivelor Wi-Fi conectate.</string>
     <string name="summary_preference_permissions_billing">Permite aplicației să utilizeze Biblioteca de facturare Google Play pentru a gestiona achizițiile în aplicație și donațiile.</string>
     <string name="summary_preference_permissions_check_license">Permite aplicației să verifice conformitatea cu acordul de licență și să aplice termenii de licențiere pentru a proteja proprietatea intelectuală.</string>
+    <string name="next">Următorul</string>
+    <string name="finish">Termina</string>
+    <string name="back">Spate</string>
+    <string name="bottom_navigation_labels">Etichete de navigație de jos</string>
+    <string name="data_dialog_message">Colectăm date pentru a vă îmbunătăți experiența.</string>
     <string name="summary_preference_permissions_access_notification_policy">Permite aplicației să acceseze și să modifice politica de notificări a dispozitivului, controlând modul și momentul în care notificările sunt afișate utilizatorului și oferind funcții personalizate de gestionare a notificărilor.</string>
     <string name="summary_preference_permissions_foreground_service">Permite aplicației să creeze și să utilizeze servicii care rulează în prim plan, acordându-le prioritate față de alte procese din fundal și îmbunătățind performanța și fiabilitatea.</string>
     <string name="summary_preference_settings_language">Setați limba aplicației.</string>
@@ -453,12 +460,13 @@
     <string name="daily_tip_use_string_resources">Utilizați resurse string pentru toate textele pentru a simplifica localizarea.</string>
     <string name="daily_tip_optimize_webp">Optimizează imaginile cu WebP pentru a reduce dimensiunea APK.</string>
     <string name="daily_tip_enable_proguard">Activați ProGuard pentru a micșora și obosi clădiri de eliberare.</string>
-    <string name="daily_tip_prefer_compose">Preferă Compus pentru noi UI dacă vizează dispozitive moderne.</string>
+    <string name="daily_tip_prefer_compose">Preferă machete XML pentru compatibilitatea largă a dispozitivului.</string>
     <string name="daily_tip_livedata_viewmodel">Profitaţi de LiveDate şi ViewModel pentru IU reactive.</string>
     <string name="daily_tip_workmanager">Utilizați WorkManager pentru sarcini de fundal fiabile.</string>
     <string name="daily_tip_github_actions">Utilizați GitHub Acțiuni pentru controale automatizate de construire.</string>
     <string name="daily_tip_emulator_screen_sizes">Testați aplicația pe diferite dimensiuni ale ecranului cu emulatorul.</string>
     <string name="daily_tip_update_dependencies">Păstrați dependențe actualizate pentru cele mai recente caracteristici și remedieri.</string>
+    <string name="daily_tip_kotlin_coroutines">Utilizați ExecutorService pentru operațiuni asincrone.</string>
     <string name="daily_tip_hilt">Integraţi Hilt pentru injectarea dependenţei.</string>
     <string name="daily_tip_unit_tests">Scrieţi teste de unitate cu JUnit şi Espresso.</string>
     <string name="daily_tip_mvvm">Urmăriți arhitectura MVVM pentru un cod durabil.</string>

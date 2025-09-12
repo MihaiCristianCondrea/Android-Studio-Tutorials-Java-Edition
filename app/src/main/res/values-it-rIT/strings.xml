@@ -18,8 +18,11 @@
 
     <string name="home">Home</string>
     <string name="announcement_title">È arrivata una nuova app</string>
+    <string name="announcement_subtitle">Dai un\'occhiata all\'ultima app di tutorial di Android Studio. Impara Jetpack Composi, Material 3 e altro ancora.</string>
     <string name="profile_picture_desc">Immagine del profilo dello sviluppatore</string>
     <string name="main_card_title">Scopri i tutorial di Android Studio</string>
+    <string name="main_card_subtitle">Con edizioni Kotlin e Java</string>
+    <string name="main_card_description">La Kotlin Edition è stata aggiornata con lezioni dinamiche, AI Assistant e altro ancora. Sperimenta il futuro dello sviluppo di Android.</string>
     <string name="get_on_google_play">Scaricalo su Google Play</string>
     <string name="learn_more">Scopri di più</string>
     <string name="play_store">Play Store</string>
@@ -356,6 +359,11 @@
     <string name="summary_preference_permissions_access_network_state">Consente all\'app di verificare la connettività di rete e recuperare informazioni sul Wi‑Fi, incluso lo stato di attivazione e i nomi dei dispositivi Wi‑Fi collegati.</string>
     <string name="summary_preference_permissions_billing">Consente all\'app di utilizzare la libreria Google Play Billing per gestire acquisti in-app e donazioni.</string>
     <string name="summary_preference_permissions_check_license">Consente all\'app di verificare la conformità all\'accordo di licenza e di applicarne i termini per proteggere la proprietà intellettuale.</string>
+    <string name="next">Prossimo</string>
+    <string name="finish">Fine</string>
+    <string name="back">Indietro</string>
+    <string name="bottom_navigation_labels">Etichette di navigazione inferiore</string>
+    <string name="data_dialog_message">Raccogliamo dati per migliorare la tua esperienza.</string>
     <string name="summary_preference_permissions_access_notification_policy">Consente all\'app di accedere e modificare la politica di notifiche del dispositivo, controllando come e quando le notifiche vengono mostrate all\'utente e fornendo funzionalità di gestione personalizzata delle notifiche.</string>
     <string name="summary_preference_permissions_foreground_service">Consente all\'app di creare e utilizzare servizi che vengono eseguiti in primo piano, dando loro priorità rispetto ad altri processi in background e migliorando prestazioni e affidabilità.</string>
     <string name="summary_preference_settings_language">Imposta la lingua dell\'applicazione.</string>
@@ -463,11 +471,13 @@
     <string name="daily_tip_use_string_resources">Usa risorse stringa per tutto il testo per semplificare la localizzazione.</string>
     <string name="daily_tip_optimize_webp">Ottimizza le immagini con WebP per ridurre la dimensione dell\'APK.</string>
     <string name="daily_tip_enable_proguard">Abilita ProGuard per ridurre e offuscare le build di rilascio.</string>
+    <string name="daily_tip_prefer_compose">Preferisci i layout XML per ampia compatibilità del dispositivo.</string>
     <string name="daily_tip_livedata_viewmodel">Sfrutta LiveData e ViewModel per UI reattive.</string>
     <string name="daily_tip_workmanager">Usa WorkManager per attività in background affidabili.</string>
     <string name="daily_tip_github_actions">Utilizza GitHub Actions per controlli di build automatizzati.</string>
     <string name="daily_tip_emulator_screen_sizes">Testa la tua app su diverse dimensioni di schermo con l\'emulatore.</string>
     <string name="daily_tip_update_dependencies">Mantieni aggiornate le dipendenze per le ultime funzionalità e correzioni.</string>
+    <string name="daily_tip_kotlin_coroutines">Utilizzare Executorservice per operazioni asincroni.</string>
     <string name="daily_tip_hilt">Integra Hilt per l\'iniezione delle dipendenze.</string>
     <string name="daily_tip_unit_tests">Scrivi test unitari con JUnit ed Espresso.</string>
     <string name="daily_tip_mvvm">Segui l\'architettura MVVM per un codice manutenibile.</string>

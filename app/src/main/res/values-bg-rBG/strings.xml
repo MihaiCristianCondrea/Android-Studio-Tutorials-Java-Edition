@@ -16,8 +16,11 @@
 
     <string name="home">Начало</string>
     <string name="announcement_title">Ново приложение е тук.</string>
+    <string name="announcement_subtitle">Вижте най -новото приложение за уроци Android Studio. Научете JetPack Compose, Material 3 и други.</string>
     <string name="profile_picture_desc">Снимка на профила на разработчика</string>
     <string name="main_card_title">Открийте уроците за Android Studio</string>
+    <string name="main_card_subtitle">С участието на издания Kotlin и Java</string>
+    <string name="main_card_description">Изданието Kotlin е актуализирано с динамични уроци, AI асистент и други. Изживейте бъдещето на развитието на Android.</string>
     <string name="get_on_google_play">Вземете от Google Play</string>
     <string name="learn_more">Научете повече</string>
     <string name="play_store">Play Store</string>
@@ -335,6 +338,11 @@
     <string name="summary_preference_permissions_access_network_state">Позволява на приложението да проверява мрежовата свързаност и да извлича информация за Wi-Fi, включително състоянието на активиране и имената на свързаните Wi-Fi устройства.</string>
     <string name="summary_preference_permissions_billing">Позволява на приложението да използва библиотеката Google Play Billing за обработка на покупки и дарения в приложението.</string>
     <string name="summary_preference_permissions_check_license">Позволява на приложението да проверява съответствието си с лицензионното споразумение и да прилага лицензионните условия за защита на интелектуалната собственост.</string>
+    <string name="next">След това</string>
+    <string name="finish">Завършете</string>
+    <string name="back">Назад</string>
+    <string name="bottom_navigation_labels">Етикети на долната навигация</string>
+    <string name="data_dialog_message">Ние събираме данни, за да подобрим вашия опит.</string>
     <string name="summary_preference_permissions_access_notification_policy">Позволява на приложението да осъществява достъп и да променя политиката за известия на устройството, контролирайки как и кога се показват известията на потребителя и предоставяйки персонализирани функции за управление на известията.</string>
     <string name="summary_preference_permissions_foreground_service">Позволява на приложението да създава и използва услуги, които се изпълняват на преден план, давайки им приоритет пред други фонови процеси и подобрявайки производителността и надеждността.</string>
     <string name="summary_preference_settings_language">Задаване на езика на приложението.</string>
@@ -444,12 +452,13 @@
     <string name="daily_tip_use_string_resources">Използвайте низ ресурси за всички текстове, за да опростите локализацията.</string>
     <string name="daily_tip_optimize_webp">Оптимизиране на изображения с WebP за намаляване на размера на APK.</string>
     <string name="daily_tip_enable_proguard">Включете ProGuard да се свие и да се обезпаразитят сграда освобождаване.</string>
+    <string name="daily_tip_prefer_compose">Предпочитайте XML оформления за широка съвместимост на устройството.</string>
     <string name="daily_tip_livedata_viewmodel">Възползвайте се от LiveData и ViewModel за реактивни UIs.</string>
     <string name="daily_tip_workmanager">Използвайте WorkManager за надеждни фонови задачи.</string>
     <string name="daily_tip_github_actions">Използване на GitHub Действия за автоматизирани проверки за изграждане.</string>
     <string name="daily_tip_emulator_screen_sizes">Тествайте приложението си на различни размери на екрана с емулатор.</string>
     <string name="daily_tip_update_dependencies">Дръжте зависимостите актуализирани за последните функции и поправки.</string>
-    <string name="daily_tip_kotlin_coroutines">Корутини на Котлин за асинхронни операции.</string>
+    <string name="daily_tip_kotlin_coroutines">Използвайте ExecutorService за асинхронни операции.</string>
     <string name="daily_tip_hilt">Интегрирай Хилт за инжектиране на зависимост.</string>
     <string name="daily_tip_unit_tests">Пиши тестове с JUnit и Espresso.</string>
     <string name="daily_tip_mvvm">Следвайте MVVM архитектурата за поддържане на код.</string>

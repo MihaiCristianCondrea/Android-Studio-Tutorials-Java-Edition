@@ -18,8 +18,11 @@
 
     <string name="home">Strona główna</string>
     <string name="announcement_title">Nowa aplikacja już jest</string>
+    <string name="announcement_subtitle">Sprawdź najnowszą aplikację do samouczków Android Studio. Naucz JetPack komponuj, materiał 3 i wiele innych.</string>
     <string name="profile_picture_desc">Zdjęcie profilowe dewelopera</string>
     <string name="main_card_title">Odkryj samouczki Android Studio</string>
+    <string name="main_card_subtitle">Zawiera edycje Kotlin i Java</string>
+    <string name="main_card_description">Edycja Kotlin została zaktualizowana o dynamiczne lekcje, asystent AI i nie tylko. Doświadcz przyszłości rozwoju Androida.</string>
     <string name="get_on_google_play">Pobierz z Google Play</string>
     <string name="learn_more">Dowiedz się więcej</string>
     <string name="play_store">Sklep Play</string>
@@ -356,6 +359,11 @@
     <string name="summary_preference_permissions_access_network_state">Umożliwia aplikacji sprawdzanie łączności sieciowej i pobieranie informacji o Wi‑Fi, w tym statusu włączenia i nazw podłączonych urządzeń Wi‑Fi.</string>
     <string name="summary_preference_permissions_billing">Umożliwia aplikacji korzystanie z biblioteki Google Play Billing w celu obsługi zakupów w aplikacji i darowizn.</string>
     <string name="summary_preference_permissions_check_license">Umożliwia aplikacji weryfikację zgodności z umową licencyjną i egzekwowanie warunków licencji w celu ochrony własności intelektualnej.</string>
+    <string name="next">Następny</string>
+    <string name="finish">Skończyć</string>
+    <string name="back">Z powrotem</string>
+    <string name="bottom_navigation_labels">Dolne etykiety nawigacyjne</string>
+    <string name="data_dialog_message">Zbieramy dane, aby poprawić Twoje wrażenia.</string>
     <string name="summary_preference_permissions_access_notification_policy">Umożliwia aplikacji dostęp i modyfikowanie zasad powiadomień urządzenia, kontrolując sposób i czas wyświetlania powiadomień oraz zapewniając funkcje niestandardowego zarządzania powiadomieniami.</string>
     <string name="summary_preference_permissions_foreground_service">Umożliwia aplikacji tworzenie i używanie usług działających na pierwszym planie, nadając im priorytet przed innymi procesami w tle oraz poprawiając wydajność i niezawodność.</string>
     <string name="summary_preference_settings_language">Ustaw język aplikacji.</string>
@@ -463,11 +471,13 @@
     <string name="daily_tip_use_string_resources">Używaj zasobów string dla całego tekstu, by ułatwić lokalizację.</string>
     <string name="daily_tip_optimize_webp">Optymalizuj obrazy za pomocą WebP, aby zmniejszyć rozmiar APK.</string>
     <string name="daily_tip_enable_proguard">Włącz ProGuard, aby zmniejszyć i zaciemnić wydania.</string>
+    <string name="daily_tip_prefer_compose">Wolić układy XML dla szerokiej kompatybilności urządzenia.</string>
     <string name="daily_tip_livedata_viewmodel">Wykorzystaj LiveData i ViewModel dla reaktywnych UI.</string>
     <string name="daily_tip_workmanager">Używaj WorkManager do niezawodnych zadań w tle.</string>
     <string name="daily_tip_github_actions">Wykorzystaj GitHub Actions do zautomatyzowanych kontroli buildów.</string>
     <string name="daily_tip_emulator_screen_sizes">Testuj aplikację na różnych rozmiarach ekranów w emulatorze.</string>
     <string name="daily_tip_update_dependencies">Aktualizuj zależności, aby mieć najnowsze funkcje i poprawki.</string>
+    <string name="daily_tip_kotlin_coroutines">Użyj ExecutorService do operacji asynchronicznych.</string>
     <string name="daily_tip_hilt">Zintegruj Hilt do wstrzykiwania zależności.</string>
     <string name="daily_tip_unit_tests">Pisz testy jednostkowe za pomocą JUnit i Espresso.</string>
     <string name="daily_tip_mvvm">Stosuj architekturę MVVM dla łatwego w utrzymaniu kodu.</string>
