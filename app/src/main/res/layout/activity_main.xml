@@ -51,7 +51,7 @@
             android:id="@+id/ad_placeholder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray" />
+            android:background="?attr/colorSurfaceContainer" />
 
         <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
             android:id="@+id/ad_view"

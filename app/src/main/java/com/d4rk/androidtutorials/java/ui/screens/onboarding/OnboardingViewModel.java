@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.onboarding;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.lifecycle.ViewModel;
 import androidx.preference.PreferenceManager;
 
@@ -24,6 +25,20 @@ public class OnboardingViewModel extends ViewModel {
     public OnboardingViewModel(@ApplicationContext Context context) {
         this.context = context;
         this.prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        // Ensure defaults are persisted so skipping onboarding still sets them
+        String themeKey = context.getString(R.string.key_theme);
+        String[] themeValues = context.getResources().getStringArray(R.array.preference_theme_values);
+        if (!prefs.contains(themeKey)) {
+            prefs.edit().putString(themeKey, themeValues[0]).apply();
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+        }
+
+        String tabKey = context.getString(R.string.key_default_tab);
+        String[] tabValues = context.getResources().getStringArray(R.array.preference_default_tab_values);
+        if (!prefs.contains(tabKey)) {
+            prefs.edit().putString(tabKey, tabValues[0]).apply();
+        }
     }
 
     public void setTheme(String value) {
