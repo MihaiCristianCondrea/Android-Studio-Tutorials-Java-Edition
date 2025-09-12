@@ -65,6 +65,10 @@ public class OnboardingActivity extends AppCompatActivity {
                         ((ThemeFragment) fragment).saveSelection();
                     } else if (fragment instanceof StartPageFragment) {
                         ((StartPageFragment) fragment).saveSelection();
+                    } else if (fragment instanceof FontFragment) {
+                        ((FontFragment) fragment).saveSelection();
+                    } else if (fragment instanceof BottomLabelsFragment) {
+                        ((BottomLabelsFragment) fragment).saveSelection();
                     } else if (fragment instanceof DataFragment) {
                         ((DataFragment) fragment).saveSelection();
                     }
@@ -130,6 +134,10 @@ public class OnboardingActivity extends AppCompatActivity {
                 ((ThemeFragment) fragment).saveSelection();
             } else if (fragment instanceof StartPageFragment) {
                 ((StartPageFragment) fragment).saveSelection();
+            } else if (fragment instanceof FontFragment) {
+                ((FontFragment) fragment).saveSelection();
+            } else if (fragment instanceof BottomLabelsFragment) {
+                ((BottomLabelsFragment) fragment).saveSelection();
             } else if (fragment instanceof DataFragment) {
                 ((DataFragment) fragment).saveSelection();
             }
@@ -175,14 +183,16 @@ public class OnboardingActivity extends AppCompatActivity {
             return switch (position) {
                 case 0 -> new ThemeFragment();
                 case 1 -> new StartPageFragment();
-                case 2 -> new DataFragment();
+                case 2 -> new FontFragment();
+                case 3 -> new BottomLabelsFragment();
+                case 4 -> new DataFragment();
                 default -> new DoneFragment();
             };
         }
 
         @Override
         public int getItemCount() {
-            return 4;
+            return 6;
         }
     }
 }
