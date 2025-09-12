@@ -7,11 +7,10 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.model.AndroidVersion;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidSdkBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
@@ -22,7 +21,6 @@ import java.util.List;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class AndroidSDK extends UpNavigationActivity {
-    private ActivityAndroidSdkBinding binding;
     private final List<AndroidVersion> androidVersions = Arrays.asList(
             new AndroidVersion("1.0", "1", "BASE", "None", "2008"),
             new AndroidVersion("1.1", "2", "BASE_1_1", "Petit Four", "2009"),
@@ -61,6 +59,7 @@ public class AndroidSDK extends UpNavigationActivity {
             new AndroidVersion("15", "35", "V", "Vanilla Ice Cake", "2024"),
             new AndroidVersion("16", "36", "Baklava", "Baklava", "2025")
     );
+    private ActivityAndroidSdkBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

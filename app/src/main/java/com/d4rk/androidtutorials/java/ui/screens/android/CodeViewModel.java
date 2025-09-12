@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.d4rk.androidtutorials.java.ui.screens.android.repository.LessonRepository;
 import com.d4rk.androidtutorials.java.domain.android.GetLessonUseCase;
+import com.d4rk.androidtutorials.java.ui.screens.android.repository.LessonRepository;
 
 public class CodeViewModel extends ViewModel {
     private final MutableLiveData<LessonRepository.Lesson> lesson = new MutableLiveData<>();

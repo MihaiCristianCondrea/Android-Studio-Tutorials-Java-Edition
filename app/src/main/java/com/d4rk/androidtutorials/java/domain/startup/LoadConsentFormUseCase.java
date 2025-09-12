@@ -1,9 +1,12 @@
 package com.d4rk.androidtutorials.java.domain.startup;
 
 import android.app.Activity;
+
 import com.d4rk.androidtutorials.java.data.repository.StartupRepository;
 
-/** Loads and shows the consent form if required. */
+/**
+ * Loads and shows the consent form if required.
+ */
 public class LoadConsentFormUseCase {
     private final StartupRepository repository;
 

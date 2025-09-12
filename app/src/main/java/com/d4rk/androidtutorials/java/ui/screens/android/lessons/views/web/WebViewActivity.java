@@ -8,9 +8,8 @@ import android.os.Looper;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-
 import com.d4rk.androidtutorials.java.databinding.ActivityWebviewBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
@@ -52,8 +51,8 @@ public class WebViewActivity extends UpNavigationActivity {
         });
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

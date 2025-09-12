@@ -1,5 +1,8 @@
 package com.d4rk.androidtutorials.java.data.repository;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
 import com.d4rk.androidtutorials.java.data.source.QuizLocalDataSource;
 
@@ -9,22 +12,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.*;
-
 public class DefaultQuizRepositoryTest {
-
-    private static class FakeQuizLocalDataSource implements QuizLocalDataSource {
-        private final List<QuizQuestion> questions;
-
-        FakeQuizLocalDataSource(List<QuizQuestion> questions) {
-            this.questions = questions;
-        }
-
-        @Override
-        public void loadQuestions(QuestionsCallback callback) {
-            callback.onResult(questions);
-        }
-    }
 
     @Test
     public void loadQuestionsReturnsLocalData() throws InterruptedException {
@@ -39,5 +27,18 @@ public class DefaultQuizRepositoryTest {
             latch.countDown();
         });
         assertTrue(latch.await(1, TimeUnit.SECONDS));
+    }
+
+    private static class FakeQuizLocalDataSource implements QuizLocalDataSource {
+        private final List<QuizQuestion> questions;
+
+        FakeQuizLocalDataSource(List<QuizQuestion> questions) {
+            this.questions = questions;
+        }
+
+        @Override
+        public void loadQuestions(QuestionsCallback callback) {
+            callback.onResult(questions);
+        }
     }
 }

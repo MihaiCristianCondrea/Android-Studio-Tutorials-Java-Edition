@@ -4,9 +4,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-
 import com.d4rk.androidtutorials.java.databinding.ActivityPermissionsTutorialBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;

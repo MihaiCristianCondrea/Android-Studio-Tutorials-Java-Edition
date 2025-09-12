@@ -7,12 +7,12 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/ad_card"
         style="@style/Widget.Material3.CardView.Elevated"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewBottomRounded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
+        app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="false"
-        app:cardPreventCornerOverlap="true">
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewBottomRounded">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,10 +33,10 @@
                     android:layout_width="96dp"
                     android:layout_height="96dp"
                     app:cardCornerRadius="16dp"
-                    app:cardUseCompatPadding="false"
                     app:cardPreventCornerOverlap="true"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    app:cardUseCompatPadding="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.gms.ads.nativead.MediaView
                         android:id="@+id/ad_media"
@@ -52,9 +52,9 @@
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
-                    app:layout_constraintTop_toTopOf="@id/media_card"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/media_card"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintTop_toTopOf="@id/media_card" />
 
                 <TextView
                     android:id="@+id/ad_body"
@@ -63,8 +63,8 @@
                     android:ellipsize="end"
                     android:maxLines="2"
                     android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                    app:layout_constraintStart_toStartOf="@id/ad_headline"
                     app:layout_constraintEnd_toEndOf="@id/ad_headline"
+                    app:layout_constraintStart_toStartOf="@id/ad_headline"
                     app:layout_constraintTop_toBottomOf="@id/ad_headline" />
 
                 <me.zhanghai.android.materialratingbar.MaterialRatingBar
@@ -84,14 +84,14 @@
                     android:id="@+id/ad_call_to_action"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:minWidth="88dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
+                    android:minWidth="88dp"
                     android:paddingHorizontal="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toEndOf="@id/ad_stars"
-                    app:layout_constraintTop_toBottomOf="@id/ad_body"
-                    app:layout_constraintHorizontal_chainStyle="packed" />
+                    app:layout_constraintTop_toBottomOf="@id/ad_body" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

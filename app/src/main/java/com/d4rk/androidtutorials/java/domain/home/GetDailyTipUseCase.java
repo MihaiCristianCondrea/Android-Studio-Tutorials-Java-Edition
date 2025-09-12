@@ -2,7 +2,9 @@ package com.d4rk.androidtutorials.java.domain.home;
 
 import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
 
-/** Use case that provides the daily tip text. */
+/**
+ * Use case that provides the daily tip text.
+ */
 public class GetDailyTipUseCase {
     private final HomeRepository repository;
 

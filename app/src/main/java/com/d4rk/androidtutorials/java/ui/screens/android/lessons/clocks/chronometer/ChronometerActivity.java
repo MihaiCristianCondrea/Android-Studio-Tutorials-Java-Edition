@@ -7,9 +7,9 @@ import android.os.Looper;
 import android.os.SystemClock;
 
 import androidx.annotation.Nullable;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityChronometerBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
@@ -37,8 +37,8 @@ public class ChronometerActivity extends UpNavigationActivity {
         binding.buttonStop.setOnClickListener(v -> binding.chronometer.stop());
         binding.buttonReset.setOnClickListener(v -> binding.chronometer.setBase(SystemClock.elapsedRealtime()));
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

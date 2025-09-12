@@ -1,10 +1,13 @@
 package com.d4rk.androidtutorials.java.domain.startup;
 
 import android.app.Activity;
+
 import com.d4rk.androidtutorials.java.data.repository.StartupRepository;
 import com.google.android.ump.ConsentRequestParameters;
 
-/** Requests consent info update via UMP. */
+/**
+ * Requests consent info update via UMP.
+ */
 public class RequestConsentInfoUseCase {
     private final StartupRepository repository;
 

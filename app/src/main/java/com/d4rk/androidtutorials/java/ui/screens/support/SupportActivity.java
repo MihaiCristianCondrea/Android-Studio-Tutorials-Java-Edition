@@ -3,12 +3,13 @@ package com.d4rk.androidtutorials.java.ui.screens.support;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
+
 import androidx.lifecycle.ViewModelProvider;
 
 import com.android.billingclient.api.ProductDetails;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
 import com.google.android.gms.ads.AdRequest;
 
 import java.util.List;

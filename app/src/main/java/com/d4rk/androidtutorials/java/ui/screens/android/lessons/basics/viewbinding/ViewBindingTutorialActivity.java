@@ -5,18 +5,18 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityViewBindingTutorialBinding;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
-import com.google.android.gms.ads.AdRequest;
-import com.d4rk.androidtutorials.java.utils.FontManager;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
-import android.util.Log;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.d4rk.androidtutorials.java.utils.FontManager;
+import com.google.android.gms.ads.AdRequest;
 
 import java.io.BufferedReader;
 import java.io.IOException;

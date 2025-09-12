@@ -9,9 +9,9 @@ import java.util.List;
  */
 public interface QuizRepository {
 
+    void loadQuestions(QuestionsCallback callback);
+
     interface QuestionsCallback {
         void onResult(List<QuizQuestion> questions);
     }
-
-    void loadQuestions(QuestionsCallback callback);
 }

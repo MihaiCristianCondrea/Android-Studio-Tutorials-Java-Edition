@@ -60,12 +60,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ad_view">
 
-        <com.amrdeveloper.codeview.CodeView
-            android:id="@+id/code_view_binding_gradle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minWidth="48dp"
-            android:padding="16dp" />
+            <com.amrdeveloper.codeview.CodeView
+                android:id="@+id/code_view_binding_gradle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:padding="16dp" />
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.textview.MaterialTextView

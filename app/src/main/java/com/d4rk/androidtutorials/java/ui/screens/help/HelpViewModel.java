@@ -5,13 +5,14 @@ import android.app.Activity;
 
 import androidx.lifecycle.ViewModel;
 
-import com.d4rk.androidtutorials.java.domain.help.RequestReviewFlowUseCase;
 import com.d4rk.androidtutorials.java.domain.help.LaunchReviewFlowUseCase;
-import com.google.android.play.core.review.ReviewInfo;
+import com.d4rk.androidtutorials.java.domain.help.RequestReviewFlowUseCase;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
+import com.google.android.play.core.review.ReviewInfo;
+
+import javax.inject.Inject;
 
 import dagger.hilt.android.lifecycle.HiltViewModel;
-import javax.inject.Inject;
 
 /**
  * ViewModel for the Help screen. Delegates to HelpRepository for

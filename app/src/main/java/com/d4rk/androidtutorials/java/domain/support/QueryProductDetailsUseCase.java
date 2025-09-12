@@ -1,9 +1,12 @@
 package com.d4rk.androidtutorials.java.domain.support;
 
-import java.util.List;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 
-/** Queries in-app product details. */
+import java.util.List;
+
+/**
+ * Queries in-app product details.
+ */
 public class QueryProductDetailsUseCase {
     private final SupportRepository repository;
 

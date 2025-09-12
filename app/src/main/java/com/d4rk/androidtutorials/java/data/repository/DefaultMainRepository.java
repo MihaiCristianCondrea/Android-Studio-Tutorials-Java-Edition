@@ -1,10 +1,7 @@
 package com.d4rk.androidtutorials.java.data.repository;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.os.LocaleListCompat;
@@ -45,22 +42,6 @@ public class DefaultMainRepository implements MainRepository {
             }
         }
         return newNightMode;
-    }
-
-    /**
-     * Check if a given package name is installed.
-     *
-     * @param packageName The package to check.
-     * @return True if installed, false otherwise.
-     */
-    public boolean isAppInstalled(String packageName) {
-        PackageManager packageManager = context.getPackageManager();
-        try {
-            packageManager.getPackageInfo(packageName, 0);
-            return true;
-        } catch (PackageManager.NameNotFoundException e) {
-            return false;
-        }
     }
 
     /**
@@ -134,19 +115,4 @@ public class DefaultMainRepository implements MainRepository {
         return appUpdateManager;
     }
 
-    /**
-     * Creates an intent to open your other app or fallback to Google Play if not installed.
-     */
-    public Intent buildShortcutIntent(boolean isInstalled) {
-        if (isInstalled) {
-            return new Intent(Intent.ACTION_MAIN)  // <--- set an ACTION
-                    .addCategory(Intent.CATEGORY_LAUNCHER) // optional for typical launcher scenario
-                    .setClassName("com.d4rk.androidtutorials", "com.d4rk.androidtutorials.MainActivity")
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        } else {
-            return new Intent(Intent.ACTION_VIEW)
-                    .setData(Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials"))
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        }
-    }
 }

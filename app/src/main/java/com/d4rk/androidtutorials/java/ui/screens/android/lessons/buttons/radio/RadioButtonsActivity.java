@@ -6,9 +6,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.RadioButton;
 
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-
 import com.d4rk.androidtutorials.java.databinding.ActivityRadioButtonsBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.snackbar.Snackbar;
@@ -39,8 +38,8 @@ public class RadioButtonsActivity extends UpNavigationActivity {
 
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

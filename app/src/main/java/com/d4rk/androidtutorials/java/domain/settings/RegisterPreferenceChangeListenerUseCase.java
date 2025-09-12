@@ -1,9 +1,12 @@
 package com.d4rk.androidtutorials.java.domain.settings;
 
 import android.content.SharedPreferences;
+
 import com.d4rk.androidtutorials.java.data.repository.SettingsRepository;
 
-/** Registers a listener for preference changes. */
+/**
+ * Registers a listener for preference changes.
+ */
 public class RegisterPreferenceChangeListenerUseCase {
     private final SettingsRepository repository;
 

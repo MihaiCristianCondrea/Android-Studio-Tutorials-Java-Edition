@@ -5,13 +5,11 @@ import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
 
 import java.util.List;
 
-/** Use case that fetches promoted apps from the repository. */
+/**
+ * Use case that fetches promoted apps from the repository.
+ */
 public class GetPromotedAppsUseCase {
     private final HomeRepository repository;
-
-    public interface Callback {
-        void onResult(List<PromotedApp> apps);
-    }
 
     public GetPromotedAppsUseCase(HomeRepository repository) {
         this.repository = repository;
@@ -22,5 +20,9 @@ public class GetPromotedAppsUseCase {
      */
     public void invoke(Callback callback) {
         repository.fetchPromotedApps(callback::onResult);
+    }
+
+    public interface Callback {
+        void onResult(List<PromotedApp> apps);
     }
 }

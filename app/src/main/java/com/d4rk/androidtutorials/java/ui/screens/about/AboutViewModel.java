@@ -2,11 +2,12 @@ package com.d4rk.androidtutorials.java.ui.screens.about;
 
 import androidx.lifecycle.ViewModel;
 
-import dagger.hilt.android.lifecycle.HiltViewModel;
+import com.d4rk.androidtutorials.java.domain.about.GetCurrentYearUseCase;
+import com.d4rk.androidtutorials.java.domain.about.GetVersionStringUseCase;
+
 import javax.inject.Inject;
 
-import com.d4rk.androidtutorials.java.domain.about.GetVersionStringUseCase;
-import com.d4rk.androidtutorials.java.domain.about.GetCurrentYearUseCase;
+import dagger.hilt.android.lifecycle.HiltViewModel;
 
 
 /**

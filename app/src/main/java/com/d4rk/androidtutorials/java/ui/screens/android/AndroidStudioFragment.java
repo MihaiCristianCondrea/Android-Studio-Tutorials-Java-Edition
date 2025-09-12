@@ -29,6 +29,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView;
+import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.LoadAdError;
@@ -36,7 +37,6 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.ShapeAppearanceModel;
-import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -94,14 +94,14 @@ public class AndroidStudioFragment extends Fragment {
                     searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                         @Override
                         public boolean onQueryTextSubmit(String query) {
-            filterLessons(query);
-            return true;
+                            filterLessons(query);
+                            return true;
                         }
 
                         @Override
                         public boolean onQueryTextChange(String newText) {
-            filterLessons(newText);
-            return true;
+                            filterLessons(newText);
+                            return true;
                         }
                     });
                 }
@@ -221,7 +221,7 @@ public class AndroidStudioFragment extends Fragment {
     private void filterLessons(String query) {
         String lower = query == null ? "" : query.toLowerCase();
         if (lower.isEmpty()) {
-        populateAdapter(allItems, showAds);
+            populateAdapter(allItems, showAds);
             return;
         }
         List<Object> filtered = new ArrayList<>();
@@ -244,7 +244,8 @@ public class AndroidStudioFragment extends Fragment {
         populateAdapter(filtered, showAds);
     }
 
-    private static class AdItem {}
+    private static class AdItem {
+    }
 
     private static class Lesson {
         String title;
@@ -392,6 +393,7 @@ public class AndroidStudioFragment extends Fragment {
 
         static class AdHolder extends RecyclerView.ViewHolder {
             final NativeAdBannerView adView;
+
             AdHolder(@NonNull NativeAdBannerView itemView) {
                 super(itemView);
                 this.adView = itemView;

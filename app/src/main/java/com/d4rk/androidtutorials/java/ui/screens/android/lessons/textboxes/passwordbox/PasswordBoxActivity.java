@@ -8,10 +8,9 @@ import android.os.Looper;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityPasswordBoxBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -65,8 +64,8 @@ public class PasswordBoxActivity extends UpNavigationActivity {
         binding.buttonShowPassword.setOnClickListener(v ->
                 Snackbar.make(binding.getRoot(), binding.editText.getText(), Snackbar.LENGTH_LONG).show());
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

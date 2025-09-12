@@ -16,10 +16,6 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class ConsentDialogFragment extends DialogFragment {
 
-    public interface ConsentListener {
-        void onConsentSet(boolean analytics, boolean adStorage, boolean adUserData, boolean adPersonalization);
-    }
-
     private ConsentListener listener;
 
     public void setConsentListener(ConsentListener listener) {
@@ -75,5 +71,9 @@ public class ConsentDialogFragment extends DialogFragment {
                     }
                 })
                 .create();
+    }
+
+    public interface ConsentListener {
+        void onConsentSet(boolean analytics, boolean adStorage, boolean adUserData, boolean adPersonalization);
     }
 }

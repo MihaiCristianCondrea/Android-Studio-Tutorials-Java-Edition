@@ -47,9 +47,9 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/profile_picture_desc"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/dev_logo"
-                        android:contentDescription="@string/profile_picture_desc" />
+                        android:src="@drawable/dev_logo" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="0dp"
@@ -120,8 +120,8 @@
                             android:id="@+id/home_action_button_group"
                             style="@style/Widget.App.ButtonGroup"
                             android:layout_width="wrap_content"
-                            android:spacing="2dp"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:spacing="2dp">
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/btn_google_play"
@@ -156,10 +156,10 @@
                 android:id="@+id/other_apps_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="16dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp">
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/other_apps_title"

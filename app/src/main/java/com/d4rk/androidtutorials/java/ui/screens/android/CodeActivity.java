@@ -3,13 +3,13 @@ package com.d4rk.androidtutorials.java.ui.screens.android;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.repository.LessonRepository;
 import com.d4rk.androidtutorials.java.ui.screens.android.tabs.CodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.tabs.LayoutFragment;

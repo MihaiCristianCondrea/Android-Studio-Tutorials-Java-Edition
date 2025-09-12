@@ -5,10 +5,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.R;
-
 import com.d4rk.androidtutorials.java.databinding.ActivityBottomNavigationBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
@@ -37,8 +36,8 @@ public class BottomNavigationActivity extends UpNavigationActivity {
         });
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

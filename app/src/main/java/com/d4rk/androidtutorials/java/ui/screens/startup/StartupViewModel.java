@@ -5,13 +5,14 @@ import android.app.Activity;
 
 import androidx.lifecycle.ViewModel;
 
-import com.d4rk.androidtutorials.java.domain.startup.RequestConsentInfoUseCase;
 import com.d4rk.androidtutorials.java.domain.startup.LoadConsentFormUseCase;
-import com.google.android.ump.ConsentRequestParameters;
+import com.d4rk.androidtutorials.java.domain.startup.RequestConsentInfoUseCase;
 import com.d4rk.androidtutorials.java.ui.screens.startup.repository.StartupRepository;
+import com.google.android.ump.ConsentRequestParameters;
+
+import javax.inject.Inject;
 
 import dagger.hilt.android.lifecycle.HiltViewModel;
-import javax.inject.Inject;
 
 /**
  * ViewModel for the startup screen.
@@ -25,7 +26,7 @@ public class StartupViewModel extends ViewModel {
 
     @Inject
     public StartupViewModel(RequestConsentInfoUseCase requestConsentInfoUseCase,
-                             LoadConsentFormUseCase loadConsentFormUseCase) {
+                            LoadConsentFormUseCase loadConsentFormUseCase) {
         this.requestConsentInfoUseCase = requestConsentInfoUseCase;
         this.loadConsentFormUseCase = loadConsentFormUseCase;
     }

@@ -17,13 +17,12 @@ import androidx.lifecycle.ViewModelProvider;
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentAboutBinding;
+import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
-import com.d4rk.androidtutorials.java.utils.ConsentUtils;
-
-import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 import dagger.hilt.android.AndroidEntryPoint;
+import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 @AndroidEntryPoint
 public class AboutFragment extends Fragment {

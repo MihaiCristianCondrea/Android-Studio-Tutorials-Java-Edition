@@ -1,10 +1,9 @@
 package com.d4rk.androidtutorials.java.data.source;
 
 import android.content.res.AssetManager;
+import android.util.JsonReader;
 
 import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
-
-import android.util.JsonReader;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.data.repository;
 
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
+
 import java.util.List;
 
 /**

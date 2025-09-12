@@ -6,11 +6,12 @@ import android.content.SharedPreferences;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.os.LocaleListCompat;
 import androidx.preference.PreferenceManager;
-import com.google.firebase.analytics.FirebaseAnalytics;
-import java.util.EnumMap;
-import java.util.Map;
 
 import com.d4rk.androidtutorials.java.R;
+import com.google.firebase.analytics.FirebaseAnalytics;
+
+import java.util.EnumMap;
+import java.util.Map;
 
 /**
  * Repository that handles reading/writing preferences (e.g., theme, language)
@@ -87,7 +88,9 @@ public class SettingsRepository implements com.d4rk.androidtutorials.java.data.r
         }
     }
 
-    /** Apply Firebase consent settings from preferences */
+    /**
+     * Apply Firebase consent settings from preferences
+     */
     public void applyConsent() {
         boolean analytics = sharedPreferences.getBoolean(
                 context.getString(R.string.key_consent_analytics), true);

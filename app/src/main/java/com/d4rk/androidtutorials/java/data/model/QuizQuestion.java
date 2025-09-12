@@ -7,4 +7,5 @@ public record QuizQuestion(
         String question,
         String[] options,
         int answerIndex
-) {}
+) {
+}

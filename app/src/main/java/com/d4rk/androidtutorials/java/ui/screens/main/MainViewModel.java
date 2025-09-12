@@ -1,26 +1,24 @@
 package com.d4rk.androidtutorials.java.ui.screens.main;
 
-import android.content.Intent;
 
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.domain.main.ApplyLanguageSettingsUseCase;
 import com.d4rk.androidtutorials.java.domain.main.ApplyThemeSettingsUseCase;
+import com.d4rk.androidtutorials.java.domain.main.GetAppUpdateManagerUseCase;
 import com.d4rk.androidtutorials.java.domain.main.GetBottomNavLabelVisibilityUseCase;
 import com.d4rk.androidtutorials.java.domain.main.GetDefaultTabPreferenceUseCase;
-import com.d4rk.androidtutorials.java.domain.main.ApplyLanguageSettingsUseCase;
-import com.d4rk.androidtutorials.java.domain.main.ShouldShowStartupScreenUseCase;
 import com.d4rk.androidtutorials.java.domain.main.MarkStartupScreenShownUseCase;
-import com.d4rk.androidtutorials.java.domain.main.IsAppInstalledUseCase;
-import com.d4rk.androidtutorials.java.domain.main.BuildShortcutIntentUseCase;
-import com.d4rk.androidtutorials.java.domain.main.GetAppUpdateManagerUseCase;
+import com.d4rk.androidtutorials.java.domain.main.ShouldShowStartupScreenUseCase;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.play.core.appupdate.AppUpdateManager;
 
-import dagger.hilt.android.lifecycle.HiltViewModel;
 import javax.inject.Inject;
+
+import dagger.hilt.android.lifecycle.HiltViewModel;
 
 /**
  * ViewModel for MainActivity. It interacts with MainRepository to retrieve or
@@ -35,8 +33,6 @@ public class MainViewModel extends ViewModel {
     private final ApplyLanguageSettingsUseCase applyLanguageSettingsUseCase;
     private final ShouldShowStartupScreenUseCase shouldShowStartupScreenUseCase;
     private final MarkStartupScreenShownUseCase markStartupScreenShownUseCase;
-    private final IsAppInstalledUseCase isAppInstalledUseCase;
-    private final BuildShortcutIntentUseCase buildShortcutIntentUseCase;
     private final GetAppUpdateManagerUseCase getAppUpdateManagerUseCase;
     private final MutableLiveData<MainUiState> uiState = new MutableLiveData<>();
     private final MutableLiveData<Boolean> isLoading = new MutableLiveData<>(false);
@@ -48,8 +44,6 @@ public class MainViewModel extends ViewModel {
                          ApplyLanguageSettingsUseCase applyLanguageSettingsUseCase,
                          ShouldShowStartupScreenUseCase shouldShowStartupScreenUseCase,
                          MarkStartupScreenShownUseCase markStartupScreenShownUseCase,
-                         IsAppInstalledUseCase isAppInstalledUseCase,
-                         BuildShortcutIntentUseCase buildShortcutIntentUseCase,
                          GetAppUpdateManagerUseCase getAppUpdateManagerUseCase) {
         this.applyThemeSettingsUseCase = applyThemeSettingsUseCase;
         this.getBottomNavLabelVisibilityUseCase = getBottomNavLabelVisibilityUseCase;
@@ -57,8 +51,6 @@ public class MainViewModel extends ViewModel {
         this.applyLanguageSettingsUseCase = applyLanguageSettingsUseCase;
         this.shouldShowStartupScreenUseCase = shouldShowStartupScreenUseCase;
         this.markStartupScreenShownUseCase = markStartupScreenShownUseCase;
-        this.isAppInstalledUseCase = isAppInstalledUseCase;
-        this.buildShortcutIntentUseCase = buildShortcutIntentUseCase;
         this.getAppUpdateManagerUseCase = getAppUpdateManagerUseCase;
     }
 
@@ -116,20 +108,6 @@ public class MainViewModel extends ViewModel {
      */
     public void markStartupScreenShown() {
         markStartupScreenShownUseCase.invoke();
-    }
-
-    /**
-     * Check if the “Android Tutorials” app is installed or not.
-     */
-    public boolean isAndroidTutorialsInstalled() {
-        return isAppInstalledUseCase.invoke("com.d4rk.androidtutorials.java");
-    }
-
-    /**
-     * Build the intent for the shortcut (opens app if installed, or fallback to the Play Store).
-     */
-    public Intent getShortcutIntent(boolean isInstalled) {
-        return buildShortcutIntentUseCase.invoke(isInstalled);
     }
 
     /**

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Förhandsgranskning av bildvy</string>
     <string name="app_short_description">Lär dig hur man skapar enkla Java-appar i Android Studio. 📱</string>
     <string name="notification_update_title">En ny uppdatering finns tillgänglig.</string>
@@ -13,11 +13,8 @@
     <string name="agree">Godkänn</string>
     <string name="home">Hem</string>
     <string name="announcement_title">En ny app har kommit.</string>
-    <string name="announcement_subtitle">Kolla in den senaste appen Android Studio Tutorials. Lär dig Jetpack Compose, Material 3 och mer.</string>
     <string name="profile_picture_desc">Utvecklarprofilbild</string>
     <string name="main_card_title">Upptäck Android Studio Tutorials</string>
-    <string name="main_card_subtitle">Med Kotlin- och Java-utgåvor</string>
-    <string name="main_card_description">Kotlin-utgåvan har uppdaterats med dynamiska lektioner, AI-assistent och mer. Upplev framtiden för Android-utveckling.</string>
     <string name="get_on_google_play">Hämta den på Google Play</string>
     <string name="learn_more">Läs mer</string>
     <string name="play_store">Play Butik</string>
@@ -370,8 +367,6 @@
     <string name="summary_linear_layout_compat">LinearLayoutCompat är en klass i Android-stöd-biblioteket appCompat v7. Den lades till för att stödja metoder som lades till i nyare API-nivåer på gamla (som avdelare). Om du jämför metoderna i LinearLayout och LinearLayoutCompat kan du se att Compat-layouten har alla metoder från LinearLayout utan någon API-nivåbegränsning. Till exempel introducerades metoden setShowDividers på API-nivå 11. Så i detta fall bör setShowDividers (och dess parametrar) anropas med LinearLayoutCompat istället för LinearLayout om du riktar dig mot en plattform med API-nivå under 11.</string>
     <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">Lär dig hur du använder förloppsindikatorer i Android med denna interaktiva lektion. Lektionen innehåller två avsnitt: ett för en horisontell förloppsindikator och ett för en cirkulär förloppsindikator. I varje avsnitt kan du se hur förloppsindikatorn uppdateras när en nedladdning fortskrider. Du kan också se koden för lektionen genom att klicka på den flytande åtgärdsknappen längst ner på skärmen.</string>
-    <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android är ett mobilt operativsystem utvecklat av Google. Det släpptes först som en betaversion den 5 november 2007 och den första kommersiella versionen, Android 1.0, lanserades den 23 september 2008. Android är baserat på en modifierad version av Linux-kärnan och annan öppen källkodsprogramvara.\n\nAndroid Studio är den officiella integrerade utvecklingsmiljön (IDE) för Android-apputveckling. Det tillkännagavs av Google på dess I/O-konferens den 15 maj 2013 och släpptes för allmän användning den 8 december 2014. Android Studio är baserat på IntelliJ IDEA, en populär Java-IDE.\n\nKotlin är ett plattformsoberoende programmeringsspråk som kan köras på Java Virtual Machine (JVM), Android, webbläsare och inbyggda plattformar. Det skapades av JetBrains, ett mjukvaruföretag baserat i Prag. Kotlin tillkännagavs först i juli 2011 och släpptes som ett öppen källkodsprojekt i februari 2012.\n\nGoogle tillkännagav sitt stöd för Kotlin som ett officiellt språk för Android-apputveckling på sin I/O-konferens den 17 maj 2017. Sedan dess har Kotlin blivit ett av de mest populära språken för Android-utvecklare. Enligt Googles data från oktober 2020 använder mer än 70 %% av de 1000 bästa apparna på Google Play Kotlin.</string>
-    <string name="summary_android_features">Android is not only an operating system, but also a platform that offers a range of features and capabilities for users and developers. Some of the features of Android include:\n\n- Near Field Communication (NFC), which allows you to share data, make payments, and connect with other devices wirelessly.\n- Alternate keyboards, which let you customize your input method with different layouts, languages, and themes.\n- IR transmission, which enables you to use your phone as a remote control for TVs, air conditioners, and other appliances.\n- No-touch control, which lets you perform actions on your phone without touching the screen by using gestures or voice commands.\n- Automation, which allows you to set up routines and triggers for your phone to perform certain tasks automatically.\n- Wireless app downloads, which let you install apps from your computer or web browser without connecting your phone with a cable.\n- Storage and battery swap, which give you the option to expand your phone\'s memory or replace its battery easily.\n- Custom home screen, which lets you personalize your phone\'s appearance with widgets, wallpapers, icons, and launchers.\n\nAndroid Studio is the best tool for developing Android apps. It offers many features and benefits for developers such as:\n\n- Code editor with syntax highlighting, code completion, refactoring, debugging, testing, and linting tools.\n- Layout editor with drag-and-drop interface for designing user interfaces.\n- Emulator with fast boot and snapshot support for testing apps on different devices and configurations.\n- Firebase integration with services such as authentication, database, storage, analytics, crash reporting, and more. \n- Gradle-based build system with dependency management,\ncustomization,\noptimization,\nsigning,\ndistribution options, and more. \n\nWith Android Studio,\nyou can create amazing apps for Android devices using Kotlin,\na modern programming language that is concise,\nsafe,\nexpressive,\nand interoperable with Java.</string>
     <string name="summary_chronometer">En kronometer är en specialiserad widget i Android-ramverket som tillhandahåller en timer-liknande funktionalitet för att visa förfluten tid. Den kan konfigureras för att räkna upp eller ner, och används vanligtvis i applikationer som kräver tidtagning, såsom stoppur eller nedräkningstimer-appar. Chronometer-klassen är härledd från TextView-klassen, vilket innebär att den ärver alla egenskaper och metoder från en TextView. Detta gör det möjligt för utvecklare att enkelt anpassa utseendet på kronometern, inklusive dess textstorlek, färg och teckensnitt.</string>
     <string name="snack_this_is_a_snackbar">Detta är en snackbar.</string>
     <string name="snack_bar_clicked">klickad</string>
@@ -421,13 +416,11 @@
     <string name="daily_tip_use_string_resources">Använd strängresurser för all text för att förenkla lokalisering.</string>
     <string name="daily_tip_optimize_webp">Optimera bilder med WebP för att minska APK-storleken.</string>
     <string name="daily_tip_enable_proguard">Aktivera ProGuard för att krympa och obfuskera release-versioner.</string>
-    <string name="daily_tip_prefer_compose">Föredra Compose för nya UI:n om du riktar dig mot moderna enheter.</string>
     <string name="daily_tip_livedata_viewmodel">Dra nytta av LiveData och ViewModel för reaktiva UI:n.</string>
     <string name="daily_tip_workmanager">Använd WorkManager för tillförlitliga bakgrundsuppgifter.</string>
     <string name="daily_tip_github_actions">Använd GitHub Actions för automatiserade byggkontroller.</string>
     <string name="daily_tip_emulator_screen_sizes">Testa din app på olika skärmstorlekar med emulatorn.</string>
     <string name="daily_tip_update_dependencies">Håll beroenden uppdaterade för de senaste funktionerna och fixarna.</string>
-    <string name="daily_tip_kotlin_coroutines">Utnyttja Kotlin Coroutines för asynkrona operationer.</string>
     <string name="daily_tip_hilt">Integrera Hilt för beroendeinjektion.</string>
     <string name="daily_tip_unit_tests">Skriv enhetstester med JUnit och Espresso.</string>
     <string name="daily_tip_mvvm">Följ MVVM-arkitekturen för underhållbar kod.</string>

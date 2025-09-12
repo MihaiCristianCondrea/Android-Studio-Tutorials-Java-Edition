@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-
 import com.d4rk.androidtutorials.java.databinding.ActivityTimePickerBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
@@ -57,8 +56,8 @@ public class TimePickerActivity extends UpNavigationActivity {
         SimpleDateFormat sdf = new SimpleDateFormat(timeFormat, Locale.getDefault());
         binding.timeTextView.setText(sdf.format(calendar.getTime()));
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

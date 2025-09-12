@@ -1,42 +1,28 @@
 package com.d4rk.androidtutorials.java.ui.screens.home;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
 
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
-import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
-import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
-import com.d4rk.androidtutorials.java.domain.home.GetPlayStoreUrlUseCase;
 import com.d4rk.androidtutorials.java.domain.home.GetAppPlayStoreUrlUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetPlayStoreUrlUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
 
 import org.junit.Rule;
 import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 
 public class HomeViewModelTest {
 
     @Rule
     public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
-
-
-    static class FakeHomeRepository implements HomeRepository {
-        final String dailyTip;
-        final List<PromotedApp> apps;
-
-        FakeHomeRepository(String dailyTip, List<PromotedApp> apps) {
-            this.dailyTip = dailyTip;
-            this.apps = apps;
-        }
-
-        @Override public String getPlayStoreUrl() { return ""; }
-        @Override public String getAppPlayStoreUrl(String packageName) { return ""; }
-        @Override public String getDailyTip() { return dailyTip; }
-        @Override public void fetchPromotedApps(PromotedAppsCallback callback) { callback.onResult(apps); }
-    }
 
     @Test
     public void uiStateUpdatesWithData() {
@@ -72,5 +58,35 @@ public class HomeViewModelTest {
         HomeUiState state = viewModel.getUiState().getValue();
         assertNotNull(state);
         assertTrue(state.promotedApps().isEmpty());
+    }
+
+    static class FakeHomeRepository implements HomeRepository {
+        final String dailyTip;
+        final List<PromotedApp> apps;
+
+        FakeHomeRepository(String dailyTip, List<PromotedApp> apps) {
+            this.dailyTip = dailyTip;
+            this.apps = apps;
+        }
+
+        @Override
+        public String getPlayStoreUrl() {
+            return "";
+        }
+
+        @Override
+        public String getAppPlayStoreUrl(String packageName) {
+            return "";
+        }
+
+        @Override
+        public String getDailyTip() {
+            return dailyTip;
+        }
+
+        @Override
+        public void fetchPromotedApps(PromotedAppsCallback callback) {
+            callback.onResult(apps);
+        }
     }
 }

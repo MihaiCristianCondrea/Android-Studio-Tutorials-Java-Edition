@@ -10,7 +10,6 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
@@ -19,6 +18,7 @@ import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityHelpBinding;
 import com.d4rk.androidtutorials.java.databinding.DialogVersionInfoBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
 import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.snackbar.Snackbar;

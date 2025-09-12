@@ -19,11 +19,11 @@
             android:id="@+id/lesson_icon"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            app:contentPadding="4dp"
             android:layout_marginEnd="16dp"
             android:background="?attr/colorPrimaryContainer"
             android:contentDescription="@null"
             android:scaleType="centerCrop"
+            app:contentPadding="4dp"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
 
         <LinearLayout

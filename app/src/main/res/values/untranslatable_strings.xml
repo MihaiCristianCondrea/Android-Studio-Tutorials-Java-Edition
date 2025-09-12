@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">Android Studio Tutorials: Java Edition</string>
-    <string name="shortcut_kotlin_edition_short" translatable="false">Kotlin Edition</string>
-    <string name="shortcut_kotlin_edition_long" translatable="false">Android Studio Tutorials: Kotlin Edition</string>
     <string name="code_java" translatable="false">Java</string>
     <string name="layout_xml" translatable="false">XML</string>
     <string name="twitter" translatable="false">Twitter</string>

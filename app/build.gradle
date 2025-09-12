@@ -85,9 +85,6 @@ dependencies {
     implementation libs.androidx.lifecycle.livedata
     implementation libs.androidx.lifecycle.viewmodel
     implementation libs.androidx.multidex
-
-    implementation libs.kotlinx.serialization.json
-
     implementation libs.aboutlibraries
     implementation libs.core
 
@@ -102,6 +99,7 @@ dependencies {
     annotationProcessor libs.glide.compiler
     implementation libs.retrofit2
     implementation libs.retrofit2.converter.gson
+
 
     // Testing
     testImplementation libs.junit

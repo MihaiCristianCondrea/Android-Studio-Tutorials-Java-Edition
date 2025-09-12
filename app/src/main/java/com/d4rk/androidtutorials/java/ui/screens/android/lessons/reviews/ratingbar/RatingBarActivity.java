@@ -6,10 +6,9 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRatingBarBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 
 public class RatingBarActivity extends UpNavigationActivity {
@@ -47,8 +46,8 @@ public class RatingBarActivity extends UpNavigationActivity {
         formattedString = String.format(getString(R.string.snack_rating), rating);
         Toast.makeText(this, formattedString, Toast.LENGTH_SHORT).show();
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

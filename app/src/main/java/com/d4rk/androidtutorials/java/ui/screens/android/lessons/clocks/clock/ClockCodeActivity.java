@@ -4,12 +4,12 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.clock.tabs.ClockTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.clock.tabs.ClockTabLayoutFragment;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;

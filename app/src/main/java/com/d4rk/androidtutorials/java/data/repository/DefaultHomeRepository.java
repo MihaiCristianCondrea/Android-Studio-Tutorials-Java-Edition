@@ -2,7 +2,6 @@ package com.d4rk.androidtutorials.java.data.repository;
 
 import com.d4rk.androidtutorials.java.data.source.HomeLocalDataSource;
 import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource;
-import com.d4rk.androidtutorials.java.data.repository.HomeRepository.PromotedAppsCallback;
 
 /**
  * Default implementation of {@link HomeRepository} combining local and remote sources.

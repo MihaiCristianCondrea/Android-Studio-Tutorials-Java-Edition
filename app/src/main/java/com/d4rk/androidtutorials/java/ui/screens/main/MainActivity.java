@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.main;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,9 +18,6 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.pm.ShortcutInfoCompat;
-import androidx.core.content.pm.ShortcutManagerCompat;
-import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
@@ -30,21 +28,20 @@ import androidx.navigation.NavOptions;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
 import com.d4rk.androidtutorials.java.notifications.managers.AppUpdateNotificationsManager;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFragment;
-import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
-import com.d4rk.androidtutorials.java.ui.screens.startup.dialogs.ConsentDialogFragment;
+import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.material.navigationrail.NavigationRailView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
 import com.google.android.play.core.appupdate.AppUpdateManager;
@@ -53,14 +50,13 @@ import com.google.android.play.core.install.InstallStateUpdatedListener;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
-import com.google.android.ump.ConsentInformation;
-import com.google.android.ump.ConsentRequestParameters;
-import com.google.android.ump.UserMessagingPlatform;
+
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
 
+    private static final long BACK_PRESS_INTERVAL = 2000;
     private final ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher =
             registerForActivityResult(
                     new ActivityResultContracts.StartIntentSenderForResult(),
@@ -70,18 +66,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
             );
-    private ActivityMainBinding mBinding;
-    private MainViewModel mainViewModel;
-    private StartupViewModel startupViewModel;
-    private ConsentInformation consentInformation;
-    private NavController navController;
     private final SparseIntArray navOrder = new SparseIntArray();
-    private int currentNavIndex;
-    private AppUpdateNotificationsManager appUpdateNotificationsManager;
-    private AppUpdateManager appUpdateManager;
-    private InstallStateUpdatedListener installStateUpdatedListener;
-    private long backPressedTime;
-    private static final long BACK_PRESS_INTERVAL = 2000;
+    private ActivityMainBinding mBinding;
     private final DefaultLifecycleObserver lifecycleObserver = new DefaultLifecycleObserver() {
         @Override
         public void onResume(@NonNull LifecycleOwner owner) {
@@ -101,30 +87,28 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+    private MainViewModel mainViewModel;
+    private NavController navController;
+    private int currentNavIndex;
+    private AppUpdateNotificationsManager appUpdateNotificationsManager;
+    private AppUpdateManager appUpdateManager;
+    private InstallStateUpdatedListener installStateUpdatedListener;
+    private long backPressedTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!prefs.getBoolean(getString(R.string.key_onboarding_complete), false)) {
+            startActivity(new Intent(this, StartupActivity.class));
+            finish();
+            return;
+        }
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
 
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        startupViewModel = new ViewModelProvider(this).get(StartupViewModel.class);
-        consentInformation = UserMessagingPlatform.getConsentInformation(this);
-        ConsentRequestParameters params = new ConsentRequestParameters.Builder()
-                .setTagForUnderAgeOfConsent(false)
-                .build();
-        startupViewModel.requestConsentInfoUpdate(
-                this,
-                params,
-                () -> {
-                    if (consentInformation.isConsentFormAvailable()) {
-                        startupViewModel.loadConsentForm(this, null);
-                    }
-                },
-                null
-        );
 
         setupActionBar();
         observeViewModel();
@@ -135,12 +119,7 @@ public class MainActivity extends AppCompatActivity {
         String[] bottomNavBarLabelsValues = getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
         String[] defaultTabValues = getResources().getStringArray(R.array.preference_default_tab_values);
         mainViewModel.applySettings(themeValues, bottomNavBarLabelsValues, defaultTabValues);
-        if (mainViewModel.shouldShowStartupScreen()) {
-            mainViewModel.markStartupScreenShown();
-            showConsentDialog();
-        }
 
-        launcherShortcuts();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1);
@@ -179,18 +158,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void launcherShortcuts() {
-        boolean isInstalled = mainViewModel.isAndroidTutorialsInstalled();
-
-        ShortcutInfoCompat shortcut = new ShortcutInfoCompat.Builder(this, "shortcut_id")
-                .setShortLabel(getString(R.string.shortcut_kotlin_edition_short))
-                .setLongLabel(getString(R.string.shortcut_kotlin_edition_long))
-                .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_kotlin_edition))
-                .setIntent(mainViewModel.getShortcutIntent(isInstalled))
-                .build();
-
-        ShortcutManagerCompat.pushDynamicShortcut(this, shortcut);
-    }
 
     private boolean shouldUseNavigationRail() {
         return getResources().getConfiguration().smallestScreenWidthDp >= 600;
@@ -302,12 +269,6 @@ public class MainActivity extends AppCompatActivity {
         appUpdateNotificationsManager = new AppUpdateNotificationsManager(this);
     }
 
-    private void showConsentDialog() {
-        ConsentDialogFragment dialog = new ConsentDialogFragment();
-        dialog.setConsentListener((analytics, adStorage, adUserData, adPersonalization) ->
-                ConsentUtils.updateFirebaseConsent(this, analytics, adStorage, adUserData, adPersonalization));
-        dialog.show(getSupportFragmentManager(), "consent_dialog");
-    }
 
     @Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
@@ -334,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
                                             == UpdateAvailability.UPDATE_AVAILABLE;
                             if (updateAvailable
                                     && appUpdateInfo.isUpdateTypeAllowed(
-                                            AppUpdateType.IMMEDIATE)) {
+                                    AppUpdateType.IMMEDIATE)) {
                                 startImmediateUpdate(appUpdateInfo);
                             }
                         })

@@ -11,11 +11,11 @@ import android.os.Handler;
 import android.os.Looper;
 
 import androidx.annotation.RequiresApi;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import androidx.core.app.NotificationCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityNotificationBinding;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 
 public class SimpleNotificationActivity extends UpNavigationActivity {
@@ -51,8 +51,8 @@ public class SimpleNotificationActivity extends UpNavigationActivity {
         });
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
-    
-    
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
