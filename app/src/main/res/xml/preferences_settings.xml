@@ -75,21 +75,21 @@
             app:title="@string/privacy_policy">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://d4rk7355608.github.io/profile/#privacy-policy-apps" />
+                android:data="https://mihaicristiancondrea.github.io/profile/#privacy-policy-end-user-software" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_terms_of_service"
             app:title="@string/terms_of_service">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://d4rk7355608.github.io/profile/#terms-of-service-apps" />
+                android:data="https://mihaicristiancondrea.github.io/profile/#terms-of-service-end-user-software" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_code_of_conduct"
             app:title="@string/code_of_conduct">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://d4rk7355608.github.io/profile/#code-of-conduct-website" />
+                android:data="https://mihaicristiancondrea.github.io/profile/#code-of-conduct" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_permissions"

@@ -24,6 +24,6 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
-        binding.webView.loadUrl("https://d4rk7355608.github.io/profile/#home");
+        binding.webView.loadUrl("https://mihaicristiancondrea.github.io/profile/");
     }
 }

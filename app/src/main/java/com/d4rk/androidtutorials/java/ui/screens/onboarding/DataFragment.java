@@ -38,7 +38,7 @@ public class DataFragment extends Fragment {
 
         binding.linkPrivacy.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("https://d4rk7355608.github.io/profile/#privacy-policy-apps"));
+                    Uri.parse("https://mihaicristiancondrea.github.io/profile/#privacy-policy-end-user-software"));
             startActivity(intent);
         });
     }

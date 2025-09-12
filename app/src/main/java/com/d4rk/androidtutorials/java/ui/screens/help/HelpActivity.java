@@ -76,10 +76,10 @@ public class HelpActivity extends BaseActivity {
             openLink("https://play.google.com/apps/testing/" + getPackageName());
             return true;
         } else if (itemId == R.id.terms_of_service) {
-            openLink("https://d4rk7355608.github.io/profile/#terms-of-service-apps");
+            openLink("https://mihaicristiancondrea.github.io/profile/#terms-of-service-end-user-software");
             return true;
         } else if (itemId == R.id.privacy_policy) {
-            openLink("https://d4rk7355608.github.io/profile/#privacy-policy-apps");
+            openLink("https://mihaicristiancondrea.github.io/profile/#privacy-policy-end-user-software");
             return true;
         } else if (itemId == R.id.oss) {
             OpenSourceLicensesUtils.loadHtmlData(this, (changelogHtml, eulaHtml) -> openLicensesScreen(this, eulaHtml, changelogHtml));

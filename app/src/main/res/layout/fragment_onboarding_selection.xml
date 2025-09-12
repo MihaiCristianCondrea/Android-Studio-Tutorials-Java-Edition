@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="title" type="String" />
+        <variable name="description" type="String" />
+        <variable name="firstIcon" type="android.graphics.drawable.Drawable" />
+        <variable name="firstTitle" type="String" />
+        <variable name="firstDescription" type="String" />
+        <variable name="secondIcon" type="android.graphics.drawable.Drawable" />
+        <variable name="secondTitle" type="String" />
+        <variable name="secondDescription" type="String" />
+        <variable name="thirdIcon" type="android.graphics.drawable.Drawable" />
+        <variable name="thirdTitle" type="String" />
+        <variable name="thirdDescription" type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@{title}"
+            android:textAppearance="?attr/textAppearanceHeadlineMedium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{description}"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/selection_group"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description">
+
+            <RadioGroup
+                android:id="@+id/option_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_first"
+                    style="@style/Widget.App.Card.Selectable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <include
+                        android:id="@+id/option_first"
+                        layout="@layout/item_onboarding_option"
+                        app:icon="@{firstIcon}"
+                        app:title="@{firstTitle}"
+                        app:description="@{firstDescription}" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_second"
+                    style="@style/Widget.App.Card.Selectable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+                    <include
+                        android:id="@+id/option_second"
+                        layout="@layout/item_onboarding_option"
+                        app:icon="@{secondIcon}"
+                        app:title="@{secondTitle}"
+                        app:description="@{secondDescription}" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_third"
+                    style="@style/Widget.App.Card.Selectable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+                    <include
+                        android:id="@+id/option_third"
+                        layout="@layout/item_onboarding_option"
+                        app:icon="@{thirdIcon}"
+                        app:title="@{thirdTitle}"
+                        app:description="@{thirdDescription}" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
