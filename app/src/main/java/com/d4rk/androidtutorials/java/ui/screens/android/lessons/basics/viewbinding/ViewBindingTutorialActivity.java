@@ -16,7 +16,6 @@ import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.d4rk.androidtutorials.java.utils.FontManager;
-import com.google.android.gms.ads.AdRequest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -39,8 +38,8 @@ public class ViewBindingTutorialActivity extends UpNavigationActivity {
         EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
         edgeToEdgeDelegate.applyEdgeToEdge(binding.scrollView);
 
-        binding.adViewBottom.loadAd(new AdRequest.Builder().build());
-        binding.adView.loadAd(new AdRequest.Builder().build());
+        binding.adViewBottom.loadAd();
+        binding.adView.loadAd();
         binding.moreAboutViewBindingButton.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com/topic/libraries/view-binding#java"))));
 

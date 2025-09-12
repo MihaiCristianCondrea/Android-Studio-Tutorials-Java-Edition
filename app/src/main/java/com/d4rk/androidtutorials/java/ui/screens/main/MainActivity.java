@@ -39,7 +39,6 @@ import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                             mBinding.adPlaceholder.setVisibility(View.GONE);
                         }
                         mBinding.adView.setVisibility(View.VISIBLE);
-                        mBinding.adView.loadAd(new AdRequest.Builder().build());
+                        mBinding.adView.loadAd();
                     }
                 } else {
                     mBinding.adView.setVisibility(View.GONE);
@@ -196,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
                             mBinding.adPlaceholder.setVisibility(View.GONE);
                         }
                         mBinding.adView.setVisibility(View.VISIBLE);
-                        mBinding.adView.loadAd(new AdRequest.Builder().build());
+                        mBinding.adView.loadAd();
                     } else {
                         mBinding.adView.setVisibility(View.GONE);
                         if (mBinding.adPlaceholder != null) {

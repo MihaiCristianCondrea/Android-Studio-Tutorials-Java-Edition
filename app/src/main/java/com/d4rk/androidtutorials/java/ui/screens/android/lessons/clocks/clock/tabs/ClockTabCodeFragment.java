@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.d4rk.androidtutorials.java.databinding.FragmentNoCodeBinding;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
 public class ClockTabCodeFragment extends Fragment {
@@ -17,7 +16,7 @@ public class ClockTabCodeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         com.d4rk.androidtutorials.java.databinding.FragmentNoCodeBinding binding = FragmentNoCodeBinding.inflate(inflater, container, false);
         MobileAds.initialize(requireContext());
-        binding.adView.loadAd(new AdRequest.Builder().build());
+        binding.adView.loadAd();
         return binding.getRoot();
     }
 }

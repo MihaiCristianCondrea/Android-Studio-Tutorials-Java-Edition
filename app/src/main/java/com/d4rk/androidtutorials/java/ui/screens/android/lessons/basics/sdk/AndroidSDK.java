@@ -12,7 +12,6 @@ import com.d4rk.androidtutorials.java.data.model.AndroidVersion;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidSdkBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
 import java.util.Arrays;
@@ -71,8 +70,8 @@ public class AndroidSDK extends UpNavigationActivity {
         EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
         edgeToEdgeDelegate.applyEdgeToEdge(binding.scrollView);
 
-        binding.adViewBottom.loadAd(new AdRequest.Builder().build());
-        binding.adView.loadAd(new AdRequest.Builder().build());
+        binding.adViewBottom.loadAd();
+        binding.adView.loadAd();
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
 
         createDynamicTable();

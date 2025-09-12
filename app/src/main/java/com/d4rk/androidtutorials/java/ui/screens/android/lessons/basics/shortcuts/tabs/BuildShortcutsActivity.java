@@ -5,7 +5,6 @@ import android.os.Bundle;
 import com.d4rk.androidtutorials.java.databinding.ActivityShortcutsBuildBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
@@ -21,7 +20,7 @@ public class BuildShortcutsActivity extends UpNavigationActivity {
         EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
         edgeToEdgeDelegate.applyEdgeToEdge(binding.scrollView);
 
-        binding.adView.loadAd(new AdRequest.Builder().build());
+        binding.adView.loadAd();
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
     }
 }

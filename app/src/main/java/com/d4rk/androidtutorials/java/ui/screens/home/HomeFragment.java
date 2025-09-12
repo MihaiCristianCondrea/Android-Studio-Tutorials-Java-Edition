@@ -14,7 +14,6 @@ import com.bumptech.glide.Glide;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 import com.d4rk.androidtutorials.java.databinding.FragmentHomeBinding;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
 import dagger.hilt.android.AndroidEntryPoint;
@@ -88,9 +87,8 @@ public class HomeFragment extends Fragment {
             MobileAds.initialize(requireContext());
             binding.smallBannerAd.setVisibility(View.VISIBLE);
             binding.largeBannerAd.setVisibility(View.VISIBLE);
-            AdRequest request = new AdRequest.Builder().build();
-            binding.smallBannerAd.loadAd(request);
-            binding.largeBannerAd.loadAd(request);
+            binding.smallBannerAd.loadAd();
+            binding.largeBannerAd.loadAd();
         } else {
             binding.smallBannerAd.setVisibility(View.GONE);
             binding.largeBannerAd.setVisibility(View.GONE);

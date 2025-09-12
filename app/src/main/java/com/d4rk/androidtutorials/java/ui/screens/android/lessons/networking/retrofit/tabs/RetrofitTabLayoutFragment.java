@@ -17,7 +17,6 @@ import com.d4rk.androidtutorials.java.databinding.FragmentLayoutBinding;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import com.d4rk.androidtutorials.java.utils.FontManager;
-import com.google.android.gms.ads.AdRequest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,7 +34,7 @@ public class RetrofitTabLayoutFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         FragmentLayoutBinding binding = FragmentLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        binding.adView.loadAd(new AdRequest.Builder().build());
+        binding.adView.loadAd();
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
