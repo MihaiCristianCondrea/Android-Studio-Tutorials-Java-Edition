@@ -484,12 +484,7 @@
     <string name="daily_tip_accessibility">Tervezzen az akadálymentesség érdekében tartalmi leírásokkal és megfelelő kontraszttal.</string>
     <string name="daily_tip_battery_optimization">Csökkentse a felesleges háttérmunkát az akkumulátor élettartamának javítása érdekében.</string>
     <string name="tip_of_the_day">A nap tippje</string>
-    <string name="quiz_title">Kvíz</string>
     <string name="next_question">Következő kérdés</string>
-    <string name="quiz_finished">Kvíz kész. Pontszámod: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Nincs több kérdés, továbbiakért nézd meg a frissítéseket.</string>
-    <string name="quiz_reminder_title">Napi kvíz emlékeztető</string>
-    <string name="quiz_reminder_body">Gyere vissza a mai kvízért.</string>
     <string name="other_apps_title">A fejlesztő további alkalmazásai</string>
 
     <string name="im_step1_desc">Képernyőkép az Új projekt gombbal az Android Studioban.</string>

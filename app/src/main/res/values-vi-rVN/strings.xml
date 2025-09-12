@@ -437,12 +437,7 @@
     <string name="daily_tip_accessibility">Thiết kế có tính đến khả năng tiếp cận với mô tả nội dung và độ tương phản phù hợp.</string>
     <string name="daily_tip_battery_optimization">Giảm công việc nền không cần thiết để cải thiện thời lượng pin.</string>
     <string name="tip_of_the_day">Mẹo trong ngày</string>
-    <string name="quiz_title">Câu đố</string>
     <string name="next_question">Câu hỏi tiếp theo</string>
-    <string name="quiz_finished">Hoàn thành câu đố. Điểm của bạn: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Hết câu hỏi, hãy xem các bản cập nhật sau để có thêm.</string>
-    <string name="quiz_reminder_title">Nhắc nhở làm quiz hằng ngày</string>
-    <string name="quiz_reminder_body">Quay lại để làm quiz hôm nay.</string>
     <string name="other_apps_title">Các ứng dụng khác của nhà phát triển</string>
     <string name="im_step1_desc">Ảnh chụp màn hình hiển thị nút Dự án mới trong Android Studio.</string>
     <string name="im_step2_desc">Ảnh chụp màn hình hiển thị lựa chọn loại hoạt động khi thiết lập dự án.</string>

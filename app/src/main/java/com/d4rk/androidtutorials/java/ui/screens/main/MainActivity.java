@@ -76,13 +76,17 @@ public class MainActivity extends AppCompatActivity {
                 if (ConsentUtils.canShowAds(MainActivity.this)) {
                     if (mBinding.adView.getVisibility() != View.VISIBLE) {
                         MobileAds.initialize(MainActivity.this);
-                        mBinding.adPlaceholder.setVisibility(View.GONE); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
+                        if (mBinding.adPlaceholder != null) {
+                            mBinding.adPlaceholder.setVisibility(View.GONE);
+                        }
                         mBinding.adView.setVisibility(View.VISIBLE);
                         mBinding.adView.loadAd(new AdRequest.Builder().build());
                     }
                 } else {
                     mBinding.adView.setVisibility(View.GONE);
-                    mBinding.adPlaceholder.setVisibility(View.VISIBLE); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
+                    if (mBinding.adPlaceholder != null) {
+                        mBinding.adPlaceholder.setVisibility(View.VISIBLE);
+                    }
                 }
             }
         }
@@ -90,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
     private MainViewModel mainViewModel;
     private NavController navController;
     private int currentNavIndex;
-    private AppUpdateNotificationsManager appUpdateNotificationsManager; // FIXME: Private field 'appUpdateNotificationsManager' is assigned but never accessed
     private AppUpdateManager appUpdateManager;
     private InstallStateUpdatedListener installStateUpdatedListener;
     private long backPressedTime;
@@ -173,11 +176,15 @@ public class MainActivity extends AppCompatActivity {
             EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
             NavigationBarView navBarView = (NavigationBarView) mBinding.navView;
             if (useRail) {
-                mBinding.navRail.setVisibility(View.VISIBLE); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
+                if (mBinding.navRail != null) {
+                    mBinding.navRail.setVisibility(View.VISIBLE);
+                }
                 navBarView.setVisibility(View.GONE);
                 edgeToEdgeDelegate.applyEdgeToEdge(mBinding.container);
             } else {
-                mBinding.navRail.setVisibility(View.GONE); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
+                if (mBinding.navRail != null) {
+                    mBinding.navRail.setVisibility(View.GONE);
+                }
                 navBarView.setVisibility(View.VISIBLE);
                 edgeToEdgeDelegate.applyEdgeToEdgeBottomBar(mBinding.container, navBarView);
 
@@ -185,12 +192,16 @@ public class MainActivity extends AppCompatActivity {
                 if (mBinding.adView != null) {
                     if (ConsentUtils.canShowAds(this)) {
                         MobileAds.initialize(this);
-                        mBinding.adPlaceholder.setVisibility(View.GONE); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
+                        if (mBinding.adPlaceholder != null) {
+                            mBinding.adPlaceholder.setVisibility(View.GONE);
+                        }
                         mBinding.adView.setVisibility(View.VISIBLE);
                         mBinding.adView.loadAd(new AdRequest.Builder().build());
                     } else {
                         mBinding.adView.setVisibility(View.GONE);
-                        mBinding.adPlaceholder.setVisibility(View.VISIBLE); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
+                        if (mBinding.adPlaceholder != null) {
+                            mBinding.adPlaceholder.setVisibility(View.VISIBLE);
+                        }
                     }
                 }
             }
@@ -206,7 +217,9 @@ public class MainActivity extends AppCompatActivity {
                 navOrder.put(R.id.navigation_home, 0);
                 navOrder.put(R.id.navigation_android_studio, 1);
                 navOrder.put(R.id.navigation_about, 2);
-                currentNavIndex = navOrder.get(navController.getCurrentDestination().getId()); // FIXME: Method invocation 'getId' may produce 'NullPointerException'
+                if (navController.getCurrentDestination() != null) {
+                    currentNavIndex = navOrder.get(navController.getCurrentDestination().getId());
+                }
 
                 NavOptions forwardOptions = new NavOptions.Builder()
                         .setEnterAnim(R.anim.fragment_spring_enter)
@@ -262,11 +275,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mainViewModel.getLoadingState().observe(this, isLoading ->
-                mBinding.progressBar.setVisibility(Boolean.TRUE.equals(isLoading) ? View.VISIBLE : View.GONE)); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
+                  {
+                      if (mBinding.progressBar != null) {
+                          mBinding.progressBar.setVisibility(Boolean.TRUE.equals(isLoading) ? View.VISIBLE : View.GONE);
+                      }
+                  });
     }
 
     private void setupUpdateNotifications() {
-        appUpdateNotificationsManager = new AppUpdateNotificationsManager(this);
+        new AppUpdateNotificationsManager(this);
     }
 
 
@@ -286,32 +303,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // TODO: Call on onResume
-    private void checkForImmediateUpdate() { // FIXME: Private method 'checkForImmediateUpdate()' is never used
-        appUpdateManager
-                .getAppUpdateInfo()
-                .addOnSuccessListener(
-                        appUpdateInfo -> {
-                            boolean updateAvailable =
-                                    appUpdateInfo.updateAvailability()
-                                            == UpdateAvailability.UPDATE_AVAILABLE;
-                            if (updateAvailable
-                                    && appUpdateInfo.isUpdateTypeAllowed(
-                                    AppUpdateType.IMMEDIATE)) {
-                                startImmediateUpdate(appUpdateInfo);
-                            }
-                        })
-                .addOnFailureListener(
-                        e -> {
-                            if (!BuildConfig.DEBUG) {
-                                Snackbar.make(
-                                                findViewById(android.R.id.content),
-                                                getString(R.string.snack_general_error),
-                                                Snackbar.LENGTH_LONG)
-                                        .show();
-                            }
-                        });
-    }
-
     private void startImmediateUpdate(AppUpdateInfo appUpdateInfo) {
         appUpdateManager.startUpdateFlowForResult(
                 appUpdateInfo,

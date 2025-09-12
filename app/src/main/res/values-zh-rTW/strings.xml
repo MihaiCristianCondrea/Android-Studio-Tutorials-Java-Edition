@@ -437,12 +437,7 @@
     <string name="daily_tip_accessibility">使用內容描述和適當的對比來設計無障礙性。</string>
     <string name="daily_tip_battery_optimization">減少不必要的背景作業以改善電池續航。</string>
     <string name="tip_of_the_day">今日提示</string>
-    <string name="quiz_title">小測驗</string>
     <string name="next_question">下一題</string>
-    <string name="quiz_finished">測驗完成！你的分數：%1$d/%2$d</string>
-    <string name="quiz_no_more_questions">沒有更多題目，請留意之後的更新。</string>
-    <string name="quiz_reminder_title">每日測驗提醒</string>
-    <string name="quiz_reminder_body">回來參加今天的測驗吧！</string>
     <string name="other_apps_title">開發人員的其他應用程式</string>
     <string name="im_step1_desc">顯示 Android Studio 中新專案按鈕的螢幕截圖。</string>
     <string name="im_step2_desc">顯示在專案設定期間選擇活動類型的螢幕截圖。</string>

@@ -467,12 +467,7 @@
     <string name="daily_tip_accessibility">Entwickle barrierefrei mit Inhaltsbeschreibungen und ausreichendem Kontrast.</string>
     <string name="daily_tip_battery_optimization">Reduziere unnötige Hintergrundarbeit, um die Akkulaufzeit zu verbessern.</string>
     <string name="tip_of_the_day">Tipp des Tages</string>
-    <string name="quiz_title">Quiz</string>
     <string name="next_question">Nächste Frage</string>
-    <string name="quiz_finished">Quiz abgeschlossen. Deine Punktzahl: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Keine weiteren Fragen, schau bei zukünftigen Updates vorbei.</string>
-    <string name="quiz_reminder_title">Tägliche Quiz-Erinnerung</string>
-    <string name="quiz_reminder_body">Komm zurück für das heutige Quiz.</string>
     <string name="other_apps_title">Weitere Apps des Entwicklers</string>
     <string name="im_step1_desc">Screenshot mit der Schaltfläche Neues Projekt in Android Studio.</string>
     <string name="im_step2_desc">Screenshot mit der Auswahl des Aktivitätstyps während der Projekteinrichtung.</string>

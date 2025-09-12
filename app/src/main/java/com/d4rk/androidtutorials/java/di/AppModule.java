@@ -1,24 +1,19 @@
 package com.d4rk.androidtutorials.java.di;
 
 import android.app.Application;
-import android.content.res.AssetManager;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.d4rk.androidtutorials.java.data.repository.DefaultHomeRepository;
 import com.d4rk.androidtutorials.java.data.repository.DefaultMainRepository;
-import com.d4rk.androidtutorials.java.data.repository.DefaultQuizRepository;
 import com.d4rk.androidtutorials.java.data.repository.DefaultSupportRepository;
 import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
 import com.d4rk.androidtutorials.java.data.repository.MainRepository;
-import com.d4rk.androidtutorials.java.data.repository.QuizRepository;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 import com.d4rk.androidtutorials.java.data.source.DefaultHomeLocalDataSource;
 import com.d4rk.androidtutorials.java.data.source.DefaultHomeRemoteDataSource;
-import com.d4rk.androidtutorials.java.data.source.DefaultQuizLocalDataSource;
 import com.d4rk.androidtutorials.java.data.source.HomeLocalDataSource;
 import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource;
-import com.d4rk.androidtutorials.java.data.source.QuizLocalDataSource;
 import com.d4rk.androidtutorials.java.domain.about.GetCurrentYearUseCase;
 import com.d4rk.androidtutorials.java.domain.about.GetVersionStringUseCase;
 import com.d4rk.androidtutorials.java.domain.help.LaunchReviewFlowUseCase;
@@ -34,7 +29,6 @@ import com.d4rk.androidtutorials.java.domain.main.GetBottomNavLabelVisibilityUse
 import com.d4rk.androidtutorials.java.domain.main.GetDefaultTabPreferenceUseCase;
 import com.d4rk.androidtutorials.java.domain.main.MarkStartupScreenShownUseCase;
 import com.d4rk.androidtutorials.java.domain.main.ShouldShowStartupScreenUseCase;
-import com.d4rk.androidtutorials.java.domain.quiz.LoadQuizQuestionsUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.ApplyConsentUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.GetDarkModeUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.OnPreferenceChangedUseCase;
@@ -209,24 +203,6 @@ public class AppModule {
     @Provides
     public SetConsentAcceptedUseCase provideSetConsentAcceptedUseCase(SettingsRepository repository) {
         return new SetConsentAcceptedUseCase(repository);
-    }
-
-    @Provides
-    @Singleton
-    public QuizLocalDataSource provideQuizLocalDataSource(Application application, ExecutorService executorService) {
-        AssetManager manager = application.getAssets();
-        return new DefaultQuizLocalDataSource(manager, executorService);
-    }
-
-    @Provides
-    @Singleton
-    public QuizRepository provideQuizRepository(QuizLocalDataSource local) {
-        return new DefaultQuizRepository(local);
-    }
-
-    @Provides
-    public LoadQuizQuestionsUseCase provideLoadQuizQuestionsUseCase(QuizRepository repository) {
-        return new LoadQuizQuestionsUseCase(repository);
     }
 
     @Provides

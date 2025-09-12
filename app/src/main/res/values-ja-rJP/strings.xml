@@ -486,12 +486,7 @@
     <string name="daily_tip_accessibility">コンテンツの説明と適切なコントラストでアクセシビリティに配慮してデザインしましょう。</string>
     <string name="daily_tip_battery_optimization">不要なバックグラウンド作業を減らしてバッテリー寿命を伸ばしましょう。</string>
     <string name="tip_of_the_day">今日のヒント</string>
-    <string name="quiz_title">クイズ</string>
     <string name="next_question">次の質問</string>
-    <string name="quiz_finished">クイズ完了。あなたのスコア: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">これ以上質問はありません。続きは次回の更新をお待ちください。</string>
-    <string name="quiz_reminder_title">毎日のクイズリマインダー</string>
-    <string name="quiz_reminder_body">今日のクイズに戻ってきてください。</string>
     <string name="other_apps_title">開発者の他のアプリ</string>
 
     <string name="im_step1_desc">Android Studio の新規プロジェクトボタンを示すスクリーンショット。</string>

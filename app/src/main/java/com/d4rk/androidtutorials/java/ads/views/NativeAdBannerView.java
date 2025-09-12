@@ -12,11 +12,10 @@ import androidx.annotation.Nullable;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.managers.NativeAdLoader;
 import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
 
 /**
  * Custom view that acts as a drop-in replacement for AdView and loads
- * a native ad using {@link NativeAdLoader} when {@link #loadAd(AdRequest)} is called.
+ * a native ad using {@link NativeAdLoader} when {@link #loadAd()} is called.
  */
 public class NativeAdBannerView extends FrameLayout {
 
@@ -39,17 +38,17 @@ public class NativeAdBannerView extends FrameLayout {
 
     private void init(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         if (attrs != null) {
-            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.NativeAdBannerView, defStyleAttr, 0); // FIXME: 'TypedArray' used without 'try'-with-resources statement
-            layoutRes = a.getResourceId(R.styleable.NativeAdBannerView_nativeAdLayout, R.layout.ad_home_banner_large);
-            a.recycle();
+            try (TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.NativeAdBannerView, defStyleAttr, 0)) {
+                layoutRes = a.getResourceId(R.styleable.NativeAdBannerView_nativeAdLayout, R.layout.ad_home_banner_large);
+            }
         }
     }
 
-    public void loadAd(AdRequest adRequest) {
-        loadAd(adRequest, null);
+    public void loadAd() {
+        loadAd(null);
     }
 
-    public void loadAd(AdRequest adRequest, @Nullable AdListener listener) { // FIXME: Parameter 'adRequest' is never used
+    public void loadAd(@Nullable AdListener listener) {
         NativeAdLoader.load(getContext(), this, layoutRes, listener);
     }
 

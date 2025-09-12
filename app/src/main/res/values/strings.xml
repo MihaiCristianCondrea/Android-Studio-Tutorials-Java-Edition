@@ -476,12 +476,7 @@
     <string name="daily_tip_accessibility">Design for accessibility with content descriptions and proper contrast.</string>
     <string name="daily_tip_battery_optimization">Reduce unnecessary background work to improve battery life.</string>
     <string name="tip_of_the_day">Tip of the day</string>
-    <string name="quiz_title">Quiz</string>
     <string name="next_question">Next question</string>
-    <string name="quiz_finished">Quiz complete. Your score: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">No more questions, check further updates for more.</string>
-    <string name="quiz_reminder_title">Daily quiz reminder</string>
-    <string name="quiz_reminder_body">Come back for today\'s quiz.</string>
     <string name="other_apps_title">More apps by the developer</string>
     <string name="im_step1_desc">Screenshot showing the New project button in Android Studio.</string>
     <string name="im_step2_desc">Screenshot showing activity type selection during project setup.</string>

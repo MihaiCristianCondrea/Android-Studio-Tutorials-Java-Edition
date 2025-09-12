@@ -486,12 +486,7 @@
     <string name="daily_tip_accessibility">Progetta per l\'accessibilità con descrizioni dei contenuti e contrasto adeguato.</string>
     <string name="daily_tip_battery_optimization">Riduci il lavoro in background non necessario per migliorare la durata della batteria.</string>
     <string name="tip_of_the_day">Suggerimento del giorno</string>
-    <string name="quiz_title">Quiz</string>
     <string name="next_question">Prossima domanda</string>
-    <string name="quiz_finished">Quiz completato. Il tuo punteggio: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Nessun\'altra domanda, controlla gli aggiornamenti futuri per altro.</string>
-    <string name="quiz_reminder_title">Promemoria quiz giornaliero</string>
-    <string name="quiz_reminder_body">Torna per il quiz di oggi.</string>
     <string name="other_apps_title">Altre app dello sviluppatore</string>
 
     <string name="im_step1_desc">Screenshot che mostra il pulsante Nuovo progetto in Android Studio.</string>

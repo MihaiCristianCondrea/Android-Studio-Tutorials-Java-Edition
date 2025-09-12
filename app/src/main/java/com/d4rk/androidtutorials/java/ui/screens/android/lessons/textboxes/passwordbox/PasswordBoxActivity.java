@@ -61,8 +61,10 @@ public class PasswordBoxActivity extends UpNavigationActivity {
     }
 
     private void addKeyListener() {
-        binding.buttonShowPassword.setOnClickListener(v ->
-                Snackbar.make(binding.getRoot(), binding.editText.getText(), Snackbar.LENGTH_LONG).show()); // FIXME: Argument 'binding.editText.getText()' might be null
+        binding.buttonShowPassword.setOnClickListener(v -> {
+            CharSequence text = binding.editText.getText();
+            Snackbar.make(binding.getRoot(), text != null ? text : "", Snackbar.LENGTH_LONG).show();
+        });
     }
 
 

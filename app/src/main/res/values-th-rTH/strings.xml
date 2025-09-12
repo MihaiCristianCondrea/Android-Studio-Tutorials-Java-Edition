@@ -439,12 +439,7 @@
     <string name="daily_tip_accessibility">ออกแบบโดยคำนึงถึงการเข้าถึงด้วยคำอธิบายเนื้อหาและความคมชัดที่เหมาะสม.</string>
     <string name="daily_tip_battery_optimization">ลดงานเบื้องหลังที่ไม่จำเป็นเพื่อยืดอายุการใช้งานแบตเตอรี่.</string>
     <string name="tip_of_the_day">เคล็ดลับประจำวัน</string>
-    <string name="quiz_title">แบบทดสอบ</string>
     <string name="next_question">คำถามถัดไป</string>
-    <string name="quiz_finished">ทำแบบทดสอบเสร็จสิ้น. คะแนนของคุณ: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">ไม่มีคำถามเพิ่มเติม โปรดติดตามการอัปเดตต่อไป</string>
-    <string name="quiz_reminder_title">การแจ้งเตือนแบบทดสอบรายวัน</string>
-    <string name="quiz_reminder_body">กลับมาทำแบบทดสอบของวันนี้.</string>
     <string name="other_apps_title">แอปอื่นๆ จากนักพัฒนา</string>
     <string name="im_step1_desc">ภาพหน้าจอแสดงปุ่มโปรเจ็กต์ใหม่ใน Android Studio.</string>
     <string name="im_step2_desc">ภาพหน้าจอแสดงการเลือกประเภทกิจกรรมระหว่างตั้งค่าโปรเจ็กต์.</string>
