@@ -29,6 +29,10 @@ public class StartPageFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(requireActivity()).get(OnboardingViewModel.class);
+
+        binding.cardHome.setOnClickListener(v -> binding.radioHome.setChecked(true));
+        binding.cardAndroidStudio.setOnClickListener(v -> binding.radioAndroidStudio.setChecked(true));
+        binding.cardAbout.setOnClickListener(v -> binding.radioAbout.setChecked(true));
     }
 
     public void saveSelection() {

@@ -254,6 +254,10 @@
     <string name="dark_mode">Dark mode</string>
     <string name="auto_battery_mode">Auto battery dark mode</string>
     <string name="default_tab">Default tab</string>
+    <string name="default_tab_description">Select which tab opens when the app starts.</string>
+    <string name="home_description">Latest tutorials and updates.</string>
+    <string name="android_studio_description">Tools and tips for Android Studio.</string>
+    <string name="about_description">Information about this app.</string>
     <string name="bottom_navigation_bar_labels">Bottom navigation bar labels</string>
     <string name="labeled">Labeled</string>
     <string name="selected">Selected %1$s</string>
