@@ -25,7 +25,7 @@ public class AndroidStartProjectActivity extends UpNavigationActivity {
         edgeToEdgeDelegate.applyEdgeToEdge(binding.constraintLayout);
 
         setSupportActionBar(binding.topAppBar);
-        binding.topAppBar.setNavigationOnClickListener(v -> onBackPressed()); // FIXME: 'onBackPressed()' is deprecated
+        binding.topAppBar.setNavigationOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
         binding.topAppBar.setOnMenuItemClickListener(item -> {
             if (item.getItemId() == R.id.action_share) {
                 Intent sharingIntent = new Intent(Intent.ACTION_SEND);

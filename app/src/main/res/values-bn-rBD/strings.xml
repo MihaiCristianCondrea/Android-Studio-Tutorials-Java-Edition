@@ -466,12 +466,6 @@
     <string name="daily_tip_accessibility">কন্টেন্ট বর্ণনা এবং সঠিক কনট্রাস্ট দিয়ে অ্যাক্সেসিবিলিটির জন্য নকশা করুন।</string>
     <string name="daily_tip_battery_optimization">অপ্রয়োজনীয় ব্যাকগ্রাউন্ড কাজ কমিয়ে ব্যাটারির স্থায়িত্ব বাড়ান।</string>
     <string name="tip_of_the_day">আজকের উপদেশ</string>
-    <string name="quiz_title">কুইজ</string>
-    <string name="next_question">পরবর্তী প্রশ্ন</string>
-    <string name="quiz_finished">কুইজ শেষ. আপনার স্কোর: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">আর কোনো প্রশ্ন নেই, পরবর্তী আপডেটে দেখুন।</string>
-    <string name="quiz_reminder_title">দৈনিক কুইজ রিমাইন্ডার</string>
-    <string name="quiz_reminder_body">আজকের কুইজে ফিরে আসুন.</string>
     <string name="other_apps_title">ডেভেলপারকে আরো টুল</string>
     <string name="im_step1_desc">স্ক্রিনশটে Android Studio-তে নতুন প্রকল্প বোতাম দেখা যাচ্ছে।</string>
     <string name="im_step2_desc">স্ক্রিনশটে প্রকল্প সেটআপের সময় অ্যাক্টিভিটি টাইপ নির্বাচন দেখা যাচ্ছে।</string>

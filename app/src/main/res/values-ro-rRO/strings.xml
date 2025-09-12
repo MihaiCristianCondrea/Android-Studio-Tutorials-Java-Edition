@@ -475,12 +475,6 @@
     <string name="daily_tip_accessibility">Proiectează pentru accesibilitate cu descrieri de conținut și contrast corespunzător.</string>
     <string name="daily_tip_battery_optimization">Reduceți munca de fundal inutilă pentru a îmbunătăți durata bateriei.</string>
     <string name="tip_of_the_day">Sfat al zilei</string>
-    <string name="quiz_title">Chestionar</string>
-    <string name="next_question">Întrebarea următoare</string>
-    <string name="quiz_finished">Chestionar complet. Scorul tău: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Nu mai sunt întrebări, urmărește actualizările viitoare pentru mai multe.</string>
-    <string name="quiz_reminder_title">Memento zilnic pentru chestionar</string>
-    <string name="quiz_reminder_body">Revino pentru chestionarul de astăzi.</string>
     <string name="other_apps_title">Mai multe aplicații ale dezvoltatorului</string>
     <string name="im_step1_desc">Captură de ecran cu butonul Proiect nou în Android Studio.</string>
     <string name="im_step2_desc">Captură de ecran cu selectarea tipului de activitate în timpul configurării proiectului.</string>

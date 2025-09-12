@@ -437,12 +437,6 @@
     <string name="daily_tip_accessibility">Designa för tillgänglighet med innehållsbeskrivningar och rätt kontrast.</string>
     <string name="daily_tip_battery_optimization">Minska onödigt bakgrundsarbete för att förbättra batteritiden.</string>
     <string name="tip_of_the_day">Dagens tips</string>
-    <string name="quiz_title">Quiz</string>
-    <string name="next_question">Nästa fråga</string>
-    <string name="quiz_finished">Quiz klart. Ditt resultat: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Inga fler frågor, se kommande uppdateringar för mer.</string>
-    <string name="quiz_reminder_title">Daglig quizpåminnelse</string>
-    <string name="quiz_reminder_body">Kom tillbaka för dagens quiz.</string>
     <string name="other_apps_title">Fler appar av utvecklaren</string>
     <string name="im_step1_desc">Skärmdump som visar knappen Nytt projekt i Android Studio.</string>
     <string name="im_step2_desc">Skärmdump som visar val av aktivitetstyp vid projektkonfiguration.</string>

@@ -467,12 +467,6 @@
     <string name="daily_tip_accessibility">Concevez en tenant compte de l\'accessibilité avec des descriptions de contenu et un contraste adéquat.</string>
     <string name="daily_tip_battery_optimization">Réduisez le travail en arrière-plan inutile pour améliorer l\'autonomie de la batterie.</string>
     <string name="tip_of_the_day">Astuce du jour</string>
-    <string name="quiz_title">Quiz</string>
-    <string name="next_question">Question suivante</string>
-    <string name="quiz_finished">Quiz terminé . Votre score : %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Plus de questions, consultez les prochaines mises à jour pour plus.</string>
-    <string name="quiz_reminder_title">Rappel quotidien du quiz</string>
-    <string name="quiz_reminder_body">Revenez pour le quiz du jour .</string>
     <string name="other_apps_title">Plus d\'applications par le développeur</string>
     <string name="im_step1_desc">Capture d’écran montrant le bouton Nouveau projet dans Android Studio.</string>
     <string name="im_step2_desc">Capture d’écran montrant la sélection du type d’activité pendant la configuration du projet.</string>

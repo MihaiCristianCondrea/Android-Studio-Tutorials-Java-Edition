@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.d4rk.androidtutorials.java.R;
@@ -46,7 +47,7 @@ public class RetrofitActivity extends UpNavigationActivity {
             binding.buttonFetch.setEnabled(false);
             api.getTodo().enqueue(new Callback<>() {
                 @Override
-                public void onResponse(Call<Todo> call, Response<Todo> response) { // FIXME: Not annotated parameter overrides @EverythingIsNonNull parameter
+                public void onResponse(@NonNull Call<Todo> call, @NonNull Response<Todo> response) {
                     if (response.isSuccessful() && response.body() != null) {
                         binding.textViewResult.setText(response.body().title);
                     } else {
@@ -56,7 +57,7 @@ public class RetrofitActivity extends UpNavigationActivity {
                 }
 
                 @Override
-                public void onFailure(Call<Todo> call, Throwable t) { // FIXME: Not annotated parameter overrides @EverythingIsNonNull parameter
+                public void onFailure(@NonNull Call<Todo> call, @NonNull Throwable t) {
                     binding.textViewResult.setText(R.string.snack_general_error);
                     binding.buttonFetch.setEnabled(true);
                 }

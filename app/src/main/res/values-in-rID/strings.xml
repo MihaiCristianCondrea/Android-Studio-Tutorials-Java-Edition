@@ -465,12 +465,6 @@
     <string name="daily_tip_accessibility">Rancang dengan aksesibilitas menggunakan deskripsi konten dan kontras yang tepat.</string>
     <string name="daily_tip_battery_optimization">Kurangi pekerjaan latar belakang yang tidak perlu untuk meningkatkan daya tahan baterai.</string>
     <string name="tip_of_the_day">Tip Hari</string>
-    <string name="quiz_title">Kuis</string>
-    <string name="next_question">Pertanyaan Selanjutnya</string>
-    <string name="quiz_finished">Kuis selesai. Skor Anda: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Tidak ada lagi pertanyaan, cek pembaruan selanjutnya untuk lebih.</string>
-    <string name="quiz_reminder_title">Pengingat Kuis Harian</string>
-    <string name="quiz_reminder_body">Kembali untuk kuis hari ini.</string>
     <string name="other_apps_title">Lebih banyak aplikasi oleh pengembang</string>
     <string name="im_step1_desc">Cuplikan layar yang menampilkan tombol Proyek baru di Android Studio.</string>
     <string name="im_step2_desc">Cuplikan layar yang menampilkan pemilihan jenis aktivitas saat menyiapkan proyek.</string>

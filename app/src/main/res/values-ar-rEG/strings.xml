@@ -439,12 +439,6 @@
     <string name="daily_tip_accessibility">صمّم لإمكانية الوصول باستخدام أوصاف المحتوى وتباين مناسب.</string>
     <string name="daily_tip_battery_optimization">قلّل العمل الخلفي غير الضروري لتحسين عمر البطارية.</string>
     <string name="tip_of_the_day">نصيحة اليوم</string>
-    <string name="quiz_title">اختبار</string>
-    <string name="next_question">السؤال التالي</string>
-    <string name="quiz_finished">اكتمل الاختبار. نتيجتك: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">لا مزيد من الأسئلة، تابع التحديثات القادمة للمزيد.</string>
-    <string name="quiz_reminder_title">تذكير الاختبار اليومي</string>
-    <string name="quiz_reminder_body">عد للاختبار اليومي اليوم.</string>
     <string name="other_apps_title">تطبيقات أخرى من المطور</string>
     <string name="im_step1_desc">لقطة شاشة تعرض زر مشروع جديد في Android Studio.</string>
     <string name="im_step2_desc">لقطة شاشة تعرض اختيار نوع النشاط أثناء إعداد المشروع.</string>

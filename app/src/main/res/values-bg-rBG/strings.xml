@@ -465,12 +465,6 @@
     <string name="daily_tip_accessibility">Проектирайте за достъпност с описания на съдържанието и правилен контраст.</string>
     <string name="daily_tip_battery_optimization">Намалете ненужната работа във фонов режим, за да подобрите живота на батерията.</string>
     <string name="tip_of_the_day">Съвет на деня</string>
-    <string name="quiz_title">Тест</string>
-    <string name="next_question">Следващ въпрос</string>
-    <string name="quiz_finished">Тестът приключи. Вашият резултат: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Няма повече въпроси, очаквайте нови в следващи обновления.</string>
-    <string name="quiz_reminder_title">Ежедневно напомняне за тест</string>
-    <string name="quiz_reminder_body">Върнете се за днешния тест.</string>
     <string name="other_apps_title">Още приложения от разработчика</string>
     <string name="im_step1_desc">Екранна снимка, показваща бутона Нов проект в Android Studio.</string>
     <string name="im_step2_desc">Екранна снимка, показваща избор на тип активност при настройка на проекта.</string>

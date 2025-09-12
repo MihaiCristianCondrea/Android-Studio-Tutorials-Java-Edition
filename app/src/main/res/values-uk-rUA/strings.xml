@@ -437,12 +437,6 @@
     <string name="daily_tip_accessibility">Проєктуйте з урахуванням доступності, використовуючи описи вмісту та належний контраст.</string>
     <string name="daily_tip_battery_optimization">Зменшуйте непотрібну фонову роботу, щоб покращити час роботи акумулятора.</string>
     <string name="tip_of_the_day">Порада дня</string>
-    <string name="quiz_title">Вікторина</string>
-    <string name="next_question">Наступне запитання</string>
-    <string name="quiz_finished">Вікторину завершено. Ваш рахунок: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Більше питань немає, стежте за оновленнями.</string>
-    <string name="quiz_reminder_title">Щоденне нагадування про вікторину</string>
-    <string name="quiz_reminder_body">Поверніться на сьогоднішню вікторину.</string>
     <string name="other_apps_title">Інші додатки розробника</string>
     <string name="im_step1_desc">Знімок екрана з кнопкою Новий проєкт у Android Studio.</string>
     <string name="im_step2_desc">Знімок екрана вибору типу активності під час налаштування проєкту.</string>

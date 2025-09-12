@@ -31,7 +31,6 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.card.MaterialCardView;
@@ -369,7 +368,7 @@ public class AndroidStudioFragment extends Fragment {
             int type = getItemViewType(pos);
             if (type == TYPE_AD) {
                 AdHolder adHolder = (AdHolder) holder;
-                adHolder.adView.loadAd(new AdRequest.Builder().build(), new AdListener() {
+                adHolder.adView.loadAd(new AdListener() {
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError error) {
                         adHolder.adView.setVisibility(View.GONE);

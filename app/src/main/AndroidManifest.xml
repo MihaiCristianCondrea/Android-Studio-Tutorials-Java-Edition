@@ -356,16 +356,6 @@
             android:exported="false"
             android:label="@string/support_us"
             android:parentActivityName=".ui.screens.support.SupportActivity" />
-        <activity
-            android:name=".ui.screens.quiz.QuizActivity"
-            android:exported="false"
-            android:label="@string/quiz_title"
-            android:parentActivityName=".ui.screens.quiz.QuizActivity" />
-
-        <receiver
-            android:name=".notifications.receivers.QuizReminderReceiver"
-            android:exported="false" />
-
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
             android:enabled="false"
