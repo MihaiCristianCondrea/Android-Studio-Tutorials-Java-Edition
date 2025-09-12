@@ -13,8 +13,11 @@
     <string name="agree">Kabul Et</string>
     <string name="home">Ana Sayfa</string>
     <string name="announcement_title">Yeni Bir Uygulama Geldi.</string>
+    <string name="announcement_subtitle">En son Android Studio Tutorials uygulamasına göz atın. Jetpack Compose, Material 3 ve daha fazlasını öğrenin.</string>
     <string name="profile_picture_desc">Geliştirici Profil Resmi</string>
     <string name="main_card_title">Android Studio Eğitimlerini Keşfedin</string>
+    <string name="main_card_subtitle">Kotlin ve Java Editions\'ın yer aldığı</string>
+    <string name="main_card_description">Kotlin baskısı Dinamik Dersler, AI asistanı ve daha fazlası ile güncellendi. Android gelişiminin geleceğini deneyimleyin.</string>
     <string name="get_on_google_play">Google Play\'den edinin</string>
     <string name="learn_more">Daha fazla bilgi edinin</string>
     <string name="play_store">Play Store</string>
@@ -309,6 +312,11 @@
     <string name="summary_preference_permissions_access_network_state">Uygulamanın, ağ bağlantısını kontrol etmesine ve etkinleştirme durumu ve bağlı Wi-Fi cihaz adları dahil olmak üzere Wi-Fi hakkında bilgi almasına olanak tanır.</string>
     <string name="summary_preference_permissions_billing">Uygulamanın, uygulama içi satın alma ve bağışları yönetmek için Google Play Faturalandırma Kitaplığı\'nı kullanmasına izin verir.</string>
     <string name="summary_preference_permissions_check_license">Uygulamanın, lisans sözleşmesine uygunluğunu doğrulamasına ve fikri mülkiyeti korumak için lisans koşullarını uygulamasına izin verir.</string>
+    <string name="next">Sonraki</string>
+    <string name="finish">Sona ermek</string>
+    <string name="back">Geri</string>
+    <string name="bottom_navigation_labels">Alt Navigasyon Etiketleri</string>
+    <string name="data_dialog_message">Deneyiminizi geliştirmek için veri topluyoruz.</string>
     <string name="summary_preference_permissions_access_notification_policy">Uygulamanın, cihazın bildirim politikasına erişmesine ve değiştirmesine, bildirimlerin kullanıcıya nasıl ve ne zaman gösterileceğini kontrol etmesine ve özel bildirim yönetimi özellikleri sunmasına olanak tanır.</string>
     <string name="summary_preference_permissions_foreground_service">Uygulamanın, ön planda çalışan hizmetler oluşturmasına ve kullanmasına, onlara diğer arka plan işlemlerine göre öncelik vermesine ve performansı ve güvenilirliği artırmasına olanak tanır.</string>
     <string name="summary_preference_settings_language">Uygulama dilini ayarla.</string>
@@ -416,11 +424,13 @@
     <string name="daily_tip_use_string_resources">Yerelleştirmeyi basitleştirmek için tüm metinler için dize kaynakları kullanın.</string>
     <string name="daily_tip_optimize_webp">APK boyutunu küçültmek için görüntüleri WebP ile optimize edin.</string>
     <string name="daily_tip_enable_proguard">Sürüm derlemelerini küçültmek ve karartmak için ProGuard\'ı etkinleştirin.</string>
+    <string name="daily_tip_prefer_compose">Geniş cihaz uyumluluğu için XML düzenlerini tercih edin.</string>
     <string name="daily_tip_livedata_viewmodel">Reaktif kullanıcı arayüzleri için LiveData ve ViewModel\'den yararlanın.</string>
     <string name="daily_tip_workmanager">Güvenilir arka plan görevleri için WorkManager kullanın.</string>
     <string name="daily_tip_github_actions">Otomatik derleme kontrolleri için GitHub Actions\'ı kullanın.</string>
     <string name="daily_tip_emulator_screen_sizes">Uygulamanızı emülatörle farklı ekran boyutlarında test edin.</string>
     <string name="daily_tip_update_dependencies">En son özellikler ve düzeltmeler için bağımlılıkları güncel tutun.</string>
+    <string name="daily_tip_kotlin_coroutines">Eşzamansız işlemler için ExecutorService kullanın.</string>
     <string name="daily_tip_hilt">Bağımlılık enjeksiyonu için Hilt\'i entegre edin.</string>
     <string name="daily_tip_unit_tests">JUnit ve Espresso ile birim testleri yazın.</string>
     <string name="daily_tip_mvvm">Bakımı kolay kod için MVVM mimarisini takip edin.</string>

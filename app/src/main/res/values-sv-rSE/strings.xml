@@ -13,8 +13,11 @@
     <string name="agree">Godkänn</string>
     <string name="home">Hem</string>
     <string name="announcement_title">En ny app har kommit.</string>
+    <string name="announcement_subtitle">Kolla in den senaste Android Studio Tutorials -appen. Lär dig JetPack Compose, Material 3 och mer.</string>
     <string name="profile_picture_desc">Utvecklarprofilbild</string>
     <string name="main_card_title">Upptäck Android Studio Tutorials</string>
+    <string name="main_card_subtitle">Med Kotlin- och Java -utgåvor</string>
+    <string name="main_card_description">Kotlin -utgåvan har uppdaterats med dynamiska lektioner, AI -assistent och mer. Upplev framtiden för Android -utvecklingen.</string>
     <string name="get_on_google_play">Hämta den på Google Play</string>
     <string name="learn_more">Läs mer</string>
     <string name="play_store">Play Butik</string>
@@ -309,6 +312,11 @@
     <string name="summary_preference_permissions_access_network_state">Tillåter appen att kontrollera nätverksanslutningen och hämta information om Wi-Fi, inklusive aktiveringsstatus och namn på anslutna Wi-Fi-enheter.</string>
     <string name="summary_preference_permissions_billing">Tillåter appen att använda Google Play Billing Library för att hantera köp i appen och donationer.</string>
     <string name="summary_preference_permissions_check_license">Tillåter appen att verifiera sin efterlevnad av licensavtalet och upprätthålla licensvillkor för att skydda immateriell egendom.</string>
+    <string name="next">Nästa</string>
+    <string name="finish">Avsluta</string>
+    <string name="back">Tillbaka</string>
+    <string name="bottom_navigation_labels">Navigeringsetiketter</string>
+    <string name="data_dialog_message">Vi samlar in data för att förbättra din upplevelse.</string>
     <string name="summary_preference_permissions_access_notification_policy">Tillåter appen att komma åt och ändra enhetens notispolicy, styra hur och när notiser visas för användaren och tillhandahålla anpassade funktioner för notishantering.</string>
     <string name="summary_preference_permissions_foreground_service">Tillåter appen att skapa och använda tjänster som körs i förgrunden, vilket ger dem prioritet över andra bakgrundsprocesser och förbättrar prestanda och tillförlitlighet.</string>
     <string name="summary_preference_settings_language">Ställ in applikationsspråk.</string>
@@ -416,11 +424,13 @@
     <string name="daily_tip_use_string_resources">Använd strängresurser för all text för att förenkla lokalisering.</string>
     <string name="daily_tip_optimize_webp">Optimera bilder med WebP för att minska APK-storleken.</string>
     <string name="daily_tip_enable_proguard">Aktivera ProGuard för att krympa och obfuskera release-versioner.</string>
+    <string name="daily_tip_prefer_compose">Föredrar XML -layouter för bred enhetskompatibilitet.</string>
     <string name="daily_tip_livedata_viewmodel">Dra nytta av LiveData och ViewModel för reaktiva UI:n.</string>
     <string name="daily_tip_workmanager">Använd WorkManager för tillförlitliga bakgrundsuppgifter.</string>
     <string name="daily_tip_github_actions">Använd GitHub Actions för automatiserade byggkontroller.</string>
     <string name="daily_tip_emulator_screen_sizes">Testa din app på olika skärmstorlekar med emulatorn.</string>
     <string name="daily_tip_update_dependencies">Håll beroenden uppdaterade för de senaste funktionerna och fixarna.</string>
+    <string name="daily_tip_kotlin_coroutines">Använd ExecutorService för asynkrona operationer.</string>
     <string name="daily_tip_hilt">Integrera Hilt för beroendeinjektion.</string>
     <string name="daily_tip_unit_tests">Skriv enhetstester med JUnit och Espresso.</string>
     <string name="daily_tip_mvvm">Följ MVVM-arkitekturen för underhållbar kod.</string>

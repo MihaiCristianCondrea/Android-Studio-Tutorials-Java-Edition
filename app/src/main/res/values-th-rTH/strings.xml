@@ -13,8 +13,11 @@
     <string name="agree">ยอมรับ</string>
     <string name="home">หน้าแรก</string>
     <string name="announcement_title">แอปใหม่มาแล้ว.</string>
+    <string name="announcement_subtitle">ตรวจสอบแอพบทเรียน Android Studio ล่าสุด เรียนรู้ Jetpack Compose วัสดุ 3 และอื่น ๆ</string>
     <string name="profile_picture_desc">รูปโปรไฟล์นักพัฒนา</string>
     <string name="main_card_title">ค้นพบ Android Studio Tutorials</string>
+    <string name="main_card_subtitle">เนื้อเรื่อง Kotlin และ Java Editions</string>
+    <string name="main_card_description">รุ่น Kotlin ได้รับการปรับปรุงด้วยบทเรียนแบบไดนามิกผู้ช่วย AI และอื่น ๆ สัมผัสกับอนาคตของการพัฒนา Android</string>
     <string name="get_on_google_play">ดาวน์โหลดได้ที่ Google Play</string>
     <string name="learn_more">เรียนรู้เพิ่มเติม</string>
     <string name="play_store">Play Store</string>
@@ -311,6 +314,11 @@
     <string name="summary_preference_permissions_access_network_state">อนุญาตให้แอปตรวจสอบการเชื่อมต่อเครือข่ายและดึงข้อมูลเกี่ยวกับ Wi-Fi, รวมถึงสถานะการเปิดใช้งานและชื่ออุปกรณ์ Wi-Fi ที่เชื่อมต่อ</string>
     <string name="summary_preference_permissions_billing">อนุญาตให้แอปใช้ Google Play Billing Library เพื่อจัดการการซื้อในแอปและการบริจาค</string>
     <string name="summary_preference_permissions_check_license">อนุญาตให้แอปตรวจสอบการปฏิบัติตามข้อตกลงใบอนุญาตและบังคับใช้เงื่อนไขการออกใบอนุญาตเพื่อปกป้องทรัพย์สินทางปัญญา</string>
+    <string name="next">ต่อไป</string>
+    <string name="finish">เสร็จ</string>
+    <string name="back">กลับ</string>
+    <string name="bottom_navigation_labels">ฉลากนำทางด้านล่าง</string>
+    <string name="data_dialog_message">เรารวบรวมข้อมูลเพื่อปรับปรุงประสบการณ์ของคุณ</string>
     <string name="summary_preference_permissions_access_notification_policy">อนุญาตให้แอปเข้าถึงและแก้ไขนโยบายการแจ้งเตือนของอุปกรณ์, ควบคุมวิธีการและเวลาที่การแจ้งเตือนจะแสดงต่อผู้ใช้ และให้คุณสมบัติการจัดการการแจ้งเตือนแบบกำหนดเอง</string>
     <string name="summary_preference_permissions_foreground_service">อนุญาตให้แอปสร้างและใช้บริการที่ทำงานในเบื้องหน้า, ทำให้มีความสำคัญเหนือกว่ากระบวนการเบื้องหลังอื่นๆ และปรับปรุงประสิทธิภาพและความน่าเชื่อถือ</string>
     <string name="summary_preference_settings_language">ตั้งค่าภาษาของแอปพลิเคชัน</string>
@@ -418,11 +426,13 @@
     <string name="daily_tip_use_string_resources">ใช้ทรัพยากรสตริงสำหรับข้อความทั้งหมดเพื่อทำให้การแปลง่ายขึ้น</string>
     <string name="daily_tip_optimize_webp">ปรับแต่งรูปภาพด้วย WebP เพื่อลดขนาด APK</string>
     <string name="daily_tip_enable_proguard">เปิดใช้งาน ProGuard เพื่อลดขนาดและทำให้บิลด์รีลีสซับซ้อนขึ้น</string>
+    <string name="daily_tip_prefer_compose">ชอบเลย์เอาต์ XML สำหรับความเข้ากันได้ของอุปกรณ์ในวงกว้าง</string>
     <string name="daily_tip_livedata_viewmodel">ใช้ประโยชน์จาก LiveData และ ViewModel สำหรับ UI ที่ตอบสนองได้ดี</string>
     <string name="daily_tip_workmanager">ใช้ WorkManager สำหรับงานเบื้องหลังที่เชื่อถือได้</string>
     <string name="daily_tip_github_actions">ใช้ GitHub Actions สำหรับการตรวจสอบบิลด์อัตโนมัติ</string>
     <string name="daily_tip_emulator_screen_sizes">ทดสอบแอปของคุณบนขนาดหน้าจอต่างๆ ด้วยอีมูเลเตอร์</string>
     <string name="daily_tip_update_dependencies">อัปเดตการพึ่งพาอยู่เสมอเพื่อรับฟีเจอร์และการแก้ไขล่าสุด</string>
+    <string name="daily_tip_kotlin_coroutines">ใช้ ExecutorService สำหรับการดำเนินการแบบอะซิงโครนัส</string>
     <string name="daily_tip_hilt">ผสานรวม Hilt สำหรับการฉีดการพึ่งพา</string>
     <string name="daily_tip_unit_tests">เขียนการทดสอบหน่วยด้วย JUnit และ Espresso</string>
     <string name="daily_tip_mvvm">ปฏิบัติตามสถาปัตยกรรม MVVM เพื่อโค้ดที่บำรุงรักษาง่าย</string>

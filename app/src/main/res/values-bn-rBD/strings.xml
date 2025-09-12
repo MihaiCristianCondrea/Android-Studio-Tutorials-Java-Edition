@@ -16,11 +16,11 @@
 
     <string name="home">হোম</string>
     <string name="announcement_title">একটি নতুন অ্যাপ এসেছে.</string>
-    <string name="announcement_subtitle">সর্বশেষ অ্যান্ড্রয়েড স্টুডিও টিউটোরিয়াল অ্যাপটি দেখুন। জেটপ্যাক কম্পোজ, ম্যাটেরিয়াল ৩ এবং আরও অনেক কিছু শিখুন।</string>
+    <string name="announcement_subtitle">সর্বশেষতম অ্যান্ড্রয়েড স্টুডিও টিউটোরিয়াল অ্যাপ্লিকেশনটি দেখুন। জেটপ্যাক রচনা, উপাদান 3 এবং আরও অনেক কিছু শিখুন।</string>
     <string name="profile_picture_desc">বিকাশকারী প্রোফাইল ছবি</string>
     <string name="main_card_title">অ্যান্ড্রয়েড স্টুডিও টিউটোরিয়াল আবিষ্কার করুন</string>
-    <string name="main_card_subtitle">কোটলিন এবং জাভা সংস্করণ সহ</string>
-    <string name="main_card_description">কোটলিন সংস্করণটি ডাইনামিক পাঠ, এআই সহকারী এবং আরও অনেক কিছু দিয়ে আপডেট করা হয়েছে। অ্যান্ড্রয়েড ডেভেলপমেন্টের ভবিষ্যৎ অভিজ্ঞতা নিন.</string>
+    <string name="main_card_subtitle">কোটলিন এবং জাভা সংস্করণ বৈশিষ্ট্যযুক্ত</string>
+    <string name="main_card_description">কোটলিন সংস্করণটি গতিশীল পাঠ, এআই সহকারী এবং আরও অনেক কিছু দিয়ে আপডেট করা হয়েছে। অ্যান্ড্রয়েড বিকাশের ভবিষ্যতের অভিজ্ঞতা অর্জন করুন।</string>
     <string name="get_on_google_play">গুগল প্লে থেকে পান</string>
     <string name="learn_more">আরও জানুন</string>
     <string name="play_store">প্লে স্টোর</string>
@@ -338,6 +338,11 @@
     <string name="summary_preference_permissions_access_network_state">অ্যাপটিকে নেটওয়ার্ক সংযোগ পরীক্ষা করতে এবং Wi-Fi সম্পর্কে তথ্য পুনরুদ্ধার করতে অনুমতি দেয়, যার মধ্যে সক্রিয় অবস্থা এবং সংযুক্ত Wi-Fi ডিভাইসের নাম অন্তর্ভুক্ত।</string>
     <string name="summary_preference_permissions_billing">অ্যাপটিকে ইন-অ্যাপ কেনাকাটা এবং অনুদান পরিচালনা করতে গুগল প্লে বিলিং লাইব্রেরি ব্যবহার করার অনুমতি দেয়।</string>
     <string name="summary_preference_permissions_check_license">অ্যাপটিকে লাইসেন্স চুক্তির সাথে তার সম্মতি যাচাই করতে এবং মেধা সম্পত্তি রক্ষা করার জন্য লাইসেন্সের শর্তাবলী প্রয়োগ করার অনুমতি দেয়।</string>
+    <string name="next">পরবর্তী</string>
+    <string name="finish">সমাপ্তি</string>
+    <string name="back">পিছনে</string>
+    <string name="bottom_navigation_labels">নীচে নেভিগেশন লেবেল</string>
+    <string name="data_dialog_message">আমরা আপনার অভিজ্ঞতা উন্নত করতে ডেটা সংগ্রহ করি।</string>
     <string name="summary_preference_permissions_access_notification_policy">অ্যাপটিকে ডিভাইসের বিজ্ঞপ্তি নীতি অ্যাক্সেস এবং পরিবর্তন করার অনুমতি দেয়, ব্যবহারকারীকে কখন এবং কীভাবে বিজ্ঞপ্তিগুলি দেখানো হয় তা নিয়ন্ত্রণ করে এবং কাস্টম বিজ্ঞপ্তি পরিচালনার বৈশিষ্ট্যগুলি প্রদান করে।</string>
     <string name="summary_preference_permissions_foreground_service">অ্যাপটিকে ফোরগ্রাউন্ডে চলমান পরিষেবা তৈরি এবং ব্যবহার করার অনুমতি দেয়, অন্যান্য পটভূমি প্রক্রিয়াগুলির উপর তাদের অগ্রাধিকার দেয় এবং কর্মক্ষমতা এবং নির্ভরযোগ্যতা উন্নত করে।</string>
     <string name="summary_preference_settings_language">অ্যাপ্লিকেশন ভাষা সেট করুন।</string>
@@ -448,13 +453,13 @@
     <string name="daily_tip_use_string_resources">প্রতিটি লেখাকে সহজ করার জন্য পংক্তি ব্যবহার করুন ।</string>
     <string name="daily_tip_optimize_webp">এপিকে মাপ কমানোর জন্য ওয়েবপি’র তোলা চিত্র।</string>
     <string name="daily_tip_enable_proguard">এটা বন্ধ করতে এবং বিনামূল্যে মুক্তি দিতে ইচ্ছুক।</string>
-    <string name="daily_tip_prefer_compose">আধুনিক ডিভাইসগুলি লক্ষ্য করে নতুন UI-এর জন্য উন্নত হবে ।</string>
+    <string name="daily_tip_prefer_compose">ব্রড ডিভাইসের সামঞ্জস্যের জন্য এক্সএমএল লেআউটগুলি পছন্দ করুন।</string>
     <string name="daily_tip_livedata_viewmodel">সহযোগিতামূলক UIস এর সুবিধা গ্রহণ করুন।</string>
     <string name="daily_tip_workmanager">কাজের জন্যMark ব্যবহার করা হবে।</string>
     <string name="daily_tip_github_actions">ঊর অটো- স্বয়ংক্রিয়ভাবে নির্মাণ কর্ম পরীক্ষা করা হবে ।</string>
     <string name="daily_tip_emulator_screen_sizes">এমুলেটর সহ বিভিন্ন পর্দায় আপনার অ্যাপ্লিকেশন পরীক্ষা করুন।</string>
     <string name="daily_tip_update_dependencies">সাম্প্রতিক বৈশিষ্ট্য ও মেরামতের জন্য আপডেটের নির্দেশ প্রয়োগ করা হবে।</string>
-    <string name="daily_tip_kotlin_coroutines">এলভারেজ কটলিন কোরিনোন্স অ্যাসিঙ্ক্রোনাসলস।</string>
+    <string name="daily_tip_kotlin_coroutines">অ্যাসিঙ্ক্রোনাস অপারেশনগুলির জন্য এক্সিকিউটার সার্ভিস ব্যবহার করুন।</string>
     <string name="daily_tip_hilt">নির্ভরতার ইঞ্জেকশনের জন্য সমন্বিত হাইট।</string>
     <string name="daily_tip_unit_tests">JUN এবং এসপ্রেসোতে ইউনিট পরীক্ষা করো।</string>
     <string name="daily_tip_mvvm">যোগ্য কোডের জন্য এমভিএম স্থাপত্য অনুসরণ করুন।</string>

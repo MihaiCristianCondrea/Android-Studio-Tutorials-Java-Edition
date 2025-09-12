@@ -13,8 +13,11 @@
     <string name="agree">同意</string>
     <string name="home">首頁</string>
     <string name="announcement_title">新應用程式來了！</string>
+    <string name="announcement_subtitle">查看最新的Android Studio教程應用程序。學習JetPack組成，材料3等。</string>
     <string name="profile_picture_desc">開發人員個人資料圖片</string>
     <string name="main_card_title">探索 Android Studio 教學</string>
+    <string name="main_card_subtitle">以Kotlin和Java版本為特色</string>
+    <string name="main_card_description">Kotlin Edition已通過動態課程，AI助手等進行了更新。體驗Android開發的未來。</string>
     <string name="get_on_google_play">在 Google Play 上取得</string>
     <string name="learn_more">瞭解更多</string>
     <string name="play_store">Play 商店</string>
@@ -309,6 +312,11 @@
     <string name="summary_preference_permissions_access_network_state">允許應用程式檢查網路連線並擷取有關 Wi-Fi 的資訊，包括啟用狀態和已連線的 Wi-Fi 裝置名稱。</string>
     <string name="summary_preference_permissions_billing">允許應用程式使用 Google Play 帳單資料庫來處理應用程式內購買和捐贈。</string>
     <string name="summary_preference_permissions_check_license">允許應用程式驗證其是否符合授權協議，並強制執行授權條款以保護智慧財產權。</string>
+    <string name="next">下一個</string>
+    <string name="finish">結束</string>
+    <string name="back">後退</string>
+    <string name="bottom_navigation_labels">底部導航標籤</string>
+    <string name="data_dialog_message">我們收集數據以改善您的經驗。</string>
     <string name="summary_preference_permissions_access_notification_policy">允許應用程式存取和修改裝置的通知政策，控制通知向使用者顯示的方式和時間，並提供自訂的通知管理功能。</string>
     <string name="summary_preference_permissions_foreground_service">允許應用程式建立和使用在前景執行的服務，使其優先於其他背景處理程序，並提高效能和可靠性。</string>
     <string name="summary_preference_settings_language">設定應用程式語言。</string>
@@ -416,11 +424,13 @@
     <string name="daily_tip_use_string_resources">對所有文字使用字串資源以簡化本地化。</string>
     <string name="daily_tip_optimize_webp">使用 WebP 優化圖像以減少 APK 大小。</string>
     <string name="daily_tip_enable_proguard">啟用 ProGuard 來縮減和混淆發布版本。</string>
+    <string name="daily_tip_prefer_compose">更喜歡XML佈局，用於廣泛的設備兼容性。</string>
     <string name="daily_tip_livedata_viewmodel">利用 LiveData 和 ViewModel 實現響應式 UI。</string>
     <string name="daily_tip_workmanager">使用 WorkManager 執行可靠的背景任務。</string>
     <string name="daily_tip_github_actions">利用 GitHub Actions 進行自動化建置檢查。</string>
     <string name="daily_tip_emulator_screen_sizes">使用模擬器在不同螢幕尺寸上測試您的應用程式。</string>
     <string name="daily_tip_update_dependencies">保持依賴項更新以獲得最新的功能和修復。</string>
+    <string name="daily_tip_kotlin_coroutines">使用執行人員服務進行異步操作。</string>
     <string name="daily_tip_hilt">整合 Hilt 進行依賴注入。</string>
     <string name="daily_tip_unit_tests">使用 JUnit 和 Espresso 編寫單元測試。</string>
     <string name="daily_tip_mvvm">遵循 MVVM 架構以獲得可維護的程式碼。</string>

@@ -13,8 +13,11 @@
     <string name="agree">Acepto</string>
     <string name="home">Inicio</string>
     <string name="announcement_title">Llegó una nueva app.</string>
+    <string name="announcement_subtitle">Echa un vistazo a la última aplicación de tutoriales de Android Studio. Aprenda JetPack Compose, Material 3 y más.</string>
     <string name="profile_picture_desc">Foto de perfil de desarrollador</string>
     <string name="main_card_title">Descubre los Tutoriales de Android Studio</string>
+    <string name="main_card_subtitle">Con ediciones Kotlin y Java</string>
+    <string name="main_card_description">La edición Kotlin se ha actualizado con lecciones dinámicas, asistente de IA y más. Experimente el futuro del desarrollo de Android.</string>
     <string name="get_on_google_play">Descárgala en Google Play</string>
     <string name="learn_more">Más información</string>
     <string name="play_store">Play Store</string>
@@ -309,6 +312,11 @@
     <string name="summary_preference_permissions_access_network_state">Permite que la app verifique la conectividad de la red y obtenga información sobre el Wi-Fi, incluido el estado de activación y los nombres de los dispositivos Wi-Fi conectados.</string>
     <string name="summary_preference_permissions_billing">Permite que la app use la Biblioteca de Facturación de Google Play para gestionar las compras dentro de la app y las donaciones.</string>
     <string name="summary_preference_permissions_check_license">Permite que la app verifique su cumplimiento con el acuerdo de licencia y haga cumplir los términos de la licencia para proteger la propiedad intelectual.</string>
+    <string name="next">Siguiente</string>
+    <string name="finish">Finalizar</string>
+    <string name="back">Atrás</string>
+    <string name="bottom_navigation_labels">Etiquetas de navegación inferior</string>
+    <string name="data_dialog_message">Recopilamos datos para mejorar su experiencia.</string>
     <string name="summary_preference_permissions_access_notification_policy">Permite que la app acceda y modifique la política de notificaciones del dispositivo, controlando cómo y cuándo se muestran las notificaciones al usuario y proporcionando funciones de gestión de notificaciones personalizadas.</string>
     <string name="summary_preference_permissions_foreground_service">Permite que la app cree y use servicios que se ejecutan en primer plano, dándoles prioridad sobre otros procesos en segundo plano y mejorando el rendimiento y la fiabilidad.</string>
     <string name="summary_preference_settings_language">Establecer el idioma de la aplicación.</string>
@@ -416,11 +424,13 @@
     <string name="daily_tip_use_string_resources">Usa recursos de cadena para todo el texto para simplificar la localización.</string>
     <string name="daily_tip_optimize_webp">Optimiza las imágenes con WebP para reducir el tamaño del APK.</string>
     <string name="daily_tip_enable_proguard">Habilita ProGuard para reducir y ofuscar las compilaciones de lanzamiento.</string>
+    <string name="daily_tip_prefer_compose">Prefiere diseños XML para una amplia compatibilidad del dispositivo.</string>
     <string name="daily_tip_livedata_viewmodel">Aprovecha LiveData y ViewModel para interfaces de usuario reactivas.</string>
     <string name="daily_tip_workmanager">Usa WorkManager para tareas en segundo plano confiables.</string>
     <string name="daily_tip_github_actions">Utiliza GitHub Actions para verificaciones de compilación automatizadas.</string>
     <string name="daily_tip_emulator_screen_sizes">Prueba tu app en diferentes tamaños de pantalla con el emulador.</string>
     <string name="daily_tip_update_dependencies">Mantén las dependencias actualizadas para las últimas funciones y correcciones.</string>
+    <string name="daily_tip_kotlin_coroutines">Use ExecutorService para operaciones asíncronas.</string>
     <string name="daily_tip_hilt">Integra Hilt para la inyección de dependencias.</string>
     <string name="daily_tip_unit_tests">Escribe pruebas unitarias con JUnit y Espresso.</string>
     <string name="daily_tip_mvvm">Sigue la arquitectura MVVM para un código mantenible.</string>

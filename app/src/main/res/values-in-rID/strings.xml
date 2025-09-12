@@ -16,9 +16,11 @@
 
     <string name="home">Beranda</string>
     <string name="announcement_title">Aplikasi Baru Telah Tiba.</string>
-    <string name="announcement_subtitle">Lihat aplikasi Android Studio Tutorials terbaru.</string>
+    <string name="announcement_subtitle">Lihat aplikasi tutorial Android Studio terbaru. Pelajari Jetpack Compose, Material 3, dan banyak lagi.</string>
     <string name="profile_picture_desc">Gambar profil pengembang</string>
     <string name="main_card_title">Temukan Tutorial Android Studio</string>
+    <string name="main_card_subtitle">Menampilkan edisi Kotlin dan Java</string>
+    <string name="main_card_description">Edisi Kotlin telah diperbarui dengan pelajaran dinamis, asisten AI, dan banyak lagi. Mengalami masa depan pengembangan android.</string>
     <string name="get_on_google_play">Dapatkan di Google Play</string>
     <string name="learn_more">Pelajari lebih lanjut</string>
     <string name="play_store">Play Store</string>
@@ -336,6 +338,11 @@
     <string name="summary_preference_permissions_access_network_state">Memungkinkan aplikasi untuk memeriksa konektivitas jaringan dan mengambil informasi tentang Wi-Fi, termasuk status diaktifkan dan nama perangkat Wi-Fi yang terhubung.</string>
     <string name="summary_preference_permissions_billing">Memungkinkan aplikasi untuk menggunakan Google Play Billing Library untuk menangani pembelian dalam aplikasi dan donasi.</string>
     <string name="summary_preference_permissions_check_license">Memungkinkan aplikasi untuk memverifikasi kepatuhannya terhadap perjanjian lisensi dan menegakkan ketentuan lisensi untuk melindungi kekayaan intelektual.</string>
+    <string name="next">Berikutnya</string>
+    <string name="finish">Menyelesaikan</string>
+    <string name="back">Kembali</string>
+    <string name="bottom_navigation_labels">Label Navigasi Bawah</string>
+    <string name="data_dialog_message">Kami mengumpulkan data untuk meningkatkan pengalaman Anda.</string>
     <string name="summary_preference_permissions_access_notification_policy">Memungkinkan aplikasi untuk mengakses dan memodifikasi kebijakan notifikasi perangkat, mengontrol bagaimana dan kapan notifikasi ditampilkan kepada pengguna dan menyediakan fitur manajemen notifikasi kustom.</string>
     <string name="summary_preference_permissions_foreground_service">Memungkinkan aplikasi untuk membuat dan menggunakan layanan yang berjalan di latar depan, memberi mereka prioritas di atas proses latar belakang lainnya dan meningkatkan kinerja serta keandalan.</string>
     <string name="summary_preference_settings_language">Atur bahasa aplikasi.</string>
@@ -445,11 +452,13 @@
     <string name="daily_tip_use_string_resources">Gunakan sumber daya string untuk semua teks untuk menyederhanakan lokalisasi.</string>
     <string name="daily_tip_optimize_webp">Optimasi gambar dengan WebP untuk mengurangi ukuran APK.</string>
     <string name="daily_tip_enable_proguard">Aktifkan ProGuard untuk menyusut dan obfuscate rilis membangun.</string>
+    <string name="daily_tip_prefer_compose">Lebih suka tata letak XML untuk kompatibilitas perangkat yang luas.</string>
     <string name="daily_tip_livedata_viewmodel">Mengambil keuntungan dari LiveData dan ViewModel untuk UIs reaktif.</string>
     <string name="daily_tip_workmanager">Gunakan WorkManager untuk tugas latar belakang yang dapat diandalkan.</string>
     <string name="daily_tip_github_actions">Utilize GitHub Aksi untuk pemeriksaan pembuatan otomatis.</string>
     <string name="daily_tip_emulator_screen_sizes">Uji aplikasi Anda pada ukuran layar yang berbeda dengan emulator.</string>
     <string name="daily_tip_update_dependencies">Pertahankan ketergantungan diperbarui untuk fitur dan perbaikan terbaru.</string>
+    <string name="daily_tip_kotlin_coroutines">Gunakan ExecutorService untuk operasi asinkron.</string>
     <string name="daily_tip_hilt">Integrasikan Hilt untuk injeksi ketergantungan.</string>
     <string name="daily_tip_unit_tests">Tes unit tulis dengan JUnit dan Espresso.</string>
     <string name="daily_tip_mvvm">Ikuti arsitektur MVVM untuk kode yang dapat dipertahankan.</string>

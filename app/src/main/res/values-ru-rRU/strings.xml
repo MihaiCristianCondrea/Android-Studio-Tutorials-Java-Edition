@@ -16,9 +16,11 @@
 
     <string name="home">Главная</string>
     <string name="announcement_title">Новое приложение уже здесь.</string>
-    <string name="announcement_subtitle">Оцените последнее приложение Android Studio Tutorials.</string>
+    <string name="announcement_subtitle">Проверьте последнее приложение Android Studio. Узнайте JetPack Compose, Material 3 и многое другое.</string>
     <string name="profile_picture_desc">Изображение профиля разработчика</string>
     <string name="main_card_title">Откройте для себя уроки Android Studio</string>
+    <string name="main_card_subtitle">С участием котлин и Java Editions</string>
+    <string name="main_card_description">Edition Kotlin была обновлена ​​с помощью динамических уроков, помощника ИИ и многого другого. Испытайте будущее развития Android.</string>
     <string name="get_on_google_play">Получить в Google Play</string>
     <string name="learn_more">Узнать больше</string>
     <string name="play_store">Play Маркет</string>
@@ -336,6 +338,11 @@
     <string name="summary_preference_permissions_access_network_state">Позволяет приложению проверять сетевое соединение и получать информацию о Wi-Fi, включая статус включения и имена подключенных устройств Wi-Fi.</string>
     <string name="summary_preference_permissions_billing">Позволяет приложению использовать Google Play Billing Library для обработки покупок в приложении и пожертвований.</string>
     <string name="summary_preference_permissions_check_license">Позволяет приложению проверять соответствие лицензионному соглашению и применять лицензионные условия для защиты интеллектуальной собственности.</string>
+    <string name="next">Следующий</string>
+    <string name="finish">Заканчивать</string>
+    <string name="back">Назад</string>
+    <string name="bottom_navigation_labels">Нижняя навигационная метка</string>
+    <string name="data_dialog_message">Мы собираем данные, чтобы улучшить ваш опыт.</string>
     <string name="summary_preference_permissions_access_notification_policy">Позволяет приложению получать доступ и изменять политику уведомлений устройства, контролируя, как и когда уведомления отображаются пользователю, и предоставляя настраиваемые функции управления уведомлениями.</string>
     <string name="summary_preference_permissions_foreground_service">Позволяет приложению создавать и использовать службы, которые работают на переднем плане, предоставляя им приоритет над другими фоновыми процессами и улучшая производительность и надежность.</string>
     <string name="summary_preference_settings_language">Установить язык приложения.</string>
@@ -445,12 +452,13 @@
     <string name="daily_tip_use_string_resources">Используйте ресурсы строк для всего текста, чтобы упростить локализацию.</string>
     <string name="daily_tip_optimize_webp">Оптимизируйте изображения с помощью WebP для уменьшения размера APK.</string>
     <string name="daily_tip_enable_proguard">Позволяет ProGuard сокращать и запутывать сборки высвобождения.</string>
-    <string name="daily_tip_prefer_compose">Предпочитает композит для нового пользовательского интерфейса, если он нацелен на современные устройства.</string>
+    <string name="daily_tip_prefer_compose">Предпочитаю макет XML для широкой совместимости устройств.</string>
     <string name="daily_tip_livedata_viewmodel">Воспользуйтесь LiveData и ViewModel для реактивных интерфейсов.</string>
     <string name="daily_tip_workmanager">Используйте WorkManager для надежных задач.</string>
     <string name="daily_tip_github_actions">Используйте GitHub Действия для автоматизированных проверок сборки.</string>
     <string name="daily_tip_emulator_screen_sizes">Проверьте свое приложение на разных размерах экрана с помощью эмулятора.</string>
     <string name="daily_tip_update_dependencies">Держите зависимости обновленными для последних функций и исправлений.</string>
+    <string name="daily_tip_kotlin_coroutines">Используйте Executorservice для асинхронных операций.</string>
     <string name="daily_tip_hilt">Интегрируйте Hilt для инъекций зависимости.</string>
     <string name="daily_tip_unit_tests">Пишите единичные тесты с JUnit и Espresso.</string>
     <string name="daily_tip_mvvm">Следуйте архитектуре MVVM для поддерживающего кода.</string>

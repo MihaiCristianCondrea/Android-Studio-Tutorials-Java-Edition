@@ -13,8 +13,11 @@
     <string name="agree">동의</string>
     <string name="home">홈</string>
     <string name="announcement_title">새로운 앱이 출시되었습니다.</string>
+    <string name="announcement_subtitle">최신 Android Studio Tutorials 앱을 확인하십시오. Jetpack Compose, Material 3 등을 배우십시오.</string>
     <string name="profile_picture_desc">개발자 프로필 사진</string>
     <string name="main_card_title">Android Studio 튜토리얼 살펴보기</string>
+    <string name="main_card_subtitle">Kotlin 및 Java Edition을 특징으로합니다</string>
+    <string name="main_card_description">Kotlin Edition은 동적 레슨, AI 어시스턴트 등으로 업데이트되었습니다. 안드로이드 개발의 미래를 경험하십시오.</string>
     <string name="get_on_google_play">Google Play에서 다운로드</string>
     <string name="learn_more">자세히 알아보기</string>
     <string name="play_store">Play 스토어</string>
@@ -309,6 +312,11 @@
     <string name="summary_preference_permissions_access_network_state">앱이 네트워크 연결 상태를 확인하고 Wi-Fi에 대한 정보(활성화 상태 및 연결된 Wi-Fi 기기 이름 포함)를 검색하도록 허용합니다.</string>
     <string name="summary_preference_permissions_billing">앱이 Google Play 결제 라이브러리를 사용하여 인앱 구매 및 기부를 처리하도록 허용합니다.</string>
     <string name="summary_preference_permissions_check_license">앱이 라이선스 계약 준수 여부를 확인하고 지적 재산권을 보호하기 위해 라이선스 조건을 시행하도록 허용합니다.</string>
+    <string name="next">다음</string>
+    <string name="finish">마치다</string>
+    <string name="back">뒤쪽에</string>
+    <string name="bottom_navigation_labels">하단 탐색 레이블</string>
+    <string name="data_dialog_message">우리는 당신의 경험을 향상시키기 위해 데이터를 수집합니다.</string>
     <string name="summary_preference_permissions_access_notification_policy">앱이 기기의 알림 정책에 액세스하고 수정하여 사용자에게 알림이 표시되는 방식과 시기를 제어하고 맞춤형 알림 관리 기능을 제공하도록 허용합니다.</string>
     <string name="summary_preference_permissions_foreground_service">앱이 포그라운드에서 실행되는 서비스를 생성하고 사용하여 다른 백그라운드 프로세스보다 우선순위를 부여하고 성능과 안정성을 향상시키도록 허용합니다.</string>
     <string name="summary_preference_settings_language">애플리케이션 언어를 설정합니다.</string>
@@ -416,11 +424,13 @@
     <string name="daily_tip_use_string_resources">현지화를 단순화하기 위해 모든 텍스트에 문자열 리소스를 사용하세요.</string>
     <string name="daily_tip_optimize_webp">APK 크기를 줄이기 위해 WebP로 이미지를 최적화하세요.</string>
     <string name="daily_tip_enable_proguard">릴리스 빌드를 축소하고 난독화하기 위해 ProGuard를 활성화하세요.</string>
+    <string name="daily_tip_prefer_compose">광범위한 장치 호환성을 위해 XML 레이아웃을 선호합니다.</string>
     <string name="daily_tip_livedata_viewmodel">반응형 UI를 위해 LiveData와 ViewModel을 활용하세요.</string>
     <string name="daily_tip_workmanager">안정적인 백그라운드 작업을 위해 WorkManager를 사용하세요.</string>
     <string name="daily_tip_github_actions">자동화된 빌드 검사를 위해 GitHub Actions를 활용하세요.</string>
     <string name="daily_tip_emulator_screen_sizes">에뮬레이터로 다양한 화면 크기에서 앱을 테스트하세요.</string>
     <string name="daily_tip_update_dependencies">최신 기능과 수정 사항을 위해 종속성을 업데이트 상태로 유지하세요.</string>
+    <string name="daily_tip_kotlin_coroutines">비동기 작업에는 ExecutorService를 사용하십시오.</string>
     <string name="daily_tip_hilt">종속성 주입을 위해 Hilt를 통합하세요.</string>
     <string name="daily_tip_unit_tests">JUnit과 Espresso로 단위 테스트를 작성하세요.</string>
     <string name="daily_tip_mvvm">유지보수가 용이한 코드를 위해 MVVM 아키텍처를 따르세요.</string>

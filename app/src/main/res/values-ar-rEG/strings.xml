@@ -13,8 +13,11 @@
     <string name="agree">موافق</string>
     <string name="home">الرئيسية</string>
     <string name="announcement_title">تطبيق جديد وصل.</string>
+    <string name="announcement_subtitle">تحقق من أحدث تطبيق دروس Android Studio. تعلم jetpack compose ، المادة 3 ، وأكثر من ذلك.</string>
     <string name="profile_picture_desc">صورة ملف تعريف المطور</string>
     <string name="main_card_title">اكتشف شروحات أندرويد ستوديو</string>
+    <string name="main_card_subtitle">يضم إصدارات Kotlin و Java</string>
+    <string name="main_card_description">تم تحديث إصدار Kotlin بالدروس الديناميكية ومساعد الذكاء الاصطناعي والمزيد. تجربة مستقبل تنمية Android.</string>
     <string name="get_on_google_play">نزّله من على Google Play</string>
     <string name="learn_more">اعرف المزيد</string>
     <string name="play_store">متجر Play</string>
@@ -309,6 +312,11 @@
     <string name="summary_preference_permissions_access_network_state">يسمح للتطبيق بالتحقق من الاتصال بالشبكة واسترداد معلومات عن شبكة الواي فاي، بما في ذلك حالة التمكين وأسماء أجهزة الواي فاي المتصلة.</string>
     <string name="summary_preference_permissions_billing">يسمح للتطبيق باستخدام مكتبة Google Play Billing للتعامل مع عمليات الشراء داخل التطبيق والتبرعات.</string>
     <string name="summary_preference_permissions_check_license">يسمح للتطبيق بالتحقق من امتثاله لاتفاقية الترخيص وفرض شروط الترخيص لحماية الملكية الفكرية.</string>
+    <string name="next">التالي</string>
+    <string name="finish">ينهي</string>
+    <string name="back">خلف</string>
+    <string name="bottom_navigation_labels">تسميات الملاحة السفلية</string>
+    <string name="data_dialog_message">نجمع البيانات لتحسين تجربتك.</string>
     <string name="summary_preference_permissions_access_notification_policy">يسمح للتطبيق بالوصول إلى سياسة الإشعارات بالجهاز وتعديلها، والتحكم في كيفية ووقت عرض الإشعارات للمستخدم وتوفير ميزات إدارة إشعارات مخصصة.</string>
     <string name="summary_preference_permissions_foreground_service">يسمح للتطبيق بإنشاء واستخدام خدمات تعمل في الواجهة، مما يمنحها الأولوية على العمليات الأخرى في الخلفية ويحسن الأداء والموثوقية.</string>
     <string name="summary_preference_settings_language">ضبط لغة التطبيق.</string>
@@ -417,11 +425,13 @@
     <string name="daily_tip_use_string_resources">استخدم موارد النصوص لكل النصوص لتبسيط الترجمة.</string>
     <string name="daily_tip_optimize_webp">حسّن الصور باستخدام WebP لتقليل حجم APK.</string>
     <string name="daily_tip_enable_proguard">مكّن ProGuard لتقليص وإخفاء كود إصدارات الإنتاج.</string>
+    <string name="daily_tip_prefer_compose">تفضل تخطيطات XML لتوافق الجهاز الواسع.</string>
     <string name="daily_tip_livedata_viewmodel">استفد من LiveData و ViewModel لواجهات مستخدم تفاعلية.</string>
     <string name="daily_tip_workmanager">استخدم WorkManager للمهام الخلفية الموثوقة.</string>
     <string name="daily_tip_github_actions">استخدم GitHub Actions لفحوصات البناء الآلية.</string>
     <string name="daily_tip_emulator_screen_sizes">اختبر تطبيقك على أحجام شاشات مختلفة باستخدام المحاكي.</string>
     <string name="daily_tip_update_dependencies">حافظ على تحديث التبعيات لأحدث الميزات والإصلاحات.</string>
+    <string name="daily_tip_kotlin_coroutines">استخدام ExecutorService للعمليات غير المتزامنة.</string>
     <string name="daily_tip_hilt">ادمج Hilt لحقن التبعيات.</string>
     <string name="daily_tip_unit_tests">اكتب اختبارات الوحدة باستخدام JUnit و Espresso.</string>
     <string name="daily_tip_mvvm">اتبع بنية MVVM لكود قابل للصيانة.</string>

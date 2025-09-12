@@ -17,11 +17,11 @@
 
     <string name="home">होम</string>
     <string name="announcement_title">एक नया ऐप यहाँ है.</string>
-    <string name="announcement_subtitle">नवीनतम Android Studio ट्यूटोरियल ऐप देखें।</string>
+    <string name="announcement_subtitle">नवीनतम एंड्रॉइड स्टूडियो ट्यूटोरियल ऐप देखें। जेटपैक रचना, सामग्री 3, और अधिक जानें।</string>
     <string name="profile_picture_desc">डेवलपर प्रोफ़ाइल चित्र</string>
     <string name="main_card_title">Android Studio ट्यूटोरियल खोजें</string>
     <string name="main_card_subtitle">कोटलिन और जावा संस्करणों की विशेषता</string>
-    <string name="main_card_description">कोटलिन संस्करण को गतिशील पाठों, एआई सहायक और बहुत कुछ के साथ अपडेट किया गया है। एंड्रॉइड डेवलपमेंट के भविष्य का अनुभव करें.</string>
+    <string name="main_card_description">कोटलिन संस्करण को गतिशील पाठ, एआई सहायक, और बहुत कुछ के साथ अपडेट किया गया है। Android विकास के भविष्य का अनुभव करें।</string>
     <string name="get_on_google_play">इसे Google Play पर प्राप्त करें</string>
     <string name="learn_more">और जानें</string>
     <string name="play_store">प्ले स्टोर</string>
@@ -339,6 +339,11 @@
     <string name="summary_preference_permissions_access_network_state">ऐप को नेटवर्क कनेक्टिविटी की जांच करने और वाई-फाई के बारे में जानकारी प्राप्त करने की अनुमति देता है, जिसमें सक्षम स्थिति और कनेक्टेड वाई-फाई डिवाइस के नाम शामिल हैं।</string>
     <string name="summary_preference_permissions_billing">ऐप को इन-ऐप खरीदारी और दान को संभालने के लिए Google Play बिलिंग लाइब्रेरी का उपयोग करने की अनुमति देता है।</string>
     <string name="summary_preference_permissions_check_license">ऐप को लाइसेंस समझौते के साथ अपनी अनुपालन को सत्यापित करने और बौद्धिक संपदा की रक्षा के लिए लाइसेंसिंग शर्तों को लागू करने की अनुमति देता है।</string>
+    <string name="next">अगला</string>
+    <string name="finish">खत्म करना</string>
+    <string name="back">पीछे</string>
+    <string name="bottom_navigation_labels">निचला नेविगेशन लेबल</string>
+    <string name="data_dialog_message">हम आपके अनुभव को बेहतर बनाने के लिए डेटा एकत्र करते हैं।</string>
     <string name="summary_preference_permissions_access_notification_policy">ऐप को डिवाइस की सूचना नीति तक पहुंचने और उसे संशोधित करने की अनुमति देता है, यह नियंत्रित करता है कि उपयोगकर्ता को सूचनाएं कैसे और कब प्रदर्शित की जाती हैं और कस्टम सूचना प्रबंधन सुविधाएँ प्रदान करता है।</string>
     <string name="summary_preference_permissions_foreground_service">ऐप को ऐसी सेवाएं बनाने और उपयोग करने की अनुमति देता है जो अग्रभूमि में चलती हैं, उन्हें अन्य पृष्ठभूमि प्रक्रियाओं पर प्राथमिकता देती हैं और प्रदर्शन व विश्वसनीयता में सुधार करती हैं।</string>
     <string name="summary_preference_settings_language">एप्लिकेशन भाषा सेट करें।</string>
@@ -449,11 +454,13 @@
     <string name="daily_tip_use_string_resources">स्थानीयकरण को सरल बनाने के लिए सभी पाठों के लिए स्ट्रिंग संसाधनों का उपयोग करें।</string>
     <string name="daily_tip_optimize_webp">एपीके आकार को कम करने के लिए WebP के साथ छवियों का अनुकूलन करें।</string>
     <string name="daily_tip_enable_proguard">ProGuard को सिकुड़ने और रिलीज के निर्माण को रोकने में सक्षम बनाता है।</string>
+    <string name="daily_tip_prefer_compose">व्यापक डिवाइस संगतता के लिए XML लेआउट को प्राथमिकता दें।</string>
     <string name="daily_tip_livedata_viewmodel">Reactive UIs के लिए LiveData और ViewModel का लाभ उठाएं।</string>
     <string name="daily_tip_workmanager">विश्वसनीय पृष्ठभूमि कार्यों के लिए वर्क मैनेजर का उपयोग करें।</string>
     <string name="daily_tip_github_actions">GitHub स्वचालित निर्माण जांच के लिए कार्य।</string>
     <string name="daily_tip_emulator_screen_sizes">एमुलेटर के साथ विभिन्न स्क्रीन आकारों पर अपने ऐप का परीक्षण करें।</string>
     <string name="daily_tip_update_dependencies">नवीनतम सुविधाओं और फिक्स के लिए निर्भरता अद्यतन रखें।</string>
+    <string name="daily_tip_kotlin_coroutines">एसिंक्रोनस ऑपरेशन के लिए Executorservice का उपयोग करें।</string>
     <string name="daily_tip_hilt">निर्भरता इंजेक्शन के लिए हिल्ट को एकीकृत करें।</string>
     <string name="daily_tip_unit_tests">JUnit and Espresso के साथ यूनिट परीक्षण लिखें।</string>
     <string name="daily_tip_mvvm">रखरखाव योग्य कोड के लिए MVVM वास्तुकला का पालन करें।</string>

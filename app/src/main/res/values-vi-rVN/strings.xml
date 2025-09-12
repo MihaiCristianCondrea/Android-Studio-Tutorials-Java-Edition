@@ -13,8 +13,11 @@
     <string name="agree">Đồng ý</string>
     <string name="home">Trang chủ</string>
     <string name="announcement_title">Một ứng dụng mới đã ra mắt.</string>
+    <string name="announcement_subtitle">Kiểm tra ứng dụng Android Studio hướng dẫn mới nhất. Tìm hiểu Jetpack Compose, Vật liệu 3, và nhiều hơn nữa.</string>
     <string name="profile_picture_desc">Hình ảnh hồ sơ nhà phát triển</string>
     <string name="main_card_title">Khám phá Hướng dẫn Android Studio</string>
+    <string name="main_card_subtitle">Với Kotlin và Java Editions</string>
+    <string name="main_card_description">Phiên bản Kotlin đã được cập nhật với các bài học động, trợ lý AI, v.v. Trải nghiệm tương lai của phát triển Android.</string>
     <string name="get_on_google_play">Tải trên Google Play</string>
     <string name="learn_more">Tìm hiểu thêm</string>
     <string name="play_store">Cửa hàng Play</string>
@@ -309,6 +312,11 @@
     <string name="summary_preference_permissions_access_network_state">Cho phép ứng dụng kiểm tra kết nối mạng và truy xuất thông tin về Wi-Fi, bao gồm trạng thái đã bật và tên thiết bị Wi-Fi được kết nối.</string>
     <string name="summary_preference_permissions_billing">Cho phép ứng dụng sử dụng Thư viện thanh toán Google Play để xử lý các giao dịch mua hàng và quyên góp trong ứng dụng.</string>
     <string name="summary_preference_permissions_check_license">Cho phép ứng dụng xác minh việc tuân thủ thỏa thuận cấp phép và thực thi các điều khoản cấp phép để bảo vệ sở hữu trí tuệ.</string>
+    <string name="next">Kế tiếp</string>
+    <string name="finish">Hoàn thành</string>
+    <string name="back">Mặt sau</string>
+    <string name="bottom_navigation_labels">Nhãn điều hướng dưới cùng</string>
+    <string name="data_dialog_message">Chúng tôi thu thập dữ liệu để cải thiện trải nghiệm của bạn.</string>
     <string name="summary_preference_permissions_access_notification_policy">Cho phép ứng dụng truy cập và sửa đổi chính sách thông báo của thiết bị, kiểm soát cách thức và thời điểm hiển thị thông báo cho người dùng và cung cấp các tính năng quản lý thông báo tùy chỉnh.</string>
     <string name="summary_preference_permissions_foreground_service">Cho phép ứng dụng tạo và sử dụng các dịch vụ chạy ở nền trước, ưu tiên chúng hơn các quy trình nền khác và cải thiện hiệu suất và độ tin cậy.</string>
     <string name="summary_preference_settings_language">Đặt ngôn ngữ ứng dụng.</string>
@@ -416,11 +424,13 @@
     <string name="daily_tip_use_string_resources">Sử dụng tài nguyên chuỗi cho tất cả văn bản để đơn giản hóa việc bản địa hóa.</string>
     <string name="daily_tip_optimize_webp">Tối ưu hóa hình ảnh bằng WebP để giảm kích thước APK.</string>
     <string name="daily_tip_enable_proguard">Bật ProGuard để thu nhỏ và làm rối mã các bản dựng phát hành.</string>
+    <string name="daily_tip_prefer_compose">Thích bố cục XML để tương thích thiết bị rộng.</string>
     <string name="daily_tip_livedata_viewmodel">Tận dụng LiveData và ViewModel cho giao diện người dùng phản ứng.</string>
     <string name="daily_tip_workmanager">Sử dụng WorkManager cho các tác vụ nền đáng tin cậy.</string>
     <string name="daily_tip_github_actions">Sử dụng GitHub Actions để kiểm tra bản dựng tự động.</string>
     <string name="daily_tip_emulator_screen_sizes">Kiểm tra ứng dụng của bạn trên các kích thước màn hình khác nhau bằng trình giả lập.</string>
     <string name="daily_tip_update_dependencies">Giữ các phụ thuộc được cập nhật để có các tính năng và bản vá mới nhất.</string>
+    <string name="daily_tip_kotlin_coroutines">Sử dụng ExecutorService cho các hoạt động không đồng bộ.</string>
     <string name="daily_tip_hilt">Tích hợp Hilt để tiêm phụ thuộc.</string>
     <string name="daily_tip_unit_tests">Viết các bài kiểm tra đơn vị với JUnit và Espresso.</string>
     <string name="daily_tip_mvvm">Tuân theo kiến trúc MVVM để có mã có thể bảo trì.</string>
