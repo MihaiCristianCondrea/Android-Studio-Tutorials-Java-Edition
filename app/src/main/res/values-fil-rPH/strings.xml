@@ -437,12 +437,6 @@
     <string name="daily_tip_accessibility">Magdisenyo para maging accessible gamit ang mga paglalarawan ng nilalaman at tamang contrast.</string>
     <string name="daily_tip_battery_optimization">Bawasan ang hindi kinakailangang gawa sa background upang mapahaba ang buhay ng baterya.</string>
     <string name="tip_of_the_day">Tip ng Araw</string>
-    <string name="quiz_title">Pagsusulit</string>
-    <string name="next_question">Susunod na Tanong</string>
-    <string name="quiz_finished">Tapos na ang pagsusulit. Ang iyong puntos: %1$d/%2$d</string>
-    <string name="quiz_no_more_questions">Wala nang mga tanong, abangan ang susunod na mga update.</string>
-    <string name="quiz_reminder_title">Paalala sa Araw-araw na Pagsusulit</string>
-    <string name="quiz_reminder_body">Bumalik para sa pagsusulit ngayong araw.</string>
     <string name="other_apps_title">Higit pang mga app mula sa developer</string>
     <string name="im_step1_desc">Screenshot na nagpapakita ng button na New project sa Android Studio.</string>
     <string name="im_step2_desc">Screenshot na nagpapakita ng pagpili ng uri ng activity sa pag-set up ng proyekto.</string>

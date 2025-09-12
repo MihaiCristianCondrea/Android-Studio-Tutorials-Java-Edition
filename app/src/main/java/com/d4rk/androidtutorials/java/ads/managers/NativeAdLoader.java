@@ -29,16 +29,24 @@ public class NativeAdLoader {
     private static final String TAG = "NativeAdLoader";
 
     public static void load(@NonNull Context context, @NonNull ViewGroup container) {
-        load(context, container, R.layout.ad_home_banner_large, null);
+        load(context, container, R.layout.ad_home_banner_large, new AdRequest.Builder().build(), null);
     }
 
     public static void load(@NonNull Context context, @NonNull ViewGroup container, @LayoutRes int layoutRes) {
-        load(context, container, layoutRes, null);
+        load(context, container, layoutRes, new AdRequest.Builder().build(), null);
     }
 
     public static void load(@NonNull Context context,
                             @NonNull ViewGroup container,
                             @LayoutRes int layoutRes,
+                            @androidx.annotation.Nullable AdListener listener) {
+        load(context, container, layoutRes, new AdRequest.Builder().build(), listener);
+    }
+
+    public static void load(@NonNull Context context,
+                            @NonNull ViewGroup container,
+                            @LayoutRes int layoutRes,
+                            @NonNull AdRequest adRequest,
                             @androidx.annotation.Nullable AdListener listener) {
         AdLoader.Builder builder = new AdLoader.Builder(context, context.getString(R.string.native_ad_banner_unit_id))
                 .forNativeAd(nativeAd -> {
@@ -66,7 +74,7 @@ public class NativeAdLoader {
         });
 
         AdLoader adLoader = builder.build();
-        adLoader.loadAd(new AdRequest.Builder().build());
+        adLoader.loadAd(adRequest);
     }
 
     private static void populateNativeAdView(@NonNull NativeAd nativeAd, @NonNull NativeAdView adView) {
