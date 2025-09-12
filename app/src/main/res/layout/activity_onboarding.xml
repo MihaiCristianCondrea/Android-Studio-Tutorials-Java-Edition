@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:text="@string/next"
             app:icon="@drawable/ic_arrow_forward"
-            app:iconGravity="textStart" />
+            app:iconGravity="textEnd" />
 
     </LinearLayout>
 

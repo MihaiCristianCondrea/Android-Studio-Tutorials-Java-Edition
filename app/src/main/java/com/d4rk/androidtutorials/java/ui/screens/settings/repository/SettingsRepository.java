@@ -51,7 +51,7 @@ public class SettingsRepository implements com.d4rk.androidtutorials.java.data.r
 
         String preference = sharedPreferences.getString(preferenceKey, defaultThemeValue);
         int currentNightMode = AppCompatDelegate.getDefaultNightMode();
-        int newNightMode = getNewNightMode(currentNightMode, preference, darkModeValues);
+        int newNightMode = getNewNightMode(currentNightMode, preference, darkModeValues); // FIXME: Argument 'preference' might be null
         if (newNightMode != currentNightMode) {
             AppCompatDelegate.setDefaultNightMode(newNightMode);
             return true;

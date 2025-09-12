@@ -60,8 +60,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="@{title}"
-            android:textAppearance="?attr/textAppearanceHeadlineMedium"
             android:textAlignment="center"
+            android:textAppearance="?attr/textAppearanceHeadlineMedium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -72,9 +72,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@{description}"
+            android:textAlignment="center"
             android:textAppearance="?attr/textAppearanceBodyMedium"
             android:textColor="?attr/colorOnSurfaceVariant"
-            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title" />
@@ -100,7 +100,8 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_first"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRounded">
 
                     <include
                         android:id="@+id/option_first"

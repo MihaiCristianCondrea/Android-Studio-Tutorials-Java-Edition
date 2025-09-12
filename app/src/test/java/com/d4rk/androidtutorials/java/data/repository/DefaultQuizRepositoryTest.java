@@ -29,16 +29,12 @@ public class DefaultQuizRepositoryTest {
         assertTrue(latch.await(1, TimeUnit.SECONDS));
     }
 
-    private static class FakeQuizLocalDataSource implements QuizLocalDataSource {
-        private final List<QuizQuestion> questions;
-
-        FakeQuizLocalDataSource(List<QuizQuestion> questions) {
-            this.questions = questions;
-        }
+    private record FakeQuizLocalDataSource(
+            List<QuizQuestion> questions) implements QuizLocalDataSource {
 
         @Override
-        public void loadQuestions(QuestionsCallback callback) {
-            callback.onResult(questions);
+            public void loadQuestions(QuestionsCallback callback) {
+                callback.onResult(questions);
+            }
         }
-    }
 }

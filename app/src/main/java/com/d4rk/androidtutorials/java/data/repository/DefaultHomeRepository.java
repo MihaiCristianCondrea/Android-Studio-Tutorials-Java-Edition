@@ -28,7 +28,7 @@ public class DefaultHomeRepository implements HomeRepository {
     }
 
     @Override
-    public String getDailyTip() {
+    public String dailyTip() {
         return localDataSource.getDailyTip();
     }
 

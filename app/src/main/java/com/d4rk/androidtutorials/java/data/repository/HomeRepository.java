@@ -13,7 +13,7 @@ public interface HomeRepository {
 
     String getAppPlayStoreUrl(String packageName);
 
-    String getDailyTip();
+    String dailyTip();
 
     void fetchPromotedApps(PromotedAppsCallback callback);
 

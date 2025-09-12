@@ -7,28 +7,6 @@ import com.google.android.material.navigation.NavigationBarView;
  * bottom navigation visibility, the default navigation destination, and whether the theme
  * has changed requiring a recreation of the activity.
  */
-public class MainUiState {
-    @NavigationBarView.LabelVisibility
-    private final int bottomNavVisibility;
-    private final int defaultNavDestination;
-    private final boolean themeChanged;
-
-    public MainUiState(@NavigationBarView.LabelVisibility int bottomNavVisibility, int defaultNavDestination, boolean themeChanged) {
-        this.bottomNavVisibility = bottomNavVisibility;
-        this.defaultNavDestination = defaultNavDestination;
-        this.themeChanged = themeChanged;
-    }
-
-    @NavigationBarView.LabelVisibility
-    public int getBottomNavVisibility() {
-        return bottomNavVisibility;
-    }
-
-    public int getDefaultNavDestination() {
-        return defaultNavDestination;
-    }
-
-    public boolean isThemeChanged() {
-        return themeChanged;
-    }
+public record MainUiState(@NavigationBarView.LabelVisibility int bottomNavVisibility,
+                          int defaultNavDestination, boolean themeChanged) {
 }

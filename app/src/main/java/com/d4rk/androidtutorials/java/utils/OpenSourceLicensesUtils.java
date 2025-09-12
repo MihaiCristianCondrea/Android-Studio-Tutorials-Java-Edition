@@ -30,8 +30,8 @@ public class OpenSourceLicensesUtils {
         executor.execute(() -> {
             String packageName = context.getPackageName();
             String currentVersion = getAppVersion(context);
-            String changelogUrl = "https://raw.githubusercontent.com/D4rK7355608/" + packageName + "/refs/heads/main/CHANGELOG.md";
-            String eulaUrl = "https://raw.githubusercontent.com/D4rK7355608/" + packageName + "/refs/heads/main/EULA.md";
+            String changelogUrl = "https://raw.githubusercontent.com/MihaiCristianCondrea/" + packageName + "/refs/heads/main/CHANGELOG.md";
+            String eulaUrl = "https://raw.githubusercontent.com/MihaiCristianCondrea/" + packageName + "/refs/heads/main/EULA.md";
 
             String changelogMarkdown = loadMarkdown(context, changelogUrl, R.string.error_loading_changelog);
             String extractedChangelog = extractLatestVersionChangelog(changelogMarkdown, currentVersion);

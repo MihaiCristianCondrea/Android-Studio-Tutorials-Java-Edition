@@ -39,7 +39,7 @@ public class NativeAdBannerView extends FrameLayout {
 
     private void init(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         if (attrs != null) {
-            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.NativeAdBannerView, defStyleAttr, 0);
+            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.NativeAdBannerView, defStyleAttr, 0); // FIXME: 'TypedArray' used without 'try'-with-resources statement
             layoutRes = a.getResourceId(R.styleable.NativeAdBannerView_nativeAdLayout, R.layout.ad_home_banner_large);
             a.recycle();
         }
@@ -49,7 +49,7 @@ public class NativeAdBannerView extends FrameLayout {
         loadAd(adRequest, null);
     }
 
-    public void loadAd(AdRequest adRequest, @Nullable AdListener listener) {
+    public void loadAd(AdRequest adRequest, @Nullable AdListener listener) { // FIXME: Parameter 'adRequest' is never used
         NativeAdLoader.load(getContext(), this, layoutRes, listener);
     }
 

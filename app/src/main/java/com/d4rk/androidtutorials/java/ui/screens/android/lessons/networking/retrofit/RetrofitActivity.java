@@ -44,9 +44,9 @@ public class RetrofitActivity extends UpNavigationActivity {
 
         binding.buttonFetch.setOnClickListener(v -> {
             binding.buttonFetch.setEnabled(false);
-            api.getTodo().enqueue(new Callback<Todo>() {
+            api.getTodo().enqueue(new Callback<>() {
                 @Override
-                public void onResponse(Call<Todo> call, Response<Todo> response) {
+                public void onResponse(Call<Todo> call, Response<Todo> response) { // FIXME: Not annotated parameter overrides @EverythingIsNonNull parameter
                     if (response.isSuccessful() && response.body() != null) {
                         binding.textViewResult.setText(response.body().title);
                     } else {
@@ -56,7 +56,7 @@ public class RetrofitActivity extends UpNavigationActivity {
                 }
 
                 @Override
-                public void onFailure(Call<Todo> call, Throwable t) {
+                public void onFailure(Call<Todo> call, Throwable t) { // FIXME: Not annotated parameter overrides @EverythingIsNonNull parameter
                     binding.textViewResult.setText(R.string.snack_general_error);
                     binding.buttonFetch.setEnabled(true);
                 }

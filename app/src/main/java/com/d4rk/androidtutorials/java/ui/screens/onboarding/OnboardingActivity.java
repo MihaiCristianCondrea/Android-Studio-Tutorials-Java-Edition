@@ -159,16 +159,12 @@ public class OnboardingActivity extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment createFragment(int position) {
-            switch (position) {
-                case 0:
-                    return new ThemeFragment();
-                case 1:
-                    return new StartPageFragment();
-                case 2:
-                    return new DataFragment();
-                default:
-                    return new DoneFragment();
-            }
+            return switch (position) {
+                case 0 -> new ThemeFragment();
+                case 1 -> new StartPageFragment();
+                case 2 -> new DataFragment();
+                default -> new DoneFragment();
+            };
         }
 
         @Override

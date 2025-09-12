@@ -16,6 +16,6 @@ public class GetDailyTipUseCase {
      * Returns today's tip string.
      */
     public String invoke() {
-        return repository.getDailyTip();
+        return repository.dailyTip();
     }
 }

@@ -89,7 +89,7 @@ public class RoomActivity extends UpNavigationActivity {
 
     private static class NotesAdapter extends ListAdapter<Note, NotesAdapter.NoteViewHolder> {
         private static final DiffUtil.ItemCallback<Note> DIFF_CALLBACK =
-                new DiffUtil.ItemCallback<Note>() {
+                new DiffUtil.ItemCallback<>() {
                     @Override
                     public boolean areItemsTheSame(@NonNull Note oldItem, @NonNull Note newItem) {
                         return oldItem.id == newItem.id;

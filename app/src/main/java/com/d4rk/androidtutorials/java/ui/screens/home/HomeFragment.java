@@ -107,7 +107,7 @@ public class HomeFragment extends Fragment {
     private void shareApp(com.d4rk.androidtutorials.java.data.model.PromotedApp app) {
         android.content.Intent sharingIntent = new android.content.Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
-        String shareLink = homeViewModel.getPromotedAppIntent(app.packageName()).getData().toString();
+        String shareLink = homeViewModel.getPromotedAppIntent(app.packageName()).getData().toString(); // FIXME: Method invocation 'toString' may produce 'NullPointerException'
         String shareMessage = getString(com.d4rk.androidtutorials.java.R.string.share_message, shareLink);
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareMessage);
         sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(com.d4rk.androidtutorials.java.R.string.share_subject));
