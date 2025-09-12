@@ -24,33 +24,57 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/default_tab"
+                    android:text="@string/code_font"
                     android:layout_marginBottom="16dp"
                     style="@style/TextAppearance.Material3.TitleLarge" />
 
                 <RadioGroup
-                    android:id="@+id/start_page_group"
+                    android:id="@+id/font_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/radio_home"
+                        android:id="@+id/radio_font_audiowide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/audiowide" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_font_fira_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fira_code" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_font_jetbrains_mono"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jetbrains_mono" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_font_noto_sans_mono"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/noto_sans_mono" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_font_poppins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/poppins" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_font_roboto_mono"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/roboto_mono" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_font_google_sans_code"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"
-                        android:text="@string/home" />
-
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/radio_android_studio"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/android_studio" />
-
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/radio_about"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/about" />
+                        android:text="@string/google_sans_code" />
                 </RadioGroup>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

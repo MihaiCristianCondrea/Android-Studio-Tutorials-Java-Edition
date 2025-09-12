@@ -50,6 +50,8 @@ public class OnboardingActivity extends AppCompatActivity {
                         ((StartPageFragment) fragment).saveSelection();
                     } else if (fragment instanceof BottomLabelsFragment) {
                         ((BottomLabelsFragment) fragment).saveSelection();
+                    } else if (fragment instanceof FontFragment) {
+                        ((FontFragment) fragment).saveSelection();
                     }
                 }
                 currentPosition = position;
@@ -103,6 +105,8 @@ public class OnboardingActivity extends AppCompatActivity {
                 ((StartPageFragment) fragment).saveSelection();
             } else if (fragment instanceof BottomLabelsFragment) {
                 ((BottomLabelsFragment) fragment).saveSelection();
+            } else if (fragment instanceof FontFragment) {
+                ((FontFragment) fragment).saveSelection();
             }
 
             if (current < adapter.getItemCount() - 1) {
@@ -146,6 +150,8 @@ public class OnboardingActivity extends AppCompatActivity {
                     return new StartPageFragment();
                 case 2:
                     return new BottomLabelsFragment();
+                case 3:
+                    return new FontFragment();
                 default:
                     return new DataFragment();
             }
@@ -153,7 +159,7 @@ public class OnboardingActivity extends AppCompatActivity {
 
         @Override
         public int getItemCount() {
-            return 4;
+            return 5;
         }
     }
 }

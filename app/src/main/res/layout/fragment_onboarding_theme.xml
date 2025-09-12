@@ -1,50 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/theme"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
-        <RadioGroup
-            android:id="@+id/theme_group"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:cardElevation="0dp"
+            android:padding="16dp">
 
-            <RadioButton
-                android:id="@+id/radio_system"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="@string/follow_system" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/radio_light"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/light_mode" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/theme"
+                    android:layout_marginBottom="16dp"
+                    style="@style/TextAppearance.Material3.TitleLarge" />
 
-            <RadioButton
-                android:id="@+id/radio_dark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dark_mode" />
+                <RadioGroup
+                    android:id="@+id/theme_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/radio_auto_battery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/auto_battery_mode" />
-        </RadioGroup>
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_system"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/follow_system" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/light_mode" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dark_mode" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_auto_battery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/auto_battery_mode" />
+                </RadioGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 </ScrollView>

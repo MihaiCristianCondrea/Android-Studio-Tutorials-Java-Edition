@@ -37,6 +37,10 @@ public class OnboardingViewModel extends ViewModel {
         prefs.edit().putString(context.getString(R.string.key_bottom_navigation_bar_labels), value).apply();
     }
 
+    public void setMonospaceFont(String value) {
+        prefs.edit().putString(context.getString(R.string.key_monospace_font), value).apply();
+    }
+
     public void markOnboardingComplete() {
         prefs.edit().putBoolean(context.getString(R.string.key_onboarding_complete), true).apply();
     }
