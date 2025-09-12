@@ -1,14 +1,12 @@
 package com.d4rk.androidtutorials.java.ui.screens.onboarding;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
-import androidx.preference.PreferenceManager;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -17,8 +15,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityOnboardingBinding;
 import com.d4rk.androidtutorials.java.ui.screens.main.MainActivity;
-import com.d4rk.androidtutorials.java.ui.screens.startup.dialogs.ConsentDialogFragment;
-import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -42,14 +38,9 @@ public class OnboardingActivity extends AppCompatActivity {
 
         adapter = new OnboardingPagerAdapter(this);
         binding.viewPager.setAdapter(adapter);
-
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String keyAnalytics = getString(R.string.key_consent_analytics);
-        if (!prefs.contains(keyAnalytics)) {
-            ConsentDialogFragment dialog = new ConsentDialogFragment();
-            dialog.setConsentListener((a,b,c,d) -> ConsentUtils.updateFirebaseConsent(this, a,b,c,d));
-            dialog.show(getSupportFragmentManager(), "consent");
-        }
+        int startPage = viewModel.getCurrentPage();
+        binding.viewPager.setCurrentItem(startPage, false);
+        currentPosition = startPage;
 
         binding.viewPager.registerOnPageChangeCallback(new androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback() {
             @Override
@@ -66,6 +57,7 @@ public class OnboardingActivity extends AppCompatActivity {
                     }
                 }
                 currentPosition = position;
+                viewModel.setCurrentPage(position);
             }
         });
 
@@ -80,9 +72,9 @@ public class OnboardingActivity extends AppCompatActivity {
             tab.setCustomView(dot);
         }).attach();
 
-        TabLayout.Tab firstTab = binding.tabIndicator.getTabAt(0);
-        if (firstTab != null && firstTab.getCustomView() instanceof ImageView) {
-            ((ImageView) firstTab.getCustomView()).setImageResource(R.drawable.onboarding_dot_selected);
+        TabLayout.Tab startTab = binding.tabIndicator.getTabAt(startPage);
+        if (startTab != null && startTab.getCustomView() instanceof ImageView) {
+            ((ImageView) startTab.getCustomView()).setImageResource(R.drawable.onboarding_dot_selected);
         }
 
         binding.tabIndicator.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -137,7 +129,7 @@ public class OnboardingActivity extends AppCompatActivity {
             }
         });
 
-        updateButtons(0);
+        updateButtons(startPage);
     }
 
     void finishOnboarding() {

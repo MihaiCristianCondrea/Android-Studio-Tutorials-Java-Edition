@@ -359,6 +359,8 @@
     <string name="onboarding_data_subtitle">Help us make the app better for you by sharing anonymous crash reports and usage statistics.</string>
     <string name="onboarding_data_toggle">Enable Crash Reporting</string>
     <string name="onboarding_data_active">By enabling this, you help us identify and fix bugs faster. We do not collect any personal information.</string>
+    <string name="onboarding_data_ads">Allow Personalized Ads</string>
+    <string name="onboarding_data_ads_desc">Permit storing ad data, user info, and personalization to keep ads relevant.</string>
     <string name="privacy_policy_link">Read our Privacy Policy</string>
     <string name="privacy_icon">Privacy Icon</string>
     <string name="arrow_icon">Arrow Icon</string>

@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.appcompat.app.AppCompatDelegate;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentOnboardingSelectionBinding;
@@ -49,7 +49,12 @@ public class ThemeFragment extends Fragment {
         binding.optionSecond.radioButton.setId(View.generateViewId());
         binding.optionThird.radioButton.setId(View.generateViewId());
 
-        selectOption(2);
+        String themeValue = viewModel.getTheme();
+        String[] values = getResources().getStringArray(R.array.preference_theme_values);
+        int index = 2; // default follow system
+        if (themeValue.equals(values[1])) index = 0;
+        else if (themeValue.equals(values[2])) index = 1;
+        setRadioButtons(index);
 
         binding.cardFirst.setOnClickListener(v -> selectOption(0));
         binding.cardSecond.setOnClickListener(v -> selectOption(1));
@@ -60,33 +65,33 @@ public class ThemeFragment extends Fragment {
         binding.optionThird.radioButton.setOnClickListener(v -> selectOption(2));
     }
 
-    private void selectOption(int index) {
+    private void setRadioButtons(int index) {
         binding.optionFirst.radioButton.setChecked(index == 0);
         binding.optionSecond.radioButton.setChecked(index == 1);
         binding.optionThird.radioButton.setChecked(index == 2);
+    }
 
+    private void selectOption(int index) {
+        setRadioButtons(index);
         int mode;
+        String[] values = getResources().getStringArray(R.array.preference_theme_values);
+        String value;
         if (index == 0) {
             mode = AppCompatDelegate.MODE_NIGHT_NO;
+            value = values[1];
         } else if (index == 1) {
             mode = AppCompatDelegate.MODE_NIGHT_YES;
+            value = values[2];
         } else {
             mode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
+            value = values[0];
         }
+        viewModel.setTheme(value);
         AppCompatDelegate.setDefaultNightMode(mode);
     }
 
     public void saveSelection() {
-        String[] values = getResources().getStringArray(R.array.preference_theme_values);
-        String value;
-        if (binding.optionFirst.radioButton.isChecked()) {
-            value = values[1];
-        } else if (binding.optionSecond.radioButton.isChecked()) {
-            value = values[2];
-        } else {
-            value = values[0];
-        }
-        viewModel.setTheme(value);
+        // theme stored on selection
     }
 
     @Override
