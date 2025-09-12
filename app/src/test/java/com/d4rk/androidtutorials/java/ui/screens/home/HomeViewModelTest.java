@@ -60,33 +60,21 @@ public class HomeViewModelTest {
         assertTrue(state.promotedApps().isEmpty());
     }
 
-    static class FakeHomeRepository implements HomeRepository {
-        final String dailyTip;
-        final List<PromotedApp> apps;
-
-        FakeHomeRepository(String dailyTip, List<PromotedApp> apps) {
-            this.dailyTip = dailyTip;
-            this.apps = apps;
-        }
+    record FakeHomeRepository(String dailyTip, List<PromotedApp> apps) implements HomeRepository {
 
         @Override
-        public String getPlayStoreUrl() {
-            return "";
-        }
+            public String getPlayStoreUrl() {
+                return "";
+            }
 
-        @Override
-        public String getAppPlayStoreUrl(String packageName) {
-            return "";
-        }
+            @Override
+            public String getAppPlayStoreUrl(String packageName) {
+                return "";
+            }
 
-        @Override
-        public String getDailyTip() {
-            return dailyTip;
+            @Override
+            public void fetchPromotedApps(PromotedAppsCallback callback) {
+                callback.onResult(apps);
+            }
         }
-
-        @Override
-        public void fetchPromotedApps(PromotedAppsCallback callback) {
-            callback.onResult(apps);
-        }
-    }
 }

@@ -25,8 +25,6 @@
     <string name="learn_more">Learn more</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Ad</string>
-    <string name="search_tutorials_hint">Search tutorials</string>
-    <string name="search_tutorials_content_description">Search tutorials</string>
     <string name="search_lessons_hint">Search lessons</string>
     <string name="search_lessons_content_description">Search lessons</string>
 
@@ -254,6 +252,10 @@
     <string name="dark_mode">Dark mode</string>
     <string name="auto_battery_mode">Auto battery dark mode</string>
     <string name="default_tab">Default tab</string>
+    <string name="default_tab_description">Choose which tab appears when the app opens</string>
+    <string name="home_description">Top stories and recent updates</string>
+    <string name="android_studio_description">Android Studio tools, tips, and the full tutorial catalog</string>
+    <string name="about_description">App details, version, and credits</string>
     <string name="bottom_navigation_bar_labels">Bottom navigation bar labels</string>
     <string name="labeled">Labeled</string>
     <string name="selected">Selected %1$s</string>
@@ -312,7 +314,6 @@
     <string name="app_version">Version %1$s (%2$d)</string>
     <string name="music">Music</string>
     <string name="made_in">Made with ❤ in Romania.</string>
-    <string name="alert_dialog_close">Close?</string>
     <string name="alert_dialog_require_restart">Restart required.</string>
     <string name="question_1">What is Android Studio Tutorials: Java Edition?</string>
     <string name="question_2">How can I download Android Studio Tutorials: Java Edition?</string>
@@ -339,10 +340,26 @@
     <string name="summary_preference_permissions_billing">Allows the app to use the Google Play Billing Library to handle in-app purchases and donations.</string>
     <string name="summary_preference_permissions_check_license">Allows the app to verify its compliance with the license agreement and enforce licensing terms to protect intellectual property.</string>
     <string name="next">Next</string>
-    <string name="finish">Finish</string>
     <string name="back">Back</string>
     <string name="bottom_navigation_labels">Bottom navigation labels</string>
-    <string name="data_dialog_message">We collect data to improve your experience.</string>
+    <string name="skip">Skip</string>
+    <string name="choose_your_style">Choose your style</string>
+    <string name="select_how_you_d_like_the_app_to_look">Choose how the app looks</string>
+    <string name="light_mode_description">Bright, clean appearance</string>
+    <string name="dark_mode_description">Comfortable in low light</string>
+    <string name="follow_system_mode_description">Follows your device theme</string>
+    <string name="onboarding_data_title">Help Us Improve Your Experience</string>
+    <string name="onboarding_data_subtitle">Help us make the app better for you by sharing anonymous crash reports and usage statistics.</string>
+    <string name="onboarding_data_toggle">Enable Crash Reporting</string>
+    <string name="onboarding_data_active">By enabling this, you help us identify and fix bugs faster. We do not collect any personal information.</string>
+    <string name="onboarding_data_ads">Allow Personalized Ads</string>
+    <string name="onboarding_data_ads_desc">Permit storing ad data, user info, and personalization to keep ads relevant.</string>
+    <string name="privacy_policy_link">Read our Privacy Policy</string>
+    <string name="privacy_icon">Privacy Icon</string>
+    <string name="onboarding_done_title">You\'re All Set!</string>
+    <string name="onboarding_done_subtitle">Your setup is complete. You are now ready to explore all the features.</string>
+    <string name="get_started_button">Get Started</string>
+    <string name="success_icon">Success Icon</string>
     <string name="summary_preference_permissions_access_notification_policy">Allows the app to access and modify the device\'s notification policy, controlling how and when notifications are displayed to the user and providing custom notification management features.</string>
     <string name="summary_preference_permissions_foreground_service">Allows the app to create and use services that run in the foreground, giving them priority over other background processes and improving performance and reliability.</string>
     <string name="summary_preference_settings_language">Set application language.</string>
@@ -386,7 +403,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">Learn how to use inbox style notifications in your Android app with this lesson. Discover how to create a notification channel and builder, and how to set the style of your notifications to an InboxStyle with multiple lines of text and a summary text. Explore the different options available for customizing your inbox style notifications.</string>
     <string name="summary_preference_android_studio_bottom_navigation">A bottom navigation bar lets you quickly switch between top-level views in your app.</string>
     <string name="summary_preference_android_studio_navigation_drawer">A navigation drawer slides in from the side and displays the app\'s main navigation options.</string>
-    <string name="summary_alert_dialog_close">Are you sure you want to exit?</string>
     <string name="summary_alert_dialog_message">This will be the message you will see on screen.</string>
     <string name="summary_alert_dialog_require_restart">To take effect, please restart the app.</string>
     <string name="summary_sdk">The Android Software Development Kit (SDK) is a collection of tools that allow developers to create Android apps. It includes a set of libraries, a debugger, a handset emulator, and documentation. The SDK also includes an API library and a set of API documentation. The packages you download have libraries, which helps you in creating your app.\n\nThis is an overview of all Android versions and their corresponding identifiers for Android developers. Anyone is welcome to open an issue or pull request. Happy developing.</string>
@@ -411,7 +427,6 @@
     <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Image button clicked.</string>
     <string name="toast_this_is_a_toast">This is a toast.</string>
-    <string name="tooltip_show_code">Show code syntax</string>
     <string name="tooltip_show_java_code_snippet">Show Java code snippet</string>
     <string name="tooltip_open_me">Open me 🌐</string>
     <string name="hint_type">Type here</string>
@@ -430,7 +445,6 @@
     <string name="error_loading_layout">Error loading layout</string>
     <string name="error_loading_code">Error loading code</string>
     <string name="snack_general_error">An error occurred while checking for updates</string>
-    <string name="consent_dialog_title">Data and ads consent</string>
     <string name="analytics_storage">Analytics storage</string>
     <string name="ad_storage">Ad storage</string>
     <string name="ad_user_data">Ad user data</string>

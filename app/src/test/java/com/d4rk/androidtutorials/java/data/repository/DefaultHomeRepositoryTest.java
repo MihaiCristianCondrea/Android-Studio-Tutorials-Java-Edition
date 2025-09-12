@@ -24,7 +24,7 @@ public class DefaultHomeRepositoryTest {
 
         assertEquals("play", repository.getPlayStoreUrl());
         assertEquals("play/pkg", repository.getAppPlayStoreUrl("pkg"));
-        assertEquals("tip", repository.getDailyTip());
+        assertEquals("tip", repository.dailyTip());
 
         AtomicReference<List<PromotedApp>> result = new AtomicReference<>();
         repository.fetchPromotedApps(result::set);

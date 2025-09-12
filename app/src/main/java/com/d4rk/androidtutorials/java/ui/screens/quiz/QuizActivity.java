@@ -69,7 +69,7 @@ public class QuizActivity extends AppCompatActivity {
         if (selectedIndex != -1) {
             viewModel.answer(selectedIndex);
         }
-        if (viewModel.getCurrentIndex().getValue() >= viewModel.getTotalQuestions()) {
+        if (viewModel.getCurrentIndex().getValue() >= viewModel.getTotalQuestions()) { // FIXME: Unboxing of 'viewModel.getCurrentIndex().getValue()' may produce 'NullPointerException'
             showResult();
         } else {
             showQuestion(viewModel.getCurrentQuestion());
@@ -89,7 +89,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void showResult() {
-        int score = viewModel.getScore().getValue();
+        int score = viewModel.getScore().getValue(); // FIXME: Unboxing of 'viewModel.getScore().getValue()' may produce 'NullPointerException'
         int total = viewModel.getTotalQuestions();
         View view = LayoutInflater.from(this).inflate(R.layout.dialog_quiz_result, null, false);
         TextView textResult = view.findViewById(R.id.text_result);

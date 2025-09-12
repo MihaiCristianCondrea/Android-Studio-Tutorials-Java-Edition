@@ -23,18 +23,18 @@ public class QuizViewModel extends ViewModel {
     private final MutableLiveData<List<QuizQuestion>> questions = new MutableLiveData<>(Collections.emptyList());
     private final MutableLiveData<Integer> currentIndex = new MutableLiveData<>(0);
     private final MutableLiveData<Integer> score = new MutableLiveData<>(0);
-    private final LoadQuizQuestionsUseCase loadQuizQuestionsUseCase;
+    private final LoadQuizQuestionsUseCase loadQuizQuestionsUseCase; // FIXME: Field can be converted to a local variable && Private field 'loadQuizQuestionsUseCase' is assigned but never accessed
 
     @Inject
     public QuizViewModel(LoadQuizQuestionsUseCase loadQuizQuestionsUseCase) {
         this.loadQuizQuestionsUseCase = loadQuizQuestionsUseCase;
-        loadQuizQuestionsUseCase.invoke(result -> questions.postValue(result));
+        loadQuizQuestionsUseCase.invoke(questions::postValue);
     }
 
     public QuizQuestion getCurrentQuestion() {
         List<QuizQuestion> list = questions.getValue();
         if (list == null || list.isEmpty()) return null;
-        int index = currentIndex.getValue();
+        int index = currentIndex.getValue(); // FIXME: Unboxing of 'currentIndex.getValue()' may produce 'NullPointerException'
         return list.get(Math.min(index, list.size() - 1));
     }
 
@@ -46,16 +46,16 @@ public class QuizViewModel extends ViewModel {
         return score;
     }
 
-    public LiveData<List<QuizQuestion>> getQuestions() {
+    public LiveData<List<QuizQuestion>> getQuestions() { // FIXME: Method 'getQuestions()' is never used
         return questions;
     }
 
     public void answer(int optionIndex) {
         QuizQuestion question = getCurrentQuestion();
         if (question != null && optionIndex == question.answerIndex()) {
-            score.setValue(score.getValue() + 1);
+            score.setValue(score.getValue() + 1); // FIXME: Unboxing of 'score.getValue()' may produce 'NullPointerException'
         }
-        currentIndex.setValue(currentIndex.getValue() + 1);
+        currentIndex.setValue(currentIndex.getValue() + 1); // FIXME: Unboxing of 'currentIndex.getValue()' may produce 'NullPointerException'
     }
 
     public int getTotalQuestions() {

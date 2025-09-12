@@ -19,14 +19,14 @@ public class FontManager {
             prefs.edit().remove(key).apply();
             font = "6";
         }
-        return switch (font) {
+        return switch (font) { // FIXME: Dereference of 'font' may produce 'NullPointerException'
             case "0" -> ResourcesCompat.getFont(context, R.font.font_audiowide);
             case "1" -> ResourcesCompat.getFont(context, R.font.font_fira_code);
             case "2" -> ResourcesCompat.getFont(context, R.font.font_jetbrains_mono);
             case "3" -> ResourcesCompat.getFont(context, R.font.font_noto_sans_mono);
             case "4" -> ResourcesCompat.getFont(context, R.font.font_poppins);
             case "5" -> ResourcesCompat.getFont(context, R.font.font_roboto_mono);
-            case "6" -> ResourcesCompat.getFont(context, R.font.font_google_sans_code);
+            case "6" -> ResourcesCompat.getFont(context, R.font.font_google_sans_code); // FIXME: Branch in 'switch' is a duplicate of the default branch
             default -> ResourcesCompat.getFont(context, R.font.font_google_sans_code);
         };
     }

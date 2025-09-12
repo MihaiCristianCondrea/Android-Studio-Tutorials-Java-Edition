@@ -67,7 +67,7 @@ public class AboutFragment extends Fragment {
         });
 
         binding.imageViewAppIcon.setOnClickListener(
-                v -> openUrl("https://d4rk7355608.github.io/home/"));
+                v -> openUrl("https://mihaicristiancondrea.github.io/profile"));
         binding.chipGoogleDev.setOnClickListener(
                 v -> openUrl("https://g.dev/D4rK7355608"));
         binding.chipYoutube.setOnClickListener(

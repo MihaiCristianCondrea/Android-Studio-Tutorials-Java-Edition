@@ -36,7 +36,7 @@ public class WebViewActivity extends UpNavigationActivity {
     @SuppressLint("SetJavaScriptEnabled")
     private void setupWebView() {
         WebView webView = binding.webView;
-        webView.loadUrl("https://d4rk7355608.github.io/profile/#home");
+        webView.loadUrl("https://mihaicristiancondrea.github.io/profile/");
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
