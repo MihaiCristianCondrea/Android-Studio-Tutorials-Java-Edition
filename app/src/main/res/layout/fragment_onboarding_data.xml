@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurfaceContainer">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,46 +14,86 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_security"
+                    app:tint="?attr/colorPrimary"
+                    android:contentDescription="@string/privacy_icon" />
 
                 <com.google.android.material.textview.MaterialTextView
-                    style="@style/TextAppearance.Material3.TitleLarge"
+                    style="@style/TextAppearance.Material3.HeadlineSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:text="@string/onboarding_data_title" />
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/onboarding_data_title"
+                    android:textAlignment="center" />
 
-                <com.google.android.material.switchmaterial.SwitchMaterial
-                    android:id="@+id/switchCrashlytics"
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.Material3.BodyMedium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/onboarding_data_toggle" />
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/onboarding_data_subtitle"
+                    android:textAlignment="center"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchCrashlytics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/onboarding_data_toggle"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/textDetails"
-                    style="@style/TextAppearance.Material3.BodyMedium"
-                    android:layout_width="wrap_content"
+                    style="@style/TextAppearance.Material3.BodySmall"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/onboarding_data_active"
-                    android:visibility="gone" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/linkPrivacy"
-                    style="@style/TextAppearance.Material3.BodyMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/privacy_policy"
-                    android:textColor="?attr/colorPrimary" />
-
+                    android:textColor="?attr/colorOnSurfaceVariant" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/linkPrivacy"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/privacy_policy_link"
+                android:textColor="?attr/colorPrimary"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_forward"
+                app:tint="?attr/colorPrimary"
+                android:contentDescription="@string/arrow_icon" />
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>

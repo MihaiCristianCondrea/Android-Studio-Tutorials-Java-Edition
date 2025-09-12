@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:padding="20dp">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/icon"
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -24,7 +24,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             tools:src="@drawable/ic_theme"/>
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/title_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             app:layout_constraintEnd_toStartOf="@id/radio_button"
             tools:text="Light mode"/>
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/description_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -52,8 +52,6 @@
             android:id="@+id/radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="false"
-            android:focusable="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>

@@ -44,17 +44,25 @@ public class StartPageFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(requireActivity()).get(OnboardingViewModel.class);
 
-        // Assign unique IDs to each radio button for proper RadioGroup handling
         binding.optionFirst.radioButton.setId(View.generateViewId());
         binding.optionSecond.radioButton.setId(View.generateViewId());
         binding.optionThird.radioButton.setId(View.generateViewId());
 
-        // Default selection
-        binding.optionFirst.radioButton.setChecked(true);
+        selectOption(0);
 
-        binding.cardFirst.setOnClickListener(v -> binding.optionFirst.radioButton.setChecked(true));
-        binding.cardSecond.setOnClickListener(v -> binding.optionSecond.radioButton.setChecked(true));
-        binding.cardThird.setOnClickListener(v -> binding.optionThird.radioButton.setChecked(true));
+        binding.cardFirst.setOnClickListener(v -> selectOption(0));
+        binding.cardSecond.setOnClickListener(v -> selectOption(1));
+        binding.cardThird.setOnClickListener(v -> selectOption(2));
+
+        binding.optionFirst.radioButton.setOnClickListener(v -> selectOption(0));
+        binding.optionSecond.radioButton.setOnClickListener(v -> selectOption(1));
+        binding.optionThird.radioButton.setOnClickListener(v -> selectOption(2));
+    }
+
+    private void selectOption(int index) {
+        binding.optionFirst.radioButton.setChecked(index == 0);
+        binding.optionSecond.radioButton.setChecked(index == 1);
+        binding.optionThird.radioButton.setChecked(index == 2);
     }
 
     public void saveSelection() {

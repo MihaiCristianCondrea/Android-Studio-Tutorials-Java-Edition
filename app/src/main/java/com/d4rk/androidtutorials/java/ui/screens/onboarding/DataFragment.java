@@ -31,10 +31,8 @@ public class DataFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(requireActivity()).get(OnboardingViewModel.class);
 
-        binding.switchCrashlytics.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            binding.textDetails.setVisibility(isChecked ? View.VISIBLE : View.GONE);
-            viewModel.setCrashlyticsEnabled(isChecked);
-        });
+        binding.switchCrashlytics.setOnCheckedChangeListener((buttonView, isChecked) ->
+                viewModel.setCrashlyticsEnabled(isChecked));
 
         binding.linkPrivacy.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW,
