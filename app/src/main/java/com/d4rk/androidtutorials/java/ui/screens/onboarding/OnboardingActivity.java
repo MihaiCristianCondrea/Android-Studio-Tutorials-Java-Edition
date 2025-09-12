@@ -15,8 +15,12 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityOnboardingBinding;
 import com.d4rk.androidtutorials.java.ui.screens.main.MainActivity;
+import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.google.android.ump.ConsentInformation;
+import com.google.android.ump.ConsentRequestParameters;
+import com.google.android.ump.UserMessagingPlatform;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
@@ -35,6 +39,15 @@ public class OnboardingActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         viewModel = new ViewModelProvider(this).get(OnboardingViewModel.class);
+
+        // Fallback: show the consent form again if required.
+        ConsentInformation consentInformation = UserMessagingPlatform.getConsentInformation(this);
+        if (consentInformation.getConsentStatus() == ConsentInformation.ConsentStatus.REQUIRED) {
+            StartupViewModel consentViewModel = new ViewModelProvider(this).get(StartupViewModel.class);
+            ConsentRequestParameters params = new ConsentRequestParameters.Builder().build();
+            consentViewModel.requestConsentInfoUpdate(this, params,
+                    () -> consentViewModel.loadConsentForm(this, null), null);
+        }
 
         adapter = new OnboardingPagerAdapter(this);
         binding.viewPager.setAdapter(adapter);
