@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider;
 import com.d4rk.androidtutorials.java.databinding.ActivityStartupBinding;
 import com.d4rk.androidtutorials.java.ui.screens.onboarding.OnboardingActivity;
 import com.google.android.ump.ConsentRequestParameters;
-import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 
 import dagger.hilt.android.AndroidEntryPoint;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;

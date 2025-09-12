@@ -8,16 +8,17 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
-import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
-import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
-import com.d4rk.androidtutorials.java.domain.home.GetPlayStoreUrlUseCase;
 import com.d4rk.androidtutorials.java.domain.home.GetAppPlayStoreUrlUseCase;
-
-import dagger.hilt.android.lifecycle.HiltViewModel;
-import javax.inject.Inject;
+import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetPlayStoreUrlUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.inject.Inject;
+
+import dagger.hilt.android.lifecycle.HiltViewModel;
 
 
 @HiltViewModel

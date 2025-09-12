@@ -7,11 +7,10 @@ import android.os.Looper;
 
 import androidx.annotation.Nullable;
 
+import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRetrofitBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
-
-import com.d4rk.androidtutorials.java.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -4,15 +4,16 @@ import android.content.SharedPreferences;
 
 import androidx.lifecycle.ViewModel;
 
+import com.d4rk.androidtutorials.java.domain.settings.ApplyConsentUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.GetDarkModeUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.OnPreferenceChangedUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.RegisterPreferenceChangeListenerUseCase;
-import com.d4rk.androidtutorials.java.domain.settings.UnregisterPreferenceChangeListenerUseCase;
-import com.d4rk.androidtutorials.java.domain.settings.GetDarkModeUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.SetConsentAcceptedUseCase;
-import com.d4rk.androidtutorials.java.domain.settings.ApplyConsentUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.UnregisterPreferenceChangeListenerUseCase;
+
+import javax.inject.Inject;
 
 import dagger.hilt.android.lifecycle.HiltViewModel;
-import javax.inject.Inject;
 
 
 /**

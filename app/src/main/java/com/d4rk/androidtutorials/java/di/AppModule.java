@@ -23,10 +23,10 @@ import com.d4rk.androidtutorials.java.domain.about.GetCurrentYearUseCase;
 import com.d4rk.androidtutorials.java.domain.about.GetVersionStringUseCase;
 import com.d4rk.androidtutorials.java.domain.help.LaunchReviewFlowUseCase;
 import com.d4rk.androidtutorials.java.domain.help.RequestReviewFlowUseCase;
-import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
-import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
-import com.d4rk.androidtutorials.java.domain.home.GetPlayStoreUrlUseCase;
 import com.d4rk.androidtutorials.java.domain.home.GetAppPlayStoreUrlUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetDailyTipUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetPlayStoreUrlUseCase;
+import com.d4rk.androidtutorials.java.domain.home.GetPromotedAppsUseCase;
 import com.d4rk.androidtutorials.java.domain.main.ApplyLanguageSettingsUseCase;
 import com.d4rk.androidtutorials.java.domain.main.ApplyThemeSettingsUseCase;
 import com.d4rk.androidtutorials.java.domain.main.GetAppUpdateManagerUseCase;
@@ -37,10 +37,10 @@ import com.d4rk.androidtutorials.java.domain.main.ShouldShowStartupScreenUseCase
 import com.d4rk.androidtutorials.java.domain.quiz.LoadQuizQuestionsUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.ApplyConsentUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.GetDarkModeUseCase;
-import com.d4rk.androidtutorials.java.domain.settings.RegisterPreferenceChangeListenerUseCase;
-import com.d4rk.androidtutorials.java.domain.settings.UnregisterPreferenceChangeListenerUseCase;
-import com.d4rk.androidtutorials.java.domain.settings.SetConsentAcceptedUseCase;
 import com.d4rk.androidtutorials.java.domain.settings.OnPreferenceChangedUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.RegisterPreferenceChangeListenerUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.SetConsentAcceptedUseCase;
+import com.d4rk.androidtutorials.java.domain.settings.UnregisterPreferenceChangeListenerUseCase;
 import com.d4rk.androidtutorials.java.domain.startup.LoadConsentFormUseCase;
 import com.d4rk.androidtutorials.java.domain.startup.RequestConsentInfoUseCase;
 import com.d4rk.androidtutorials.java.domain.support.InitBillingClientUseCase;
@@ -55,11 +55,12 @@ import com.d4rk.androidtutorials.java.ui.screens.startup.repository.StartupRepos
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;
 import dagger.hilt.components.SingletonComponent;
-import javax.inject.Singleton;
 
 @Module
 @InstallIn(SingletonComponent.class)

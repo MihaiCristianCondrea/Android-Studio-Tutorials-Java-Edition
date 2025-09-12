@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.domain.startup;
 
 import android.app.Activity;
+
 import com.d4rk.androidtutorials.java.data.repository.StartupRepository;
 import com.google.android.ump.ConsentRequestParameters;
 

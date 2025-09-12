@@ -1,8 +1,8 @@
 package com.d4rk.androidtutorials.java.ui.screens.home;
 
-import java.util.List;
-
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
+
+import java.util.List;
 
 /**
  * Represents the UI state for the Home screen.

@@ -1,8 +1,8 @@
 package com.d4rk.androidtutorials.java.ui.screens.quiz;
 
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
 import com.d4rk.androidtutorials.java.domain.quiz.LoadQuizQuestionsUseCase;
@@ -10,8 +10,9 @@ import com.d4rk.androidtutorials.java.domain.quiz.LoadQuizQuestionsUseCase;
 import java.util.Collections;
 import java.util.List;
 
-import dagger.hilt.android.lifecycle.HiltViewModel;
 import javax.inject.Inject;
+
+import dagger.hilt.android.lifecycle.HiltViewModel;
 
 /**
  * ViewModel managing quiz state and scoring.

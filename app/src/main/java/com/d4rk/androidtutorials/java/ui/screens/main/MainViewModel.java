@@ -1,23 +1,24 @@
 package com.d4rk.androidtutorials.java.ui.screens.main;
 
 
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.domain.main.ApplyLanguageSettingsUseCase;
 import com.d4rk.androidtutorials.java.domain.main.ApplyThemeSettingsUseCase;
+import com.d4rk.androidtutorials.java.domain.main.GetAppUpdateManagerUseCase;
 import com.d4rk.androidtutorials.java.domain.main.GetBottomNavLabelVisibilityUseCase;
 import com.d4rk.androidtutorials.java.domain.main.GetDefaultTabPreferenceUseCase;
-import com.d4rk.androidtutorials.java.domain.main.ApplyLanguageSettingsUseCase;
-import com.d4rk.androidtutorials.java.domain.main.ShouldShowStartupScreenUseCase;
 import com.d4rk.androidtutorials.java.domain.main.MarkStartupScreenShownUseCase;
-import com.d4rk.androidtutorials.java.domain.main.GetAppUpdateManagerUseCase;
+import com.d4rk.androidtutorials.java.domain.main.ShouldShowStartupScreenUseCase;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.play.core.appupdate.AppUpdateManager;
 
-import dagger.hilt.android.lifecycle.HiltViewModel;
 import javax.inject.Inject;
+
+import dagger.hilt.android.lifecycle.HiltViewModel;
 
 /**
  * ViewModel for MainActivity. It interacts with MainRepository to retrieve or

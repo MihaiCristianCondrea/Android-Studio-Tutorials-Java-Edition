@@ -16,11 +16,11 @@
 
     <string name="home">Home</string>
     <string name="announcement_title">A new app is here</string>
-    <string name="announcement_subtitle">Check out the latest Android Studio Tutorials app. Learn Material 3, XML layouts, and more.</string>
+    <string name="announcement_subtitle">Check out the latest Android Studio Tutorials app. Learn Jetpack Compose, Material 3, and more.</string>
     <string name="profile_picture_desc">Developer profile picture</string>
     <string name="main_card_title">Discover Android Studio tutorials</string>
-    <string name="main_card_subtitle">Built with Java and XML examples</string>
-    <string name="main_card_description">Learn Android development through practical Java code and XML layout samples.</string>
+    <string name="main_card_subtitle">Featuring Kotlin and Java editions</string>
+    <string name="main_card_description">The Kotlin Edition has been updated with dynamic lessons, AI assistant, and more. Experience the future of Android development.</string>
       <string name="get_on_google_play">Get it on Google Play</string>
       <string name="learn_more">Learn more</string>
     <string name="play_store">Play Store</string>

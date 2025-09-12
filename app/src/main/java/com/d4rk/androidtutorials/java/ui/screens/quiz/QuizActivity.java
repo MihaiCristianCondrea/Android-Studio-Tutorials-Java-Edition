@@ -1,26 +1,23 @@
 package com.d4rk.androidtutorials.java.ui.screens.quiz;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.model.QuizQuestion;
 import com.d4rk.androidtutorials.java.databinding.ActivityQuizBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.TextView;
-import com.airbnb.lottie.LottieAnimationView;
 
-/**
- * Activity that displays a simple multiple-choice quiz.
- */
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint

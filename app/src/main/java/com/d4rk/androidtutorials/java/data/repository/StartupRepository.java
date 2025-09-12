@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.data.repository;
 
 import android.app.Activity;
+
 import com.google.android.ump.ConsentRequestParameters;
 import com.google.android.ump.FormError;
 

@@ -13,9 +13,6 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySettingsBinding;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
-/**
- * Settings screen that delegates preference change logic to a ViewModel/Repository.
- */
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
