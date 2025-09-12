@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.managers.NativeAdLoader;
 import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
 
 /**
  * Custom view that acts as a drop-in replacement for AdView and loads
@@ -45,11 +46,19 @@ public class NativeAdBannerView extends FrameLayout {
     }
 
     public void loadAd() {
-        loadAd(null);
+        loadAd(new AdRequest.Builder().build(), null);
     }
 
     public void loadAd(@Nullable AdListener listener) {
-        NativeAdLoader.load(getContext(), this, layoutRes, listener);
+        loadAd(new AdRequest.Builder().build(), listener);
+    }
+
+    public void loadAd(@NonNull AdRequest request) {
+        loadAd(request, null);
+    }
+
+    public void loadAd(@NonNull AdRequest request, @Nullable AdListener listener) {
+        NativeAdLoader.load(getContext(), this, layoutRes, request, listener);
     }
 
     public void setNativeAdLayout(@LayoutRes int layoutRes) {
