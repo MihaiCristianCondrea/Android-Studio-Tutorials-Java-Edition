@@ -39,8 +39,6 @@ public class ThemeFragment extends Fragment {
             value = values[1];
         } else if (checkedId == R.id.radio_dark) {
             value = values[2];
-        } else if (checkedId == R.id.radio_auto_battery) {
-            value = values[3];
         }
         viewModel.setTheme(value);
     }
