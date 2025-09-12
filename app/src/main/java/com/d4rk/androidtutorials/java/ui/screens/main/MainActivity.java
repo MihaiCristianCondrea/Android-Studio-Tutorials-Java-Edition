@@ -35,6 +35,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFragment;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
+import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
@@ -49,6 +50,9 @@ import com.google.android.play.core.install.InstallStateUpdatedListener;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
+import com.google.android.ump.ConsentInformation;
+import com.google.android.ump.ConsentRequestParameters;
+import com.google.android.ump.UserMessagingPlatform;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
@@ -107,6 +111,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(mBinding.getRoot());
 
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
+
+        // Fallback: show the consent form again if required.
+        ConsentInformation consentInformation = UserMessagingPlatform.getConsentInformation(this);
+        if (consentInformation.getConsentStatus() == ConsentInformation.ConsentStatus.REQUIRED) {
+            StartupViewModel consentViewModel = new ViewModelProvider(this).get(StartupViewModel.class);
+            ConsentRequestParameters params = new ConsentRequestParameters.Builder().build();
+            consentViewModel.requestConsentInfoUpdate(this, params,
+                    () -> consentViewModel.loadConsentForm(this, null), null);
+        }
 
         setupActionBar();
         observeViewModel();
