@@ -343,6 +343,11 @@
     <string name="back">Back</string>
     <string name="bottom_navigation_labels">Bottom navigation labels</string>
     <string name="data_dialog_message">We collect data to improve your experience.</string>
+    <string name="onboarding_data_title">Help Us Improve</string>
+    <string name="onboarding_data_toggle">Allow anonymous usage and crash reports</string>
+    <string name="onboarding_data_active">Data reporting is active.</string>
+    <string name="onboarding_done_title">You're All Set!</string>
+    <string name="onboarding_done_subtitle">Thanks for customizing your experience. Enjoy exploring the app.</string>
     <string name="summary_preference_permissions_access_notification_policy">Allows the app to access and modify the device\'s notification policy, controlling how and when notifications are displayed to the user and providing custom notification management features.</string>
     <string name="summary_preference_permissions_foreground_service">Allows the app to create and use services that run in the foreground, giving them priority over other background processes and improving performance and reliability.</string>
     <string name="summary_preference_settings_language">Set application language.</string>

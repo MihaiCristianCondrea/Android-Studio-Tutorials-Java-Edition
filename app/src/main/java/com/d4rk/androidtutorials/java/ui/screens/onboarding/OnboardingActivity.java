@@ -46,12 +46,8 @@ public class OnboardingActivity extends AppCompatActivity {
                     Fragment fragment = getSupportFragmentManager().findFragmentByTag("f" + currentPosition);
                     if (fragment instanceof ThemeFragment) {
                         ((ThemeFragment) fragment).saveSelection();
-                    } else if (fragment instanceof StartPageFragment) {
-                        ((StartPageFragment) fragment).saveSelection();
-                    } else if (fragment instanceof BottomLabelsFragment) {
-                        ((BottomLabelsFragment) fragment).saveSelection();
-                    } else if (fragment instanceof FontFragment) {
-                        ((FontFragment) fragment).saveSelection();
+                    } else if (fragment instanceof DataFragment) {
+                        ((DataFragment) fragment).saveSelection();
                     }
                 }
                 currentPosition = position;
@@ -102,12 +98,8 @@ public class OnboardingActivity extends AppCompatActivity {
             Fragment fragment = getSupportFragmentManager().findFragmentByTag("f" + current);
             if (fragment instanceof ThemeFragment) {
                 ((ThemeFragment) fragment).saveSelection();
-            } else if (fragment instanceof StartPageFragment) {
-                ((StartPageFragment) fragment).saveSelection();
-            } else if (fragment instanceof BottomLabelsFragment) {
-                ((BottomLabelsFragment) fragment).saveSelection();
-            } else if (fragment instanceof FontFragment) {
-                ((FontFragment) fragment).saveSelection();
+            } else if (fragment instanceof DataFragment) {
+                ((DataFragment) fragment).saveSelection();
             }
 
             if (current < adapter.getItemCount() - 1) {
@@ -148,19 +140,15 @@ public class OnboardingActivity extends AppCompatActivity {
                 case 0:
                     return new ThemeFragment();
                 case 1:
-                    return new StartPageFragment();
-                case 2:
-                    return new BottomLabelsFragment();
-                case 3:
-                    return new FontFragment();
-                default:
                     return new DataFragment();
+                default:
+                    return new DoneFragment();
             }
         }
 
         @Override
         public int getItemCount() {
-            return 5;
+            return 3;
         }
     }
 }

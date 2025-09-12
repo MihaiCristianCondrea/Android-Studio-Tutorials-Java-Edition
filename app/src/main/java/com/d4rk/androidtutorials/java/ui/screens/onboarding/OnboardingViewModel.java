@@ -41,6 +41,10 @@ public class OnboardingViewModel extends ViewModel {
         prefs.edit().putString(context.getString(R.string.key_monospace_font), value).apply();
     }
 
+    public void setCrashlyticsEnabled(boolean enabled) {
+        prefs.edit().putBoolean(context.getString(R.string.key_firebase_crashlytics), enabled).apply();
+    }
+
     public void markOnboardingComplete() {
         prefs.edit().putBoolean(context.getString(R.string.key_onboarding_complete), true).apply();
     }
