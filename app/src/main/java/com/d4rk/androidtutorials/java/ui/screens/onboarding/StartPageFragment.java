@@ -32,7 +32,7 @@ public class StartPageFragment extends Fragment {
         binding.setSecondIcon(ContextCompat.getDrawable(requireContext(), R.drawable.ic_android_sdk));
         binding.setSecondTitle(getString(R.string.android_studio));
         binding.setSecondDescription(getString(R.string.android_studio_description));
-        binding.setThirdIcon(ContextCompat.getDrawable(requireContext(), R.drawable.ic_info));
+        binding.setThirdIcon(ContextCompat.getDrawable(requireContext(), R.drawable.ic_about));
         binding.setThirdTitle(getString(R.string.about));
         binding.setThirdDescription(getString(R.string.about_description));
 

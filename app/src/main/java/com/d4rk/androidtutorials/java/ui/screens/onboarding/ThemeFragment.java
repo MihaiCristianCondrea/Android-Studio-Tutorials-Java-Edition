@@ -33,7 +33,7 @@ public class ThemeFragment extends Fragment {
         binding.setSecondTitle(getString(R.string.dark_mode));
         binding.setSecondDescription(getString(R.string.dark_mode_description));
         binding.setThirdIcon(ContextCompat.getDrawable(requireContext(), R.drawable.ic_android));
-        binding.setThirdTitle(getString(R.string.follow_system_mode));
+        binding.setThirdTitle(getString(R.string.follow_system));
         binding.setThirdDescription(getString(R.string.follow_system_mode_description));
 
         return binding.getRoot();
