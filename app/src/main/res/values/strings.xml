@@ -254,7 +254,7 @@
     <string name="dark_mode">Dark mode</string>
     <string name="auto_battery_mode">Auto battery dark mode</string>
     <string name="default_tab">Default tab</string>
-    <string name="default_tab_description">Select the tab that opens at launch</string>
+    <string name="default_tab_description">Choose which tab appears when the app opens</string>
     <string name="home_description">Top stories and recent updates</string>
     <string name="android_studio_description">Android Studio tools, tips, and the full tutorial catalog</string>
     <string name="about_description">App details, version, and credits</string>
@@ -362,8 +362,10 @@
     <string name="privacy_policy_link">Read our Privacy Policy</string>
     <string name="privacy_icon">Privacy Icon</string>
     <string name="arrow_icon">Arrow Icon</string>
-    <string name="onboarding_done_title">You\'re All Set</string>
-    <string name="onboarding_done_subtitle">Thanks for setting up your preferences. Enjoy the app.</string>
+    <string name="onboarding_done_title">You\'re All Set!</string>
+    <string name="onboarding_done_subtitle">Your setup is complete. You are now ready to explore all the features.</string>
+    <string name="get_started_button">Get Started</string>
+    <string name="success_icon">Success Icon</string>
     <string name="summary_preference_permissions_access_notification_policy">Allows the app to access and modify the device\'s notification policy, controlling how and when notifications are displayed to the user and providing custom notification management features.</string>
     <string name="summary_preference_permissions_foreground_service">Allows the app to create and use services that run in the foreground, giving them priority over other background processes and improving performance and reliability.</string>
     <string name="summary_preference_settings_language">Set application language.</string>

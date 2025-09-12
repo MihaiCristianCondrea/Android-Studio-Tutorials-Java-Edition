@@ -5,6 +5,18 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSkip"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/skip"
+        app:icon="@drawable/ic_close"
+        app:iconGravity="textStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="0dp"
@@ -30,23 +42,29 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/back" />
+            android:text="@string/back"
+            app:icon="@drawable/ic_arrow_back"
+            app:iconGravity="textStart" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabIndicator"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="16dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:minHeight="0dp"
             app:tabIndicatorFullWidth="false"
             app:tabIndicatorGravity="center"
+            app:tabIndicatorHeight="0dp"
             app:tabRippleColor="@android:color/transparent" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/next" />
+            android:text="@string/next"
+            app:icon="@drawable/ic_arrow_forward"
+            app:iconGravity="textStart" />
 
     </LinearLayout>
 

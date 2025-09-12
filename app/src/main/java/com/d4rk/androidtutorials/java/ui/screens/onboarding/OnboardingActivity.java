@@ -1,11 +1,14 @@
 package com.d4rk.androidtutorials.java.ui.screens.onboarding;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
+import androidx.preference.PreferenceManager;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -14,6 +17,8 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityOnboardingBinding;
 import com.d4rk.androidtutorials.java.ui.screens.main.MainActivity;
+import com.d4rk.androidtutorials.java.ui.screens.startup.dialogs.ConsentDialogFragment;
+import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -38,6 +43,14 @@ public class OnboardingActivity extends AppCompatActivity {
         adapter = new OnboardingPagerAdapter(this);
         binding.viewPager.setAdapter(adapter);
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String keyAnalytics = getString(R.string.key_consent_analytics);
+        if (!prefs.contains(keyAnalytics)) {
+            ConsentDialogFragment dialog = new ConsentDialogFragment();
+            dialog.setConsentListener((a,b,c,d) -> ConsentUtils.updateFirebaseConsent(this, a,b,c,d));
+            dialog.show(getSupportFragmentManager(), "consent");
+        }
+
         binding.viewPager.registerOnPageChangeCallback(new androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
@@ -59,6 +72,11 @@ public class OnboardingActivity extends AppCompatActivity {
         new TabLayoutMediator(binding.tabIndicator, binding.viewPager, (tab, position) -> {
             ImageView dot = new ImageView(this);
             dot.setImageResource(R.drawable.onboarding_dot_unselected);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT);
+            params.setMargins(8,0,8,0);
+            dot.setLayoutParams(params);
             tab.setCustomView(dot);
         }).attach();
 
@@ -95,6 +113,11 @@ public class OnboardingActivity extends AppCompatActivity {
             }
         });
 
+        binding.buttonSkip.setOnClickListener(v -> {
+            viewModel.markOnboardingComplete();
+            finishOnboarding();
+        });
+
         binding.buttonNext.setOnClickListener(v -> {
             int current = binding.viewPager.getCurrentItem();
             Fragment fragment = getSupportFragmentManager().findFragmentByTag("f" + current);
@@ -123,11 +146,15 @@ public class OnboardingActivity extends AppCompatActivity {
     }
 
     private void updateButtons(int position) {
-        binding.buttonBack.setVisibility(position == 0 ? View.INVISIBLE : View.VISIBLE);
         if (position == adapter.getItemCount() - 1) {
-            binding.buttonNext.setText(R.string.finish);
+            binding.bottomBar.setVisibility(View.GONE);
+            binding.buttonSkip.setVisibility(View.GONE);
         } else {
+            binding.bottomBar.setVisibility(View.VISIBLE);
+            binding.buttonSkip.setVisibility(View.VISIBLE);
+            binding.buttonBack.setVisibility(position == 0 ? View.INVISIBLE : View.VISIBLE);
             binding.buttonNext.setText(R.string.next);
+            binding.buttonNext.setIconResource(R.drawable.ic_arrow_forward);
         }
     }
 
