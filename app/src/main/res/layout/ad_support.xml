@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="24dp">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -19,20 +19,20 @@
 
             <include layout="@layout/ad_attribution" />
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <ImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ad_app_icon"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:contentDescription="@null" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/ad_headline"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp" />
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/media_card"
@@ -65,11 +65,11 @@
                     android:scaleType="centerCrop" />
             </com.google.android.material.card.MaterialCardView>
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/ad_body"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </com.google.android.material.card.MaterialCardView>
 </com.google.android.gms.ads.nativead.NativeAdView>

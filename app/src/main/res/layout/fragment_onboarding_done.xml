@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="24dp">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/content"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -24,14 +24,14 @@
             app:cardElevation="0dp"
             app:strokeWidth="1dp">
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="32dp">
 
-                <ImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/success_icon"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
@@ -58,7 +58,7 @@
                     android:textAlignment="center"
                     android:textColor="?attr/colorOnSurfaceVariant" />
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton
@@ -70,6 +70,6 @@
             app:icon="@drawable/ic_arrow_forward"
             app:iconGravity="textEnd" />
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
