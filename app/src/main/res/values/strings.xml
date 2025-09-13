@@ -265,6 +265,7 @@
     <string name="navigation_drawer">Navigation drawer</string>
     <string name="dashboard">Dashboard</string>
     <string name="code_font">Code font</string>
+    <string name="code_font_description">Choose the font used for code snippets</string>
     <string name="language">Language</string>
     <string name="notifications">Notifications</string>
     <string name="notification_settings">Notification settings</string>
@@ -342,6 +343,7 @@
     <string name="next">Next</string>
     <string name="back">Back</string>
     <string name="bottom_navigation_labels">Bottom navigation labels</string>
+    <string name="bottom_navigation_labels_description">Choose how labels appear in the bottom navigation bar</string>
     <string name="skip">Skip</string>
     <string name="choose_your_style">Choose your style</string>
     <string name="select_how_you_d_like_the_app_to_look">Choose how the app looks</string>
