@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">圖片檢視預覽</string>
     <string name="app_short_description">學習如何在 Android Studio 中製作簡單的 Java 應用程式。 📱</string>
     <string name="notification_update_title">有可用的新更新！</string>
@@ -22,8 +22,6 @@
     <string name="learn_more">瞭解更多</string>
     <string name="play_store">Play 商店</string>
     <string name="ad">廣告</string>
-    <string name="search_tutorials_hint">搜尋教學</string>
-    <string name="search_tutorials_content_description">搜尋教學</string>
     <string name="search_lessons_hint">搜尋課程</string>
     <string name="search_lessons_content_description">搜尋課程</string>
     <string name="android_studio">Android Studio</string>
@@ -286,7 +284,6 @@
     <string name="app_version">版本 %1$s (%2$d)</string>
     <string name="music">音樂</string>
     <string name="made_in">用 ❤ 在羅馬尼亞製作！</string>
-    <string name="alert_dialog_close">要關閉嗎？</string>
     <string name="alert_dialog_require_restart">需要重新啟動！</string>
     <string name="question_1">什麼是 Android Studio 教學：Java 版？</string>
     <string name="question_2">如何下載 Android Studio 教學：Java 版？</string>
@@ -313,10 +310,8 @@
     <string name="summary_preference_permissions_billing">允許應用程式使用 Google Play 帳單資料庫來處理應用程式內購買和捐贈。</string>
     <string name="summary_preference_permissions_check_license">允許應用程式驗證其是否符合授權協議，並強制執行授權條款以保護智慧財產權。</string>
     <string name="next">下一個</string>
-    <string name="finish">結束</string>
     <string name="back">後退</string>
     <string name="bottom_navigation_labels">底部導航標籤</string>
-    <string name="data_dialog_message">我們收集數據以改善您的經驗。</string>
     <string name="summary_preference_permissions_access_notification_policy">允許應用程式存取和修改裝置的通知政策，控制通知向使用者顯示的方式和時間，並提供自訂的通知管理功能。</string>
     <string name="summary_preference_permissions_foreground_service">允許應用程式建立和使用在前景執行的服務，使其優先於其他背景處理程序，並提高效能和可靠性。</string>
     <string name="summary_preference_settings_language">設定應用程式語言。</string>
@@ -360,7 +355,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">透過本課程學習如何在您的 Android 應用程式中使用收件匣樣式的通知。探索如何建立通知通道和建構器，以及如何將通知的樣式設定為具有多行文字和摘要文字的 InboxStyle。探索可用於自訂收件匣樣式通知的不同選項。</string>
     <string name="summary_preference_android_studio_bottom_navigation">底部導覽列可讓你快速在應用程式的頂層檢視之間切換。</string>
     <string name="summary_preference_android_studio_navigation_drawer">側邊選單從側邊滑入並顯示應用程式的主要導覽選項。</string>
-    <string name="summary_alert_dialog_close">您確定要退出嗎？</string>
     <string name="summary_alert_dialog_message">這將是您在螢幕上看到的訊息！</string>
     <string name="summary_alert_dialog_require_restart">為使變更生效，請重新啟動應用程式！</string>
     <string name="summary_sdk">Android 軟體開發套件 (SDK) 是一組工具，可讓開發人員建立 Android 應用程式。它包括一組函式庫、一個偵錯器、一個手機模擬器和文件。SDK 還包括一個 API 函式庫和一組 API 文件。您下載的套件中包含的函式庫，可幫助您建立應用程式。\n\n這是所有 Android 版本及其對應的 Android 開發人員識別碼的概覽。歡迎任何人提出問題或拉取請求。開發愉快！</string>
@@ -383,7 +377,6 @@
     <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">圖片按鈕已點擊！</string>
     <string name="toast_this_is_a_toast">這是一個 Toast！</string>
-    <string name="tooltip_show_code">顯示程式碼語法</string>
     <string name="tooltip_show_java_code_snippet">顯示Java代碼段</string>
     <string name="tooltip_open_me">開啟我 🌐</string>
     <string name="hint_type">Type here</string>
@@ -405,7 +398,6 @@
     <string name="error_loading_layout">載入版面配置時發生錯誤</string>
     <string name="error_loading_code">載入程式碼時發生錯誤</string>
     <string name="snack_general_error">檢查更新時發生錯誤</string>
-    <string name="consent_dialog_title">資料與廣告同意聲明</string>
     <string name="analytics_storage">分析資料儲存</string>
     <string name="ad_storage">廣告資料儲存</string>
     <string name="ad_user_data">廣告使用者資料</string>

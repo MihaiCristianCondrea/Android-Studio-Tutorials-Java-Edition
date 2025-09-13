@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Képnézet előnézete</string>
     <string name="app_short_description">Tanuld meg, hogyan készíts egyszerű Java alkalmazásokat az Android Studioban. 📱</string>
     <string name="notification_update_title">Új frissítés érhető el.</string>
@@ -27,8 +27,6 @@
     <string name="learn_more">Tudj meg többet</string>
     <string name="play_store">Play Áruház</string>
     <string name="ad">Hirdetés</string>
-    <string name="search_tutorials_hint">Oktatóanyagok keresése</string>
-    <string name="search_tutorials_content_description">Oktatóanyagok keresése</string>
     <string name="search_lessons_hint">Leckék keresése</string>
     <string name="search_lessons_content_description">Leckék keresése</string>
 
@@ -333,7 +331,6 @@
     <string name="app_version">Verzió %1$s (%2$d)</string>
     <string name="music">Zene</string>
     <string name="made_in">Készült ❤-vel Romániában.</string>
-    <string name="alert_dialog_close">Bezárás?</string>
     <string name="alert_dialog_require_restart">Újraindítás szükséges.</string>
     <string name="question_1">Mi az Android Studio Tutorials: Java Edition?</string>
     <string name="question_2">Hogyan tölthetem le az Android Studio Tutorials: Java Editiont?</string>
@@ -360,10 +357,8 @@
     <string name="summary_preference_permissions_billing">Lehetővé teszi az alkalmazás számára a Google Play Billing Library használatát az alkalmazáson belüli vásárlások és adományok kezeléséhez.</string>
     <string name="summary_preference_permissions_check_license">Lehetővé teszi az alkalmazás számára, hogy ellenőrizze a licencmegállapodásnak való megfelelést és érvényesítse a licencfeltételeket a szellemi tulajdon védelmében.</string>
     <string name="next">Következő</string>
-    <string name="finish">Befejez</string>
     <string name="back">Vissza</string>
     <string name="bottom_navigation_labels">Alsó navigációs címkék</string>
-    <string name="data_dialog_message">Adatokat gyűjtünk az Ön tapasztalatainak javítása érdekében.</string>
     <string name="summary_preference_permissions_access_notification_policy">Lehetővé teszi az alkalmazás számára, hogy hozzáférjen és módosítsa az eszköz értesítési szabályzatát, szabályozva, hogy mikor és hogyan jelenjenek meg az értesítések, valamint egyéni értesítéskezelési funkciókat nyújtson.</string>
     <string name="summary_preference_permissions_foreground_service">Lehetővé teszi az alkalmazás számára, hogy előtérben futó szolgáltatásokat hozzon létre és használjon, prioritást adva nekik más háttérfolyamatokkal szemben, javítva a teljesítményt és a megbízhatóságot.</string>
     <string name="summary_preference_settings_language">Alkalmazás nyelvének beállítása.</string>
@@ -408,7 +403,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">Tanulja meg, hogyan kell használni a beérkező levelek stílusú értesítéseit az Android alkalmazásban ezzel a leckével. Fedezze fel, hogyan lehet létrehozni egy értesítési csatornát és építőt, és hogyan állítsa be az értesítések stílusát egy beérkező postafiókra, több soros szöveggel és egy összefoglaló szöveggel. Fedezze fel a különféle lehetőségeket, amelyek rendelkezésre állnak a postafiók stílusú értesítéseinek testreszabásához.</string>
     <string name="summary_preference_android_studio_bottom_navigation">Az alsó navigációs sáv lehetővé teszi, hogy gyorsan válthasson az alkalmazás legfelső szintű nézetei között.</string>
     <string name="summary_preference_android_studio_navigation_drawer">A navigációs fiók oldalról csúszik be, és megjeleníti az alkalmazás fő navigációs beállításait.</string>
-    <string name="summary_alert_dialog_close">Biztos benne, hogy ki akar lépni?</string>
     <string name="summary_alert_dialog_message">Ez lesz az üzenet, amelyet a képernyőn látsz.</string>
     <string name="summary_alert_dialog_require_restart">A változások érvénybe lépéséhez indítsd újra az alkalmazást.</string>
     <string name="summary_sdk">Az Android Software Development Kit (SDK) egy eszközgyűjtemény, amely lehetővé teszi a fejlesztők számára Android-alkalmazások létrehozását. Tartalmaz egy könyvtárkészletet, egy hibakeresőt, egy kézi készülék emulátort és dokumentációt. Az SDK tartalmaz továbbá egy API-könyvtárat és API-dokumentációs csomagot is. A letöltött csomagok könyvtárakat tartalmaznak, amelyek segítenek az alkalmazásod elkészítésében.\n\nEz egy áttekintés az összes Android-verzióról és a hozzájuk tartozó azonosítókról Android fejlesztők számára. Bárki nyugodtan nyithat hibajegyet vagy küldhet pull requestet. Jó fejlesztést!</string>
@@ -431,7 +425,6 @@
     <string name="snack_rating">Köszönjük a %1$.1f csillagos értékelést. ❤️</string>
     <string name="snack_image_button">Kép gomb megnyomva.</string>
     <string name="toast_this_is_a_toast">Ez egy toast.</string>
-    <string name="tooltip_show_code">Kódszintaxis megjelenítése</string>
     <string name="tooltip_show_java_code_snippet">Java kódrészlet megjelenítése</string>
     <string name="tooltip_open_me">Nyiss meg 🌐</string>
     <string name="hint_type">Írj ide</string>
@@ -452,7 +445,6 @@
     <string name="error_loading_layout">Hiba a layout betöltésekor</string>
     <string name="error_loading_code">Hiba a kód betöltésekor</string>
     <string name="snack_general_error">Hiba történt a frissítések keresése közben</string>
-    <string name="consent_dialog_title">Adatok és hirdetések hozzájárulása</string>
     <string name="analytics_storage">Analitikai tárolás</string>
     <string name="ad_storage">Hirdetési tárolás</string>
     <string name="ad_user_data">Hirdetési felhasználói adatok</string>

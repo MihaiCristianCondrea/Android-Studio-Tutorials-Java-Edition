@@ -25,8 +25,6 @@
     <string name="learn_more">Află mai multe</string>
     <string name="play_store">Magazin Play</string>
     <string name="ad">Anunț</string>
-    <string name="search_tutorials_hint">Caută tutoriale</string>
-    <string name="search_tutorials_content_description">Caută tutoriale</string>
     <string name="search_lessons_hint">Caută lecții</string>
     <string name="search_lessons_content_description">Caută lecții</string>
 
@@ -320,7 +318,6 @@
     <string name="app_version">Versiunea %1$s (%2$d)</string>
     <string name="music">Muzică</string>
     <string name="made_in">Realizat cu ❤ în România.</string>
-    <string name="alert_dialog_close">Închide?</string>
     <string name="alert_dialog_require_restart">Necesită repornire.</string>
     <string name="question_1">Ce este Android Studio Tutorials: Java Edition?</string>
     <string name="question_2">Cum pot descărca Android Studio Tutorials: Java Edition?</string>
@@ -347,10 +344,8 @@
     <string name="summary_preference_permissions_billing">Permite aplicației să utilizeze Biblioteca de facturare Google Play pentru a gestiona achizițiile în aplicație și donațiile.</string>
     <string name="summary_preference_permissions_check_license">Permite aplicației să verifice conformitatea cu acordul de licență și să aplice termenii de licențiere pentru a proteja proprietatea intelectuală.</string>
     <string name="next">Următorul</string>
-    <string name="finish">Termina</string>
     <string name="back">Spate</string>
     <string name="bottom_navigation_labels">Etichete de navigație de jos</string>
-    <string name="data_dialog_message">Colectăm date pentru a vă îmbunătăți experiența.</string>
     <string name="summary_preference_permissions_access_notification_policy">Permite aplicației să acceseze și să modifice politica de notificări a dispozitivului, controlând modul și momentul în care notificările sunt afișate utilizatorului și oferind funcții personalizate de gestionare a notificărilor.</string>
     <string name="summary_preference_permissions_foreground_service">Permite aplicației să creeze și să utilizeze servicii care rulează în prim plan, acordându-le prioritate față de alte procese din fundal și îmbunătățind performanța și fiabilitatea.</string>
     <string name="summary_preference_settings_language">Setați limba aplicației.</string>
@@ -394,7 +389,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">Aflați cum să utilizați notificările în stil cutie poștală în aplicația dvs. Android cu această lecție. Descoperiți cum să creați un canal de notificare și un builder și cum să setați stilul notificărilor dvs. la un InboxStyle cu mai multe rânduri de text și un text de rezumat. Explorați diferitele opțiuni disponibile pentru personalizarea notificărilor dvs. în stil cutie poștală.</string>
     <string name="summary_preference_android_studio_bottom_navigation">O bară de navigare de jos îți permite să comuți rapid între vizualizările de nivel superior ale aplicației.</string>
     <string name="summary_preference_android_studio_navigation_drawer">Un meniu lateral glisează din partea laterală și afișează principalele opțiuni de navigare ale aplicației.</string>
-    <string name="summary_alert_dialog_close">Ești sigur că vrei să ieși?</string>
     <string name="summary_alert_dialog_message">Acesta va fi mesajul pe care îl veți vedea pe ecran.</string>
     <string name="summary_alert_dialog_require_restart">Pentru a produce efect, vă rugăm să reporniți aplicația.</string>
     <string name="summary_sdk">Kitul de dezvoltare software Android (SDK) este o colecție de instrumente care permit dezvoltatorilor să creeze aplicații Android. Acesta include un set de biblioteci, un depanator, un emulator de telefon și documentație. SDK-ul include, de asemenea, o bibliotecă API și un set de documentație API. Pachetele pe care le descărcați conțin biblioteci, care vă ajută la crearea aplicației.\n\nAceasta este o prezentare generală a tuturor versiunilor Android și a identificatorilor corespunzători pentru dezvoltatorii Android. Oricine este binevenit să deschidă o problemă sau să trimită o cerere de extragere. Dezvoltare plăcută.</string>
@@ -419,7 +413,6 @@
     <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Butonul imagine a fost apăsat.</string>
     <string name="toast_this_is_a_toast">Acesta este un toast.</string>
-    <string name="tooltip_show_code">Afișează sintaxa codului</string>
     <string name="tooltip_show_java_code_snippet">Afișați fragmentul de cod Java</string>
     <string name="tooltip_open_me">Deschide-mă 🌐</string>
     <string name="hint_type">Type here</string>
@@ -443,7 +436,6 @@
     <string name="error_loading_layout">Eroare la încărcarea aspectului</string>
     <string name="error_loading_code">Eroare la încărcarea codului</string>
     <string name="snack_general_error">A apărut o eroare la verificarea actualizărilor</string>
-    <string name="consent_dialog_title">Consimțământ privind datele și anunțurile</string>
     <string name="analytics_storage">Stocare analitică</string>
     <string name="ad_storage">Stocare ad</string>
     <string name="ad_user_data">Date de utilizator ad</string>

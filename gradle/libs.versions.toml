@@ -1,4 +1,4 @@
-[versions]
+ [versions]
 appcompat = "1.7.1"
 appUpdate = "2.1.0"
 billing = "8.0.0"

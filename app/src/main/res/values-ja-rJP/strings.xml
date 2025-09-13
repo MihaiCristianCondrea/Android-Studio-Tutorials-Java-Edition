@@ -27,8 +27,6 @@
     <string name="learn_more">詳しく見る</string>
     <string name="play_store">Play ストア</string>
     <string name="ad">広告</string>
-    <string name="search_tutorials_hint">チュートリアルを検索</string>
-    <string name="search_tutorials_content_description">チュートリアルを検索</string>
     <string name="search_lessons_hint">レッスンを検索</string>
     <string name="search_lessons_content_description">レッスンを検索</string>
 
@@ -333,7 +331,6 @@
     <string name="app_version">バージョン %1$s (%2$d)</string>
     <string name="music">音楽</string>
     <string name="made_in">ルーマニアで ❤ を込めて作成。</string>
-    <string name="alert_dialog_close">閉じますか?</string>
     <string name="alert_dialog_require_restart">再起動が必要です。</string>
     <string name="question_1">Android Studio Tutorials: Java Edition とは何ですか？</string>
     <string name="question_2">Android Studio Tutorials: Java Edition はどのようにダウンロードできますか？</string>
@@ -360,10 +357,8 @@
     <string name="summary_preference_permissions_billing">アプリが Google Play Billing Library を使用してアプリ内購入や寄付を処理できるようにします。</string>
     <string name="summary_preference_permissions_check_license">アプリがライセンス契約への準拠を確認し、知的財産を保護するためにライセンス条件を適用できるようにします。</string>
     <string name="next">次</string>
-    <string name="finish">仕上げる</string>
     <string name="back">戻る</string>
     <string name="bottom_navigation_labels">ボトムナビゲーションラベル</string>
-    <string name="data_dialog_message">私たちはあなたの経験を改善するためにデータを収集します。</string>
     <string name="summary_preference_permissions_access_notification_policy">アプリがデバイスの通知ポリシーにアクセスして変更できるようにし、通知が表示される方法やタイミングを制御して、カスタム通知管理機能を提供します。</string>
     <string name="summary_preference_permissions_foreground_service">アプリがフォアグラウンドで実行されるサービスを作成・使用できるようにし、他のバックグラウンドプロセスより優先度を与えてパフォーマンスと信頼性を向上させます。</string>
     <string name="summary_preference_settings_language">アプリの言語を設定します。</string>
@@ -408,7 +403,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">このレッスンを使用して、Androidアプリで受信ボックススタイルの通知を使用する方法を学びます。通知チャネルとビルダーの作成方法、および通知のスタイルを複数のテキストと概要テキストを備えたInboxStyleに設定する方法をご覧ください。受信トレイスタイルの通知をカスタマイズするために利用可能なさまざまなオプションを調べてください。</string>
     <string name="summary_preference_android_studio_bottom_navigation">ボトムナビゲーションバーを使用すると、アプリのトップレベルビューをすばやく切り替えることができます。</string>
     <string name="summary_preference_android_studio_navigation_drawer">ナビゲーションドロワーが側面からスライドし、アプリのメインナビゲーションオプションを表示します。</string>
-    <string name="summary_alert_dialog_close">あなたは退出したいですか？</string>
     <string name="summary_alert_dialog_message">これは画面に表示されるメッセージです。</string>
     <string name="summary_alert_dialog_require_restart">有効にするには、アプリを再起動してください。</string>
     <string name="summary_sdk">Android ソフトウェア開発キット (SDK) は、開発者が Android アプリを作成できるようにするツールのコレクションです。ライブラリのセット、デバッガ、ハンドセットエミュレータ、ドキュメントが含まれています。SDK には API ライブラリと API ドキュメントのセットも含まれます。ダウンロードするパッケージにはライブラリが含まれており、アプリ作成に役立ちます。\n\nこれは、Android 開発者向けのすべての Android バージョンとそれに対応する識別子の概要です。誰でも issue や pull request を開くことができます。楽しい開発を。</string>
@@ -433,7 +427,6 @@
     <string name="snack_rating">%1$.1f 星の評価をありがとうございます。 ❤️</string>
     <string name="snack_image_button">画像ボタンがクリックされました。</string>
     <string name="toast_this_is_a_toast">これはトーストです。</string>
-    <string name="tooltip_show_code">コード構文を表示</string>
     <string name="tooltip_show_java_code_snippet">Java コードスニペットを表示</string>
     <string name="tooltip_open_me">開いて 🌐</string>
     <string name="hint_type">ここに入力</string>
@@ -454,7 +447,6 @@
     <string name="error_loading_layout">レイアウトの読み込みエラー</string>
     <string name="error_loading_code">コードの読み込みエラー</string>
     <string name="snack_general_error">更新の確認中にエラーが発生しました</string>
-    <string name="consent_dialog_title">データと広告の同意</string>
     <string name="analytics_storage">分析ストレージ</string>
     <string name="ad_storage">広告ストレージ</string>
     <string name="ad_user_data">広告用ユーザーデータ</string>

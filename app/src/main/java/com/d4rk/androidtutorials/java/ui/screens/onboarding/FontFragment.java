@@ -21,7 +21,7 @@ public class FontFragment extends Fragment {
     private FragmentOnboardingFontBinding binding;
     private OnboardingViewModel viewModel;
     private MaterialRadioButton[] radioButtons;
-    private View[] optionCards;
+    private View[] optionCards; // FIXME: Field can be converted to a local variable
 
     @Nullable
     @Override

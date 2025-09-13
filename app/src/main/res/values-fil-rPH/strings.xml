@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Paunang tingin sa image view</string>
     <string name="app_short_description">Alamin kung paano gumawa ng mga simpleng Java app sa Android Studio. 📱</string>
     <string name="notification_update_title">May bagong update na available.</string>
@@ -22,8 +22,6 @@
     <string name="learn_more">Matuto pa</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Ad</string>
-    <string name="search_tutorials_hint">Maghanap ng mga tutorial</string>
-    <string name="search_tutorials_content_description">Maghanap ng mga tutorial</string>
     <string name="search_lessons_hint">Maghanap ng mga aralin</string>
     <string name="search_lessons_content_description">Maghanap ng mga aralin</string>
     <string name="android_studio">Android Studio</string>
@@ -286,7 +284,6 @@
     <string name="app_version">Bersyon %1$s (%2$d)</string>
     <string name="music">Musika</string>
     <string name="made_in">Gawa nang may ❤ sa Romania.</string>
-    <string name="alert_dialog_close">Isara?</string>
     <string name="alert_dialog_require_restart">Kailangan i-restart.</string>
     <string name="question_1">Ano ang Android Studio Tutorials: Java Edition?</string>
     <string name="question_2">Paano ko mada-download ang Android Studio Tutorials: Java Edition?</string>
@@ -313,10 +310,8 @@
     <string name="summary_preference_permissions_billing">Pinapayagan ang app na gamitin ang Google Play Billing Library para pangasiwaan ang mga in-app na pagbili at donasyon.</string>
     <string name="summary_preference_permissions_check_license">Pinapayagan ang app na i-verify ang pagsunod nito sa kasunduan sa lisensya at ipatupad ang mga tuntunin sa paglilisensya para protektahan ang intelektwal na ari-arian.</string>
     <string name="next">Susunod</string>
-    <string name="finish">Tapusin</string>
     <string name="back">Balik</string>
     <string name="bottom_navigation_labels">Mga label sa nabigasyon sa ibaba</string>
-    <string name="data_dialog_message">Kinokolekta namin ang data upang mapagbuti ang iyong karanasan.</string>
     <string name="summary_preference_permissions_access_notification_policy">Pinapayagan ang app na i-access at baguhin ang patakaran sa notipikasyon ng device, na kinokontrol kung paano at kailan ipinapakita ang mga notipikasyon sa user at nagbibigay ng mga custom na feature sa pamamahala ng notipikasyon.</string>
     <string name="summary_preference_permissions_foreground_service">Pinapayagan ang app na lumikha at gumamit ng mga serbisyo na tumatakbo sa foreground, na nagbibigay sa kanila ng priyoridad sa iba pang mga proseso sa background at nagpapabuti ng performance at reliability.</string>
     <string name="summary_preference_settings_language">Itakda ang wika ng application.</string>
@@ -360,7 +355,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">Alamin kung paano gamitin ang mga notipikasyon na may istilong inbox sa iyong Android app sa araling ito. Tuklasin kung paano gumawa ng isang notification channel at builder, at kung paano itakda ang istilo ng iyong mga notipikasyon sa isang InboxStyle na may maraming linya ng text at isang buod na text. Galugarin ang iba\'t ibang opsyon na available para i-customize ang iyong mga notipikasyon na may istilong inbox.</string>
     <string name="summary_preference_android_studio_bottom_navigation">Ang isang bottom navigation bar ay nagbibigay-daan sa iyong mabilis na lumipat sa mga pangunahing view ng iyong app.</string>
     <string name="summary_preference_android_studio_navigation_drawer">Ang navigation drawer ay dumudulas mula sa gilid at nagpapakita ng mga pangunahing opsyon sa nabigasyon ng app.</string>
-    <string name="summary_alert_dialog_close">Sigurado ka bang gusto mong lumabas?</string>
     <string name="summary_alert_dialog_message">Ito ang magiging mensahe na makikita mo sa screen.</string>
     <string name="summary_alert_dialog_require_restart">Para magkabisa mangyaring i-restart ang app.</string>
     <string name="summary_sdk">Ang Android Software Development Kit (SDK) ay isang koleksyon ng mga tool na nagpapahintulot sa mga developer na lumikha ng mga Android app. Kasama dito ang isang set ng mga library, isang debugger, isang handset emulator, at dokumentasyon. Kasama rin sa SDK ang isang API library at isang set ng API documentation. Ang mga package na iyong dina-download ay may mga library, na tumutulong sa iyo sa paglikha ng iyong app.\n\nIto ay isang pangkalahatang-ideya ng lahat ng mga bersyon ng Android at ang kanilang kaukulang mga identifier para sa mga developer ng Android. Inaanyayahan ang sinuman na magbukas ng isang isyu o pull request. Maligayang pag-develop.</string>
@@ -383,7 +377,6 @@
     <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Na-click ang image button.</string>
     <string name="toast_this_is_a_toast">Ito ay isang toast.</string>
-    <string name="tooltip_show_code">Ipakita ang syntax ng code</string>
     <string name="tooltip_show_java_code_snippet">Ipakita ang Java Code Snippet</string>
     <string name="tooltip_open_me">Buksan mo ako 🌐</string>
     <string name="hint_type">Type here</string>
@@ -405,7 +398,6 @@
     <string name="error_loading_layout">Error sa pag-load ng layout</string>
     <string name="error_loading_code">Error sa pag-load ng code</string>
     <string name="snack_general_error">May naganap na error habang sinusuri kung may mga update</string>
-    <string name="consent_dialog_title">Pahintulot sa Data at Ads</string>
     <string name="analytics_storage">Imbakan ng analytics</string>
     <string name="ad_storage">Imbakan ng ad</string>
     <string name="ad_user_data">Data ng user para sa ad</string>

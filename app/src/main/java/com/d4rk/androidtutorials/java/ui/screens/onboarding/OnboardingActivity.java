@@ -173,7 +173,7 @@ public class OnboardingActivity extends AppCompatActivity {
         }
     }
 
-    private int dpToPx(int dp) {
+    private int dpToPx(int dp) { //  FIXME: Value of parameter 'dp' is always '2'
         return Math.round(TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics()));
     }
