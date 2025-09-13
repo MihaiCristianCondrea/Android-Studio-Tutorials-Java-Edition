@@ -1,52 +1,53 @@
 # Core Module
 
-The **core** package provides foundational building blocks shared across AppToolkit features. It offers base domain models, UI abstractions, utility helpers and dependency injection qualifiers used throughout the library.
+The **core** package provides building blocks shared across the app. It offers domain models, ViewModel classes, utility helpers and dependency injection qualifiers used throughout the project.
 
 ## Packages
 
 ### domain
-Defines reusable result wrappers and UI state models, plus base use case interfaces for repositories and operations.
+Houses use case classes and other business logic that operate on repositories.
 
 ### ui
-Hosts composable components and base classes like `ScreenViewModel` and `DefaultSnackbarHost` that standardize screen state handling and Snackbar presentation.
+Contains Activities, Fragments and ViewModels such as `MainViewModel`.
 
 ### utils
-Includes helpers, extensions, constants and `DispatcherProvider` to access standard `CoroutineDispatcher` instances.
+Provides helpers like `OpenSourceLicensesUtils`, `ReviewHelper` and `EdgeToEdgeDelegate`.
 
 ### di
-Contains qualifiers such as `GithubToken` to assist dependency injection frameworks.
+Contains Hilt modules and qualifiers for dependency injection.
 
 ## Usage examples
 
-### ScreenViewModel
-```kotlin
-class ExampleViewModel : ScreenViewModel<UiScreen, ExampleEvent, ExampleAction>(
-    initialState = UiStateScreen(data = UiScreen())
-) {
-    // handle events
-}
-```
+### ViewModel
+```java
+public class MainViewModel extends ViewModel {
+    private final ShouldShowStartupScreenUseCase shouldShowStartupScreenUseCase;
 
-### DefaultSnackbarHost
-```kotlin
-val snackbarHostState = remember { SnackbarHostState() }
+    public MainViewModel(ShouldShowStartupScreenUseCase shouldShowStartupScreenUseCase) {
+        this.shouldShowStartupScreenUseCase = shouldShowStartupScreenUseCase;
+    }
 
-Scaffold(
-    snackbarHost = { DefaultSnackbarHost(snackbarState = snackbarHostState) }
-) { /* screen content */ }
-```
-
-### DispatcherProvider
-```kotlin
-class ExampleRepository(private val dispatchers: DispatcherProvider) {
-    suspend fun load() = withContext(dispatchers.io) {
-        /* blocking work */
+    public boolean shouldShowStartupScreen() {
+        return shouldShowStartupScreenUseCase.invoke();
     }
 }
 ```
 
+### Snackbar helper
+```java
+Snackbar.make(view, "Message", Snackbar.LENGTH_SHORT).show();
+```
+
+### ReviewHelper
+```java
+ReviewHelper.launchInAppReviewIfEligible(activity, sessionCount, hasPromptedBefore, () -> {
+    // callback when review flow finishes
+});
+```
+
 ## See also
 
-- [[Library]] – overview of all modules and features.
-- [[Issue-Reporter-Module]] – demonstrates use of `ScreenViewModel` and networking helpers.
-- [[Support-Module]] – integrates `DispatcherProvider` for billing and donation flows.
+- [[Architecture]] – overview of app layers.
+- [[Data Layer]] – repository and data source details.
+- [[UI Components]] – common reusable views.
+

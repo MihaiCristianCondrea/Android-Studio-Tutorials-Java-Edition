@@ -10,6 +10,8 @@ The settings screen allows users to configure application preferences. The main 
 
 ## Integration
 To launch the settings screen:
-```kotlin
-startActivity(Intent(context, SettingsActivity::class.java))
+```java
+Intent intent = new Intent(context, SettingsActivity.class);
+startActivity(intent);
 ```
+

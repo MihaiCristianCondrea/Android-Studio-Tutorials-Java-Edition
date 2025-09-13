@@ -1,42 +1,80 @@
 # Data Layer
 
-This page outlines the data-related building blocks provided by AppToolkit.
+This page outlines how the app manages and persists data.
 
-## HTTP client
+## Repositories
 
-`apptoolkit/data/client` exposes **KtorClient**, a factory for a preconfigured Ktor `HttpClient`. It installs JSON content negotiation, request timeouts, default headers and optional logging so callers only need to supply their own endpoints.
+Repositories expose data to the rest of the app and hide the underlying storage.
 
-### Setup
-
-```kotlin
-val client = KtorClient().createClient(enableLogging = true)
+```java
+public interface MainRepository {
+    boolean shouldShowStartupScreen();
+    void markStartupScreenShown();
+}
 ```
 
-## DataStore
+`DefaultMainRepository` implements these methods using `SharedPreferences`:
 
-The `apptoolkit/data/datastore` package wraps Android DataStore in a singleton `CommonDataStore`. It centralizes preferences such as startup flags, theme options and user consents, exposing them as Kotlin `Flow`s with suspend functions to persist updates.
+```java
+public class DefaultMainRepository implements MainRepository {
+    private final Context context;
 
-### Usage
+    public DefaultMainRepository(Context context) {
+        this.context = context.getApplicationContext();
+    }
 
-```kotlin
-val dataStore = CommonDataStore.getInstance(context)
+    @Override
+    public boolean shouldShowStartupScreen() {
+        SharedPreferences startup = context.getSharedPreferences("startup", Context.MODE_PRIVATE);
+        return startup.getBoolean("value", true);
+    }
 
-// Observe a value
-val adsEnabled = dataStore.ads(default = true)
-
-// Save a value
-scope.launch { dataStore.saveThemeMode("dark") }
+    @Override
+    public void markStartupScreenShown() {
+        SharedPreferences startup = context.getSharedPreferences("startup", Context.MODE_PRIVATE);
+        startup.edit().putBoolean("value", false).apply();
+    }
+}
 ```
 
-## Ads
+## Data sources
 
-Ads are configured through preferences in `CommonDataStore` via the `ads` flag and related consent entries. The `core/ads` package provides `AdsCoreManager`, which checks those preferences before initializing Google Mobile Ads and manages app-open ad loading and display.
+Remote and local sources supply the repositories with data. For example, `DefaultHomeRemoteDataSource` uses Volley to fetch promoted apps:
 
-Use `AdsCoreManager` when the application should show an app-open ad on start or resume:
+```java
+public class DefaultHomeRemoteDataSource implements HomeRemoteDataSource {
+    private final RequestQueue requestQueue;
+    private final String apiUrl;
 
-```kotlin
-val adsManager = AdsCoreManager(context, buildInfoProvider)
-scope.launch { adsManager.initializeAds("ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx") }
-adsManager.showAdIfAvailable(activity, scope)
+    public DefaultHomeRemoteDataSource(RequestQueue requestQueue, String apiUrl) {
+        this.requestQueue = requestQueue;
+        this.apiUrl = apiUrl;
+    }
+
+    @Override
+    public void fetchPromotedApps(PromotedAppsCallback callback) {
+        JsonObjectRequest request = new JsonObjectRequest(
+                Request.Method.GET,
+                apiUrl,
+                null,
+                response -> { /* parse and callback */ },
+                error -> { /* handle error */ }
+        );
+        requestQueue.add(request);
+    }
+}
 ```
+
+## Models
+
+Model classes like `PromotedApp` encapsulate the data returned by the layer:
+
+```java
+public record PromotedApp(String name, String packageName, String iconUrl) {}
+```
+
+## See also
+
+- [[Architecture]] – overview of app layers.
+- [[Core Module]] – shared utilities and components.
 
