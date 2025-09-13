@@ -14,8 +14,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityShortcutsNavigationAndSearchingBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import java.util.List;
 
@@ -27,11 +26,9 @@ public class NavigationAndSearchingShortcutsActivity extends UpNavigationActivit
         super.onCreate(savedInstanceState);
         ActivityShortcutsNavigationAndSearchingBinding binding = ActivityShortcutsNavigationAndSearchingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        MobileAds.initialize(this);
-
         EdgeToEdgeDelegate.apply(this, binding.shortcutList);
 
-        binding.adView.loadAd(new AdRequest.Builder().build());
+        AdUtils.loadBanner(binding.adView);
         new FastScrollerBuilder(binding.shortcutList).useMd2Style().build();
 
         List<Shortcut> shortcuts = List.of(

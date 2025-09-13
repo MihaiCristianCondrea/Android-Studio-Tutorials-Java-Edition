@@ -11,8 +11,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityShortcutsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 public class ShortcutsActivity extends UpNavigationActivity {
     @Override
@@ -21,10 +20,7 @@ public class ShortcutsActivity extends UpNavigationActivity {
         ActivityShortcutsBinding binding = ActivityShortcutsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.container);
-
-        MobileAds.initialize(this);
-        binding.adViewBottom.loadAd(new AdRequest.Builder().build());
+        EdgeToEdgeDelegate.apply(this, binding.container);        AdUtils.loadBanner(binding.adViewBottom);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_shortcuts, new SettingsFragment()).commit();
         ActionBar supportActionBar = getSupportActionBar();

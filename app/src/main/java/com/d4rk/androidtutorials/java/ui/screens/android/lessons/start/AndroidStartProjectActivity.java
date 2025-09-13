@@ -9,8 +9,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidStartProjectBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -36,11 +35,8 @@ public class AndroidStartProjectActivity extends UpNavigationActivity {
                 return true;
             }
             return false;
-        });
-
-        MobileAds.initialize(this);
-        binding.adViewBottom.loadAd(new AdRequest.Builder().build());
-        binding.adView.loadAd(new AdRequest.Builder().build());
+        });        AdUtils.loadBanner(binding.adViewBottom);
+        AdUtils.loadBanner(binding.adView);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.textViewThirdStepSummary.setMovementMethod(LinkMovementMethod.getInstance());
     }

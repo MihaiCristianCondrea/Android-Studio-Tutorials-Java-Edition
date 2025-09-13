@@ -34,7 +34,7 @@ import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioCategoryBindi
 import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioLessonBinding;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textview.MaterialTextView;
 import com.google.android.material.shape.CornerFamily;
@@ -138,7 +138,7 @@ public class AndroidStudioFragment extends Fragment {
 
     private void ensureMobileAdsInitialized() {
         if (!mobileAdsInitialized) {
-            MobileAds.initialize(requireContext());
+            AdUtils.initialize(requireContext());
             mobileAdsInitialized = true;
         }
     }

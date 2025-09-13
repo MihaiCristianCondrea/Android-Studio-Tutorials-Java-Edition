@@ -11,8 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentNoCodeBinding;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 public class NoCodeFragment extends Fragment {
     private static final String ARG_MESSAGE = "arg_message";
@@ -31,8 +30,7 @@ public class NoCodeFragment extends Fragment {
                              ViewGroup container,
                              Bundle savedInstanceState) {
         FragmentNoCodeBinding binding = FragmentNoCodeBinding.inflate(inflater, container, false);
-        MobileAds.initialize(requireContext());
-        binding.adView.loadAd(new AdRequest.Builder().build());
+        AdUtils.loadBanner(binding.adView);
 
         String message = requireArguments().getString(ARG_MESSAGE, String.valueOf(R.string.no_java_code_needed));
         binding.textViewNoCodeMessage.setText(message);

@@ -18,8 +18,7 @@ import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentAboutBinding;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import dagger.hilt.android.AndroidEntryPoint;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
@@ -42,9 +41,8 @@ public class AboutFragment extends Fragment {
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
 
         if (ConsentUtils.canShowAds(requireContext())) {
-            MobileAds.initialize(requireContext());
             binding.adView.setVisibility(android.view.View.VISIBLE);
-            binding.adView.loadAd(new AdRequest.Builder().build());
+            AdUtils.loadBanner(binding.adView);
         } else {
             binding.adView.setVisibility(android.view.View.GONE);
         }
