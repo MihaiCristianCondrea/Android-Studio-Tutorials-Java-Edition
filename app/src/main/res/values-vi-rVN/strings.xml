@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Xem trước khung nhìn hình ảnh</string>
     <string name="app_short_description">Học cách tạo các ứng dụng Java đơn giản trong Android Studio. 📱</string>
     <string name="notification_update_title">Có bản cập nhật mới.</string>
@@ -22,8 +22,6 @@
     <string name="learn_more">Tìm hiểu thêm</string>
     <string name="play_store">Cửa hàng Play</string>
     <string name="ad">Quảng cáo</string>
-    <string name="search_tutorials_hint">Tìm kiếm hướng dẫn</string>
-    <string name="search_tutorials_content_description">Tìm kiếm hướng dẫn</string>
     <string name="search_lessons_hint">Tìm kiếm bài học</string>
     <string name="search_lessons_content_description">Tìm kiếm bài học</string>
     <string name="android_studio">Android Studio</string>
@@ -286,7 +284,6 @@
     <string name="app_version">Phiên bản %1$s (%2$d)</string>
     <string name="music">Âm nhạc</string>
     <string name="made_in">Làm với ❤ tại Romania.</string>
-    <string name="alert_dialog_close">Đóng?</string>
     <string name="alert_dialog_require_restart">Yêu cầu khởi động lại.</string>
     <string name="question_1">Hướng dẫn Android Studio: Phiên bản Java là gì?</string>
     <string name="question_2">Làm cách nào để tải xuống Hướng dẫn Android Studio: Phiên bản Java?</string>
@@ -313,10 +310,8 @@
     <string name="summary_preference_permissions_billing">Cho phép ứng dụng sử dụng Thư viện thanh toán Google Play để xử lý các giao dịch mua hàng và quyên góp trong ứng dụng.</string>
     <string name="summary_preference_permissions_check_license">Cho phép ứng dụng xác minh việc tuân thủ thỏa thuận cấp phép và thực thi các điều khoản cấp phép để bảo vệ sở hữu trí tuệ.</string>
     <string name="next">Kế tiếp</string>
-    <string name="finish">Hoàn thành</string>
     <string name="back">Mặt sau</string>
     <string name="bottom_navigation_labels">Nhãn điều hướng dưới cùng</string>
-    <string name="data_dialog_message">Chúng tôi thu thập dữ liệu để cải thiện trải nghiệm của bạn.</string>
     <string name="summary_preference_permissions_access_notification_policy">Cho phép ứng dụng truy cập và sửa đổi chính sách thông báo của thiết bị, kiểm soát cách thức và thời điểm hiển thị thông báo cho người dùng và cung cấp các tính năng quản lý thông báo tùy chỉnh.</string>
     <string name="summary_preference_permissions_foreground_service">Cho phép ứng dụng tạo và sử dụng các dịch vụ chạy ở nền trước, ưu tiên chúng hơn các quy trình nền khác và cải thiện hiệu suất và độ tin cậy.</string>
     <string name="summary_preference_settings_language">Đặt ngôn ngữ ứng dụng.</string>
@@ -360,7 +355,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">Tìm hiểu cách sử dụng thông báo kiểu hộp thư đến trong ứng dụng Android của bạn với bài học này. Khám phá cách tạo kênh thông báo và trình tạo, và cách đặt kiểu thông báo của bạn thành InboxStyle với nhiều dòng văn bản và một văn bản tóm tắt. Khám phá các tùy chọn khác nhau có sẵn để tùy chỉnh thông báo kiểu hộp thư đến của bạn.</string>
     <string name="summary_preference_android_studio_bottom_navigation">Thanh điều hướng dưới cho phép bạn nhanh chóng chuyển đổi giữa các chế độ xem cấp cao trong ứng dụng.</string>
     <string name="summary_preference_android_studio_navigation_drawer">Ngăn điều hướng trượt từ bên cạnh vào và hiển thị các tùy chọn điều hướng chính của ứng dụng.</string>
-    <string name="summary_alert_dialog_close">Bạn có chắc chắn muốn thoát?</string>
     <string name="summary_alert_dialog_message">Đây sẽ là thông báo bạn sẽ thấy trên màn hình.</string>
     <string name="summary_alert_dialog_require_restart">Để có hiệu lực, vui lòng khởi động lại ứng dụng.</string>
     <string name="summary_sdk">Bộ công cụ phát triển phần mềm Android (SDK) là một bộ sưu tập các công cụ cho phép các nhà phát triển tạo ứng dụng Android. Nó bao gồm một bộ thư viện, một trình gỡ lỗi, một trình giả lập thiết bị cầm tay và tài liệu. SDK cũng bao gồm một thư viện API và một bộ tài liệu API. Các gói bạn tải xuống có các thư viện, giúp bạn tạo ứng dụng của mình.\n\nĐây là tổng quan về tất cả các phiên bản Android và các mã nhận dạng tương ứng của chúng cho các nhà phát triển Android. Mọi người đều được hoan nghênh mở một vấn đề hoặc yêu cầu kéo. Chúc bạn phát triển vui vẻ.</string>
@@ -383,7 +377,6 @@
     <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Đã nhấp vào nút hình ảnh.</string>
     <string name="toast_this_is_a_toast">Đây là một thông báo nhanh.</string>
-    <string name="tooltip_show_code">Hiển thị cú pháp mã</string>
     <string name="tooltip_show_java_code_snippet">Hiển thị đoạn mã Java Code</string>
     <string name="tooltip_open_me">Mở tôi 🌐</string>
     <string name="hint_type">Type here</string>
@@ -405,7 +398,6 @@
     <string name="error_loading_layout">Lỗi tải bố cục</string>
     <string name="error_loading_code">Lỗi tải mã</string>
     <string name="snack_general_error">Đã xảy ra lỗi khi kiểm tra các bản cập nhật</string>
-    <string name="consent_dialog_title">Đồng ý về Dữ liệu &amp; Quảng cáo</string>
     <string name="analytics_storage">Lưu trữ phân tích</string>
     <string name="ad_storage">Lưu trữ quảng cáo</string>
     <string name="ad_user_data">Dữ liệu người dùng quảng cáo</string>

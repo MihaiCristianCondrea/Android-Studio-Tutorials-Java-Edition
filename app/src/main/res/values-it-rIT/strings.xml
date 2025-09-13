@@ -27,8 +27,6 @@
     <string name="learn_more">Scopri di più</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Annuncio</string>
-    <string name="search_tutorials_hint">Cerca tutorial</string>
-    <string name="search_tutorials_content_description">Cerca tutorial</string>
     <string name="search_lessons_hint">Cerca lezioni</string>
     <string name="search_lessons_content_description">Cerca lezioni</string>
 
@@ -333,7 +331,6 @@
     <string name="app_version">Versione %1$s (%2$d)</string>
     <string name="music">Musica</string>
     <string name="made_in">Fatto con ❤ in Romania.</string>
-    <string name="alert_dialog_close">Chiudi?</string>
     <string name="alert_dialog_require_restart">Riavvio richiesto.</string>
     <string name="question_1">Cos\'è Android Studio Tutorials: Java Edition?</string>
     <string name="question_2">Come posso scaricare Android Studio Tutorials: Java Edition?</string>
@@ -360,10 +357,8 @@
     <string name="summary_preference_permissions_billing">Consente all\'app di utilizzare la libreria Google Play Billing per gestire acquisti in-app e donazioni.</string>
     <string name="summary_preference_permissions_check_license">Consente all\'app di verificare la conformità all\'accordo di licenza e di applicarne i termini per proteggere la proprietà intellettuale.</string>
     <string name="next">Prossimo</string>
-    <string name="finish">Fine</string>
     <string name="back">Indietro</string>
     <string name="bottom_navigation_labels">Etichette di navigazione inferiore</string>
-    <string name="data_dialog_message">Raccogliamo dati per migliorare la tua esperienza.</string>
     <string name="summary_preference_permissions_access_notification_policy">Consente all\'app di accedere e modificare la politica di notifiche del dispositivo, controllando come e quando le notifiche vengono mostrate all\'utente e fornendo funzionalità di gestione personalizzata delle notifiche.</string>
     <string name="summary_preference_permissions_foreground_service">Consente all\'app di creare e utilizzare servizi che vengono eseguiti in primo piano, dando loro priorità rispetto ad altri processi in background e migliorando prestazioni e affidabilità.</string>
     <string name="summary_preference_settings_language">Imposta la lingua dell\'applicazione.</string>
@@ -408,7 +403,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">Scopri come utilizzare le notifiche in scatola nella tua app Android con questa lezione. Scopri come creare un canale e un costruttore di notifica e come impostare lo stile delle notifiche su uno stile di posta con più righe di testo e un testo di riepilogo. Esplora le diverse opzioni disponibili per la personalizzazione delle notifiche in scatola.</string>
     <string name="summary_preference_android_studio_bottom_navigation">Una barra di navigazione in basso consente di passare rapidamente da una visione di livello superiore nella tua app.</string>
     <string name="summary_preference_android_studio_navigation_drawer">Un cassetto di navigazione scorre da un lato e visualizza le principali opzioni di navigazione dell\'app.</string>
-    <string name="summary_alert_dialog_close">Sei sicuro di voler uscire?</string>
     <string name="summary_alert_dialog_message">Questo sarà il messaggio che vedrai sullo schermo.</string>
     <string name="summary_alert_dialog_require_restart">Perché abbia effetto, riavvia l\'app.</string>
     <string name="summary_sdk">Il Kit di Sviluppo Software Android (SDK) è una raccolta di strumenti che consente agli sviluppatori di creare app Android. Include un set di librerie, un debugger, un emulatore di dispositivi e la documentazione. Lo SDK include anche una libreria API e una serie di documentazione API. I pacchetti che scarichi contengono librerie, che ti aiutano a creare la tua app.\n\nQuesta è una panoramica di tutte le versioni di Android e dei loro identificatori corrispondenti per gli sviluppatori Android. Chiunque è invitato ad aprire un issue o una pull request. Buon sviluppo.</string>
@@ -433,7 +427,6 @@
     <string name="snack_rating">Grazie per la tua valutazione di %1$.1f stelle. ❤️</string>
     <string name="snack_image_button">Pulsante immagine cliccato.</string>
     <string name="toast_this_is_a_toast">Questo è un toast.</string>
-    <string name="tooltip_show_code">Mostra sintassi del codice</string>
     <string name="tooltip_show_java_code_snippet">Mostra frammento di codice Java</string>
     <string name="tooltip_open_me">Aprimi 🌐</string>
     <string name="hint_type">Digita qui</string>
@@ -454,7 +447,6 @@
     <string name="error_loading_layout">Errore durante il caricamento del layout</string>
     <string name="error_loading_code">Errore durante il caricamento del codice</string>
     <string name="snack_general_error">Si è verificato un errore durante la verifica degli aggiornamenti</string>
-    <string name="consent_dialog_title">Consenso per dati e annunci</string>
     <string name="analytics_storage">Archiviazione analitica</string>
     <string name="ad_storage">Archiviazione degli annunci</string>
     <string name="ad_user_data">Dati utente per annunci</string>

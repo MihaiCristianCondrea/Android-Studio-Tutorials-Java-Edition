@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">이미지 뷰 미리보기</string>
     <string name="app_short_description">Android Studio에서 간단한 Java 앱을 만드는 방법을 배워보세요. 📱</string>
     <string name="notification_update_title">새로운 업데이트가 있습니다.</string>
@@ -22,8 +22,6 @@
     <string name="learn_more">자세히 알아보기</string>
     <string name="play_store">Play 스토어</string>
     <string name="ad">광고</string>
-    <string name="search_tutorials_hint">튜토리얼 검색</string>
-    <string name="search_tutorials_content_description">튜토리얼 검색</string>
     <string name="search_lessons_hint">강의 검색</string>
     <string name="search_lessons_content_description">강의 검색</string>
     <string name="android_studio">Android Studio</string>
@@ -286,7 +284,6 @@
     <string name="app_version">버전 %1$s (%2$d)</string>
     <string name="music">음악</string>
     <string name="made_in">루마니아에서 ❤를 담아 만들었습니다.</string>
-    <string name="alert_dialog_close">닫으시겠습니까?</string>
     <string name="alert_dialog_require_restart">재시작이 필요합니다.</string>
     <string name="question_1">Android Studio 튜토리얼: Java 에디션이란 무엇인가요?</string>
     <string name="question_2">Android Studio 튜토리얼: Java 에디션을 어떻게 다운로드할 수 있나요?</string>
@@ -313,10 +310,8 @@
     <string name="summary_preference_permissions_billing">앱이 Google Play 결제 라이브러리를 사용하여 인앱 구매 및 기부를 처리하도록 허용합니다.</string>
     <string name="summary_preference_permissions_check_license">앱이 라이선스 계약 준수 여부를 확인하고 지적 재산권을 보호하기 위해 라이선스 조건을 시행하도록 허용합니다.</string>
     <string name="next">다음</string>
-    <string name="finish">마치다</string>
     <string name="back">뒤쪽에</string>
     <string name="bottom_navigation_labels">하단 탐색 레이블</string>
-    <string name="data_dialog_message">우리는 당신의 경험을 향상시키기 위해 데이터를 수집합니다.</string>
     <string name="summary_preference_permissions_access_notification_policy">앱이 기기의 알림 정책에 액세스하고 수정하여 사용자에게 알림이 표시되는 방식과 시기를 제어하고 맞춤형 알림 관리 기능을 제공하도록 허용합니다.</string>
     <string name="summary_preference_permissions_foreground_service">앱이 포그라운드에서 실행되는 서비스를 생성하고 사용하여 다른 백그라운드 프로세스보다 우선순위를 부여하고 성능과 안정성을 향상시키도록 허용합니다.</string>
     <string name="summary_preference_settings_language">애플리케이션 언어를 설정합니다.</string>
@@ -360,7 +355,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">이 강의를 통해 Android 앱에서 받은편지함 스타일 알림을 사용하는 방법을 배워보세요. 알림 채널과 빌더를 만드는 방법과 여러 줄의 텍스트와 요약 텍스트가 있는 InboxStyle로 알림 스타일을 설정하는 방법을 알아보세요. 받은편지함 스타일 알림을 사용자 정의하는 데 사용할 수 있는 다양한 옵션을 탐색하세요.</string>
     <string name="summary_preference_android_studio_bottom_navigation">하단 내비게이션 바를 사용하면 앱의 최상위 화면을 빠르게 전환할 수 있습니다.</string>
     <string name="summary_preference_android_studio_navigation_drawer">내비게이션 드로어는 옆에서 슬라이드되며 앱의 주요 탐색 옵션을 표시합니다.</string>
-    <string name="summary_alert_dialog_close">종료하시겠습니까?</string>
     <string name="summary_alert_dialog_message">이것이 화면에 표시될 메시지입니다.</string>
     <string name="summary_alert_dialog_require_restart">적용하려면 앱을 다시 시작해주세요.</string>
     <string name="summary_sdk">Android 소프트웨어 개발 키트(SDK)는 개발자가 Android 앱을 만들 수 있도록 하는 도구 모음입니다. 여기에는 라이브러리 세트, 디버거, 핸드셋 에뮬레이터 및 설명서가 포함됩니다. SDK에는 API 라이브러리 및 API 설명서 세트도 포함되어 있습니다. 다운로드하는 패키지에는 앱을 만드는 데 도움이 되는 라이브러리가 있습니다.\n\n이것은 모든 Android 버전과 Android 개발자를 위한 해당 식별자에 대한 개요입니다. 누구나 이슈나 풀 리퀘스트를 열 수 있습니다. 즐거운 개발 되세요.</string>
@@ -383,7 +377,6 @@
     <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">이미지 버튼이 클릭되었습니다.</string>
     <string name="toast_this_is_a_toast">이것은 토스트 메시지입니다.</string>
-    <string name="tooltip_show_code">코드 구문 보기</string>
     <string name="tooltip_show_java_code_snippet">자바 코드 스 니펫을 보여줍니다</string>
     <string name="tooltip_open_me">열기 🌐</string>
     <string name="hint_type">Type here</string>
@@ -405,7 +398,6 @@
     <string name="error_loading_layout">레이아웃 로딩 오류</string>
     <string name="error_loading_code">코드 로딩 오류</string>
     <string name="snack_general_error">업데이트 확인 중 오류가 발생했습니다</string>
-    <string name="consent_dialog_title">데이터 및 광고 동의</string>
     <string name="analytics_storage">분석 데이터 저장</string>
     <string name="ad_storage">광고 데이터 저장</string>
     <string name="ad_user_data">광고 사용자 데이터</string>

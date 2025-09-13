@@ -9,6 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.core.content.res.ResourcesCompat;
+
+import com.google.android.material.radiobutton.MaterialRadioButton;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentOnboardingFontBinding;
@@ -17,6 +20,8 @@ public class FontFragment extends Fragment {
 
     private FragmentOnboardingFontBinding binding;
     private OnboardingViewModel viewModel;
+    private MaterialRadioButton[] radioButtons;
+    private View[] optionCards; // FIXME: Field can be converted to a local variable
 
     @Nullable
     @Override
@@ -29,26 +34,70 @@ public class FontFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(requireActivity()).get(OnboardingViewModel.class);
+
+        radioButtons = new MaterialRadioButton[]{
+                binding.optionAudiowide.radioButton,
+                binding.optionFiraCode.radioButton,
+                binding.optionJetbrainsMono.radioButton,
+                binding.optionNotoSansMono.radioButton,
+                binding.optionPoppins.radioButton,
+                binding.optionRobotoMono.radioButton,
+                binding.optionGoogleSansCode.radioButton
+        };
+
+        optionCards = new View[]{
+                binding.cardAudiowide,
+                binding.cardFiraCode,
+                binding.cardJetbrainsMono,
+                binding.cardNotoSansMono,
+                binding.cardPoppins,
+                binding.cardRobotoMono,
+                binding.cardGoogleSansCode
+        };
+
+        binding.optionAudiowide.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_audiowide));
+        binding.optionFiraCode.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_fira_code));
+        binding.optionJetbrainsMono.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_jetbrains_mono));
+        binding.optionNotoSansMono.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_noto_sans_mono));
+        binding.optionPoppins.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_poppins));
+        binding.optionRobotoMono.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_roboto_mono));
+        binding.optionGoogleSansCode.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_google_sans_code));
+
+        for (int i = 0; i < radioButtons.length; i++) {
+            int index = i;
+            radioButtons[i].setId(View.generateViewId());
+            optionCards[i].setOnClickListener(v -> selectOption(index));
+            radioButtons[i].setOnClickListener(v -> selectOption(index));
+        }
+
+        String current = viewModel.getMonospaceFont();
+        String[] values = getResources().getStringArray(R.array.code_font_values);
+        int index = 6;
+        for (int i = 0; i < values.length; i++) {
+            if (current.equals(values[i])) {
+                index = i;
+                break;
+            }
+        }
+        selectOption(index);
+    }
+
+    private void selectOption(int index) {
+        for (int i = 0; i < radioButtons.length; i++) {
+            radioButtons[i].setChecked(i == index);
+        }
     }
 
     public void saveSelection() {
-        int checkedId = binding.fontGroup.getCheckedRadioButtonId();
         String[] values = getResources().getStringArray(R.array.code_font_values);
-        String value = values[6];
-        if (checkedId == R.id.radio_font_audiowide) {
-            value = values[0];
-        } else if (checkedId == R.id.radio_font_fira_code) {
-            value = values[1];
-        } else if (checkedId == R.id.radio_font_jetbrains_mono) {
-            value = values[2];
-        } else if (checkedId == R.id.radio_font_noto_sans_mono) {
-            value = values[3];
-        } else if (checkedId == R.id.radio_font_poppins) {
-            value = values[4];
-        } else if (checkedId == R.id.radio_font_roboto_mono) {
-            value = values[5];
+        int index = 6;
+        for (int i = 0; i < radioButtons.length; i++) {
+            if (radioButtons[i].isChecked()) {
+                index = i;
+                break;
+            }
         }
-        viewModel.setMonospaceFont(value);
+        viewModel.setMonospaceFont(values[index]);
     }
 
     @Override

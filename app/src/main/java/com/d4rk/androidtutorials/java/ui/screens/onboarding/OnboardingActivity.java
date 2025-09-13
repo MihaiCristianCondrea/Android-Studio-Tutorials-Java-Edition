@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.util.TypedValue;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -65,6 +66,10 @@ public class OnboardingActivity extends AppCompatActivity {
                         ((ThemeFragment) fragment).saveSelection();
                     } else if (fragment instanceof StartPageFragment) {
                         ((StartPageFragment) fragment).saveSelection();
+                    } else if (fragment instanceof FontFragment) {
+                        ((FontFragment) fragment).saveSelection();
+                    } else if (fragment instanceof BottomLabelsFragment) {
+                        ((BottomLabelsFragment) fragment).saveSelection();
                     } else if (fragment instanceof DataFragment) {
                         ((DataFragment) fragment).saveSelection();
                     }
@@ -77,10 +82,11 @@ public class OnboardingActivity extends AppCompatActivity {
         new TabLayoutMediator(binding.tabIndicator, binding.viewPager, (tab, position) -> {
             ImageView dot = new ImageView(this);
             dot.setImageResource(R.drawable.onboarding_dot_unselected);
+            int margin = dpToPx(2);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT);
-            params.setMargins(8,0,8,0);
+            params.setMargins(margin, 0, margin, 0);
             dot.setLayoutParams(params);
             tab.setCustomView(dot);
         }).attach();
@@ -130,6 +136,10 @@ public class OnboardingActivity extends AppCompatActivity {
                 ((ThemeFragment) fragment).saveSelection();
             } else if (fragment instanceof StartPageFragment) {
                 ((StartPageFragment) fragment).saveSelection();
+            } else if (fragment instanceof FontFragment) {
+                ((FontFragment) fragment).saveSelection();
+            } else if (fragment instanceof BottomLabelsFragment) {
+                ((BottomLabelsFragment) fragment).saveSelection();
             } else if (fragment instanceof DataFragment) {
                 ((DataFragment) fragment).saveSelection();
             }
@@ -163,6 +173,11 @@ public class OnboardingActivity extends AppCompatActivity {
         }
     }
 
+    private int dpToPx(int dp) { //  FIXME: Value of parameter 'dp' is always '2'
+        return Math.round(TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics()));
+    }
+
     private static class OnboardingPagerAdapter extends FragmentStateAdapter {
 
         OnboardingPagerAdapter(@NonNull AppCompatActivity activity) {
@@ -175,14 +190,16 @@ public class OnboardingActivity extends AppCompatActivity {
             return switch (position) {
                 case 0 -> new ThemeFragment();
                 case 1 -> new StartPageFragment();
-                case 2 -> new DataFragment();
+                case 2 -> new FontFragment();
+                case 3 -> new BottomLabelsFragment();
+                case 4 -> new DataFragment();
                 default -> new DoneFragment();
             };
         }
 
         @Override
         public int getItemCount() {
-            return 4;
+            return 6;
         }
     }
 }

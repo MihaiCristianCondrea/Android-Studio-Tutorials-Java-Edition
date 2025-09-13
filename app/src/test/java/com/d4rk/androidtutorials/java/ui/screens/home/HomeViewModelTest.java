@@ -60,7 +60,7 @@ public class HomeViewModelTest {
         assertTrue(state.promotedApps().isEmpty());
     }
 
-    record FakeHomeRepository(String dailyTip, List<PromotedApp> apps) implements HomeRepository {
+    record FakeHomeRepository(String dailyTip, List<PromotedApp> apps) implements HomeRepository { // FIXME: Value for parameter 'dailyTip' is always "tip"
 
         @Override
             public String getPlayStoreUrl() {

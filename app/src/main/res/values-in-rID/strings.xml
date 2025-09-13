@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Pratinjau tampilan gambar</string>
     <string name="app_short_description">Pelajari cara membuat aplikasi sederhana di Android Studio. 📱</string>
     <string name="notification_update_title">Pembaruan baru tersedia.</string>
@@ -25,8 +25,6 @@
     <string name="learn_more">Pelajari lebih lanjut</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Iklan</string>
-    <string name="search_tutorials_hint">Cari tutorial</string>
-    <string name="search_tutorials_content_description">Cari tutorial</string>
     <string name="search_lessons_hint">Cari pelajaran</string>
     <string name="search_lessons_content_description">Cari pelajaran</string>
 
@@ -312,7 +310,6 @@
     <string name="app_version">Versi %1$s (%2$d)</string>
     <string name="music">Musik</string>
     <string name="made_in">Dibuat dengan ❤ di Rumania.</string>
-    <string name="alert_dialog_close">Tutup?</string>
     <string name="alert_dialog_require_restart">Membutuhkan mulai ulang.</string>
     <string name="question_1">Apa itu Android Studio Tutorials: Edisi Java?</string>
     <string name="question_2">Bagaimana cara mengunduh Android Studio Tutorials: Edisi Java?</string>
@@ -339,10 +336,8 @@
     <string name="summary_preference_permissions_billing">Memungkinkan aplikasi untuk menggunakan Google Play Billing Library untuk menangani pembelian dalam aplikasi dan donasi.</string>
     <string name="summary_preference_permissions_check_license">Memungkinkan aplikasi untuk memverifikasi kepatuhannya terhadap perjanjian lisensi dan menegakkan ketentuan lisensi untuk melindungi kekayaan intelektual.</string>
     <string name="next">Berikutnya</string>
-    <string name="finish">Menyelesaikan</string>
     <string name="back">Kembali</string>
     <string name="bottom_navigation_labels">Label Navigasi Bawah</string>
-    <string name="data_dialog_message">Kami mengumpulkan data untuk meningkatkan pengalaman Anda.</string>
     <string name="summary_preference_permissions_access_notification_policy">Memungkinkan aplikasi untuk mengakses dan memodifikasi kebijakan notifikasi perangkat, mengontrol bagaimana dan kapan notifikasi ditampilkan kepada pengguna dan menyediakan fitur manajemen notifikasi kustom.</string>
     <string name="summary_preference_permissions_foreground_service">Memungkinkan aplikasi untuk membuat dan menggunakan layanan yang berjalan di latar depan, memberi mereka prioritas di atas proses latar belakang lainnya dan meningkatkan kinerja serta keandalan.</string>
     <string name="summary_preference_settings_language">Atur bahasa aplikasi.</string>
@@ -386,7 +381,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">Pelajari cara menggunakan notifikasi gaya kotak masuk di aplikasi Android Anda dengan pelajaran ini. Temukan cara membuat saluran notifikasi dan builder, dan cara mengatur gaya notifikasi Anda ke InboxStyle dengan beberapa baris teks dan teks ringkasan. Jelajahi berbagai opsi yang tersedia untuk menyesuaikan notifikasi gaya kotak masuk Anda.</string>
     <string name="summary_preference_android_studio_bottom_navigation">Bilah navigasi bawah memungkinkan Anda dengan cepat beralih antar tampilan tingkat atas di aplikasi Anda.</string>
     <string name="summary_preference_android_studio_navigation_drawer">Laci navigasi meluncur dari samping dan menampilkan opsi navigasi utama aplikasi.</string>
-    <string name="summary_alert_dialog_close">Apakah Anda yakin ingin keluar?</string>
     <string name="summary_alert_dialog_message">Ini akan menjadi pesan yang akan Anda lihat di layar.</string>
     <string name="summary_alert_dialog_require_restart">Agar efektif, harap mulai ulang aplikasi.</string>
     <string name="summary_sdk">Android Software Development Kit (SDK) adalah kumpulan alat yang memungkinkan pengembang membuat aplikasi Android. Ini mencakup seperangkat pustaka, debugger, emulator handset, dan dokumentasi. SDK juga mencakup pustaka API dan seperangkat dokumentasi API. Paket yang Anda unduh memiliki pustaka, yang membantu Anda dalam membuat aplikasi Anda.\n\nIni adalah ikhtisar semua versi Android dan pengenal yang sesuai untuk pengembang Android. Siapa pun dipersilakan untuk membuka masalah atau pull request. Selamat mengembangkan.</string>
@@ -409,7 +403,6 @@
     <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Tombol gambar diklik.</string>
     <string name="toast_this_is_a_toast">Ini adalah toast.</string>
-    <string name="tooltip_show_code">Tampilkan sintaks kode</string>
     <string name="tooltip_show_java_code_snippet">Tampilkan Cuplikan Kode Java</string>
     <string name="tooltip_open_me">Buka saya 🌐</string>
     <string name="hint_type">Type here</string>
@@ -433,7 +426,6 @@
     <string name="error_loading_layout">Kesalahan memuat tata letak</string>
     <string name="error_loading_code">Kesalahan memuat kode</string>
     <string name="snack_general_error">Terjadi kesalahan saat memeriksa pembaruan</string>
-    <string name="consent_dialog_title">Konsen Data &amp; Ads</string>
     <string name="analytics_storage">Penyimpanan analisis</string>
     <string name="ad_storage">penyimpanan Ad</string>
     <string name="ad_user_data">Data pengguna Ad</string>

@@ -22,8 +22,6 @@
     <string name="learn_more">اعرف المزيد</string>
     <string name="play_store">متجر Play</string>
     <string name="ad">إعلان</string>
-    <string name="search_tutorials_hint">ابحث عن الدروس</string>
-    <string name="search_tutorials_content_description">ابحث عن الدروس</string>
     <string name="search_lessons_hint">ابحث عن الدروس</string>
     <string name="search_lessons_content_description">ابحث عن الدروس</string>
     <string name="android_studio">أندرويد ستوديو</string>
@@ -286,7 +284,6 @@
     <string name="app_version">الإصدار %1$s (%2$d)</string>
     <string name="music">موسيقى</string>
     <string name="made_in">صُنع بـ ❤ في رومانيا.</string>
-    <string name="alert_dialog_close">هل تريد الإغلاق؟</string>
     <string name="alert_dialog_require_restart">يتطلب إعادة التشغيل.</string>
     <string name="question_1">ما هو تطبيق Android Studio Tutorials: Java Edition؟</string>
     <string name="question_2">إزاي أقدر أحمل تطبيق Android Studio Tutorials: Java Edition؟</string>
@@ -313,10 +310,8 @@
     <string name="summary_preference_permissions_billing">يسمح للتطبيق باستخدام مكتبة Google Play Billing للتعامل مع عمليات الشراء داخل التطبيق والتبرعات.</string>
     <string name="summary_preference_permissions_check_license">يسمح للتطبيق بالتحقق من امتثاله لاتفاقية الترخيص وفرض شروط الترخيص لحماية الملكية الفكرية.</string>
     <string name="next">التالي</string>
-    <string name="finish">ينهي</string>
     <string name="back">خلف</string>
     <string name="bottom_navigation_labels">تسميات الملاحة السفلية</string>
-    <string name="data_dialog_message">نجمع البيانات لتحسين تجربتك.</string>
     <string name="summary_preference_permissions_access_notification_policy">يسمح للتطبيق بالوصول إلى سياسة الإشعارات بالجهاز وتعديلها، والتحكم في كيفية ووقت عرض الإشعارات للمستخدم وتوفير ميزات إدارة إشعارات مخصصة.</string>
     <string name="summary_preference_permissions_foreground_service">يسمح للتطبيق بإنشاء واستخدام خدمات تعمل في الواجهة، مما يمنحها الأولوية على العمليات الأخرى في الخلفية ويحسن الأداء والموثوقية.</string>
     <string name="summary_preference_settings_language">ضبط لغة التطبيق.</string>
@@ -360,7 +355,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">اتعلم كيفية استخدام إشعارات نمط البريد الوارد في تطبيق أندرويد بتاعك مع هذا الدرس. اكتشف كيفية إنشاء قناة إشعارات ومنشئ، وكيفية ضبط نمط إشعاراتك إلى InboxStyle مع سطور نصية متعددة ونص ملخص. استكشف الخيارات المختلفة المتاحة لتخصيص إشعارات نمط البريد الوارد.</string>
     <string name="summary_preference_android_studio_bottom_navigation">تتيح لك شريط التنقل السفلي التنقل بسرعة بين العروض الرئيسية في التطبيق.</string>
     <string name="summary_preference_android_studio_navigation_drawer">تنزلق قائمة التنقل من الجانب وتعرض خيارات التنقل الرئيسية للتطبيق.</string>
-    <string name="summary_alert_dialog_close">متأكد إنك عايز تخرج؟</string>
     <string name="summary_alert_dialog_message">دي هتبقى الرسالة اللي هتشوفها على الشاشة.</string>
     <string name="summary_alert_dialog_require_restart">عشان التغيير يتنفذ، من فضلك أعد تشغيل التطبيق.</string>
     <string name="summary_sdk">حزمة أدوات تطوير البرمجيات لأندرويد (SDK) هي مجموعة من الأدوات التي تسمح للمطورين بإنشاء تطبيقات أندرويد. تشمل مجموعة من المكتبات، ومصحح أخطاء، ومحاكي هاتف، ووثائق. تتضمن الحزمة أيضًا مكتبة API ومجموعة من وثائق API. الحزم التي تقوم بتنزيلها تحتوي على مكتبات تساعدك في إنشاء تطبيقك.\n\nهذه نظرة عامة على جميع إصدارات أندرويد والمعرفات المقابلة لها لمطوري أندرويد. نرحب بأي شخص لفتح مشكلة أو طلب سحب. تطوير سعيد.</string>
@@ -385,7 +379,6 @@
     <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">تم النقر على زر الصورة.</string>
     <string name="toast_this_is_a_toast">دي رسالة سريعة.</string>
-    <string name="tooltip_show_code">عرض صيغة الكود</string>
     <string name="tooltip_show_java_code_snippet">عرض مقتطفات رمز Java</string>
     <string name="tooltip_open_me">افتحني 🌐</string>
     <string name="hint_type">Type here</string>
@@ -407,7 +400,6 @@
     <string name="error_loading_layout">خطأ في تحميل التخطيط</string>
     <string name="error_loading_code">خطأ في تحميل الكود</string>
     <string name="snack_general_error">حدث خطأ أثناء التحقق من وجود تحديثات</string>
-    <string name="consent_dialog_title">الموافقة على البيانات والإعلانات</string>
     <string name="analytics_storage">تخزين التحليلات</string>
     <string name="ad_storage">تخزين الإعلانات</string>
     <string name="ad_user_data">بيانات المستخدم الإعلانية</string>

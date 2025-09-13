@@ -1,7 +1,6 @@
 package com.d4rk.androidtutorials.java.di;
 
 import android.app.Application;
-import android.content.res.AssetManager;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;

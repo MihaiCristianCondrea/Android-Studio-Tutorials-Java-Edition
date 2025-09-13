@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Görüntü görünümü önizlemesi</string>
     <string name="app_short_description">Android Studio\'da basit Java uygulamaları yapmayı öğrenin. 📱</string>
     <string name="notification_update_title">Yeni bir güncelleme mevcut.</string>
@@ -22,8 +22,6 @@
     <string name="learn_more">Daha fazla bilgi edinin</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Reklam</string>
-    <string name="search_tutorials_hint">Eğitimleri ara</string>
-    <string name="search_tutorials_content_description">Eğitimleri ara</string>
     <string name="search_lessons_hint">Dersleri ara</string>
     <string name="search_lessons_content_description">Dersleri ara</string>
     <string name="android_studio">Android Studio</string>
@@ -286,7 +284,6 @@
     <string name="app_version">Sürüm %1$s (%2$d)</string>
     <string name="music">Müzik</string>
     <string name="made_in">Romanya\'da ❤ ile yapıldı.</string>
-    <string name="alert_dialog_close">Kapatılsın mı?</string>
     <string name="alert_dialog_require_restart">Yeniden başlatma gerekli.</string>
     <string name="question_1">Android Studio Eğitimleri: Java Sürümü nedir?</string>
     <string name="question_2">Android Studio Eğitimleri: Java Sürümü\'nü nasıl indirebilirim?</string>
@@ -313,10 +310,8 @@
     <string name="summary_preference_permissions_billing">Uygulamanın, uygulama içi satın alma ve bağışları yönetmek için Google Play Faturalandırma Kitaplığı\'nı kullanmasına izin verir.</string>
     <string name="summary_preference_permissions_check_license">Uygulamanın, lisans sözleşmesine uygunluğunu doğrulamasına ve fikri mülkiyeti korumak için lisans koşullarını uygulamasına izin verir.</string>
     <string name="next">Sonraki</string>
-    <string name="finish">Sona ermek</string>
     <string name="back">Geri</string>
     <string name="bottom_navigation_labels">Alt Navigasyon Etiketleri</string>
-    <string name="data_dialog_message">Deneyiminizi geliştirmek için veri topluyoruz.</string>
     <string name="summary_preference_permissions_access_notification_policy">Uygulamanın, cihazın bildirim politikasına erişmesine ve değiştirmesine, bildirimlerin kullanıcıya nasıl ve ne zaman gösterileceğini kontrol etmesine ve özel bildirim yönetimi özellikleri sunmasına olanak tanır.</string>
     <string name="summary_preference_permissions_foreground_service">Uygulamanın, ön planda çalışan hizmetler oluşturmasına ve kullanmasına, onlara diğer arka plan işlemlerine göre öncelik vermesine ve performansı ve güvenilirliği artırmasına olanak tanır.</string>
     <string name="summary_preference_settings_language">Uygulama dilini ayarla.</string>
@@ -360,7 +355,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">Bu dersle Android uygulamanızda gelen kutusu stili bildirimleri nasıl kullanacağınızı öğrenin. Bir bildirim kanalı ve oluşturucu nasıl oluşturulacağını ve bildirimlerinizin stilini birden çok metin satırı ve bir özet metni içeren bir InboxStyle olarak nasıl ayarlayacağınızı keşfedin. Gelen kutusu stili bildirimlerinizi özelleştirmek için mevcut farklı seçenekleri keşfedin.</string>
     <string name="summary_preference_android_studio_bottom_navigation">Bir alt gezinme çubuğu, uygulamanızdaki üst düzey görünümler arasında hızlıca geçiş yapmanızı sağlar.</string>
     <string name="summary_preference_android_studio_navigation_drawer">Gezinme çekmecesi kenardan kayarak gelir ve uygulamanın ana gezinme seçeneklerini gösterir.</string>
-    <string name="summary_alert_dialog_close">Çıkmak istediğinizden emin misiniz?</string>
     <string name="summary_alert_dialog_message">Bu, ekranda göreceğiniz mesaj olacak.</string>
     <string name="summary_alert_dialog_require_restart">Etkili olması için lütfen uygulamayı yeniden başlatın.</string>
     <string name="summary_sdk">Android Yazılım Geliştirme Kiti (SDK), geliştiricilerin Android uygulamaları oluşturmasına olanak tanıyan bir araçlar koleksiyonudur. Bir dizi kütüphane, bir hata ayıklayıcı, bir ahize emülatörü ve belgeler içerir. SDK ayrıca bir API kütüphanesi ve bir dizi API belgesi içerir. İndirdiğiniz paketler, uygulamanızı oluşturmanıza yardımcı olan kütüphanelere sahiptir.\n\nBu, tüm Android sürümlerinin ve Android geliştiricileri için karşılık gelen tanımlayıcılarının bir özetidir. Herkes bir sorun veya çekme isteği açabilir. Mutlu geliştirmeler.</string>
@@ -383,7 +377,6 @@
     <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Resim butonuna tıklandı.</string>
     <string name="toast_this_is_a_toast">Bu bir toast.</string>
-    <string name="tooltip_show_code">Kod sözdizimini göster</string>
     <string name="tooltip_show_java_code_snippet">Java Kodu Snippet\'i Göster</string>
     <string name="tooltip_open_me">Beni aç 🌐</string>
     <string name="hint_type">Type here</string>
@@ -405,7 +398,6 @@
     <string name="error_loading_layout">Yerleşim yüklenirken hata oluştu</string>
     <string name="error_loading_code">Kod yüklenirken hata oluştu</string>
     <string name="snack_general_error">Güncellemeler kontrol edilirken bir hata oluştu</string>
-    <string name="consent_dialog_title">Veri ve Reklam İzni</string>
     <string name="analytics_storage">Analitik depolama</string>
     <string name="ad_storage">Reklam depolama</string>
     <string name="ad_user_data">Reklam kullanıcı verileri</string>

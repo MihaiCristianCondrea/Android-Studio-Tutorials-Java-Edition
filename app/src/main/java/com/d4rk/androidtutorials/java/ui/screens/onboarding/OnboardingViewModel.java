@@ -66,8 +66,18 @@ public class OnboardingViewModel extends ViewModel {
         prefs.edit().putString(context.getString(R.string.key_bottom_navigation_bar_labels), value).apply();
     }
 
+    public String getBottomNavLabels() {
+        String[] values = context.getResources().getStringArray(R.array.preference_bottom_navigation_bar_labels_values);
+        return prefs.getString(context.getString(R.string.key_bottom_navigation_bar_labels), values[0]);
+    }
+
     public void setMonospaceFont(String value) {
         prefs.edit().putString(context.getString(R.string.key_monospace_font), value).apply();
+    }
+
+    public String getMonospaceFont() {
+        String[] values = context.getResources().getStringArray(R.array.code_font_values);
+        return prefs.getString(context.getString(R.string.key_monospace_font), values[0]);
     }
 
     public void setCrashlyticsEnabled(boolean enabled) {

@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- FIXME: `activity_shortcuts_navigation_and_searching.xml` has more than 80 views, bad for performance-->
+
     <me.zhanghai.android.fastscroll.FastScrollScrollView
         android:id="@+id/scroll_view"
         android:layout_width="0dp"

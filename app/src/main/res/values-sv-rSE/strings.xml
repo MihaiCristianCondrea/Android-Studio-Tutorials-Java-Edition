@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Förhandsgranskning av bildvy</string>
     <string name="app_short_description">Lär dig hur man skapar enkla Java-appar i Android Studio. 📱</string>
     <string name="notification_update_title">En ny uppdatering finns tillgänglig.</string>
@@ -22,8 +22,6 @@
     <string name="learn_more">Läs mer</string>
     <string name="play_store">Play Butik</string>
     <string name="ad">Annons</string>
-    <string name="search_tutorials_hint">Sök handledningar</string>
-    <string name="search_tutorials_content_description">Sök handledningar</string>
     <string name="search_lessons_hint">Sök lektioner</string>
     <string name="search_lessons_content_description">Sök lektioner</string>
     <string name="android_studio">Android Studio</string>
@@ -286,7 +284,6 @@
     <string name="app_version">Version %1$s (%2$d)</string>
     <string name="music">Musik</string>
     <string name="made_in">Gjord med ❤ i Rumänien.</string>
-    <string name="alert_dialog_close">Stänga?</string>
     <string name="alert_dialog_require_restart">Kräver omstart.</string>
     <string name="question_1">Vad är Android Studio Tutorials: Java Edition?</string>
     <string name="question_2">Hur kan jag ladda ner Android Studio Tutorials: Java Edition?</string>
@@ -313,10 +310,8 @@
     <string name="summary_preference_permissions_billing">Tillåter appen att använda Google Play Billing Library för att hantera köp i appen och donationer.</string>
     <string name="summary_preference_permissions_check_license">Tillåter appen att verifiera sin efterlevnad av licensavtalet och upprätthålla licensvillkor för att skydda immateriell egendom.</string>
     <string name="next">Nästa</string>
-    <string name="finish">Avsluta</string>
     <string name="back">Tillbaka</string>
     <string name="bottom_navigation_labels">Navigeringsetiketter</string>
-    <string name="data_dialog_message">Vi samlar in data för att förbättra din upplevelse.</string>
     <string name="summary_preference_permissions_access_notification_policy">Tillåter appen att komma åt och ändra enhetens notispolicy, styra hur och när notiser visas för användaren och tillhandahålla anpassade funktioner för notishantering.</string>
     <string name="summary_preference_permissions_foreground_service">Tillåter appen att skapa och använda tjänster som körs i förgrunden, vilket ger dem prioritet över andra bakgrundsprocesser och förbättrar prestanda och tillförlitlighet.</string>
     <string name="summary_preference_settings_language">Ställ in applikationsspråk.</string>
@@ -360,7 +355,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">Lär dig hur du använder notiser i inkorgsstil i din Android-app med den här lektionen. Upptäck hur du skapar en notiskanal och en byggare, och hur du ställer in stilen på dina notiser till en InboxStyle med flera textrader och en sammanfattningstext. Utforska de olika alternativen som finns tillgängliga för att anpassa dina notiser i inkorgsstil.</string>
     <string name="summary_preference_android_studio_bottom_navigation">En nedre navigeringsrad låter dig snabbt växla mellan huvudvyerna i appen.</string>
     <string name="summary_preference_android_studio_navigation_drawer">En navigeringsmeny glider in från sidan och visar appens viktigaste navigeringsalternativ.</string>
-    <string name="summary_alert_dialog_close">Är du säker på att du vill avsluta?</string>
     <string name="summary_alert_dialog_message">Detta kommer att vara meddelandet du ser på skärmen.</string>
     <string name="summary_alert_dialog_require_restart">För att träda i kraft, starta om appen.</string>
     <string name="summary_sdk">Android Software Development Kit (SDK) är en samling verktyg som låter utvecklare skapa Android-appar. Det inkluderar en uppsättning bibliotek, en felsökare, en enhetsemulator och dokumentation. SDK:t inkluderar också ett API-bibliotek och en uppsättning API-dokumentation. Paketen du laddar ner har bibliotek, vilket hjälper dig att skapa din app.\n\nDetta är en översikt över alla Android-versioner och deras motsvarande identifierare för Android-utvecklare. Vem som helst är välkommen att öppna ett ärende eller en pull-begäran. Lycka till med utvecklingen.</string>
@@ -383,7 +377,6 @@
     <string name="snack_rating">Tack för ditt betyg på %1$.1f stjärnor. ❤️</string>
     <string name="snack_image_button">Bildknapp klickad.</string>
     <string name="toast_this_is_a_toast">Detta är en toast.</string>
-    <string name="tooltip_show_code">Visa kodsyntax</string>
     <string name="tooltip_show_java_code_snippet">Visa Java -kodavsnitt</string>
     <string name="tooltip_open_me">Öppna mig 🌐</string>
     <string name="hint_type">Skriv här</string>
@@ -405,7 +398,6 @@
     <string name="error_loading_layout">Fel vid laddning av layout</string>
     <string name="error_loading_code">Fel vid laddning av kod</string>
     <string name="snack_general_error">Ett fel uppstod vid sökning efter uppdateringar</string>
-    <string name="consent_dialog_title">Samtycke till data &amp; annonser</string>
     <string name="analytics_storage">Analyslagring</string>
     <string name="ad_storage">Annonslagring</string>
     <string name="ad_user_data">Användardata för annonser</string>

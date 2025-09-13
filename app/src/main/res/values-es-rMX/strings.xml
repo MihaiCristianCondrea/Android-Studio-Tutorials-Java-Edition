@@ -22,8 +22,6 @@
     <string name="learn_more">Más información</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Anuncio</string>
-    <string name="search_tutorials_hint">Buscar tutoriales</string>
-    <string name="search_tutorials_content_description">Buscar tutoriales</string>
     <string name="search_lessons_hint">Buscar lecciones</string>
     <string name="search_lessons_content_description">Buscar lecciones</string>
     <string name="android_studio">Android Studio</string>
@@ -286,7 +284,6 @@
     <string name="app_version">Versión %1$s (%2$d)</string>
     <string name="music">Música</string>
     <string name="made_in">Hecho con ❤ en Rumania</string>
-    <string name="alert_dialog_close">¿Cerrar?</string>
     <string name="alert_dialog_require_restart">Requiere reinicio.</string>
     <string name="question_1">¿Qué es Android Studio Tutorials: Java Edition?</string>
     <string name="question_2">¿Cómo puedo descargar Android Studio Tutorials: Java Edition?</string>
@@ -313,10 +310,8 @@
     <string name="summary_preference_permissions_billing">Permite que la app use la Biblioteca de Facturación de Google Play para gestionar las compras dentro de la app y las donaciones.</string>
     <string name="summary_preference_permissions_check_license">Permite que la app verifique su cumplimiento con el acuerdo de licencia y haga cumplir los términos de la licencia para proteger la propiedad intelectual.</string>
     <string name="next">Siguiente</string>
-    <string name="finish">Finalizar</string>
     <string name="back">Atrás</string>
     <string name="bottom_navigation_labels">Etiquetas de navegación inferior</string>
-    <string name="data_dialog_message">Recopilamos datos para mejorar su experiencia.</string>
     <string name="summary_preference_permissions_access_notification_policy">Permite que la app acceda y modifique la política de notificaciones del dispositivo, controlando cómo y cuándo se muestran las notificaciones al usuario y proporcionando funciones de gestión de notificaciones personalizadas.</string>
     <string name="summary_preference_permissions_foreground_service">Permite que la app cree y use servicios que se ejecutan en primer plano, dándoles prioridad sobre otros procesos en segundo plano y mejorando el rendimiento y la fiabilidad.</string>
     <string name="summary_preference_settings_language">Establecer el idioma de la aplicación.</string>
@@ -360,7 +355,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">Aprende a usar notificaciones de estilo bandeja de entrada en tu app de Android con esta lección. Descubre cómo crear un canal y un constructor de notificaciones, y cómo establecer el estilo de tus notificaciones a un InboxStyle con múltiples líneas de texto y un texto de resumen. Explora las diferentes opciones disponibles para personalizar tus notificaciones de estilo bandeja de entrada.</string>
     <string name="summary_preference_android_studio_bottom_navigation">Una barra de navegación inferior te permite cambiar rápidamente entre las vistas principales de tu app.</string>
     <string name="summary_preference_android_studio_navigation_drawer">Un panel de navegación se desliza desde el costado y muestra las opciones principales de navegación de la app.</string>
-    <string name="summary_alert_dialog_close">¿Estás seguro de que quieres salir?</string>
     <string name="summary_alert_dialog_message">Este será el mensaje que verás en la pantalla.</string>
     <string name="summary_alert_dialog_require_restart">Para que surta efecto, por favor reinicia la app.</string>
     <string name="summary_sdk">El Kit de Desarrollo de Software de Android (SDK) es una colección de herramientas que permiten a los desarrolladores crear apps de Android. Incluye un conjunto de bibliotecas, un depurador, un emulador de dispositivo y documentación. El SDK también incluye una biblioteca de API y un conjunto de documentación de API. Los paquetes que descargas tienen bibliotecas, que te ayudan a crear tu app.\n\nEsta es una descripción general de todas las versiones de Android y sus identificadores correspondientes para los desarrolladores de Android. Cualquiera es bienvenido a abrir un issue o un pull request. Feliz desarrollo.</string>
@@ -385,7 +379,6 @@
     <string name="snack_rating">Thanks for your %1$.1f-star rating. ❤️</string>
     <string name="snack_image_button">Botón de imagen pulsado.</string>
     <string name="toast_this_is_a_toast">Esto es un toast.</string>
-    <string name="tooltip_show_code">Mostrar sintaxis del código</string>
     <string name="tooltip_show_java_code_snippet">Mostrar fragmento de código Java</string>
     <string name="tooltip_open_me">Ábreme 🌐</string>
     <string name="hint_type">Type here</string>
@@ -407,7 +400,6 @@
     <string name="error_loading_layout">Error al cargar el diseño</string>
     <string name="error_loading_code">Error al cargar el código</string>
     <string name="snack_general_error">Ocurrió un error al buscar actualizaciones</string>
-    <string name="consent_dialog_title">Consentimiento de datos y anuncios</string>
     <string name="analytics_storage">Almacenamiento de análisis</string>
     <string name="ad_storage">Almacenamiento de anuncios</string>
     <string name="ad_user_data">Datos de usuario para anuncios</string>

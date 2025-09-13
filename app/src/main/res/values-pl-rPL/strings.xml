@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="image_view_preview_desc">Podgląd widoku obrazu</string>
     <string name="app_short_description">Naucz się tworzyć proste aplikacje Java w Android Studio. 📱</string>
     <string name="notification_update_title">Dostępna jest nowa aktualizacja.</string>
@@ -27,8 +27,6 @@
     <string name="learn_more">Dowiedz się więcej</string>
     <string name="play_store">Sklep Play</string>
     <string name="ad">Reklama</string>
-    <string name="search_tutorials_hint">Wyszukaj samouczki</string>
-    <string name="search_tutorials_content_description">Wyszukaj samouczki</string>
     <string name="search_lessons_hint">Wyszukaj lekcje</string>
     <string name="search_lessons_content_description">Wyszukaj lekcje</string>
 
@@ -333,7 +331,6 @@
     <string name="app_version">Wersja %1$s (%2$d)</string>
     <string name="music">Muzyka</string>
     <string name="made_in">Stworzone z ❤ w Rumunii.</string>
-    <string name="alert_dialog_close">Zamknąć?</string>
     <string name="alert_dialog_require_restart">Wymagane ponowne uruchomienie.</string>
     <string name="question_1">Czym jest Android Studio Tutorials: Java Edition?</string>
     <string name="question_2">Jak mogę pobrać Android Studio Tutorials: Java Edition?</string>
@@ -360,10 +357,8 @@
     <string name="summary_preference_permissions_billing">Umożliwia aplikacji korzystanie z biblioteki Google Play Billing w celu obsługi zakupów w aplikacji i darowizn.</string>
     <string name="summary_preference_permissions_check_license">Umożliwia aplikacji weryfikację zgodności z umową licencyjną i egzekwowanie warunków licencji w celu ochrony własności intelektualnej.</string>
     <string name="next">Następny</string>
-    <string name="finish">Skończyć</string>
     <string name="back">Z powrotem</string>
     <string name="bottom_navigation_labels">Dolne etykiety nawigacyjne</string>
-    <string name="data_dialog_message">Zbieramy dane, aby poprawić Twoje wrażenia.</string>
     <string name="summary_preference_permissions_access_notification_policy">Umożliwia aplikacji dostęp i modyfikowanie zasad powiadomień urządzenia, kontrolując sposób i czas wyświetlania powiadomień oraz zapewniając funkcje niestandardowego zarządzania powiadomieniami.</string>
     <string name="summary_preference_permissions_foreground_service">Umożliwia aplikacji tworzenie i używanie usług działających na pierwszym planie, nadając im priorytet przed innymi procesami w tle oraz poprawiając wydajność i niezawodność.</string>
     <string name="summary_preference_settings_language">Ustaw język aplikacji.</string>
@@ -408,7 +403,6 @@
     <string name="summary_preference_android_studio_inbox_notifications">Dowiedz się, jak używać powiadomień o stylu odbiorczym w aplikacji na Androida z tą lekcją. Dowiedz się, jak utworzyć kanał powiadomień i konstruktor oraz jak ustawić styl swoich powiadomień na skrzynce odbiorcze z wieloma wierszami tekstu i tekstem podsumowującym. Przeglądaj różne dostępne opcje dostosowywania powiadomień o stylu odbiorczym.</string>
     <string name="summary_preference_android_studio_bottom_navigation">Dolna pasek nawigacyjny pozwala szybko przełączać się między widokami najwyższego poziomu w aplikacji.</string>
     <string name="summary_preference_android_studio_navigation_drawer">Szuflada nawigacyjna wsuwa się z boku i wyświetla główne opcje nawigacji aplikacji.</string>
-    <string name="summary_alert_dialog_close">Czy na pewno chcesz wyjść?</string>
     <string name="summary_alert_dialog_message">To będzie wiadomość, którą zobaczysz na ekranie.</string>
     <string name="summary_alert_dialog_require_restart">Aby zmiany weszły w życie, uruchom ponownie aplikację.</string>
     <string name="summary_sdk">Android Software Development Kit (SDK) to zestaw narzędzi, który pozwala deweloperom tworzyć aplikacje na Androida. Zawiera zestaw bibliotek, debugger, emulator urządzenia oraz dokumentację. SDK obejmuje także bibliotekę API i zestaw dokumentacji API. Pakiety, które pobierasz, mają biblioteki pomagające w tworzeniu aplikacji.\n\nTo przegląd wszystkich wersji Androida i odpowiadających im identyfikatorów dla deweloperów Androida. Każdy może zgłosić issue lub pull request. Miłego programowania.</string>
@@ -431,7 +425,6 @@
     <string name="snack_rating">Dziękujemy za ocenę %1$.1f gwiazdek. ❤️</string>
     <string name="snack_image_button">Kliknięto przycisk obrazu.</string>
     <string name="toast_this_is_a_toast">To jest toast.</string>
-    <string name="tooltip_show_code">Pokaż składnię kodu</string>
     <string name="tooltip_show_java_code_snippet">Pokaż fragment kodu Java</string>
     <string name="tooltip_open_me">Otwórz mnie 🌐</string>
     <string name="hint_type">Wpisz tutaj</string>
@@ -452,7 +445,6 @@
     <string name="error_loading_layout">Błąd podczas wczytywania układu</string>
     <string name="error_loading_code">Błąd podczas wczytywania kodu</string>
     <string name="snack_general_error">Wystąpił błąd podczas sprawdzania aktualizacji</string>
-    <string name="consent_dialog_title">Zgoda na dane i reklamy</string>
     <string name="analytics_storage">Przechowywanie analityki</string>
     <string name="ad_storage">Przechowywanie reklam</string>
     <string name="ad_user_data">Dane użytkownika do reklam</string>
