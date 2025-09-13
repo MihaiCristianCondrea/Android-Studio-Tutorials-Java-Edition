@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ads;
 import android.content.Context;
 import android.view.View;
 
+import com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -22,10 +23,12 @@ public final class AdUtils {
     }
 
     public static void loadBanner(View adView) {
-        if (adView instanceof AdView) {
-            AdView view = (AdView) adView;
+        if (adView instanceof AdView view) {
             initialize(view.getContext());
             view.loadAd(new AdRequest.Builder().build());
+        } else if (adView instanceof NativeAdBannerView nativeView) {
+            initialize(nativeView.getContext());
+            nativeView.loadAd();
         }
     }
 }

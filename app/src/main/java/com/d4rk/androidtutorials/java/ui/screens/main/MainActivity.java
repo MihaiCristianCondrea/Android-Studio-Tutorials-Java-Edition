@@ -79,11 +79,9 @@ public class MainActivity extends AppCompatActivity {
             ConsentUtils.applyStoredConsent(MainActivity.this);
             if (mBinding != null && mBinding.adView != null) {
                 if (ConsentUtils.canShowAds(MainActivity.this)) {
-                    if (mBinding.adView.getVisibility() != View.VISIBLE) {
-                        mBinding.adPlaceholder.setVisibility(View.GONE);
-                        mBinding.adView.setVisibility(View.VISIBLE);
-                        AdUtils.loadBanner(mBinding.adView);
-                    }
+                    mBinding.adPlaceholder.setVisibility(View.GONE);
+                    mBinding.adView.setVisibility(View.VISIBLE);
+                    AdUtils.loadBanner(mBinding.adView);
                 } else {
                     mBinding.adView.setVisibility(View.GONE);
                     mBinding.adPlaceholder.setVisibility(View.VISIBLE);
