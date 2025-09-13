@@ -15,11 +15,12 @@
 ## Integration & Navigation
 - The `StartupActivity` is the initial activity launched.
 - Upon user agreement, it navigates to `OnboardingActivity`.
-```kotlin
-// To start StartupActivity (example)
-// Intent(context, StartupActivity::class.java)
+```java
+// To start StartupActivity
+Intent intent = new Intent(context, StartupActivity.class);
+context.startActivity(intent);
 
 // Inside StartupActivity, on agreement:
-// startActivity(new Intent(this, OnboardingActivity.class));
-// finish();
+startActivity(new Intent(this, OnboardingActivity.class));
+finish();
 ```

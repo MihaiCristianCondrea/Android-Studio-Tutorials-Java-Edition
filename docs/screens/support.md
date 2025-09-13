@@ -10,6 +10,8 @@
 - `SupportActivity` – allows users to make donations at different tiers, view advertisements, and visit an external support website.
 
 ## Integration
-```kotlin
-startActivity(Intent(context, SupportActivity::class.java))
+To open the support screen:
+```java
+Intent intent = new Intent(context, SupportActivity.class);
+startActivity(intent);
 ```

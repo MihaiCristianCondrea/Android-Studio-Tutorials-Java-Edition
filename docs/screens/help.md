@@ -29,11 +29,7 @@ See [Ads](settings/privacy/ads.md) for more information on ad configuration.
 *(Note: Presence of ads should be confirmed by checking layout files like `activity_help.xml`)*
 
 ## Integration
-To launch the Help screen, use the following Kotlin code:
-```kotlin
-startActivity(Intent(context, HelpActivity::class.java))
-```
-Or in Java:
+To launch the Help screen, use the following Java code:
 ```java
 Intent intent = new Intent(context, HelpActivity.class);
 startActivity(intent);

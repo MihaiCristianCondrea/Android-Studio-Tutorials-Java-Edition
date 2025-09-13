@@ -1,4 +1,4 @@
-# SOLID Principles in Android Development with Kotlin
+# SOLID Principles in Android Development with Java
 
 ## Introduction
 SOLID is an acronym for five design principles that help create maintainable and scalable codebases. Applying these ideas in Android projects keeps features isolated, encourages extension without breaking existing behavior and makes code easier to test.
@@ -7,33 +7,41 @@ SOLID is an acronym for five design principles that help create maintainable and
 Each class should have one reason to change. Splitting responsibilities into distinct components improves clarity and testability.
 
 ### Violation
-```kotlin
-class ItemManager(private val context: Context) {
-    private val items = mutableListOf<Item>()
+```java
+class ItemManager {
+    private final Context context;
+    private final List<Item> items = new ArrayList<>();
 
-    fun retrieveAndDisplayItems() {
-        val items = retrieveItemsFromServer()
-        val recyclerView = RecyclerView(context)
-        val adapter = ItemListAdapter(items)
-        recyclerView.adapter = adapter
+    ItemManager(Context context) {
+        this.context = context;
     }
 
-    fun retrieveItemsFromServer(): List<Item> = emptyList()
+    void retrieveAndDisplayItems() {
+        List<Item> items = retrieveItemsFromServer();
+        RecyclerView recyclerView = new RecyclerView(context);
+        ItemListAdapter adapter = new ItemListAdapter(items);
+        recyclerView.setAdapter(adapter);
+    }
 
-    fun storeItemsLocally(items: List<Item>) {
+    List<Item> retrieveItemsFromServer() {
+        return Collections.emptyList();
+    }
+
+    void storeItemsLocally(List<Item> items) {
         // Save items to the local database
     }
 }
 ```
 
 ### Adherence
-```kotlin
+```java
 class ItemRepository {
-    fun fetchItems(): List<Item> {
+    List<Item> fetchItems() {
         // Fetch items from a server or database
+        return Collections.emptyList();
     }
 
-    fun saveItems(items: List<Item>) {
+    void saveItems(List<Item> items) {
         // Persist items to a database
     }
 }
@@ -43,40 +51,48 @@ class ItemRepository {
 Software entities should be open for extension and closed for modification. Favor abstraction so new behavior can be added without altering existing code.
 
 ### Violation
-```kotlin
+```java
 class ItemService {
-    fun calculateTotalPrice(cart: List<Item>, discount: Double): Double {
-        var totalPrice = 0.0
-        for (item in cart) {
-            totalPrice += item.price
+    double calculateTotalPrice(List<Item> cart, double discount) {
+        double totalPrice = 0.0;
+        for (Item item : cart) {
+            totalPrice += item.getPrice();
         }
-        totalPrice *= (1.0 - discount)
-        return totalPrice
+        totalPrice *= (1.0 - discount);
+        return totalPrice;
     }
 }
 ```
 
 ### Adherence
-```kotlin
+```java
 interface PriceCalculator {
-    fun calculateTotalPrice(cart: List<Product>): Double
+    double calculateTotalPrice(List<Product> cart);
 }
 
-class BasicPriceCalculator : PriceCalculator {
-    override fun calculateTotalPrice(cart: List<Product>): Double {
-        var totalPrice = 0.0
-        for (product in cart) {
-            totalPrice += product.price
+class BasicPriceCalculator implements PriceCalculator {
+    @Override
+    public double calculateTotalPrice(List<Product> cart) {
+        double totalPrice = 0.0;
+        for (Product product : cart) {
+            totalPrice += product.getPrice();
         }
-        return totalPrice
+        return totalPrice;
     }
 }
 
-class DiscountedPriceCalculator(private val discount: Double) : PriceCalculator {
-    override fun calculateTotalPrice(cart: List<Product>): Double {
-        val basic = BasicPriceCalculator()
-        val total = basic.calculateTotalPrice(cart)
-        return total * (1.0 - discount)
+class DiscountedPriceCalculator implements PriceCalculator {
+    private final double discount;
+
+    DiscountedPriceCalculator(double discount) {
+        this.discount = discount;
+    }
+
+    @Override
+    public double calculateTotalPrice(List<Product> cart) {
+        PriceCalculator basic = new BasicPriceCalculator();
+        double total = basic.calculateTotalPrice(cart);
+        return total * (1.0 - discount);
     }
 }
 ```
@@ -85,30 +101,32 @@ class DiscountedPriceCalculator(private val discount: Double) : PriceCalculator 
 Subclasses must be replaceable for their base types without altering the correctness of the program.
 
 ### Violation
-```kotlin
-open class Bird {
-    open fun fly() {
+```java
+class Bird {
+    void fly() {
         // Default flying behavior
     }
 }
 
-class Dog : Bird() {
-    override fun fly() {
-        throw UnsupportedOperationException("Dogs can't fly")
+class Dog extends Bird {
+    @Override
+    void fly() {
+        throw new UnsupportedOperationException("Dogs can't fly");
     }
 }
 ```
 
 ### Adherence
-```kotlin
-open class Bird {
-    open fun move() {
+```java
+class Bird {
+    void move() {
         // Default movement behavior
     }
 }
 
-class Ostrich : Bird() {
-    override fun move() {
+class Ostrich extends Bird {
+    @Override
+    void move() {
         // Ostriches move by running
     }
 }
@@ -118,39 +136,43 @@ class Ostrich : Bird() {
 Clients should not be forced to implement methods they do not use. Split broad interfaces into focused ones.
 
 ### Violation
-```kotlin
+```java
 interface Worker {
-    fun work()
-    fun eat()
+    void work();
+    void eat();
 }
 
-class SuperWorker : Worker {
-    override fun work() {
+class SuperWorker implements Worker {
+    @Override
+    public void work() {
         // Working behavior
     }
 
-    override fun eat() {
+    @Override
+    public void eat() {
         // Eating behavior
     }
 }
 ```
 
 ### Adherence
-```kotlin
+```java
 interface Workable {
-    fun work()
+    void work();
 }
 
 interface Eatable {
-    fun eat()
+    void eat();
 }
 
-class SuperWorker : Workable, Eatable {
-    override fun work() {
+class SuperWorker implements Workable, Eatable {
+    @Override
+    public void work() {
         // Working behavior
     }
 
-    override fun eat() {
+    @Override
+    public void eat() {
         // Eating behavior
     }
 }
@@ -160,40 +182,48 @@ class SuperWorker : Workable, Eatable {
 High-level modules should depend on abstractions rather than concrete implementations.
 
 ### Violation
-```kotlin
+```java
 class LightBulb {
-    fun turnOn() {
+    void turnOn() {
         // Turn on the light bulb
     }
 }
 
 class Switch {
-    private val bulb = LightBulb()
+    private final LightBulb bulb = new LightBulb();
 
-    fun control() {
-        bulb.turnOn()
+    void control() {
+        bulb.turnOn();
     }
 }
 ```
 
 ### Adherence
-```kotlin
+```java
 interface Switchable {
-    fun turnOn()
+    void turnOn();
 }
 
-class LightBulb : Switchable {
-    override fun turnOn() {
+class LightBulb implements Switchable {
+    @Override
+    public void turnOn() {
         // Turn on the light bulb
     }
 }
 
-class Switch(private val device: Switchable) {
-    fun control() {
-        device.turnOn()
+class Switch {
+    private final Switchable device;
+
+    Switch(Switchable device) {
+        this.device = device;
+    }
+
+    void control() {
+        device.turnOn();
     }
 }
 ```
 
 ## Conclusion
 Applying the SOLID principles in Android projects encourages separation of concerns, extensibility and decoupling. These guidelines lead to code that is easier to understand, test and evolve over time.
+
