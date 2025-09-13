@@ -14,7 +14,7 @@
         android:padding="12dp">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/icon"
+            android:id="@+id/icon_view"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@{icon}"
@@ -34,7 +34,7 @@
             android:textAppearance="?attr/textAppearanceTitleMedium"
             android:breakStrategy="balanced"
             android:hyphenationFrequency="none"
-            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintStart_toEndOf="@id/icon_view"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/radio_button"
             tools:text="Light mode"/>
