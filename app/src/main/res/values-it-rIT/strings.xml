@@ -304,6 +304,7 @@
     <string name="navigation_drawer">Menu di navigazione</string>
     <string name="dashboard">Dashboard</string>
     <string name="code_font">Font del codice</string>
+    <string name="code_font_description">Scegli il font utilizzato per gli snippet di codice</string>
     <string name="language">Lingua</string>
     <string name="notifications">Notifiche</string>
     <string name="notification_settings">Impostazioni delle notifiche</string>
@@ -381,6 +382,7 @@
     <string name="next">Prossimo</string>
     <string name="back">Indietro</string>
     <string name="bottom_navigation_labels">Etichette di navigazione inferiore</string>
+    <string name="bottom_navigation_labels_description">Scegli come visualizzare le etichette nella barra di navigazione in basso</string>
     <string name="summary_preference_permissions_access_notification_policy">Consente all\'app di accedere e modificare la politica di notifiche del dispositivo, controllando come e quando le notifiche vengono mostrate all\'utente e fornendo funzionalità di gestione personalizzata delle notifiche.</string>
     <string name="summary_preference_permissions_foreground_service">Consente all\'app di creare e utilizzare servizi che vengono eseguiti in primo piano, dando loro priorità rispetto ad altri processi in background e migliorando prestazioni e affidabilità.</string>
     <string name="summary_preference_settings_language">Imposta la lingua dell\'applicazione.</string>

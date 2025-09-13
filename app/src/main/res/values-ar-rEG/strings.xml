@@ -257,6 +257,7 @@
     <string name="navigation_drawer">قائمة التنقل الجانبية</string>
     <string name="dashboard">لوحة التحكم</string>
     <string name="code_font">خط الكود</string>
+    <string name="code_font_description">اختر الخط المستخدم لمقتطفات التعليمات البرمجية</string>
     <string name="language">اللغة</string>
     <string name="notifications">الإشعارات</string>
     <string name="notification_settings">إعدادات الإشعارات</string>
@@ -334,6 +335,7 @@
     <string name="next">التالي</string>
     <string name="back">خلف</string>
     <string name="bottom_navigation_labels">تسميات الملاحة السفلية</string>
+    <string name="bottom_navigation_labels_description">اختر كيفية ظهور التسميات في شريط التنقل السفلي</string>
     <string name="summary_preference_permissions_access_notification_policy">يسمح للتطبيق بالوصول إلى سياسة الإشعارات بالجهاز وتعديلها، والتحكم في كيفية ووقت عرض الإشعارات للمستخدم وتوفير ميزات إدارة إشعارات مخصصة.</string>
     <string name="summary_preference_permissions_foreground_service">يسمح للتطبيق بإنشاء واستخدام خدمات تعمل في الواجهة، مما يمنحها الأولوية على العمليات الأخرى في الخلفية ويحسن الأداء والموثوقية.</string>
     <string name="summary_preference_settings_language">ضبط لغة التطبيق.</string>
