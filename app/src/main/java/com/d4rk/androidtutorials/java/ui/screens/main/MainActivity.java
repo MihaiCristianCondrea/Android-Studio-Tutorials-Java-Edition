@@ -312,7 +312,9 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         AppUsageNotificationsManager appUsageNotificationsManager = new AppUsageNotificationsManager(this);
         appUsageNotificationsManager.scheduleAppUsageCheck();
-        appUpdateNotificationsManager.checkAndSendUpdateNotification();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            appUpdateNotificationsManager.checkAndSendUpdateNotification();
+        }
         checkForFlexibleOrImmediateUpdate();
     }
 
