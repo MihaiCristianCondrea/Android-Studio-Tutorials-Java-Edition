@@ -20,6 +20,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.lifecycle.DefaultLifecycleObserver;
+import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
@@ -62,15 +63,7 @@ import dagger.hilt.android.AndroidEntryPoint;
 public class MainActivity extends AppCompatActivity {
 
     private static final long BACK_PRESS_INTERVAL = 2000;
-    private final ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher =
-            registerForActivityResult(
-                    new ActivityResultContracts.StartIntentSenderForResult(),
-                    result -> {
-                        if (result.getResultCode() != Activity.RESULT_OK) {
-                            Log.d("MainActivity", "In-app update flow failed! " + result.getResultCode());
-                        }
-                    }
-            );
+    private ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher;
     private final SparseIntArray navOrder = new SparseIntArray();
     private ActivityMainBinding mBinding;
     private final DefaultLifecycleObserver lifecycleObserver = new DefaultLifecycleObserver() {
@@ -101,6 +94,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
+
+        updateActivityResultLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartIntentSenderForResult(),
+                result -> {
+                    if (result.getResultCode() != Activity.RESULT_OK) {
+                        Log.d("MainActivity", "In-app update flow failed! " + result.getResultCode());
+                    }
+                }
+        );
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         if (!prefs.getBoolean(getString(R.string.key_onboarding_complete), false)) {
             startActivity(new Intent(this, StartupActivity.class));
@@ -315,13 +317,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkForFlexibleOrImmediateUpdate() {
-        appUpdateManager.getAppUpdateInfo().addOnSuccessListener(appUpdateInfo -> {
-                    boolean updateAvailable = appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE;
-                    if (updateAvailable) {
+        appUpdateManager
+                .getAppUpdateInfo()
+                .addOnSuccessListener(this, appUpdateInfo -> {
+                    boolean updateAvailable =
+                            appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE;
+                    if (updateAvailable && getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED)) {
                         startImmediateUpdate(appUpdateInfo);
                     }
                 })
-                .addOnFailureListener(e -> {
+                .addOnFailureListener(this, e -> {
                     if (!BuildConfig.DEBUG) {
                         Snackbar.make(
                                 findViewById(android.R.id.content),
@@ -329,7 +334,7 @@ public class MainActivity extends AppCompatActivity {
                                 Snackbar.LENGTH_LONG
                         ).show();
                     }
-        });
+                });
     }
 
     private void checkInAppReview() {
@@ -348,6 +353,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startImmediateUpdate(AppUpdateInfo appUpdateInfo) {
+        if (updateActivityResultLauncher == null
+                || !getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED)) {
+            Log.w("MainActivity", "Update launcher not ready");
+            return;
+        }
         try {
             appUpdateManager.startUpdateFlowForResult(
                     appUpdateInfo,
