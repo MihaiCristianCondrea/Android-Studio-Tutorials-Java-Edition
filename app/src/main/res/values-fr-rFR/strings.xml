@@ -283,6 +283,7 @@
     <string name="navigation_drawer">Tiroir de navigation</string>
     <string name="dashboard">Tableau de bord</string>
     <string name="code_font">Police du code</string>
+    <string name="code_font_description">Choisissez la police utilisée pour les extraits de code</string>
     <string name="language">Langue</string>
     <string name="notifications">Notifications</string>
     <string name="notification_settings">Paramètres des notifications</string>
@@ -360,6 +361,7 @@
     <string name="next">Suivant</string>
     <string name="back">Retour</string>
     <string name="bottom_navigation_labels">Étiquettes de navigation inférieure</string>
+    <string name="bottom_navigation_labels_description">Choisissez la manière dont les libellés apparaissent dans la barre de navigation inférieure</string>
     <string name="summary_preference_permissions_access_notification_policy">Permet à l\'application d\'accéder et de modifier la politique de notification de l\'appareil, contrôlant comment et quand les notifications sont affichées à l\'utilisateur et fournissant des fonctionnalités de gestion des notifications personnalisées.</string>
     <string name="summary_preference_permissions_foreground_service">Permet à l\'application de créer et d\'utiliser des services qui s\'exécutent en premier plan, leur donnant la priorité sur d\'autres processus d\'arrière-plan et améliorant les performances et la fiabilité.</string>
     <string name="summary_preference_settings_language">Définir la langue de l\'application.</string>

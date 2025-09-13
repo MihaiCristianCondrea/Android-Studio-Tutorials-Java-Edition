@@ -304,6 +304,7 @@
     <string name="navigation_drawer">ナビゲーションドロワー</string>
     <string name="dashboard">ダッシュボード</string>
     <string name="code_font">コードフォント</string>
+    <string name="code_font_description">コードスニペットで使用するフォントを選択</string>
     <string name="language">言語</string>
     <string name="notifications">通知</string>
     <string name="notification_settings">通知設定</string>
@@ -381,6 +382,7 @@
     <string name="next">次</string>
     <string name="back">戻る</string>
     <string name="bottom_navigation_labels">ボトムナビゲーションラベル</string>
+    <string name="bottom_navigation_labels_description">下部ナビゲーションバーのラベル表示方法を選択</string>
     <string name="summary_preference_permissions_access_notification_policy">アプリがデバイスの通知ポリシーにアクセスして変更できるようにし、通知が表示される方法やタイミングを制御して、カスタム通知管理機能を提供します。</string>
     <string name="summary_preference_permissions_foreground_service">アプリがフォアグラウンドで実行されるサービスを作成・使用できるようにし、他のバックグラウンドプロセスより優先度を与えてパフォーマンスと信頼性を向上させます。</string>
     <string name="summary_preference_settings_language">アプリの言語を設定します。</string>
