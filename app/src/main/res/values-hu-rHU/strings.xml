@@ -304,6 +304,7 @@
     <string name="navigation_drawer">Navigációs fiók</string>
     <string name="dashboard">Irányítópult</string>
     <string name="code_font">Kódbetűtípus</string>
+    <string name="code_font_description">Válassza ki a kódrészletekhez használt betűtípust</string>
     <string name="language">Nyelv</string>
     <string name="notifications">Értesítések</string>
     <string name="notification_settings">Értesítési beállítások</string>
@@ -381,6 +382,7 @@
     <string name="next">Következő</string>
     <string name="back">Vissza</string>
     <string name="bottom_navigation_labels">Alsó navigációs címkék</string>
+    <string name="bottom_navigation_labels_description">Válassza ki, hogyan jelenjenek meg a címkék az alsó navigációs sávban</string>
     <string name="summary_preference_permissions_access_notification_policy">Lehetővé teszi az alkalmazás számára, hogy hozzáférjen és módosítsa az eszköz értesítési szabályzatát, szabályozva, hogy mikor és hogyan jelenjenek meg az értesítések, valamint egyéni értesítéskezelési funkciókat nyújtson.</string>
     <string name="summary_preference_permissions_foreground_service">Lehetővé teszi az alkalmazás számára, hogy előtérben futó szolgáltatásokat hozzon létre és használjon, prioritást adva nekik más háttérfolyamatokkal szemben, javítva a teljesítményt és a megbízhatóságot.</string>
     <string name="summary_preference_settings_language">Alkalmazás nyelvének beállítása.</string>
@@ -439,6 +441,29 @@
     <string name="summary_linear_layout_compat">A Linear Layout Compat egy osztály az Android appCompat v7 támogatói könyvtárban. Azért adták hozzá, hogy a régebbi API-szinteken is támogassa az újabb API-szinteken bevezetett metódusokat (például az elválasztókat). Ha összehasonlítod a LinearLayout és a LinearLayoutCompat metódusait, láthatod, hogy a Compat elrendezés rendelkezik a LinearLayout összes metódusával API-szint korlátozás nélkül. Például a setShowDividers metódust az API 11-es szintjén vezették be. Ezért ebben az esetben a setShowDividers (és paraméterei) meghívásához a Linear Layout Compatet kell használni a LinearLayout helyett, ha 11 alatti API-szintű platformot célozol.</string>
     <string name="summary_donations">Adományod segít az alkalmazás működtetésében és a funkciók fejlesztésében. Köszönjük a nagylelkűségedet.</string>
     <string name="summary_progress_bar">Ismerd meg, hogyan használhatsz folyamatjelző sávokat Androidon ezzel az interaktív leckével. A lecke két részt tartalmaz: egyet a vízszintes folyamatjelző sávhoz és egyet a kör alakú folyamatjelző sávhoz. Mindegyik részben láthatod, hogyan frissül a folyamatjelző sáv, ahogy a letöltés halad. A lecke kódját is megtekintheted a képernyő alján található lebegő műveletgombra kattintva.</string>
+    <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Az Android egy mobil operációs rendszer, amelyet a Google fejlesztett. 2007. november 5-én jelent meg elsőként béta verzióként, az első kereskedelmi verzió, az Android 1.0 pedig 2008. szeptember 23-án indult. Az Android a Linux kernel módosított verzióján és más nyílt forráskódú szoftveren alapul.
+
+Az Android Studio a hivatalos integrált fejlesztőkörnyezet (IDE) az Android alkalmazások fejlesztéséhez. A Google a 2013. május 15-i I/O konferenciáján jelentette be, és 2014. december 8-án adta ki nyilvános használatra. Az Android Studio az IntelliJ IDEA-n alapul, egy népszerű Java IDE-n.</string>
+    <string name="summary_android_features">Az Android nemcsak egy operációs rendszer, hanem egy platform is, amely számos funkciót és lehetőséget kínál a felhasználóknak és a fejlesztőknek. Az Android néhány funkciója:
+
+- Near Field Communication (NFC), amely lehetővé teszi az adatok megosztását, a fizetéseket és más eszközökhöz való vezeték nélküli csatlakozást.
+- Alternatív billentyűzetek, amelyekkel testre szabhatja a bevitel módját különböző elrendezésekkel, nyelvekkel és témákkal.
+- IR-adás, amely lehetővé teszi, hogy telefonját távirányítóként használja TV-khez, légkondicionálókhoz és más készülékekhez.
+- Érintés nélküli vezérlés, amely lehetővé teszi, hogy érintés nélkül hajtson végre műveleteket a telefonon gesztusokkal vagy hangparancsokkal.
+- Automatizálás, amellyel beállíthat rutinszerű feladatokat és triggereket, hogy telefonja automatikusan végrehajtson bizonyos műveleteket.
+- Vezeték nélküli alkalmazásletöltések, amelyek lehetővé teszik, hogy alkalmazásokat telepítsen számítógépéről vagy webböngészőjéből anélkül, hogy kábellel csatlakoztatná telefonját.
+- Tárhely- és akkumulátorcsere, amely lehetőséget ad a telefon memóriájának bővítésére vagy az akkumulátor egyszerű cseréjére.
+- Testreszabható kezdőképernyő, amellyel személyre szabhatja telefonja megjelenését widgetekkel, háttérképekkel, ikonokkal és indítókkal.
+
+Az Android Studio a legjobb eszköz az Android alkalmazások fejlesztéséhez. Számos funkciót és előnyt kínál a fejlesztők számára, például:
+
+- Kódszerkesztő szintaxis kiemeléssel, kódkiegészítéssel, refaktorálással, hibakereséssel, teszteléssel és lint eszközökkel.
+- Elrendezésszerkesztő húzd-és-vedd felülettel a felhasználói felületek tervezéséhez.
+- Emulátor gyors indítással és pillanatkép-támogatással az alkalmazások teszteléséhez különböző eszközökön és konfigurációkban.
+- Firebase integráció olyan szolgáltatásokkal, mint hitelesítés, adatbázis, tárhely, analitika, összeomlásjelentés és még sok más.
+- Gradle-alapú build rendszer függőségkezeléssel, testreszabással, optimalizálással, aláírással, terjesztési lehetőségekkel és egyebekkel.
+
+Az Android Studio segítségével csodálatos alkalmazásokat hozhat létre Android eszközökre Java segítségével, egy erőteljes és széles körben használt programozási nyelvvel.</string>
     <string name="summary_chronometer">A Chronometer egy speciális widget az Android keretrendszerben, amely időzítő-szerű funkcionalitást biztosít az eltelt idő megjelenítéséhez. Beállítható felfelé vagy lefelé számolásra, és gyakran használják olyan alkalmazásokban, amelyek időmérést igényelnek, például stopper- vagy visszaszámláló alkalmazások. A Chronometer osztály a TextView osztályból származik, ami azt jelenti, hogy örökli a TextView összes tulajdonságát és metódusát. Ez lehetővé teszi a fejlesztők számára, hogy könnyen testre szabják a Chronometer megjelenését, beleértve a szöveg méretét, színét és betűtípusát.</string>
     <string name="snack_this_is_a_snackbar">Ez egy snackbar.</string>
     <string name="snack_bar_clicked">kattintva</string>

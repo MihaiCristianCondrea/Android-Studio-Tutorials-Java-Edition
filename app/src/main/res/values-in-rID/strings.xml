@@ -283,6 +283,7 @@
     <string name="navigation_drawer">Laci Navigasi</string>
     <string name="dashboard">Dasbor</string>
     <string name="code_font">Font kode</string>
+    <string name="code_font_description">Pilih font yang digunakan untuk cuplikan kode</string>
     <string name="language">Bahasa</string>
     <string name="notifications">Notifikasi</string>
     <string name="notification_settings">Pengaturan notifikasi</string>
@@ -360,6 +361,7 @@
     <string name="next">Berikutnya</string>
     <string name="back">Kembali</string>
     <string name="bottom_navigation_labels">Label Navigasi Bawah</string>
+    <string name="bottom_navigation_labels_description">Pilih bagaimana label muncul di bilah navigasi bawah</string>
     <string name="summary_preference_permissions_access_notification_policy">Memungkinkan aplikasi untuk mengakses dan memodifikasi kebijakan notifikasi perangkat, mengontrol bagaimana dan kapan notifikasi ditampilkan kepada pengguna dan menyediakan fitur manajemen notifikasi kustom.</string>
     <string name="summary_preference_permissions_foreground_service">Memungkinkan aplikasi untuk membuat dan menggunakan layanan yang berjalan di latar depan, memberi mereka prioritas di atas proses latar belakang lainnya dan meningkatkan kinerja serta keandalan.</string>
     <string name="summary_preference_settings_language">Atur bahasa aplikasi.</string>
@@ -417,6 +419,29 @@
     <string name="summary_linear_layout_compat">Linear Layout Compat adalah kelas dalam pustaka dukungan Android appCompat v7. Ini ditambahkan untuk mendukung metode yang ditambahkan di level API yang lebih baru pada yang lama (seperti pembagi). Jika Anda membandingkan metode di LinearLayout dan LinearLayoutCompat, Anda dapat melihat bahwa tata letak Compat memiliki semua metode dari Tata Letak Linear tanpa batasan level API. Misalnya, metode setShowDividers diperkenalkan pada level API 11. Jadi, dalam kasus ini, setShowDividers (dan parameternya) harus dipanggil menggunakan Linear Layout Compat alih-alih LinearLayout jika Anda menargetkan platform dengan level API di bawah 11.</string>
     <string name="summary_donations">Your donation helps keep the app running and improve features. Thank you for your generosity.</string>
     <string name="summary_progress_bar">Pelajari cara menggunakan progress bar di Android dengan pelajaran interaktif ini. Pelajaran ini mencakup dua bagian: satu untuk progress bar horizontal dan satu untuk progress bar melingkar. Di setiap bagian, Anda dapat melihat bagaimana progress bar diperbarui saat unduhan berlangsung. Anda juga dapat melihat kode untuk pelajaran dengan mengeklik tombol aksi mengambang di bagian bawah layar.</string>
+    <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android adalah sistem operasi seluler yang dikembangkan oleh Google. Versi beta pertama dirilis pada 5 November 2007 dan versi komersial pertama, Android 1.0, diluncurkan pada 23 September 2008. Android didasarkan pada versi kernel Linux yang dimodifikasi dan perangkat lunak sumber terbuka lainnya.
+
+Android Studio adalah lingkungan pengembangan terintegrasi (IDE) resmi untuk pengembangan aplikasi Android. Ini diumumkan oleh Google pada konferensi I/O pada 15 Mei 2013 dan dirilis untuk penggunaan publik pada 8 Desember 2014. Android Studio didasarkan pada IntelliJ IDEA, IDE Java yang populer.</string>
+    <string name="summary_android_features">Android bukan hanya sistem operasi, tetapi juga platform yang menawarkan berbagai fitur dan kemampuan bagi pengguna dan pengembang. Beberapa fitur Android meliputi:
+
+- Near Field Communication (NFC) yang memungkinkan Anda berbagi data, melakukan pembayaran, dan terhubung dengan perangkat lain secara nirkabel.
+- Papan ketik alternatif yang memungkinkan Anda menyesuaikan metode input dengan tata letak, bahasa, dan tema yang berbeda.
+- Transmisi IR yang memungkinkan Anda menggunakan ponsel sebagai remote control untuk TV, AC, dan perangkat lainnya.
+- Kontrol tanpa sentuhan yang memungkinkan Anda melakukan tindakan di ponsel tanpa menyentuh layar dengan menggunakan gerakan atau perintah suara.
+- Otomatisasi yang memungkinkan Anda mengatur rutinitas dan pemicu agar ponsel melakukan tugas tertentu secara otomatis.
+- Unduhan aplikasi nirkabel yang memungkinkan Anda memasang aplikasi dari komputer atau browser web tanpa menghubungkan ponsel dengan kabel.
+- Penggantian penyimpanan dan baterai yang memberi Anda opsi untuk memperluas memori ponsel atau mengganti baterainya dengan mudah.
+- Layar beranda kustom yang memungkinkan Anda mempersonalisasi tampilan ponsel dengan widget, wallpaper, ikon, dan peluncur.
+
+Android Studio adalah alat terbaik untuk mengembangkan aplikasi Android. Ini menawarkan banyak fitur dan manfaat bagi pengembang seperti:
+
+- Editor kode dengan penyorotan sintaks, pelengkapan kode, refactoring, debugging, pengujian, dan alat lint.
+- Editor tata letak dengan antarmuka seret dan lepas untuk merancang antarmuka pengguna.
+- Emulator dengan boot cepat dan dukungan snapshot untuk menguji aplikasi pada berbagai perangkat dan konfigurasi.
+- Integrasi Firebase dengan layanan seperti autentikasi, database, penyimpanan, analitik, pelaporan kerusakan, dan lainnya.
+- Sistem build berbasis Gradle dengan manajemen dependensi, kustomisasi, optimasi, penandatanganan, opsi distribusi, dan banyak lagi.
+
+Dengan Android Studio, Anda dapat membuat aplikasi luar biasa untuk perangkat Android menggunakan Java, bahasa pemrograman yang kuat dan banyak digunakan.</string>
     <string name="summary_chronometer">Kronometer adalah widget khusus dalam kerangka kerja Android yang menyediakan fungsionalitas seperti timer untuk menampilkan waktu yang berlalu. Ini dapat dikonfigurasi untuk menghitung naik atau turun, dan umumnya digunakan dalam aplikasi yang memerlukan pencatatan waktu, seperti aplikasi stopwatch atau timer hitung mundur. Kelas Kronometer berasal dari kelas TextView, yang berarti mewarisi semua properti dan metode dari TextView. Ini memungkinkan pengembang untuk dengan mudah menyesuaikan tampilan Kronometer, termasuk ukuran teks, warna, dan fontnya.</string>
     <string name="snack_this_is_a_snackbar">Ini adalah snack bar.</string>
     <string name="snack_bar_clicked">diklik</string>
