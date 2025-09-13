@@ -291,6 +291,7 @@
     <string name="navigation_drawer">Meniu lateral</string>
     <string name="dashboard">Tablou de bord</string>
     <string name="code_font">Font cod</string>
+    <string name="code_font_description">Alegeți fontul utilizat pentru fragmentele de cod</string>
     <string name="language">Limbă</string>
     <string name="notifications">Notificări</string>
     <string name="notification_settings">Setări notificări</string>
@@ -368,6 +369,7 @@
     <string name="next">Următorul</string>
     <string name="back">Spate</string>
     <string name="bottom_navigation_labels">Etichete de navigație de jos</string>
+    <string name="bottom_navigation_labels_description">Alegeți modul în care apar etichetele în bara de navigare din partea de jos</string>
     <string name="summary_preference_permissions_access_notification_policy">Permite aplicației să acceseze și să modifice politica de notificări a dispozitivului, controlând modul și momentul în care notificările sunt afișate utilizatorului și oferind funcții personalizate de gestionare a notificărilor.</string>
     <string name="summary_preference_permissions_foreground_service">Permite aplicației să creeze și să utilizeze servicii care rulează în prim plan, acordându-le prioritate față de alte procese din fundal și îmbunătățind performanța și fiabilitatea.</string>
     <string name="summary_preference_settings_language">Setați limba aplicației.</string>

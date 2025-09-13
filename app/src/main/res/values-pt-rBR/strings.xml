@@ -257,6 +257,7 @@
     <string name="navigation_drawer">Menu lateral</string>
     <string name="dashboard">Painel</string>
     <string name="code_font">Fonte do código</string>
+    <string name="code_font_description">Escolha a fonte usada para trechos de código</string>
     <string name="language">Idioma</string>
     <string name="notifications">Notificações</string>
     <string name="notification_settings">Configurações de notificação</string>
@@ -334,6 +335,7 @@
     <string name="next">Próximo</string>
     <string name="back">Voltar</string>
     <string name="bottom_navigation_labels">Rótulos de navegação inferior</string>
+    <string name="bottom_navigation_labels_description">Escolha como as etiquetas aparecem na barra de navegação inferior</string>
     <string name="summary_preference_permissions_access_notification_policy">Permite que o aplicativo acesse e modifique a política de notificação do dispositivo, controlando como e quando as notificações são exibidas para o usuário e fornecendo recursos de gerenciamento de notificação personalizados.</string>
     <string name="summary_preference_permissions_foreground_service">Permite que o aplicativo crie e use serviços que são executados em primeiro plano, dando-lhes prioridade sobre outros processos em segundo plano e melhorando o desempenho e a confiabilidade.</string>
     <string name="summary_preference_settings_language">Definir o idioma do aplicativo.</string>
