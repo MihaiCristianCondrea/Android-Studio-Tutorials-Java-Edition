@@ -41,6 +41,7 @@ import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.d4rk.androidtutorials.java.utils.ReviewHelper;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.navigation.NavigationBarView;
@@ -156,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        checkInAppReview();
     }
 
     private void setupActionBar() {
@@ -333,7 +336,22 @@ public class MainActivity extends AppCompatActivity {
                                 Snackbar.LENGTH_LONG
                         ).show();
                     }
-                });
+        });
+    }
+
+    private void checkInAppReview() {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        int sessionCount = prefs.getInt(getString(R.string.key_session_count), 0);
+        boolean hasPrompted = prefs.getBoolean(getString(R.string.key_has_prompted_review), false);
+
+        ReviewHelper.launchInAppReviewIfEligible(
+                this,
+                sessionCount,
+                hasPrompted,
+                () -> prefs.edit().putBoolean(getString(R.string.key_has_prompted_review), true).apply()
+        );
+
+        prefs.edit().putInt(getString(R.string.key_session_count), sessionCount + 1).apply();
     }
 
     private void startImmediateUpdate(AppUpdateInfo appUpdateInfo) {
