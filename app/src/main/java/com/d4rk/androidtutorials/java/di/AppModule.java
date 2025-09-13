@@ -76,7 +76,7 @@ public class AppModule {
     @Singleton
     public HomeRemoteDataSource provideHomeRemoteDataSource(RequestQueue queue) {
         return new DefaultHomeRemoteDataSource(queue,
-                "https://raw.githubusercontent.com/D4rK7355608/com.d4rk.apis/refs/heads/main/App%20Toolkit/release/en/home/api_android_apps.json");
+                "https://raw.githubusercontent.com/MihaiCristianCondrea/com.d4rk.apis/refs/heads/main/App%20Toolkit/release/en/home/api_android_apps.json");
     }
 
     @Provides

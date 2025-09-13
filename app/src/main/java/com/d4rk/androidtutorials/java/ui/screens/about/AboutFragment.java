@@ -71,7 +71,7 @@ public class AboutFragment extends Fragment {
         binding.chipYoutube.setOnClickListener(
                 v -> openUrl("https://www.youtube.com/c/D4rK7355608"));
         binding.chipGithub.setOnClickListener(
-                v -> openUrl("https://github.com/D4rK7355608/" + BuildConfig.APPLICATION_ID));
+                v -> openUrl("https://github.com/MihaiCristianCondrea/" + BuildConfig.APPLICATION_ID));
         binding.chipTwitter.setOnClickListener(
                 v -> openUrl("https://twitter.com/D4rK7355608"));
         binding.chipXda.setOnClickListener(
