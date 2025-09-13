@@ -27,7 +27,7 @@ public class HomeViewModelTest {
     @Test
     public void uiStateUpdatesWithData() {
         List<PromotedApp> promoted = List.of(new PromotedApp("App", "pkg", "icon"));
-        FakeHomeRepository repo = new FakeHomeRepository("tip", promoted);
+        FakeHomeRepository repo = new FakeHomeRepository(promoted);
         HomeViewModel viewModel = new HomeViewModel(
                 new GetDailyTipUseCase(repo),
                 new GetPromotedAppsUseCase(repo),
@@ -46,7 +46,7 @@ public class HomeViewModelTest {
 
     @Test
     public void uiStateHandlesEmptyPromotedApps() {
-        FakeHomeRepository repo = new FakeHomeRepository("tip", List.of());
+        FakeHomeRepository repo = new FakeHomeRepository(List.of());
         HomeViewModel viewModel = new HomeViewModel(
                 new GetDailyTipUseCase(repo),
                 new GetPromotedAppsUseCase(repo),
@@ -60,21 +60,26 @@ public class HomeViewModelTest {
         assertTrue(state.promotedApps().isEmpty());
     }
 
-    record FakeHomeRepository(String dailyTip, List<PromotedApp> apps) implements HomeRepository { // FIXME: Value for parameter 'dailyTip' is always "tip"
+    record FakeHomeRepository(List<PromotedApp> apps) implements HomeRepository {
 
         @Override
-            public String getPlayStoreUrl() {
-                return "";
-            }
-
-            @Override
-            public String getAppPlayStoreUrl(String packageName) {
-                return "";
-            }
-
-            @Override
-            public void fetchPromotedApps(PromotedAppsCallback callback) {
-                callback.onResult(apps);
-            }
+        public String dailyTip() {
+            return "tip";
         }
+
+        @Override
+        public String getPlayStoreUrl() {
+            return "";
+        }
+
+        @Override
+        public String getAppPlayStoreUrl(String packageName) {
+            return "";
+        }
+
+        @Override
+        public void fetchPromotedApps(PromotedAppsCallback callback) {
+            callback.onResult(apps);
+        }
+    }
 }

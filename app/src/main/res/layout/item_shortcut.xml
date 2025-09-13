@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:divider="?attr/colorAccent"
+    android:showDividers="middle">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/shortcut_key"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        tools:text="Ctrl + F" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/shortcut_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textAlignment="center"
+        tools:text="@string/find" />
+</androidx.appcompat.widget.LinearLayoutCompat>

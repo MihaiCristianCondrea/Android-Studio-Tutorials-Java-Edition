@@ -10,7 +10,7 @@ import androidx.room.PrimaryKey;
 public class Note {
     @PrimaryKey(autoGenerate = true)
     public int id;
-    public String text; // FIXME: Declaration can have final modifier
+    public final String text;
 
     public Note(String text) {
         this.text = text;

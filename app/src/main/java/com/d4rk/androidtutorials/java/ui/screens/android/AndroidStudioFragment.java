@@ -13,7 +13,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -450,21 +449,18 @@ public class AndroidStudioFragment extends Fragment {
         }
 
         static class CategoryHolder extends RecyclerView.ViewHolder {
-            final ImageView icon;
             final TextView title;
 
             CategoryHolder(@NonNull View itemView) {
                 super(itemView);
-                icon = itemView.findViewById(R.id.category_icon);
                 title = itemView.findViewById(R.id.category_title);
             }
 
             void bind(Category category) {
                 if (category.iconRes != 0) {
-                    icon.setImageResource(category.iconRes);
-                    icon.setVisibility(View.VISIBLE);
+                    title.setCompoundDrawablesRelativeWithIntrinsicBounds(category.iconRes, 0, 0, 0);
                 } else {
-                    icon.setVisibility(View.GONE);
+                    title.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0);
                 }
                 title.setText(category.title);
             }
