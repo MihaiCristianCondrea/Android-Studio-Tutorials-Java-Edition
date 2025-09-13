@@ -283,6 +283,7 @@
     <string name="navigation_drawer">Navigationsleiste</string>
     <string name="dashboard">Dashboard</string>
     <string name="code_font">Code-Schriftart</string>
+    <string name="code_font_description">Wähle die Schriftart für Codeausschnitte</string>
     <string name="language">Sprache</string>
     <string name="notifications">Benachrichtigungen</string>
     <string name="notification_settings">Benachrichtigungseinstellungen</string>
@@ -360,6 +361,7 @@
     <string name="next">Weiter</string>
     <string name="back">Zurück</string>
     <string name="bottom_navigation_labels">Bottom Navigation Labels</string>
+    <string name="bottom_navigation_labels_description">Wähle, wie Beschriftungen in der unteren Navigationsleiste erscheinen</string>
     <string name="summary_preference_permissions_access_notification_policy">Ermöglicht der App, auf die Benachrichtigungsrichtlinie des Geräts zuzugreifen und diese zu ändern, wodurch gesteuert wird, wie und wann Benachrichtigungen dem Benutzer angezeigt werden, und benutzerdefinierte Benachrichtigungsverwaltungsfunktionen bereitgestellt werden.</string>
     <string name="summary_preference_permissions_foreground_service">Ermöglicht der App, Dienste zu erstellen und zu verwenden, die im Vordergrund ausgeführt werden, wodurch sie Vorrang vor anderen Hintergrundprozessen erhalten und Leistung sowie Zuverlässigkeit verbessert werden.</string>
     <string name="summary_preference_settings_language">Anwendungssprache festlegen.</string>
