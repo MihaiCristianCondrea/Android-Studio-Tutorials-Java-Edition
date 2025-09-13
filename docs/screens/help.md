@@ -20,14 +20,6 @@ The Help screen offers the following functionalities, accessible primarily throu
 -   **Privacy Policy**: Opens a web link to the app's Privacy Policy.
 -   **Open Source Licenses**: Displays a screen with a list of open-source libraries used in the app and their licenses.
 
-## Ads
-The Help page displays a single native ad between the FAQ list and the Contact Us card.
-The banner is rendered by `HelpNativeAdBanner` which uses the shared `native_ad` configuration.
-An **Ad** label is shown to comply with policy requirements and padding ensures the banner
-does not interfere with surrounding content.
-See [Ads](settings/privacy/ads.md) for more information on ad configuration.
-*(Note: Presence of ads should be confirmed by checking layout files like `activity_help.xml`)*
-
 ## Integration
 To launch the Help screen, use the following Java code:
 ```java

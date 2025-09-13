@@ -39,7 +39,7 @@ point of user interaction. Here are some best practices for the UI layer:
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | **Follow Unidirectional Data Flow (UDF).**<br/>Strongly recommended                  | Follow UDF principles, where ViewModels expose UI state using the observer pattern and receive actions from the UI through method calls. |
 | **Use AAC ViewModels if their benefits apply to your app.**<br/>Strongly recommended | Use AndroidX ViewModels to handle business logic and fetch application data to expose UI state to the UI.                                |
-| **Use lifecycle-aware UI state collection.**<br/>Strongly recommended                | Collect UI state from the UI using lifecycle-aware APIs such as `repeatOnLifecycle`.                                                     |
+| **Use lifecycle-aware UI state collection.**<br/>Strongly recommended                | Observe `LiveData` with a `LifecycleOwner` (for example, `getViewLifecycleOwner()` in Fragments) so updates stop automatically when the UI is stopped. |
 | **Do not send events from the ViewModel to the UI.**<br/>Strongly recommended        | Process the event immediately in the ViewModel and cause a state update with the result of handling the event.                           |
 | **Use a single-activity application.**<br/>Recommended                               | Use Navigation Fragments to navigate between screens and deep link to your app if your app has more than one screen.                     |
 
