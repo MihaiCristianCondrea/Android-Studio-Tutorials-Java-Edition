@@ -24,8 +24,7 @@ public class ChronometerActivity extends UpNavigationActivity {
         setContentView(binding.getRoot());
 
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
         binding.floatingButtonShowSyntax.setOnClickListener(v -> {
             Intent intent = new Intent(this, CodeActivity.class);

@@ -8,15 +8,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class EdgeToEdgeDelegate {
+public final class EdgeToEdgeDelegate {
 
-    private final Activity activity;
-
-    public EdgeToEdgeDelegate(Activity activity) {
-        this.activity = activity;
+    private EdgeToEdgeDelegate() {
+        // Utility class
     }
 
-    public void applyEdgeToEdge(View container) {
+    public static void apply(Activity activity, View container) {
         WindowCompat.setDecorFitsSystemWindows(activity.getWindow(), false);
 
         ViewCompat.setOnApplyWindowInsetsListener(container, (v, insets) -> {
@@ -26,7 +24,7 @@ public class EdgeToEdgeDelegate {
         });
     }
 
-    public void applyEdgeToEdgeBottomBar(View container, View bottomNavigationView) {
+    public static void applyBottomBar(Activity activity, View container, View bottomNavigationView) {
         WindowCompat.setDecorFitsSystemWindows(activity.getWindow(), false);
 
         ViewCompat.setOnApplyWindowInsetsListener(container, (v, insets) -> {

@@ -28,8 +28,7 @@ public class SettingsActivity extends AppCompatActivity
         ActivitySettingsBinding binding = ActivitySettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
         settingsViewModel = new ViewModelProvider(this).get(SettingsViewModel.class);
         settingsViewModel.applyConsent();

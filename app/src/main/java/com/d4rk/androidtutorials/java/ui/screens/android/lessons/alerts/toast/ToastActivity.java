@@ -22,8 +22,7 @@ public class ToastActivity extends UpNavigationActivity {
         binding = ActivityToastBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
         binding.button.setOnClickListener(v ->
                 Toast.makeText(this, R.string.toast_this_is_a_toast, Toast.LENGTH_SHORT).show()

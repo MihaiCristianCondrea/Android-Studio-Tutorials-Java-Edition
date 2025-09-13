@@ -22,8 +22,7 @@ public class ImageButtonsActivity extends UpNavigationActivity {
         binding = ActivityImageButtonsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
         binding.imageButton.setOnClickListener(v ->
                 Snackbar.make(binding.getRoot(), R.string.snack_image_button, Snackbar.LENGTH_SHORT).show()

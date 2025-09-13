@@ -29,8 +29,7 @@ public class NavigationAndSearchingShortcutsActivity extends UpNavigationActivit
         setContentView(binding.getRoot());
         MobileAds.initialize(this);
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.shortcutList);
+        EdgeToEdgeDelegate.apply(this, binding.shortcutList);
 
         binding.adView.loadAd(new AdRequest.Builder().build());
         new FastScrollerBuilder(binding.shortcutList).useMd2Style().build();

@@ -29,8 +29,7 @@ public class LinearLayoutCodeActivity extends UpNavigationActivity {
         com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.appBarLayout);
+        EdgeToEdgeDelegate.apply(this, binding.appBarLayout);
 
         viewPager2 = binding.viewpager;
 

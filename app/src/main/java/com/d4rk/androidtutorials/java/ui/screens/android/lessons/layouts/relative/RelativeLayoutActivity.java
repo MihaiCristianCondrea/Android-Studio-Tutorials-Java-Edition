@@ -22,8 +22,7 @@ public class RelativeLayoutActivity extends UpNavigationActivity {
 
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(RelativeLayoutActivity.this, RelativeLayoutCodeActivity.class)));

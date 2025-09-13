@@ -40,8 +40,7 @@ public class RoomActivity extends UpNavigationActivity {
         binding = ActivityRoomBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.constraintLayout);
+        EdgeToEdgeDelegate.apply(this, binding.constraintLayout);
 
         db = AppDatabase.getInstance(this);
 

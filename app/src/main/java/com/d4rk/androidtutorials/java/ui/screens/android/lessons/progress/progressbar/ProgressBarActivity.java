@@ -21,8 +21,7 @@ public class ProgressBarActivity extends UpNavigationActivity {
         binding = ActivityProgressBarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.progressBar.hide();

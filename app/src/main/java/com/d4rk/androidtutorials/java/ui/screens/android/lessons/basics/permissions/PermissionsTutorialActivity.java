@@ -20,8 +20,7 @@ public class PermissionsTutorialActivity extends UpNavigationActivity {
         setContentView(binding.getRoot());
         MobileAds.initialize(this);
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.scrollView);
+        EdgeToEdgeDelegate.apply(this, binding.scrollView);
 
         binding.adViewBottom.loadAd(new AdRequest.Builder().build());
         binding.adViewLarge.loadAd(new AdRequest.Builder().build());

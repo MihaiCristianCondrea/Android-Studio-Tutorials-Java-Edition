@@ -23,8 +23,7 @@ public class ButtonsActivity extends UpNavigationActivity {
         binding = ActivityButtonsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.constraintLayout);
+        EdgeToEdgeDelegate.apply(this, binding.constraintLayout);
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.buttonNormal.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.button_normal) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());

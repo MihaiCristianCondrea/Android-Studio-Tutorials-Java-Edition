@@ -29,8 +29,7 @@ public class RetrofitCodeActivity extends UpNavigationActivity {
         binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.appBarLayout);
+        EdgeToEdgeDelegate.apply(this, binding.appBarLayout);
 
         setupViewPager();
 

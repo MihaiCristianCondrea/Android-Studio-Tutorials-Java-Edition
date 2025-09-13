@@ -23,8 +23,7 @@ public class NavigationDrawerActivity extends UpNavigationActivity {
         binding = ActivityNavigationDrawerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
         binding.navigationView.setNavigationItemSelectedListener(item -> {
             binding.textView.setText(getString(R.string.selected, item.getTitle()));
