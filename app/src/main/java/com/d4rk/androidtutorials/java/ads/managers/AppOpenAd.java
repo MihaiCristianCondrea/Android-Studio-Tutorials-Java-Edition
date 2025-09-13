@@ -18,7 +18,7 @@ import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.google.android.gms.ads.appopen.AppOpenAd.AppOpenAdLoadCallback;
 
 import java.util.Date;
@@ -35,10 +35,7 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
     public void onCreate() {
         super.onCreate();
         registerActivityLifecycleCallbacks(this);
-        MobileAds.initialize(
-                this,
-                initializationStatus -> {
-                });
+        AdUtils.initialize(this);
         CookieManager.getInstance();
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
         appOpenAdManager = new AppOpenAdManager(this);

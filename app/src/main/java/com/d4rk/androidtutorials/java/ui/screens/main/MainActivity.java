@@ -42,8 +42,7 @@ import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.d4rk.androidtutorials.java.utils.ReviewHelper;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
@@ -81,10 +80,9 @@ public class MainActivity extends AppCompatActivity {
             if (mBinding != null && mBinding.adView != null) {
                 if (ConsentUtils.canShowAds(MainActivity.this)) {
                     if (mBinding.adView.getVisibility() != View.VISIBLE) {
-                        MobileAds.initialize(MainActivity.this);
                         mBinding.adPlaceholder.setVisibility(View.GONE);
                         mBinding.adView.setVisibility(View.VISIBLE);
-                        mBinding.adView.loadAd(new AdRequest.Builder().build());
+                        AdUtils.loadBanner(mBinding.adView);
                     }
                 } else {
                     mBinding.adView.setVisibility(View.GONE);
@@ -204,10 +202,9 @@ public class MainActivity extends AppCompatActivity {
                 navBarView.setLabelVisibilityMode(uiState.bottomNavVisibility());
                 if (binding.adView != null) {
                     if (ConsentUtils.canShowAds(this)) {
-                        MobileAds.initialize(this);
                         binding.adPlaceholder.setVisibility(View.GONE);
                         binding.adView.setVisibility(View.VISIBLE);
-                        binding.adView.loadAd(new AdRequest.Builder().build());
+                        AdUtils.loadBanner(binding.adView);
                     } else {
                         binding.adView.setVisibility(View.GONE);
                         binding.adPlaceholder.setVisibility(View.VISIBLE);

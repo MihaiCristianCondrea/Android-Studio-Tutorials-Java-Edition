@@ -12,7 +12,7 @@ import com.android.billingclient.api.PendingPurchasesParams;
 import com.android.billingclient.api.ProductDetails;
 import com.android.billingclient.api.QueryProductDetailsParams;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -150,7 +150,7 @@ public class DefaultSupportRepository implements SupportRepository {
      * can be done here if needed for the support screen).
      */
     public AdRequest initMobileAds() {
-        MobileAds.initialize(context);
+        AdUtils.initialize(context);
         return new AdRequest.Builder().build();
     }
 

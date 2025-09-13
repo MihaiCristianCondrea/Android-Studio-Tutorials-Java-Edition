@@ -18,7 +18,7 @@ import com.d4rk.androidtutorials.java.databinding.FragmentClockLayoutBinding;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import com.d4rk.androidtutorials.java.utils.FontManager;
-import com.google.android.gms.ads.AdRequest;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -32,7 +32,7 @@ public class ClockTabLayoutFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         FragmentClockLayoutBinding binding = FragmentClockLayoutBinding.inflate(inflater, container, false);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        binding.adView.loadAd(new AdRequest.Builder().build());
+        AdUtils.loadBanner(binding.adView);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
