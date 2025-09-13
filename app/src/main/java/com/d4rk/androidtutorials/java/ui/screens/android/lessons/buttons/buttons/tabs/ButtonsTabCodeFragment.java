@@ -5,19 +5,17 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentSameCodeBinding;
+import com.d4rk.androidtutorials.java.ui.components.NoCodeAdFragment;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import com.d4rk.androidtutorials.java.utils.FontManager;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -26,13 +24,17 @@ import java.io.InputStreamReader;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
-public class ButtonsTabCodeFragment extends Fragment {
+public class ButtonsTabCodeFragment extends NoCodeAdFragment<FragmentSameCodeBinding> {
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        FragmentSameCodeBinding binding = FragmentSameCodeBinding.inflate(inflater, container, false);
+    @NonNull
+    protected FragmentSameCodeBinding inflateBinding(@NonNull LayoutInflater inflater, ViewGroup container) {
+        return FragmentSameCodeBinding.inflate(inflater, container, false);
+    }
+
+    @Override
+    protected void onBindingCreated(@NonNull FragmentSameCodeBinding binding, Bundle savedInstanceState) {
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        AdUtils.loadBanner(binding.adView);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
@@ -51,7 +53,5 @@ public class ButtonsTabCodeFragment extends Fragment {
             Log.e("ButtonsTabCode", "Error reading code", e);
         }
         binding.textViewWarning.setText(R.string.same_code_buttons);
-        return binding.getRoot();
     }
-
 }
