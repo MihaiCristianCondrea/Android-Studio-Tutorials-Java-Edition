@@ -4,5 +4,5 @@
     <size
         android:width="8dp"
         android:height="8dp" />
-    <solid android:color="@android:color/darker_gray" />
+    <solid android:color="?attr/colorOutline" />
 </shape>

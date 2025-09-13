@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.util.TypedValue;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -81,10 +82,11 @@ public class OnboardingActivity extends AppCompatActivity {
         new TabLayoutMediator(binding.tabIndicator, binding.viewPager, (tab, position) -> {
             ImageView dot = new ImageView(this);
             dot.setImageResource(R.drawable.onboarding_dot_unselected);
+            int margin = dpToPx(2);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT);
-            params.setMargins(8,0,8,0);
+            params.setMargins(margin, 0, margin, 0);
             dot.setLayoutParams(params);
             tab.setCustomView(dot);
         }).attach();
@@ -169,6 +171,11 @@ public class OnboardingActivity extends AppCompatActivity {
             binding.buttonNext.setText(R.string.next);
             binding.buttonNext.setIconResource(R.drawable.ic_arrow_forward);
         }
+    }
+
+    private int dpToPx(int dp) {
+        return Math.round(TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics()));
     }
 
     private static class OnboardingPagerAdapter extends FragmentStateAdapter {
