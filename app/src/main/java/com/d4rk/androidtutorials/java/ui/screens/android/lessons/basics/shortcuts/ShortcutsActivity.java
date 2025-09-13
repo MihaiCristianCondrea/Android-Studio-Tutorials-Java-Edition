@@ -21,8 +21,7 @@ public class ShortcutsActivity extends UpNavigationActivity {
         ActivityShortcutsBinding binding = ActivityShortcutsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
         MobileAds.initialize(this);
         binding.adViewBottom.loadAd(new AdRequest.Builder().build());

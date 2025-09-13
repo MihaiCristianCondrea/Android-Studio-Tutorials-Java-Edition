@@ -24,8 +24,7 @@ public class SwitchActivity extends UpNavigationActivity {
         binding = ActivitySwitchBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         setOnClickListeners();

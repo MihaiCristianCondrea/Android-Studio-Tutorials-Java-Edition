@@ -18,8 +18,7 @@ public class DebuggingShortcutsActivity extends UpNavigationActivity {
         setContentView(binding.getRoot());
 
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.scrollView);
+        EdgeToEdgeDelegate.apply(this, binding.scrollView);
 
         MobileAds.initialize(this);
         binding.adView.loadAd(new AdRequest.Builder().build());

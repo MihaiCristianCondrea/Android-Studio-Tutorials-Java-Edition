@@ -27,8 +27,7 @@ public class CodeActivity extends UpNavigationActivity {
         binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.tabLayout);
+        EdgeToEdgeDelegate.apply(this, binding.tabLayout);
 
         CodeViewModel viewModel = new ViewModelProvider(this).get(CodeViewModel.class);
 

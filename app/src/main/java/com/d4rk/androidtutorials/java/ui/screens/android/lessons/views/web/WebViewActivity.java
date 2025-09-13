@@ -25,8 +25,7 @@ public class WebViewActivity extends UpNavigationActivity {
         binding = ActivityWebviewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
         new FastScrollerBuilder(binding.webView).useMd2Style().build();
         setupWebView();

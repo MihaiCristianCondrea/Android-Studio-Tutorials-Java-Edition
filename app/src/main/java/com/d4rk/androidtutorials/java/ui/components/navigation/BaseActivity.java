@@ -17,8 +17,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onPostCreate(savedInstanceState);
         View container = findViewById(R.id.container);
         if (container != null) {
-            EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-            edgeToEdgeDelegate.applyEdgeToEdge(container);
+            EdgeToEdgeDelegate.apply(this, container);
         }
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {

@@ -26,8 +26,7 @@ public class TimePickerActivity extends UpNavigationActivity {
         binding = ActivityTimePickerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
 
         updateTimeInView();

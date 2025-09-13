@@ -18,8 +18,7 @@ public class AndroidHistory extends UpNavigationActivity {
         setContentView(binding.getRoot());
         MobileAds.initialize(this);
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.scrollView);
+        EdgeToEdgeDelegate.apply(this, binding.scrollView);
 
         binding.adView.loadAd(new AdRequest.Builder().build());
         binding.adViewBottom.loadAd(new AdRequest.Builder().build());

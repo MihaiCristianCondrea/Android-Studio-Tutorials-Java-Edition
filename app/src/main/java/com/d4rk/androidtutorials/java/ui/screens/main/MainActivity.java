@@ -187,7 +187,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
             boolean useRail = shouldUseNavigationRail();
-            EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
             ActivityMainBinding binding = mBinding;
             if (binding == null) {
                 return;
@@ -196,11 +195,11 @@ public class MainActivity extends AppCompatActivity {
             if (useRail) {
                 binding.navRail.setVisibility(View.VISIBLE);
                 navBarView.setVisibility(View.GONE);
-                edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+                EdgeToEdgeDelegate.apply(this, binding.container);
             } else {
                 binding.navRail.setVisibility(View.GONE);
                 navBarView.setVisibility(View.VISIBLE);
-                edgeToEdgeDelegate.applyEdgeToEdgeBottomBar(binding.container, navBarView);
+                EdgeToEdgeDelegate.applyBottomBar(this, binding.container, navBarView);
 
                 navBarView.setLabelVisibilityMode(uiState.bottomNavVisibility());
                 if (binding.adView != null) {

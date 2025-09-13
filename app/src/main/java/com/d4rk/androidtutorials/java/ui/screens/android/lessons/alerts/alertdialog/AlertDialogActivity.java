@@ -22,8 +22,7 @@ public class AlertDialogActivity extends UpNavigationActivity {
         binding = ActivityAlertDialogBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdge(binding.container);
+        EdgeToEdgeDelegate.apply(this, binding.container);
 
         MaterialAlertDialogBuilder alertDialog = createAlertDialog();
         binding.button.setOnClickListener(v -> alertDialog.show());

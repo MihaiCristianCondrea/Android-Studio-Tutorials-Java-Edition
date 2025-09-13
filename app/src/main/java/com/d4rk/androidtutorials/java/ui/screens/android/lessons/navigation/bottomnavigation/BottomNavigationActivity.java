@@ -21,8 +21,7 @@ public class BottomNavigationActivity extends UpNavigationActivity {
         binding = ActivityBottomNavigationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate edgeToEdgeDelegate = new EdgeToEdgeDelegate(this);
-        edgeToEdgeDelegate.applyEdgeToEdgeBottomBar(binding.container, binding.bottomNav);
+        EdgeToEdgeDelegate.applyBottomBar(this, binding.container, binding.bottomNav);
 
         binding.bottomNav.setOnItemSelectedListener(item -> {
             binding.textView.setText(getString(R.string.selected, item.getTitle()));
