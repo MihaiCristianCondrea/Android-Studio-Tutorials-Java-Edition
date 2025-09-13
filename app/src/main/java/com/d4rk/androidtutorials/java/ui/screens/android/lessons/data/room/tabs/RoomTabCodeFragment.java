@@ -5,19 +5,17 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentCodeBinding;
+import com.d4rk.androidtutorials.java.ui.components.NoCodeAdFragment;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import com.d4rk.androidtutorials.java.utils.FontManager;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -29,13 +27,17 @@ import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 /**
  * Shows the Java implementation for the Room example.
  */
-public class RoomTabCodeFragment extends Fragment {
+public class RoomTabCodeFragment extends NoCodeAdFragment<FragmentCodeBinding> {
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        FragmentCodeBinding binding = FragmentCodeBinding.inflate(inflater, container, false);
+    @NonNull
+    protected FragmentCodeBinding inflateBinding(@NonNull LayoutInflater inflater, ViewGroup container) {
+        return FragmentCodeBinding.inflate(inflater, container, false);
+    }
+
+    @Override
+    protected void onBindingCreated(@NonNull FragmentCodeBinding binding, Bundle savedInstanceState) {
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        AdUtils.loadBanner(binding.adView);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
         Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
@@ -53,7 +55,6 @@ public class RoomTabCodeFragment extends Fragment {
         } catch (IOException e) {
             Log.e("RoomTabCode", "Error reading code", e);
         }
-        return binding.getRoot();
     }
 }
 
