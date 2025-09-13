@@ -47,7 +47,7 @@ public abstract class NoCodeAdFragment<T extends ViewBinding> extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         binding = inflateBinding(inflater, container);
-        View adView = binding.getRoot().findViewById(R.id.adView);
+        View adView = binding.getRoot().findViewById(R.id.ad_view);
         AdUtils.loadBanner(adView);
         onBindingCreated(binding, savedInstanceState);
         return binding.getRoot();
