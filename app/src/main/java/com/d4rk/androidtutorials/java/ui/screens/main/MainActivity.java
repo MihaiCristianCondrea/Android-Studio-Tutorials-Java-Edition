@@ -30,14 +30,18 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.preference.PreferenceManager;
 
+import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
+import com.d4rk.androidtutorials.java.notifications.managers.AppUpdateNotificationsManager;
+import com.d4rk.androidtutorials.java.notifications.managers.AppUsageNotificationsManager;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFragment;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.d4rk.androidtutorials.java.utils.ReviewHelper;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.navigation.NavigationBarView;
@@ -48,6 +52,7 @@ import com.google.android.play.core.appupdate.AppUpdateOptions;
 import com.google.android.play.core.install.InstallStateUpdatedListener;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.InstallStatus;
+import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.ump.ConsentInformation;
 import com.google.android.ump.ConsentRequestParameters;
 import com.google.android.ump.UserMessagingPlatform;
@@ -92,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
     private NavController navController;
     private int currentNavIndex;
     private AppUpdateManager appUpdateManager;
+    private AppUpdateNotificationsManager appUpdateNotificationsManager;
     private InstallStateUpdatedListener installStateUpdatedListener;
     private long backPressedTime;
 
@@ -134,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         this.appUpdateManager = mainViewModel.getAppUpdateManager();
+        setupUpdateNotifications();
 
         registerInstallStateListener();
         getLifecycle().addObserver(lifecycleObserver);
@@ -150,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        checkInAppReview();
     }
 
     private void setupActionBar() {
@@ -238,17 +247,19 @@ public class MainActivity extends AppCompatActivity {
                         .build();
 
                 if (useRail) {
-                    NavigationUI.setupWithNavController(mBinding.navRail, navController);
-                    mBinding.navRail.setOnItemSelectedListener(item -> {
-                        if (item.getItemId() == navController.getCurrentDestination().getId()) {
+                    if (mBinding.navRail != null) {
+                        NavigationUI.setupWithNavController(mBinding.navRail, navController);
+                        mBinding.navRail.setOnItemSelectedListener(item -> {
+                            if (item.getItemId() == navController.getCurrentDestination().getId()) {
+                                return true;
+                            }
+                            int newIndex = navOrder.get(item.getItemId());
+                            NavOptions options = newIndex > currentNavIndex ? forwardOptions : backwardOptions;
+                            navController.navigate(item.getItemId(), null, options);
+                            currentNavIndex = newIndex;
                             return true;
-                        }
-                        int newIndex = navOrder.get(item.getItemId());
-                        NavOptions options = newIndex > currentNavIndex ? forwardOptions : backwardOptions;
-                        navController.navigate(item.getItemId(), null, options);
-                        currentNavIndex = newIndex;
-                        return true;
-                    });
+                        });
+                    }
                 } else {
                     NavigationUI.setupWithNavController(navBarView, navController);
                     navBarView.setOnItemSelectedListener(item -> {
@@ -299,12 +310,64 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void startImmediateUpdate(AppUpdateInfo appUpdateInfo) {
-        appUpdateManager.startUpdateFlowForResult(
-                appUpdateInfo,
-                updateActivityResultLauncher,
-                AppUpdateOptions.newBuilder(AppUpdateType.IMMEDIATE).build()
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AppUsageNotificationsManager appUsageNotificationsManager = new AppUsageNotificationsManager(this);
+        appUsageNotificationsManager.scheduleAppUsageCheck();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            appUpdateNotificationsManager.checkAndSendUpdateNotification();
+        }
+        checkForFlexibleOrImmediateUpdate();
+    }
+
+    private void checkForFlexibleOrImmediateUpdate() {
+        appUpdateManager.getAppUpdateInfo().addOnSuccessListener(appUpdateInfo -> {
+                    boolean updateAvailable = appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE;
+                    if (updateAvailable) {
+                        startImmediateUpdate(appUpdateInfo);
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    if (!BuildConfig.DEBUG) {
+                        Snackbar.make(
+                                findViewById(android.R.id.content),
+                                getString(R.string.snack_general_error),
+                                Snackbar.LENGTH_LONG
+                        ).show();
+                    }
+        });
+    }
+
+    private void checkInAppReview() {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        int sessionCount = prefs.getInt(getString(R.string.key_session_count), 0);
+        boolean hasPrompted = prefs.getBoolean(getString(R.string.key_has_prompted_review), false);
+
+        ReviewHelper.launchInAppReviewIfEligible(
+                this,
+                sessionCount,
+                hasPrompted,
+                () -> prefs.edit().putBoolean(getString(R.string.key_has_prompted_review), true).apply()
         );
+
+        prefs.edit().putInt(getString(R.string.key_session_count), sessionCount + 1).apply();
+    }
+
+    private void startImmediateUpdate(AppUpdateInfo appUpdateInfo) {
+        try {
+            appUpdateManager.startUpdateFlowForResult(
+                    appUpdateInfo,
+                    updateActivityResultLauncher,
+                    AppUpdateOptions.newBuilder(AppUpdateType.IMMEDIATE).build()
+            );
+        } catch (Exception e) {
+            Log.e("MainActivity", "Error starting in-app update", e);
+        }
+    }
+
+    private void setupUpdateNotifications() {
+        appUpdateNotificationsManager = new AppUpdateNotificationsManager(this);
     }
 
     private void registerInstallStateListener() {
