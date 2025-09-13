@@ -53,7 +53,7 @@ operations through a small set of use cases. This pattern was inspired by the
 implemented in a simplified form to avoid adding heavy dependencies. The result keeps the UI
 simple and ensures a clear separation of concerns across the whole app.
 
-For detailed guidance, see [Recommendations for Android architecture](docs/android-architecture-recommendations.md).
+For detailed guidance, see [Recommendations for Android architecture](docs/core/android-architecture-recommendations.md).
 
 ## Feedback
 
