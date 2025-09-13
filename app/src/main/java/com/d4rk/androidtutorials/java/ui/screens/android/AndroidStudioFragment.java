@@ -13,11 +13,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.SearchView;
 import androidx.core.view.MenuHost;
 import androidx.core.view.MenuProvider;
@@ -30,10 +29,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
+import com.d4rk.androidtutorials.java.databinding.FragmentAndroidStudioBinding;
+import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioCategoryBinding;
+import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioLessonBinding;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.textview.MaterialTextView;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.ShapeAppearanceModel;
 
@@ -55,12 +58,14 @@ public class AndroidStudioFragment extends Fragment {
     private final List<Object> allItems = new ArrayList<>();
     private LessonsAdapter adapter;
     private boolean showAds;
+    private FragmentAndroidStudioBinding binding;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_android_studio, container, false);
+        binding = FragmentAndroidStudioBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 
     @Override
@@ -70,7 +75,7 @@ public class AndroidStudioFragment extends Fragment {
         if (showAds) {
             ensureMobileAdsInitialized();
         }
-        RecyclerView list = view.findViewById(R.id.lessons_list);
+        RecyclerView list = binding.lessonsList;
         list.setLayoutManager(new LinearLayoutManager(requireContext()));
         adapter = new LessonsAdapter();
         list.setAdapter(adapter);
@@ -123,6 +128,12 @@ public class AndroidStudioFragment extends Fragment {
                 return false;
             }
         }, getViewLifecycleOwner(), Lifecycle.State.RESUMED);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 
     private void ensureMobileAdsInitialized() {
@@ -351,13 +362,13 @@ public class AndroidStudioFragment extends Fragment {
                 adView.setNativeAdLayout(R.layout.ad_android_studio_list);
                 return new AdHolder(adView);
             } else if (viewType == TYPE_CATEGORY) {
-                View view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.item_android_studio_category, parent, false);
-                return new CategoryHolder(view);
+                ItemAndroidStudioCategoryBinding binding = ItemAndroidStudioCategoryBinding.inflate(
+                        LayoutInflater.from(parent.getContext()), parent, false);
+                return new CategoryHolder(binding);
             } else {
-                View view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.item_android_studio_lesson, parent, false);
-                return new LessonHolder(view);
+                ItemAndroidStudioLessonBinding binding = ItemAndroidStudioLessonBinding.inflate(
+                        LayoutInflater.from(parent.getContext()), parent, false);
+                return new LessonHolder(binding);
             }
         }
 
@@ -401,16 +412,16 @@ public class AndroidStudioFragment extends Fragment {
 
         static class LessonHolder extends RecyclerView.ViewHolder {
             final MaterialCardView card;
-            final ImageView icon;
-            final TextView title;
-            final TextView summary;
+            final AppCompatImageView icon;
+            final MaterialTextView title;
+            final MaterialTextView summary;
 
-            LessonHolder(@NonNull View itemView) {
-                super(itemView);
-                card = (MaterialCardView) itemView;
-                icon = itemView.findViewById(R.id.lesson_icon);
-                title = itemView.findViewById(R.id.lesson_title);
-                summary = itemView.findViewById(R.id.lesson_summary);
+            LessonHolder(@NonNull ItemAndroidStudioLessonBinding binding) {
+                super(binding.getRoot());
+                card = binding.lessonCard;
+                icon = binding.lessonIcon;
+                title = binding.lessonTitle;
+                summary = binding.lessonSummary;
             }
 
             void bind(Lesson lesson, boolean first, boolean last) {
@@ -450,21 +461,18 @@ public class AndroidStudioFragment extends Fragment {
         }
 
         static class CategoryHolder extends RecyclerView.ViewHolder {
-            final ImageView icon;
-            final TextView title;
+            final MaterialTextView title;
 
-            CategoryHolder(@NonNull View itemView) {
-                super(itemView);
-                icon = itemView.findViewById(R.id.category_icon);
-                title = itemView.findViewById(R.id.category_title);
+            CategoryHolder(@NonNull ItemAndroidStudioCategoryBinding binding) {
+                super(binding.getRoot());
+                title = binding.categoryTitle;
             }
 
             void bind(Category category) {
                 if (category.iconRes != 0) {
-                    icon.setImageResource(category.iconRes);
-                    icon.setVisibility(View.VISIBLE);
+                    title.setCompoundDrawablesRelativeWithIntrinsicBounds(category.iconRes, 0, 0, 0);
                 } else {
-                    icon.setVisibility(View.GONE);
+                    title.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0);
                 }
                 title.setText(category.title);
             }

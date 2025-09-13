@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/category_title"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
+    android:padding="16dp"
+    android:drawablePadding="16dp"
     android:gravity="center_vertical"
-    android:orientation="horizontal"
-    android:padding="16dp">
-
-    <!-- FIXME: This tag and its children can be replaced by one `<TextView/>` and a compound drawable-->
-
-    <ImageView
-        android:id="@+id/category_icon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="@null" />
-
-    <TextView
-        android:id="@+id/category_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
-
-</LinearLayout>
+    android:textAppearance="@style/TextAppearance.Material3.BodySmall" />

@@ -20,7 +20,6 @@ public class BottomLabelsFragment extends Fragment {
     private FragmentOnboardingBottomLabelsBinding binding;
     private OnboardingViewModel viewModel;
     private MaterialRadioButton[] radioButtons;
-    private View[] optionCards; // FIXME: Field can be converted to a local variable
 
     @Nullable
     @Override
@@ -40,7 +39,7 @@ public class BottomLabelsFragment extends Fragment {
                 binding.optionUnlabeled.radioButton
         };
 
-        optionCards = new View[]{
+        View[] optionCards = new View[]{
                 binding.cardLabeled,
                 binding.cardSelected,
                 binding.cardUnlabeled
