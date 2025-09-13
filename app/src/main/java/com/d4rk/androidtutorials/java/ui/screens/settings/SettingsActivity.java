@@ -4,19 +4,17 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.ListPreference;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySettingsBinding;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class SettingsActivity extends AppCompatActivity
+public class SettingsActivity extends UpNavigationActivity
         implements SharedPreferences.OnSharedPreferenceChangeListener,
         androidx.preference.Preference.SummaryProvider<ListPreference> {
 
@@ -28,7 +26,6 @@ public class SettingsActivity extends AppCompatActivity
         ActivitySettingsBinding binding = ActivitySettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.container);
 
         settingsViewModel = new ViewModelProvider(this).get(SettingsViewModel.class);
         settingsViewModel.applyConsent();
@@ -37,10 +34,6 @@ public class SettingsActivity extends AppCompatActivity
                 .replace(R.id.settings, new SettingsFragment())
                 .commit();
 
-        ActionBar supportActionBar = getSupportActionBar();
-        if (supportActionBar != null) {
-            supportActionBar.setDisplayHomeAsUpEnabled(true);
-        }
 
         settingsViewModel.registerPreferenceChangeListener(this);
     }

@@ -7,7 +7,6 @@ import androidx.preference.PreferenceFragmentCompat;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityPermissionsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 public class PermissionsActivity extends UpNavigationActivity {
     @Override
@@ -16,12 +15,7 @@ public class PermissionsActivity extends UpNavigationActivity {
         ActivityPermissionsBinding binding = ActivityPermissionsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.container);
-
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_permissions, new SettingsFragment()).commit();
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {

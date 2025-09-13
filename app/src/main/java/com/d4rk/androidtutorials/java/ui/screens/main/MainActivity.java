@@ -160,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
     private void setupActionBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
             new AppBarConfiguration.Builder(
                     R.id.navigation_home,
                     R.id.navigation_android_studio,
