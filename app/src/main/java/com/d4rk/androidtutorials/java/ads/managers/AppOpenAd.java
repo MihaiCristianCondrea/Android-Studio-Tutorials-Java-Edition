@@ -5,7 +5,6 @@ import android.app.Application;
 import android.app.Application.ActivityLifecycleCallbacks;
 import android.content.Context;
 import android.os.Bundle;
-import android.webkit.CookieManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,8 +34,6 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
     public void onCreate() {
         super.onCreate();
         registerActivityLifecycleCallbacks(this);
-        AdUtils.initialize(this);
-        CookieManager.getInstance();
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
         appOpenAdManager = new AppOpenAdManager(this);
     }
@@ -98,6 +95,7 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
         }
 
         private void loadAd(Context context) {
+            AdUtils.initialize(context);
             if (isLoadingAd || isAdAvailable()) {
                 return;
             }
