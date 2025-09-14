@@ -67,13 +67,13 @@ public class AboutFragment extends Fragment {
         binding.imageViewAppIcon.setOnClickListener(
                 v -> openUrl("https://mihaicristiancondrea.github.io/profile"));
         binding.chipGoogleDev.setOnClickListener(
-                v -> openUrl("https://g.dev/D4rK7355608"));
+                v -> openUrl("https://g.dev/Mihai-Cristian-Condrea"));
         binding.chipYoutube.setOnClickListener(
                 v -> openUrl("https://www.youtube.com/c/D4rK7355608"));
         binding.chipGithub.setOnClickListener(
                 v -> openUrl("https://github.com/MihaiCristianCondrea/" + BuildConfig.APPLICATION_ID));
         binding.chipTwitter.setOnClickListener(
-                v -> openUrl("https://twitter.com/D4rK7355608"));
+                v -> openUrl("https://x.com/MihaiCristianC"));
         binding.chipXda.setOnClickListener(
                 v -> openUrl("https://forum.xda-developers.com/m/d4rk7355608.10095012"));
         binding.chipMusic.setOnClickListener(

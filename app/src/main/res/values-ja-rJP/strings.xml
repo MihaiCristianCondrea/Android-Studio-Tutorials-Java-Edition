@@ -369,7 +369,7 @@
     <string name="summary_preference_faq_3">いいえ、Android Studio Tutorials: Java Edition は現在 Android デバイスでのみ利用できます。</string>
     <string name="summary_preference_faq_4">はい、Android Studio Tutorials: Java Edition は Android アプリ開発を初めて学ぶ初心者に適しています。IDE のインストールから初めてのアプリのビルドとデプロイまで、Android Studio の基本をカバーするさまざまな動画チュートリアルを提供します。</string>
     <string name="summary_preference_faq_5">はい、Android Studio Tutorials: Java Edition は新しい動画チュートリアルやコンテンツを定期的に追加し、ユーザーが Android Studio の最新機能や変更点を把握できるようにしています。</string>
-    <string name="summary_preference_faq_6">Android Studio Tutorials: Java Edition に関する質問や問題がある場合は、アプリのサポートページから、または d4rk7355608@gmail.com までメールでサポートに連絡してください。サポートチームが問題解決に努めます。</string>
+    <string name="summary_preference_faq_6">Android Studio Tutorials: Java Edition に関する質問や問題がある場合は、アプリのサポートページから、または contact.mihaicristiancondrea@gmail.com までメールでサポートに連絡してください。サポートチームが問題解決に努めます。</string>
     <string name="summary_preference_faq_7">アプリの設定メニューに移動し、これらの機能のスイッチを切り替えることで Firebase Analytics と Crashlytics を無効にできます。</string>
     <string name="summary_preference_faq_8">アプリの設定メニューに移動し、\"アップデートを確認\"オプションを選択することで Android Studio Tutorials: Java Edition の更新を確認できます。</string>
     <string name="summary_preference_faq_9">Google Play ストアで好意的なレビューを残し、友人や同僚とアプリを共有し、設定メニューの\"共有\"オプションを通じて開発者を支援することで、Android Studio Tutorials: Java Edition の開発をサポートできます。</string>

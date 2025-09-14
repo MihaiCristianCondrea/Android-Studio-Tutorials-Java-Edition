@@ -321,7 +321,7 @@
     <string name="summary_preference_faq_3">아니요, Android Studio 튜토리얼: Java 에디션은 현재 Android 기기에서만 사용할 수 있습니다.</string>
     <string name="summary_preference_faq_4">네, Android Studio 튜토리얼: Java 에디션은 Android 앱 개발을 처음 접하고 Android Studio 사용법을 배우고 싶은 초보자에게 적합합니다. 이 앱은 IDE 설치부터 첫 앱 빌드 및 배포까지 Android Studio 사용의 기본을 다루는 다양한 동영상 튜토리얼을 제공합니다.</string>
     <string name="summary_preference_faq_5">네, Android Studio 튜토리얼: Java 에디션은 사용자가 Android Studio의 최신 기능과 변경 사항을 최신 상태로 유지할 수 있도록 새로운 동영상 튜토리얼과 콘텐츠로 정기적으로 업데이트됩니다.</string>
-    <string name="summary_preference_faq_6">Android Studio 튜토리얼: Java 에디션에 대한 질문이나 문제가 있는 경우 앱의 지원 페이지를 통하거나 d4rk7355608@gmail.com으로 이메일을 보내 문의할 수 있습니다. 겪고 있는 문제를 해결하는 데 최선을 다해 도와드리겠습니다.</string>
+    <string name="summary_preference_faq_6">Android Studio 튜토리얼: Java 에디션에 대한 질문이나 문제가 있는 경우 앱의 지원 페이지를 통하거나 contact.mihaicristiancondrea@gmail.com으로 이메일을 보내 문의할 수 있습니다. 겪고 있는 문제를 해결하는 데 최선을 다해 도와드리겠습니다.</string>
     <string name="summary_preference_faq_7">앱의 설정 메뉴로 이동하여 이러한 기능에 대한 스위치를 토글하여 Firebase 분석 및 Crashlytics를 비활성화할 수 있습니다.</string>
     <string name="summary_preference_faq_8">앱의 설정 메뉴로 이동하여 "업데이트 확인" 옵션을 선택하여 Android Studio 튜토리얼: Java 에디션의 업데이트를 확인할 수 있습니다.</string>
     <string name="summary_preference_faq_9">Google Play 스토어에 긍정적인 리뷰를 남기거나, 친구 및 동료와 앱을 공유하거나, 설정 메뉴의 "공유" 옵션을 통해 개발자를 지원함으로써 Android Studio 튜토리얼: Java 에디션의 개발을 지원할 수 있습니다.</string>

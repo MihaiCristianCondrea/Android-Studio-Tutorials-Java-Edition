@@ -322,7 +322,7 @@
     <string name="summary_preference_faq_3">不，Android Studio 教學：Java 版目前僅適用於 Android 裝置。</string>
     <string name="summary_preference_faq_4">是的，Android Studio 教學：Java 版適合剛接觸 Android 應用程式開發並希望學習如何使用 Android Studio 的初學者。該應用程式提供了一系列影片教學，涵蓋了使用 Android Studio 的基礎知識，從安裝 IDE 到建置和部署您的第一個應用程式。</string>
     <string name="summary_preference_faq_5">是的，Android Studio 教學：Java 版會定期更新新的影片教學和內容，以讓使用者了解 Android Studio 的最新功能和變化。</string>
-    <string name="summary_preference_faq_6">如果您對 Android Studio 教學：Java 版有疑問或問題，您可以透過應用程式的支援頁面或電子郵件 d4rk7355608@gmail.com 與我們聯絡。我們將盡力協助您解決任何可能遇到的問題。</string>
+    <string name="summary_preference_faq_6">如果您對 Android Studio 教學：Java 版有疑問或問題，您可以透過應用程式的支援頁面或電子郵件 contact.mihaicristiancondrea@gmail.com 與我們聯絡。我們將盡力協助您解決任何可能遇到的問題。</string>
     <string name="summary_preference_faq_7">您可以透過進入應用程式中的設定選單並切換這些功能的開關來停用 Firebase 分析和 Crashlytics。</string>
     <string name="summary_preference_faq_8">您可以透過進入應用程式中的設定選單並選擇「檢查更新」選項來檢查 Android Studio 教學：Java 版的更新。</string>
     <string name="summary_preference_faq_9">您可以透過在 Google Play 商店留下正面評論、與朋友和同事分享應用程式，以及透過設定選單中的「分享」選項支持開發者，來支持 Android Studio 教學：Java 版的開發。</string>

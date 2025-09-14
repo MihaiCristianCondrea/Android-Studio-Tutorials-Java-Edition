@@ -44,7 +44,7 @@ public class BottomSheetMenuFragment extends BottomSheetDialogFragment {
         });
 
         binding.menuUpdates.setOnClickListener(v -> {
-            Uri changelogUri = Uri.parse("https://github.com/D4rK7355608/com.d4rk.androidtutorials.java/blob/main/CHANGELOG.md");
+            Uri changelogUri = Uri.parse("https://github.com/MihaiCristianCondrea/Android-Studio-Tutorials-Java-Edition/blob/main/CHANGELOG.md");
             Intent openChangelog = new Intent(Intent.ACTION_VIEW, changelogUri);
             if (openChangelog.resolveActivity(requireContext().getPackageManager()) != null) {
                 startActivity(openChangelog);
