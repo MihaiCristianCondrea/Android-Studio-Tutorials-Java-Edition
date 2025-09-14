@@ -100,6 +100,8 @@ dependencies {
     annotationProcessor libs.glide.compiler
     implementation libs.retrofit2
     implementation libs.retrofit2.converter.gson
+    implementation libs.okhttp
+    implementation libs.androidx.work.runtime
 
 
     // Testing

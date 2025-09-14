@@ -19,6 +19,7 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.google.android.gms.ads.appopen.AppOpenAd.AppOpenAdLoadCallback;
+import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 
 import java.util.Date;
 
@@ -36,6 +37,12 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
         registerActivityLifecycleCallbacks(this);
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
         appOpenAdManager = new AppOpenAdManager(this);
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        OpenSourceLicensesUtils.shutdown(this);
     }
 
     @OnLifecycleEvent(Event.ON_START)

@@ -30,6 +30,8 @@ hilt = "2.57.1"
 room = "2.8.0"
 glide = "5.0.4"
 retrofit = "3.0.0"
+okhttp = "4.12.0"
+work = "2.9.0"
 
 [libraries]
 aboutlibraries = { module = "com.mikepenz:aboutlibraries", version.ref = "aboutlibraries" }
@@ -73,3 +75,5 @@ glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
 retrofit2 = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit2-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+androidx-work-runtime = { module = "androidx.work:work-runtime", version.ref = "work" }
