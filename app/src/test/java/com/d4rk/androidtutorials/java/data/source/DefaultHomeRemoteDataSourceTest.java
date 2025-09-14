@@ -50,7 +50,7 @@ public class DefaultHomeRemoteDataSourceTest {
                 "{\"name\":\"App2\",\"packageName\":\"com.d4rk.androidtutorials.sample\",\"iconLogo\":\"logo2\"}]}}";
         List<PromotedApp> result = invokeParse(new JSONObject(json));
         assertEquals(1, result.size());
-        assertEquals("com.example.app1", result.get(0).getPackageName());
+        assertEquals("com.example.app1", result.get(0).packageName());
     }
 
     @Test
