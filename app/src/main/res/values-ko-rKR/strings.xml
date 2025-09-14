@@ -250,7 +250,8 @@
     <string name="success_icon">성공 아이콘</string>
     <string name="bottom_navigation_bar_labels">하단 탐색 메뉴 라벨</string>
     <string name="labeled">라벨 표시</string>
-    <string name="selected">선택됨 %1$s</string>
+    <string name="selected_format">선택됨 %1$s</string>
+    <string name="selected">선택됨</string>
     <string name="unlabeled">라벨 없음</string>
     <string name="navigation">내비게이션</string>
     <string name="bottom_navigation">하단 내비게이션</string>

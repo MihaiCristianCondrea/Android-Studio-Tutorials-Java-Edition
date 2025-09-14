@@ -250,7 +250,8 @@
     <string name="success_icon">Ícone de sucesso</string>
     <string name="bottom_navigation_bar_labels">Rótulos da barra de navegação inferior</string>
     <string name="labeled">Rotulado</string>
-    <string name="selected">Selecionado %1$s</string>
+    <string name="selected_format">Selecionado %1$s</string>
+    <string name="selected">Selecionado</string>
     <string name="unlabeled">Sem rótulo</string>
     <string name="navigation">Navegação</string>
     <string name="bottom_navigation">Navegação inferior</string>

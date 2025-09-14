@@ -250,7 +250,8 @@
     <string name="success_icon">Başarı simgesi</string>
     <string name="bottom_navigation_bar_labels">Alt gezinme çubuğu etiketleri</string>
     <string name="labeled">Etiketli</string>
-    <string name="selected">Seçili %1$s</string>
+    <string name="selected_format">Seçili %1$s</string>
+    <string name="selected">Seçili</string>
     <string name="unlabeled">Etiketsiz</string>
     <string name="navigation">Gezinme</string>
     <string name="bottom_navigation">Alt gezinme</string>

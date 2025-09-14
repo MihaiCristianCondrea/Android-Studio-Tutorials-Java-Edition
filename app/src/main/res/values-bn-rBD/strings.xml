@@ -276,7 +276,8 @@
     <string name="success_icon">সাফল্য আইকন</string>
     <string name="bottom_navigation_bar_labels">নিচের নেভিগেশন বার লেবেল</string>
     <string name="labeled">লেবেলযুক্ত</string>
-    <string name="selected">নির্বাচিত %1$s</string>
+    <string name="selected_format">নির্বাচিত %1$s</string>
+    <string name="selected">নির্বাচিত</string>
     <string name="unlabeled">লেবেলবিহীন</string>
     <string name="navigation">নেভিগেশন</string>
     <string name="bottom_navigation">নীচের নেভিগেশন</string>

@@ -258,7 +258,8 @@
     <string name="about_description">App details, version, and credits</string>
     <string name="bottom_navigation_bar_labels">Bottom navigation bar labels</string>
     <string name="labeled">Labeled</string>
-    <string name="selected">Selected %1$s</string>
+    <string name="selected_format">Selected %1$s</string>
+    <string name="selected">Selected</string>
     <string name="unlabeled">Unlabeled</string>
     <string name="navigation">Navigation</string>
     <string name="bottom_navigation">Bottom navigation</string>

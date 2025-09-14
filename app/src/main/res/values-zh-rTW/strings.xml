@@ -250,7 +250,8 @@
     <string name="success_icon">成功偶像</string>
     <string name="bottom_navigation_bar_labels">底部導覽列標籤</string>
     <string name="labeled">有標籤</string>
-    <string name="selected">已選取 %1$s</string>
+    <string name="selected_format">已選取 %1$s</string>
+    <string name="selected">已選取</string>
     <string name="unlabeled">無標籤</string>
     <string name="navigation">導覽</string>
     <string name="bottom_navigation">底部導覽列</string>

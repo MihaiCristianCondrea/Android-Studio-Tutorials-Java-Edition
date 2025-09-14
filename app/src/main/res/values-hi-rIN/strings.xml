@@ -277,7 +277,8 @@
     <string name="success_icon">सफलता चिह्न</string>
     <string name="bottom_navigation_bar_labels">बॉटम नेविगेशन बार लेबल</string>
     <string name="labeled">लेबल किया हुआ</string>
-    <string name="selected">चयनित %1$s</string>
+    <string name="selected_format">चयनित %1$s</string>
+    <string name="selected">चयनित</string>
     <string name="unlabeled">लेबल रहित</string>
     <string name="navigation">नेविगेशन</string>
     <string name="bottom_navigation">निचला नेविगेशन</string>

@@ -26,7 +26,7 @@ public class NavigationDrawerActivity extends UpNavigationActivity {
         EdgeToEdgeDelegate.apply(this, binding.container);
 
         binding.navigationView.setNavigationItemSelectedListener(item -> {
-            binding.textView.setText(getString(R.string.selected, item.getTitle()));
+            binding.textView.setText(getString(R.string.selected_format, item.getTitle()));
             binding.drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         });

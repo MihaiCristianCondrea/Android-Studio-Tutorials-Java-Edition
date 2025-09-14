@@ -297,7 +297,8 @@
     <string name="success_icon">Sikerikon</string>
     <string name="bottom_navigation_bar_labels">Alsó navigációs sáv címkék</string>
     <string name="labeled">Címkézett</string>
-    <string name="selected">Kiválasztva %1$s</string>
+    <string name="selected_format">Kiválasztva %1$s</string>
+    <string name="selected">Kiválasztva</string>
     <string name="unlabeled">Címke nélküli</string>
     <string name="navigation">Navigáció</string>
     <string name="bottom_navigation">Alsó navigáció</string>

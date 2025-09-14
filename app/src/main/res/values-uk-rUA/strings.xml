@@ -250,7 +250,8 @@
     <string name="success_icon">Значок успіху</string>
     <string name="bottom_navigation_bar_labels">Підписи нижньої навігаційної панелі</string>
     <string name="labeled">З підписами</string>
-    <string name="selected">Вибрані %1$s</string>
+    <string name="selected_format">Вибрані %1$s</string>
+    <string name="selected">Вибрані</string>
     <string name="unlabeled">Без підписів</string>
     <string name="navigation">Навігація</string>
     <string name="bottom_navigation">Нижня навігація</string>

@@ -250,7 +250,8 @@
     <string name="success_icon">Tagumpay icon</string>
     <string name="bottom_navigation_bar_labels">Mga label ng bottom navigation bar</string>
     <string name="labeled">May label</string>
-    <string name="selected">Napili %1$s</string>
+    <string name="selected_format">Napili %1$s</string>
+    <string name="selected">Napili</string>
     <string name="unlabeled">Walang label</string>
     <string name="navigation">Nabigasyon</string>
     <string name="bottom_navigation">Nabigasyong nasa ibaba</string>
