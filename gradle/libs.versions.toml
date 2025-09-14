@@ -17,6 +17,7 @@ lifecycle = "2.9.3"
 lottie = "6.6.7"
 mockitoCore = "5.19.0"
 mockitoInline = "5.2.0"
+robolectric = "4.13.2"
 navigationUi = "2.9.4"
 preference = "1.2.1"
 review = "2.0.2"
@@ -61,6 +62,7 @@ material = { module = "com.google.android.material:material", version.ref = "mat
 materialratingbar-library = { module = "me.zhanghai.android.materialratingbar:library", version.ref = "libraryVersion" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
 mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockitoInline" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
 play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "playServicesAds" }
 review = { module = "com.google.android.play:review", version.ref = "review" }
 volley = { module = "com.android.volley:volley", version.ref = "volley" }
