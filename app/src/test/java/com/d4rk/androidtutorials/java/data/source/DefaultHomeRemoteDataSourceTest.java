@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 
-import android.os.Looper;
-
 import com.android.volley.RequestQueue;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 
@@ -13,6 +11,7 @@ import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.List;
 
@@ -23,17 +22,13 @@ public class DefaultHomeRemoteDataSourceTest {
 
     @Before
     public void setUp() throws Exception {
-        if (Looper.getMainLooper() == null) {
-            try {
-                Method prepareMainLooper = Looper.class.getDeclaredMethod("prepareMainLooper");
-                prepareMainLooper.setAccessible(true);
-                prepareMainLooper.invoke(null);
-            } catch (Exception ignored) {
-                Looper.prepare();
-            }
-        }
-        RequestQueue queue = mock(RequestQueue.class);
-        dataSource = new DefaultHomeRemoteDataSource(queue, "https://example.com");
+        dataSource = mock(DefaultHomeRemoteDataSource.class);
+        Field queueField = DefaultHomeRemoteDataSource.class.getDeclaredField("requestQueue");
+        queueField.setAccessible(true);
+        queueField.set(dataSource, mock(RequestQueue.class));
+        Field urlField = DefaultHomeRemoteDataSource.class.getDeclaredField("apiUrl");
+        urlField.setAccessible(true);
+        urlField.set(dataSource, "https://example.com");
         parseMethod = DefaultHomeRemoteDataSource.class.getDeclaredMethod("parseResponse", JSONObject.class);
         parseMethod.setAccessible(true);
     }
