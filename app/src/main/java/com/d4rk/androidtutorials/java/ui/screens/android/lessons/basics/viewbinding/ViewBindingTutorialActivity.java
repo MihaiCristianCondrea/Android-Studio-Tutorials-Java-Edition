@@ -10,13 +10,13 @@ import android.util.Log;
 import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityViewBindingTutorialBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.d4rk.androidtutorials.java.utils.FontManager;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -8,11 +8,11 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.data.model.AndroidVersion;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidSdkBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import java.util.Arrays;
 import java.util.List;

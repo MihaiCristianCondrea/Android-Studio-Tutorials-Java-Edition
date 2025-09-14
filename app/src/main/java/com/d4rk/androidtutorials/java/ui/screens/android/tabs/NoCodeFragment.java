@@ -10,8 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.d4rk.androidtutorials.java.R;
-import com.d4rk.androidtutorials.java.databinding.FragmentNoCodeBinding;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
+import com.d4rk.androidtutorials.java.databinding.FragmentNoCodeBinding;
 
 public class NoCodeFragment extends Fragment {
     private static final String ARG_MESSAGE = "arg_message";

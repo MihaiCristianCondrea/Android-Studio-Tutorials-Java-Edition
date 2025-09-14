@@ -14,11 +14,11 @@ import androidx.preference.PreferenceManager;
 
 import com.amrdeveloper.codeview.CodeView;
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.FragmentClockLayoutBinding;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
 import com.d4rk.androidtutorials.java.utils.FontManager;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

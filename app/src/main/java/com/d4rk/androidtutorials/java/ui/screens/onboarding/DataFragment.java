@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ui.screens.onboarding;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,12 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.preference.PreferenceManager;
 
+import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentOnboardingDataBinding;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
-import androidx.preference.PreferenceManager;
-import android.content.SharedPreferences;
-import com.d4rk.androidtutorials.java.R;
 
 public class DataFragment extends Fragment {
 

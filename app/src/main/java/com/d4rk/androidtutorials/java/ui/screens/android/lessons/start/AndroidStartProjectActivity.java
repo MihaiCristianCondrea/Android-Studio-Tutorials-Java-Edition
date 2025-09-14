@@ -6,10 +6,10 @@ import android.text.method.LinkMovementMethod;
 
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidStartProjectBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 

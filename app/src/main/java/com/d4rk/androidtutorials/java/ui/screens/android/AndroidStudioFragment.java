@@ -27,18 +27,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView;
-import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.databinding.FragmentAndroidStudioBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioCategoryBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioLessonBinding;
+import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.LoadAdError;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.textview.MaterialTextView;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.ShapeAppearanceModel;
+import com.google.android.material.textview.MaterialTextView;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

@@ -7,14 +7,13 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.core.content.res.ResourcesCompat;
-
-import com.google.android.material.radiobutton.MaterialRadioButton;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentOnboardingFontBinding;
+import com.google.android.material.radiobutton.MaterialRadioButton;
 
 public class FontFragment extends Fragment {
 

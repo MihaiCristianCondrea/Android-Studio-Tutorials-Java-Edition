@@ -11,8 +11,8 @@ import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.PendingPurchasesParams;
 import com.android.billingclient.api.ProductDetails;
 import com.android.billingclient.api.QueryProductDetailsParams;
-import com.google.android.gms.ads.AdRequest;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
+import com.google.android.gms.ads.AdRequest;
 
 import java.util.ArrayList;
 import java.util.Collections;

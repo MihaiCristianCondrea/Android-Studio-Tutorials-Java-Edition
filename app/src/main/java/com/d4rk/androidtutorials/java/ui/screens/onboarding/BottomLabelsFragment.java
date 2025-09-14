@@ -10,10 +10,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.google.android.material.radiobutton.MaterialRadioButton;
-
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.FragmentOnboardingBottomLabelsBinding;
+import com.google.android.material.radiobutton.MaterialRadioButton;
 
 public class BottomLabelsFragment extends Fragment {
 
