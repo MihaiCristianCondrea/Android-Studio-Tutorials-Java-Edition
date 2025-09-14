@@ -44,6 +44,7 @@ import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.d4rk.androidtutorials.java.utils.ReviewHelper;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
+import com.d4rk.androidtutorials.java.startup.StartupInitializer;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
@@ -111,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
         }
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
+
+        StartupInitializer.schedule(this);
 
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 

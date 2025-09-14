@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.d4rk.androidtutorials.java.databinding.ActivityStartupBinding;
 import com.d4rk.androidtutorials.java.ui.screens.onboarding.OnboardingActivity;
 import com.google.android.ump.ConsentRequestParameters;
+import com.d4rk.androidtutorials.java.startup.StartupInitializer;
 
 import dagger.hilt.android.AndroidEntryPoint;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
@@ -24,6 +25,8 @@ public class StartupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityStartupBinding binding = ActivityStartupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        StartupInitializer.schedule(this);
 
         viewModel = new ViewModelProvider(this).get(StartupViewModel.class);
         ConsentRequestParameters params = new ConsentRequestParameters.Builder().build();
