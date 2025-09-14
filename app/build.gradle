@@ -107,4 +107,6 @@ dependencies {
     testImplementation libs.androidx.core.testing
     testImplementation libs.mockito.core
     testImplementation libs.mockito.inline
+    testImplementation 'org.robolectric:robolectric:4.10.3'
+    testImplementation 'androidx.work:work-testing:2.9.0'
 }
