@@ -297,7 +297,8 @@
     <string name="success_icon">Icona di successo</string>
     <string name="bottom_navigation_bar_labels">Etichette barra di navigazione inferiore</string>
     <string name="labeled">Con etichetta</string>
-    <string name="selected">Selezionato %1$s</string>
+    <string name="selected_format">Selezionato %1$s</string>
+    <string name="selected">Selezionato</string>
     <string name="unlabeled">Senza etichetta</string>
     <string name="navigation">Navigazione</string>
     <string name="bottom_navigation">Navigazione inferiore</string>

@@ -250,7 +250,8 @@
     <string name="success_icon">Biểu tượng thành công</string>
     <string name="bottom_navigation_bar_labels">Nhãn thanh điều hướng dưới cùng</string>
     <string name="labeled">Có nhãn</string>
-    <string name="selected">Đã chọn %1$s</string>
+    <string name="selected_format">Đã chọn %1$s</string>
+    <string name="selected">Đã chọn</string>
     <string name="unlabeled">Không có nhãn</string>
     <string name="navigation">Điều hướng</string>
     <string name="bottom_navigation">Thanh điều hướng dưới</string>

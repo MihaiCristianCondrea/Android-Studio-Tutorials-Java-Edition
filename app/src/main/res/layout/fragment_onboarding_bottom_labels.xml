@@ -56,7 +56,7 @@
                     <include
                         android:id="@+id/option_selected"
                         layout="@layout/item_onboarding_simple_option"
-                        app:text='@{String.format(@string/selected, @string/app_name)}' />
+                        app:text="@{@string/selected}" />
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView

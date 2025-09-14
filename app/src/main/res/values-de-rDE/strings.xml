@@ -276,7 +276,8 @@
     <string name="success_icon">Erfolgsikone</string>
     <string name="bottom_navigation_bar_labels">Beschriftungen der unteren Navigationsleiste</string>
     <string name="labeled">Beschriftet</string>
-    <string name="selected">Ausgewählt %1$s</string>
+    <string name="selected_format">Ausgewählt %1$s</string>
+    <string name="selected">Ausgewählt</string>
     <string name="unlabeled">Unbeschriftet</string>
     <string name="navigation">Navigation</string>
     <string name="bottom_navigation">Untere Navigation</string>

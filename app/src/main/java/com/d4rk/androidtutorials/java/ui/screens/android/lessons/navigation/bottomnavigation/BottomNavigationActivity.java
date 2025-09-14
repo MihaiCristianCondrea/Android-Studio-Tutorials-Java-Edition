@@ -24,7 +24,7 @@ public class BottomNavigationActivity extends UpNavigationActivity {
         EdgeToEdgeDelegate.applyBottomBar(this, binding.container, binding.bottomNav);
 
         binding.bottomNav.setOnItemSelectedListener(item -> {
-            binding.textView.setText(getString(R.string.selected, item.getTitle()));
+            binding.textView.setText(getString(R.string.selected_format, item.getTitle()));
             return true;
         });
 

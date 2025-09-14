@@ -276,7 +276,8 @@
     <string name="success_icon">Иконка успеха</string>
     <string name="bottom_navigation_bar_labels">Подписи нижней панели навигации</string>
     <string name="labeled">С подписями</string>
-    <string name="selected">Выбрано %1$s</string>
+    <string name="selected_format">Выбрано %1$s</string>
+    <string name="selected">Выбрано</string>
     <string name="unlabeled">Без подписей</string>
     <string name="navigation">Навигация</string>
     <string name="bottom_navigation">Нижняя навигация</string>

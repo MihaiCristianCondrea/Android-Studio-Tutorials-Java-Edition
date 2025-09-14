@@ -276,7 +276,8 @@
     <string name="success_icon">Icône de succès</string>
     <string name="bottom_navigation_bar_labels">Étiquettes de la barre de navigation inférieure</string>
     <string name="labeled">Étiqueté</string>
-    <string name="selected">Sélectionné %1$s</string>
+    <string name="selected_format">Sélectionné %1$s</string>
+    <string name="selected">Sélectionné</string>
     <string name="unlabeled">Non étiqueté</string>
     <string name="navigation">Navigation</string>
     <string name="bottom_navigation">Navigation inférieure</string>

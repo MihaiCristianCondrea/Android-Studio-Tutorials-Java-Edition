@@ -276,7 +276,8 @@
     <string name="success_icon">Ikon Sukses</string>
     <string name="bottom_navigation_bar_labels">Label bilah navigasi bawah</string>
     <string name="labeled">Berlabel</string>
-    <string name="selected">Terpilih %1$s</string>
+    <string name="selected_format">Terpilih %1$s</string>
+    <string name="selected">Terpilih</string>
     <string name="unlabeled">Tidak berlabel</string>
     <string name="navigation">Navigasi</string>
     <string name="bottom_navigation">Navigasi Bawah</string>
