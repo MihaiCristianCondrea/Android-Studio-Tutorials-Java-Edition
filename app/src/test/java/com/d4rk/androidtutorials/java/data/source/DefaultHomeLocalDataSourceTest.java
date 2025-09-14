@@ -2,6 +2,7 @@ package com.d4rk.androidtutorials.java.data.source;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
@@ -10,6 +11,7 @@ import android.content.res.Resources;
 import com.d4rk.androidtutorials.java.R;
 
 import org.junit.Test;
+import org.mockito.MockedStatic;
 
 public class DefaultHomeLocalDataSourceTest {
 
@@ -22,14 +24,21 @@ public class DefaultHomeLocalDataSourceTest {
     }
 
     @Test
-    public void dailyTipUsesEpochDayIndex() {
+    public void dailyTipReturnsExpectedEntriesForTimestamps() {
         String[] tips = {"tip1", "tip2", "tip3"};
         Context context = mockContextWithTips(tips);
         DefaultHomeLocalDataSource dataSource = new DefaultHomeLocalDataSource(context);
 
-        long daysSinceEpoch = System.currentTimeMillis() / (24L * 60L * 60L * 1000L);
-        int expectedIndex = (int) (daysSinceEpoch % tips.length);
-        assertEquals(tips[expectedIndex], dataSource.getDailyTip());
+        long dayMs = 24L * 60L * 60L * 1000L;
+
+        try (MockedStatic<System> mocked = mockStatic(System.class)) {
+            mocked.when(System::currentTimeMillis).thenReturn(0L, dayMs, 2 * dayMs, 3 * dayMs);
+
+            assertEquals("tip1", dataSource.getDailyTip());
+            assertEquals("tip2", dataSource.getDailyTip());
+            assertEquals("tip3", dataSource.getDailyTip());
+            assertEquals("tip1", dataSource.getDailyTip());
+        }
     }
 
     private static Context mockContextWithTips(String[] tips) {
