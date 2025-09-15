@@ -58,6 +58,23 @@ public class AdUtilsTest {
     }
 
     @Test
+    public void loadBanner_withAdView_multipleCalls_initializeOnlyOnce() {
+        Context context = mock(Context.class);
+        when(context.getApplicationContext()).thenReturn(context);
+        AdView adView = mock(AdView.class);
+        when(adView.getContext()).thenReturn(context);
+
+        try (MockedStatic<MobileAds> mobileAds = mockStatic(MobileAds.class)) {
+            AdUtils.loadBanner(adView);
+            AdUtils.loadBanner(adView);
+
+            mobileAds.verify(() -> MobileAds.initialize(context), times(1));
+        }
+
+        verify(adView, times(2)).loadAd(any(AdRequest.class));
+    }
+
+    @Test
     public void loadBanner_withNativeAdBannerView_loadsAd() {
         Context context = mock(Context.class);
         when(context.getApplicationContext()).thenReturn(context);
