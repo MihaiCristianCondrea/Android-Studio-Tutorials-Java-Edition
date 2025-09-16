@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.domain.support;
 
 import static org.junit.Assert.assertThrows;
+import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -20,6 +21,23 @@ public class InitBillingClientUseCaseTest {
         useCase.invoke(onConnected);
 
         verify(repository).initBillingClient(onConnected);
+    }
+
+    @Test
+    public void invokePropagatesConnectionCallback() {
+        SupportRepository repository = mock(SupportRepository.class);
+        Runnable onConnected = mock(Runnable.class);
+        InitBillingClientUseCase useCase = new InitBillingClientUseCase(repository);
+        doAnswer(invocation -> {
+            Runnable callback = invocation.getArgument(0);
+            callback.run();
+            return null;
+        }).when(repository).initBillingClient(onConnected);
+
+        useCase.invoke(onConnected);
+
+        verify(repository).initBillingClient(onConnected);
+        verify(onConnected).run();
     }
 
     @Test
