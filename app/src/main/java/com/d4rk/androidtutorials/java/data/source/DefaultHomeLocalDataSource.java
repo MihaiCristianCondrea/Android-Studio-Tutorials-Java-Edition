@@ -9,6 +9,8 @@ import com.d4rk.androidtutorials.java.R;
  */
 public class DefaultHomeLocalDataSource implements HomeLocalDataSource {
 
+    private static final String PLAY_STORE_BASE_URL = "https://play.google.com/store/apps/details?id=";
+
     private final Context context;
 
     public DefaultHomeLocalDataSource(Context context) {
@@ -17,12 +19,15 @@ public class DefaultHomeLocalDataSource implements HomeLocalDataSource {
 
     @Override
     public String getPlayStoreUrl() {
-        return "https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials";
+        return PLAY_STORE_BASE_URL;
     }
 
     @Override
     public String getAppPlayStoreUrl(String packageName) {
-        return "https://play.google.com/store/apps/details?id=" + packageName;
+        if (packageName == null) {
+            return PLAY_STORE_BASE_URL;
+        }
+        return PLAY_STORE_BASE_URL + packageName;
     }
 
     @Override
