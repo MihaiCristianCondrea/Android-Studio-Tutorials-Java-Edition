@@ -1,8 +1,12 @@
 package com.d4rk.androidtutorials.java.ads;
 
-import static org.mockito.Mockito.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mockStatic;
+import static org.mockito.Mockito.times;
 
 import android.content.Context;
+import android.test.mock.MockContext;
 import android.view.View;
 
 import com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView;
@@ -21,6 +25,8 @@ import java.lang.reflect.Field;
  */
 public class AdUtilsTest {
 
+    private final TestContext context = new TestContext();
+
     @Before
     public void setUp() throws Exception {
         // Reset the initialized flag before each test
@@ -31,9 +37,6 @@ public class AdUtilsTest {
 
     @Test
     public void initialize_callsMobileAdsInitializeOnlyOnce() {
-        Context context = mock(Context.class);
-        when(context.getApplicationContext()).thenReturn(context);
-
         try (MockedStatic<MobileAds> mobileAds = mockStatic(MobileAds.class)) {
             AdUtils.initialize(context);
             AdUtils.initialize(context);
@@ -44,44 +47,84 @@ public class AdUtilsTest {
 
     @Test
     public void loadBanner_withAdView_loadsAd() {
-        Context context = mock(Context.class);
-        when(context.getApplicationContext()).thenReturn(context);
-        AdView adView = mock(AdView.class);
-        when(adView.getContext()).thenReturn(context);
+        FakeAdView adView = new FakeAdView(context);
 
         try (MockedStatic<MobileAds> mobileAds = mockStatic(MobileAds.class)) {
             AdUtils.loadBanner(adView);
             mobileAds.verify(() -> MobileAds.initialize(context));
         }
 
-        verify(adView, times(1)).loadAd(any(AdRequest.class));
+        assertTrue(adView.isLoadAdCalled());
+        assertNotNull(adView.getLastRequest());
     }
 
     @Test
     public void loadBanner_withNativeAdBannerView_loadsAd() {
-        Context context = mock(Context.class);
-        when(context.getApplicationContext()).thenReturn(context);
-        NativeAdBannerView nativeView = mock(NativeAdBannerView.class);
-        when(nativeView.getContext()).thenReturn(context);
+        FakeNativeAdBannerView nativeView = new FakeNativeAdBannerView(context);
 
         try (MockedStatic<MobileAds> mobileAds = mockStatic(MobileAds.class)) {
             AdUtils.loadBanner(nativeView);
             mobileAds.verify(() -> MobileAds.initialize(context));
         }
 
-        verify(nativeView, times(1)).loadAd();
+        assertTrue(nativeView.isLoadAdCalled());
     }
 
     @Test
     public void loadBanner_withOtherView_doesNothing() {
-        Context context = mock(Context.class);
-        when(context.getApplicationContext()).thenReturn(context);
-        View view = mock(View.class);
-        when(view.getContext()).thenReturn(context);
+        View view = new View(context);
 
         try (MockedStatic<MobileAds> mobileAds = mockStatic(MobileAds.class)) {
             AdUtils.loadBanner(view);
             mobileAds.verifyNoInteractions();
+        }
+
+    }
+
+    private static final class TestContext extends MockContext {
+        @Override
+        public Context getApplicationContext() {
+            return this;
+        }
+    }
+
+    private static final class FakeAdView extends AdView {
+        private boolean loadAdCalled;
+        private AdRequest lastRequest;
+
+        FakeAdView(Context context) {
+            super(context);
+        }
+
+        @Override
+        public void loadAd(AdRequest adRequest) {
+            loadAdCalled = true;
+            lastRequest = adRequest;
+        }
+
+        boolean isLoadAdCalled() {
+            return loadAdCalled;
+        }
+
+        AdRequest getLastRequest() {
+            return lastRequest;
+        }
+    }
+
+    private static final class FakeNativeAdBannerView extends NativeAdBannerView {
+        private boolean loadAdCalled;
+
+        FakeNativeAdBannerView(Context context) {
+            super(context);
+        }
+
+        @Override
+        public void loadAd() {
+            loadAdCalled = true;
+        }
+
+        boolean isLoadAdCalled() {
+            return loadAdCalled;
         }
     }
 }
