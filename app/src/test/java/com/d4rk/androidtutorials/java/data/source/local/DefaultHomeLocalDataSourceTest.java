@@ -1,4 +1,4 @@
-package com.d4rk.androidtutorials.java.data.source;
+package com.d4rk.androidtutorials.java.data.source.local;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -8,17 +8,45 @@ import android.content.Context;
 import android.content.res.Resources;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.data.source.DefaultHomeLocalDataSource;
 
 import org.junit.Test;
 
 public class DefaultHomeLocalDataSourceTest {
 
+    private static final String PLAY_STORE_BASE_URL = "https://play.google.com/store/apps/details?id=";
+
     @Test
-    public void playStoreUrlsFormattedCorrectly() {
+    public void getPlayStoreUrl_returnsBaseUrl() {
         DefaultHomeLocalDataSource dataSource =
                 new DefaultHomeLocalDataSource(mockContextWithTips(new String[]{"tip"}));
-        assertEquals("https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials", dataSource.getPlayStoreUrl());
-        assertEquals("https://play.google.com/store/apps/details?id=pkg", dataSource.getAppPlayStoreUrl("pkg"));
+
+        assertEquals(PLAY_STORE_BASE_URL, dataSource.getPlayStoreUrl());
+    }
+
+    @Test
+    public void getAppPlayStoreUrl_appendsPackageName() {
+        DefaultHomeLocalDataSource dataSource =
+                new DefaultHomeLocalDataSource(mockContextWithTips(new String[]{"tip"}));
+
+        assertEquals(PLAY_STORE_BASE_URL + "com.example.app",
+                dataSource.getAppPlayStoreUrl("com.example.app"));
+    }
+
+    @Test
+    public void getAppPlayStoreUrl_allowsEmptyPackageName() {
+        DefaultHomeLocalDataSource dataSource =
+                new DefaultHomeLocalDataSource(mockContextWithTips(new String[]{"tip"}));
+
+        assertEquals(PLAY_STORE_BASE_URL, dataSource.getAppPlayStoreUrl(""));
+    }
+
+    @Test
+    public void getAppPlayStoreUrl_handlesNullPackageName() {
+        DefaultHomeLocalDataSource dataSource =
+                new DefaultHomeLocalDataSource(mockContextWithTips(new String[]{"tip"}));
+
+        assertEquals(PLAY_STORE_BASE_URL, dataSource.getAppPlayStoreUrl(null));
     }
 
     @Test
