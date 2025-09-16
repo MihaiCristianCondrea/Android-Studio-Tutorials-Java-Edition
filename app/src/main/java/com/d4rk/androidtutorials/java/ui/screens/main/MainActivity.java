@@ -104,18 +104,26 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+        mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
+
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        if (!prefs.getBoolean(getString(R.string.key_onboarding_complete), false)) {
+        boolean onboardingComplete = prefs.getBoolean(getString(R.string.key_onboarding_complete), false);
+        boolean shouldShowStartup = mainViewModel.shouldShowStartupScreen();
+        if (!onboardingComplete) {
+            if (shouldShowStartup) {
+                mainViewModel.markStartupScreenShown();
+            }
             startActivity(new Intent(this, StartupActivity.class));
             finish();
             return;
+        }
+        if (shouldShowStartup) {
+            mainViewModel.markStartupScreenShown();
         }
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
 
         StartupInitializer.schedule(this);
-
-        mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         // Fallback: show the consent form again if required.
         ConsentInformation consentInformation = UserMessagingPlatform.getConsentInformation(this);

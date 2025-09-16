@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
@@ -25,11 +26,23 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.preferences_settings, rootKey);
+        SettingsActivity activity = (SettingsActivity) requireActivity();
+        SettingsViewModel settingsViewModel = activity.getSettingsViewModel();
         ListPreference labelVisibilityMode = findPreference(getString(R.string.key_bottom_navigation_bar_labels));
         if (labelVisibilityMode != null) {
             labelVisibilityMode.setOnPreferenceChangeListener((preference, newValue) -> {
                 RequireRestartDialog restartDialog = new RequireRestartDialog();
                 restartDialog.show(getChildFragmentManager(), RequireRestartDialog.class.getName());
+                return true;
+            });
+        }
+        SwitchPreferenceCompat consentAnalyticsPreference =
+                findPreference(getString(R.string.key_consent_analytics));
+        if (consentAnalyticsPreference != null) {
+            consentAnalyticsPreference.setOnPreferenceChangeListener((preference, newValue) -> {
+                if (newValue instanceof Boolean && settingsViewModel != null) {
+                    settingsViewModel.setConsentAccepted((Boolean) newValue);
+                }
                 return true;
             });
         }
