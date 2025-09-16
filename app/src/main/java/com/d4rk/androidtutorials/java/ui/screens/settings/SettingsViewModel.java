@@ -70,7 +70,7 @@ public class SettingsViewModel extends ViewModel {
         return getDarkModeUseCase.invoke();
     }
 
-    public void setConsentAccepted(boolean accepted) { // FIXME: Method 'setConsentAccepted(boolean)' is never used
+    public void setConsentAccepted(boolean accepted) {
         setConsentAcceptedUseCase.invoke(accepted);
     }
 }

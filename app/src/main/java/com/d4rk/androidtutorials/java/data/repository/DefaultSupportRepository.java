@@ -127,13 +127,15 @@ public class DefaultSupportRepository implements SupportRepository {
             }
 
             String finalOfferToken = offerToken;
+            BillingFlowParams.ProductDetailsParams.Builder paramsBuilder =
+                    BillingFlowParams.ProductDetailsParams.newBuilder()
+                            .setProductDetails(details);
+            if (finalOfferToken != null && !finalOfferToken.isEmpty()) {
+                paramsBuilder.setOfferToken(finalOfferToken);
+            }
+
             List<BillingFlowParams.ProductDetailsParams> productDetailsParamsList =
-                    Collections.singletonList(
-                            BillingFlowParams.ProductDetailsParams.newBuilder()
-                                    .setProductDetails(details)
-                                    .setOfferToken(finalOfferToken) // FIXME: Argument 'finalOfferToken' might be null
-                                    .build()
-                    );
+                    Collections.singletonList(paramsBuilder.build());
 
             BillingFlowParams flowParams = BillingFlowParams.newBuilder()
                     .setProductDetailsParamsList(productDetailsParamsList)

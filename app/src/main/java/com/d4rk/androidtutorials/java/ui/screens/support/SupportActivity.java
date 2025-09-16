@@ -7,10 +7,10 @@ import android.os.Bundle;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.android.billingclient.api.ProductDetails;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
+import com.google.android.gms.ads.AdRequest;
 
 import java.util.List;
 
@@ -30,8 +30,9 @@ public class SupportActivity extends BaseActivity {
 
         supportViewModel = new ViewModelProvider(this).get(SupportViewModel.class);
 
-        AdUtils.loadBanner(binding.supportNativeAd);
-        AdUtils.loadBanner(binding.bannerAdView);
+        AdRequest adRequest = supportViewModel.initMobileAds();
+        binding.supportNativeAd.loadAd(adRequest);
+        binding.bannerAdView.loadAd(adRequest);
 
         binding.buttonWebAd.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/3p8bpjj"))));
