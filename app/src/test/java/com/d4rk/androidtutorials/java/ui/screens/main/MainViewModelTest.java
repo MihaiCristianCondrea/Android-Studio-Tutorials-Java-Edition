@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ui.screens.main;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -37,6 +38,7 @@ public class MainViewModelTest {
     private ShouldShowStartupScreenUseCase shouldShowStartupScreenUseCase;
     private MarkStartupScreenShownUseCase markStartupScreenShownUseCase;
     private GetAppUpdateManagerUseCase getAppUpdateManagerUseCase;
+    private MainViewModel viewModel;
 
     private final String[] themeValues = {"MODE_NIGHT_FOLLOW_SYSTEM", "MODE_NIGHT_NO", "MODE_NIGHT_YES"};
     private final String[] bottomNavBarLabelsValues = {"labeled", "selected", "unlabeled"};
@@ -51,15 +53,8 @@ public class MainViewModelTest {
         shouldShowStartupScreenUseCase = Mockito.mock(ShouldShowStartupScreenUseCase.class);
         markStartupScreenShownUseCase = Mockito.mock(MarkStartupScreenShownUseCase.class);
         getAppUpdateManagerUseCase = Mockito.mock(GetAppUpdateManagerUseCase.class);
-    }
 
-    @Test
-    public void applySettingsUpdatesUiStateForLabeledHome() {
-        Mockito.when(applyThemeSettingsUseCase.invoke(themeValues)).thenReturn(true);
-        Mockito.when(getBottomNavLabelVisibilityUseCase.invoke()).thenReturn("labeled");
-        Mockito.when(getDefaultTabPreferenceUseCase.invoke()).thenReturn("home");
-
-        MainViewModel viewModel = new MainViewModel(
+        viewModel = new MainViewModel(
                 applyThemeSettingsUseCase,
                 getBottomNavLabelVisibilityUseCase,
                 getDefaultTabPreferenceUseCase,
@@ -68,6 +63,13 @@ public class MainViewModelTest {
                 markStartupScreenShownUseCase,
                 getAppUpdateManagerUseCase
         );
+    }
+
+    @Test
+    public void applySettingsUpdatesUiStateForLabeledHome() {
+        Mockito.when(applyThemeSettingsUseCase.invoke(themeValues)).thenReturn(true);
+        Mockito.when(getBottomNavLabelVisibilityUseCase.invoke()).thenReturn("labeled");
+        Mockito.when(getDefaultTabPreferenceUseCase.invoke()).thenReturn("home");
 
         List<Boolean> loading = new ArrayList<>();
         viewModel.getLoadingState().observeForever(loading::add);
@@ -89,16 +91,6 @@ public class MainViewModelTest {
         Mockito.when(getBottomNavLabelVisibilityUseCase.invoke()).thenReturn("selected");
         Mockito.when(getDefaultTabPreferenceUseCase.invoke()).thenReturn("android_studio");
 
-        MainViewModel viewModel = new MainViewModel(
-                applyThemeSettingsUseCase,
-                getBottomNavLabelVisibilityUseCase,
-                getDefaultTabPreferenceUseCase,
-                applyLanguageSettingsUseCase,
-                shouldShowStartupScreenUseCase,
-                markStartupScreenShownUseCase,
-                getAppUpdateManagerUseCase
-        );
-
         List<Boolean> loading = new ArrayList<>();
         viewModel.getLoadingState().observeForever(loading::add);
 
@@ -110,7 +102,7 @@ public class MainViewModelTest {
         assertNotNull(state);
         assertEquals(NavigationBarView.LABEL_VISIBILITY_SELECTED, state.bottomNavVisibility());
         assertEquals(R.id.navigation_android_studio, state.defaultNavDestination());
-        assertTrue(!state.themeChanged());
+        assertFalse(state.themeChanged());
     }
 
     @Test
@@ -118,16 +110,6 @@ public class MainViewModelTest {
         Mockito.when(applyThemeSettingsUseCase.invoke(themeValues)).thenReturn(true);
         Mockito.when(getBottomNavLabelVisibilityUseCase.invoke()).thenReturn("unlabeled");
         Mockito.when(getDefaultTabPreferenceUseCase.invoke()).thenReturn("about");
-
-        MainViewModel viewModel = new MainViewModel(
-                applyThemeSettingsUseCase,
-                getBottomNavLabelVisibilityUseCase,
-                getDefaultTabPreferenceUseCase,
-                applyLanguageSettingsUseCase,
-                shouldShowStartupScreenUseCase,
-                markStartupScreenShownUseCase,
-                getAppUpdateManagerUseCase
-        );
 
         List<Boolean> loading = new ArrayList<>();
         viewModel.getLoadingState().observeForever(loading::add);
@@ -141,6 +123,21 @@ public class MainViewModelTest {
         assertEquals(NavigationBarView.LABEL_VISIBILITY_UNLABELED, state.bottomNavVisibility());
         assertEquals(R.id.navigation_about, state.defaultNavDestination());
         assertTrue(state.themeChanged());
+    }
+
+    @Test
+    public void shouldShowStartupScreenDelegatesToUseCase() {
+        Mockito.when(shouldShowStartupScreenUseCase.invoke()).thenReturn(false);
+
+        assertFalse(viewModel.shouldShowStartupScreen());
+        Mockito.verify(shouldShowStartupScreenUseCase).invoke();
+    }
+
+    @Test
+    public void markStartupScreenShownDelegatesToUseCase() {
+        viewModel.markStartupScreenShown();
+
+        Mockito.verify(markStartupScreenShownUseCase).invoke();
     }
 
     private int callVisibilityMode(String value) throws Exception {
