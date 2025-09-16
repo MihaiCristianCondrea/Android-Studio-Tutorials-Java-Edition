@@ -2,9 +2,11 @@ package com.d4rk.androidtutorials.java.data.repository;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
@@ -81,19 +83,32 @@ public class DefaultMainRepositoryTest {
     @Test
     public void applyThemeSettings_noChangeWhenPreferenceSame() {
         defaultPrefs.edit().putString("theme", "light").apply();
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        boolean changed = repository.applyThemeSettings(new String[]{"system", "light", "dark", "auto"});
-        assertFalse(changed);
-        assertEquals(AppCompatDelegate.MODE_NIGHT_NO, AppCompatDelegate.getDefaultNightMode());
+
+        try (MockedStatic<AppCompatDelegate> appCompatDelegate = mockStatic(AppCompatDelegate.class)) {
+            appCompatDelegate.when(AppCompatDelegate::getDefaultNightMode).thenReturn(AppCompatDelegate.MODE_NIGHT_NO);
+
+            boolean changed = repository.applyThemeSettings(new String[]{"system", "light", "dark", "auto"});
+
+            assertFalse(changed);
+            appCompatDelegate.verify(AppCompatDelegate::getDefaultNightMode);
+            appCompatDelegate.verifyNoMoreInteractions();
+        }
     }
 
     @Test
     public void applyThemeSettings_changesWhenPreferenceDiffers() {
         defaultPrefs.edit().putString("theme", "dark").apply();
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        boolean changed = repository.applyThemeSettings(new String[]{"system", "light", "dark", "auto"});
-        assertTrue(changed);
-        assertEquals(AppCompatDelegate.MODE_NIGHT_YES, AppCompatDelegate.getDefaultNightMode());
+
+        try (MockedStatic<AppCompatDelegate> appCompatDelegate = mockStatic(AppCompatDelegate.class)) {
+            appCompatDelegate.when(AppCompatDelegate::getDefaultNightMode).thenReturn(AppCompatDelegate.MODE_NIGHT_NO);
+
+            boolean changed = repository.applyThemeSettings(new String[]{"system", "light", "dark", "auto"});
+
+            assertTrue(changed);
+            appCompatDelegate.verify(AppCompatDelegate::getDefaultNightMode);
+            appCompatDelegate.verify(() -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES));
+            appCompatDelegate.verifyNoMoreInteractions();
+        }
     }
 
     @Test
@@ -102,6 +117,12 @@ public class DefaultMainRepositoryTest {
         defaultPrefs.edit().putString("tab", "search").apply();
         assertEquals("always", repository.getBottomNavLabelVisibility());
         assertEquals("search", repository.getDefaultTabPreference());
+    }
+
+    @Test
+    public void getBottomNavLabelVisibilityAndDefaultTabPreferenceReturnDefaultValues() {
+        assertEquals("never", repository.getBottomNavLabelVisibility());
+        assertEquals("home", repository.getDefaultTabPreference());
     }
 
     @Test
@@ -114,8 +135,24 @@ public class DefaultMainRepositoryTest {
     @Test
     public void applyLanguageSettings_setsLocales() {
         defaultPrefs.edit().putString("language", "fr").apply();
-        repository.applyLanguageSettings();
-        assertEquals("fr", AppCompatDelegate.getApplicationLocales().toLanguageTags());
+
+        final LocaleListCompat[] capturedLocale = new LocaleListCompat[1];
+
+        try (MockedStatic<AppCompatDelegate> appCompatDelegate = mockStatic(AppCompatDelegate.class)) {
+            appCompatDelegate
+                    .when(() -> AppCompatDelegate.setApplicationLocales(any(LocaleListCompat.class)))
+                    .thenAnswer(invocation -> {
+                        capturedLocale[0] = invocation.getArgument(0);
+                        return null;
+                    });
+
+            repository.applyLanguageSettings();
+
+            assertNotNull(capturedLocale[0]);
+            assertEquals("fr", capturedLocale[0].toLanguageTags());
+            appCompatDelegate.verify(() -> AppCompatDelegate.setApplicationLocales(capturedLocale[0]));
+            appCompatDelegate.verifyNoMoreInteractions();
+        }
     }
 
     @Test
