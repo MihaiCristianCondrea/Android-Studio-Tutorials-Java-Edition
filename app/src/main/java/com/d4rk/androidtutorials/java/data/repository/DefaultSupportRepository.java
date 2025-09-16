@@ -131,7 +131,7 @@ public class DefaultSupportRepository implements SupportRepository {
                     Collections.singletonList(
                             BillingFlowParams.ProductDetailsParams.newBuilder()
                                     .setProductDetails(details)
-                                    .setOfferToken(finalOfferToken)
+                                    .setOfferToken(finalOfferToken) // FIXME: Argument 'finalOfferToken' might be null
                                     .build()
                     );
 

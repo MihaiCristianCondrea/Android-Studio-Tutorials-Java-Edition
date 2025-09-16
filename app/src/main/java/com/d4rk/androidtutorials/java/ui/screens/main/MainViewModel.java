@@ -99,14 +99,14 @@ public class MainViewModel extends ViewModel {
     /**
      * Checks if we need to show the startup screen.
      */
-    public boolean shouldShowStartupScreen() {
+    public boolean shouldShowStartupScreen() { // FIXME: Method 'shouldShowStartupScreen()' is never used
         return shouldShowStartupScreenUseCase.invoke();
     }
 
     /**
      * Mark startup screen as shown.
      */
-    public void markStartupScreenShown() {
+    public void markStartupScreenShown() { // FIXME: Method 'markStartupScreenShown()' is never used
         markStartupScreenShownUseCase.invoke();
     }
 

@@ -47,7 +47,7 @@ public class SupportViewModel extends ViewModel {
         return initiatePurchaseUseCase.invoke(productId);
     }
 
-    public AdRequest initMobileAds() {
+    public AdRequest initMobileAds() { // FIXME: Method 'initMobileAds()' is never used
         return initMobileAdsUseCase.invoke();
     }
 }
