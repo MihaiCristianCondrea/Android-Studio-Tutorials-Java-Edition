@@ -1,7 +1,7 @@
 package com.d4rk.androidtutorials.java.domain.home;
 
 import static org.junit.Assert.assertThrows;
-import static org.mockito.Mockito.any;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -9,6 +9,7 @@ import static org.mockito.Mockito.verify;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
@@ -17,62 +18,63 @@ import java.util.List;
 
 public class GetPromotedAppsUseCaseTest {
 
-    @Test
-    public void invokeCallsRepository() {
-        HomeRepository repository = mock(HomeRepository.class);
-        GetPromotedAppsUseCase useCase = new GetPromotedAppsUseCase(repository);
+    private HomeRepository repository;
+    private GetPromotedAppsUseCase useCase;
+    private GetPromotedAppsUseCase.Callback callback;
 
-        useCase.invoke(apps -> {});
+    @Before
+    public void setUp() {
+        repository = mock(HomeRepository.class);
+        useCase = new GetPromotedAppsUseCase(repository);
+        callback = mock(GetPromotedAppsUseCase.Callback.class);
+    }
+
+    @Test
+    public void invokeRequestsPromotedAppsFromRepository() {
+        useCase.invoke(callback);
 
         verify(repository).fetchPromotedApps(any());
     }
 
     @Test
-    public void invokeReturnsAppsThroughCallback() {
-        HomeRepository repository = mock(HomeRepository.class);
-        GetPromotedAppsUseCase useCase = new GetPromotedAppsUseCase(repository);
-        GetPromotedAppsUseCase.Callback callback = mock(GetPromotedAppsUseCase.Callback.class);
+    public void invokeForwardsRepositoryResultsToCallback() {
+        ArgumentCaptor<HomeRepository.PromotedAppsCallback> captor =
+                ArgumentCaptor.forClass(HomeRepository.PromotedAppsCallback.class);
 
         useCase.invoke(callback);
 
-        ArgumentCaptor<HomeRepository.PromotedAppsCallback> captor =
-                ArgumentCaptor.forClass(HomeRepository.PromotedAppsCallback.class);
         verify(repository).fetchPromotedApps(captor.capture());
+        List<PromotedApp> promotedApps = Collections.singletonList(
+                new PromotedApp("App", "package", "icon")
+        );
 
-        List<PromotedApp> apps = List.of(new PromotedApp("App", "pkg", "icon"));
-        captor.getValue().onResult(apps);
+        captor.getValue().onResult(promotedApps);
 
-        verify(callback).onResult(apps);
+        verify(callback).onResult(promotedApps);
     }
 
     @Test
-    public void invokePropagatesEmptyResults() {
-        HomeRepository repository = mock(HomeRepository.class);
-        GetPromotedAppsUseCase useCase = new GetPromotedAppsUseCase(repository);
-        GetPromotedAppsUseCase.Callback callback = mock(GetPromotedAppsUseCase.Callback.class);
+    public void invokeForwardsEmptyList() {
+        ArgumentCaptor<HomeRepository.PromotedAppsCallback> captor =
+                ArgumentCaptor.forClass(HomeRepository.PromotedAppsCallback.class);
 
         useCase.invoke(callback);
 
-        ArgumentCaptor<HomeRepository.PromotedAppsCallback> captor =
-                ArgumentCaptor.forClass(HomeRepository.PromotedAppsCallback.class);
         verify(repository).fetchPromotedApps(captor.capture());
+        List<PromotedApp> promotedApps = Collections.emptyList();
 
-        List<PromotedApp> apps = Collections.emptyList();
-        captor.getValue().onResult(apps);
+        captor.getValue().onResult(promotedApps);
 
-        verify(callback).onResult(apps);
+        verify(callback).onResult(promotedApps);
     }
 
     @Test
-    public void invokePropagatesNullResults() {
-        HomeRepository repository = mock(HomeRepository.class);
-        GetPromotedAppsUseCase useCase = new GetPromotedAppsUseCase(repository);
-        GetPromotedAppsUseCase.Callback callback = mock(GetPromotedAppsUseCase.Callback.class);
+    public void invokeForwardsNullList() {
+        ArgumentCaptor<HomeRepository.PromotedAppsCallback> captor =
+                ArgumentCaptor.forClass(HomeRepository.PromotedAppsCallback.class);
 
         useCase.invoke(callback);
 
-        ArgumentCaptor<HomeRepository.PromotedAppsCallback> captor =
-                ArgumentCaptor.forClass(HomeRepository.PromotedAppsCallback.class);
         verify(repository).fetchPromotedApps(captor.capture());
 
         captor.getValue().onResult(null);
@@ -81,12 +83,10 @@ public class GetPromotedAppsUseCaseTest {
     }
 
     @Test
-    public void invokePropagatesRepositoryException() {
-        HomeRepository repository = mock(HomeRepository.class);
-        GetPromotedAppsUseCase useCase = new GetPromotedAppsUseCase(repository);
-        GetPromotedAppsUseCase.Callback callback = mock(GetPromotedAppsUseCase.Callback.class);
-        doThrow(new IllegalStateException("failure"))
-                .when(repository).fetchPromotedApps(any());
+    public void invokePropagatesRepositoryExceptions() {
+        doThrow(new IllegalStateException("failed"))
+                .when(repository)
+                .fetchPromotedApps(any());
 
         assertThrows(IllegalStateException.class, () -> useCase.invoke(callback));
         verify(repository).fetchPromotedApps(any());
