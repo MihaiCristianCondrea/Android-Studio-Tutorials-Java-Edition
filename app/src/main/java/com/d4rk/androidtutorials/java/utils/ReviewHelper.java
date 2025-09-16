@@ -25,7 +25,7 @@ public final class ReviewHelper {
         launchReview(activity, onReviewLaunched);
     }
 
-    public static void forceLaunchInAppReview(Activity activity) { // FIXME: Method 'forceLaunchInAppReview(android.app.Activity)' is never used
+    public static void forceLaunchInAppReview(Activity activity) {
         launchReview(activity, null);
     }
 

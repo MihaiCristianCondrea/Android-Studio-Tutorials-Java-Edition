@@ -65,6 +65,10 @@ public class SettingsActivity extends UpNavigationActivity
         return null;
     }
 
+    public SettingsViewModel getSettingsViewModel() {
+        return settingsViewModel;
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
