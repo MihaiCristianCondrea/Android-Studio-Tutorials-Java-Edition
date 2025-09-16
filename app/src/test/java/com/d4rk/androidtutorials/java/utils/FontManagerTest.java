@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.utils;
 import static org.junit.Assert.assertSame;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -25,7 +26,7 @@ import java.util.Map;
 public class FontManagerTest {
 
     @Test
-    public void getMonospaceFont_returnsExpectedTypefaceForStoredValues() {
+    public void getMonospaceFont_returnsExpectedTypefaceForValidCodes() {
         Context context = mock(Context.class);
         when(context.getString(R.string.key_monospace_font)).thenReturn("monospace_font");
 
@@ -51,13 +52,72 @@ public class FontManagerTest {
 
                 assertSame("Unexpected typeface for value " + entry.getKey(), expectedTypeface, result);
                 verify(prefs).getString("monospace_font", "6");
+                verify(prefs, never()).edit();
                 resourcesStatic.verify(() -> ResourcesCompat.getFont(context, entry.getValue()));
             }
         }
     }
 
     @Test
-    public void getMonospaceFont_removesInvalidPreferenceValueAndReturnsDefaultFont() {
+    public void getMonospaceFont_resetsPreferenceWhenCodeIsInvalid() {
+        Context context = mock(Context.class);
+        SharedPreferences prefs = mock(SharedPreferences.class);
+        SharedPreferences.Editor editor = mock(SharedPreferences.Editor.class);
+
+        when(context.getString(R.string.key_monospace_font)).thenReturn("monospace_font");
+        when(prefs.edit()).thenReturn(editor);
+        when(editor.remove("monospace_font")).thenReturn(editor);
+        when(prefs.getString("monospace_font", "6")).thenReturn("invalid");
+
+        Typeface defaultTypeface = mock(Typeface.class);
+
+        try (MockedStatic<ResourcesCompat> resourcesStatic = Mockito.mockStatic(ResourcesCompat.class)) {
+            resourcesStatic.when(() -> ResourcesCompat.getFont(context, R.font.font_google_sans_code))
+                    .thenReturn(defaultTypeface);
+
+            Typeface result = FontManager.getMonospaceFont(context, prefs);
+
+            assertSame(defaultTypeface, result);
+            verify(prefs).getString("monospace_font", "6");
+            verify(prefs).edit();
+            InOrder inOrder = inOrder(editor);
+            inOrder.verify(editor).remove("monospace_font");
+            inOrder.verify(editor).apply();
+            resourcesStatic.verify(() -> ResourcesCompat.getFont(context, R.font.font_google_sans_code));
+        }
+    }
+
+    @Test
+    public void getMonospaceFont_resetsPreferenceWhenCodeIsMissing() {
+        Context context = mock(Context.class);
+        SharedPreferences prefs = mock(SharedPreferences.class);
+        SharedPreferences.Editor editor = mock(SharedPreferences.Editor.class);
+
+        when(context.getString(R.string.key_monospace_font)).thenReturn("monospace_font");
+        when(prefs.edit()).thenReturn(editor);
+        when(editor.remove("monospace_font")).thenReturn(editor);
+        when(prefs.getString("monospace_font", "6")).thenReturn(null);
+
+        Typeface defaultTypeface = mock(Typeface.class);
+
+        try (MockedStatic<ResourcesCompat> resourcesStatic = Mockito.mockStatic(ResourcesCompat.class)) {
+            resourcesStatic.when(() -> ResourcesCompat.getFont(context, R.font.font_google_sans_code))
+                    .thenReturn(defaultTypeface);
+
+            Typeface result = FontManager.getMonospaceFont(context, prefs);
+
+            assertSame(defaultTypeface, result);
+            verify(prefs).getString("monospace_font", "6");
+            verify(prefs).edit();
+            InOrder inOrder = inOrder(editor);
+            inOrder.verify(editor).remove("monospace_font");
+            inOrder.verify(editor).apply();
+            resourcesStatic.verify(() -> ResourcesCompat.getFont(context, R.font.font_google_sans_code));
+        }
+    }
+
+    @Test
+    public void getMonospaceFont_resetsPreferenceWhenValueHasWrongType() {
         Context context = mock(Context.class);
         SharedPreferences prefs = mock(SharedPreferences.class);
         SharedPreferences.Editor editor = mock(SharedPreferences.Editor.class);
