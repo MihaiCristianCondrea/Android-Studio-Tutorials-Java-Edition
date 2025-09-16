@@ -1,5 +1,8 @@
 package com.d4rk.androidtutorials.java.ui.screens.startup;
 
+import static org.junit.Assert.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -48,6 +51,39 @@ public class StartupViewModelTest {
         viewModel.loadConsentForm(activity, onError);
 
         verify(loadUseCase).invoke(activity, onError);
+    }
+
+    @Test
+    public void requestConsentInfoUpdate_propagatesFailure() {
+        RequestConsentInfoUseCase requestUseCase = mock(RequestConsentInfoUseCase.class);
+        LoadConsentFormUseCase loadUseCase = mock(LoadConsentFormUseCase.class);
+        doThrow(new IllegalStateException("error"))
+                .when(requestUseCase)
+                .invoke(any(), any(), any(), any());
+        StartupViewModel viewModel = new StartupViewModel(requestUseCase, loadUseCase);
+
+        Activity activity = mock(Activity.class);
+        ConsentRequestParameters params = mock(ConsentRequestParameters.class);
+        Runnable onSuccess = mock(Runnable.class);
+        OnFormError onError = mock(OnFormError.class);
+
+        assertThrows(IllegalStateException.class,
+                () -> viewModel.requestConsentInfoUpdate(activity, params, onSuccess, onError));
+    }
+
+    @Test
+    public void loadConsentForm_propagatesFailure() {
+        RequestConsentInfoUseCase requestUseCase = mock(RequestConsentInfoUseCase.class);
+        LoadConsentFormUseCase loadUseCase = mock(LoadConsentFormUseCase.class);
+        doThrow(new RuntimeException("boom"))
+                .when(loadUseCase)
+                .invoke(any(), any());
+        StartupViewModel viewModel = new StartupViewModel(requestUseCase, loadUseCase);
+
+        Activity activity = mock(Activity.class);
+        OnFormError onError = mock(OnFormError.class);
+
+        assertThrows(RuntimeException.class, () -> viewModel.loadConsentForm(activity, onError));
     }
 }
 

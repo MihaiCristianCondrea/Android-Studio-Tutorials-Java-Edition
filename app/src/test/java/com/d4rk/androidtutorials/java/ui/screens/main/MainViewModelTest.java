@@ -2,6 +2,8 @@ package com.d4rk.androidtutorials.java.ui.screens.main;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
@@ -53,13 +55,8 @@ public class MainViewModelTest {
         getAppUpdateManagerUseCase = Mockito.mock(GetAppUpdateManagerUseCase.class);
     }
 
-    @Test
-    public void applySettingsUpdatesUiStateForLabeledHome() {
-        Mockito.when(applyThemeSettingsUseCase.invoke(themeValues)).thenReturn(true);
-        Mockito.when(getBottomNavLabelVisibilityUseCase.invoke()).thenReturn("labeled");
-        Mockito.when(getDefaultTabPreferenceUseCase.invoke()).thenReturn("home");
-
-        MainViewModel viewModel = new MainViewModel(
+    private MainViewModel createViewModel() {
+        return new MainViewModel(
                 applyThemeSettingsUseCase,
                 getBottomNavLabelVisibilityUseCase,
                 getDefaultTabPreferenceUseCase,
@@ -68,6 +65,23 @@ public class MainViewModelTest {
                 markStartupScreenShownUseCase,
                 getAppUpdateManagerUseCase
         );
+    }
+
+    @Test
+    public void initialState_isIdle() {
+        MainViewModel viewModel = createViewModel();
+
+        assertNull(viewModel.getUiState().getValue());
+        assertEquals(Boolean.FALSE, viewModel.getLoadingState().getValue());
+    }
+
+    @Test
+    public void applySettingsUpdatesUiStateForLabeledHome() {
+        Mockito.when(applyThemeSettingsUseCase.invoke(themeValues)).thenReturn(true);
+        Mockito.when(getBottomNavLabelVisibilityUseCase.invoke()).thenReturn("labeled");
+        Mockito.when(getDefaultTabPreferenceUseCase.invoke()).thenReturn("home");
+
+        MainViewModel viewModel = createViewModel();
 
         List<Boolean> loading = new ArrayList<>();
         viewModel.getLoadingState().observeForever(loading::add);
@@ -81,6 +95,7 @@ public class MainViewModelTest {
         assertEquals(NavigationBarView.LABEL_VISIBILITY_LABELED, state.bottomNavVisibility());
         assertEquals(R.id.navigation_home, state.defaultNavDestination());
         assertTrue(state.themeChanged());
+        Mockito.verify(applyLanguageSettingsUseCase).invoke();
     }
 
     @Test
@@ -89,15 +104,7 @@ public class MainViewModelTest {
         Mockito.when(getBottomNavLabelVisibilityUseCase.invoke()).thenReturn("selected");
         Mockito.when(getDefaultTabPreferenceUseCase.invoke()).thenReturn("android_studio");
 
-        MainViewModel viewModel = new MainViewModel(
-                applyThemeSettingsUseCase,
-                getBottomNavLabelVisibilityUseCase,
-                getDefaultTabPreferenceUseCase,
-                applyLanguageSettingsUseCase,
-                shouldShowStartupScreenUseCase,
-                markStartupScreenShownUseCase,
-                getAppUpdateManagerUseCase
-        );
+        MainViewModel viewModel = createViewModel();
 
         List<Boolean> loading = new ArrayList<>();
         viewModel.getLoadingState().observeForever(loading::add);
@@ -111,6 +118,7 @@ public class MainViewModelTest {
         assertEquals(NavigationBarView.LABEL_VISIBILITY_SELECTED, state.bottomNavVisibility());
         assertEquals(R.id.navigation_android_studio, state.defaultNavDestination());
         assertTrue(!state.themeChanged());
+        Mockito.verify(applyLanguageSettingsUseCase).invoke();
     }
 
     @Test
@@ -119,15 +127,7 @@ public class MainViewModelTest {
         Mockito.when(getBottomNavLabelVisibilityUseCase.invoke()).thenReturn("unlabeled");
         Mockito.when(getDefaultTabPreferenceUseCase.invoke()).thenReturn("about");
 
-        MainViewModel viewModel = new MainViewModel(
-                applyThemeSettingsUseCase,
-                getBottomNavLabelVisibilityUseCase,
-                getDefaultTabPreferenceUseCase,
-                applyLanguageSettingsUseCase,
-                shouldShowStartupScreenUseCase,
-                markStartupScreenShownUseCase,
-                getAppUpdateManagerUseCase
-        );
+        MainViewModel viewModel = createViewModel();
 
         List<Boolean> loading = new ArrayList<>();
         viewModel.getLoadingState().observeForever(loading::add);
@@ -141,6 +141,40 @@ public class MainViewModelTest {
         assertEquals(NavigationBarView.LABEL_VISIBILITY_UNLABELED, state.bottomNavVisibility());
         assertEquals(R.id.navigation_about, state.defaultNavDestination());
         assertTrue(state.themeChanged());
+        Mockito.verify(applyLanguageSettingsUseCase).invoke();
+    }
+
+    @Test
+    public void applySettingsFallsBackToHomeForUnknownTab() {
+        Mockito.when(applyThemeSettingsUseCase.invoke(themeValues)).thenReturn(false);
+        Mockito.when(getBottomNavLabelVisibilityUseCase.invoke()).thenReturn("other");
+        Mockito.when(getDefaultTabPreferenceUseCase.invoke()).thenReturn("unexpected");
+
+        MainViewModel viewModel = createViewModel();
+
+        viewModel.applySettings(themeValues, bottomNavBarLabelsValues, defaultTabValues);
+
+        MainUiState state = viewModel.getUiState().getValue();
+        assertNotNull(state);
+        assertEquals(NavigationBarView.LABEL_VISIBILITY_AUTO, state.bottomNavVisibility());
+        assertEquals(R.id.navigation_home, state.defaultNavDestination());
+    }
+
+    @Test
+    public void applySettingsPropagatesFailureAndStopsLoading() {
+        Mockito.when(applyThemeSettingsUseCase.invoke(themeValues))
+                .thenThrow(new IllegalStateException("fail"));
+
+        MainViewModel viewModel = createViewModel();
+
+        List<Boolean> loading = new ArrayList<>();
+        viewModel.getLoadingState().observeForever(loading::add);
+
+        assertThrows(IllegalStateException.class,
+                () -> viewModel.applySettings(themeValues, bottomNavBarLabelsValues, defaultTabValues));
+
+        assertEquals(List.of(false, true), loading);
+        Mockito.verify(applyLanguageSettingsUseCase, Mockito.never()).invoke();
     }
 
     private int callVisibilityMode(String value) throws Exception {

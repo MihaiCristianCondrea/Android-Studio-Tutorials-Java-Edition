@@ -9,8 +9,15 @@ import com.d4rk.androidtutorials.java.ui.screens.android.repository.LessonReposi
 
 public class CodeViewModel extends ViewModel {
     private final MutableLiveData<LessonRepository.Lesson> lesson = new MutableLiveData<>();
-    private final LessonRepository repository = new LessonRepository();
-    private final GetLessonUseCase getLessonUseCase = new GetLessonUseCase(repository);
+    private final GetLessonUseCase getLessonUseCase;
+
+    public CodeViewModel() {
+        this(new GetLessonUseCase(new LessonRepository()));
+    }
+
+    CodeViewModel(GetLessonUseCase getLessonUseCase) {
+        this.getLessonUseCase = getLessonUseCase;
+    }
 
     public void setLessonName(String lessonName) {
         lesson.setValue(getLessonUseCase.invoke(lessonName));

@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ui.screens.about;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -36,5 +37,25 @@ public class AboutViewModelTest {
 
         assertEquals("2024", result);
         verify(currentYearUseCase).invoke();
+    }
+
+    @Test
+    public void getVersionString_propagatesFailure() {
+        GetVersionStringUseCase versionUseCase = mock(GetVersionStringUseCase.class);
+        GetCurrentYearUseCase currentYearUseCase = mock(GetCurrentYearUseCase.class);
+        when(versionUseCase.invoke()).thenThrow(new IllegalStateException("error"));
+        AboutViewModel viewModel = new AboutViewModel(versionUseCase, currentYearUseCase);
+
+        assertThrows(IllegalStateException.class, viewModel::getVersionString);
+    }
+
+    @Test
+    public void getCurrentYear_propagatesFailure() {
+        GetVersionStringUseCase versionUseCase = mock(GetVersionStringUseCase.class);
+        GetCurrentYearUseCase currentYearUseCase = mock(GetCurrentYearUseCase.class);
+        when(currentYearUseCase.invoke()).thenThrow(new IllegalArgumentException("error"));
+        AboutViewModel viewModel = new AboutViewModel(versionUseCase, currentYearUseCase);
+
+        assertThrows(IllegalArgumentException.class, viewModel::getCurrentYear);
     }
 }
