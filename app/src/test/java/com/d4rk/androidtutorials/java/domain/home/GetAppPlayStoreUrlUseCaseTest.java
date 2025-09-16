@@ -1,7 +1,6 @@
 package com.d4rk.androidtutorials.java.domain.home;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -9,53 +8,48 @@ import static org.mockito.Mockito.when;
 
 import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class GetAppPlayStoreUrlUseCaseTest {
 
-    @Test
-    public void invokeReturnsAppUrl() {
-        HomeRepository repository = mock(HomeRepository.class);
-        when(repository.getAppPlayStoreUrl("pkg")).thenReturn("url");
-        GetAppPlayStoreUrlUseCase useCase = new GetAppPlayStoreUrlUseCase(repository);
+    private static final String PACKAGE_NAME = "com.example.pkg";
 
-        String result = useCase.invoke("pkg");
+    private HomeRepository repository;
+    private GetAppPlayStoreUrlUseCase useCase;
 
-        assertEquals("url", result);
-        verify(repository).getAppPlayStoreUrl("pkg");
+    @Before
+    public void setUp() {
+        repository = mock(HomeRepository.class);
+        useCase = new GetAppPlayStoreUrlUseCase(repository);
     }
 
     @Test
-    public void invokeDelegatesNullPackageName() {
-        HomeRepository repository = mock(HomeRepository.class);
-        when(repository.getAppPlayStoreUrl(null)).thenReturn("fallback");
-        GetAppPlayStoreUrlUseCase useCase = new GetAppPlayStoreUrlUseCase(repository);
+    public void invokeReturnsUrlForPackage() {
+        when(repository.getAppPlayStoreUrl(PACKAGE_NAME)).thenReturn("https://play.store/app/com.example.pkg");
 
-        String result = useCase.invoke(null);
+        String result = useCase.invoke(PACKAGE_NAME);
 
-        assertEquals("fallback", result);
-        verify(repository).getAppPlayStoreUrl(null);
+        assertEquals("https://play.store/app/com.example.pkg", result);
+        verify(repository).getAppPlayStoreUrl(PACKAGE_NAME);
     }
 
     @Test
-    public void invokeReturnsNullWhenRepositoryReturnsNull() {
-        HomeRepository repository = mock(HomeRepository.class);
-        when(repository.getAppPlayStoreUrl("pkg")).thenReturn(null);
-        GetAppPlayStoreUrlUseCase useCase = new GetAppPlayStoreUrlUseCase(repository);
+    public void invokeReturnsEmptyUrlWhenRepositoryReturnsEmpty() {
+        when(repository.getAppPlayStoreUrl(PACKAGE_NAME)).thenReturn("");
 
-        String result = useCase.invoke("pkg");
+        String result = useCase.invoke(PACKAGE_NAME);
 
-        assertNull(result);
-        verify(repository).getAppPlayStoreUrl("pkg");
+        assertEquals("", result);
+        verify(repository).getAppPlayStoreUrl(PACKAGE_NAME);
     }
 
     @Test
     public void invokePropagatesRepositoryException() {
-        HomeRepository repository = mock(HomeRepository.class);
-        when(repository.getAppPlayStoreUrl("pkg")).thenThrow(new IllegalStateException("err"));
-        GetAppPlayStoreUrlUseCase useCase = new GetAppPlayStoreUrlUseCase(repository);
+        when(repository.getAppPlayStoreUrl(PACKAGE_NAME))
+                .thenThrow(new IllegalArgumentException("invalid package"));
 
-        assertThrows(IllegalStateException.class, () -> useCase.invoke("pkg"));
-        verify(repository).getAppPlayStoreUrl("pkg");
+        assertThrows(IllegalArgumentException.class, () -> useCase.invoke(PACKAGE_NAME));
+        verify(repository).getAppPlayStoreUrl(PACKAGE_NAME);
     }
 }

@@ -8,27 +8,33 @@ import static org.mockito.Mockito.when;
 
 import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class GetDailyTipUseCaseTest {
 
+    private HomeRepository repository;
+    private GetDailyTipUseCase useCase;
+
+    @Before
+    public void setUp() {
+        repository = mock(HomeRepository.class);
+        useCase = new GetDailyTipUseCase(repository);
+    }
+
     @Test
-    public void invokeReturnsDailyTip() {
-        HomeRepository repository = mock(HomeRepository.class);
-        when(repository.dailyTip()).thenReturn("tip");
-        GetDailyTipUseCase useCase = new GetDailyTipUseCase(repository);
+    public void invokeReturnsRepositoryTip() {
+        when(repository.dailyTip()).thenReturn("Tip of the day");
 
         String result = useCase.invoke();
 
-        assertEquals("tip", result);
+        assertEquals("Tip of the day", result);
         verify(repository).dailyTip();
     }
 
     @Test
-    public void invokeHandlesEmptyTip() {
-        HomeRepository repository = mock(HomeRepository.class);
+    public void invokeReturnsEmptyTip() {
         when(repository.dailyTip()).thenReturn("");
-        GetDailyTipUseCase useCase = new GetDailyTipUseCase(repository);
 
         String result = useCase.invoke();
 
@@ -38,11 +44,9 @@ public class GetDailyTipUseCaseTest {
 
     @Test
     public void invokePropagatesRepositoryException() {
-        HomeRepository repository = mock(HomeRepository.class);
-        when(repository.dailyTip()).thenThrow(new IllegalArgumentException("bad"));
-        GetDailyTipUseCase useCase = new GetDailyTipUseCase(repository);
+        when(repository.dailyTip()).thenThrow(new IllegalStateException("not available"));
 
-        assertThrows(IllegalArgumentException.class, useCase::invoke);
+        assertThrows(IllegalStateException.class, useCase::invoke);
         verify(repository).dailyTip();
     }
 }
