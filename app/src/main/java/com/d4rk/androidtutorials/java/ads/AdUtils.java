@@ -8,6 +8,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+import java.util.Objects;
+
 public final class AdUtils {
     private static boolean initialized = false;
 
@@ -17,7 +19,9 @@ public final class AdUtils {
 
     public static synchronized void initialize(Context context) {
         if (!initialized) {
-            MobileAds.initialize(context.getApplicationContext());
+            Context nonNullContext = Objects.requireNonNull(context, "context == null");
+            Context appContext = nonNullContext.getApplicationContext();
+            MobileAds.initialize(appContext != null ? appContext : nonNullContext);
             initialized = true;
         }
     }
