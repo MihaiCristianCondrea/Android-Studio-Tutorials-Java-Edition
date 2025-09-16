@@ -1,5 +1,8 @@
 package com.d4rk.androidtutorials.java.ads;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.*;
 
 import android.content.Context;
@@ -21,16 +24,32 @@ import java.lang.reflect.Field;
  */
 public class AdUtilsTest {
 
+    private Field initializedField;
+
     @Before
     public void setUp() throws Exception {
         // Reset the initialized flag before each test
-        Field field = AdUtils.class.getDeclaredField("initialized");
-        field.setAccessible(true);
-        field.set(null, false);
+        initializedField = AdUtils.class.getDeclaredField("initialized");
+        initializedField.setAccessible(true);
+        initializedField.set(null, false);
     }
 
     @Test
-    public void initialize_callsMobileAdsInitializeOnlyOnce() {
+    public void initialize_firstCallInitializesAdsAndSetsFlag() throws Exception {
+        Context context = mock(Context.class);
+        when(context.getApplicationContext()).thenReturn(context);
+
+        try (MockedStatic<MobileAds> mobileAds = mockStatic(MobileAds.class)) {
+            AdUtils.initialize(context);
+
+            mobileAds.verify(() -> MobileAds.initialize(context), times(1));
+        }
+
+        assertTrue(isInitialized());
+    }
+
+    @Test
+    public void initialize_subsequentCallsDoNothing() throws Exception {
         Context context = mock(Context.class);
         when(context.getApplicationContext()).thenReturn(context);
 
@@ -40,6 +59,18 @@ public class AdUtilsTest {
 
             mobileAds.verify(() -> MobileAds.initialize(context), times(1));
         }
+
+        assertTrue(isInitialized());
+    }
+
+    @Test
+    public void initialize_withNullContext_throwsNullPointerException() throws Exception {
+        try (MockedStatic<MobileAds> mobileAds = mockStatic(MobileAds.class)) {
+            assertThrows(NullPointerException.class, () -> AdUtils.initialize(null));
+            mobileAds.verifyNoInteractions();
+        }
+
+        assertFalse(isInitialized());
     }
 
     @Test
@@ -83,5 +114,9 @@ public class AdUtilsTest {
             AdUtils.loadBanner(view);
             mobileAds.verifyNoInteractions();
         }
+    }
+
+    private boolean isInitialized() throws IllegalAccessException {
+        return initializedField.getBoolean(null);
     }
 }
