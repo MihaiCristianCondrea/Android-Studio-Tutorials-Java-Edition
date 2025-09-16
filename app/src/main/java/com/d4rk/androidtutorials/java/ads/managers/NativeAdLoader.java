@@ -1,6 +1,8 @@
 package com.d4rk.androidtutorials.java.ads.managers;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
+import androidx.annotation.VisibleForTesting;
 
 import com.d4rk.androidtutorials.java.R;
 import com.google.android.gms.ads.AdListener;
@@ -49,7 +52,7 @@ public class NativeAdLoader {
                             @NonNull AdRequest adRequest,
                             @androidx.annotation.Nullable AdListener listener) {
         AdLoader.Builder builder = new AdLoader.Builder(context, context.getString(R.string.native_ad_banner_unit_id))
-                .forNativeAd(nativeAd -> {
+                .forNativeAd(nativeAd -> postToMainThread(() -> {
                     LayoutInflater inflater = LayoutInflater.from(context);
                     NativeAdView adView = (NativeAdView) inflater.inflate(layoutRes, container, false);
                     adView.setLayoutParams(new ViewGroup.LayoutParams(
@@ -59,22 +62,116 @@ public class NativeAdLoader {
                             container.getPaddingRight(), container.getPaddingBottom());
                     container.setPadding(0, 0, 0, 0);
                     populateNativeAdView(nativeAd, adView);
+                    container.setVisibility(View.VISIBLE);
                     container.removeAllViews();
                     container.addView(adView);
                     container.requestLayout();
-                });
+                }));
 
-        builder.withAdListener(listener != null ? listener : new AdListener() {
-            @Override
-            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                Log.w(TAG, "Failed to load native ad: " + loadAdError.getMessage());
-                container.removeAllViews();
-                container.setVisibility(View.GONE);
-            }
-        });
+        builder.withAdListener(createAdListener(container, listener));
 
         AdLoader adLoader = builder.build();
         adLoader.loadAd(adRequest);
+    }
+
+    private static AdListener createAdListener(@NonNull ViewGroup container,
+                                               @androidx.annotation.Nullable AdListener listener) {
+        return new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                postToMainThread(() -> {
+                    if (listener != null) {
+                        listener.onAdLoaded();
+                    }
+                });
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                postToMainThread(() -> {
+                    Log.w(TAG, "Failed to load native ad: " + loadAdError.getMessage());
+                    container.removeAllViews();
+                    container.setVisibility(View.GONE);
+                    if (listener != null) {
+                        listener.onAdFailedToLoad(loadAdError);
+                    }
+                });
+            }
+
+            @Override
+            public void onAdOpened() {
+                postToMainThread(() -> {
+                    if (listener != null) {
+                        listener.onAdOpened();
+                    }
+                });
+            }
+
+            @Override
+            public void onAdClosed() {
+                postToMainThread(() -> {
+                    if (listener != null) {
+                        listener.onAdClosed();
+                    }
+                });
+            }
+
+            @Override
+            public void onAdClicked() {
+                postToMainThread(() -> {
+                    if (listener != null) {
+                        listener.onAdClicked();
+                    }
+                });
+            }
+
+            @Override
+            public void onAdImpression() {
+                postToMainThread(() -> {
+                    if (listener != null) {
+                        listener.onAdImpression();
+                    }
+                });
+            }
+        };
+    }
+
+    interface MainThreadExecutor {
+        void post(@NonNull Runnable runnable);
+    }
+
+    private static final class HandlerMainThreadExecutor implements MainThreadExecutor {
+        private final Handler handler;
+
+        private HandlerMainThreadExecutor() {
+            Looper looper = Looper.getMainLooper();
+            handler = looper != null ? new Handler(looper) : null;
+        }
+
+        @Override
+        public void post(@NonNull Runnable runnable) {
+            if (handler != null) {
+                handler.post(runnable);
+            } else {
+                runnable.run();
+            }
+        }
+    }
+
+    private static MainThreadExecutor mainThreadExecutor = new HandlerMainThreadExecutor();
+
+    private static void postToMainThread(@NonNull Runnable runnable) {
+        mainThreadExecutor.post(runnable);
+    }
+
+    @VisibleForTesting
+    static void setMainThreadExecutorForTesting(@NonNull MainThreadExecutor executor) {
+        mainThreadExecutor = executor;
+    }
+
+    @VisibleForTesting
+    static void resetMainThreadExecutorForTesting() {
+        mainThreadExecutor = new HandlerMainThreadExecutor();
     }
 
     private static void populateNativeAdView(@NonNull NativeAd nativeAd, @NonNull NativeAdView adView) {

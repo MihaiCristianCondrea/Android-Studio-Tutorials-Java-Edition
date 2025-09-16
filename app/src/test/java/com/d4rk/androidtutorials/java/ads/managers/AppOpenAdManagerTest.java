@@ -1,6 +1,8 @@
 package com.d4rk.androidtutorials.java.ads.managers;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
@@ -16,8 +18,10 @@ import android.content.Context;
 
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.ads.managers.AppOpenAd.OnShowAdCompleteListener;
+import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.appopen.AppOpenAd.AppOpenAdLoadCallback;
 
 import org.junit.Before;
@@ -131,6 +135,101 @@ public class AppOpenAdManagerTest {
         verify(ad, times(1)).show(activity);
     }
 
+    @Test
+    public void showAdIfAvailable_withAd_handlesDismissAndReloads() throws Exception {
+        Activity activity = mock(Activity.class);
+        OnShowAdCompleteListener listener = mock(OnShowAdCompleteListener.class);
+        com.google.android.gms.ads.appopen.AppOpenAd ad = mock(com.google.android.gms.ads.appopen.AppOpenAd.class);
+
+        setField("appOpenAd", ad);
+        setLongField("loadTime", System.currentTimeMillis());
+
+        try (MockedStatic<AdUtils> adUtils = mockStatic(AdUtils.class);
+             MockedStatic<com.google.android.gms.ads.appopen.AppOpenAd> appOpenAdStatic =
+                     mockStatic(com.google.android.gms.ads.appopen.AppOpenAd.class)) {
+            appOpenAdStatic
+                    .when(() -> com.google.android.gms.ads.appopen.AppOpenAd.load(
+                            any(Context.class),
+                            anyString(),
+                            any(AdRequest.class),
+                            any(AppOpenAdLoadCallback.class)))
+                    .thenAnswer(invocation -> {
+                        AppOpenAdLoadCallback callback = invocation.getArgument(3);
+                        callback.onAdLoaded(mock(com.google.android.gms.ads.appopen.AppOpenAd.class));
+                        return null;
+                    });
+
+            invokeShowAdIfAvailable(activity, listener);
+
+            ArgumentCaptor<FullScreenContentCallback> callbackCaptor =
+                    ArgumentCaptor.forClass(FullScreenContentCallback.class);
+            verify(ad).setFullScreenContentCallback(callbackCaptor.capture());
+            verify(ad).show(activity);
+            assertTrue(getBooleanField("isShowingAd"));
+
+            callbackCaptor.getValue().onAdDismissedFullScreenContent();
+
+            assertFalse(getBooleanField("isShowingAd"));
+            assertFalse(getBooleanField("isLoadingAd"));
+            assertNotNull(getFieldValue("appOpenAd"));
+            verify(listener, times(1)).onShowAdComplete();
+            adUtils.verify(() -> AdUtils.initialize(any(Context.class)));
+            appOpenAdStatic.verify(() -> com.google.android.gms.ads.appopen.AppOpenAd.load(
+                    any(Context.class),
+                    anyString(),
+                    any(AdRequest.class),
+                    any(AppOpenAdLoadCallback.class)));
+        }
+    }
+
+    @Test
+    public void showAdIfAvailable_withAd_handlesShowFailureAndReloadFailure() throws Exception {
+        Activity activity = mock(Activity.class);
+        OnShowAdCompleteListener listener = mock(OnShowAdCompleteListener.class);
+        com.google.android.gms.ads.appopen.AppOpenAd ad = mock(com.google.android.gms.ads.appopen.AppOpenAd.class);
+        LoadAdError loadAdError = mock(LoadAdError.class);
+        AdError adError = mock(AdError.class);
+
+        setField("appOpenAd", ad);
+        setLongField("loadTime", System.currentTimeMillis());
+
+        try (MockedStatic<AdUtils> adUtils = mockStatic(AdUtils.class);
+             MockedStatic<com.google.android.gms.ads.appopen.AppOpenAd> appOpenAdStatic =
+                     mockStatic(com.google.android.gms.ads.appopen.AppOpenAd.class)) {
+            appOpenAdStatic
+                    .when(() -> com.google.android.gms.ads.appopen.AppOpenAd.load(
+                            any(Context.class),
+                            anyString(),
+                            any(AdRequest.class),
+                            any(AppOpenAdLoadCallback.class)))
+                    .thenAnswer(invocation -> {
+                        AppOpenAdLoadCallback callback = invocation.getArgument(3);
+                        callback.onAdFailedToLoad(loadAdError);
+                        return null;
+                    });
+
+            invokeShowAdIfAvailable(activity, listener);
+
+            ArgumentCaptor<FullScreenContentCallback> callbackCaptor =
+                    ArgumentCaptor.forClass(FullScreenContentCallback.class);
+            verify(ad).setFullScreenContentCallback(callbackCaptor.capture());
+            verify(ad).show(activity);
+
+            callbackCaptor.getValue().onAdFailedToShowFullScreenContent(adError);
+
+            assertFalse(getBooleanField("isShowingAd"));
+            assertFalse(getBooleanField("isLoadingAd"));
+            assertNull(getFieldValue("appOpenAd"));
+            verify(listener, times(1)).onShowAdComplete();
+            adUtils.verify(() -> AdUtils.initialize(any(Context.class)));
+            appOpenAdStatic.verify(() -> com.google.android.gms.ads.appopen.AppOpenAd.load(
+                    any(Context.class),
+                    anyString(),
+                    any(AdRequest.class),
+                    any(AppOpenAdLoadCallback.class)));
+        }
+    }
+
     private Class<?> findManagerClass() {
         for (Class<?> clazz : AppOpenAd.class.getDeclaredClasses()) {
             if ("AppOpenAdManager".equals(clazz.getSimpleName())) {
@@ -154,6 +253,18 @@ public class AppOpenAdManagerTest {
                 OnShowAdCompleteListener.class);
         method.setAccessible(true);
         method.invoke(manager, activity, listener);
+    }
+
+    private boolean getBooleanField(String fieldName) throws Exception {
+        Field field = managerClass.getDeclaredField(fieldName);
+        field.setAccessible(true);
+        return field.getBoolean(manager);
+    }
+
+    private Object getFieldValue(String fieldName) throws Exception {
+        Field field = managerClass.getDeclaredField(fieldName);
+        field.setAccessible(true);
+        return field.get(manager);
     }
 
     private void setField(String fieldName, Object value) throws Exception {
