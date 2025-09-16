@@ -26,12 +26,24 @@ public class CodeViewUtilsTest {
     }
 
     @Test
-    public void applyDefaults_configuresAllViews() {
+    public void applyDefaults_configuresNonNullViews() {
         Typeface typeface = mock(Typeface.class);
         CodeView first = mock(CodeView.class);
         CodeView second = mock(CodeView.class);
 
-        CodeViewUtils.applyDefaults(typeface, first, second, null);
+        CodeViewUtils.applyDefaults(typeface, first, second);
+
+        verifyDefaults(first, typeface);
+        verifyDefaults(second, typeface);
+    }
+
+    @Test
+    public void applyDefaults_ignoresNullViews() {
+        Typeface typeface = mock(Typeface.class);
+        CodeView first = mock(CodeView.class);
+        CodeView second = mock(CodeView.class);
+
+        CodeViewUtils.applyDefaults(typeface, null, first, null, second, null);
 
         verifyDefaults(first, typeface);
         verifyDefaults(second, typeface);
