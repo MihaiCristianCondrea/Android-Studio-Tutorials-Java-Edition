@@ -14,6 +14,7 @@ import org.mockito.MockedStatic;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.when;
 
 public class StartupWorkerTest {
@@ -31,8 +32,8 @@ public class StartupWorkerTest {
 
             ListenableWorker.Result result = worker.doWork();
 
-            mockedAdUtils.verify(() -> AdUtils.initialize(context));
-            mockedCookieManager.verify(CookieManager::getInstance);
+            mockedAdUtils.verify(() -> AdUtils.initialize(context), times(1));
+            mockedCookieManager.verify(CookieManager::getInstance, times(1));
             assertEquals(ListenableWorker.Result.success(), result);
         }
     }
