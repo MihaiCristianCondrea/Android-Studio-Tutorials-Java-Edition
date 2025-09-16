@@ -7,7 +7,9 @@ import android.content.SharedPreferences;
 import android.os.Build;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.annotation.VisibleForTesting;
 import androidx.core.app.NotificationCompat;
 import androidx.preference.PreferenceManager;
 import androidx.work.Worker;
@@ -22,6 +24,8 @@ import com.d4rk.androidtutorials.java.R;
 public class AppUsageNotificationWorker extends Worker {
 
     private final SharedPreferences sharedPreferences;
+    @Nullable
+    private final NotificationManager notificationManager;
 
     /**
      * Constructor for {@link AppUsageNotificationWorker}.
@@ -31,8 +35,20 @@ public class AppUsageNotificationWorker extends Worker {
      */
     public AppUsageNotificationWorker(@NonNull Context context,
                                       @NonNull WorkerParameters workerParams) {
+        this(context,
+                workerParams,
+                PreferenceManager.getDefaultSharedPreferences(context),
+                (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE));
+    }
+
+    @VisibleForTesting
+    AppUsageNotificationWorker(@NonNull Context context,
+                               @NonNull WorkerParameters workerParams,
+                               @NonNull SharedPreferences sharedPreferences,
+                               @Nullable NotificationManager notificationManager) {
         super(context, workerParams);
-        this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        this.sharedPreferences = sharedPreferences;
+        this.notificationManager = notificationManager;
     }
 
     /**
@@ -49,10 +65,8 @@ public class AppUsageNotificationWorker extends Worker {
         long notificationThreshold = 3 * 24 * 60 * 60 * 1000;
         long lastUsedTimestamp = sharedPreferences.getLong("lastUsed", 0);
 
-        if (currentTimestamp - lastUsedTimestamp > notificationThreshold) {
-            NotificationManager notificationManager =
-                    (NotificationManager) getApplicationContext().getSystemService(
-                            Context.NOTIFICATION_SERVICE);
+        if (lastUsedTimestamp != 0 && notificationManager != null
+                && currentTimestamp - lastUsedTimestamp > notificationThreshold) {
             String appUsageChannelId = "app_usage_channel";
             NotificationChannel appUsageChannel = new NotificationChannel(
                     appUsageChannelId,
