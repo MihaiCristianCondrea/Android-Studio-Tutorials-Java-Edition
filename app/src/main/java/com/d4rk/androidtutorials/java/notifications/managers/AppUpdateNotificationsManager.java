@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 
-import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
 import com.d4rk.androidtutorials.java.R;
@@ -19,6 +18,8 @@ import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.UpdateAvailability;
 
+import java.util.function.IntSupplier;
+
 /**
  * Utility class for managing app update notifications.
  *
@@ -28,11 +29,17 @@ import com.google.android.play.core.install.model.UpdateAvailability;
 public class AppUpdateNotificationsManager {
 
     private final Context context;
+    private final IntSupplier sdkIntSupplier;
     private final String updateChannelId = "update_channel";
     private final int updateNotificationId = 0;
 
     public AppUpdateNotificationsManager(Context context) {
+        this(context, () -> Build.VERSION.SDK_INT);
+    }
+
+    AppUpdateNotificationsManager(Context context, IntSupplier sdkIntSupplier) {
         this.context = context;
+        this.sdkIntSupplier = sdkIntSupplier;
     }
 
     /**
@@ -43,7 +50,6 @@ public class AppUpdateNotificationsManager {
      * to update the app via the Play Store. The notification includes a deep link to the app's
      * Play Store listing.
      */
-    @RequiresApi(api = Build.VERSION_CODES.O)
     public void checkAndSendUpdateNotification() {
         NotificationManager notificationManager =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -53,12 +59,14 @@ public class AppUpdateNotificationsManager {
                 appUpdateInfo -> {
                     if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE &&
                             appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
-                        NotificationChannel updateChannel = new NotificationChannel(
-                                updateChannelId,
-                                context.getString(R.string.update_notifications),
-                                NotificationManager.IMPORTANCE_HIGH
-                        );
-                        notificationManager.createNotificationChannel(updateChannel);
+                        if (sdkIntSupplier.getAsInt() >= Build.VERSION_CODES.O) {
+                            NotificationChannel updateChannel = new NotificationChannel(
+                                    updateChannelId,
+                                    context.getString(R.string.update_notifications),
+                                    NotificationManager.IMPORTANCE_HIGH
+                            );
+                            notificationManager.createNotificationChannel(updateChannel);
+                        }
                         NotificationCompat.Builder updateBuilder = new NotificationCompat.Builder(context, updateChannelId)
                                 .setSmallIcon(R.drawable.ic_notification_update)
                                 .setContentTitle(context.getString(R.string.notification_update_title))
