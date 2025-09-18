@@ -1,7 +1,6 @@
 package com.d4rk.androidtutorials.java.ui.screens.help;
 
 import android.content.ActivityNotFoundException;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -23,7 +22,6 @@ import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
 import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.review.ReviewInfo;
-import com.mikepenz.aboutlibraries.LibsBuilder;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
@@ -82,35 +80,11 @@ public class HelpActivity extends BaseActivity {
             openLink("https://mihaicristiancondrea.github.io/profile/#privacy-policy-end-user-software");
             return true;
         } else if (itemId == R.id.oss) {
-            OpenSourceLicensesUtils.loadHtmlData(this, (changelogHtml, eulaHtml) -> openLicensesScreen(this, eulaHtml, changelogHtml));
+            OpenSourceLicensesUtils.openLicensesScreen(this);
             return true;
         } else {
             return super.onOptionsItemSelected(item);
         }
-    }
-
-    private void openLicensesScreen(Context context, String eulaHtmlString, String changelogHtmlString) {
-        new LibsBuilder()
-                .withActivityTitle(context.getString(R.string.open_source_licenses))
-                .withEdgeToEdge(true)
-                .withShowLoadingProgress(true)
-                .withSearchEnabled(true)
-                .withAboutIconShown(true)
-                .withAboutAppName(context.getString(R.string.app_name))
-                .withVersionShown(true)
-                .withAboutVersionString(BuildConfig.VERSION_NAME + " (" + BuildConfig.VERSION_CODE + ")")
-                .withLicenseShown(true)
-                .withAboutVersionShown(true)
-                .withAboutSpecial1(context.getString(R.string.eula_title))
-                .withAboutSpecial1Description(
-                        eulaHtmlString != null ? eulaHtmlString : context.getString(R.string.loading_eula)
-                )
-                .withAboutSpecial2(context.getString(R.string.changelog))
-                .withAboutSpecial2Description(
-                        changelogHtmlString != null ? changelogHtmlString : context.getString(R.string.loading_changelog)
-                )
-                .withAboutDescription(context.getString(R.string.app_short_description))
-                .start(context);
     }
 
     private void showVersionInfoDialog() {
@@ -131,7 +105,7 @@ public class HelpActivity extends BaseActivity {
         final String appPackageName = getPackageName();
         try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-        } catch (android.content.ActivityNotFoundException anfe) {
+        } catch (ActivityNotFoundException anfe) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
         }
     }

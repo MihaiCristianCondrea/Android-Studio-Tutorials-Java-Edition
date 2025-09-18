@@ -63,7 +63,11 @@
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="com.mikepenz.aboutlibraries.ui.LibsActivity"
+            android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"
             android:exported="false"
             android:theme="@style/AppTheme" />
 
