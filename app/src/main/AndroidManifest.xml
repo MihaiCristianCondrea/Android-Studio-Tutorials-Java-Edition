@@ -391,6 +391,10 @@
             android:value="ca-app-pub-5294151573817700~1436412543" />
 
         <meta-data
+            android:name="com.google.android.gms.ads.flag.NATIVE_AD_DEBUGGER_ENABLED"
+            android:value="false" />
+
+        <meta-data
             android:name="firebase_performance_logcat_enabled"
             android:value="true" />
 
