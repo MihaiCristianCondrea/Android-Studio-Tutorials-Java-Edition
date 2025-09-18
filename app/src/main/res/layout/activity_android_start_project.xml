@@ -26,40 +26,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/top_app_bar">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_first_step"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="24dp"
                 android:text="@string/step1"
                 android:textAppearance="@style/TextAppearance.TitleLargeEmphasized"
-                android:textColor="?attr/colorSecondary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textColor="?attr/colorSecondary" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_first_step_summary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="24dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/summary_first_step"
-                android:textAppearance="@style/TextAppearance.BodyLargeEmphasized"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_view_first_step" />
+                android:textAppearance="@style/TextAppearance.BodyLargeEmphasized" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_view_first_step"
                 style="@style/Widget.Material3.CardView.Elevated"
                 android:layout_width="match_parent"
                 android:layout_height="256dp"
-                android:layout_margin="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_view_first_step_summary"
+                android:layout_marginTop="24dp"
                 app:shapeAppearanceOverlay="@style/ShapeTokens.Clover">
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -76,39 +72,31 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 ads:adSize="MEDIUM_RECTANGLE"
-                ads:adUnitId="@string/ad_banner_unit_id"
-                app:layout_constraintTop_toBottomOf="@id/card_view_first_step" />
+                ads:adUnitId="@string/ad_banner_unit_id" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_second_step"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="24dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/step2"
                 android:textAppearance="@style/TextAppearance.TitleLargeEmphasized"
-                android:textColor="?attr/colorSecondary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ad_view" />
+                android:textColor="?attr/colorSecondary" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_second_step_summary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="24dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/summary_second_step"
-                android:textAppearance="@style/TextAppearance.BodyLargeEmphasized"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_view_second_step" />
+                android:textAppearance="@style/TextAppearance.BodyLargeEmphasized" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_view_second_step"
                 style="@style/Widget.Material3.CardView.Elevated"
                 android:layout_width="match_parent"
                 android:layout_height="256dp"
-                android:layout_margin="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_view_second_step_summary"
+                android:layout_marginTop="24dp"
                 app:shapeAppearanceOverlay="@style/ShapeTokens.Clover">
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -123,32 +111,25 @@
                 android:id="@+id/text_view_third_step"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="24dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/step3"
                 android:textAppearance="@style/TextAppearance.TitleLargeEmphasized"
-                android:textColor="?attr/colorSecondary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_view_second_step" />
+                android:textColor="?attr/colorSecondary" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_third_step_summary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="24dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/summary_third_step"
-                android:textAppearance="@style/TextAppearance.BodyLargeEmphasized"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_view_third_step" />
+                android:textAppearance="@style/TextAppearance.BodyLargeEmphasized" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_view_third_step"
                 style="@style/Widget.Material3.CardView.Elevated"
                 android:layout_width="match_parent"
                 android:layout_height="256dp"
-                android:layout_margin="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_view_third_step_summary"
+                android:layout_marginTop="24dp"
                 app:shapeAppearanceOverlay="@style/ShapeTokens.Clover">
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -163,7 +144,6 @@
                 android:id="@+id/lottie_animation"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layout_constraintTop_toBottomOf="@id/card_view_third_step"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="false"
                 app:lottie_rawRes="@raw/anim_programmer"
@@ -173,10 +153,9 @@
                 android:id="@+id/ad_view_bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="24dp"
+                android:layout_marginTop="24dp"
                 ads:adSize="LARGE_BANNER"
-                ads:adUnitId="@string/ad_banner_unit_id"
-                app:layout_constraintTop_toBottomOf="@id/lottie_animation" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                ads:adUnitId="@string/ad_banner_unit_id" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </me.zhanghai.android.fastscroll.FastScrollScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
