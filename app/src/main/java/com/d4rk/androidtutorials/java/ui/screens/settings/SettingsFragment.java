@@ -16,11 +16,9 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
-import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ui.components.dialogs.RequireRestartDialog;
 import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
-import com.mikepenz.aboutlibraries.LibsBuilder;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
     @Override
@@ -57,7 +55,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         Preference ossPreference = findPreference(getString(R.string.key_open_source_licenses));
         if (ossPreference != null) {
             ossPreference.setOnPreferenceClickListener(preference -> {
-                OpenSourceLicensesUtils.loadHtmlData(requireContext(), (changelogHtml, eulaHtml) -> openLicensesScreen(requireContext(), eulaHtml, changelogHtml));
+                OpenSourceLicensesUtils.openLicensesScreen(requireContext());
                 return true;
             });
         }
@@ -97,29 +95,5 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 return true;
             });
         }
-    }
-
-    private void openLicensesScreen(Context context, String eulaHtmlString, String changelogHtmlString) {
-        new LibsBuilder()
-                .withActivityTitle(context.getString(R.string.open_source_licenses))
-                .withEdgeToEdge(true)
-                .withShowLoadingProgress(true)
-                .withSearchEnabled(true)
-                .withAboutIconShown(true)
-                .withAboutAppName(context.getString(R.string.app_name))
-                .withVersionShown(true)
-                .withAboutVersionString(BuildConfig.VERSION_NAME + " (" + BuildConfig.VERSION_CODE + ")")
-                .withLicenseShown(true)
-                .withAboutVersionShown(true)
-                .withAboutSpecial1(context.getString(R.string.eula_title))
-                .withAboutSpecial1Description(
-                        eulaHtmlString != null ? eulaHtmlString : context.getString(R.string.loading_eula)
-                )
-                .withAboutSpecial2(context.getString(R.string.changelog))
-                .withAboutSpecial2Description(
-                        changelogHtmlString != null ? changelogHtmlString : context.getString(R.string.loading_changelog)
-                )
-                .withAboutDescription(context.getString(R.string.app_short_description))
-                .start(context);
     }
 }

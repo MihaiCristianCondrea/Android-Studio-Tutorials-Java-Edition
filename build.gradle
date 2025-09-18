@@ -1,7 +1,19 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // The oss-licenses Gradle plugin still relies on XmlSlurper from groovy-xml when
+        // running on recent Gradle versions, so we provide it explicitly on the classpath.
+        classpath 'org.codehaus.groovy:groovy-xml:3.0.19'
+    }
+}
+
 plugins {
     alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.googleServices) apply false
     alias(libs.plugins.firebaseCrashlytics) apply false
-    alias(libs.plugins.aboutLibraries) apply true
+    alias(libs.plugins.ossLicenses) apply false
     alias(libs.plugins.hiltAndroid) apply false
 }

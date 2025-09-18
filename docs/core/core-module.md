@@ -11,7 +11,7 @@ Houses use case classes and other business logic that operate on repositories.
 Contains Activities, Fragments and ViewModels such as `MainViewModel`.
 
 ### utils
-Provides helpers like `OpenSourceLicensesUtils`, `ReviewHelper` and `EdgeToEdgeDelegate`.
+Provides helpers like `OpenSourceLicensesUtils` for launching the open source license screen, `ReviewHelper` and `EdgeToEdgeDelegate`.
 
 ### di
 Contains Hilt modules and qualifiers for dependency injection.
