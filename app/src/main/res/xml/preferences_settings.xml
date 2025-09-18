@@ -100,7 +100,7 @@
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_libraries"
-            app:key="open_source_licenses"
+            app:key="@string/key_open_source_licenses"
             app:title="@string/open_source_licenses" />
         <androidx.preference.Preference
             app:icon="@drawable/ic_license"
