@@ -13,7 +13,6 @@ import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.DialogBottomSheetMenuBinding;
 import com.d4rk.androidtutorials.java.ui.screens.settings.SettingsActivity;
-import com.d4rk.androidtutorials.java.utils.ReviewHelper;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class BottomSheetMenuFragment extends BottomSheetDialogFragment {
@@ -50,11 +49,6 @@ public class BottomSheetMenuFragment extends BottomSheetDialogFragment {
             if (openChangelog.resolveActivity(requireContext().getPackageManager()) != null) {
                 startActivity(openChangelog);
             }
-            dismiss();
-        });
-
-        binding.menuRate.setOnClickListener(v -> {
-            ReviewHelper.forceLaunchInAppReview(requireActivity());
             dismiss();
         });
 
