@@ -297,6 +297,7 @@
     <string name="paid_support">ادائیگی والی سپورٹ</string>
     <string name="non_paid_support">بغیر ادائیگی والی سپورٹ</string>
     <string name="web_ad">ویب اشتہار</string>
+    <string name="support_link_unavailable">سپورٹ لنک کھولنے کے لیے کوئی ایپ دستیاب نہیں ہے۔</string>
     <string name="info">معلومات</string>
     <string name="device_info">ڈیوائس کی معلومات</string>
     <string name="app_build">ایپ بلڈ: ریلیز\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

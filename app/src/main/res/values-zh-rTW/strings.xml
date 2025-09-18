@@ -298,6 +298,7 @@
     <string name="paid_support">付費支持</string>
     <string name="non_paid_support">非付費支持</string>
     <string name="web_ad">網路廣告</string>
+    <string name="support_link_unavailable">沒有可用的應用程式可以開啟支援連結。</string>
     <string name="info">資訊</string>
     <string name="device_info">裝置資訊</string>
     <string name="app_build">應用程式建置：Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

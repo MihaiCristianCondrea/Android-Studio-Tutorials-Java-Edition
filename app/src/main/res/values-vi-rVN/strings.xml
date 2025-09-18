@@ -297,6 +297,7 @@
     <string name="paid_support">Hỗ trợ trả phí</string>
     <string name="non_paid_support">Hỗ trợ không trả phí</string>
     <string name="web_ad">Quảng cáo web</string>
+    <string name="support_link_unavailable">Không có ứng dụng nào khả dụng để mở liên kết hỗ trợ.</string>
     <string name="info">Thông tin</string>
     <string name="device_info">Thông tin thiết bị</string>
     <string name="app_build">Bản dựng ứng dụng: Phát hành\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

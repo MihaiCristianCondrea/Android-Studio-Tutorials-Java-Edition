@@ -332,6 +332,7 @@
     <string name="paid_support">Suport plătit</string>
     <string name="non_paid_support">Suport gratuit</string>
     <string name="web_ad">Reclamă web</string>
+    <string name="support_link_unavailable">Nu există nicio aplicație disponibilă pentru a deschide linkul de asistență.</string>
     <string name="info">Info</string>
     <string name="device_info">Informații dispozitiv</string>
     <string name="app_build">Versiune aplicație: Lansare\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

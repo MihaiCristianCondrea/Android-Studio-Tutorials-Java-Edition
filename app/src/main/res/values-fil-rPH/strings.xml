@@ -297,6 +297,7 @@
     <string name="paid_support">Suportang may Bayad</string>
     <string name="non_paid_support">Suportang Walang Bayad</string>
     <string name="web_ad">Web Ad</string>
+    <string name="support_link_unavailable">Walang available na app para buksan ang link ng suporta.</string>
     <string name="info">Impormasyon</string>
     <string name="device_info">Impormasyon ng Device</string>
     <string name="app_build">Build ng App: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

@@ -324,6 +324,7 @@
     <string name="paid_support">सशुल्क समर्थन</string>
     <string name="non_paid_support">गैर-सशुल्क समर्थन</string>
     <string name="web_ad">वेब विज्ञापन</string>
+    <string name="support_link_unavailable">समर्थन लिंक खोलने के लिए कोई ऐप उपलब्ध नहीं है।</string>
     <string name="info">जानकारी</string>
     <string name="device_info">डिवाइस जानकारी</string>
     <string name="app_build">ऐप बिल्ड: रिलीज़\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

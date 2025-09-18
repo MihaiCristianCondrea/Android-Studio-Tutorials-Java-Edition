@@ -324,6 +324,7 @@
     <string name="paid_support">Платная поддержка</string>
     <string name="non_paid_support">Бесплатная поддержка</string>
     <string name="web_ad">Веб-реклама</string>
+    <string name="support_link_unavailable">Нет доступного приложения для открытия ссылки поддержки.</string>
     <string name="info">Информация</string>
     <string name="device_info">Информация об устройстве</string>
     <string name="app_build">Сборка приложения: релиз\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

@@ -324,6 +324,7 @@
     <string name="paid_support">Kostenpflichtiger Support</string>
     <string name="non_paid_support">Kostenloser Support</string>
     <string name="web_ad">Web-Anzeige</string>
+    <string name="support_link_unavailable">Es ist keine App verfügbar, um den Support-Link zu öffnen.</string>
     <string name="info">Info</string>
     <string name="device_info">Geräteinformationen</string>
     <string name="app_build">App-Build: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
