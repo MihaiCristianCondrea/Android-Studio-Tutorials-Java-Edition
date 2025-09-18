@@ -35,8 +35,6 @@ import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
-import com.d4rk.androidtutorials.java.notifications.managers.AppUpdateNotificationsManager;
-import com.d4rk.androidtutorials.java.notifications.managers.AppUsageNotificationsManager;
 import com.d4rk.androidtutorials.java.startup.StartupInitializer;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFragment;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
@@ -87,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
     private NavController navController;
     private int currentNavIndex;
     private AppUpdateManager appUpdateManager;
-    private AppUpdateNotificationsManager appUpdateNotificationsManager;
     private InstallStateUpdatedListener installStateUpdatedListener;
     private long backPressedTime;
 
@@ -149,7 +146,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         this.appUpdateManager = mainViewModel.getAppUpdateManager();
-        setupUpdateNotifications();
 
         registerInstallStateListener();
         getLifecycle().addObserver(lifecycleObserver);
@@ -319,11 +315,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        AppUsageNotificationsManager appUsageNotificationsManager = new AppUsageNotificationsManager(this);
-        appUsageNotificationsManager.scheduleAppUsageCheck();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            appUpdateNotificationsManager.checkAndSendUpdateNotification();
-        }
         checkForFlexibleOrImmediateUpdate();
     }
 
@@ -378,10 +369,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             Log.e("MainActivity", "Error starting in-app update", e);
         }
-    }
-
-    private void setupUpdateNotifications() {
-        appUpdateNotificationsManager = new AppUpdateNotificationsManager(this);
     }
 
     private void registerInstallStateListener() {
