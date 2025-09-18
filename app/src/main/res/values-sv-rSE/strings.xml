@@ -8,6 +8,7 @@
     <string name="summary_notification_last_time_used">Det var ett tag sen—lär dig något nytt om Android.</string>
     <string name="menu">Meny</string>
     <string name="press_back_again_to_exit">Tryck tillbaka igen för att avsluta</string>
+    <string name="error_no_app_for_link">Ingen app hittades för att öppna den här länken.</string>
     <string name="welcome">Välkommen</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Godkänn</string>

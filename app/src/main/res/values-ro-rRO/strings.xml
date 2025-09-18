@@ -9,6 +9,7 @@
 
     <string name="menu">Meniu</string>
     <string name="press_back_again_to_exit">Apăsați din nou pentru a ieși</string>
+    <string name="error_no_app_for_link">Nu a fost găsită nicio aplicație pentru a deschide acest link.</string>
 
     <string name="welcome">Bun venit</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>

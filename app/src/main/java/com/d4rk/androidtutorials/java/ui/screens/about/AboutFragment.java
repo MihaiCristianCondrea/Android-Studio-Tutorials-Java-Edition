@@ -83,7 +83,15 @@ public class AboutFragment extends Fragment {
     }
 
     private void openUrl(String url) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        Context context = requireContext();
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Toast.makeText(context, R.string.error_no_app_for_link, Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

@@ -8,6 +8,7 @@
     <string name="summary_notification_last_time_used">Uzun zaman oldu—Android hakkında yeni bir şey öğren.</string>
     <string name="menu">Menü</string>
     <string name="press_back_again_to_exit">Çıkmak için tekrar basın</string>
+    <string name="error_no_app_for_link">Bu bağlantıyı açacak bir uygulama bulunamadı.</string>
     <string name="welcome">Hoş geldiniz</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Kabul Et</string>

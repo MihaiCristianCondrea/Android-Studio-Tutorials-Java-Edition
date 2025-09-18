@@ -8,6 +8,7 @@
     <string name="summary_notification_last_time_used">好久不見—學點新的 Android 知識吧。</string>
     <string name="menu">選單</string>
     <string name="press_back_again_to_exit">再按一次返回鍵退出</string>
+    <string name="error_no_app_for_link">找不到可開啟此連結的應用程式。</string>
     <string name="welcome">歡迎</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">同意</string>

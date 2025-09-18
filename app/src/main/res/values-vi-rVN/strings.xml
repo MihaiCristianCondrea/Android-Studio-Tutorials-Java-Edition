@@ -8,6 +8,7 @@
     <string name="summary_notification_last_time_used">Lâu rồi—hãy học điều gì đó mới về Android.</string>
     <string name="menu">Menu</string>
     <string name="press_back_again_to_exit">Nhấn lại một lần nữa để thoát</string>
+    <string name="error_no_app_for_link">Không tìm thấy ứng dụng nào để mở liên kết này.</string>
     <string name="welcome">Chào mừng</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Đồng ý</string>

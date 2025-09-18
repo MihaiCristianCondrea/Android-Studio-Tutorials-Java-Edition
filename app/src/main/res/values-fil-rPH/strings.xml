@@ -8,6 +8,7 @@
     <string name="summary_notification_last_time_used">Matagal ka nang hindi bumibisita—matuto ng bagong bagay tungkol sa Android.</string>
     <string name="menu">Menu</string>
     <string name="press_back_again_to_exit">Pindutin muli upang lumabas</string>
+    <string name="error_no_app_for_link">Walang nakitang app para buksan ang link na ito.</string>
     <string name="welcome">Maligayang pagdating</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Sumang-ayon</string>
