@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="24dp">
 
     <com.google.android.material.card.MaterialCardView
         style="@style/Widget.Material3.CardView.Elevated"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="24dp"
+        android:layout_marginBottom="24dp"
         app:cardCornerRadius="24dp"
         app:layout_constraintBottom_toTopOf="@id/floating_button_show_syntax"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +30,7 @@
         style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Surface"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
+        android:layout_marginBottom="24dp"
         android:contentDescription="@string/tooltip_show_java_code_snippet"
         android:text="@string/show_code"
         android:textSize="14sp"
