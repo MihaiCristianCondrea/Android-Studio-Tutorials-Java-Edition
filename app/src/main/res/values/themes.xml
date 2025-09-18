@@ -37,6 +37,10 @@
         <item name="materialButtonStyle">@style/Widget.App.Button.Clover</item>
     </style>
 
+    <style name="FitSystemWindowsTheme" parent="AppThemeActionBar">
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
     <!-- Emphasized text appearances -->
     <style name="TextAppearance.TitleLargeEmphasized" parent="TextAppearance.Material3.TitleLarge">
         <item name="android:textStyle">bold</item>
