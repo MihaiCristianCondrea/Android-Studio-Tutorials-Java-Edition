@@ -9,6 +9,7 @@
 
     <string name="menu">メニュー</string>
     <string name="press_back_again_to_exit">もう一度押して終了します</string>
+    <string name="error_no_app_for_link">このリンクを開くためのアプリが見つかりません。</string>
 
 
     <string name="welcome">ようこそ</string>
