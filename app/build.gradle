@@ -1,9 +1,9 @@
 plugins {
-    id 'com.android.application'
-    id 'com.google.gms.google-services'
-    id 'com.google.firebase.crashlytics'
-    id 'com.mikepenz.aboutlibraries.plugin'
-    id 'com.google.dagger.hilt.android'
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.googleServices)
+    alias(libs.plugins.firebaseCrashlytics)
+    alias(libs.plugins.aboutLibraries)
+    alias(libs.plugins.hiltAndroid)
 }
 
 android {
@@ -103,8 +103,5 @@ dependencies {
 
 
     // Testing
-    testImplementation libs.junit
-    testImplementation libs.androidx.core.testing
-    testImplementation libs.mockito.core
-    testImplementation libs.mockito.inline
+    testImplementation libs.bundles.unitTest
 }
