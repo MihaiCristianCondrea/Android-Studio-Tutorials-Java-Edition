@@ -299,6 +299,7 @@
     <string name="paid_support">การสนับสนุนแบบชำระเงิน</string>
     <string name="non_paid_support">การสนับสนุนแบบไม่ชำระเงิน</string>
     <string name="web_ad">โฆษณาบนเว็บ</string>
+    <string name="support_link_unavailable">ไม่มีแอปใดพร้อมใช้งานเพื่อเปิดลิงก์สนับสนุน</string>
     <string name="info">ข้อมูล</string>
     <string name="device_info">ข้อมูลอุปกรณ์</string>
     <string name="app_build">App Build: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

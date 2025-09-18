@@ -345,6 +345,7 @@
     <string name="paid_support">Płatne wsparcie</string>
     <string name="non_paid_support">Bezpłatne wsparcie</string>
     <string name="web_ad">Reklama w sieci</string>
+    <string name="support_link_unavailable">Nie ma dostępnej aplikacji do otwarcia linku wsparcia.</string>
     <string name="info">Informacje</string>
     <string name="device_info">Informacje o urządzeniu</string>
     <string name="app_build">Kompilacja aplikacji: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

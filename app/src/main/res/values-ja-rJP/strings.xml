@@ -345,6 +345,7 @@
     <string name="paid_support">有料サポート</string>
     <string name="non_paid_support">無料サポート</string>
     <string name="web_ad">ウェブ広告</string>
+    <string name="support_link_unavailable">サポートリンクを開くアプリがありません。</string>
     <string name="info">情報</string>
     <string name="device_info">デバイス情報</string>
     <string name="app_build">アプリビルド: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

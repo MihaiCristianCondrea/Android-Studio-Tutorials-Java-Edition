@@ -297,6 +297,7 @@
     <string name="paid_support">유료 지원</string>
     <string name="non_paid_support">무료 지원</string>
     <string name="web_ad">웹 광고</string>
+    <string name="support_link_unavailable">지원 링크를 열 수 있는 앱이 없습니다.</string>
     <string name="info">정보</string>
     <string name="device_info">기기 정보</string>
     <string name="app_build">앱 빌드: 릴리스\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

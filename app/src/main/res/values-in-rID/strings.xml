@@ -324,6 +324,7 @@
     <string name="paid_support">Dukungan Berbayar</string>
     <string name="non_paid_support">Dukungan Tidak Berbayar</string>
     <string name="web_ad">Iklan Web</string>
+    <string name="support_link_unavailable">Tidak ada aplikasi yang tersedia untuk membuka tautan dukungan.</string>
     <string name="info">Info</string>
     <string name="device_info">Info Perangkat</string>
     <string name="app_build">Build Aplikasi: Rilis\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

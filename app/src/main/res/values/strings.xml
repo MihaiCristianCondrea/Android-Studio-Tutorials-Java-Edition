@@ -306,6 +306,7 @@
     <string name="paid_support">Paid support</string>
     <string name="non_paid_support">Non-paid support</string>
     <string name="web_ad">Web ad</string>
+    <string name="support_link_unavailable">No application is available to open the support link.</string>
     <string name="info">Info</string>
     <string name="device_info">Device info</string>
     <string name="app_build">App Build: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

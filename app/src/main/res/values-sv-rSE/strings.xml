@@ -298,6 +298,7 @@
     <string name="paid_support">Betald support</string>
     <string name="non_paid_support">Icke-betald support</string>
     <string name="web_ad">Webbannons</string>
+    <string name="support_link_unavailable">Det finns ingen app tillgänglig för att öppna supportlänken.</string>
     <string name="info">Info</string>
     <string name="device_info">Enhetsinfo</string>
     <string name="app_build">App-build: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

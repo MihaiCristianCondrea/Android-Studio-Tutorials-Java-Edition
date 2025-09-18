@@ -323,6 +323,7 @@
     <string name="paid_support">অর্থপ্রদত্ত সমর্থন</string>
     <string name="non_paid_support">অবৈতনিক সমর্থন</string>
     <string name="web_ad">ওয়েব বিজ্ঞাপন</string>
+    <string name="support_link_unavailable">সহায়তা লিংকটি খুলতে কোনো অ্যাপ উপলব্ধ নেই।</string>
     <string name="info">তথ্য</string>
     <string name="device_info">ডিভাইসের তথ্য</string>
     <string name="app_build">অ্যাপ বিল্ড: রিলিজ\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
