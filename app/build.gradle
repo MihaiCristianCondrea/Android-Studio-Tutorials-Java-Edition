@@ -55,52 +55,30 @@ android {
 
 dependencies {
 
-    // Google
-    implementation libs.material
-    implementation libs.play.services.ads
-    implementation libs.review
-    implementation libs.app.update
-    implementation libs.volley
-    implementation libs.glide
+    // Google Play services and related UI components
+    implementation libs.bundles.google.core
 
     // Firebase
     implementation platform(libs.firebase.bom)
-    implementation libs.firebase.crashlytics
-    implementation libs.firebase.analytics
-    implementation libs.google.firebase.perf
+    implementation libs.bundles.firebase.services
 
-    // Android
-    implementation libs.billing
+    // Jetpack libraries
+    implementation libs.bundles.androidx.core
+    implementation libs.bundles.androidx.lifecycle
 
-    // AndroidX
-    implementation libs.androidx.appcompat
-    implementation libs.androidx.constraintlayout
-    implementation libs.androidx.core
-    implementation libs.androidx.core.splashscreen
-    implementation libs.androidx.gridlayout
-    implementation libs.androidx.navigation.fragment
-    implementation libs.androidx.navigation.ui
-    implementation libs.androidx.preference
-    implementation libs.androidx.lifecycle.runtime
-    implementation libs.androidx.lifecycle.process
-    implementation libs.androidx.lifecycle.livedata
-    implementation libs.androidx.lifecycle.viewmodel
-    implementation libs.androidx.multidex
-    implementation libs.aboutlibraries
-    implementation libs.core
+    // Shared UI tooling and visuals
+    implementation libs.bundles.ui.toolkit
 
-    implementation libs.lottie
-    implementation libs.library
-    implementation libs.materialratingbar.library
-    implementation libs.codeview
+    // Networking and serialization
+    implementation libs.bundles.networking
+
+    // Dependency injection
     implementation libs.hilt.android
+
+    // Annotation processors
     annotationProcessor libs.hilt.compiler
-    implementation libs.androidx.room.runtime
     annotationProcessor libs.androidx.room.compiler
     annotationProcessor libs.glide.compiler
-    implementation libs.retrofit2
-    implementation libs.retrofit2.converter.gson
-
 
     // Testing
     testImplementation libs.bundles.unitTest

@@ -98,6 +98,62 @@ aboutLibraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "abo
 hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
 [bundles]
+# Google Play services and related UI components
+google-core = [
+    "material",
+    "play-services-ads",
+    "review",
+    "app-update",
+    "billing",
+]
+
+# Firebase services (requires applying the BOM separately)
+firebase-services = [
+    "firebase-crashlytics",
+    "firebase-analytics",
+    "google-firebase-perf",
+]
+
+# Core AndroidX building blocks
+androidx-core = [
+    "androidx-appcompat",
+    "androidx-constraintlayout",
+    "androidx-core",
+    "androidx-core-splashscreen",
+    "androidx-gridlayout",
+    "androidx-navigation-fragment",
+    "androidx-navigation-ui",
+    "androidx-preference",
+    "androidx-room-runtime",
+    "androidx-multidex",
+]
+
+# Lifecycle-aware AndroidX components
+androidx-lifecycle = [
+    "androidx-lifecycle-runtime",
+    "androidx-lifecycle-process",
+    "androidx-lifecycle-livedata",
+    "androidx-lifecycle-viewmodel",
+]
+
+# Shared UI tooling and visuals
+ui-toolkit = [
+    "aboutlibraries",
+    "core",
+    "lottie",
+    "library",
+    "materialratingbar-library",
+    "codeview",
+    "glide",
+]
+
+# Networking and serialization stack
+networking = [
+    "retrofit2",
+    "retrofit2-converter-gson",
+    "volley",
+]
+
 # For local tests on the JVM (test sourceSet)
 unitTest = [
     "junit",
