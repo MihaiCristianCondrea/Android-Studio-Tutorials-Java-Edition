@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="24dp">
 
     <com.google.android.material.textview.MaterialTextView
         style="@style/TextAppearance.Material3.TitleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/choose_your_option"
 
         app:layout_constraintBottom_toTopOf="@id/radio_group"
@@ -45,7 +47,7 @@
         style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
+        android:layout_marginTop="24dp"
         android:text="@string/display_option"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +58,7 @@
         style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Surface"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
+        android:layout_marginBottom="24dp"
         android:contentDescription="@string/tooltip_show_java_code_snippet"
         android:text="@string/show_code"
         android:textSize="14sp"
