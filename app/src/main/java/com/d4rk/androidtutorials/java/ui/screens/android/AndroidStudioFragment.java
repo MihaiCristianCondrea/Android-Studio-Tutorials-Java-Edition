@@ -176,6 +176,7 @@ public class AndroidStudioFragment extends Fragment {
                         String data = parser.getAttributeValue("http://schemas.android.com/apk/res/android", "data");
                         if (data != null) intent.setData(Uri.parse(data));
                         currentLesson.intent = intent;
+                        currentLesson.opensInBrowser = isBrowserIntent(intent);
                     }
                 } else if (event == XmlPullParser.END_TAG) {
                     String name = parser.getName();
@@ -189,6 +190,22 @@ public class AndroidStudioFragment extends Fragment {
         } catch (XmlPullParserException | IOException ignored) {
         }
         return items;
+    }
+
+    private boolean isBrowserIntent(Intent intent) {
+        if (intent.getComponent() != null) {
+            return false;
+        }
+        Uri data = intent.getData();
+        if (data == null) {
+            return false;
+        }
+        String scheme = data.getScheme();
+        if (scheme == null) {
+            return false;
+        }
+        return Intent.ACTION_VIEW.equals(intent.getAction())
+                && ("http".equalsIgnoreCase(scheme) || "https".equalsIgnoreCase(scheme));
     }
 
     private void populateAdapter(List<Object> source, boolean showAds) {
@@ -262,6 +279,7 @@ public class AndroidStudioFragment extends Fragment {
         String summary;
         int iconRes;
         Intent intent;
+        boolean opensInBrowser;
     }
 
     private static class Category {
@@ -329,7 +347,8 @@ public class AndroidStudioFragment extends Fragment {
                     if (oldItem instanceof Lesson oldLesson && newItem instanceof Lesson newLesson) {
                         return Objects.equals(oldLesson.title, newLesson.title)
                                 && Objects.equals(oldLesson.summary, newLesson.summary)
-                                && oldLesson.iconRes == newLesson.iconRes;
+                                && oldLesson.iconRes == newLesson.iconRes
+                                && oldLesson.opensInBrowser == newLesson.opensInBrowser;
                     }
                     if (oldItem instanceof Category oldCat && newItem instanceof Category newCat) {
                         return Objects.equals(oldCat.title, newCat.title)
@@ -415,6 +434,7 @@ public class AndroidStudioFragment extends Fragment {
             final AppCompatImageView icon;
             final MaterialTextView title;
             final MaterialTextView summary;
+            final AppCompatImageView externalIcon;
 
             LessonHolder(@NonNull ItemAndroidStudioLessonBinding binding) {
                 super(binding.getRoot());
@@ -422,6 +442,7 @@ public class AndroidStudioFragment extends Fragment {
                 icon = binding.lessonIcon;
                 title = binding.lessonTitle;
                 summary = binding.lessonSummary;
+                externalIcon = binding.lessonExternalIcon;
             }
 
             void bind(Lesson lesson, boolean first, boolean last) {
@@ -438,6 +459,7 @@ public class AndroidStudioFragment extends Fragment {
                 } else {
                     summary.setVisibility(View.GONE);
                 }
+                externalIcon.setVisibility(lesson.opensInBrowser ? View.VISIBLE : View.GONE);
                 itemView.setOnClickListener(v -> {
                     if (lesson.intent != null) {
                         v.getContext().startActivity(lesson.intent);
