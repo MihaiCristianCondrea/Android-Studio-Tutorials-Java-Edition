@@ -8,6 +8,7 @@ import com.d4rk.androidtutorials.java.data.repository.DefaultHomeRepository;
 import com.d4rk.androidtutorials.java.data.repository.DefaultMainRepository;
 import com.d4rk.androidtutorials.java.data.repository.DefaultSupportRepository;
 import com.d4rk.androidtutorials.java.data.repository.HomeRepository;
+import com.d4rk.androidtutorials.java.data.repository.LessonRepository;
 import com.d4rk.androidtutorials.java.data.repository.MainRepository;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 import com.d4rk.androidtutorials.java.data.source.DefaultHomeLocalDataSource;
@@ -16,6 +17,7 @@ import com.d4rk.androidtutorials.java.data.source.HomeLocalDataSource;
 import com.d4rk.androidtutorials.java.data.source.HomeRemoteDataSource;
 import com.d4rk.androidtutorials.java.domain.about.GetCurrentYearUseCase;
 import com.d4rk.androidtutorials.java.domain.about.GetVersionStringUseCase;
+import com.d4rk.androidtutorials.java.domain.android.GetLessonUseCase;
 import com.d4rk.androidtutorials.java.domain.help.LaunchReviewFlowUseCase;
 import com.d4rk.androidtutorials.java.domain.help.RequestReviewFlowUseCase;
 import com.d4rk.androidtutorials.java.domain.home.GetAppPlayStoreUrlUseCase;
@@ -261,5 +263,16 @@ public class AppModule {
     @Provides
     public LaunchReviewFlowUseCase provideLaunchReviewFlowUseCase(HelpRepository repository) {
         return new LaunchReviewFlowUseCase(repository);
+    }
+
+    @Provides
+    @Singleton
+    public LessonRepository provideLessonRepository() {
+        return new com.d4rk.androidtutorials.java.ui.screens.android.repository.LessonRepository();
+    }
+
+    @Provides
+    public GetLessonUseCase provideGetLessonUseCase(LessonRepository repository) {
+        return new GetLessonUseCase(repository);
     }
 }

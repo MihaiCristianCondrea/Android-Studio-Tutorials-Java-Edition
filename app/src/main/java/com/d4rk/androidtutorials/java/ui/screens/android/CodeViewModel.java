@@ -4,13 +4,22 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.d4rk.androidtutorials.java.data.repository.LessonRepository;
 import com.d4rk.androidtutorials.java.domain.android.GetLessonUseCase;
-import com.d4rk.androidtutorials.java.ui.screens.android.repository.LessonRepository;
 
+import javax.inject.Inject;
+
+import dagger.hilt.android.lifecycle.HiltViewModel;
+
+@HiltViewModel
 public class CodeViewModel extends ViewModel {
     private final MutableLiveData<LessonRepository.Lesson> lesson = new MutableLiveData<>();
-    private final LessonRepository repository = new LessonRepository();
-    private final GetLessonUseCase getLessonUseCase = new GetLessonUseCase(repository);
+    private final GetLessonUseCase getLessonUseCase;
+
+    @Inject
+    public CodeViewModel(GetLessonUseCase getLessonUseCase) {
+        this.getLessonUseCase = getLessonUseCase;
+    }
 
     public void setLessonName(String lessonName) {
         lesson.setValue(getLessonUseCase.invoke(lessonName));
