@@ -41,6 +41,7 @@ public class NativeAdBannerView extends FrameLayout {
     private void init(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         LayoutTransition transition = new LayoutTransition();
         transition.enableTransitionType(LayoutTransition.CHANGING);
+        transition.setAnimateParentHierarchy(false);
         setLayoutTransition(transition);
 
         if (attrs != null) {
