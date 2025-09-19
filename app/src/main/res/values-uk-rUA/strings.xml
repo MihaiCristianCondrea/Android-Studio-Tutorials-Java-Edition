@@ -9,6 +9,7 @@
     <string name="menu">Меню</string>
     <string name="press_back_again_to_exit">Натисніть ще раз, щоб вийти</string>
     <string name="error_no_app_for_link">Не знайдено застосунок для відкриття цього посилання.</string>
+    <string name="lesson_open_in_browser">Відкрити урок у браузері</string>
     <string name="welcome">Ласкаво просимо</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
     <string name="agree">Погоджуюсь</string>
