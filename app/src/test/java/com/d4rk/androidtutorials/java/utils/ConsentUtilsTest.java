@@ -113,10 +113,10 @@ public class ConsentUtilsTest {
             prefsStatic.when(() -> PreferenceManager.getDefaultSharedPreferences(context)).thenReturn(prefs);
 
             when(prefs.getBoolean("consent_ad_storage", true)).thenReturn(false);
-            assertFalse(ConsentUtils.canShowAds(context));
+            assertFalse(ConsentUtils.canShowPersonalizedAds(context));
 
             when(prefs.getBoolean("consent_ad_storage", true)).thenReturn(true);
-            assertTrue(ConsentUtils.canShowAds(context));
+            assertTrue(ConsentUtils.canShowPersonalizedAds(context));
         }
     }
 
@@ -132,7 +132,7 @@ public class ConsentUtilsTest {
             when(prefs.getBoolean("consent_ad_storage", true))
                     .thenAnswer(invocation -> invocation.getArgument(1));
 
-            assertTrue(ConsentUtils.canShowAds(context));
+            assertTrue(ConsentUtils.canShowPersonalizedAds(context));
             verify(prefs).getBoolean("consent_ad_storage", true);
         }
     }

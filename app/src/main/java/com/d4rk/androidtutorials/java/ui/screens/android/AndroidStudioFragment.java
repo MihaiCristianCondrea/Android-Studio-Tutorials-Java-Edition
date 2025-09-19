@@ -71,7 +71,7 @@ public class AndroidStudioFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        showAds = ConsentUtils.canShowAds(requireContext());
+        showAds = ConsentUtils.canShowPersonalizedAds(requireContext());
         if (showAds) {
             ensureMobileAdsInitialized();
         }

@@ -40,12 +40,8 @@ public class AboutFragment extends Fragment {
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
 
-        if (ConsentUtils.canShowAds(requireContext())) {
-            binding.adView.setVisibility(android.view.View.VISIBLE);
-            AdUtils.loadBanner(binding.adView);
-        } else {
-            binding.adView.setVisibility(android.view.View.GONE);
-        }
+        binding.adView.setVisibility(android.view.View.VISIBLE);
+        AdUtils.loadBanner(binding.adView);
 
         String version = aboutViewModel.getVersionString();
         binding.textViewAppVersion.setText(version);

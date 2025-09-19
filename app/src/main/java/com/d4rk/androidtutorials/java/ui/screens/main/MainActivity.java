@@ -72,14 +72,9 @@ public class MainActivity extends AppCompatActivity {
         public void onResume(@NonNull LifecycleOwner owner) {
             ConsentUtils.applyStoredConsent(MainActivity.this);
             if (mBinding != null && mBinding.adView != null) {
-                if (ConsentUtils.canShowAds(MainActivity.this)) {
-                    mBinding.adPlaceholder.setVisibility(View.GONE);
-                    mBinding.adView.setVisibility(View.VISIBLE);
-                    AdUtils.loadBanner(mBinding.adView);
-                } else {
-                    mBinding.adView.setVisibility(View.GONE);
-                    mBinding.adPlaceholder.setVisibility(View.VISIBLE);
-                }
+                mBinding.adPlaceholder.setVisibility(View.GONE);
+                mBinding.adView.setVisibility(View.VISIBLE);
+                AdUtils.loadBanner(mBinding.adView);
             }
         }
     };
@@ -216,14 +211,9 @@ public class MainActivity extends AppCompatActivity {
 
                 navBarView.setLabelVisibilityMode(uiState.bottomNavVisibility());
                 if (binding.adView != null) {
-                    if (ConsentUtils.canShowAds(this)) {
-                        binding.adPlaceholder.setVisibility(View.GONE);
-                        binding.adView.setVisibility(View.VISIBLE);
-                        AdUtils.loadBanner(binding.adView);
-                    } else {
-                        binding.adView.setVisibility(View.GONE);
-                        binding.adPlaceholder.setVisibility(View.VISIBLE);
-                    }
+                    binding.adPlaceholder.setVisibility(View.GONE);
+                    binding.adView.setVisibility(View.VISIBLE);
+                    AdUtils.loadBanner(binding.adView);
                 }
             }
 

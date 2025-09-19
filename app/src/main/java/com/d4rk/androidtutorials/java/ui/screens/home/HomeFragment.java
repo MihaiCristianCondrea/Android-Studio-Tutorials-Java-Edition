@@ -83,15 +83,10 @@ public class HomeFragment extends Fragment {
     }
 
     private void initializeAds() {
-        if (ConsentUtils.canShowAds(requireContext())) {
-            binding.smallBannerAd.setVisibility(View.VISIBLE);
-            binding.largeBannerAd.setVisibility(View.VISIBLE);
-            AdUtils.loadBanner(binding.smallBannerAd);
-            AdUtils.loadBanner(binding.largeBannerAd);
-        } else {
-            binding.smallBannerAd.setVisibility(View.GONE);
-            binding.largeBannerAd.setVisibility(View.GONE);
-        }
+        binding.smallBannerAd.setVisibility(View.VISIBLE);
+        binding.largeBannerAd.setVisibility(View.VISIBLE);
+        AdUtils.loadBanner(binding.smallBannerAd);
+        AdUtils.loadBanner(binding.largeBannerAd);
     }
 
     private void shareTip(String tip) {
