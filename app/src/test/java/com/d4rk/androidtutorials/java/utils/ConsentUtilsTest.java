@@ -53,7 +53,7 @@ public class ConsentUtilsTest {
             verify(prefs).getBoolean("consent_ad_personalization", true);
 
             ArgumentCaptor<Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus>> captor =
-                    ArgumentCaptor.forClass(Map.class);
+                    ArgumentCaptor.forClass(Map.class); // FIXME: Unchecked assignment: 'org.mockito.ArgumentCaptor' to 'org.mockito.ArgumentCaptor<java.util.Map<com.google.firebase.analytics.FirebaseAnalytics.ConsentType,com.google.firebase.analytics.FirebaseAnalytics.ConsentStatus>>' && Unchecked method 'forClass(Class<S>)' invocation
             verify(analytics).setConsent(captor.capture());
             Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus> consentMap = captor.getValue();
 
@@ -88,7 +88,7 @@ public class ConsentUtilsTest {
                     adPersonalizationConsent);
 
             ArgumentCaptor<Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus>> captor =
-                    ArgumentCaptor.forClass(Map.class);
+                    ArgumentCaptor.forClass(Map.class); // FIXME: Unchecked assignment: 'org.mockito.ArgumentCaptor' to 'org.mockito.ArgumentCaptor<java.util.Map<com.google.firebase.analytics.FirebaseAnalytics.ConsentType,com.google.firebase.analytics.FirebaseAnalytics.ConsentStatus>>' && Unchecked method 'forClass(Class<S>)' invocation
             verify(analytics).setConsent(captor.capture());
             Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus> result = captor.getValue();
 
