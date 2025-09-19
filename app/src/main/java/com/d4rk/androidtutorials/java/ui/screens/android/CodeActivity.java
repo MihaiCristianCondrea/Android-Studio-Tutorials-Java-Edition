@@ -8,15 +8,18 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.data.repository.LessonRepository;
 import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.ui.screens.android.repository.LessonRepository;
 import com.d4rk.androidtutorials.java.ui.screens.android.tabs.CodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.tabs.LayoutFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.tabs.NoCodeFragment;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class CodeActivity extends UpNavigationActivity {
     private ActivityTabLayoutBinding binding;
 
