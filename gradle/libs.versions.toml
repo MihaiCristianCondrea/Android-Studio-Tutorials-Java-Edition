@@ -2,7 +2,7 @@
 agp = "8.13.0"
 firebaseCrashlyticsPlugin = "3.0.6"
 googleServices = "4.4.3"
-ossLicensesPlugin = "0.10.6"
+ossLicensesPlugin = "0.10.9"
 appcompat = "1.7.1"
 appUpdate = "2.1.0"
 billing = "8.0.0"
