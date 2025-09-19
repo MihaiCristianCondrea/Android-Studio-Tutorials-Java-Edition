@@ -62,6 +62,11 @@ public class OnboardingViewModel extends ViewModel {
         prefs.edit().putString(context.getString(R.string.key_default_tab), value).apply();
     }
 
+    public String getDefaultTab() {
+        String[] values = context.getResources().getStringArray(R.array.preference_default_tab_values);
+        return prefs.getString(context.getString(R.string.key_default_tab), values[0]);
+    }
+
     public void setBottomNavLabels(String value) {
         prefs.edit().putString(context.getString(R.string.key_bottom_navigation_bar_labels), value).apply();
     }
