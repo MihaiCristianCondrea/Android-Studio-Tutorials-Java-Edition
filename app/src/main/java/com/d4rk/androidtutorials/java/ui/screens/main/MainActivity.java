@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ui.screens.main;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseIntArray;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
@@ -18,7 +20,9 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.core.splashscreen.SplashScreen;
+import androidx.core.view.WindowCompat;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleOwner;
@@ -207,15 +211,14 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
             NavigationBarView navBarView = (NavigationBarView) binding.navView;
+            View navRail = binding.navRail;
             if (useRail) {
-                View navRail = binding.navRail;
                 if (navRail != null) {
                     navRail.setVisibility(View.VISIBLE);
                 }
                 navBarView.setVisibility(View.GONE);
-                EdgeToEdgeDelegate.apply(this, binding.container);
+                WindowCompat.enableEdgeToEdge(this.getWindow());
             } else {
-                View navRail = binding.navRail;
                 if (navRail != null) {
                     navRail.setVisibility(View.GONE);
                 }
@@ -323,6 +326,7 @@ public class MainActivity extends AppCompatActivity {
         mainViewModel.getLoadingState().observe(this, isLoading -> {
             ActivityMainBinding binding = mBinding;
             if (binding != null) {
+                assert binding.progressBar != null;
                 binding.progressBar.setVisibility(Boolean.TRUE.equals(isLoading) ? View.VISIBLE : View.GONE);
             }
         });
@@ -362,6 +366,15 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressLint("RestrictedApi")
+    @Override
+    public boolean onMenuOpened(int featureId, Menu menu) {
+        if (menu instanceof MenuBuilder menuBuilder) {
+            menuBuilder.setOptionalIconsVisible(true);
+        }
+        return super.onMenuOpened(featureId, menu);
     }
 
     @Override

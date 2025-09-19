@@ -23,10 +23,6 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public final class EdgeToEdgeDelegate {
 
-    private EdgeToEdgeDelegate() {
-        // Utility class
-    }
-
     public static void apply(Activity activity, View view) {
         enableEdgeToEdge(activity);
         applyInsetsInternal(
@@ -190,7 +186,7 @@ public final class EdgeToEdgeDelegate {
                     v,
                     padding.start + start,
                     padding.top + top,
-                    padding.end + end,
+                    padding.end + end, // FIXME: 'setPaddingRelative(android.view.@org.jspecify.annotations.NonNull View, int, int, int, int)' is deprecated
                     padding.bottom + bottom
             );
             return windowInsets;
@@ -215,9 +211,9 @@ public final class EdgeToEdgeDelegate {
                     marginLayoutParams.topMargin,
                     MarginLayoutParamsCompat.getMarginEnd(marginLayoutParams),
                     marginLayoutParams.bottomMargin
-            );
+            ); // FIXME: 'getMarginStart(android.view.ViewGroup.@org.jspecify.annotations.NonNull MarginLayoutParams)' is deprecated
             view.setTag(R.id.tag_edge_to_edge_margin, baseMargin);
-        }
+        } // FIXME: 'androidx.core.view.MarginLayoutParamsCompat' is deprecated
 
         InsetsMargin margin = baseMargin;
         ViewCompat.setOnApplyWindowInsetsListener(view, (v, windowInsets) -> {
