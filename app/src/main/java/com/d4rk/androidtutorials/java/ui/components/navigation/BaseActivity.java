@@ -31,8 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @SuppressLint("RestrictedApi")
     @Override
     public boolean onMenuOpened(int featureId, Menu menu) {
-        if (menu instanceof MenuBuilder) {
-            MenuBuilder menuBuilder = (MenuBuilder) menu; // FIXME: Variable 'menuBuilder' can be replaced with pattern variable
+        if (menu instanceof MenuBuilder menuBuilder) {
             menuBuilder.setOptionalIconsVisible(true);
         }
         return super.onMenuOpened(featureId, menu);

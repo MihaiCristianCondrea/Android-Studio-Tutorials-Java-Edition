@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.utils;
 
-import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -14,10 +13,10 @@ import com.d4rk.androidtutorials.java.R;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import org.junit.Test;
-import org.mockito.ArgumentCaptor;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 
+import java.util.EnumMap;
 import java.util.Map;
 
 public class ConsentUtilsTest {
@@ -50,19 +49,18 @@ public class ConsentUtilsTest {
             verify(prefs).getBoolean("consent_ad_user_data", true);
             verify(prefs).getBoolean("consent_ad_personalization", true);
 
-            ArgumentCaptor<Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus>> captor =
-                    ArgumentCaptor.forClass(Map.class); // FIXME: Unchecked assignment: 'org.mockito.ArgumentCaptor' to 'org.mockito.ArgumentCaptor<java.util.Map<com.google.firebase.analytics.FirebaseAnalytics.ConsentType,com.google.firebase.analytics.FirebaseAnalytics.ConsentStatus>>' && Unchecked method 'forClass(Class<S>)' invocation
-            verify(analytics).setConsent(captor.capture());
-            Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus> consentMap = captor.getValue();
+            Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus> expectedConsent =
+                    new EnumMap<>(FirebaseAnalytics.ConsentType.class);
+            expectedConsent.put(FirebaseAnalytics.ConsentType.ANALYTICS_STORAGE,
+                    FirebaseAnalytics.ConsentStatus.DENIED);
+            expectedConsent.put(FirebaseAnalytics.ConsentType.AD_STORAGE,
+                    FirebaseAnalytics.ConsentStatus.GRANTED);
+            expectedConsent.put(FirebaseAnalytics.ConsentType.AD_USER_DATA,
+                    FirebaseAnalytics.ConsentStatus.DENIED);
+            expectedConsent.put(FirebaseAnalytics.ConsentType.AD_PERSONALIZATION,
+                    FirebaseAnalytics.ConsentStatus.GRANTED);
 
-            assertEquals(FirebaseAnalytics.ConsentStatus.DENIED,
-                    consentMap.get(FirebaseAnalytics.ConsentType.ANALYTICS_STORAGE));
-            assertEquals(FirebaseAnalytics.ConsentStatus.GRANTED,
-                    consentMap.get(FirebaseAnalytics.ConsentType.AD_STORAGE));
-            assertEquals(FirebaseAnalytics.ConsentStatus.DENIED,
-                    consentMap.get(FirebaseAnalytics.ConsentType.AD_USER_DATA));
-            assertEquals(FirebaseAnalytics.ConsentStatus.GRANTED,
-                    consentMap.get(FirebaseAnalytics.ConsentType.AD_PERSONALIZATION));
+            verify(analytics).setConsent(expectedConsent);
         }
     }
 
@@ -85,19 +83,18 @@ public class ConsentUtilsTest {
                     adUserDataConsent,
                     adPersonalizationConsent);
 
-            ArgumentCaptor<Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus>> captor =
-                    ArgumentCaptor.forClass(Map.class); // FIXME: Unchecked assignment: 'org.mockito.ArgumentCaptor' to 'org.mockito.ArgumentCaptor<java.util.Map<com.google.firebase.analytics.FirebaseAnalytics.ConsentType,com.google.firebase.analytics.FirebaseAnalytics.ConsentStatus>>' && Unchecked method 'forClass(Class<S>)' invocation
-            verify(analytics).setConsent(captor.capture());
-            Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus> result = captor.getValue();
+            Map<FirebaseAnalytics.ConsentType, FirebaseAnalytics.ConsentStatus> expectedConsent =
+                    new EnumMap<>(FirebaseAnalytics.ConsentType.class);
+            expectedConsent.put(FirebaseAnalytics.ConsentType.ANALYTICS_STORAGE,
+                    FirebaseAnalytics.ConsentStatus.GRANTED);
+            expectedConsent.put(FirebaseAnalytics.ConsentType.AD_STORAGE,
+                    FirebaseAnalytics.ConsentStatus.DENIED);
+            expectedConsent.put(FirebaseAnalytics.ConsentType.AD_USER_DATA,
+                    FirebaseAnalytics.ConsentStatus.GRANTED);
+            expectedConsent.put(FirebaseAnalytics.ConsentType.AD_PERSONALIZATION,
+                    FirebaseAnalytics.ConsentStatus.DENIED);
 
-            assertEquals(FirebaseAnalytics.ConsentStatus.GRANTED,
-                    result.get(FirebaseAnalytics.ConsentType.ANALYTICS_STORAGE));
-            assertEquals(FirebaseAnalytics.ConsentStatus.DENIED,
-                    result.get(FirebaseAnalytics.ConsentType.AD_STORAGE));
-            assertEquals(FirebaseAnalytics.ConsentStatus.GRANTED,
-                    result.get(FirebaseAnalytics.ConsentType.AD_USER_DATA));
-            assertEquals(FirebaseAnalytics.ConsentStatus.DENIED,
-                    result.get(FirebaseAnalytics.ConsentType.AD_PERSONALIZATION));
+            verify(analytics).setConsent(expectedConsent);
         }
     }
 
