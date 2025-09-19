@@ -32,7 +32,6 @@ import com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView;
 import com.d4rk.androidtutorials.java.databinding.FragmentAndroidStudioBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioCategoryBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioLessonBinding;
-import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.material.card.MaterialCardView;
@@ -57,7 +56,6 @@ public class AndroidStudioFragment extends Fragment {
     private static boolean mobileAdsInitialized = false;
     private final List<Object> allItems = new ArrayList<>();
     private LessonsAdapter adapter;
-    private boolean showAds;
     private FragmentAndroidStudioBinding binding;
 
     @Nullable
@@ -71,20 +69,15 @@ public class AndroidStudioFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        showAds = ConsentUtils.canShowPersonalizedAds(requireContext());
-        if (showAds) {
-            ensureMobileAdsInitialized();
-        }
+        ensureMobileAdsInitialized();
         RecyclerView list = binding.lessonsList;
         list.setLayoutManager(new LinearLayoutManager(requireContext()));
         adapter = new LessonsAdapter();
         list.setAdapter(adapter);
-        if (showAds) {
-            list.addItemDecoration(new LessonAdSpacingDecoration(requireContext()));
-        }
+        list.addItemDecoration(new LessonAdSpacingDecoration(requireContext()));
         allItems.clear();
         allItems.addAll(loadItems());
-        populateAdapter(allItems, showAds);
+        populateAdapter(allItems);
 
         MenuHost menuHost = requireActivity();
         menuHost.addMenuProvider(new MenuProvider() {
@@ -208,7 +201,7 @@ public class AndroidStudioFragment extends Fragment {
                 && ("http".equalsIgnoreCase(scheme) || "https".equalsIgnoreCase(scheme));
     }
 
-    private void populateAdapter(List<Object> source, boolean showAds) {
+    private void populateAdapter(List<Object> source) {
         List<Object> items = new ArrayList<>();
         List<Integer> eligible = new ArrayList<>();
         int lessonCount = 0;
@@ -224,7 +217,7 @@ public class AndroidStudioFragment extends Fragment {
                 firstInCategory = false;
             }
         }
-        int adCount = showAds ? lessonCount / 3 : 0;
+        int adCount = lessonCount / 3;
         Collections.shuffle(eligible, new Random());
         if (adCount > eligible.size()) {
             adCount = eligible.size();
@@ -248,7 +241,7 @@ public class AndroidStudioFragment extends Fragment {
     private void filterLessons(String query) {
         String lower = query == null ? "" : query.toLowerCase();
         if (lower.isEmpty()) {
-            populateAdapter(allItems, showAds);
+            populateAdapter(allItems);
             return;
         }
         List<Object> filtered = new ArrayList<>();
@@ -268,7 +261,7 @@ public class AndroidStudioFragment extends Fragment {
                 }
             }
         }
-        populateAdapter(filtered, showAds);
+        populateAdapter(filtered);
     }
 
     private static class AdItem {
