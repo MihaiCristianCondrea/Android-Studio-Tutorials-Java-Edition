@@ -14,7 +14,6 @@ import com.bumptech.glide.Glide;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 import com.d4rk.androidtutorials.java.databinding.FragmentHomeBinding;
-import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 
 import dagger.hilt.android.AndroidEntryPoint;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;

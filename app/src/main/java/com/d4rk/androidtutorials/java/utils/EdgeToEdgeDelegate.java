@@ -120,17 +120,6 @@ public final class EdgeToEdgeDelegate {
         }
     }
 
-    private static final class InsetsPadding {
-        final int start;
-        final int top;
-        final int end;
-        final int bottom;
-
-        InsetsPadding(int start, int top, int end, int bottom) {
-            this.start = start;
-            this.top = top;
-            this.end = end;
-            this.bottom = bottom;
-        }
+    private record InsetsPadding(int start, int top, int end, int bottom) {
     }
 }
