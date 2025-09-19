@@ -62,6 +62,8 @@ import dagger.hilt.android.AndroidEntryPoint;
 public class MainActivity extends AppCompatActivity {
 
     private static final long BACK_PRESS_INTERVAL = 2000;
+    private static final String STATE_NAV_GRAPH_INITIALIZED = "state_nav_graph_initialized";
+    private static final String STATE_LAST_PREFERRED_DESTINATION = "state_last_preferred_destination";
     private ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher;
     private final SparseIntArray navOrder = new SparseIntArray();
     private ActivityMainBinding mBinding;
@@ -84,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
     private MainViewModel mainViewModel;
     private NavController navController;
     private int currentNavIndex;
+    private boolean navGraphInitialized;
+    private int lastPreferredStartDestination;
     private AppUpdateManager appUpdateManager;
     private InstallStateUpdatedListener installStateUpdatedListener;
     private long backPressedTime;
@@ -92,6 +96,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
+
+        if (savedInstanceState != null) {
+            navGraphInitialized = savedInstanceState.getBoolean(STATE_NAV_GRAPH_INITIALIZED, true);
+            lastPreferredStartDestination = savedInstanceState.getInt(STATE_LAST_PREFERRED_DESTINATION, 0);
+        }
 
         updateActivityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartIntentSenderForResult(),
@@ -222,16 +231,24 @@ public class MainActivity extends AppCompatActivity {
                     getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
             if (navHostFragment != null) {
                 navController = navHostFragment.getNavController();
-                NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.mobile_navigation);
-                navGraph.setStartDestination(uiState.defaultNavDestination());
-                navController.setGraph(navGraph);
 
                 navOrder.put(R.id.navigation_home, 0);
                 navOrder.put(R.id.navigation_android_studio, 1);
                 navOrder.put(R.id.navigation_about, 2);
-                androidx.navigation.NavDestination destination = navController.getCurrentDestination();
-                if (destination != null) {
-                    currentNavIndex = navOrder.get(destination.getId());
+
+                int preferredStartDestination = uiState.defaultNavDestination();
+                if (!navGraphInitialized) {
+                    NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.mobile_navigation);
+                    navGraph.setStartDestination(preferredStartDestination);
+                    navController.setGraph(navGraph);
+                    navGraphInitialized = true;
+                    lastPreferredStartDestination = preferredStartDestination;
+                } else {
+                    if (lastPreferredStartDestination == 0) {
+                        lastPreferredStartDestination = preferredStartDestination;
+                    } else if (preferredStartDestination != lastPreferredStartDestination) {
+                        navigateToPreferredDestination(preferredStartDestination);
+                    }
                 }
 
                 NavOptions forwardOptions = new NavOptions.Builder()
@@ -248,11 +265,17 @@ public class MainActivity extends AppCompatActivity {
                         .setPopExitAnim(R.anim.fragment_spring_exit)
                         .build();
 
+                androidx.navigation.NavDestination destination = navController.getCurrentDestination();
+                if (destination != null) {
+                    currentNavIndex = navOrder.get(destination.getId(), currentNavIndex);
+                }
+
                 if (useRail) {
-                    if (mBinding.navRail != null) {
-                        NavigationUI.setupWithNavController(mBinding.navRail, navController);
-                        mBinding.navRail.setOnItemSelectedListener(item -> {
-                            if (item.getItemId() == navController.getCurrentDestination().getId()) {
+                    if (binding.navRail != null) {
+                        NavigationUI.setupWithNavController(binding.navRail, navController);
+                        binding.navRail.setOnItemSelectedListener(item -> {
+                            androidx.navigation.NavDestination currentDestination = navController.getCurrentDestination();
+                            if (currentDestination != null && item.getItemId() == currentDestination.getId()) {
                                 return true;
                             }
                             int newIndex = navOrder.get(item.getItemId());
@@ -265,7 +288,8 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     NavigationUI.setupWithNavController(navBarView, navController);
                     navBarView.setOnItemSelectedListener(item -> {
-                        if (item.getItemId() == navController.getCurrentDestination().getId()) {
+                        androidx.navigation.NavDestination currentDestination = navController.getCurrentDestination();
+                        if (currentDestination != null && item.getItemId() == currentDestination.getId()) {
                             return true;
                         }
                         int newIndex = navOrder.get(item.getItemId());
@@ -276,9 +300,9 @@ public class MainActivity extends AppCompatActivity {
                     });
                 }
 
-                setSupportActionBar(mBinding.toolbar);
+                setSupportActionBar(binding.toolbar);
 
-                mBinding.toolbar.setNavigationOnClickListener(v -> {
+                binding.toolbar.setNavigationOnClickListener(v -> {
                     BottomSheetMenuFragment bottomSheet = new BottomSheetMenuFragment();
                     bottomSheet.show(getSupportFragmentManager(), bottomSheet.getTag());
                 });
@@ -294,6 +318,32 @@ public class MainActivity extends AppCompatActivity {
                 mBinding.progressBar.setVisibility(Boolean.TRUE.equals(isLoading) ? View.VISIBLE : View.GONE);
             }
         });
+    }
+
+
+    private void navigateToPreferredDestination(int preferredDestination) {
+        if (navController == null) {
+            return;
+        }
+        NavGraph graph = navController.getGraph();
+        if (graph != null) {
+            graph.setStartDestination(preferredDestination);
+        }
+        androidx.navigation.NavDestination currentDestination = navController.getCurrentDestination();
+        if (currentDestination != null && currentDestination.getId() == preferredDestination) {
+            lastPreferredStartDestination = preferredDestination;
+            return;
+        }
+        if (graph == null) {
+            lastPreferredStartDestination = preferredDestination;
+            return;
+        }
+        NavOptions options = new NavOptions.Builder()
+                .setPopUpTo(graph.getStartDestinationId(), true)
+                .setLaunchSingleTop(true)
+                .build();
+        navController.navigate(preferredDestination, null, options);
+        lastPreferredStartDestination = preferredDestination;
     }
 
 
@@ -388,6 +438,13 @@ public class MainActivity extends AppCompatActivity {
                 )
                 .setAction(getString(R.string.alert_dialog_require_restart), v -> appUpdateManager.completeUpdate())
                 .show();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(STATE_NAV_GRAPH_INITIALIZED, navGraphInitialized);
+        outState.putInt(STATE_LAST_PREFERRED_DESTINATION, lastPreferredStartDestination);
     }
 
     @Override
