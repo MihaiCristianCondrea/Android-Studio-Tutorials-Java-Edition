@@ -8,9 +8,9 @@ import androidx.room.PrimaryKey;
  */
 @Entity(tableName = "notes")
 public class Note {
+    public final String text;
     @PrimaryKey(autoGenerate = true)
     public int id;
-    public final String text;
 
     public Note(String text) {
         this.text = text;

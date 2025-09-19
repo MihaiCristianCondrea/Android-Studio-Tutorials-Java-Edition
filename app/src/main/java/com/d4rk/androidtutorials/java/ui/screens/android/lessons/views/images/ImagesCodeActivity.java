@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.WindowCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
@@ -12,7 +13,6 @@ import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images.tabs.ImagesTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images.tabs.ImagesTabLayoutFragment;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ public class ImagesCodeActivity extends UpNavigationActivity {
         binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.tabLayout);
+        WindowCompat.enableEdgeToEdge(this.getWindow());
 
         setupViewPager();
 

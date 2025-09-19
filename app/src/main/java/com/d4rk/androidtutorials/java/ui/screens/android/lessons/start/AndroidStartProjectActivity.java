@@ -4,12 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidStartProjectBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -20,7 +21,7 @@ public class AndroidStartProjectActivity extends UpNavigationActivity {
         ActivityAndroidStartProjectBinding binding = ActivityAndroidStartProjectBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.constraintLayout);
+        WindowCompat.enableEdgeToEdge(this.getWindow());
 
         setSupportActionBar(binding.topAppBar);
         binding.topAppBar.setNavigationOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
@@ -35,7 +36,8 @@ public class AndroidStartProjectActivity extends UpNavigationActivity {
                 return true;
             }
             return false;
-        });        AdUtils.loadBanner(binding.adViewBottom);
+        });
+        AdUtils.loadBanner(binding.adViewBottom);
         AdUtils.loadBanner(binding.adView);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.textViewThirdStepSummary.setMovementMethod(LinkMovementMethod.getInstance());

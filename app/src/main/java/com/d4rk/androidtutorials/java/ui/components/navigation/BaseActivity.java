@@ -9,9 +9,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.core.view.WindowCompat;
 
 import com.d4rk.androidtutorials.java.R;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onPostCreate(savedInstanceState);
         View container = findViewById(R.id.container);
         if (container != null) {
-            EdgeToEdgeDelegate.apply(this, container);
+            WindowCompat.enableEdgeToEdge(this.getWindow());
         }
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {

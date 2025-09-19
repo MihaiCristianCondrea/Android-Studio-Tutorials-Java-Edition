@@ -35,7 +35,7 @@ public abstract class NoCodeAdFragment<T extends ViewBinding> extends Fragment {
      * Called after the binding has been created and the banner ad loaded.
      * Subclasses can override to perform additional setup.
      *
-     * @param binding The binding instance.
+     * @param binding            The binding instance.
      * @param savedInstanceState Saved instance state.
      */
     protected void onBindingCreated(@NonNull T binding, @Nullable Bundle savedInstanceState) {

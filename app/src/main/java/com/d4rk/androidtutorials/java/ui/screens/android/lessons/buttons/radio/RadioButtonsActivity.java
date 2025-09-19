@@ -6,10 +6,11 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.RadioButton;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.databinding.ActivityRadioButtonsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.snackbar.Snackbar;
 
 public class RadioButtonsActivity extends UpNavigationActivity {
@@ -22,7 +23,7 @@ public class RadioButtonsActivity extends UpNavigationActivity {
         binding = ActivityRadioButtonsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.container);
+        WindowCompat.enableEdgeToEdge(this.getWindow());
 
         binding.radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             RadioButton radioButton = findViewById(checkedId);

@@ -7,11 +7,11 @@ import android.os.Looper;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.WindowCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRetrofitBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -34,7 +34,7 @@ public class RetrofitActivity extends UpNavigationActivity {
         binding = ActivityRetrofitBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.constraintLayout);
+        WindowCompat.enableEdgeToEdge(this.getWindow());
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://jsonplaceholder.typicode.com/")

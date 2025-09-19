@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.core.view.WindowCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
@@ -14,7 +15,6 @@ import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActiv
 import com.d4rk.androidtutorials.java.ui.screens.android.tabs.CodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.tabs.LayoutFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.tabs.NoCodeFragment;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import dagger.hilt.android.AndroidEntryPoint;
@@ -30,7 +30,7 @@ public class CodeActivity extends UpNavigationActivity {
         binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.tabLayout);
+        WindowCompat.enableEdgeToEdge(this.getWindow());
 
         CodeViewModel viewModel = new ViewModelProvider(this).get(CodeViewModel.class);
 

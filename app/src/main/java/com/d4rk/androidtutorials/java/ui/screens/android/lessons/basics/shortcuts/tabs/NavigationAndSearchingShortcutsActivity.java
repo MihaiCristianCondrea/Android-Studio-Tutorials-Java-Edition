@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.view.WindowCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,7 +15,6 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityShortcutsNavigationAndSearchingBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import java.util.List;
 
@@ -26,7 +26,7 @@ public class NavigationAndSearchingShortcutsActivity extends UpNavigationActivit
         super.onCreate(savedInstanceState);
         ActivityShortcutsNavigationAndSearchingBinding binding = ActivityShortcutsNavigationAndSearchingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        EdgeToEdgeDelegate.apply(this, binding.shortcutList);
+        WindowCompat.enableEdgeToEdge(this.getWindow());
 
         AdUtils.loadBanner(binding.adView);
         new FastScrollerBuilder(binding.shortcutList).useMd2Style().build();
@@ -100,5 +100,6 @@ public class NavigationAndSearchingShortcutsActivity extends UpNavigationActivit
         }
     }
 
-    private record Shortcut(String key, String description) { }
+    private record Shortcut(String key, String description) {
+    }
 }

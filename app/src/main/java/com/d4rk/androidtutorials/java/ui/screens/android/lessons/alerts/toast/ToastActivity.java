@@ -6,11 +6,12 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityToastBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 public class ToastActivity extends UpNavigationActivity {
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -22,7 +23,7 @@ public class ToastActivity extends UpNavigationActivity {
         binding = ActivityToastBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.container);
+        WindowCompat.enableEdgeToEdge(this.getWindow());
 
         binding.button.setOnClickListener(v ->
                 Toast.makeText(this, R.string.toast_this_is_a_toast, Toast.LENGTH_SHORT).show()

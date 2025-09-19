@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySnackBarBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.snackbar.Snackbar;
 
 public class SnackBarActivity extends UpNavigationActivity {
@@ -22,7 +23,7 @@ public class SnackBarActivity extends UpNavigationActivity {
         binding = ActivitySnackBarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.container);
+        WindowCompat.enableEdgeToEdge(this.getWindow());
 
         binding.button.setOnClickListener(v -> {
             Snackbar snackbar = Snackbar.make(binding.getRoot(), R.string.snack_this_is_a_snackbar, Snackbar.LENGTH_INDEFINITE);

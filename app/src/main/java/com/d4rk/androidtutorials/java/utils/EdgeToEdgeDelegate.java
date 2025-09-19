@@ -14,21 +14,6 @@ import androidx.core.view.WindowInsetsCompat;
 import com.d4rk.androidtutorials.java.R;
 
 public final class EdgeToEdgeDelegate {
-
-    private EdgeToEdgeDelegate() {
-        // Utility class
-    }
-
-    public static void apply(Activity activity, View view) {
-        enableEdgeToEdge(activity);
-        applyInsetsAsPadding(
-                view,
-                WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout(),
-                true,
-                true
-        );
-    }
-
     public static void applyBottomBar(Activity activity, View container, View bottomNavigationView) {
         enableEdgeToEdge(activity);
         applyInsetsAsPadding(

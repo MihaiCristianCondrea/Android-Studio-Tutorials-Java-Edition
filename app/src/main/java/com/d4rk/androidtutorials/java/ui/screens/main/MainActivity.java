@@ -19,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
+import androidx.core.view.WindowCompat;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleOwner;
@@ -64,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
     private static final long BACK_PRESS_INTERVAL = 2000;
     private static final String STATE_NAV_GRAPH_INITIALIZED = "state_nav_graph_initialized";
     private static final String STATE_LAST_PREFERRED_DESTINATION = "state_last_preferred_destination";
-    private ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher;
     private final SparseIntArray navOrder = new SparseIntArray();
+    private ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher;
     private ActivityMainBinding mBinding;
     private final DefaultLifecycleObserver lifecycleObserver = new DefaultLifecycleObserver() {
         @Override
@@ -213,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
                     navRail.setVisibility(View.VISIBLE);
                 }
                 navBarView.setVisibility(View.GONE);
-                EdgeToEdgeDelegate.apply(this, binding.container);
+                WindowCompat.enableEdgeToEdge(this.getWindow());
             } else {
                 View navRail = binding.navRail;
                 if (navRail != null) {

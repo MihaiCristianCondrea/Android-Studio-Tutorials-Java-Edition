@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.core.view.WindowCompat;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.ListAdapter;
@@ -17,7 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRoomBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.util.List;
@@ -40,7 +40,7 @@ public class RoomActivity extends UpNavigationActivity {
         binding = ActivityRoomBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.constraintLayout);
+        WindowCompat.enableEdgeToEdge(this.getWindow());
 
         db = AppDatabase.getInstance(this);
 

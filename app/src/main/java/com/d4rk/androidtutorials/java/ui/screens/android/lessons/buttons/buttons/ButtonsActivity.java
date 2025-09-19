@@ -5,10 +5,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityButtonsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.snackbar.Snackbar;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
@@ -23,7 +24,7 @@ public class ButtonsActivity extends UpNavigationActivity {
         binding = ActivityButtonsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.constraintLayout);
+        WindowCompat.enableEdgeToEdge(this.getWindow());
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.buttonNormal.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.button_normal) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());

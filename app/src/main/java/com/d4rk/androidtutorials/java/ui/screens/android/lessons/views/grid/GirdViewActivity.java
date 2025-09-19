@@ -8,10 +8,11 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.databinding.ActivityGridViewBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 public class GirdViewActivity extends UpNavigationActivity {
 
@@ -25,7 +26,7 @@ public class GirdViewActivity extends UpNavigationActivity {
         binding = ActivityGridViewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.container);
+        WindowCompat.enableEdgeToEdge(this.getWindow());
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, numbers);
         binding.gridView.setAdapter(adapter);
