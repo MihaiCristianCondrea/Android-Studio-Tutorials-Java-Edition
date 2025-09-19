@@ -81,7 +81,7 @@ public final class EdgeToEdgeDelegate {
 
     @Nullable
     private static View findTopBar(View view) {
-        if (!isVisible(view)) {
+        if (isVisible(view)) {
             return null;
         }
         if (isTopBar(view)) {
@@ -101,7 +101,7 @@ public final class EdgeToEdgeDelegate {
 
     @Nullable
     private static View findBottomBar(View view) {
-        if (!isVisible(view)) {
+        if (isVisible(view)) {
             return null;
         }
         if (isBottomBar(view)) {
@@ -120,11 +120,11 @@ public final class EdgeToEdgeDelegate {
     }
 
     private static void applyInsetsToFloatingButtons(View view, int insetTypes) {
-        if (!isVisible(view)) {
+        if (isVisible(view)) {
             return;
         }
         if (view instanceof ExtendedFloatingActionButton || view instanceof FloatingActionButton) {
-            applyInsetsAsMargin(view, insetTypes, false, true);
+            applyInsetsAsMargin(view, insetTypes);
             return;
         }
         if (view instanceof ViewGroup viewGroup) {
@@ -153,7 +153,7 @@ public final class EdgeToEdgeDelegate {
     }
 
     private static boolean isVisible(View view) {
-        return view.getVisibility() == View.VISIBLE;
+        return view.getVisibility() != View.VISIBLE;
     }
 
     private static void applyInsetsAsPadding(View view, int insetTypes,
@@ -199,9 +199,7 @@ public final class EdgeToEdgeDelegate {
         requestApplyInsetsWhenAttached(view);
     }
 
-    private static void applyInsetsAsMargin(View view, int insetTypes,
-                                            boolean applyTop,
-                                            boolean applyBottom) {
+    private static void applyInsetsAsMargin(View view, int insetTypes) {
         if (view == null) {
             return;
         }
@@ -226,9 +224,9 @@ public final class EdgeToEdgeDelegate {
             Insets insets = windowInsets.getInsets(insetTypes);
             ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
             MarginLayoutParamsCompat.setMarginStart(lp, margin.start + insets.left);
-            lp.topMargin = margin.top + (applyTop ? insets.top : 0);
+            lp.topMargin = margin.top;
             MarginLayoutParamsCompat.setMarginEnd(lp, margin.end + insets.right);
-            lp.bottomMargin = margin.bottom + (applyBottom ? insets.bottom : 0);
+            lp.bottomMargin = margin.bottom + (insets.bottom);
             v.setLayoutParams(lp);
             return windowInsets;
         });
