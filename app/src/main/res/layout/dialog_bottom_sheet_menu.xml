@@ -39,7 +39,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_settings" />
+                android:src="@drawable/ic_settings"
+                android:tint="?attr/colorOnSurface" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -71,7 +72,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_help" />
+                android:src="@drawable/ic_help"
+                android:tint="?attr/colorOnSurface" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -103,7 +105,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_changelog" />
+                android:src="@drawable/ic_changelog"
+                android:tint="?attr/colorOnSurface" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -134,7 +137,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_share" />
+                android:src="@drawable/ic_share"
+                android:tint="?attr/colorOnSurface" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
