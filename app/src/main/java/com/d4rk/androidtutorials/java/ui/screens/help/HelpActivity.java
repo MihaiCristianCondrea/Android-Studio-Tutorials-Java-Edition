@@ -19,6 +19,7 @@ import com.d4rk.androidtutorials.java.databinding.ActivityHelpBinding;
 import com.d4rk.androidtutorials.java.databinding.DialogVersionInfoBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.review.ReviewInfo;
@@ -35,7 +36,7 @@ public class HelpActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         ActivityHelpBinding binding = ActivityHelpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        EdgeToEdgeDelegate.apply(this, binding.getRoot());
         helpViewModel = new ViewModelProvider(this).get(HelpViewModel.class);
 
         getSupportFragmentManager().beginTransaction()
