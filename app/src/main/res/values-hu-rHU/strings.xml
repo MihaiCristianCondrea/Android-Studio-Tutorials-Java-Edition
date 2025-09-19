@@ -10,6 +10,7 @@
     <string name="menu">Menü</string>
     <string name="press_back_again_to_exit">Nyomja meg újra a Back gombot a kilépéshez</string>
     <string name="error_no_app_for_link">Nem található alkalmazás a hivatkozás megnyitásához.</string>
+    <string name="lesson_open_in_browser">Nyisd meg a leckét a böngészőben</string>
 
 
     <string name="welcome">Üdvözöljük</string>

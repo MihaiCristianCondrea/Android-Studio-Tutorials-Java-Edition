@@ -10,6 +10,7 @@
     <string name="menu">Menu</string>
     <string name="press_back_again_to_exit">Premi di nuovo per uscire</string>
     <string name="error_no_app_for_link">Nessuna app trovata per aprire questo link.</string>
+    <string name="lesson_open_in_browser">Apri la lezione nel browser</string>
 
 
     <string name="welcome">Benvenuto</string>

@@ -10,6 +10,7 @@
     <string name="menu">Меню</string>
     <string name="press_back_again_to_exit">Натиснете отново назад, за да излезете</string>
     <string name="error_no_app_for_link">Не е намерено приложение, което да отвори тази връзка.</string>
+    <string name="lesson_open_in_browser">Отвори урока в браузър</string>
 
     <string name="welcome">Добре дошли</string>
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to the Terms of Service and Privacy Policy to continue</string>
