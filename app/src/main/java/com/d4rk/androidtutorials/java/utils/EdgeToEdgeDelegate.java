@@ -25,8 +25,6 @@ public final class EdgeToEdgeDelegate {
                 view,
                 WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout(),
                 true,
-                true,
-                true,
                 true
         );
     }
@@ -37,16 +35,12 @@ public final class EdgeToEdgeDelegate {
                 container,
                 WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout(),
                 true,
-                true,
-                true,
                 false
         );
         applyInsetsAsPadding(
                 bottomNavigationView,
                 WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout(),
-                true,
                 false,
-                true,
                 true
         );
     }
@@ -59,8 +53,8 @@ public final class EdgeToEdgeDelegate {
     }
 
     private static void applyInsetsAsPadding(View view, int insetTypes,
-                                             boolean applyStart, boolean applyTop,
-                                             boolean applyEnd, boolean applyBottom) {
+                                             boolean applyTop,
+                                             boolean applyBottom) {
         if (view == null) {
             return;
         }
@@ -83,12 +77,12 @@ public final class EdgeToEdgeDelegate {
         InsetsPadding padding = basePadding;
         ViewCompat.setOnApplyWindowInsetsListener(view, (v, windowInsets) -> {
             Insets insets = windowInsets.getInsets(insetTypes);
-            int start = applyStart ? insets.left : 0;
+            int start = insets.left;
             int top = applyTop ? insets.top : 0;
-            int end = applyEnd ? insets.right : 0;
+            int end = insets.right;
             int bottom = applyBottom ? insets.bottom : 0;
 
-            ViewCompat.setPaddingRelative(
+            ViewCompat.setPaddingRelative( // FIXME: 'setPaddingRelative(android.view.@org.jspecify.annotations.NonNull View, int, int, int, int)' is deprecated
                     v,
                     padding.start + start,
                     padding.top + top,
@@ -102,18 +96,18 @@ public final class EdgeToEdgeDelegate {
     }
 
     private static void requestApplyInsetsWhenAttached(@NonNull View view) {
-        if (ViewCompat.isAttachedToWindow(view)) {
+        if (ViewCompat.isAttachedToWindow(view)) { // FIXME: 'isAttachedToWindow(android.view.@org.jspecify.annotations.NonNull View)' is deprecated
             ViewCompat.requestApplyInsets(view);
         } else {
             view.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
                 @Override
-                public void onViewAttachedToWindow(View v) {
+                public void onViewAttachedToWindow(@NonNull View v) {
                     v.removeOnAttachStateChangeListener(this);
                     ViewCompat.requestApplyInsets(v);
                 }
 
                 @Override
-                public void onViewDetachedFromWindow(View v) {
+                public void onViewDetachedFromWindow(@NonNull View v) {
                     // No-op
                 }
             });
