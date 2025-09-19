@@ -1,8 +1,6 @@
 package com.d4rk.androidtutorials.java.utils;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -103,37 +101,4 @@ public class ConsentUtilsTest {
         }
     }
 
-    @Test
-    public void canShowAds_readsStoredPreference() {
-        Context context = mock(Context.class);
-        SharedPreferences prefs = mock(SharedPreferences.class);
-        when(context.getString(R.string.key_consent_ad_storage)).thenReturn("consent_ad_storage");
-
-        try (MockedStatic<PreferenceManager> prefsStatic = Mockito.mockStatic(PreferenceManager.class)) {
-            prefsStatic.when(() -> PreferenceManager.getDefaultSharedPreferences(context)).thenReturn(prefs);
-
-            when(prefs.getBoolean("consent_ad_storage", true)).thenReturn(false);
-            assertFalse(ConsentUtils.canShowPersonalizedAds(context));
-
-            when(prefs.getBoolean("consent_ad_storage", true)).thenReturn(true);
-            assertTrue(ConsentUtils.canShowPersonalizedAds(context));
-        }
-    }
-
-    @Test
-    public void canShowAds_returnsDefaultWhenPreferenceMissing() {
-        Context context = mock(Context.class);
-        SharedPreferences prefs = mock(SharedPreferences.class);
-        when(context.getString(R.string.key_consent_ad_storage)).thenReturn("consent_ad_storage");
-
-        try (MockedStatic<PreferenceManager> prefsStatic = Mockito.mockStatic(PreferenceManager.class)) {
-            prefsStatic.when(() -> PreferenceManager.getDefaultSharedPreferences(context)).thenReturn(prefs);
-
-            when(prefs.getBoolean("consent_ad_storage", true))
-                    .thenAnswer(invocation -> invocation.getArgument(1));
-
-            assertTrue(ConsentUtils.canShowPersonalizedAds(context));
-            verify(prefs).getBoolean("consent_ad_storage", true);
-        }
-    }
 }

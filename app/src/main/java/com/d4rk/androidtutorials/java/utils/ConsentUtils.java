@@ -39,9 +39,4 @@ public class ConsentUtils {
                 adPersonalization ? FirebaseAnalytics.ConsentStatus.GRANTED : FirebaseAnalytics.ConsentStatus.DENIED);
         FirebaseAnalytics.getInstance(context).setConsent(consentMap);
     }
-
-    public static boolean canShowPersonalizedAds(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getBoolean(context.getString(R.string.key_consent_ad_storage), true);
-    }
 }
