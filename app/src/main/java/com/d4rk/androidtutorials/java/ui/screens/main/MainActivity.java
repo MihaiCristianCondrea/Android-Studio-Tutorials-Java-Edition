@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         public void onResume(@NonNull LifecycleOwner owner) {
             ConsentUtils.applyStoredConsent(MainActivity.this);
             if (mBinding != null && mBinding.adView != null) {
-                mBinding.adPlaceholder.setVisibility(View.GONE);
+                mBinding.adPlaceholder.setVisibility(View.GONE); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
                 mBinding.adView.setVisibility(View.VISIBLE);
                 AdUtils.loadBanner(mBinding.adView);
             }
@@ -201,17 +201,17 @@ public class MainActivity extends AppCompatActivity {
             }
             NavigationBarView navBarView = (NavigationBarView) binding.navView;
             if (useRail) {
-                binding.navRail.setVisibility(View.VISIBLE);
+                binding.navRail.setVisibility(View.VISIBLE); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
                 navBarView.setVisibility(View.GONE);
                 EdgeToEdgeDelegate.apply(this, binding.container);
             } else {
-                binding.navRail.setVisibility(View.GONE);
+                binding.navRail.setVisibility(View.GONE); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
                 navBarView.setVisibility(View.VISIBLE);
                 EdgeToEdgeDelegate.applyBottomBar(this, binding.container, navBarView);
 
                 navBarView.setLabelVisibilityMode(uiState.bottomNavVisibility());
                 if (binding.adView != null) {
-                    binding.adPlaceholder.setVisibility(View.GONE);
+                    binding.adPlaceholder.setVisibility(View.GONE); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
                     binding.adView.setVisibility(View.VISIBLE);
                     AdUtils.loadBanner(binding.adView);
                 }
@@ -305,7 +305,7 @@ public class MainActivity extends AppCompatActivity {
 
         mainViewModel.getLoadingState().observe(this, isLoading -> {
             if (mBinding != null) {
-                mBinding.progressBar.setVisibility(Boolean.TRUE.equals(isLoading) ? View.VISIBLE : View.GONE);
+                mBinding.progressBar.setVisibility(Boolean.TRUE.equals(isLoading) ? View.VISIBLE : View.GONE); // FIXME: Method invocation 'setVisibility' may produce 'NullPointerException'
             }
         });
     }
@@ -316,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         NavGraph graph = navController.getGraph();
-        if (graph != null) {
+        if (graph != null) {// FIXME: Condition 'graph != null' is always 'true'
             graph.setStartDestination(preferredDestination);
         }
         androidx.navigation.NavDestination currentDestination = navController.getCurrentDestination();
@@ -324,7 +324,7 @@ public class MainActivity extends AppCompatActivity {
             lastPreferredStartDestination = preferredDestination;
             return;
         }
-        if (graph == null) {
+        if (graph == null) { // FIXME: Condition 'graph == null' is always 'false'
             lastPreferredStartDestination = preferredDestination;
             return;
         }

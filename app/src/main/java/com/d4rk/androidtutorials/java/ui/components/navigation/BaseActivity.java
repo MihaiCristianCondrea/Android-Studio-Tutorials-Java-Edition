@@ -32,7 +32,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     public boolean onMenuOpened(int featureId, Menu menu) {
         if (menu instanceof MenuBuilder) {
-            MenuBuilder menuBuilder = (MenuBuilder) menu;
+            MenuBuilder menuBuilder = (MenuBuilder) menu; // FIXME: Variable 'menuBuilder' can be replaced with pattern variable
             menuBuilder.setOptionalIconsVisible(true);
         }
         return super.onMenuOpened(featureId, menu);
