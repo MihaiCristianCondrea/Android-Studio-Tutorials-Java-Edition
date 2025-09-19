@@ -3,6 +3,7 @@ package com.d4rk.androidtutorials.java.ui.screens.support;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.lifecycle.ViewModelProvider;
@@ -12,6 +13,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
+import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.google.android.gms.ads.AdRequest;
 
 import java.util.List;
@@ -32,9 +34,16 @@ public class SupportActivity extends BaseActivity {
 
         supportViewModel = new ViewModelProvider(this).get(SupportViewModel.class);
 
-        AdRequest adRequest = supportViewModel.initMobileAds();
-        binding.supportNativeAd.loadAd(adRequest);
-        binding.bannerAdView.loadAd(adRequest);
+        if (ConsentUtils.canShowAds(this)) {
+            AdRequest adRequest = supportViewModel.initMobileAds();
+            binding.supportNativeAd.setVisibility(View.VISIBLE);
+            binding.bannerAdView.setVisibility(View.VISIBLE);
+            binding.supportNativeAd.loadAd(adRequest);
+            binding.bannerAdView.loadAd(adRequest);
+        } else {
+            binding.supportNativeAd.setVisibility(View.GONE);
+            binding.bannerAdView.setVisibility(View.GONE);
+        }
 
         binding.buttonWebAd.setOnClickListener(v -> openSupportLink());
 
