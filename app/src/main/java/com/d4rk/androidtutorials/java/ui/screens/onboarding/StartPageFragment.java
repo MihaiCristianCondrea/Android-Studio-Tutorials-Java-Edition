@@ -48,7 +48,17 @@ public class StartPageFragment extends Fragment {
         binding.optionSecond.radioButton.setId(View.generateViewId());
         binding.optionThird.radioButton.setId(View.generateViewId());
 
-        selectOption(0);
+        String[] values = getResources().getStringArray(R.array.preference_default_tab_values);
+        String savedValue = viewModel.getDefaultTab();
+        int selectedIndex = 0;
+        for (int i = 0; i < values.length; i++) {
+            if (values[i].equals(savedValue)) {
+                selectedIndex = i;
+                break;
+            }
+        }
+
+        selectOption(selectedIndex);
 
         binding.cardFirst.setOnClickListener(v -> selectOption(0));
         binding.cardSecond.setOnClickListener(v -> selectOption(1));
@@ -63,17 +73,23 @@ public class StartPageFragment extends Fragment {
         binding.optionFirst.radioButton.setChecked(index == 0);
         binding.optionSecond.radioButton.setChecked(index == 1);
         binding.optionThird.radioButton.setChecked(index == 2);
+
+        if (viewModel != null) {
+            String[] values = getResources().getStringArray(R.array.preference_default_tab_values);
+            if (index >= 0 && index < values.length) {
+                viewModel.setDefaultTab(values[index]);
+            }
+        }
     }
 
     public void saveSelection() {
-        String[] values = getResources().getStringArray(R.array.preference_default_tab_values);
-        String value = values[0];
         if (binding.optionSecond.radioButton.isChecked()) {
-            value = values[1];
+            selectOption(1);
         } else if (binding.optionThird.radioButton.isChecked()) {
-            value = values[2];
+            selectOption(2);
+        } else {
+            selectOption(0);
         }
-        viewModel.setDefaultTab(value);
     }
 
     @Override
