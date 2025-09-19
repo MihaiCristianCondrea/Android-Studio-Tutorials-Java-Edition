@@ -3,26 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/view_in_google_play"
+        android:icon="@drawable/ic_play_store_tinted"
         android:title="@string/view_in_google_play"
         app:showAsAction="never" />
     <item
         android:id="@+id/version_info"
+        android:icon="@drawable/ic_perm_device_information"
         android:title="@string/version_info"
         app:showAsAction="never" />
     <item
         android:id="@+id/beta_program"
+        android:icon="@drawable/ic_tips_and_updates"
         android:title="@string/beta_program"
         app:showAsAction="never" />
     <item
         android:id="@+id/terms_of_service"
+        android:icon="@drawable/ic_terms_of_service"
         android:title="@string/terms_of_service"
         app:showAsAction="never" />
     <item
         android:id="@+id/privacy_policy"
+        android:icon="@drawable/ic_privacy_policy"
         android:title="@string/privacy_policy"
         app:showAsAction="never" />
     <item
         android:id="@+id/oss"
+        android:icon="@drawable/ic_license"
         android:title="@string/open_source_licenses"
         app:showAsAction="never" />
 </menu>
