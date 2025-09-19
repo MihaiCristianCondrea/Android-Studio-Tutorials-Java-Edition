@@ -17,6 +17,7 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.nativead.AdChoicesView;
 import com.google.android.gms.ads.nativead.MediaView;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
@@ -84,6 +85,7 @@ public class NativeAdLoader {
         Button callToActionView = adView.findViewById(R.id.ad_call_to_action);
         ImageView iconView = adView.findViewById(R.id.ad_app_icon);
         TextView attributionView = adView.findViewById(R.id.ad_attribution);
+        AdChoicesView adChoicesView = adView.findViewById(R.id.ad_choices);
 
         if (mediaView != null) {
             adView.setMediaView(mediaView);
@@ -95,6 +97,9 @@ public class NativeAdLoader {
             adView.setIconView(iconView);
         }
         adView.setAdvertiserView(attributionView);
+        if (adChoicesView != null) {
+            adView.setAdChoicesView(adChoicesView);
+        }
 
         if (headlineView != null) {
             headlineView.setText(nativeAd.getHeadline());
