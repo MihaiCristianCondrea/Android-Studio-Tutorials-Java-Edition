@@ -34,6 +34,7 @@ import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioCategoryBindi
 import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioLessonBinding;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.LoadAdError;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.ShapeAppearanceModel;
@@ -427,7 +428,7 @@ public class AndroidStudioFragment extends Fragment {
             final AppCompatImageView icon;
             final MaterialTextView title;
             final MaterialTextView summary;
-            final AppCompatImageView externalIcon;
+            final MaterialButton externalButton;
 
             LessonHolder(@NonNull ItemAndroidStudioLessonBinding binding) {
                 super(binding.getRoot());
@@ -435,7 +436,7 @@ public class AndroidStudioFragment extends Fragment {
                 icon = binding.lessonIcon;
                 title = binding.lessonTitle;
                 summary = binding.lessonSummary;
-                externalIcon = binding.lessonExternalIcon;
+                externalButton = binding.lessonExternalIcon;
             }
 
             void bind(Lesson lesson, boolean first, boolean last) {
@@ -452,7 +453,13 @@ public class AndroidStudioFragment extends Fragment {
                 } else {
                     summary.setVisibility(View.GONE);
                 }
-                externalIcon.setVisibility(lesson.opensInBrowser ? View.VISIBLE : View.GONE);
+                boolean showExternalButton = lesson.opensInBrowser && lesson.intent != null;
+                externalButton.setVisibility(showExternalButton ? View.VISIBLE : View.GONE);
+                if (showExternalButton) {
+                    externalButton.setOnClickListener(v -> v.getContext().startActivity(lesson.intent));
+                } else {
+                    externalButton.setOnClickListener(null);
+                }
                 itemView.setOnClickListener(v -> {
                     if (lesson.intent != null) {
                         v.getContext().startActivity(lesson.intent);

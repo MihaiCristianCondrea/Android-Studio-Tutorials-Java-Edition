@@ -45,14 +45,20 @@
                 android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/lesson_external_icon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:contentDescription="@null"
-            android:importantForAccessibility="no"
-            app:srcCompat="@drawable/ic_open_in_new"
-            android:visibility="gone" />
+            android:contentDescription="@string/lesson_open_in_browser"
+            android:tooltipText="@string/lesson_open_in_browser"
+            android:visibility="gone"
+            android:text="@null"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            app:icon="@drawable/ic_open_in_new"
+            app:iconPadding="0dp"
+            app:iconSize="24dp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </com.google.android.material.card.MaterialCardView>
