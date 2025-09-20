@@ -3,27 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingVertical="16dp">
+    android:orientation="vertical">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/question"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/question_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
-        android:textStyle="bold" />
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingEnd="16dp"
+            android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/toggle_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"
+            android:tint="?attr/colorOnSurfaceVariant"
+            app:srcCompat="@drawable/ic_expand_more_24" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:visibility="gone" />
 
     <com.google.android.material.divider.MaterialDivider
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="12dp" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

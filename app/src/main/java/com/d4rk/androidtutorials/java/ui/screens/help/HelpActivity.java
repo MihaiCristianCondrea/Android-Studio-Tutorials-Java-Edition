@@ -12,11 +12,11 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.LinearLayoutCompat;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.core.view.ViewCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
@@ -218,9 +218,27 @@ public class HelpActivity extends BaseActivity {
             ItemHelpFaqBinding itemBinding = ItemHelpFaqBinding.inflate(inflater, faqList, false);
             itemBinding.question.setText(item.questionResId);
             itemBinding.answer.setText(item.answerResId);
+            itemBinding.answer.setVisibility(View.GONE);
+            itemBinding.toggleIcon.setRotation(0f);
+            itemBinding.questionContainer.setContentDescription(itemBinding.question.getText());
+            ViewCompat.setStateDescription(itemBinding.questionContainer, getString(R.string.faq_state_collapsed));
+            itemBinding.questionContainer.setOnClickListener(v -> toggleFaqItem(itemBinding));
             itemBinding.divider.setVisibility(i == FAQ_ITEMS.size() - 1 ? View.GONE : View.VISIBLE);
             faqList.addView(itemBinding.getRoot());
         }
+    }
+
+    private void toggleFaqItem(ItemHelpFaqBinding binding) {
+        boolean expand = binding.answer.getVisibility() != View.VISIBLE;
+        binding.answer.setVisibility(expand ? View.VISIBLE : View.GONE);
+        float rotation = expand ? 180f : 0f;
+        binding.toggleIcon.animate().cancel();
+        binding.toggleIcon.animate()
+                .rotation(rotation)
+                .setDuration(200L)
+                .start();
+        ViewCompat.setStateDescription(binding.questionContainer,
+                getString(expand ? R.string.faq_state_expanded : R.string.faq_state_collapsed));
     }
 
     private static final class FaqItem {
