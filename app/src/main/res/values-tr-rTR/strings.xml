@@ -260,6 +260,7 @@
     <string name="navigation_drawer">Gezinme çekmecesi</string>
     <string name="dashboard">Kontrol paneli</string>
     <string name="code_font">Kod yazı tipi</string>
+    <string name="code_font_description">Kod parçacıkları için kullanılacak yazı tipini seçin</string>
     <string name="language">Dil</string>
     <string name="notifications">Bildirimler</string>
     <string name="notification_settings">Bildirim ayarları</string>
@@ -329,6 +330,8 @@
     <string name="summary_preference_faq_7">Uygulamadaki ayarlar menüsüne gidip bu özellikler için anahtarı değiştirerek Firebase analiz ve crashlytics\'i devre dışı bırakabilirsiniz.</string>
     <string name="summary_preference_faq_8">Uygulamadaki ayarlar menüsüne gidip "Güncellemeleri kontrol et" seçeneğini seçerek Android Studio Eğitimleri: Java Sürümü için güncellemeleri kontrol edebilirsiniz.</string>
     <string name="summary_preference_faq_9">Google Play Store\'da olumlu bir yorum bırakarak, uygulamayı arkadaşlarınızla ve iş arkadaşlarınızla paylaşarak ve ayarlar menüsündeki "Paylaş" seçeneği aracılığıyla geliştiricileri destekleyerek Android Studio Eğitimleri: Java Sürümü\'nün geliştirilmesini destekleyebilirsiniz.</string>
+    <string name="faq_state_collapsed">Daraltıldı</string>
+    <string name="faq_state_expanded">Genişletildi</string>
     <string name="summary_preference_permissions_ad_id">Uygulamanın, kullanıcının cihazıyla ilişkili reklam kimliğini alıp kullanmasına, kişiselleştirilmiş reklamlar sunmasına, reklam etkinliğini ölçmesine ve Android 13 veya sonraki sürümlere sahip cihazlarda reklam göstermesine olanak tanır.</string>
     <string name="summary_preference_permissions_internet">Uygulamanın, hata raporları göndermek veya güncellemeleri kontrol etmek için bir internet bağlantısı kurmasına izin verir.</string>
     <string name="summary_preference_permissions_post_notifications">Uygulamanın, Android 13 veya sonraki sürümlere sahip cihazlarda bildirimler görüntülemesine izin verir.</string>
@@ -338,6 +341,7 @@
     <string name="next">Sonraki</string>
     <string name="back">Geri</string>
     <string name="bottom_navigation_labels">Alt Navigasyon Etiketleri</string>
+    <string name="bottom_navigation_labels_description">Alt gezinme çubuğunda etiketlerin nasıl görüneceğini seçin</string>
     <string name="summary_preference_permissions_access_notification_policy">Uygulamanın, cihazın bildirim politikasına erişmesine ve değiştirmesine, bildirimlerin kullanıcıya nasıl ve ne zaman gösterileceğini kontrol etmesine ve özel bildirim yönetimi özellikleri sunmasına olanak tanır.</string>
     <string name="summary_preference_permissions_foreground_service">Uygulamanın, ön planda çalışan hizmetler oluşturmasına ve kullanmasına, onlara diğer arka plan işlemlerine göre öncelik vermesine ve performansı ve güvenilirliği artırmasına olanak tanır.</string>
     <string name="summary_preference_settings_language">Uygulama dilini ayarla.</string>

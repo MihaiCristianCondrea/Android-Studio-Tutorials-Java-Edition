@@ -330,6 +330,8 @@
     <string name="summary_preference_faq_7">تقدر تعطل تحليلات وتقارير الأعطال الخاصة بـ Firebase عن طريق الذهاب إلى قائمة الإعدادات في التطبيق وتبديل المفتاح الخاص بهذه الميزات.</string>
     <string name="summary_preference_faq_8">تقدر تتحقق من وجود تحديثات لتطبيق Android Studio Tutorials: Java Edition عن طريق الذهاب إلى قائمة الإعدادات في التطبيق واختيار خيار "التحقق من وجود تحديثات".</string>
     <string name="summary_preference_faq_9">تقدر تدعم تطوير تطبيق Android Studio Tutorials: Java Edition عن طريق ترك تقييم إيجابي على متجر Google Play، ومشاركة التطبيق مع الأصدقاء والزملاء، ودعم المطورين من خلال خيار "مشاركة" في قائمة الإعدادات.</string>
+    <string name="faq_state_collapsed">مطوي</string>
+    <string name="faq_state_expanded">موسّع</string>
     <string name="summary_preference_permissions_ad_id">يسمح للتطبيق باسترداد واستخدام معرف الإعلان المرتبط بجهاز المستخدم، مما يوفر إعلانات مخصصة، ويقيس فعالية الإعلانات، ويعرض الإعلانات على أجهزة أندرويد 13 أو الأحدث.</string>
     <string name="summary_preference_permissions_internet">يسمح للتطبيق بإنشاء اتصال بالإنترنت لإرسال تقارير الأخطاء أو التحقق من وجود تحديثات.</string>
     <string name="summary_preference_permissions_post_notifications">يسمح للتطبيق بعرض الإشعارات على الأجهزة التي تعمل بنظام أندرويد 13 أو الأحدث.</string>

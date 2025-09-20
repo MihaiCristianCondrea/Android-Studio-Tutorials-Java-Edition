@@ -377,6 +377,8 @@
     <string name="summary_preference_faq_7">Możesz wyłączyć Firebase Analytics i Crashlytics, przechodząc do menu ustawień w aplikacji i przełączając odpowiednie opcje.</string>
     <string name="summary_preference_faq_8">Aby sprawdzić aktualizacje Android Studio Tutorials: Java Edition, przejdź do menu ustawień w aplikacji i wybierz opcję \"Sprawdź aktualizacje\".</string>
     <string name="summary_preference_faq_9">Możesz wesprzeć rozwój Android Studio Tutorials: Java Edition, zostawiając pozytywną recenzję w Sklepie Google Play, udostępniając aplikację znajomym i współpracownikom oraz wspierając deweloperów poprzez opcję \"Udostępnij\" w menu ustawień.</string>
+    <string name="faq_state_collapsed">Zwinięte</string>
+    <string name="faq_state_expanded">Rozwinięte</string>
     <string name="summary_preference_permissions_ad_id">Umożliwia aplikacji pobieranie i używanie identyfikatora reklamowego przypisanego do urządzenia użytkownika, dostarczanie spersonalizowanych reklam, mierzenie skuteczności reklam oraz wyświetlanie reklam na urządzeniach z Androidem 13 lub nowszym.</string>
     <string name="summary_preference_permissions_internet">Umożliwia aplikacji nawiązanie połączenia z Internetem w celu wysyłania raportów o błędach lub sprawdzania aktualizacji.</string>
     <string name="summary_preference_permissions_post_notifications">Umożliwia aplikacji wyświetlanie powiadomień na urządzeniach z Androidem 13 lub nowszym.</string>

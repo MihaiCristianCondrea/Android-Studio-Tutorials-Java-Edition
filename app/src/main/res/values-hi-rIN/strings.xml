@@ -287,6 +287,7 @@
     <string name="navigation_drawer">नेविगेशन ड्रॉअर</string>
     <string name="dashboard">डैशबोर्ड</string>
     <string name="code_font">कोड फ़ॉन्ट</string>
+    <string name="code_font_description">कोड स्निपेट के लिए उपयोग किया जाने वाला फ़ॉन्ट चुनें</string>
     <string name="language">भाषा</string>
     <string name="notifications">सूचनाएं</string>
     <string name="notification_settings">सूचना सेटिंग्स</string>
@@ -356,6 +357,8 @@
     <string name="summary_preference_faq_7">आप ऐप में सेटिंग्स मेनू में जाकर इन सुविधाओं के लिए स्विच को टॉगल करके फायरबेस एनालिटिक्स और क्रैशलाइटिक्स को अक्षम कर सकते हैं।</string>
     <string name="summary_preference_faq_8">आप ऐप में सेटिंग्स मेनू में जाकर और \"अपडेट के लिए जांच करें\" विकल्प का चयन करके Android Studio ट्यूटोरियल: जावा संस्करण के अपडेट के लिए जांच कर सकते हैं।</string>
     <string name="summary_preference_faq_9">आप Google Play Store पर एक सकारात्मक समीक्षा छोड़कर, दोस्तों और सहकर्मियों के साथ ऐप साझा करके, और सेटिंग्स मेनू में \"साझा करें\" विकल्प के माध्यम से डेवलपर्स का समर्थन करके Android Studio ट्यूटोरियल: जावा संस्करण के विकास का समर्थन कर सकते हैं।</string>
+    <string name="faq_state_collapsed">संकुचित</string>
+    <string name="faq_state_expanded">विस्तृत</string>
     <string name="summary_preference_permissions_ad_id">ऐप को उपयोगकर्ता के डिवाइस से जुड़े विज्ञापन पहचानकर्ता को पुनः प्राप्त करने और उपयोग करने की अनुमति देता है, जिससे वैयक्तिकृत विज्ञापन प्रदान किए जा सकें, विज्ञापन प्रभावशीलता को मापा जा सके, और Android 13 या बाद के उपकरणों पर विज्ञापन दिखाए जा सकें।</string>
     <string name="summary_preference_permissions_internet">ऐप को त्रुटि रिपोर्ट भेजने या अपडेट के लिए जांच करने के लिए इंटरनेट कनेक्शन स्थापित करने की अनुमति देता है।</string>
     <string name="summary_preference_permissions_post_notifications">ऐप को Android 13 या बाद के उपकरणों पर सूचनाएं प्रदर्शित करने की अनुमति देता है।</string>
@@ -365,6 +368,7 @@
     <string name="next">अगला</string>
     <string name="back">पीछे</string>
     <string name="bottom_navigation_labels">निचला नेविगेशन लेबल</string>
+    <string name="bottom_navigation_labels_description">नीचे की नेविगेशन पट्टी में लेबल कैसे दिखाई दें, चुनें</string>
     <string name="summary_preference_permissions_access_notification_policy">ऐप को डिवाइस की सूचना नीति तक पहुंचने और उसे संशोधित करने की अनुमति देता है, यह नियंत्रित करता है कि उपयोगकर्ता को सूचनाएं कैसे और कब प्रदर्शित की जाती हैं और कस्टम सूचना प्रबंधन सुविधाएँ प्रदान करता है।</string>
     <string name="summary_preference_permissions_foreground_service">ऐप को ऐसी सेवाएं बनाने और उपयोग करने की अनुमति देता है जो अग्रभूमि में चलती हैं, उन्हें अन्य पृष्ठभूमि प्रक्रियाओं पर प्राथमिकता देती हैं और प्रदर्शन व विश्वसनीयता में सुधार करती हैं।</string>
     <string name="summary_preference_settings_language">एप्लिकेशन भाषा सेट करें।</string>

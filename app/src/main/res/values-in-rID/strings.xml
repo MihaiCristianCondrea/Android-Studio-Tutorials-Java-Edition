@@ -356,6 +356,8 @@
     <string name="summary_preference_faq_7">Anda dapat menonaktifkan analitik Firebase dan Crashlytics dengan membuka menu pengaturan di aplikasi dan mengalihkan sakelar untuk fitur-fitur ini.</string>
     <string name="summary_preference_faq_8">Anda dapat memeriksa pembaruan Android Studio Tutorials: Edisi Java dengan membuka menu pengaturan di aplikasi dan memilih opsi \"Periksa pembaruan\".</string>
     <string name="summary_preference_faq_9">Anda dapat mendukung pengembangan Android Studio Tutorials: Edisi Java dengan meninggalkan ulasan positif di Google Play Store, membagikan aplikasi kepada teman dan kolega, serta mendukung pengembang melalui opsi \"Bagikan\" di menu pengaturan.</string>
+    <string name="faq_state_collapsed">Diciutkan</string>
+    <string name="faq_state_expanded">Diperluas</string>
     <string name="summary_preference_permissions_ad_id">Memungkinkan aplikasi untuk mengambil dan menggunakan pengenal iklan yang terkait dengan perangkat pengguna, menyediakan iklan yang dipersonalisasi, mengukur efektivitas iklan, dan menampilkan iklan di perangkat Android 13 atau yang lebih baru.</string>
     <string name="summary_preference_permissions_internet">Memungkinkan aplikasi untuk membangun koneksi internet untuk mengirim laporan kesalahan atau memeriksa pembaruan.</string>
     <string name="summary_preference_permissions_post_notifications">Memungkinkan aplikasi untuk menampilkan notifikasi pada perangkat dengan Android 13 atau yang lebih baru.</string>

@@ -330,6 +330,8 @@
     <string name="summary_preference_faq_7">Du kan inaktivera Firebase-analys och -crashlytics genom att gå till inställningsmenyn i appen och växla omkopplaren för dessa funktioner.</string>
     <string name="summary_preference_faq_8">Du kan kontrollera efter uppdateringar för Android Studio Tutorials: Java Edition genom att gå till inställningsmenyn i appen och välja alternativet "Sök efter uppdateringar".</string>
     <string name="summary_preference_faq_9">Du kan stödja utvecklingen av Android Studio Tutorials: Java Edition genom att lämna en positiv recension i Google Play Butik, dela appen med vänner och kollegor, och stödja utvecklarna via alternativet "Dela" i inställningsmenyn.</string>
+    <string name="faq_state_collapsed">Ihopfälld</string>
+    <string name="faq_state_expanded">Utfälld</string>
     <string name="summary_preference_permissions_ad_id">Tillåter appen att hämta och använda annonsidentifieraren som är kopplad till användarens enhet, vilket ger personliga annonser, mäter annonseffektivitet och visar annonser på enheter med Android 13 eller senare.</string>
     <string name="summary_preference_permissions_internet">Tillåter appen att upprätta en internetanslutning för att skicka felrapporter eller söka efter uppdateringar.</string>
     <string name="summary_preference_permissions_post_notifications">Tillåter appen att visa notiser på enheter med Android 13 eller senare.</string>

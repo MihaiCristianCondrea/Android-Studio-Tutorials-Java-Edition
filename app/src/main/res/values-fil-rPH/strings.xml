@@ -260,6 +260,7 @@
     <string name="navigation_drawer">Navigation Drawer</string>
     <string name="dashboard">Dashboard</string>
     <string name="code_font">Font ng code</string>
+    <string name="code_font_description">Piliin ang font na gagamitin para sa mga code snippet</string>
     <string name="language">Wika</string>
     <string name="notifications">Mga Notipikasyon</string>
     <string name="notification_settings">Mga setting ng notipikasyon</string>
@@ -329,6 +330,8 @@
     <string name="summary_preference_faq_7">Maaari mong i-disable ang Firebase analytics at crashlytics sa pamamagitan ng pagpunta sa menu ng mga setting sa app at i-toggle ang switch para sa mga feature na ito.</string>
     <string name="summary_preference_faq_8">Maaari mong suriin kung may mga update sa Android Studio Tutorials: Java Edition sa pamamagitan ng pagpunta sa menu ng mga setting sa app at pagpili sa opsyong "Suriin kung may mga update".</string>
     <string name="summary_preference_faq_9">Maaari mong suportahan ang pag-develop ng Android Studio Tutorials: Java Edition sa pamamagitan ng pag-iwan ng positibong review sa Google Play Store, pagbabahagi ng app sa mga kaibigan at kasamahan, at pagsuporta sa mga developer sa pamamagitan ng opsyong "Ibahagi" sa menu ng mga setting.</string>
+    <string name="faq_state_collapsed">Nakatiklop</string>
+    <string name="faq_state_expanded">Pinalawak</string>
     <string name="summary_preference_permissions_ad_id">Pinapayagan ang app na kunin at gamitin ang advertising identifier na nauugnay sa device ng user, na nagbibigay ng mga personalized na ad, sumusukat sa pagiging epektibo ng ad, at nagpapakita ng mga ad sa mga device na may Android 13 o mas bago.</string>
     <string name="summary_preference_permissions_internet">Pinapayagan ang app na magtatag ng koneksyon sa internet para magpadala ng mga ulat ng error o suriin kung may mga update.</string>
     <string name="summary_preference_permissions_post_notifications">Pinapayagan ang app na magpakita ng mga notipikasyon sa mga device na may Android 13 o mas bago.</string>
@@ -338,6 +341,7 @@
     <string name="next">Susunod</string>
     <string name="back">Balik</string>
     <string name="bottom_navigation_labels">Mga label sa nabigasyon sa ibaba</string>
+    <string name="bottom_navigation_labels_description">Pumili kung paano lalabas ang mga label sa ibabang navigation bar</string>
     <string name="summary_preference_permissions_access_notification_policy">Pinapayagan ang app na i-access at baguhin ang patakaran sa notipikasyon ng device, na kinokontrol kung paano at kailan ipinapakita ang mga notipikasyon sa user at nagbibigay ng mga custom na feature sa pamamahala ng notipikasyon.</string>
     <string name="summary_preference_permissions_foreground_service">Pinapayagan ang app na lumikha at gumamit ng mga serbisyo na tumatakbo sa foreground, na nagbibigay sa kanila ng priyoridad sa iba pang mga proseso sa background at nagpapabuti ng performance at reliability.</string>
     <string name="summary_preference_settings_language">Itakda ang wika ng application.</string>

@@ -262,6 +262,7 @@
     <string name="navigation_drawer">ลิ้นชักนำทาง</string>
     <string name="dashboard">แดชบอร์ด</string>
     <string name="code_font">แบบอักษรของโค้ด</string>
+    <string name="code_font_description">เลือกแบบอักษรที่จะใช้สำหรับส่วนโค้ด</string>
     <string name="language">ภาษา</string>
     <string name="notifications">การแจ้งเตือน</string>
     <string name="notification_settings">การตั้งค่าการแจ้งเตือน</string>
@@ -331,6 +332,8 @@
     <string name="summary_preference_faq_7">คุณสามารถปิดการใช้งาน Firebase analytics และ crashlytics ได้โดยไปที่เมนูการตั้งค่าในแอปแล้วสลับสวิตช์สำหรับฟีเจอร์เหล่านี้</string>
     <string name="summary_preference_faq_8">คุณสามารถตรวจสอบการอัปเดตสำหรับ Android Studio Tutorials: Java Edition ได้โดยไปที่เมนูการตั้งค่าในแอปแล้วเลือกตัวเลือก "ตรวจสอบการอัปเดต"</string>
     <string name="summary_preference_faq_9">คุณสามารถสนับสนุนการพัฒนา Android Studio Tutorials: Java Edition ได้โดยการให้คะแนนรีวิวเชิงบวกบน Google Play Store, แชร์แอปกับเพื่อนและเพื่อนร่วมงาน และสนับสนุนนักพัฒนาผ่านตัวเลือก "แชร์" ในเมนูการตั้งค่า</string>
+    <string name="faq_state_collapsed">ย่อ</string>
+    <string name="faq_state_expanded">ขยาย</string>
     <string name="summary_preference_permissions_ad_id">อนุญาตให้แอปรับและใช้ตัวระบุโฆษณาที่เกี่ยวข้องกับอุปกรณ์ของผู้ใช้, เพื่อให้โฆษณาที่ปรับให้เหมาะกับบุคคล, วัดประสิทธิภาพของโฆษณา, และแสดงโฆษณาบนอุปกรณ์ Android 13 หรือใหม่กว่า</string>
     <string name="summary_preference_permissions_internet">อนุญาตให้แอปสร้างการเชื่อมต่ออินเทอร์เน็ตเพื่อส่งรายงานข้อผิดพลาดหรือตรวจสอบการอัปเดต</string>
     <string name="summary_preference_permissions_post_notifications">อนุญาตให้แอปแสดงการแจ้งเตือนบนอุปกรณ์ที่ใช้ Android 13 หรือใหม่กว่า</string>
@@ -340,6 +343,7 @@
     <string name="next">ต่อไป</string>
     <string name="back">กลับ</string>
     <string name="bottom_navigation_labels">ฉลากนำทางด้านล่าง</string>
+    <string name="bottom_navigation_labels_description">เลือกวิธีการแสดงป้ายกำกับในแถบนำทางด้านล่าง</string>
     <string name="summary_preference_permissions_access_notification_policy">อนุญาตให้แอปเข้าถึงและแก้ไขนโยบายการแจ้งเตือนของอุปกรณ์, ควบคุมวิธีการและเวลาที่การแจ้งเตือนจะแสดงต่อผู้ใช้ และให้คุณสมบัติการจัดการการแจ้งเตือนแบบกำหนดเอง</string>
     <string name="summary_preference_permissions_foreground_service">อนุญาตให้แอปสร้างและใช้บริการที่ทำงานในเบื้องหน้า, ทำให้มีความสำคัญเหนือกว่ากระบวนการเบื้องหลังอื่นๆ และปรับปรุงประสิทธิภาพและความน่าเชื่อถือ</string>
     <string name="summary_preference_settings_language">ตั้งค่าภาษาของแอปพลิเคชัน</string>
