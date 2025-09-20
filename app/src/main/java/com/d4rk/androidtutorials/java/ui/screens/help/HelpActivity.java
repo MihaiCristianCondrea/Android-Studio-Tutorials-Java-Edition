@@ -15,6 +15,7 @@ import androidx.preference.PreferenceFragmentCompat;
 
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityHelpBinding;
 import com.d4rk.androidtutorials.java.databinding.DialogVersionInfoBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
@@ -37,6 +38,7 @@ public class HelpActivity extends BaseActivity {
         ActivityHelpBinding binding = ActivityHelpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         EdgeToEdgeDelegate.apply(this, binding.getRoot());
+        AdUtils.loadBanner(binding.faqNativeAd);
         helpViewModel = new ViewModelProvider(this).get(HelpViewModel.class);
 
         getSupportFragmentManager().beginTransaction()
