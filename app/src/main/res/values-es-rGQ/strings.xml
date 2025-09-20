@@ -356,6 +356,8 @@
     <string name="summary_preference_faq_7">Puedes desactivar Firebase analytics y crashlytics yendo al menú de configuración en la aplicación y desactivando el interruptor para estas funciones.</string>
     <string name="summary_preference_faq_8">Puedes comprobar si hay actualizaciones para Android Studio Tutorials: Java Edition yendo al menú de configuración en la aplicación y seleccionando la opción \"Buscar actualizaciones\".</string>
     <string name="summary_preference_faq_9">Puedes apoyar el desarrollo de Android Studio Tutorials: Java Edition dejando una reseña positiva en Google Play Store, compartiendo la aplicación con amigos y colegas, y apoyando a los desarrolladores a través de la opción \"Compartir\" en el menú de configuración.</string>
+    <string name="faq_state_collapsed">Contraído</string>
+    <string name="faq_state_expanded">Expandido</string>
     <string name="summary_preference_permissions_ad_id">Permite a la aplicación recuperar y usar el identificador de publicidad asociado con el dispositivo del usuario, proporcionando anuncios personalizados, midiendo la efectividad de los anuncios y mostrando anuncios en dispositivos con Android 13 o posterior.</string>
     <string name="summary_preference_permissions_internet">Permite a la aplicación establecer una conexión a Internet para enviar informes de errores o buscar actualizaciones.</string>
     <string name="summary_preference_permissions_post_notifications">Permite a la aplicación mostrar notificaciones en los dispositivos con Android 13 o posterior.</string>

@@ -260,6 +260,7 @@
     <string name="navigation_drawer">نیوی گیشن دراز</string>
     <string name="dashboard">ڈیش بورڈ</string>
     <string name="code_font">کوڈ فونٹ</string>
+    <string name="code_font_description">کوڈ کے اقتباسات کے لیے استعمال ہونے والا فونٹ منتخب کریں</string>
     <string name="language">زبان</string>
     <string name="notifications">نوٹیفکیشنز</string>
     <string name="notification_settings">نوٹیفکیشن کی سیٹنگز</string>
@@ -329,6 +330,8 @@
     <string name="summary_preference_faq_7">آپ ایپ میں سیٹنگز مینیو میں جا کر اور ان خصوصیات کے لیے سوئچ کو ٹوگل کرکے Firebase اینالیٹکس اور کریشلیٹکس کو غیر فعال کر سکتے ہیں۔</string>
     <string name="summary_preference_faq_8">آپ ایپ میں سیٹنگز مینیو میں جا کر اور "اپڈیٹس کے لیے چیک کریں" کا آپشن منتخب کر کے اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن کے لیے اپڈیٹس چیک کر سکتے ہیں۔</string>
     <string name="summary_preference_faq_9">آپ گوگل پلے اسٹور پر ایک مثبت جائزہ چھوڑ کر، دوستوں اور ساتھیوں کے ساتھ ایپ شیئر کر کے، اور سیٹنگز مینیو میں "شیئر کریں" آپشن کے ذریعے ڈیولپرز کی مدد کر کے اینڈرائیڈ اسٹوڈیو ٹیوٹوریلز: جاوا ایڈیشن کی ڈیولپمنٹ میں مدد کر سکتے ہیں۔</string>
+    <string name="faq_state_collapsed">سکڑا ہوا</string>
+    <string name="faq_state_expanded">پھیلا ہوا</string>
     <string name="summary_preference_permissions_ad_id">ایپ کو صارف کے ڈیوائس سے وابستہ اشتہاری شناخت کنندہ کو بازیافت کرنے اور استعمال کرنے کی اجازت دیتا ہے، ذاتی نوعیت کے اشتہارات فراہم کرتا ہے، اشتہار کی تاثیر کی پیمائش کرتا ہے، اور اینڈرائیڈ 13 یا بعد کے ڈیوائسز پر اشتہارات دکھاتا ہے۔</string>
     <string name="summary_preference_permissions_internet">ایپ کو غلطی کی رپورٹس بھیجنے یا اپڈیٹس چیک کرنے کے لیے انٹرنیٹ کنکشن قائم کرنے کی اجازت دیتا ہے۔</string>
     <string name="summary_preference_permissions_post_notifications">ایپ کو اینڈرائیڈ 13 یا بعد کے ورژن والے ڈیوائسز پر نوٹیفکیشنز دکھانے کی اجازت دیتا ہے۔</string>
@@ -338,6 +341,7 @@
     <string name="next">اگلا</string>
     <string name="back">واپس</string>
     <string name="bottom_navigation_labels">نیچے نیویگیشن لیبل</string>
+    <string name="bottom_navigation_labels_description">نیچے کی نیویگیشن بار میں لیبل کس طرح نظر آئیں، منتخب کریں</string>
     <string name="summary_preference_permissions_access_notification_policy">ایپ کو ڈیوائس کی نوٹیفکیشن پالیسی تک رسائی اور اس میں ترمیم کرنے کی اجازت دیتا ہے، یہ کنٹرول کرتا ہے کہ نوٹیفکیشنز صارف کو کب اور کیسے دکھائی جاتی ہیں اور حسب ضرورت نوٹیفکیشن مینجمنٹ کی خصوصیات فراہم کرتی ہیں۔</string>
     <string name="summary_preference_permissions_foreground_service">ایپ کو فورگراؤنڈ میں چلنے والی سروسز بنانے اور استعمال کرنے کی اجازت دیتا ہے، جس سے انہیں دیگر پس منظر کے عمل پر ترجیح ملتی ہے اور کارکردگی اور وشوسنییتا میں بہتری آتی ہے۔</string>
     <string name="summary_preference_settings_language">ایپلیکیشن کی زبان سیٹ کریں۔</string>

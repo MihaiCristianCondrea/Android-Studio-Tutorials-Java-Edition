@@ -330,6 +330,8 @@
     <string name="summary_preference_faq_7">Ви можете вимкнути аналітику та звіти про збої Firebase, перейшовши до меню налаштувань у додатку та перемкнувши відповідний перемикач.</string>
     <string name="summary_preference_faq_8">Ви можете перевірити наявність оновлень для Android Studio Tutorials: Java Edition, перейшовши до меню налаштувань у додатку та вибравши опцію "Перевірити наявність оновлень".</string>
     <string name="summary_preference_faq_9">Ви можете підтримати розробку Android Studio Tutorials: Java Edition, залишивши позитивний відгук у Google Play Store, поділившись додатком з друзями та колегами, а також підтримавши розробників через опцію "Поділитися" в меню налаштувань.</string>
+    <string name="faq_state_collapsed">Згорнуто</string>
+    <string name="faq_state_expanded">Розгорнуто</string>
     <string name="summary_preference_permissions_ad_id">Дозволяє додатку отримувати та використовувати рекламний ідентифікатор, пов\'язаний з пристроєм користувача, для надання персоналізованої реклами, вимірювання ефективності реклами та показу реклами на пристроях з Android 13 або новішої версії.</string>
     <string name="summary_preference_permissions_internet">Дозволяє додатку встановлювати інтернет-з\'єднання для надсилання звітів про помилки або перевірки наявності оновлень.</string>
     <string name="summary_preference_permissions_post_notifications">Дозволяє додатку відображати сповіщення на пристроях з Android 13 або новішої версії.</string>

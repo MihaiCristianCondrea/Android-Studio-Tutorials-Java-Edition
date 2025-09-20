@@ -330,6 +330,8 @@
     <string name="summary_preference_faq_7">您可以透過進入應用程式中的設定選單並切換這些功能的開關來停用 Firebase 分析和 Crashlytics。</string>
     <string name="summary_preference_faq_8">您可以透過進入應用程式中的設定選單並選擇「檢查更新」選項來檢查 Android Studio 教學：Java 版的更新。</string>
     <string name="summary_preference_faq_9">您可以透過在 Google Play 商店留下正面評論、與朋友和同事分享應用程式，以及透過設定選單中的「分享」選項支持開發者，來支持 Android Studio 教學：Java 版的開發。</string>
+    <string name="faq_state_collapsed">已摺疊</string>
+    <string name="faq_state_expanded">已展開</string>
     <string name="summary_preference_permissions_ad_id">允許應用程式擷取和使用與使用者裝置相關聯的廣告識別碼，以提供個人化廣告、衡量廣告效果，並在 Android 13 或更新版本的裝置上顯示廣告。</string>
     <string name="summary_preference_permissions_internet">允許應用程式建立網際網路連線以傳送錯誤報告或檢查更新。</string>
     <string name="summary_preference_permissions_post_notifications">允許應用程式在搭載 Android 13 或更新版本的裝置上顯示通知。</string>

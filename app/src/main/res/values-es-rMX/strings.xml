@@ -330,6 +330,8 @@
     <string name="summary_preference_faq_7">Puedes desactivar los análisis y reportes de fallos de Firebase yendo al menú de configuración en la app y desactivando el interruptor para estas funciones.</string>
     <string name="summary_preference_faq_8">Puedes verificar si hay actualizaciones para Android Studio Tutorials: Java Edition yendo al menú de configuración en la app y seleccionando la opción \"Buscar actualizaciones\".</string>
     <string name="summary_preference_faq_9">Puedes apoyar el desarrollo de Android Studio Tutorials: Java Edition dejando una reseña positiva en la Google Play Store, compartiendo la app con amigos y colegas, y apoyando a los desarrolladores a través de la opción \"Compartir\" en el menú de configuración.</string>
+    <string name="faq_state_collapsed">Contraído</string>
+    <string name="faq_state_expanded">Expandido</string>
     <string name="summary_preference_permissions_ad_id">Permite que la app obtenga y use el identificador de publicidad asociado con el dispositivo del usuario, proporcionando anuncios personalizados, midiendo la efectividad de los anuncios y mostrando anuncios en dispositivos con Android 13 o posterior.</string>
     <string name="summary_preference_permissions_internet">Permite que la app establezca una conexión a internet para enviar informes de errores o buscar actualizaciones.</string>
     <string name="summary_preference_permissions_post_notifications">Permite que la app muestre notificaciones en los dispositivos con Android 13 o posterior.</string>

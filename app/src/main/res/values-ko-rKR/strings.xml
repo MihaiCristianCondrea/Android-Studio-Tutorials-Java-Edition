@@ -260,6 +260,7 @@
     <string name="navigation_drawer">내비게이션 드로어</string>
     <string name="dashboard">대시보드</string>
     <string name="code_font">코드 글꼴</string>
+    <string name="code_font_description">코드 스니펫에 사용할 글꼴을 선택하세요</string>
     <string name="language">언어</string>
     <string name="notifications">알림</string>
     <string name="notification_settings">알림 설정</string>
@@ -329,6 +330,8 @@
     <string name="summary_preference_faq_7">앱의 설정 메뉴로 이동하여 이러한 기능에 대한 스위치를 토글하여 Firebase 분석 및 Crashlytics를 비활성화할 수 있습니다.</string>
     <string name="summary_preference_faq_8">앱의 설정 메뉴로 이동하여 "업데이트 확인" 옵션을 선택하여 Android Studio 튜토리얼: Java 에디션의 업데이트를 확인할 수 있습니다.</string>
     <string name="summary_preference_faq_9">Google Play 스토어에 긍정적인 리뷰를 남기거나, 친구 및 동료와 앱을 공유하거나, 설정 메뉴의 "공유" 옵션을 통해 개발자를 지원함으로써 Android Studio 튜토리얼: Java 에디션의 개발을 지원할 수 있습니다.</string>
+    <string name="faq_state_collapsed">접힘</string>
+    <string name="faq_state_expanded">펼쳐짐</string>
     <string name="summary_preference_permissions_ad_id">앱이 사용자의 기기와 관련된 광고 식별자를 검색하고 사용하여 맞춤형 광고를 제공하고, 광고 효과를 측정하고, Android 13 이상 기기에 광고를 표시하도록 허용합니다.</string>
     <string name="summary_preference_permissions_internet">앱이 인터넷 연결을 설정하여 오류 보고서를 보내거나 업데이트를 확인하도록 허용합니다.</string>
     <string name="summary_preference_permissions_post_notifications">앱이 Android 13 이상 기기에 알림을 표시하도록 허용합니다.</string>
@@ -338,6 +341,7 @@
     <string name="next">다음</string>
     <string name="back">뒤쪽에</string>
     <string name="bottom_navigation_labels">하단 탐색 레이블</string>
+    <string name="bottom_navigation_labels_description">하단 탐색 막대에서 라벨이 표시되는 방식을 선택하세요</string>
     <string name="summary_preference_permissions_access_notification_policy">앱이 기기의 알림 정책에 액세스하고 수정하여 사용자에게 알림이 표시되는 방식과 시기를 제어하고 맞춤형 알림 관리 기능을 제공하도록 허용합니다.</string>
     <string name="summary_preference_permissions_foreground_service">앱이 포그라운드에서 실행되는 서비스를 생성하고 사용하여 다른 백그라운드 프로세스보다 우선순위를 부여하고 성능과 안정성을 향상시키도록 허용합니다.</string>
     <string name="summary_preference_settings_language">애플리케이션 언어를 설정합니다.</string>

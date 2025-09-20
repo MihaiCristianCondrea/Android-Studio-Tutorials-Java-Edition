@@ -286,6 +286,7 @@
     <string name="navigation_drawer">নেভিগেশন ড্রয়ার</string>
     <string name="dashboard">ড্যাশবোর্ড</string>
     <string name="code_font">কোড ফন্ট</string>
+    <string name="code_font_description">কোড স্নিপেটের জন্য ব্যবহৃত ফন্টটি বেছে নিন</string>
     <string name="language">ভাষা</string>
     <string name="notifications">বিজ্ঞপ্তি</string>
     <string name="notification_settings">বিজ্ঞপ্তি সেটিংস</string>
@@ -355,6 +356,8 @@
     <string name="summary_preference_faq_7">আপনি অ্যাপের সেটিংস মেনুতে গিয়ে এই বৈশিষ্ট্যগুলির জন্য সুইচ টগল করে ফায়ারবেস অ্যানালিটিক্স এবং ক্র্যাশলিটিক্স নিষ্ক্রিয় করতে পারেন।</string>
     <string name="summary_preference_faq_8">আপনি অ্যাপের সেটিংস মেনুতে গিয়ে "আপডেটগুলির জন্য পরীক্ষা করুন" বিকল্পটি নির্বাচন করে অ্যান্ড্রয়েড স্টুডিও টিউটোরিয়াল: জাভা সংস্করণের জন্য আপডেট পরীক্ষা করতে পারেন।</string>
     <string name="summary_preference_faq_9">আপনি গুগল প্লে স্টোরে একটি ইতিবাচক পর্যালোচনা রেখে, বন্ধুদের এবং সহকর্মীদের সাথে অ্যাপটি শেয়ার করে এবং সেটিংস মেনুতে "শেয়ার করুন" বিকল্পের মাধ্যমে ডেভেলপারদের সমর্থন করে অ্যান্ড্রয়েড স্টুডিও টিউটোরিয়াল: জাভা সংস্করণের উন্নয়নে সহায়তা করতে পারেন।</string>
+    <string name="faq_state_collapsed">সংকুচিত</string>
+    <string name="faq_state_expanded">প্রসারিত</string>
     <string name="summary_preference_permissions_ad_id">অ্যাপটিকে ব্যবহারকারীর ডিভাইসের সাথে যুক্ত বিজ্ঞাপন শনাক্তকারী পুনরুদ্ধার এবং ব্যবহার করার অনুমতি দেয়, ব্যক্তিগতকৃত বিজ্ঞাপন প্রদান, বিজ্ঞাপনের কার্যকারিতা পরিমাপ এবং অ্যান্ড্রয়েড ১৩ বা তার পরের ডিভাইসগুলিতে বিজ্ঞাপন দেখানো।</string>
     <string name="summary_preference_permissions_internet">অ্যাপটিকে ত্রুটির প্রতিবেদন পাঠাতে বা আপডেট পরীক্ষা করার জন্য একটি ইন্টারনেট সংযোগ স্থাপন করার অনুমতি দেয়।</string>
     <string name="summary_preference_permissions_post_notifications">অ্যাপটিকে অ্যান্ড্রয়েড ১৩ বা তার পরের ডিভাইসগুলিতে বিজ্ঞপ্তি প্রদর্শন করার অনুমতি দেয়।</string>
@@ -364,6 +367,7 @@
     <string name="next">পরবর্তী</string>
     <string name="back">পিছনে</string>
     <string name="bottom_navigation_labels">নীচে নেভিগেশন লেবেল</string>
+    <string name="bottom_navigation_labels_description">নিচের নেভিগেশন বারে লেবেলগুলি কীভাবে প্রদর্শিত হবে তা বেছে নিন</string>
     <string name="summary_preference_permissions_access_notification_policy">অ্যাপটিকে ডিভাইসের বিজ্ঞপ্তি নীতি অ্যাক্সেস এবং পরিবর্তন করার অনুমতি দেয়, ব্যবহারকারীকে কখন এবং কীভাবে বিজ্ঞপ্তিগুলি দেখানো হয় তা নিয়ন্ত্রণ করে এবং কাস্টম বিজ্ঞপ্তি পরিচালনার বৈশিষ্ট্যগুলি প্রদান করে।</string>
     <string name="summary_preference_permissions_foreground_service">অ্যাপটিকে ফোরগ্রাউন্ডে চলমান পরিষেবা তৈরি এবং ব্যবহার করার অনুমতি দেয়, অন্যান্য পটভূমি প্রক্রিয়াগুলির উপর তাদের অগ্রাধিকার দেয় এবং কর্মক্ষমতা এবং নির্ভরযোগ্যতা উন্নত করে।</string>
     <string name="summary_preference_settings_language">অ্যাপ্লিকেশন ভাষা সেট করুন।</string>

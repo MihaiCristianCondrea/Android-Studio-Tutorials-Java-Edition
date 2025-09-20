@@ -364,6 +364,8 @@
     <string name="summary_preference_faq_7">Puteți dezactiva analitica Firebase și Crashlytics accesând meniul de setări din aplicație și comutând întrerupătorul pentru aceste funcții.</string>
     <string name="summary_preference_faq_8">Puteți verifica dacă există actualizări pentru Android Studio Tutorials: Java Edition accesând meniul de setări din aplicație și selectând opțiunea "Verifică actualizări".</string>
     <string name="summary_preference_faq_9">Puteți sprijini dezvoltarea Android Studio Tutorials: Java Edition lăsând o recenzie pozitivă în Magazinul Google Play, partajând aplicația cu prietenii și colegii și sprijinind dezvoltatorii prin opțiunea "Partajează" din meniul de setări.</string>
+    <string name="faq_state_collapsed">Restrâns</string>
+    <string name="faq_state_expanded">Extins</string>
     <string name="summary_preference_permissions_ad_id">Permite aplicației să recupereze și să utilizeze identificatorul de publicitate asociat cu dispozitivul utilizatorului, furnizând anunțuri personalizate, măsurând eficacitatea anunțurilor și afișând anunțuri pe dispozitivele cu Android 13 sau o versiune ulterioară.</string>
     <string name="summary_preference_permissions_internet">Permite aplicației să stabilească o conexiune la internet pentru a trimite rapoarte de erori sau a verifica actualizări.</string>
     <string name="summary_preference_permissions_post_notifications">Permite aplicației să afișeze notificări pe dispozitivele cu Android 13 sau o versiune ulterioară.</string>

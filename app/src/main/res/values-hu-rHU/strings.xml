@@ -377,6 +377,8 @@
     <string name="summary_preference_faq_7">A Firebase Analytics és Crashlytics letiltásához menj az alkalmazás beállításai menübe, és kapcsold ki ezeket a funkciókat.</string>
     <string name="summary_preference_faq_8">Az Android Studio Tutorials: Java Edition frissítéseit az alkalmazás beállításai menüben a \"Frissítések keresése\" opció kiválasztásával ellenőrizheted.</string>
     <string name="summary_preference_faq_9">Támogathatod az Android Studio Tutorials: Java Edition fejlesztését, ha pozitív értékelést hagysz a Google Play Áruházban, megosztod az alkalmazást barátaiddal és kollégáiddal, valamint a beállítások menü \"Megosztás\" opcióján keresztül segíted a fejlesztőket.</string>
+    <string name="faq_state_collapsed">Összecsukva</string>
+    <string name="faq_state_expanded">Kibontva</string>
     <string name="summary_preference_permissions_ad_id">Lehetővé teszi az alkalmazás számára, hogy lekérje és használja a felhasználó eszközéhez társított hirdetésazonosítót, személyre szabott hirdetéseket biztosítva, mérve a hirdetések hatékonyságát, és hirdetéseket jelenítve meg Android 13 vagy újabb eszközökön.</string>
     <string name="summary_preference_permissions_internet">Lehetővé teszi az alkalmazás számára, hogy internetkapcsolatot létesítsen hiba-jelentések küldéséhez vagy frissítések kereséséhez.</string>
     <string name="summary_preference_permissions_post_notifications">Lehetővé teszi az alkalmazás számára, hogy értesítéseket jelenítsen meg Android 13 vagy újabb rendszert futtató eszközökön.</string>

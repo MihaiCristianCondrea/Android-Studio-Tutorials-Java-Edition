@@ -260,6 +260,7 @@
     <string name="navigation_drawer">Ngăn điều hướng</string>
     <string name="dashboard">Bảng điều khiển</string>
     <string name="code_font">Phông chữ mã</string>
+    <string name="code_font_description">Chọn phông chữ dùng cho đoạn mã</string>
     <string name="language">Ngôn ngữ</string>
     <string name="notifications">Thông báo</string>
     <string name="notification_settings">Cài đặt thông báo</string>
@@ -329,6 +330,8 @@
     <string name="summary_preference_faq_7">Bạn có thể tắt Firebase analytics và crashlytics bằng cách vào menu cài đặt trong ứng dụng và chuyển đổi công tắc cho các tính năng này.</string>
     <string name="summary_preference_faq_8">Bạn có thể kiểm tra các bản cập nhật cho Hướng dẫn Android Studio: Phiên bản Java bằng cách vào menu cài đặt trong ứng dụng và chọn tùy chọn "Kiểm tra các bản cập nhật".</string>
     <string name="summary_preference_faq_9">Bạn có thể hỗ trợ sự phát triển của Hướng dẫn Android Studio: Phiên bản Java bằng cách để lại một bài đánh giá tích cực trên Cửa hàng Google Play, chia sẻ ứng dụng với bạn bè và đồng nghiệp, và hỗ trợ các nhà phát triển thông qua tùy chọn "Chia sẻ" trong menu cài đặt.</string>
+    <string name="faq_state_collapsed">Thu gọn</string>
+    <string name="faq_state_expanded">Mở rộng</string>
     <string name="summary_preference_permissions_ad_id">Cho phép ứng dụng truy xuất và sử dụng mã nhận dạng quảng cáo được liên kết với thiết bị của người dùng, cung cấp quảng cáo được cá nhân hóa, đo lường hiệu quả quảng cáo và hiển thị quảng cáo trên các thiết bị Android 13 trở lên.</string>
     <string name="summary_preference_permissions_internet">Cho phép ứng dụng thiết lập kết nối internet để gửi báo cáo lỗi hoặc kiểm tra các bản cập nhật.</string>
     <string name="summary_preference_permissions_post_notifications">Cho phép ứng dụng hiển thị thông báo trên các thiết bị có Android 13 trở lên.</string>
@@ -338,6 +341,7 @@
     <string name="next">Kế tiếp</string>
     <string name="back">Mặt sau</string>
     <string name="bottom_navigation_labels">Nhãn điều hướng dưới cùng</string>
+    <string name="bottom_navigation_labels_description">Chọn cách các nhãn hiển thị trong thanh điều hướng dưới cùng</string>
     <string name="summary_preference_permissions_access_notification_policy">Cho phép ứng dụng truy cập và sửa đổi chính sách thông báo của thiết bị, kiểm soát cách thức và thời điểm hiển thị thông báo cho người dùng và cung cấp các tính năng quản lý thông báo tùy chỉnh.</string>
     <string name="summary_preference_permissions_foreground_service">Cho phép ứng dụng tạo và sử dụng các dịch vụ chạy ở nền trước, ưu tiên chúng hơn các quy trình nền khác và cải thiện hiệu suất và độ tin cậy.</string>
     <string name="summary_preference_settings_language">Đặt ngôn ngữ ứng dụng.</string>

@@ -377,6 +377,8 @@
     <string name="summary_preference_faq_7">アプリの設定メニューに移動し、これらの機能のスイッチを切り替えることで Firebase Analytics と Crashlytics を無効にできます。</string>
     <string name="summary_preference_faq_8">アプリの設定メニューに移動し、\"アップデートを確認\"オプションを選択することで Android Studio Tutorials: Java Edition の更新を確認できます。</string>
     <string name="summary_preference_faq_9">Google Play ストアで好意的なレビューを残し、友人や同僚とアプリを共有し、設定メニューの\"共有\"オプションを通じて開発者を支援することで、Android Studio Tutorials: Java Edition の開発をサポートできます。</string>
+    <string name="faq_state_collapsed">折りたたみ済み</string>
+    <string name="faq_state_expanded">展開済み</string>
     <string name="summary_preference_permissions_ad_id">アプリがユーザーのデバイスに関連付けられた広告識別子を取得・使用し、パーソナライズされた広告を提供し、広告効果を測定し、Android 13 以降のデバイスで広告を表示できるようにします。</string>
     <string name="summary_preference_permissions_internet">アプリがインターネット接続を確立してエラーレポートを送信したり、更新を確認したりできるようにします。</string>
     <string name="summary_preference_permissions_post_notifications">Android 13 以降のデバイスでアプリが通知を表示できるようにします。</string>
