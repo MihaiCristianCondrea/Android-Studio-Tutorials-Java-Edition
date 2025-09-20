@@ -6,11 +6,9 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/ad_card"
-        style="@style/Widget.Material3.CardView.Elevated"
+        style="@style/Widget.Material3.CardView.Filled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="false"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewBottomRounded">
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -32,8 +30,7 @@
                     android:layout_width="96dp"
                     android:layout_height="96dp"
                     app:cardCornerRadius="16dp"
-                    app:cardPreventCornerOverlap="true"
-                    app:cardUseCompatPadding="false"
+                    style="@style/Widget.Material3.CardView.Elevated"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 

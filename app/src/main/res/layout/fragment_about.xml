@@ -14,7 +14,7 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_view_about"
-            style="@style/Widget.Material3.CardView.Elevated"
+            style="@style/Widget.Material3.CardView.Filled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:contentPadding="16dp"
