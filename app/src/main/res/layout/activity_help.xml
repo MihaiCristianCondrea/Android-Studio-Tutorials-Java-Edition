@@ -1,55 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<me.zhanghai.android.fastscroll.FastScrollScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/scroll_container"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/container"
+    <me.zhanghai.android.fastscroll.FastScrollScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/text_view_faq"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/faq"
-            android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_view_faq"
-            style="@style/Widget.Material3.CardView.Filled"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/content_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:shapeAppearance="@style/ShapeAppearanceOverlay.CardViewTopRoundedFilled">
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="32dp">
 
-            <LinearLayout
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_faq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/faq"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view_faq"
+                style="@style/Widget.Material3.CardView.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="12dp">
-                <FrameLayout
-                    android:id="@+id/frame_layout_faq"
+                android:layout_marginBottom="2dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRoundedFilled">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/faq_list"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </com.google.android.material.card.MaterialCardView>
 
-        <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
-            android:id="@+id/faq_native_ad"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            app:nativeAdLayout="@layout/ad_help" />
+            <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
+                android:id="@+id/faq_native_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:nativeAdLayout="@layout/ad_help" />
 
-        <FrameLayout
-            android:id="@+id/frame_layout_feedback"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <FrameLayout
+                android:id="@+id/frame_layout_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    </LinearLayout>
-</me.zhanghai.android.fastscroll.FastScrollScrollView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </me.zhanghai.android.fastscroll.FastScrollScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

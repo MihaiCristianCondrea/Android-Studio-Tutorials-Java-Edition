@@ -4,23 +4,32 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.core.view.ViewCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityHelpBinding;
 import com.d4rk.androidtutorials.java.databinding.DialogVersionInfoBinding;
+import com.d4rk.androidtutorials.java.databinding.ItemHelpFaqBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.review.ReviewInfo;
@@ -28,25 +37,36 @@ import com.google.android.play.core.review.ReviewInfo;
 import dagger.hilt.android.AndroidEntryPoint;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
+import java.util.Arrays;
+import java.util.List;
+
 @AndroidEntryPoint
 public class HelpActivity extends BaseActivity {
 
     private HelpViewModel helpViewModel;
+    private static final List<FaqItem> FAQ_ITEMS = Arrays.asList(
+            new FaqItem(R.string.question_1, R.string.summary_preference_faq_1),
+            new FaqItem(R.string.question_2, R.string.summary_preference_faq_2),
+            new FaqItem(R.string.question_3, R.string.summary_preference_faq_3),
+            new FaqItem(R.string.question_4, R.string.summary_preference_faq_4),
+            new FaqItem(R.string.question_5, R.string.summary_preference_faq_5),
+            new FaqItem(R.string.question_6, R.string.summary_preference_faq_6),
+            new FaqItem(R.string.question_7, R.string.summary_preference_faq_7),
+            new FaqItem(R.string.question_8, R.string.summary_preference_faq_8),
+            new FaqItem(R.string.question_9, R.string.summary_preference_faq_9)
+    );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityHelpBinding binding = ActivityHelpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        EdgeToEdgeDelegate.apply(this, binding.getRoot());
         AdUtils.loadBanner(binding.faqNativeAd);
         helpViewModel = new ViewModelProvider(this).get(HelpViewModel.class);
-        new FastScrollerBuilder(binding.scrollContainer)
+        new FastScrollerBuilder(binding.scrollView)
                 .useMd2Style()
                 .build();
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.frame_layout_faq, new FaqFragment())
-                .commit();
+        bindFaqItems(binding);
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frame_layout_feedback, new FeedbackFragment())
@@ -121,13 +141,6 @@ public class HelpActivity extends BaseActivity {
         startActivity(browserIntent);
     }
 
-    public static class FaqFragment extends PreferenceFragmentCompat {
-        @Override
-        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            setPreferencesFromResource(R.xml.preferences_faq, rootKey);
-        }
-    }
-
     public static class FeedbackFragment extends PreferenceFragmentCompat {
 
         @Override
@@ -157,6 +170,29 @@ public class HelpActivity extends BaseActivity {
             }
         }
 
+        @Override
+        public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+            RecyclerView listView = getListView();
+            listView.setNestedScrollingEnabled(false);
+            listView.setOverScrollMode(View.OVER_SCROLL_NEVER);
+            listView.setClipToPadding(false);
+
+            ViewGroup.LayoutParams layoutParams = listView.getLayoutParams();
+            FrameLayout.LayoutParams frameLayoutParams;
+            if (layoutParams instanceof FrameLayout.LayoutParams) {
+                frameLayoutParams = (FrameLayout.LayoutParams) layoutParams;
+            } else {
+                frameLayoutParams = new FrameLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                );
+            }
+            frameLayoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+            frameLayoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+            listView.setLayoutParams(frameLayoutParams);
+        }
+
         private void launchGooglePlayReviews() {
             Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=" + requireActivity().getPackageName() + "&showAllReviews=true");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -169,6 +205,60 @@ public class HelpActivity extends BaseActivity {
                                 Snackbar.LENGTH_SHORT)
                         .show();
             }
+        }
+    }
+
+    private void bindFaqItems(ActivityHelpBinding binding) {
+        LinearLayoutCompat faqList = binding.faqList;
+        faqList.removeAllViews();
+        LayoutInflater inflater = LayoutInflater.from(this);
+
+        for (int i = 0; i < FAQ_ITEMS.size(); i++) {
+            FaqItem item = FAQ_ITEMS.get(i);
+            ItemHelpFaqBinding itemBinding = ItemHelpFaqBinding.inflate(inflater, faqList, false);
+            itemBinding.question.setText(item.questionResId);
+            itemBinding.answer.setText(item.answerResId);
+            itemBinding.answer.setVisibility(View.GONE);
+            itemBinding.toggleIcon.setRotation(0f);
+            CharSequence questionText = itemBinding.question.getText();
+            itemBinding.getRoot().setContentDescription(questionText);
+            itemBinding.questionContainer.setContentDescription(questionText);
+            ViewCompat.setStateDescription(itemBinding.getRoot(), getString(R.string.faq_state_collapsed));
+            ViewCompat.setStateDescription(itemBinding.questionContainer, getString(R.string.faq_state_collapsed));
+
+            View.OnClickListener toggleListener = v -> toggleFaqItem(itemBinding);
+            itemBinding.getRoot().setOnClickListener(toggleListener);
+            itemBinding.questionContainer.setOnClickListener(toggleListener);
+            itemBinding.toggleIcon.setOnClickListener(toggleListener);
+            itemBinding.divider.setVisibility(i == FAQ_ITEMS.size() - 1 ? View.GONE : View.VISIBLE);
+            faqList.addView(itemBinding.getRoot());
+        }
+    }
+
+    private void toggleFaqItem(ItemHelpFaqBinding binding) {
+        boolean expand = binding.answer.getVisibility() != View.VISIBLE;
+        binding.answer.setVisibility(expand ? View.VISIBLE : View.GONE);
+        float rotation = expand ? 180f : 0f;
+        binding.toggleIcon.animate().cancel();
+        binding.toggleIcon.animate()
+                .rotation(rotation)
+                .setDuration(200L)
+                .start();
+        int stateRes = expand ? R.string.faq_state_expanded : R.string.faq_state_collapsed;
+        CharSequence stateDescription = getString(stateRes);
+        ViewCompat.setStateDescription(binding.getRoot(), stateDescription);
+        ViewCompat.setStateDescription(binding.questionContainer, stateDescription);
+    }
+
+    private static final class FaqItem {
+        @StringRes
+        private final int questionResId;
+        @StringRes
+        private final int answerResId;
+
+        private FaqItem(@StringRes int questionResId, @StringRes int answerResId) {
+            this.questionResId = questionResId;
+            this.answerResId = answerResId;
         }
     }
 }
