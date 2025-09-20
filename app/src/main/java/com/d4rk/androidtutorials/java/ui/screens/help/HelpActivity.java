@@ -6,12 +6,17 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
@@ -38,7 +43,9 @@ public class HelpActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         ActivityHelpBinding binding = ActivityHelpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        EdgeToEdgeDelegate.apply(this, binding.getRoot());
+        setSupportActionBar(binding.topAppBar);
+        binding.topAppBar.setNavigationOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
+        EdgeToEdgeDelegate.apply(this, binding.helpContainer);
         AdUtils.loadBanner(binding.faqNativeAd);
         helpViewModel = new ViewModelProvider(this).get(HelpViewModel.class);
         new FastScrollerBuilder(binding.scrollContainer)
@@ -125,6 +132,29 @@ public class HelpActivity extends BaseActivity {
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             setPreferencesFromResource(R.xml.preferences_faq, rootKey);
+        }
+
+        @Override
+        public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+            RecyclerView listView = getListView();
+            listView.setNestedScrollingEnabled(false);
+            listView.setOverScrollMode(View.OVER_SCROLL_NEVER);
+            listView.setClipToPadding(false);
+
+            ViewGroup.LayoutParams layoutParams = listView.getLayoutParams();
+            FrameLayout.LayoutParams frameLayoutParams;
+            if (layoutParams instanceof FrameLayout.LayoutParams) {
+                frameLayoutParams = (FrameLayout.LayoutParams) layoutParams;
+            } else {
+                frameLayoutParams = new FrameLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                );
+            }
+            frameLayoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+            frameLayoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+            listView.setLayoutParams(frameLayoutParams);
         }
     }
 
