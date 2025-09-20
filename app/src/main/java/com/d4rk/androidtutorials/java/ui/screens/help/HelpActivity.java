@@ -26,6 +26,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.review.ReviewInfo;
 
 import dagger.hilt.android.AndroidEntryPoint;
+import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 @AndroidEntryPoint
 public class HelpActivity extends BaseActivity {
@@ -40,7 +41,9 @@ public class HelpActivity extends BaseActivity {
         EdgeToEdgeDelegate.apply(this, binding.getRoot());
         AdUtils.loadBanner(binding.faqNativeAd);
         helpViewModel = new ViewModelProvider(this).get(HelpViewModel.class);
-
+        new FastScrollerBuilder(binding.scrollContainer)
+                .useMd2Style()
+                .build();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frame_layout_faq, new FaqFragment())
                 .commit();

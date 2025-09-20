@@ -38,7 +38,7 @@
                     android:id="@+id/card_audiowide"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRounded">
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRoundedOutlined">
 
                     <include
                         android:id="@+id/option_audiowide"
@@ -116,7 +116,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewBottomRounded">
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewBottomRoundedOutlined">
 
                     <include
                         android:id="@+id/option_google_sans_code"

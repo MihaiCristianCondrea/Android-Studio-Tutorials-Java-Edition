@@ -13,7 +13,7 @@
         app:layout_constraintBottom_toTopOf="@id/ad_view"
         app:layout_constraintTop_toTopOf="parent"
         app:contentPadding="24dp"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRounded">
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRoundedOutlined">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_view_no_code_message"

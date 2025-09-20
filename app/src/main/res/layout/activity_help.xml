@@ -1,59 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<me.zhanghai.android.fastscroll.FastScrollScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
+    android:id="@+id/scroll_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingHorizontal="24dp"
-    android:paddingVertical="24dp">
+    android:layout_height="match_parent">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/text_view_faq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="@string/faq"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_view_faq"
-        style="@style/Widget.Material3.CardView.Filled"
+    <LinearLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@id/frame_layout_feedback"
-        app:layout_constraintTop_toBottomOf="@id/text_view_faq">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_faq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/faq"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_faq"
+            style="@style/Widget.Material3.CardView.Filled"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp">
+            android:layout_height="wrap_content"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.CardViewTopRoundedFilled">
 
-            <FrameLayout
-                android:id="@+id/frame_layout_faq"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@id/faq_native_ad"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
-                android:id="@+id/faq_native_ad"
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:nativeAdLayout="@layout/ad_help" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+                android:orientation="vertical"
+                android:padding="12dp">
+                <FrameLayout
+                    android:id="@+id/frame_layout_faq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-    <FrameLayout
-        android:id="@+id/frame_layout_feedback"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
+            android:id="@+id/faq_native_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:nativeAdLayout="@layout/ad_help" />
+
+        <FrameLayout
+            android:id="@+id/frame_layout_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</me.zhanghai.android.fastscroll.FastScrollScrollView>

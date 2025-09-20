@@ -12,7 +12,7 @@
         android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toTopOf="@id/ad_view"
         app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRounded">
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRoundedOutlined">
 
         <me.zhanghai.android.fastscroll.FastScrollScrollView
             android:id="@+id/scroll_view"

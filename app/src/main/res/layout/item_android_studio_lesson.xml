@@ -17,13 +17,13 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/lesson_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_marginEnd="16dp"
             android:background="?attr/colorPrimaryContainer"
             android:contentDescription="@null"
             android:scaleType="centerCrop"
-            app:contentPadding="4dp"
+            app:contentPadding="6dp"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -47,18 +47,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/lesson_external_icon"
-            style="@style/Widget.Material3.Button.IconButton"
+            style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:contentDescription="@string/lesson_open_in_browser"
             android:tooltipText="@string/lesson_open_in_browser"
             android:visibility="gone"
-            android:text="@null"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            app:icon="@drawable/ic_open_in_new"
-            app:iconPadding="0dp"
-            app:iconSize="24dp" />
+            app:icon="@drawable/ic_open_in_new" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </com.google.android.material.card.MaterialCardView>
