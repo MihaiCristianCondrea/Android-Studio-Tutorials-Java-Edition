@@ -47,7 +47,9 @@ import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.d4rk.androidtutorials.java.utils.ReviewHelper;
+import com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
 import com.google.android.play.core.appupdate.AppUpdateManager;
@@ -75,18 +77,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onResume(@NonNull LifecycleOwner owner) {
             ConsentUtils.applyStoredConsent(MainActivity.this);
-            ActivityMainBinding binding = mBinding;
-            if (binding != null) {
-                View adView = binding.adView;
-                if (adView != null) {
-                    View adPlaceholder = binding.adPlaceholder;
-                    if (adPlaceholder != null) {
-                        adPlaceholder.setVisibility(View.GONE);
-                    }
-                    adView.setVisibility(View.VISIBLE);
-                    AdUtils.loadBanner(adView);
-                }
-            }
+            updateBottomBannerVisibility(!shouldUseNavigationRail());
         }
     };
     private MainViewModel mainViewModel;
@@ -97,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
     private AppUpdateManager appUpdateManager;
     private InstallStateUpdatedListener installStateUpdatedListener;
     private long backPressedTime;
+    private boolean bottomBannerLoading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -217,24 +209,17 @@ public class MainActivity extends AppCompatActivity {
                     navRail.setVisibility(View.VISIBLE);
                 }
                 navBarView.setVisibility(View.GONE);
+                updateBottomBannerVisibility(false);
                 WindowCompat.enableEdgeToEdge(this.getWindow());
             } else {
                 if (navRail != null) {
                     navRail.setVisibility(View.GONE);
                 }
                 navBarView.setVisibility(View.VISIBLE);
+                updateBottomBannerVisibility(true);
                 EdgeToEdgeDelegate.applyBottomBar(this, binding.container, navBarView);
 
                 navBarView.setLabelVisibilityMode(uiState.bottomNavVisibility());
-                View adView = binding.adView;
-                if (adView != null) {
-                    View adPlaceholder = binding.adPlaceholder;
-                    if (adPlaceholder != null) {
-                        adPlaceholder.setVisibility(View.GONE);
-                    }
-                    adView.setVisibility(View.VISIBLE);
-                    AdUtils.loadBanner(adView);
-                }
             }
 
             NavHostFragment navHostFragment = (NavHostFragment)
@@ -326,10 +311,65 @@ public class MainActivity extends AppCompatActivity {
         mainViewModel.getLoadingState().observe(this, isLoading -> {
             ActivityMainBinding binding = mBinding;
             if (binding != null) {
-                assert binding.progressBar != null;
-                binding.progressBar.setVisibility(Boolean.TRUE.equals(isLoading) ? View.VISIBLE : View.GONE);
+                CircularProgressIndicator progressIndicator = binding.progressBar;
+                if (progressIndicator != null) {
+                    if (Boolean.TRUE.equals(isLoading)) {
+                        progressIndicator.show();
+                    } else {
+                        progressIndicator.hide();
+                    }
+                }
             }
         });
+    }
+
+    private void updateBottomBannerVisibility(boolean showBanner) {
+        ActivityMainBinding binding = mBinding;
+        if (binding == null) {
+            return;
+        }
+        View adContainer = binding.adContainer;
+        if (adContainer != null) {
+            adContainer.setVisibility(showBanner ? View.VISIBLE : View.GONE);
+        }
+        NativeAdBannerView adView = binding.adView;
+        View adPlaceholder = binding.adPlaceholder;
+        if (adView == null) {
+            if (adPlaceholder != null) {
+                adPlaceholder.setVisibility(View.GONE);
+            }
+            return;
+        }
+        if (!showBanner) {
+            if (adPlaceholder != null) {
+                adPlaceholder.setVisibility(View.GONE);
+            }
+            adView.setVisibility(View.GONE);
+            adView.removeAllViews();
+            bottomBannerLoading = false;
+            return;
+        }
+
+        if (adPlaceholder != null) {
+            adPlaceholder.setVisibility(View.VISIBLE);
+        }
+        if (adView.getVisibility() != View.VISIBLE || adView.getChildCount() > 0) {
+            bottomBannerLoading = false;
+        }
+
+        adView.setVisibility(View.VISIBLE);
+        if (adView.getChildCount() > 0) {
+            if (adPlaceholder != null) {
+                adPlaceholder.setVisibility(View.GONE);
+            }
+            bottomBannerLoading = false;
+            return;
+        }
+
+        if (!bottomBannerLoading) {
+            bottomBannerLoading = true;
+            AdUtils.loadBanner(adView);
+        }
     }
 
 
