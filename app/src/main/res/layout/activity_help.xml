@@ -25,10 +25,30 @@
         app:layout_constraintBottom_toTopOf="@id/frame_layout_feedback"
         app:layout_constraintTop_toBottomOf="@id/text_view_faq">
 
-        <FrameLayout
-            android:id="@+id/frame_layout_faq"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:id="@+id/frame_layout_faq"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/faq_native_ad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
+                android:id="@+id/faq_native_ad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:nativeAdLayout="@layout/ad_help" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <FrameLayout
