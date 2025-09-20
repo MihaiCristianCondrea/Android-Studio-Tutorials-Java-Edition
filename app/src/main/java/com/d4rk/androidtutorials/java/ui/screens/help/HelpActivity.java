@@ -220,9 +220,16 @@ public class HelpActivity extends BaseActivity {
             itemBinding.answer.setText(item.answerResId);
             itemBinding.answer.setVisibility(View.GONE);
             itemBinding.toggleIcon.setRotation(0f);
-            itemBinding.questionContainer.setContentDescription(itemBinding.question.getText());
+            CharSequence questionText = itemBinding.question.getText();
+            itemBinding.getRoot().setContentDescription(questionText);
+            itemBinding.questionContainer.setContentDescription(questionText);
+            ViewCompat.setStateDescription(itemBinding.getRoot(), getString(R.string.faq_state_collapsed));
             ViewCompat.setStateDescription(itemBinding.questionContainer, getString(R.string.faq_state_collapsed));
-            itemBinding.questionContainer.setOnClickListener(v -> toggleFaqItem(itemBinding));
+
+            View.OnClickListener toggleListener = v -> toggleFaqItem(itemBinding);
+            itemBinding.getRoot().setOnClickListener(toggleListener);
+            itemBinding.questionContainer.setOnClickListener(toggleListener);
+            itemBinding.toggleIcon.setOnClickListener(toggleListener);
             itemBinding.divider.setVisibility(i == FAQ_ITEMS.size() - 1 ? View.GONE : View.VISIBLE);
             faqList.addView(itemBinding.getRoot());
         }
@@ -237,8 +244,10 @@ public class HelpActivity extends BaseActivity {
                 .rotation(rotation)
                 .setDuration(200L)
                 .start();
-        ViewCompat.setStateDescription(binding.questionContainer,
-                getString(expand ? R.string.faq_state_expanded : R.string.faq_state_collapsed));
+        int stateRes = expand ? R.string.faq_state_expanded : R.string.faq_state_collapsed;
+        CharSequence stateDescription = getString(stateRes);
+        ViewCompat.setStateDescription(binding.getRoot(), stateDescription);
+        ViewCompat.setStateDescription(binding.questionContainer, stateDescription);
     }
 
     private static final class FaqItem {

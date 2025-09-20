@@ -37,15 +37,14 @@
                 style="@style/Widget.Material3.CardView.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                app:shapeAppearance="@style/ShapeAppearanceOverlay.CardViewTopRoundedFilled">
+                android:layout_marginBottom="2dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRoundedFilled">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/faq_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp" />
+                    android:orientation="vertical" />
             </com.google.android.material.card.MaterialCardView>
 
             <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
