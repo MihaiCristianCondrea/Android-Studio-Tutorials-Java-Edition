@@ -4,9 +4,9 @@
 The Help screen provides users with access to frequently asked questions (FAQs), options to submit feedback, and links to important information like the app's privacy policy, terms of service, and open-source licenses.
 
 ## Structure
-The Help screen is implemented as an `Activity` that hosts different sections using `PreferenceFragmentCompat`:
--   **`HelpActivity`**: The main activity for this screen. It manages the layout and hosts the fragments.
--   **`FaqFragment`**: Displays a list of frequently asked questions, loaded from `R.xml.preferences_faq`.
+The Help screen is implemented as an `Activity` that composes different sections:
+-   **`HelpActivity`**: The main activity for this screen. It manages the layout, renders the FAQ list, and hosts the feedback fragment.
+-   **FAQ list**: Built dynamically inside the activity by inflating a shared item layout for each question/answer pair.
 -   **`FeedbackFragment`**: Contains preferences related to user feedback, including an option to rate the app. This is loaded from `R.xml.preferences_feedback`.
 
 ## Features
