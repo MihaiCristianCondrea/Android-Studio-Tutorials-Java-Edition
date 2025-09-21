@@ -337,6 +337,10 @@
     <string name="help">ヘルプ</string>
     <string name="faq">よくある質問</string>
     <string name="send_feedback">フィードバックを送信</string>
+    <string name="contact_support_title">サポートに連絡</string>
+    <string name="contact_support_description">目標達成に向けたサポートを得るために詳細を共有してください</string>
+    <string name="contact_support_email_subject">%1$s のサポート依頼</string>
+    <string name="contact_support_email_body">サポートチームの皆さま、\n\n目標と発生している問題についてご記入ください。サポートいたします。</string>
     <string name="license">ライセンス</string>
     <string name="share">共有</string>
     <string name="share_subject">今すぐ試す</string>

@@ -290,6 +290,10 @@
     <string name="help">مدد</string>
     <string name="faq">اکثر پوچھے گئے سوالات</string>
     <string name="send_feedback">رائے بھیجیں</string>
+    <string name="contact_support_title">سپورٹ سے رابطہ کریں</string>
+    <string name="contact_support_description">اپنے مقصد کے حصول میں مدد کے لیے تفصیلات شیئر کریں</string>
+    <string name="contact_support_email_subject">%1$s کے لیے سپورٹ کی درخواست</string>
+    <string name="contact_support_email_body">ہیلو ٹیم،\n\nبراہ کرم اپنا مقصد اور درپیش مسائل کی وضاحت کریں تاکہ ہم مدد کر سکیں۔</string>
     <string name="license">لائسنس</string>
     <string name="share">شیئر کریں</string>
     <string name="share_subject">اسے ابھی آزمائیں.</string>

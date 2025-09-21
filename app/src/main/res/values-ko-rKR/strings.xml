@@ -290,6 +290,10 @@
     <string name="help">도움말</string>
     <string name="faq">자주 묻는 질문</string>
     <string name="send_feedback">의견 보내기</string>
+    <string name="contact_support_title">지원팀에 문의</string>
+    <string name="contact_support_description">목표 달성을 돕기 위해 필요한 세부 정보를 공유하세요</string>
+    <string name="contact_support_email_subject">%1$s 지원 요청</string>
+    <string name="contact_support_email_body">안녕하세요, 팀 여러분,\n\n도와드릴 수 있도록 목표와 겪고 있는 문제를 알려 주세요.</string>
     <string name="license">라이선스</string>
     <string name="share">공유</string>
     <string name="share_subject">지금 사용해보세요.</string>

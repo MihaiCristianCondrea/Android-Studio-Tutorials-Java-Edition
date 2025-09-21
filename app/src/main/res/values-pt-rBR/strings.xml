@@ -290,6 +290,10 @@
     <string name="help">Ajuda</string>
     <string name="faq">Perguntas Frequentes</string>
     <string name="send_feedback">Enviar feedback</string>
+    <string name="contact_support_title">Entrar em contato com o suporte</string>
+    <string name="contact_support_description">Compartilhe detalhes para receber ajuda e alcançar seu objetivo</string>
+    <string name="contact_support_email_subject">Solicitação de suporte para %1$s</string>
+    <string name="contact_support_email_body">Olá, equipe,\n\nDescreva seu objetivo e quaisquer problemas que esteja enfrentando para que possamos ajudar.</string>
     <string name="license">Licença</string>
     <string name="share">Compartilhar</string>
     <string name="share_subject">Experimente agora.</string>

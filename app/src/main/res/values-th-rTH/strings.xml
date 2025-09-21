@@ -292,6 +292,10 @@
     <string name="help">ความช่วยเหลือ</string>
     <string name="faq">คำถามที่พบบ่อย</string>
     <string name="send_feedback">ส่งข้อเสนอแนะ</string>
+    <string name="contact_support_title">ติดต่อฝ่ายสนับสนุน</string>
+    <string name="contact_support_description">แบ่งปันรายละเอียดเพื่อรับความช่วยเหลือในการบรรลุเป้าหมายของคุณ</string>
+    <string name="contact_support_email_subject">คำขอรับการสนับสนุนสำหรับ %1$s</string>
+    <string name="contact_support_email_body">สวัสดีทีม,\n\nกรุณาอธิบายเป้าหมายและปัญหาที่พบเพื่อให้เราช่วยคุณได้</string>
     <string name="license">ใบอนุญาต</string>
     <string name="share">แชร์</string>
     <string name="share_subject">ลองเลย.</string>

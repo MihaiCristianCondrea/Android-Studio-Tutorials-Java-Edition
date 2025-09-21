@@ -5,6 +5,10 @@
     <string name="error_no_app_for_link">Sovellusta tämän linkin avaamiseen ei löytynyt.</string>
     <string name="lesson_open_in_browser">Avaa oppitunti selaimessa</string>
     <string name="support_link_unavailable">Tukilinkin avaamiseen ei ole saatavilla yhtään sovellusta.</string>
+    <string name="contact_support_title">Ota yhteyttä tukeen</string>
+    <string name="contact_support_description">Jaa tiedot, jotta voimme auttaa sinua saavuttamaan tavoitteesi</string>
+    <string name="contact_support_email_subject">Tukipyyntö koskien %1$s</string>
+    <string name="contact_support_email_body">Hei tiimi,\n\nKuvaile tavoitteesi ja mahdolliset kohtaamasi ongelmat, jotta voimme auttaa.</string>
     <string name="faq_state_collapsed">Supistettu</string>
     <string name="faq_state_expanded">Laajennettu</string>
     <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android on Googlen kehittämä mobiilikäyttöjärjestelmä. Se julkaistiin ensimmäisenä beetaversiona 5. marraskuuta 2007 ja ensimmäinen kaupallinen versio, Android 1.0, julkaistiin 23. syyskuuta 2008. Android perustuu muokattuun Linux-ytimen ja muun avoimen lähdekoodin ohjelmiston versioon.\n\nAndroid Studio on virallinen integroitu kehitysympäristö (IDE) Android-sovelluskehitykseen. Google ilmoitti siitä I/O-konferenssissaan 15. toukokuuta 2013 ja julkaisi sen yleiseen käyttöön 8. joulukuuta 2014. Android Studio perustuu IntelliJ IDEAan, suosittuun Java IDEen.</string>

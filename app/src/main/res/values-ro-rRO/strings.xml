@@ -324,6 +324,10 @@
     <string name="help">Ajutor</string>
     <string name="faq">Întrebări frecvente</string>
     <string name="send_feedback">Trimite feedback</string>
+    <string name="contact_support_title">Contactează suportul</string>
+    <string name="contact_support_description">Împărtășește detalii pentru a primi ajutor să îți atingi obiectivul</string>
+    <string name="contact_support_email_subject">Cerere de suport pentru %1$s</string>
+    <string name="contact_support_email_body">Bună, echipă,\n\nDescrie obiectivul tău și orice probleme întâmpini ca să te putem ajuta.</string>
     <string name="license">Licență</string>
     <string name="share">Distribuie</string>
     <string name="share_subject">Încearcă acum.</string>

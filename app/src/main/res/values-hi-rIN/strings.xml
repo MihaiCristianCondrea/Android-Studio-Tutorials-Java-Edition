@@ -317,6 +317,10 @@
     <string name="help">सहायता</string>
     <string name="faq">अक्सर पूछे जाने वाले प्रश्न</string>
     <string name="send_feedback">प्रतिक्रिया भेजें</string>
+    <string name="contact_support_title">सपोर्ट से संपर्क करें</string>
+    <string name="contact_support_description">अपना लक्ष्य पूरा करने में सहायता पाने के लिए विवरण साझा करें</string>
+    <string name="contact_support_email_subject">%1$s के लिए सपोर्ट अनुरोध</string>
+    <string name="contact_support_email_body">नमस्ते टीम,\n\nकृपया अपना लक्ष्य और जिन समस्याओं का आप सामना कर रहे हैं, उन्हें बताएं ताकि हम मदद कर सकें।</string>
     <string name="license">लाइसेंस</string>
     <string name="share">साझा करें</string>
     <string name="share_subject">इसे अभी आज़माएं.</string>

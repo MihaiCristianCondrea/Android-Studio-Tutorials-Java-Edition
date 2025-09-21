@@ -5,6 +5,10 @@
     <string name="error_no_app_for_link">Nerasta programėlės, kuri galėtų atidaryti šią nuorodą.</string>
     <string name="lesson_open_in_browser">Atidaryti pamoką naršyklėje</string>
     <string name="support_link_unavailable">Nėra programos, kuri galėtų atidaryti palaikymo nuorodą.</string>
+    <string name="contact_support_title">Susisiekite su palaikymo komanda</string>
+    <string name="contact_support_description">Pasidalykite informacija, kad galėtume padėti pasiekti jūsų tikslą</string>
+    <string name="contact_support_email_subject">Pagalbos užklausa dėl %1$s</string>
+    <string name="contact_support_email_body">Sveiki, komanda,\n\nAprašykite savo tikslą ir bet kokias iškilusias problemas, kad galėtume jums padėti.</string>
     <string name="faq_state_collapsed">Suskleista</string>
     <string name="faq_state_expanded">Išskleista</string>
     <string name="summary_android_history" tools:ignore="StringFormatCount,StringFormatMatches">Android yra Google sukurta mobili operacinė sistema. Ji pirmą kartą buvo išleista kaip beta versija 2007 m. lapkričio 5 d., o pirmoji komercinė versija, Android 1.0, pasirodė 2008 m. rugsėjo 23 d. Android yra pagrįsta modifikuota Linux branduolio ir kito atvirojo kodo programinės įrangos versija.\n\nAndroid Studio yra oficiali integruota kūrimo aplinka (IDE) Android programėlių kūrimui. Google ją pristatė I/O konferencijoje 2013 m. gegužės 15 d., o viešam naudojimui išleido 2014 m. gruodžio 8 d. Android Studio yra paremta IntelliJ IDEA, populiaria Java IDE.</string>
