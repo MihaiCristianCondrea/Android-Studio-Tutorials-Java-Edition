@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ui.screens.main;
 
 import android.Manifest;
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -253,20 +254,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
-                NavOptions forwardOptions = new NavOptions.Builder()
-                        .setEnterAnim(R.anim.fragment_spring_enter)
-                        .setExitAnim(R.anim.fragment_spring_exit)
-                        .setPopEnterAnim(R.anim.fragment_spring_pop_enter)
-                        .setPopExitAnim(R.anim.fragment_spring_pop_exit)
-                        .build();
-
-                NavOptions backwardOptions = new NavOptions.Builder()
-                        .setEnterAnim(R.anim.fragment_spring_pop_enter)
-                        .setExitAnim(R.anim.fragment_spring_pop_exit)
-                        .setPopEnterAnim(R.anim.fragment_spring_enter)
-                        .setPopExitAnim(R.anim.fragment_spring_exit)
-                        .build();
-
                 androidx.navigation.NavDestination destination = navController.getCurrentDestination();
                 if (destination != null) {
                     currentNavIndex = navOrder.get(destination.getId(), currentNavIndex);
@@ -281,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
                                 return true;
                             }
                             int newIndex = navOrder.get(item.getItemId());
-                            NavOptions options = newIndex > currentNavIndex ? forwardOptions : backwardOptions;
+                            NavOptions options = applyTopLevelNavAnimations(new NavOptions.Builder()).build();
                             navController.navigate(item.getItemId(), null, options);
                             currentNavIndex = newIndex;
                             return true;
@@ -295,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
                             return true;
                         }
                         int newIndex = navOrder.get(item.getItemId());
-                        NavOptions options = newIndex > currentNavIndex ? forwardOptions : backwardOptions;
+                        NavOptions options = applyTopLevelNavAnimations(new NavOptions.Builder()).build();
                         navController.navigate(item.getItemId(), null, options);
                         currentNavIndex = newIndex;
                         return true;
@@ -316,6 +303,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private NavOptions.Builder applyTopLevelNavAnimations(NavOptions.Builder builder) {
+        if (ValueAnimator.areAnimatorsEnabled()) {
+            builder.setEnterAnim(R.anim.fragment_top_level_enter)
+                    .setExitAnim(R.anim.fragment_top_level_exit)
+                    .setPopEnterAnim(R.anim.fragment_top_level_enter)
+                    .setPopExitAnim(R.anim.fragment_top_level_exit);
+        } else {
+            builder.setEnterAnim(0)
+                    .setExitAnim(0)
+                    .setPopEnterAnim(0)
+                    .setPopExitAnim(0);
+        }
+        return builder;
+    }
+
 
     private void navigateToPreferredDestination(int preferredDestination) {
         if (navController == null) {
@@ -328,10 +330,11 @@ public class MainActivity extends AppCompatActivity {
             lastPreferredStartDestination = preferredDestination;
             return;
         }
-        NavOptions options = new NavOptions.Builder()
-                .setPopUpTo(graph.getStartDestinationId(), true)
-                .setLaunchSingleTop(true)
-                .build();
+        NavOptions options = applyTopLevelNavAnimations(
+                new NavOptions.Builder()
+                        .setPopUpTo(graph.getStartDestinationId(), true)
+                        .setLaunchSingleTop(true)
+        ).build();
         navController.navigate(preferredDestination, null, options);
         lastPreferredStartDestination = preferredDestination;
     }
