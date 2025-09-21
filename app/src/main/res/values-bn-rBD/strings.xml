@@ -316,6 +316,10 @@
     <string name="help">সহায়তা</string>
     <string name="faq">প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী</string>
     <string name="send_feedback">প্রতিক্রিয়া পাঠান</string>
+    <string name="contact_support_title">সাপোর্টের সাথে যোগাযোগ করুন</string>
+    <string name="contact_support_description">আপনার লক্ষ্য পূরণে সহায়তা পেতে বিস্তারিত শেয়ার করুন</string>
+    <string name="contact_support_email_subject">%1$s-এর জন্য সাপোর্ট অনুরোধ</string>
+    <string name="contact_support_email_body">হাই টিম,\n\nঅনুগ্রহ করে আপনার লক্ষ্য এবং আপনি যে কোনো সমস্যার সম্মুখীন হচ্ছেন তা বর্ণনা করুন, যাতে আমরা সহায়তা করতে পারি।</string>
     <string name="license">লাইসেন্স</string>
     <string name="share">শেয়ার করুন</string>
     <string name="share_subject">এখনই চেষ্টা করুন.</string>

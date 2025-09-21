@@ -290,6 +290,10 @@
     <string name="help">說明</string>
     <string name="faq">常見問題</string>
     <string name="send_feedback">傳送意見回饋</string>
+    <string name="contact_support_title">聯絡支援</string>
+    <string name="contact_support_description">分享詳細資訊以獲得協助，幫助你達成目標</string>
+    <string name="contact_support_email_subject">%1$s 的支援請求</string>
+    <string name="contact_support_email_body">團隊您好：\n\n請描述您的目標與遇到的任何問題，好讓我們提供協助。</string>
     <string name="license">授權</string>
     <string name="share">分享</string>
     <string name="share_subject">立即試用！！！</string>

@@ -316,6 +316,10 @@
     <string name="help">Hilfe</string>
     <string name="faq">FAQs</string>
     <string name="send_feedback">Feedback senden</string>
+    <string name="contact_support_title">Support kontaktieren</string>
+    <string name="contact_support_description">Teile Details, um Hilfe bei der Erreichung deines Ziels zu erhalten</string>
+    <string name="contact_support_email_subject">Supportanfrage für %1$s</string>
+    <string name="contact_support_email_body">Hallo Team,\n\nBitte beschreiben Sie Ihr Ziel und alle Probleme, auf die Sie stoßen, damit wir helfen können.</string>
     <string name="license">Lizenz</string>
     <string name="share">Teilen</string>
     <string name="share_subject">Probiere es jetzt aus.</string>

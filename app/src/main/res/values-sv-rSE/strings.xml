@@ -290,6 +290,10 @@
     <string name="help">Hjälp</string>
     <string name="faq">Vanliga frågor</string>
     <string name="send_feedback">Skicka feedback</string>
+    <string name="contact_support_title">Kontakta supporten</string>
+    <string name="contact_support_description">Dela detaljer för att få hjälp med att nå ditt mål</string>
+    <string name="contact_support_email_subject">Supportförfrågan för %1$s</string>
+    <string name="contact_support_email_body">Hej teamet,\n\nBeskriv ditt mål och eventuella problem du stöter på så att vi kan hjälpa till.</string>
     <string name="license">Licens</string>
     <string name="share">Dela</string>
     <string name="share_subject">Prova den nu.</string>

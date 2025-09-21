@@ -290,6 +290,10 @@
     <string name="help">Tulong</string>
     <string name="faq">Mga FAQ</string>
     <string name="send_feedback">Magpadala ng feedback</string>
+    <string name="contact_support_title">Makipag-ugnayan sa suporta</string>
+    <string name="contact_support_description">Ibahagi ang mga detalye upang makatanggap ng tulong para maabot ang iyong layunin</string>
+    <string name="contact_support_email_subject">Kahilingan para sa suporta para sa %1$s</string>
+    <string name="contact_support_email_body">Kumusta, koponan,\n\nPakilalarawan ang iyong layunin at anumang mga isyung nararanasan mo upang matulungan ka namin.</string>
     <string name="license">Lisensya</string>
     <string name="share">Ibahagi</string>
     <string name="share_subject">Subukan ito ngayon.</string>

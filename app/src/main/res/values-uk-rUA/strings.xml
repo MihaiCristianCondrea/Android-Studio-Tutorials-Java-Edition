@@ -290,6 +290,10 @@
     <string name="help">Допомога</string>
     <string name="faq">Часті запитання</string>
     <string name="send_feedback">Надіслати відгук</string>
+    <string name="contact_support_title">Звернутися до підтримки</string>
+    <string name="contact_support_description">Поділіться подробицями, щоб отримати допомогу в досягненні своєї мети</string>
+    <string name="contact_support_email_subject">Запит до служби підтримки щодо %1$s</string>
+    <string name="contact_support_email_body">Привіт, команда!\n\nОпишіть, будь ласка, свою мету та будь-які проблеми, з якими ви стикаєтесь, щоб ми могли допомогти.</string>
     <string name="license">Ліцензія</string>
     <string name="share">Поділитися</string>
     <string name="share_subject">Спробуйте зараз.</string>

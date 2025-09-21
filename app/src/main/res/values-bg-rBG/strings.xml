@@ -316,6 +316,10 @@
     <string name="help">Помощ</string>
     <string name="faq">Често задавани въпроси</string>
     <string name="send_feedback">Изпращане на обратна връзка</string>
+    <string name="contact_support_title">Свържете се с поддръжката</string>
+    <string name="contact_support_description">Споделете подробности, за да получите помощ за постигане на целта си</string>
+    <string name="contact_support_email_subject">Заявка за поддръжка за %1$s</string>
+    <string name="contact_support_email_body">Здравейте, екип,\n\nМоля, опишете своята цел и всички проблеми, с които се сблъсквате, за да можем да помогнем.</string>
     <string name="license">Лиценз</string>
     <string name="share">Споделяне</string>
     <string name="share_subject">Опитайте сега.</string>

@@ -337,6 +337,10 @@
     <string name="help">Súgó</string>
     <string name="faq">GYIK</string>
     <string name="send_feedback">Visszajelzés küldése</string>
+    <string name="contact_support_title">Kapcsolatfelvétel a támogatással</string>
+    <string name="contact_support_description">Oszd meg a részleteket, hogy segítséget kaphass a célod eléréséhez</string>
+    <string name="contact_support_email_subject">Támogatási kérés %1$s számára</string>
+    <string name="contact_support_email_body">Szia csapat,\n\nKérjük, írd le a célodat és az esetleges problémákat, amelyekbe ütközöl, hogy segíthessünk.</string>
     <string name="license">Licenc</string>
     <string name="share">Megosztás</string>
     <string name="share_subject">Próbáld ki most</string>

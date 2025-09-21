@@ -337,6 +337,10 @@
     <string name="help">Guida</string>
     <string name="faq">Domande frequenti</string>
     <string name="send_feedback">Invia feedback</string>
+    <string name="contact_support_title">Contatta l’assistenza</string>
+    <string name="contact_support_description">Condividi i dettagli per ottenere aiuto e raggiungere il tuo obiettivo</string>
+    <string name="contact_support_email_subject">Richiesta di assistenza per %1$s</string>
+    <string name="contact_support_email_body">Ciao team,\n\nDescrivi il tuo obiettivo e gli eventuali problemi riscontrati così possiamo aiutarti.</string>
     <string name="license">Licenza</string>
     <string name="share">Condividi</string>
     <string name="share_subject">Provalo ora</string>

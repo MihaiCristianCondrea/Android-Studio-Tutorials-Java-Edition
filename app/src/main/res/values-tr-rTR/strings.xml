@@ -290,6 +290,10 @@
     <string name="help">Yardım</string>
     <string name="faq">SSS</string>
     <string name="send_feedback">Geri bildirim gönder</string>
+    <string name="contact_support_title">Destekle iletişime geç</string>
+    <string name="contact_support_description">Hedefine ulaşmana yardımcı olmamız için ayrıntıları paylaş</string>
+    <string name="contact_support_email_subject">%1$s için destek talebi</string>
+    <string name="contact_support_email_body">Merhaba ekip,\n\nSize yardımcı olabilmemiz için hedefinizi ve karşılaştığınız sorunları lütfen açıklayın.</string>
     <string name="license">Lisans</string>
     <string name="share">Paylaş</string>
     <string name="share_subject">Hemen dene.</string>

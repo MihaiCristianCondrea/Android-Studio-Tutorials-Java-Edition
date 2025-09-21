@@ -290,6 +290,10 @@
     <string name="help">مساعدة</string>
     <string name="faq">الأسئلة الشائعة</string>
     <string name="send_feedback">إرسال رأيك</string>
+    <string name="contact_support_title">التواصل مع الدعم</string>
+    <string name="contact_support_description">شارك التفاصيل للحصول على المساعدة في تحقيق هدفك</string>
+    <string name="contact_support_email_subject">طلب دعم لـ %1$s</string>
+    <string name="contact_support_email_body">مرحبًا بالفريق،\n\nيُرجى وصف هدفك وأي مشكلات تواجهها حتى نتمكن من مساعدتك.</string>
     <string name="license">الترخيص</string>
     <string name="share">مشاركة</string>
     <string name="share_subject">جربه الآن.</string>

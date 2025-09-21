@@ -316,6 +316,10 @@
     <string name="help">Bantuan</string>
     <string name="faq">FAQ</string>
     <string name="send_feedback">Kirim umpan balik</string>
+    <string name="contact_support_title">Hubungi dukungan</string>
+    <string name="contact_support_description">Bagikan detail agar kami dapat membantu mencapai tujuan Anda</string>
+    <string name="contact_support_email_subject">Permintaan dukungan untuk %1$s</string>
+    <string name="contact_support_email_body">Hai tim,\n\nHarap jelaskan tujuan Anda dan masalah apa pun yang Anda alami agar kami dapat membantu.</string>
     <string name="license">Lisensi</string>
     <string name="share">Bagikan</string>
     <string name="share_subject">Coba sekarang.</string>
