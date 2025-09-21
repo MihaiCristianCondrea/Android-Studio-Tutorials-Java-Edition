@@ -8,11 +8,18 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.view.ViewCompat;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
@@ -21,8 +28,10 @@ import com.d4rk.androidtutorials.java.databinding.ActivityHelpBinding;
 import com.d4rk.androidtutorials.java.databinding.DialogVersionInfoBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemHelpFaqBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
+import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
 import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.play.core.review.ReviewInfo;
 
 import dagger.hilt.android.AndroidEntryPoint;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
@@ -34,6 +43,7 @@ import java.util.List;
 public class HelpActivity extends BaseActivity {
 
     private ActivityHelpBinding binding;
+    private HelpViewModel helpViewModel;
     private static final List<FaqItem> FAQ_ITEMS = Arrays.asList(
             new FaqItem(R.string.question_1, R.string.summary_preference_faq_1),
             new FaqItem(R.string.question_2, R.string.summary_preference_faq_2),
@@ -52,11 +62,18 @@ public class HelpActivity extends BaseActivity {
         binding = ActivityHelpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         AdUtils.loadBanner(binding.faqNativeAd);
+        helpViewModel = new ViewModelProvider(this).get(HelpViewModel.class);
         new FastScrollerBuilder(binding.scrollView)
                 .useMd2Style()
                 .build();
         bindFaqItems(binding);
         setupContactSupportCard();
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.frame_layout_feedback, new FeedbackFragment())
+                    .commit();
+        }
     }
 
     @Override
@@ -128,19 +145,23 @@ public class HelpActivity extends BaseActivity {
     }
 
     private void openSupportEmail() {
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
         String supportEmail = getString(R.string.contact_support_email);
-        intent.setData(Uri.parse("mailto:" + supportEmail));
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.fromParts("mailto", supportEmail, null));
         intent.putExtra(Intent.EXTRA_EMAIL, new String[]{supportEmail});
         intent.putExtra(Intent.EXTRA_SUBJECT,
                 getString(R.string.contact_support_email_subject, getString(R.string.app_name)));
         intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.contact_support_email_body));
 
-        try {
+        if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(Intent.createChooser(intent, getString(R.string.contact_support_title)));
-        } catch (ActivityNotFoundException e) {
+        } else {
             Snackbar.make(binding.getRoot(), R.string.support_link_unavailable, Snackbar.LENGTH_SHORT).show();
         }
+    }
+
+    public HelpViewModel getHelpViewModel() {
+        return helpViewModel;
     }
 
     private void bindFaqItems(ActivityHelpBinding binding) {
@@ -183,6 +204,73 @@ public class HelpActivity extends BaseActivity {
         CharSequence stateDescription = getString(stateRes);
         ViewCompat.setStateDescription(binding.getRoot(), stateDescription);
         ViewCompat.setStateDescription(binding.questionContainer, stateDescription);
+    }
+
+    public static class FeedbackFragment extends PreferenceFragmentCompat {
+
+        @Override
+        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+            setPreferencesFromResource(R.xml.preferences_feedback, rootKey);
+
+            Preference feedbackPreference = findPreference(getString(R.string.key_feedback));
+            if (feedbackPreference != null) {
+                feedbackPreference.setOnPreferenceClickListener(preference -> {
+                    if (requireActivity() instanceof HelpActivity helpActivity) {
+                        HelpViewModel vm = helpActivity.getHelpViewModel();
+
+                        vm.requestReviewFlow(new HelpRepository.OnReviewInfoListener() {
+                            @Override
+                            public void onSuccess(ReviewInfo info) {
+                                vm.launchReviewFlow(helpActivity, info);
+                            }
+
+                            @Override
+                            public void onFailure(Exception e) {
+                                launchGooglePlayReviews();
+                            }
+                        });
+                    }
+                    return true;
+                });
+            }
+        }
+
+        @Override
+        public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+            RecyclerView listView = getListView();
+            listView.setNestedScrollingEnabled(false);
+            listView.setOverScrollMode(View.OVER_SCROLL_NEVER);
+            listView.setClipToPadding(false);
+
+            ViewGroup.LayoutParams layoutParams = listView.getLayoutParams();
+            FrameLayout.LayoutParams frameLayoutParams;
+            if (layoutParams instanceof FrameLayout.LayoutParams) {
+                frameLayoutParams = (FrameLayout.LayoutParams) layoutParams;
+            } else {
+                frameLayoutParams = new FrameLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                );
+            }
+            frameLayoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+            frameLayoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+            listView.setLayoutParams(frameLayoutParams);
+        }
+
+        private void launchGooglePlayReviews() {
+            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=" + requireActivity().getPackageName() + "&showAllReviews=true");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            try {
+                startActivity(intent);
+            } catch (ActivityNotFoundException e) {
+                Snackbar.make(requireView(),
+                                R.string.snack_unable_to_open_google_play_store,
+                                Snackbar.LENGTH_SHORT)
+                        .show();
+            }
+        }
     }
 
     private static final class FaqItem {
