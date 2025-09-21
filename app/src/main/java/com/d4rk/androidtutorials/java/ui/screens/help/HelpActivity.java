@@ -4,22 +4,18 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.view.ViewCompat;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceFragmentCompat;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
@@ -44,6 +40,7 @@ public class HelpActivity extends BaseActivity {
 
     private ActivityHelpBinding binding;
     private HelpViewModel helpViewModel;
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private static final List<FaqItem> FAQ_ITEMS = Arrays.asList(
             new FaqItem(R.string.question_1, R.string.summary_preference_faq_1),
             new FaqItem(R.string.question_2, R.string.summary_preference_faq_2),
@@ -68,12 +65,8 @@ public class HelpActivity extends BaseActivity {
                 .build();
         bindFaqItems(binding);
         setupContactSupportCard();
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frame_layout_feedback, new FeedbackFragment())
-                    .commit();
-        }
+        setupFeedbackFab();
+        handler.postDelayed(() -> binding.fabContactSupport.shrink(), 5000L);
     }
 
     @Override
@@ -144,6 +137,11 @@ public class HelpActivity extends BaseActivity {
         binding.contactSupportCard.setOnClickListener(v -> openSupportEmail());
     }
 
+    private void setupFeedbackFab() {
+        binding.fabContactSupport.setOnClickListener(v -> requestReview());
+        binding.fabContactSupport.setContentDescription(getString(R.string.send_feedback));
+    }
+
     private void openSupportEmail() {
         String supportEmail = getString(R.string.contact_support_email);
         Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -157,6 +155,37 @@ public class HelpActivity extends BaseActivity {
             startActivity(Intent.createChooser(intent, getString(R.string.contact_support_title)));
         } else {
             Snackbar.make(binding.getRoot(), R.string.support_link_unavailable, Snackbar.LENGTH_SHORT).show();
+        }
+    }
+
+    private void requestReview() {
+        binding.fabContactSupport.setEnabled(false);
+        helpViewModel.requestReviewFlow(new HelpRepository.OnReviewInfoListener() {
+            @Override
+            public void onSuccess(ReviewInfo info) {
+                helpViewModel.launchReviewFlow(HelpActivity.this, info);
+                binding.fabContactSupport.setEnabled(true);
+            }
+
+            @Override
+            public void onFailure(Exception e) {
+                binding.fabContactSupport.setEnabled(true);
+                launchGooglePlayReviews();
+            }
+        });
+    }
+
+    private void launchGooglePlayReviews() {
+        Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName() + "&showAllReviews=true");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            Snackbar.make(binding.getRoot(),
+                            R.string.snack_unable_to_open_google_play_store,
+                            Snackbar.LENGTH_SHORT)
+                    .show();
         }
     }
 
@@ -206,73 +235,6 @@ public class HelpActivity extends BaseActivity {
         ViewCompat.setStateDescription(binding.questionContainer, stateDescription);
     }
 
-    public static class FeedbackFragment extends PreferenceFragmentCompat {
-
-        @Override
-        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            setPreferencesFromResource(R.xml.preferences_feedback, rootKey);
-
-            Preference feedbackPreference = findPreference(getString(R.string.key_feedback));
-            if (feedbackPreference != null) {
-                feedbackPreference.setOnPreferenceClickListener(preference -> {
-                    if (requireActivity() instanceof HelpActivity helpActivity) {
-                        HelpViewModel vm = helpActivity.getHelpViewModel();
-
-                        vm.requestReviewFlow(new HelpRepository.OnReviewInfoListener() {
-                            @Override
-                            public void onSuccess(ReviewInfo info) {
-                                vm.launchReviewFlow(helpActivity, info);
-                            }
-
-                            @Override
-                            public void onFailure(Exception e) {
-                                launchGooglePlayReviews();
-                            }
-                        });
-                    }
-                    return true;
-                });
-            }
-        }
-
-        @Override
-        public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-            super.onViewCreated(view, savedInstanceState);
-            RecyclerView listView = getListView();
-            listView.setNestedScrollingEnabled(false);
-            listView.setOverScrollMode(View.OVER_SCROLL_NEVER);
-            listView.setClipToPadding(false);
-
-            ViewGroup.LayoutParams layoutParams = listView.getLayoutParams();
-            FrameLayout.LayoutParams frameLayoutParams;
-            if (layoutParams instanceof FrameLayout.LayoutParams) {
-                frameLayoutParams = (FrameLayout.LayoutParams) layoutParams;
-            } else {
-                frameLayoutParams = new FrameLayout.LayoutParams(
-                        ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT
-                );
-            }
-            frameLayoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
-            frameLayoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
-            listView.setLayoutParams(frameLayoutParams);
-        }
-
-        private void launchGooglePlayReviews() {
-            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=" + requireActivity().getPackageName() + "&showAllReviews=true");
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            try {
-                startActivity(intent);
-            } catch (ActivityNotFoundException e) {
-                Snackbar.make(requireView(),
-                                R.string.snack_unable_to_open_google_play_store,
-                                Snackbar.LENGTH_SHORT)
-                        .show();
-            }
-        }
-    }
-
     private static final class FaqItem {
         @StringRes
         private final int questionResId;
@@ -283,5 +245,11 @@ public class HelpActivity extends BaseActivity {
             this.questionResId = questionResId;
             this.answerResId = answerResId;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        handler.removeCallbacksAndMessages(null);
+        super.onDestroy();
     }
 }

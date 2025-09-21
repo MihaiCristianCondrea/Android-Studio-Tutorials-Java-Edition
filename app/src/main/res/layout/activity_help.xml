@@ -86,7 +86,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:contentDescription="@null"
-                            android:src="@drawable/ic_feedback" />
+                            android:src="@drawable/ic_contact_support"
+                            android:tint="?attr/colorOnSecondaryContainer" />
 
                     </FrameLayout>
 
@@ -114,24 +115,22 @@
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@null"
-                        android:src="@drawable/ic_arrow_forward"
-                        android:tint="?attr/colorOnSurfaceVariant" />
-
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
             </com.google.android.material.card.MaterialCardView>
 
-            <FrameLayout
-                android:id="@+id/frame_layout_feedback"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </me.zhanghai.android.fastscroll.FastScrollScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_contact_support"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/send_feedback"
+        app:icon="@drawable/ic_rate_review"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
