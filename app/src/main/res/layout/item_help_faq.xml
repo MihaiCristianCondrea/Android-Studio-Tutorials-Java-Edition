@@ -38,6 +38,17 @@
             android:paddingVertical="12dp"
             tools:targetApi="31">
 
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/question_icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="4dp"
+                app:contentPadding="6dp"
+                android:src="@drawable/ic_feedback"
+                android:background="?attr/colorPrimaryContainer"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                app:tint="?attr/colorOnSurfaceVariant" />
+
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/question"
                 android:layout_width="0dp"

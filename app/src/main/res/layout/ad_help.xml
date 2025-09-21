@@ -9,7 +9,7 @@
         style="@style/Widget.Material3.CardView.Filled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewBottomRoundedFilled">
+        app:cardCornerRadius="4dp">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
