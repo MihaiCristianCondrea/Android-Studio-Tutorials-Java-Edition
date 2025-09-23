@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -12,6 +13,9 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRetrofitBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.google.gson.annotations.SerializedName;
+
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -47,17 +51,17 @@ public class RetrofitActivity extends UpNavigationActivity {
             api.getTodo().enqueue(new Callback<>() {
                 @Override
                 public void onResponse(@NonNull Call<Todo> call, @NonNull Response<Todo> response) {
-                    if (response.isSuccessful() && response.body() != null) {
-                        binding.textViewResult.setText(response.body().title);
+                    if (response.isSuccessful()) {
+                        displayTodoTitle(response);
                     } else {
-                        binding.textViewResult.setText(R.string.snack_general_error);
+                        showGeneralErrorMessage();
                     }
                     binding.buttonFetch.setEnabled(true);
                 }
 
                 @Override
                 public void onFailure(@NonNull Call<Todo> call, @NonNull Throwable t) {
-                    binding.textViewResult.setText(R.string.snack_general_error);
+                    showGeneralErrorMessage();
                     binding.buttonFetch.setEnabled(true);
                 }
             });
@@ -74,12 +78,37 @@ public class RetrofitActivity extends UpNavigationActivity {
         handler.removeCallbacksAndMessages(null);
     }
 
+    private void displayTodoTitle(@NonNull Response<Todo> response) {
+        Object body = response.body();
+        if (body instanceof Todo) {
+            Todo todo = (Todo) body;
+            if (todo.title != null && !todo.title.isEmpty()) {
+                binding.textViewResult.setText(todo.title);
+                return;
+            }
+        } else if (body instanceof Map<?, ?> map) {
+            Object title = map.get("title");
+            if (title != null) {
+                binding.textViewResult.setText(String.valueOf(title));
+                return;
+            }
+        }
+        showGeneralErrorMessage();
+    }
+
+    private void showGeneralErrorMessage() {
+        binding.textViewResult.setText(R.string.snack_general_error);
+    }
+
     interface JsonPlaceholderApi {
         @GET("todos/1")
         Call<Todo> getTodo();
     }
 
-    static class Todo {
+    @Keep
+    public static final class Todo {
+        @SerializedName("title")
+        @Nullable
         public String title;
     }
 }
