@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.ViewGroupCompat;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.FragmentContainerView;
 
 import com.d4rk.androidtutorials.java.R;
 import com.google.android.material.appbar.AppBarLayout;
@@ -160,7 +161,9 @@ public final class EdgeToEdgeDelegate {
         }
 
         if (view instanceof ViewGroup viewGroup) {
-            ViewGroupCompat.installCompatInsetsDispatch(viewGroup);
+            if (!(viewGroup instanceof FragmentContainerView)) {
+                ViewGroupCompat.installCompatInsetsDispatch(viewGroup);
+            }
         }
 
         InsetsPadding basePadding = (InsetsPadding) view.getTag(R.id.tag_edge_to_edge_padding);
