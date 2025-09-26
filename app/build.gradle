@@ -13,8 +13,8 @@ android {
         applicationId 'com.d4rk.androidtutorials.java'
         minSdk 23
         targetSdk 36
-        versionCode 51
-        versionName '5.0.2'
+        versionCode 52
+        versionName '5.0.3'
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         resourceConfigurations += ['en', 'de', 'es', 'fr', 'hi', 'hu', 'in', 'it', 'ja', 'ro', 'ru', 'tr', 'sv', 'bg', 'pl', 'uk']
