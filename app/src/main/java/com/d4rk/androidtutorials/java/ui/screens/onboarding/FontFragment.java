@@ -1,9 +1,13 @@
 package com.d4rk.androidtutorials.java.ui.screens.onboarding;
 
+import android.content.res.Resources;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +20,8 @@ import com.d4rk.androidtutorials.java.databinding.FragmentOnboardingFontBinding;
 import com.google.android.material.radiobutton.MaterialRadioButton;
 
 public class FontFragment extends Fragment {
+
+    private static final String TAG = "FontFragment";
 
     private FragmentOnboardingFontBinding binding;
     private OnboardingViewModel viewModel;
@@ -53,13 +59,13 @@ public class FontFragment extends Fragment {
                 binding.cardGoogleSansCode
         };
 
-        binding.optionAudiowide.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_audiowide));
-        binding.optionFiraCode.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_fira_code));
-        binding.optionJetbrainsMono.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_jetbrains_mono));
-        binding.optionNotoSansMono.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_noto_sans_mono));
-        binding.optionPoppins.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_poppins));
-        binding.optionRobotoMono.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_roboto_mono));
-        binding.optionGoogleSansCode.titleText.setTypeface(ResourcesCompat.getFont(requireContext(), R.font.font_google_sans_code));
+        applyFontIfAvailable(binding.optionAudiowide.titleText, R.font.font_audiowide);
+        applyFontIfAvailable(binding.optionFiraCode.titleText, R.font.font_fira_code);
+        applyFontIfAvailable(binding.optionJetbrainsMono.titleText, R.font.font_jetbrains_mono);
+        applyFontIfAvailable(binding.optionNotoSansMono.titleText, R.font.font_noto_sans_mono);
+        applyFontIfAvailable(binding.optionPoppins.titleText, R.font.font_poppins);
+        applyFontIfAvailable(binding.optionRobotoMono.titleText, R.font.font_roboto_mono);
+        applyFontIfAvailable(binding.optionGoogleSansCode.titleText, R.font.font_google_sans_code);
 
         for (int i = 0; i < radioButtons.length; i++) {
             int index = i;
@@ -78,6 +84,17 @@ public class FontFragment extends Fragment {
             }
         }
         selectOption(index);
+    }
+
+    private void applyFontIfAvailable(@NonNull TextView textView, int fontResId) {
+        try {
+            Typeface typeface = ResourcesCompat.getFont(requireContext(), fontResId);
+            if (typeface != null) {
+                textView.setTypeface(typeface);
+            }
+        } catch (Resources.NotFoundException exception) {
+            Log.w(TAG, "Font resource not found: " + fontResId, exception);
+        }
     }
 
     private void selectOption(int index) {
