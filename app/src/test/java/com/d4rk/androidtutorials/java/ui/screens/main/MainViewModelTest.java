@@ -34,10 +34,8 @@ public class MainViewModelTest {
     private ApplyThemeSettingsUseCase applyThemeSettingsUseCase;
     private GetBottomNavLabelVisibilityUseCase getBottomNavLabelVisibilityUseCase;
     private GetDefaultTabPreferenceUseCase getDefaultTabPreferenceUseCase;
-    private ApplyLanguageSettingsUseCase applyLanguageSettingsUseCase;
     private ShouldShowStartupScreenUseCase shouldShowStartupScreenUseCase;
     private MarkStartupScreenShownUseCase markStartupScreenShownUseCase;
-    private GetAppUpdateManagerUseCase getAppUpdateManagerUseCase;
     private MainViewModel viewModel;
 
     private final String[] themeValues = {"MODE_NIGHT_FOLLOW_SYSTEM", "MODE_NIGHT_NO", "MODE_NIGHT_YES"};
@@ -49,10 +47,10 @@ public class MainViewModelTest {
         applyThemeSettingsUseCase = Mockito.mock(ApplyThemeSettingsUseCase.class);
         getBottomNavLabelVisibilityUseCase = Mockito.mock(GetBottomNavLabelVisibilityUseCase.class);
         getDefaultTabPreferenceUseCase = Mockito.mock(GetDefaultTabPreferenceUseCase.class);
-        applyLanguageSettingsUseCase = Mockito.mock(ApplyLanguageSettingsUseCase.class);
+        ApplyLanguageSettingsUseCase applyLanguageSettingsUseCase = Mockito.mock(ApplyLanguageSettingsUseCase.class);
         shouldShowStartupScreenUseCase = Mockito.mock(ShouldShowStartupScreenUseCase.class);
         markStartupScreenShownUseCase = Mockito.mock(MarkStartupScreenShownUseCase.class);
-        getAppUpdateManagerUseCase = Mockito.mock(GetAppUpdateManagerUseCase.class);
+        GetAppUpdateManagerUseCase getAppUpdateManagerUseCase = Mockito.mock(GetAppUpdateManagerUseCase.class);
 
         viewModel = new MainViewModel(
                 applyThemeSettingsUseCase,
@@ -144,7 +142,11 @@ public class MainViewModelTest {
         Method method = MainViewModel.class.getDeclaredMethod(
                 "getVisibilityMode", String.class, String[].class);
         method.setAccessible(true);
-        return (Integer) method.invoke(null, value, bottomNavBarLabelsValues);
+        Object result = method.invoke(null, value, bottomNavBarLabelsValues);
+        if (result == null) {
+            throw new NullPointerException("Method invocation returned null");
+        }
+        return (Integer) result;
     }
 
     @Test

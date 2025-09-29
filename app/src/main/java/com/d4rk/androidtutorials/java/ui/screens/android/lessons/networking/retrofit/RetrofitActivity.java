@@ -15,8 +15,6 @@ import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActiv
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.Map;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -79,17 +77,10 @@ public class RetrofitActivity extends UpNavigationActivity {
     }
 
     private void displayTodoTitle(@NonNull Response<Todo> response) {
-        Object body = response.body();
-        if (body instanceof Todo) {
-            Todo todo = (Todo) body;
+        Todo todo = response.body();
+        if (todo != null) {
             if (todo.title != null && !todo.title.isEmpty()) {
                 binding.textViewResult.setText(todo.title);
-                return;
-            }
-        } else if (body instanceof Map<?, ?> map) {
-            Object title = map.get("title");
-            if (title != null) {
-                binding.textViewResult.setText(String.valueOf(title));
                 return;
             }
         }

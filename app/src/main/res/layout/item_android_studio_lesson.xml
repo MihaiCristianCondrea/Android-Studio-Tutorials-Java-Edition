@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/lesson_card"
     style="@style/Widget.Material3.CardView.Outlined"
     android:layout_width="match_parent"
@@ -54,6 +55,7 @@
             android:contentDescription="@string/lesson_open_in_browser"
             android:tooltipText="@string/lesson_open_in_browser"
             android:visibility="gone"
-            app:icon="@drawable/ic_open_in_new" />
+            app:icon="@drawable/ic_open_in_new"
+            tools:targetApi="26" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </com.google.android.material.card.MaterialCardView>

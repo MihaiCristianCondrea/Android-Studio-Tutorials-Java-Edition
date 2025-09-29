@@ -36,7 +36,6 @@ public class DefaultMainRepositoryTest {
 
     private Context context;
     private FakeSharedPreferences defaultPrefs;
-    private FakeSharedPreferences startupPrefs;
     private AppUpdateManager updateManager;
     private MockedStatic<PreferenceManager> prefManager;
     private MockedStatic<AppUpdateManagerFactory> updateManagerFactory;
@@ -46,7 +45,7 @@ public class DefaultMainRepositoryTest {
     public void setUp() {
         context = mock(Context.class);
         defaultPrefs = new FakeSharedPreferences();
-        startupPrefs = new FakeSharedPreferences();
+        FakeSharedPreferences startupPrefs = new FakeSharedPreferences();
         updateManager = mock(AppUpdateManager.class);
 
         prefManager = mockStatic(PreferenceManager.class);

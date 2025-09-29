@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
@@ -29,11 +30,11 @@ import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.review.ReviewInfo;
 
-import dagger.hilt.android.AndroidEntryPoint;
-import me.zhanghai.android.fastscroll.FastScrollerBuilder;
-
 import java.util.Arrays;
 import java.util.List;
+
+import dagger.hilt.android.AndroidEntryPoint;
+import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 @AndroidEntryPoint
 public class HelpActivity extends BaseActivity {
@@ -235,16 +236,7 @@ public class HelpActivity extends BaseActivity {
         ViewCompat.setStateDescription(binding.questionContainer, stateDescription);
     }
 
-    private static final class FaqItem {
-        @StringRes
-        private final int questionResId;
-        @StringRes
-        private final int answerResId;
-
-        private FaqItem(@StringRes int questionResId, @StringRes int answerResId) {
-            this.questionResId = questionResId;
-            this.answerResId = answerResId;
-        }
+    private record FaqItem(@StringRes int questionResId, @StringRes int answerResId) {
     }
 
     @Override

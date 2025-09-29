@@ -31,17 +31,16 @@ import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Unit tests for {@link AppOpenAd.AppOpenAdManager}.
+ * Unit tests for AppOpenAd.AppOpenAdManager.
  */
 public class AppOpenAdManagerTest {
 
     private Class<?> managerClass;
     private Object manager;
-    private Application application;
 
     @Before
     public void setUp() throws Exception {
-        application = mock(Application.class);
+        Application application = mock(Application.class);
         when(application.getApplicationContext()).thenReturn(application);
 
         managerClass = findManagerClass();
@@ -143,7 +142,11 @@ public class AppOpenAdManagerTest {
     private boolean invokeIsAdAvailable() throws Exception {
         Method method = managerClass.getDeclaredMethod("isAdAvailable");
         method.setAccessible(true);
-        return (boolean) method.invoke(manager);
+        Object result = method.invoke(manager);
+        if (result instanceof Boolean) {
+            return (boolean) result;
+        }
+        throw new IllegalStateException("isAdAvailable method did not return a boolean value.");
     }
 
     private void invokeShowAdIfAvailable(Activity activity, OnShowAdCompleteListener listener)
