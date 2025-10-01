@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
+    android:foreground="?attr/selectableItemBackground"
     app:cardCornerRadius="4dp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -16,16 +17,27 @@
         android:orientation="horizontal"
         android:padding="12dp">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/lesson_icon"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+        <FrameLayout
+            android:id="@android:id/icon_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginEnd="16dp"
-            android:background="?attr/colorPrimaryContainer"
-            android:contentDescription="@null"
-            android:scaleType="centerCrop"
-            app:contentPadding="6dp"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@android:id/icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/colorPrimaryContainer"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:contentPadding="6dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                tools:visibility="visible" />
+        </FrameLayout>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="0dp"
@@ -34,28 +46,31 @@
             android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/lesson_title"
+                android:id="@android:id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Material3.TitleSmall" />
+                android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                android:textColor="?attr/colorOnSurface" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/lesson_summary"
+                android:id="@android:id/summary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
+                android:layout_marginTop="2dp"
+                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:visibility="gone"
+                tools:visibility="visible" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/lesson_external_icon"
-            style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
+        <FrameLayout
+            android:id="@android:id/widget_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginStart="12dp"
-            android:contentDescription="@string/lesson_open_in_browser"
-            android:tooltipText="@string/lesson_open_in_browser"
+            android:gravity="center"
             android:visibility="gone"
-            app:icon="@drawable/ic_open_in_new"
-            tools:targetApi="26" />
+            tools:visibility="visible" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </com.google.android.material.card.MaterialCardView>

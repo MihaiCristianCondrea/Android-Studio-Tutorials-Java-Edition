@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.preference.PreferenceCategory app:title="@string/appearance">
+    <androidx.preference.PreferenceCategory
+        app:layout="@layout/item_preference_category"
+        app:title="@string/appearance">
         <androidx.preference.ListPreference
             app:defaultValue="@string/default_value_theme"
             app:entries="@array/preference_theme_entries"
             app:entryValues="@array/preference_theme_values"
             app:icon="@drawable/ic_theme"
+            app:iconSpaceReserved="false"
             app:key="@string/key_theme"
+            app:layout="@layout/item_preference"
             app:title="@string/theme"
             app:useSimpleSummaryProvider="true" />
         <androidx.preference.ListPreference
@@ -15,7 +19,9 @@
             android:entries="@array/preference_default_tab_entries"
             android:entryValues="@array/preference_default_tab_values"
             android:icon="@drawable/ic_home"
+            app:iconSpaceReserved="false"
             app:key="@string/key_default_tab"
+            app:layout="@layout/item_preference"
             app:title="@string/default_tab"
             app:useSimpleSummaryProvider="true" />
         <androidx.preference.ListPreference
@@ -23,7 +29,9 @@
             app:entries="@array/preference_bottom_navigation_bar_labels_entries"
             app:entryValues="@array/preference_bottom_navigation_bar_labels_values"
             app:icon="@drawable/ic_label"
+            app:iconSpaceReserved="false"
             app:key="@string/key_bottom_navigation_bar_labels"
+            app:layout="@layout/item_preference"
             app:title="@string/bottom_navigation_bar_labels"
             app:useSimpleSummaryProvider="true" />
         <androidx.preference.ListPreference
@@ -31,7 +39,9 @@
             app:entries="@array/code_font_entries"
             app:entryValues="@array/code_font_values"
             app:icon="@drawable/ic_font_download"
+            app:iconSpaceReserved="false"
             app:key="@string/key_monospace_font"
+            app:layout="@layout/item_preference"
             app:title="@string/code_font"
             app:useSimpleSummaryProvider="true" />
         <androidx.preference.ListPreference
@@ -39,39 +49,62 @@
             app:entries="@array/preference_language_entries"
             app:entryValues="@array/preference_language_values"
             app:icon="@drawable/ic_language"
+            app:iconSpaceReserved="false"
             app:key="@string/key_language"
+            app:layout="@layout/item_preference"
             app:summary="@string/summary_preference_settings_language"
             app:title="@string/language" />
     </androidx.preference.PreferenceCategory>
-    <androidx.preference.PreferenceCategory app:title="@string/notifications">
+    <androidx.preference.PreferenceCategory
+        app:layout="@layout/item_preference_category"
+        app:title="@string/notifications">
         <androidx.preference.Preference
             app:icon="@drawable/ic_edit_notifications"
+            app:iconSpaceReserved="false"
             app:key="@string/key_notifications_settings"
+            app:layout="@layout/item_preference"
+            app:widgetLayout="@layout/item_preference_widget_open_notifications"
             app:title="@string/notification_settings" />
     </androidx.preference.PreferenceCategory>
-    <androidx.preference.PreferenceCategory app:title="@string/firebase">
+    <androidx.preference.PreferenceCategory
+        app:layout="@layout/item_preference_category"
+        app:title="@string/firebase">
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="true"
             app:icon="@drawable/ic_firebase"
+            app:iconSpaceReserved="false"
             app:key="@string/key_firebase_crashlytics"
+            app:layout="@layout/item_preference"
+            app:widgetLayout="@layout/widget_preference_switch"
             app:summary="@string/summary_preference_settings_firebase_crashlytics"
             app:title="@string/firebase_crashlytics" />
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="true"
             app:icon="@drawable/ic_signal_cellular"
+            app:iconSpaceReserved="false"
             app:key="@string/key_firebase_analytics"
+            app:layout="@layout/item_preference"
+            app:widgetLayout="@layout/widget_preference_switch"
             app:summary="@string/summary_preference_settings_firebase_analytics"
             app:title="@string/firebase_analytics" />
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="true"
             app:icon="@drawable/ic_swap_driving_apps_wheel"
+            app:iconSpaceReserved="false"
             app:key="@string/key_firebase_performance"
+            app:layout="@layout/item_preference"
+            app:widgetLayout="@layout/widget_preference_switch"
             app:summary="@string/summary_preference_settings_firebase_performance"
             app:title="@string/firebase_performance" />
     </androidx.preference.PreferenceCategory>
-    <androidx.preference.PreferenceCategory app:title="@string/privacy_and_security">
+    <androidx.preference.PreferenceCategory
+        app:layout="@layout/item_preference_category"
+        app:title="@string/privacy_and_security">
         <androidx.preference.Preference
             app:icon="@drawable/ic_privacy_policy"
+            app:iconSpaceReserved="false"
+            app:layout="@layout/item_preference"
+            app:widgetLayout="@layout/item_preference_widget_open_in_new"
             app:title="@string/privacy_policy">
             <intent
                 android:action="android.intent.action.VIEW"
@@ -79,6 +112,9 @@
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_terms_of_service"
+            app:iconSpaceReserved="false"
+            app:layout="@layout/item_preference"
+            app:widgetLayout="@layout/item_preference_widget_open_in_new"
             app:title="@string/terms_of_service">
             <intent
                 android:action="android.intent.action.VIEW"
@@ -86,6 +122,9 @@
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_code_of_conduct"
+            app:iconSpaceReserved="false"
+            app:layout="@layout/item_preference"
+            app:widgetLayout="@layout/item_preference_widget_open_in_new"
             app:title="@string/code_of_conduct">
             <intent
                 android:action="android.intent.action.VIEW"
@@ -93,6 +132,8 @@
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_permissions"
+            app:iconSpaceReserved="false"
+            app:layout="@layout/item_preference"
             app:title="@string/permissions">
             <intent
                 android:targetClass="com.d4rk.androidtutorials.java.ui.screens.settings.screens.permissions.PermissionsActivity"
@@ -101,46 +142,69 @@
         <androidx.preference.Preference
             app:icon="@drawable/ic_libraries"
             app:key="@string/key_open_source_licenses"
+            app:iconSpaceReserved="false"
+            app:layout="@layout/item_preference"
             app:title="@string/open_source_licenses" />
         <androidx.preference.Preference
             app:icon="@drawable/ic_license"
+            app:iconSpaceReserved="false"
+            app:layout="@layout/item_preference"
+            app:widgetLayout="@layout/item_preference_widget_open_in_new"
             app:summary="@string/summary_preference_settings_license"
             app:title="@string/license">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://www.gnu.org/licenses/gpl-3.0" />
         </androidx.preference.Preference>
-        <androidx.preference.PreferenceCategory app:title="@string/consent_settings">
+        <androidx.preference.PreferenceCategory
+            app:layout="@layout/item_preference_category"
+            app:title="@string/consent_settings">
             <androidx.preference.SwitchPreferenceCompat
                 app:defaultValue="true"
                 app:icon="@drawable/ic_data_thresholding"
+                app:iconSpaceReserved="false"
                 app:key="@string/key_consent_analytics"
+                app:layout="@layout/item_preference"
+                app:widgetLayout="@layout/widget_preference_switch"
                 app:summary="@string/summary_consent_analytics_storage"
                 app:title="@string/analytics_storage" />
             <androidx.preference.SwitchPreferenceCompat
                 app:defaultValue="true"
                 app:icon="@drawable/ic_ad_units"
+                app:iconSpaceReserved="false"
                 app:key="@string/key_consent_ad_storage"
+                app:layout="@layout/item_preference"
+                app:widgetLayout="@layout/widget_preference_switch"
                 app:summary="@string/summary_consent_ad_storage"
                 app:title="@string/ad_storage" />
             <androidx.preference.SwitchPreferenceCompat
                 app:defaultValue="true"
                 app:icon="@drawable/ic_account_circle"
+                app:iconSpaceReserved="false"
                 app:key="@string/key_consent_ad_user_data"
+                app:layout="@layout/item_preference"
+                app:widgetLayout="@layout/widget_preference_switch"
                 app:summary="@string/summary_consent_ad_user_data"
                 app:title="@string/ad_user_data" />
             <androidx.preference.SwitchPreferenceCompat
                 app:defaultValue="true"
                 app:icon="@drawable/ic_ad_group"
+                app:iconSpaceReserved="false"
                 app:key="@string/key_consent_ad_personalization"
+                app:layout="@layout/item_preference"
+                app:widgetLayout="@layout/widget_preference_switch"
                 app:summary="@string/summary_consent_ad_personalization"
                 app:title="@string/ad_personalization" />
         </androidx.preference.PreferenceCategory>
     </androidx.preference.PreferenceCategory>
-    <androidx.preference.PreferenceCategory app:title="@string/info">
+    <androidx.preference.PreferenceCategory
+        app:layout="@layout/item_preference_category"
+        app:title="@string/info">
         <androidx.preference.Preference
             app:icon="@drawable/ic_perm_device_information"
             app:key="@string/key_device_info"
+            app:iconSpaceReserved="false"
+            app:layout="@layout/item_preference"
             app:summary="%1$s"
             app:title="@string/device_info" />
     </androidx.preference.PreferenceCategory>

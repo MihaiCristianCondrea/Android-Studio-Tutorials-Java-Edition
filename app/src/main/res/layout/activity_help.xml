@@ -59,8 +59,6 @@
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="?attr/selectableItemBackground"
-                app:cardBackgroundColor="?attr/colorSurfaceVariant"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewBottomRoundedFilled">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -115,6 +113,11 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
             </com.google.android.material.card.MaterialCardView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="72dp" />
+
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

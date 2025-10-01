@@ -13,10 +13,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.SearchView;
 import androidx.core.view.MenuHost;
 import androidx.core.view.MenuProvider;
@@ -30,12 +30,11 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView;
 import com.d4rk.androidtutorials.java.databinding.FragmentAndroidStudioBinding;
-import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioCategoryBinding;
-import com.d4rk.androidtutorials.java.databinding.ItemAndroidStudioLessonBinding;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.textview.MaterialTextView;
@@ -375,13 +374,13 @@ public class AndroidStudioFragment extends Fragment {
                 adView.setNativeAdLayout(R.layout.ad_android_studio_list);
                 return new AdHolder(adView);
             } else if (viewType == TYPE_CATEGORY) {
-                ItemAndroidStudioCategoryBinding binding = ItemAndroidStudioCategoryBinding.inflate(
-                        LayoutInflater.from(parent.getContext()), parent, false);
-                return new CategoryHolder(binding);
+                View view = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.item_preference_category, parent, false);
+                return new CategoryHolder(view);
             } else {
-                ItemAndroidStudioLessonBinding binding = ItemAndroidStudioLessonBinding.inflate(
-                        LayoutInflater.from(parent.getContext()), parent, false);
-                return new LessonHolder(binding);
+                View view = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.item_preference, parent, false);
+                return new LessonHolder(view);
             }
         }
 
@@ -425,26 +424,38 @@ public class AndroidStudioFragment extends Fragment {
 
         static class LessonHolder extends RecyclerView.ViewHolder {
             final MaterialCardView card;
-            final AppCompatImageView icon;
+            final ShapeableImageView icon;
             final MaterialTextView title;
             final MaterialTextView summary;
+            final FrameLayout widgetFrame;
             final MaterialButton externalButton;
+            final FrameLayout iconFrame;
 
-            LessonHolder(@NonNull ItemAndroidStudioLessonBinding binding) {
-                super(binding.getRoot());
-                card = binding.lessonCard;
-                icon = binding.lessonIcon;
-                title = binding.lessonTitle;
-                summary = binding.lessonSummary;
-                externalButton = binding.lessonExternalIcon;
+            LessonHolder(@NonNull View itemView) {
+                super(itemView);
+                card = (MaterialCardView) itemView;
+                icon = itemView.findViewById(android.R.id.icon);
+                title = itemView.findViewById(android.R.id.title);
+                summary = itemView.findViewById(android.R.id.summary);
+                widgetFrame = itemView.findViewById(android.R.id.widget_frame);
+                iconFrame = itemView.findViewById(android.R.id.icon_frame);
+                LayoutInflater.from(itemView.getContext())
+                        .inflate(R.layout.item_preference_widget_open_in_new, widgetFrame, true);
+                externalButton = widgetFrame.findViewById(R.id.open_in_new);
             }
 
             void bind(Lesson lesson, boolean first, boolean last) {
                 if (lesson.iconRes != 0) {
                     icon.setImageResource(lesson.iconRes);
                     icon.setVisibility(View.VISIBLE);
+                    if (iconFrame != null) {
+                        iconFrame.setVisibility(View.VISIBLE);
+                    }
                 } else {
                     icon.setVisibility(View.GONE);
+                    if (iconFrame != null) {
+                        iconFrame.setVisibility(View.GONE);
+                    }
                 }
                 title.setText(lesson.title);
                 if (lesson.summary != null) {
@@ -454,10 +465,19 @@ public class AndroidStudioFragment extends Fragment {
                     summary.setVisibility(View.GONE);
                 }
                 boolean showExternalButton = lesson.opensInBrowser && lesson.intent != null;
+                widgetFrame.setVisibility(showExternalButton ? View.VISIBLE : View.GONE);
                 externalButton.setVisibility(showExternalButton ? View.VISIBLE : View.GONE);
+                externalButton.setEnabled(showExternalButton);
+                externalButton.setFocusableInTouchMode(showExternalButton);
                 if (showExternalButton) {
+                    externalButton.setClickable(true);
+                    externalButton.setFocusable(true);
+                    externalButton.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
                     externalButton.setOnClickListener(v -> v.getContext().startActivity(lesson.intent));
                 } else {
+                    externalButton.setClickable(false);
+                    externalButton.setFocusable(false);
+                    externalButton.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
                     externalButton.setOnClickListener(null);
                 }
                 itemView.setOnClickListener(v -> {
@@ -485,9 +505,9 @@ public class AndroidStudioFragment extends Fragment {
         static class CategoryHolder extends RecyclerView.ViewHolder {
             final MaterialTextView title;
 
-            CategoryHolder(@NonNull ItemAndroidStudioCategoryBinding binding) {
-                super(binding.getRoot());
-                title = binding.categoryTitle;
+            CategoryHolder(@NonNull View itemView) {
+                super(itemView);
+                title = itemView.findViewById(android.R.id.title);
             }
 
             void bind(Category category) {
