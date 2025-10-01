@@ -37,10 +37,11 @@ public class AppOpenAdManagerTest {
 
     private Class<?> managerClass;
     private Object manager;
+    private Application application;
 
     @Before
     public void setUp() throws Exception {
-        Application application = mock(Application.class);
+        application = mock(Application.class);
         when(application.getApplicationContext()).thenReturn(application);
 
         managerClass = findManagerClass();
@@ -101,7 +102,7 @@ public class AppOpenAdManagerTest {
 
             invokeShowAdIfAvailable(activity, listener);
 
-            adUtils.verify(() -> AdUtils.initialize(any(Context.class)));
+            adUtils.verify(() -> AdUtils.initialize(application));
             appOpenAdStatic.verify(() -> com.google.android.gms.ads.appopen.AppOpenAd.load(
                     any(Context.class),
                     anyString(),
