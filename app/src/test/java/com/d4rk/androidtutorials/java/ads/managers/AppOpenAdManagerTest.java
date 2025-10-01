@@ -4,6 +4,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.times;
@@ -43,6 +44,7 @@ public class AppOpenAdManagerTest {
     public void setUp() throws Exception {
         application = mock(Application.class);
         when(application.getApplicationContext()).thenReturn(application);
+        when(application.getString(anyInt())).thenReturn("test-app-open-ad-unit-id");
 
         managerClass = findManagerClass();
         Constructor<?> constructor = managerClass.getDeclaredConstructor(Application.class);
