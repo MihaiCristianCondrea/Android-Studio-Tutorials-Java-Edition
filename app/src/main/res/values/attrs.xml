@@ -2,6 +2,7 @@
 <resources>
     <declare-styleable name="NativeAdBannerView">
         <attr name="nativeAdLayout" format="reference" />
+        <attr name="nativeAdUnitId" format="reference|string" />
     </declare-styleable>
 </resources>
 

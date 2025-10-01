@@ -58,5 +58,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:nativeAdUnitId="@string/native_ad_code_example_unit_id"
         app:nativeAdLayout="@layout/ad_lesson_code" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ads.managers;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,18 +31,18 @@ public class NativeAdLoader {
     private static final String TAG = "NativeAdLoader";
 
     public static void load(@NonNull Context context, @NonNull ViewGroup container) {
-        load(context, container, R.layout.ad_home_banner_large, new AdRequest.Builder().build(), null);
+        load(context, container, R.layout.ad_home_banner_large, null, new AdRequest.Builder().build(), null);
     }
 
     public static void load(@NonNull Context context, @NonNull ViewGroup container, @LayoutRes int layoutRes) {
-        load(context, container, layoutRes, new AdRequest.Builder().build(), null);
+        load(context, container, layoutRes, null, new AdRequest.Builder().build(), null);
     }
 
     public static void load(@NonNull Context context,
                             @NonNull ViewGroup container,
                             @LayoutRes int layoutRes,
                             @androidx.annotation.Nullable AdListener listener) {
-        load(context, container, layoutRes, new AdRequest.Builder().build(), listener);
+        load(context, container, layoutRes, null, new AdRequest.Builder().build(), listener);
     }
 
     public static void load(@NonNull Context context,
@@ -49,7 +50,20 @@ public class NativeAdLoader {
                             @LayoutRes int layoutRes,
                             @NonNull AdRequest adRequest,
                             @androidx.annotation.Nullable AdListener listener) {
-        AdLoader.Builder builder = new AdLoader.Builder(context, context.getString(R.string.native_ad_banner_unit_id))
+        load(context, container, layoutRes, null, adRequest, listener);
+    }
+
+    public static void load(@NonNull Context context,
+                            @NonNull ViewGroup container,
+                            @LayoutRes int layoutRes,
+                            @androidx.annotation.Nullable String adUnitId,
+                            @NonNull AdRequest adRequest,
+                            @androidx.annotation.Nullable AdListener listener) {
+        String resolvedAdUnitId = TextUtils.isEmpty(adUnitId)
+                ? context.getString(R.string.native_ad_fallback_unit_id)
+                : adUnitId;
+
+        AdLoader.Builder builder = new AdLoader.Builder(context, resolvedAdUnitId)
                 .forNativeAd(nativeAd -> {
                     LayoutInflater inflater = LayoutInflater.from(context);
                     NativeAdView adView = (NativeAdView) inflater.inflate(layoutRes, container, false);

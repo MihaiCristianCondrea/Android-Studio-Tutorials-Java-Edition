@@ -123,6 +123,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                app:nativeAdUnitId="@string/native_ad_support_unit_id"
                 app:nativeAdLayout="@layout/ad_support" />
 
             <com.google.android.gms.ads.AdView

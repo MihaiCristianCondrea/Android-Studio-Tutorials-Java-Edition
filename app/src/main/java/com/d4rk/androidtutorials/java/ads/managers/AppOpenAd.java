@@ -13,6 +13,7 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 import androidx.lifecycle.ProcessLifecycleOwner;
 
+import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
@@ -83,8 +84,8 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
     }
 
     private static class AppOpenAdManager {
-        private static final String AD_UNIT_ID = "ca-app-pub-5294151573817700/9123330876";
         private final Application application;
+        private final String adUnitId;
         private com.google.android.gms.ads.appopen.AppOpenAd appOpenAd = null;
         private boolean isLoadingAd = false;
         private boolean isShowingAd = false;
@@ -92,6 +93,7 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
 
         public AppOpenAdManager(Application application) {
             this.application = application;
+            this.adUnitId = application.getString(R.string.app_open_ad_unit_id);
         }
 
         private void loadAd(Context context) {
@@ -101,7 +103,7 @@ public class AppOpenAd extends Application implements ActivityLifecycleCallbacks
             }
             isLoadingAd = true;
             AdRequest request = new AdRequest.Builder().build();
-            com.google.android.gms.ads.appopen.AppOpenAd.load(context, AD_UNIT_ID, request, new AppOpenAdLoadCallback() {
+            com.google.android.gms.ads.appopen.AppOpenAd.load(context, adUnitId, request, new AppOpenAdLoadCallback() {
                 @Override
                 public void onAdLoaded(@NonNull com.google.android.gms.ads.appopen.AppOpenAd ad) {
                     appOpenAd = ad;

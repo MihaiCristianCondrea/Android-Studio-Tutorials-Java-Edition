@@ -167,6 +167,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
+            app:nativeAdUnitId="@string/native_ad_about_unit_id"
             app:nativeAdLayout="@layout/ad_about" />
 
         <com.airbnb.lottie.LottieAnimationView

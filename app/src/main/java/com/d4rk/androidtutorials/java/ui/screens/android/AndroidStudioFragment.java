@@ -372,6 +372,7 @@ public class AndroidStudioFragment extends Fragment {
                         ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.WRAP_CONTENT));
                 adView.setNativeAdLayout(R.layout.ad_android_studio_list);
+                adView.setNativeAdUnitId(R.string.native_ad_lessons_list_unit_id);
                 return new AdHolder(adView);
             } else if (viewType == TYPE_CATEGORY) {
                 View view = LayoutInflater.from(parent.getContext())

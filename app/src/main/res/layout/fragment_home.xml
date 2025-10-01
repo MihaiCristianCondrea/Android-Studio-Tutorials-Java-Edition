@@ -150,6 +150,7 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
+                app:nativeAdUnitId="@string/native_ad_home_unit_id"
                 app:nativeAdLayout="@layout/ad_home_banner_large" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -218,6 +219,7 @@
                 android:id="@+id/small_banner_ad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:nativeAdUnitId="@string/native_ad_home_unit_id"
                 app:nativeAdLayout="@layout/ad_home_banner_small" />
 
             <com.airbnb.lottie.LottieAnimationView

@@ -32,5 +32,6 @@
         android:id="@+id/ad_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:nativeAdUnitId="@string/native_ad_lesson_description_unit_id"
         app:nativeAdLayout="@layout/ad_lesson_description" />
 </androidx.appcompat.widget.LinearLayoutCompat>
