@@ -48,75 +48,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         setPreferencesFromResource(R.xml.preferences_settings, rootKey);
         SettingsActivity activity = (SettingsActivity) requireActivity();
         SettingsViewModel settingsViewModel = activity.getSettingsViewModel();
-        ListPreference labelVisibilityMode = findPreference(getString(R.string.key_bottom_navigation_bar_labels));
-        if (labelVisibilityMode != null) {
-            labelVisibilityMode.setOnPreferenceChangeListener((preference, newValue) -> {
-                RequireRestartDialog restartDialog = new RequireRestartDialog();
-                restartDialog.show(getChildFragmentManager(), RequireRestartDialog.class.getName());
-                return true;
-            });
-        }
-        SwitchPreferenceCompat consentAnalyticsPreference =
-                findPreference(getString(R.string.key_consent_analytics));
-        if (consentAnalyticsPreference != null) {
-            consentAnalyticsPreference.setOnPreferenceChangeListener((preference, newValue) -> {
-                if (newValue instanceof Boolean && settingsViewModel != null) {
-                    settingsViewModel.setConsentAccepted((Boolean) newValue);
-                }
-                return true;
-            });
-        }
-        ListPreference defaultTab = findPreference(getString(R.string.key_default_tab));
-        if (defaultTab != null) {
-            defaultTab.setOnPreferenceChangeListener((preference, newValue) -> {
-                RequireRestartDialog restartDialog = new RequireRestartDialog();
-                restartDialog.show(getChildFragmentManager(), RequireRestartDialog.class.getName());
-                return true;
-            });
-        }
-        Preference ossPreference = findPreference(getString(R.string.key_open_source_licenses));
-        if (ossPreference != null) {
-            ossPreference.setOnPreferenceClickListener(preference -> {
-                OpenSourceLicensesUtils.openLicensesScreen(requireContext());
-                return true;
-            });
-        }
-        Preference notificationsSettings = findPreference(getString(R.string.key_notifications_settings));
-        if (notificationsSettings != null) {
-            notificationsSettings.setOnPreferenceClickListener(preference -> {
-                Context context = getContext();
-                if (context != null) {
-                    Intent intent;
-
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        intent = new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS);
-                        intent.putExtra(Settings.EXTRA_APP_PACKAGE, context.getPackageName());
-                    } else {
-                        intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                        Uri uri = Uri.fromParts("package", context.getPackageName(), null);
-                        intent.setData(uri);
-                    }
-                    startActivity(intent);
-                    return true;
-                } else {
-                    return false;
-                }
-            });
-        }
-        Preference deviceInfoPreference = findPreference(getString(R.string.key_device_info));
-        if (deviceInfoPreference != null) {
-            String version = String.format(getResources().getString(R.string.app_build), String.format("%s %s", getResources().getString(R.string.manufacturer), Build.MANUFACTURER), String.format("%s %s", getResources().getString(R.string.device_model), Build.MODEL), String.format("%s %s", getResources().getString(R.string.android_version), Build.VERSION.RELEASE), String.format("%s %s", getResources().getString(R.string.api_level), Build.VERSION.SDK_INT), String.format("%s %s", getResources().getString(R.string.arch), TextUtils.join(",", Build.SUPPORTED_ABIS)));
-            deviceInfoPreference.setSummary(version);
-            deviceInfoPreference.setOnPreferenceClickListener(preference -> {
-                ClipboardManager clipboard = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText("text", version);
-                clipboard.setPrimaryClip(clip);
-                if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2) {
-                    Toast.makeText(getContext(), R.string.snack_copied_to_clipboard, Toast.LENGTH_SHORT).show();
-                }
-                return true;
-            });
-        }
+        setupLabelVisibilityPreference();
+        setupConsentAnalyticsPreference(settingsViewModel);
+        setupDefaultTabPreference();
+        setupOpenSourceLicensesPreference();
+        setupNotificationsPreference();
+        setupDeviceInfoPreference();
     }
 
     @Override
@@ -132,6 +69,108 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         listView.setClipToPadding(false);
         listView.addItemDecoration(new PreferenceSpacingDecoration(requireContext()));
         setupPreferenceCardStyling(listView);
+    }
+
+    private void setupLabelVisibilityPreference() {
+        ListPreference labelVisibilityMode =
+                findPreference(getString(R.string.key_bottom_navigation_bar_labels));
+        if (labelVisibilityMode != null) {
+            labelVisibilityMode.setOnPreferenceChangeListener((preference, newValue) -> {
+                RequireRestartDialog restartDialog = new RequireRestartDialog();
+                restartDialog.show(getChildFragmentManager(), RequireRestartDialog.class.getName());
+                return true;
+            });
+        }
+    }
+
+    private void setupConsentAnalyticsPreference(@NonNull SettingsViewModel settingsViewModel) {
+        SwitchPreferenceCompat consentAnalyticsPreference =
+                findPreference(getString(R.string.key_consent_analytics));
+        if (consentAnalyticsPreference != null) {
+            consentAnalyticsPreference.setOnPreferenceChangeListener((preference, newValue) -> {
+                if (newValue instanceof Boolean) {
+                    settingsViewModel.setConsentAccepted((Boolean) newValue);
+                }
+                return true;
+            });
+        }
+    }
+
+    private void setupDefaultTabPreference() {
+        ListPreference defaultTab = findPreference(getString(R.string.key_default_tab));
+        if (defaultTab != null) {
+            defaultTab.setOnPreferenceChangeListener((preference, newValue) -> {
+                RequireRestartDialog restartDialog = new RequireRestartDialog();
+                restartDialog.show(getChildFragmentManager(), RequireRestartDialog.class.getName());
+                return true;
+            });
+        }
+    }
+
+    private void setupOpenSourceLicensesPreference() {
+        Preference ossPreference = findPreference(getString(R.string.key_open_source_licenses));
+        if (ossPreference != null) {
+            ossPreference.setOnPreferenceClickListener(preference -> {
+                OpenSourceLicensesUtils.openLicensesScreen(requireContext());
+                return true;
+            });
+        }
+    }
+
+    private void setupNotificationsPreference() {
+        Preference notificationsSettings = findPreference(getString(R.string.key_notifications_settings));
+        if (notificationsSettings != null) {
+            notificationsSettings.setOnPreferenceClickListener(preference -> {
+                Context context = getContext();
+                if (context == null) {
+                    return false;
+                }
+                Intent intent;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    intent = new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS);
+                    intent.putExtra(Settings.EXTRA_APP_PACKAGE, context.getPackageName());
+                } else {
+                    intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                    Uri uri = Uri.fromParts("package", context.getPackageName(), null);
+                    intent.setData(uri);
+                }
+                startActivity(intent);
+                return true;
+            });
+        }
+    }
+
+    private void setupDeviceInfoPreference() {
+        Preference deviceInfoPreference = findPreference(getString(R.string.key_device_info));
+        if (deviceInfoPreference == null) {
+            return;
+        }
+        String version = buildDeviceInfoSummary();
+        deviceInfoPreference.setSummary(version);
+        deviceInfoPreference.setOnPreferenceClickListener(preference -> {
+            ClipboardManager clipboard =
+                    (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("text", version);
+            clipboard.setPrimaryClip(clip);
+            if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2) {
+                Toast.makeText(getContext(), R.string.snack_copied_to_clipboard,
+                        Toast.LENGTH_SHORT).show();
+            }
+            return true;
+        });
+    }
+
+    @NonNull
+    private String buildDeviceInfoSummary() {
+        return String.format(getResources().getString(R.string.app_build),
+                String.format("%s %s", getResources().getString(R.string.manufacturer),
+                        Build.MANUFACTURER),
+                String.format("%s %s", getResources().getString(R.string.device_model), Build.MODEL),
+                String.format("%s %s", getResources().getString(R.string.android_version),
+                        Build.VERSION.RELEASE),
+                String.format("%s %s", getResources().getString(R.string.api_level), Build.VERSION.SDK_INT),
+                String.format("%s %s", getResources().getString(R.string.arch),
+                        TextUtils.join(",", Build.SUPPORTED_ABIS)));
     }
 
     @Override
