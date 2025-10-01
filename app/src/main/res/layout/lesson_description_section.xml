@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/description_header"
+        layout="@layout/lesson_section_header"
+        tools:text="@string/description" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/description_card"
+        style="@style/Widget.Material3.CardView.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="4dp"
+        app:contentPadding="24dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardViewTopRoundedOutlined">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/description_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Lorem ipsum" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:nativeAdLayout="@layout/ad_lesson_description" />
+</androidx.appcompat.widget.LinearLayoutCompat>

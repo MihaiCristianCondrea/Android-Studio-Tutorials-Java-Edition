@@ -8,6 +8,8 @@ import android.os.SystemClock;
 
 import androidx.annotation.Nullable;
 
+import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityChronometerBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
@@ -25,6 +27,11 @@ public class ChronometerActivity extends UpNavigationActivity {
 
 
         EdgeToEdgeDelegate.apply(this, binding.container);
+
+        binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
+        binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);
+        binding.descriptionSection.descriptionText.setText(R.string.summary_chronometer);
+        AdUtils.loadBanner(binding.descriptionSection.adView);
 
         binding.floatingButtonShowSyntax.setOnClickListener(v -> {
             Intent intent = new Intent(this, CodeActivity.class);

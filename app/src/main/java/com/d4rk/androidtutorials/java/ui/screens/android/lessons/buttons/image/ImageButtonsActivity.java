@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityImageButtonsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
@@ -23,6 +24,11 @@ public class ImageButtonsActivity extends UpNavigationActivity {
         setContentView(binding.getRoot());
 
         EdgeToEdgeDelegate.apply(this, binding.container);
+
+        binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
+        binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);
+        binding.descriptionSection.descriptionText.setText(R.string.summary_image_buttons);
+        AdUtils.loadBanner(binding.descriptionSection.adView);
 
         binding.imageButton.setOnClickListener(v ->
                 Snackbar.make(binding.getRoot(), R.string.snack_image_button, Snackbar.LENGTH_SHORT).show()
