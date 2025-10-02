@@ -375,6 +375,7 @@
     <string name="summary_preference_android_studio_gird_view">網格視圖 (Grid View) 是一個視圖群組，它在二維滾動網格中顯示項目。網格視圖通常用於以網格狀格式顯示圖像、清單或其他類型的資料。</string>
     <string name="summary_preference_android_studio_image_view">Android ImageView 是一種用於顯示圖像的視圖。它是 Android View 類別的子類別，用於在應用程式中顯示圖像。ImageView 用於顯示圖形或照片等圖像。它們可用於顯示靜態圖像或在執行階段更新的圖像。</string>
     <string name="summary_preference_android_studio_web_view">一個顯示網頁的視圖。基本用法。在大多數情況下，我們建議使用標準的網頁瀏覽器，如 Chrome，向使用者傳遞內容。</string>
+    <string name="summary_preference_android_studio_spinner">下拉式選單為使用者提供從清單中選擇單一值的精簡方式。了解如何使用 ArrayAdapter 填入資料、回應選取動作並顯示所選項目。</string>
     <string name="summary_preference_android_studio_buttons">探索更多關於一般按鈕的知識以及您可以用它們做些什麼。學習如何讓它們看起來美觀整潔。</string>
     <string name="summary_preference_android_studio_radio_buttons">單選按鈕允許使用者從一組選項中選擇一個。如果您認為使用者需要並排看到所有可用選項，則應將單選按鈕用於互斥的選項集。</string>
     <string name="summary_preference_android_studio_image_buttons">顯示一個帶有圖像（而非文字）的按鈕，使用者可以按下或點擊。預設情況下，ImageButton 看起來像一個常規的 Button，具有在不同按鈕狀態下會改變顏色的標準按鈕背景。按鈕表面的圖像可以透過 ImageButton XML 元素中的 android:src 屬性或 ImageView.setImageResource(int) 方法來定義。</string>

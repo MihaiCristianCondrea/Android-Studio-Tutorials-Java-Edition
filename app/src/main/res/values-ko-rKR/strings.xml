@@ -375,6 +375,7 @@
     <string name="summary_preference_android_studio_gird_view">그리드 뷰는 2차원 스크롤 그리드에 항목을 표시하는 뷰 그룹입니다. 그리드 뷰는 종종 이미지, 목록 또는 기타 유형의 데이터를 그리드와 같은 형식으로 표시하는 데 사용됩니다.</string>
     <string name="summary_preference_android_studio_image_view">Android ImageView는 이미지를 표시하는 데 사용되는 뷰입니다. 이는 Android View 클래스의 하위 클래스이며 애플리케이션에서 이미지를 표시하는 데 사용됩니다. ImageView는 그래픽이나 사진과 같은 이미지를 표시하는 데 사용됩니다. 정적 이미지를 표시하거나 런타임에 업데이트되는 이미지를 표시하는 데 사용할 수 있습니다.</string>
     <string name="summary_preference_android_studio_web_view">웹 페이지를 표시하는 뷰입니다. 기본적인 사용법입니다. 대부분의 경우 Chrome과 같은 표준 웹 브라우저를 사용하여 사용자에게 콘텐츠를 전달하는 것을 권장합니다.</string>
+    <string name="summary_preference_android_studio_spinner">스피너는 사용자가 목록에서 하나의 값을 선택할 수 있는 컴팩트한 방식을 제공합니다. ArrayAdapter로 항목을 채우고 선택에 반응하며 선택한 항목을 표시하는 방법을 알아보세요.</string>
     <string name="summary_preference_android_studio_buttons">일반 버튼에 대한 더 많은 정보와 이를 통해 무엇을 할 수 있는지 알아보세요. 버튼을 아름답고 깔끔하게 보이게 하는 방법을 배워보세요.</string>
     <string name="summary_preference_android_studio_radio_buttons">라디오 버튼을 사용하면 사용자가 집합에서 하나의 옵션을 선택할 수 있습니다. 사용자가 사용 가능한 모든 옵션을 나란히 볼 필요가 있다고 생각되면 상호 배타적인 선택적 집합에 라디오 버튼을 사용해야 합니다.</string>
     <string name="summary_preference_android_studio_image_buttons">사용자가 누르거나 클릭할 수 있는 이미지(텍스트 대신)가 있는 버튼을 표시합니다. 기본적으로 ImageButton은 일반 버튼처럼 보이며, 다른 버튼 상태 동안 색상이 변경되는 표준 버튼 배경이 있습니다. 버튼 표면의 이미지는 ImageButton XML 요소의 android:src 속성이나 ImageView.setImageResource(int) 메서드로 정의됩니다.</string>

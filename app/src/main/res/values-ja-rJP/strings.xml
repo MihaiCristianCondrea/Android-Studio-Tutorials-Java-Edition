@@ -423,6 +423,7 @@
     <string name="summary_preference_android_studio_gird_view">グリッドビューは、2次元スクロールグリッドにアイテムを表示するビューグループです。グリッドビューは、グリッドのような形式で画像、リスト、またはその他の種類のデータを表示するためによく使用されます。</string>
     <string name="summary_preference_android_studio_image_view">Android ImageViewは、画像を表示するために使用されるビューです。 Android Viewクラスのサブクラスであり、アプリケーションで画像を表示するために使用されます。 ImageViewは、グラフィックや写真などの画像を表示するために使用されます。静的な画像を表示したり、実行時に更新される画像を表示するために使用できます。</string>
     <string name="summary_preference_android_studio_web_view">Webページを表示するビュー。基本的な使用法。ほとんどの場合、Chromeなどの標準のWebブラウザを使用して、ユーザーにコンテンツを配信することをお勧めします。</string>
+    <string name="summary_preference_android_studio_spinner">スピナーは、リストから単一の値を選択するためのコンパクトな方法を提供します。ArrayAdapter で項目を設定し、選択に応答し、選ばれた項目を表示する方法を学びましょう。</string>
     <string name="summary_preference_android_studio_buttons">一般的なボタンとそれらでできることについてもっと多くのことを発見してください。美しさときれいに見えるようにする方法を学びます。</string>
     <string name="summary_preference_android_studio_radio_buttons">ラジオボタンを使用すると、ユーザーはセットから1つのオプションを選択できます。ユーザーが利用可能なすべてのオプションを並べて表示する必要があると思われる場合は、相互に排他的なオプションのセットにはラジオボタンを使用する必要があります。</string>
     <string name="summary_preference_android_studio_image_buttons">ユーザーが押したりクリックしたりできる画像（テキストの代わりに）を使用してボタンを表示します。デフォルトでは、ImageButtonは通常のボタンのように見えます。標準ボタンの背景は、さまざまなボタン状態で色を変更します。ボタンの表面上の画像は、ImageButton XML要素のandroid:src属性またはImageView.setImageResource(int)メソッドのいずれかによって定義されます。</string>
