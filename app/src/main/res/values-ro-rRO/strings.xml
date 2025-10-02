@@ -173,6 +173,13 @@
 
 
     <string name="web_view">Vizualizare web</string>
+    <string name="spinner">Listă derulantă</string>
+    <string name="spinner_choose_label">Alege o categorie</string>
+    <string name="spinner_description">Folosește lista derulantă pentru a explora diferite subiecte de lecții Android.</string>
+    <string name="spinner_prompt">Alege o lecție</string>
+    <string name="spinner_selected_none">Selectează un element pentru a-l vedea aici.</string>
+    <string name="spinner_selected_format">Selectat: %1$s</string>
+    <string name="spinner_selected_example">Selectat: Navigare</string>
 
 
     <string name="buttons_and_switches">Butoane și comutatoare</string>

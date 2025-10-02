@@ -1,3 +1,9 @@
+# Version 5.0.3:
+
+- **New**: A cleaner, more intuitive layout awaits in your app settings.
+- **Patch**: Minor visual fixes and UI adjustments.
+- **Patch**: General bug fixes for better performance.
+
 # Version 5.0.2:
 
 - **New**: Added a Room database lesson demonstrating entity & DAO.

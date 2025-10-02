@@ -183,6 +183,13 @@
 
 
     <string name="web_view">Widok internetowy</string>
+    <string name="spinner">Lista rozwijana</string>
+    <string name="spinner_choose_label">Wybierz kategorię</string>
+    <string name="spinner_description">Użyj listy rozwijanej, aby odkrywać różne tematy lekcji Androida.</string>
+    <string name="spinner_prompt">Wybierz lekcję</string>
+    <string name="spinner_selected_none">Wybierz element, aby zobaczyć go tutaj.</string>
+    <string name="spinner_selected_format">Wybrano: %1$s</string>
+    <string name="spinner_selected_example">Wybrano: Nawigacja</string>
 
 
     <string name="buttons_and_switches">Przyciski i przełączniki</string>

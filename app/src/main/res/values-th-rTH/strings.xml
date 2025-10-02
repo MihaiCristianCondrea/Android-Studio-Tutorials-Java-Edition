@@ -146,6 +146,13 @@
     <string name="grid_view">Grid View</string>
     <string name="image_view">Image View</string>
     <string name="web_view">Web View</string>
+    <string name="spinner">สปินเนอร์</string>
+    <string name="spinner_choose_label">เลือกหมวดหมู่</string>
+    <string name="spinner_description">ใช้ดรอปดาวน์เพื่อสำรวจหัวข้อบทเรียน Android ต่าง ๆ</string>
+    <string name="spinner_prompt">เลือกบทเรียน</string>
+    <string name="spinner_selected_none">เลือกไอเท็มเพื่อดูที่นี่</string>
+    <string name="spinner_selected_format">ที่เลือก: %1$s</string>
+    <string name="spinner_selected_example">ที่เลือก: การนำทาง</string>
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">ปุ่ม</string>
     <string name="button">ปุ่ม</string>

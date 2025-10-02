@@ -145,6 +145,15 @@
                 android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.web.WebViewActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_spinner"
+            app:summary="@string/summary_preference_android_studio_spinner"
+            app:title="@string/spinner">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.spinner.SpinnerActivity"
+                android:targetPackage="com.d4rk.androidtutorials.java" />
+        </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
         app:icon="@drawable/ic_category_button_tinted"

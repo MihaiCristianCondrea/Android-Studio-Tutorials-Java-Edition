@@ -144,6 +144,13 @@
     <string name="grid_view">Chế độ xem lưới</string>
     <string name="image_view">Chế độ xem hình ảnh</string>
     <string name="web_view">Chế độ xem web</string>
+    <string name="spinner">Danh sách thả xuống</string>
+    <string name="spinner_choose_label">Chọn một danh mục</string>
+    <string name="spinner_description">Sử dụng danh sách thả xuống để khám phá các chủ đề bài học Android khác nhau.</string>
+    <string name="spinner_prompt">Chọn một bài học</string>
+    <string name="spinner_selected_none">Chọn một mục để xem tại đây.</string>
+    <string name="spinner_selected_format">Đã chọn: %1$s</string>
+    <string name="spinner_selected_example">Đã chọn: Điều hướng</string>
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Các nút</string>
     <string name="button">Nút</string>

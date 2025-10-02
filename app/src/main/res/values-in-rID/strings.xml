@@ -166,6 +166,13 @@
     <string name="image_view">Tampilan Gambar</string>
 
     <string name="web_view">Tampilan Web</string>
+    <string name="spinner">Spinner</string>
+    <string name="spinner_choose_label">Pilih kategori</string>
+    <string name="spinner_description">Gunakan menu dropdown untuk mengeksplor topik pelajaran Android yang berbeda.</string>
+    <string name="spinner_prompt">Pilih pelajaran</string>
+    <string name="spinner_selected_none">Pilih item untuk menampilkannya di sini.</string>
+    <string name="spinner_selected_format">Dipilih: %1$s</string>
+    <string name="spinner_selected_example">Dipilih: Navigasi</string>
 
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Tombol</string>

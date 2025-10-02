@@ -167,6 +167,13 @@
     <string name="image_view">इमेज व्यू</string>
 
     <string name="web_view">वेब व्यू</string>
+    <string name="spinner">स्पिनर</string>
+    <string name="spinner_choose_label">कोई श्रेणी चुनें</string>
+    <string name="spinner_description">विभिन्न Android पाठ विषयों का पता लगाने के लिए ड्रॉपडाउन का उपयोग करें।</string>
+    <string name="spinner_prompt">एक पाठ चुनें</string>
+    <string name="spinner_selected_none">इसे यहाँ देखने के लिए कोई आइटम चुनें।</string>
+    <string name="spinner_selected_format">चयनित: %1$s</string>
+    <string name="spinner_selected_example">चयनित: नेविगेशन</string>
 
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">बटन</string>

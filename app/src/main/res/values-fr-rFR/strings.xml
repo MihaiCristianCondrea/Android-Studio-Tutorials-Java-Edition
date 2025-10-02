@@ -166,6 +166,13 @@
     <string name="image_view">Vue d\'image</string>
 
     <string name="web_view">Vue Web</string>
+    <string name="spinner">Spinner</string>
+    <string name="spinner_choose_label">Choisissez une catégorie</string>
+    <string name="spinner_description">Utilisez le menu déroulant pour explorer différents sujets de leçons Android.</string>
+    <string name="spinner_prompt">Choisissez une leçon</string>
+    <string name="spinner_selected_none">Sélectionnez un élément pour l\'afficher ici.</string>
+    <string name="spinner_selected_format">Sélectionné : %1$s</string>
+    <string name="spinner_selected_example">Sélectionné : Navigation</string>
 
     <string name="buttons_and_switches">Boutons et interrupteurs</string>
     <string name="buttons">Boutons</string>

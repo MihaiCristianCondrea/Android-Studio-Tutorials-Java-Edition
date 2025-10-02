@@ -166,6 +166,13 @@
     <string name="image_view">ইমেজ ভিউ</string>
 
     <string name="web_view">ওয়েব ভিউ</string>
+    <string name="spinner">স্পিনার</string>
+    <string name="spinner_choose_label">একটি বিভাগ বেছে নিন</string>
+    <string name="spinner_description">বিভিন্ন অ্যান্ড্রয়েড পাঠের বিষয় অন্বেষণ করতে ড্রপডাউনটি ব্যবহার করুন।</string>
+    <string name="spinner_prompt">একটি পাঠ বেছে নিন</string>
+    <string name="spinner_selected_none">এখানে দেখতে একটি আইটেম নির্বাচন করুন।</string>
+    <string name="spinner_selected_format">নির্বাচিত: %1$s</string>
+    <string name="spinner_selected_example">নির্বাচিত: ন্যাভিগেশন</string>
 
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">বোতাম</string>

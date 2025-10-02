@@ -130,4 +130,11 @@
         <item>@string/daily_tip_accessibility</item>
         <item>@string/daily_tip_battery_optimization</item>
     </string-array>
+
+    <string-array name="spinner_lessons_entries">
+        <item>@string/layouts</item>
+        <item>@string/buttons</item>
+        <item>@string/navigation</item>
+        <item>@string/networking</item>
+    </string-array>
 </resources>

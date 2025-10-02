@@ -144,6 +144,13 @@
     <string name="grid_view">عرض شبكي (Grid View)</string>
     <string name="image_view">عرض الصور (Image View)</string>
     <string name="web_view">عرض الويب (Web View)</string>
+    <string name="spinner">قائمة منسدلة</string>
+    <string name="spinner_choose_label">اختر فئة</string>
+    <string name="spinner_description">استخدم القائمة المنسدلة لاستكشاف مواضيع دروس Android المختلفة.</string>
+    <string name="spinner_prompt">اختر درسًا</string>
+    <string name="spinner_selected_none">حدد عنصرًا لعرضه هنا.</string>
+    <string name="spinner_selected_format">المحدد: %1$s</string>
+    <string name="spinner_selected_example">المحدد: التنقل</string>
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">الأزرار</string>
     <string name="button">زر</string>

@@ -144,6 +144,13 @@
     <string name="grid_view">Visualização em Grade</string>
     <string name="image_view">Visualização de Imagem</string>
     <string name="web_view">Visualização da Web</string>
+    <string name="spinner">Spinner</string>
+    <string name="spinner_choose_label">Escolha uma categoria</string>
+    <string name="spinner_description">Use o menu suspenso para explorar diferentes tópicos de aulas de Android.</string>
+    <string name="spinner_prompt">Escolha uma lição</string>
+    <string name="spinner_selected_none">Selecione um item para vê-lo aqui.</string>
+    <string name="spinner_selected_format">Selecionado: %1$s</string>
+    <string name="spinner_selected_example">Selecionado: Navegação</string>
     <string name="buttons_and_switches">Botões e interruptores</string>
     <string name="buttons">Botões</string>
     <string name="button">Botão</string>

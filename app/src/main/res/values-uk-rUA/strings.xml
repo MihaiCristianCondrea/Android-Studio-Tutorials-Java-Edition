@@ -144,6 +144,13 @@
     <string name="grid_view">Сіткове представлення (Grid View)</string>
     <string name="image_view">Представлення зображення (Image View)</string>
     <string name="web_view">Веб-представлення (Web View)</string>
+    <string name="spinner">Випадний список</string>
+    <string name="spinner_choose_label">Виберіть категорію</string>
+    <string name="spinner_description">Скористайтеся випадним списком, щоб дослідити різні теми уроків Android.</string>
+    <string name="spinner_prompt">Виберіть урок</string>
+    <string name="spinner_selected_none">Виберіть елемент, щоб побачити його тут.</string>
+    <string name="spinner_selected_format">Вибрано: %1$s</string>
+    <string name="spinner_selected_example">Вибрано: Навігація</string>
     <string name="buttons_and_switches">Кнопки та перемикачі</string>
     <string name="buttons">Кнопки</string>
     <string name="button">Кнопка</string>

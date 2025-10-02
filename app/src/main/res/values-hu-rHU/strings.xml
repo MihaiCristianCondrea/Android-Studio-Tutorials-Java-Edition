@@ -183,6 +183,13 @@
 
 
     <string name="web_view">Webnézet</string>
+    <string name="spinner">Legördülő lista</string>
+    <string name="spinner_choose_label">Válassz kategóriát</string>
+    <string name="spinner_description">Használd a legördülő listát, hogy felfedezd a különböző Android-lecketémákat.</string>
+    <string name="spinner_prompt">Válassz egy leckét</string>
+    <string name="spinner_selected_none">Válassz ki egy elemet, hogy itt lásd.</string>
+    <string name="spinner_selected_format">Kiválasztva: %1$s</string>
+    <string name="spinner_selected_example">Kiválasztva: Navigáció</string>
 
 
     <string name="buttons_and_switches">Gombok és kapcsolók</string>

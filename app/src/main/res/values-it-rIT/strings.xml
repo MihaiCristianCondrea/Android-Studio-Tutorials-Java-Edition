@@ -183,6 +183,13 @@
 
 
     <string name="web_view">Vista Web</string>
+    <string name="spinner">Spinner</string>
+    <string name="spinner_choose_label">Scegli una categoria</string>
+    <string name="spinner_description">Usa il menu a discesa per esplorare diversi argomenti delle lezioni Android.</string>
+    <string name="spinner_prompt">Scegli una lezione</string>
+    <string name="spinner_selected_none">Seleziona un elemento per visualizzarlo qui.</string>
+    <string name="spinner_selected_format">Selezionato: %1$s</string>
+    <string name="spinner_selected_example">Selezionato: Navigazione</string>
 
 
     <string name="buttons_and_switches">Pulsanti e interruttori</string>

@@ -144,6 +144,13 @@
     <string name="grid_view">그리드 뷰 (Grid View)</string>
     <string name="image_view">이미지 뷰 (Image View)</string>
     <string name="web_view">웹 뷰 (Web View)</string>
+    <string name="spinner">스피너</string>
+    <string name="spinner_choose_label">카테고리를 선택하세요</string>
+    <string name="spinner_description">드롭다운을 사용하여 다양한 Android 레슨 주제를 살펴보세요.</string>
+    <string name="spinner_prompt">레슨을 선택하세요</string>
+    <string name="spinner_selected_none">여기에서 보려면 항목을 선택하세요.</string>
+    <string name="spinner_selected_format">선택됨: %1$s</string>
+    <string name="spinner_selected_example">선택됨: 내비게이션</string>
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">버튼</string>
     <string name="button">버튼</string>

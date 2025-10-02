@@ -183,6 +183,13 @@
 
 
     <string name="web_view">Webビュー</string>
+    <string name="spinner">スピナー</string>
+    <string name="spinner_choose_label">カテゴリを選択</string>
+    <string name="spinner_description">ドロップダウンを使ってさまざまなAndroidレッスンのトピックを確認しましょう。</string>
+    <string name="spinner_prompt">レッスンを選択</string>
+    <string name="spinner_selected_none">ここに表示する項目を選択してください。</string>
+    <string name="spinner_selected_format">選択済み: %1$s</string>
+    <string name="spinner_selected_example">選択済み: ナビゲーション</string>
 
 
     <string name="buttons_and_switches">ボタンとスイッチ</string>

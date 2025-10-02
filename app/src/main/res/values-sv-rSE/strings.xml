@@ -144,6 +144,13 @@
     <string name="grid_view">Rutnätsvy</string>
     <string name="image_view">Bildvy</string>
     <string name="web_view">Webbvy</string>
+    <string name="spinner">Rullgardinsmeny</string>
+    <string name="spinner_choose_label">Välj en kategori</string>
+    <string name="spinner_description">Använd rullgardinsmenyn för att utforska olika Android-lektioner.</string>
+    <string name="spinner_prompt">Välj en lektion</string>
+    <string name="spinner_selected_none">Välj ett objekt för att visa det här.</string>
+    <string name="spinner_selected_format">Valt: %1$s</string>
+    <string name="spinner_selected_example">Valt: Navigering</string>
     <string name="buttons_and_switches">Knappar och strömbrytare</string>
     <string name="buttons">Knappar</string>
     <string name="button">Knapp</string>

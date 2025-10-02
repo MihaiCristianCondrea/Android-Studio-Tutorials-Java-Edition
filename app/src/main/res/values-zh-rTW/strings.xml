@@ -144,6 +144,13 @@
     <string name="grid_view">格狀檢視</string>
     <string name="image_view">圖片檢視</string>
     <string name="web_view">網頁檢視</string>
+    <string name="spinner">下拉式選單</string>
+    <string name="spinner_choose_label">選擇類別</string>
+    <string name="spinner_description">使用下拉式選單探索不同的 Android 課程主題。</string>
+    <string name="spinner_prompt">選擇課程</string>
+    <string name="spinner_selected_none">選取項目即可在此顯示。</string>
+    <string name="spinner_selected_format">已選取：%1$s</string>
+    <string name="spinner_selected_example">已選取：導覽</string>
     <string name="buttons_and_switches">按鈕與開關</string>
     <string name="buttons">按鈕</string>
     <string name="button">按鈕</string>

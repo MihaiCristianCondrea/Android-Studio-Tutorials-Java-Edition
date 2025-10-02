@@ -144,6 +144,13 @@
     <string name="grid_view">گرڈ ویو</string>
     <string name="image_view">امیج ویو</string>
     <string name="web_view">ویب ویو</string>
+    <string name="spinner">اسپنر</string>
+    <string name="spinner_choose_label">کوئی زمرہ منتخب کریں</string>
+    <string name="spinner_description">مختلف اینڈرائیڈ سبق کے موضوعات کو دیکھنے کے لیے ڈراپ ڈاؤن استعمال کریں۔</string>
+    <string name="spinner_prompt">کوئی سبق منتخب کریں</string>
+    <string name="spinner_selected_none">یہاں دیکھنے کے لیے کوئی آئٹم منتخب کریں۔</string>
+    <string name="spinner_selected_format">منتخب شدہ: %1$s</string>
+    <string name="spinner_selected_example">منتخب شدہ: نیویگیشن</string>
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">بٹنز</string>
     <string name="button">بٹن</string>

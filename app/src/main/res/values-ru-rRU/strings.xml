@@ -166,6 +166,13 @@
     <string name="image_view">Вид изображения</string>
 
     <string name="web_view">Веб-представление</string>
+    <string name="spinner">Выпадающий список</string>
+    <string name="spinner_choose_label">Выберите категорию</string>
+    <string name="spinner_description">Используйте выпадающий список, чтобы изучить различные темы уроков Android.</string>
+    <string name="spinner_prompt">Выберите урок</string>
+    <string name="spinner_selected_none">Выберите элемент, чтобы увидеть его здесь.</string>
+    <string name="spinner_selected_format">Выбрано: %1$s</string>
+    <string name="spinner_selected_example">Выбрано: Навигация</string>
 
     <string name="buttons_and_switches">Кнопки и переключатели</string>
     <string name="buttons">Кнопки</string>

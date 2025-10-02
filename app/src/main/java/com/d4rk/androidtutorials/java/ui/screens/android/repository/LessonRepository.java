@@ -38,6 +38,8 @@ public class LessonRepository implements com.d4rk.androidtutorials.java.data.rep
                     new com.d4rk.androidtutorials.java.data.repository.LessonRepository.Lesson(R.string.grid_view, R.raw.text_grid_view_java, R.raw.text_grid_view_xml);
             case "WebView" ->
                     new com.d4rk.androidtutorials.java.data.repository.LessonRepository.Lesson(R.string.web_view, R.raw.text_webview_java, R.raw.text_webview_xml);
+            case "Spinner" ->
+                    new com.d4rk.androidtutorials.java.data.repository.LessonRepository.Lesson(R.string.spinner, R.raw.text_spinner_java, R.raw.text_spinner_xml);
             case "Retrofit" ->
                     new com.d4rk.androidtutorials.java.data.repository.LessonRepository.Lesson(R.string.retrofit, R.raw.text_retrofit_java, R.raw.text_retrofit_xml);
             case "BottomNavigation" ->

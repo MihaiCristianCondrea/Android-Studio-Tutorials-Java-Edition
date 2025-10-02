@@ -128,6 +128,16 @@
             android:exported="false"
             android:label="@string/web_view"
             android:parentActivityName=".ui.screens.main.MainActivity" />
+        <activity
+            android:name=".ui.screens.android.lessons.views.spinner.SpinnerActivity"
+            android:exported="false"
+            android:label="@string/spinner"
+            android:parentActivityName=".ui.screens.main.MainActivity" />
+        <activity
+            android:name=".ui.screens.android.lessons.views.spinner.SpinnerCodeActivity"
+            android:exported="false"
+            android:label="@string/spinner"
+            android:parentActivityName=".ui.screens.android.lessons.views.spinner.SpinnerActivity" />
 
         <activity-alias
             android:name="com.d4rk.androidtutorials.java.ui.android.webviews.WebViewActivity"

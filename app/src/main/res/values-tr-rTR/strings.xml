@@ -144,6 +144,13 @@
     <string name="grid_view">Izgara Görünümü (Grid View)</string>
     <string name="image_view">Resim Görünümü (Image View)</string>
     <string name="web_view">Web Görünümü (Web View)</string>
+    <string name="spinner">Açılır liste</string>
+    <string name="spinner_choose_label">Bir kategori seçin</string>
+    <string name="spinner_description">Farklı Android ders konularını keşfetmek için açılır listeyi kullanın.</string>
+    <string name="spinner_prompt">Bir ders seçin</string>
+    <string name="spinner_selected_none">Burada görmek için bir öğe seçin.</string>
+    <string name="spinner_selected_format">Seçilen: %1$s</string>
+    <string name="spinner_selected_example">Seçilen: Gezinme</string>
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Butonlar</string>
     <string name="button">Buton</string>

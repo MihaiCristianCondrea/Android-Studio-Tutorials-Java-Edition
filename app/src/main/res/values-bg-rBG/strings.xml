@@ -166,6 +166,13 @@
     <string name="image_view">Изглед на изображение (Image View)</string>
 
     <string name="web_view">Уеб изглед (Web View)</string>
+    <string name="spinner">Падащо меню</string>
+    <string name="spinner_choose_label">Изберете категория</string>
+    <string name="spinner_description">Използвайте падащото меню, за да разгледате различни теми на уроци за Android.</string>
+    <string name="spinner_prompt">Изберете урок</string>
+    <string name="spinner_selected_none">Изберете елемент, за да го видите тук.</string>
+    <string name="spinner_selected_format">Избрано: %1$s</string>
+    <string name="spinner_selected_example">Избрано: Навигация</string>
 
     <string name="buttons_and_switches">Бутони и превключватели</string>
     <string name="buttons">Бутони</string>

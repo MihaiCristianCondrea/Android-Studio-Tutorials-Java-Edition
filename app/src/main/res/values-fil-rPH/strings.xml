@@ -144,6 +144,13 @@
     <string name="grid_view">Grid View</string>
     <string name="image_view">Image View</string>
     <string name="web_view">Web View</string>
+    <string name="spinner">Spinner</string>
+    <string name="spinner_choose_label">Pumili ng kategorya</string>
+    <string name="spinner_description">Gamitin ang dropdown para galugarin ang iba\'t ibang paksa ng aralin sa Android.</string>
+    <string name="spinner_prompt">Pumili ng aralin</string>
+    <string name="spinner_selected_none">Pumili ng item para makita ito dito.</string>
+    <string name="spinner_selected_format">Napili: %1$s</string>
+    <string name="spinner_selected_example">Napili: Navigation</string>
     <string name="buttons_and_switches">Buttons and switches</string>
     <string name="buttons">Mga Button</string>
     <string name="button">Button</string>
