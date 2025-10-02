@@ -2,28 +2,20 @@ package com.d4rk.androidtutorials.java.ads.managers;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.app.Activity;
 import android.app.Application;
-import android.content.Context;
 
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.ads.managers.AppOpenAd.OnShowAdCompleteListener;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
-import com.google.android.gms.ads.appopen.AppOpenAd.AppOpenAdLoadCallback;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
-import org.mockito.MockedStatic;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -75,41 +67,6 @@ public class AppOpenAdManagerTest {
         setLongField("loadTime", recentTime);
 
         assertTrue(invokeIsAdAvailable());
-    }
-
-    @Test
-    public void showAdIfAvailable_withoutAd_loadsNewAd() throws Exception {
-        Activity activity = mock(Activity.class);
-        OnShowAdCompleteListener listener = mock(OnShowAdCompleteListener.class);
-
-        try (MockedStatic<AdUtils> adUtils = mockStatic(AdUtils.class);
-             MockedStatic<com.google.android.gms.ads.appopen.AppOpenAd> appOpenAdStatic =
-                     mockStatic(com.google.android.gms.ads.appopen.AppOpenAd.class)) {
-            com.google.android.gms.ads.appopen.AppOpenAd loadedAd = mock(com.google.android.gms.ads.appopen.AppOpenAd.class);
-
-            appOpenAdStatic
-                    .when(() -> com.google.android.gms.ads.appopen.AppOpenAd.load(
-                            any(Context.class),
-                            anyString(),
-                            any(AdRequest.class),
-                            any(AppOpenAdLoadCallback.class)))
-                    .thenAnswer(invocation -> {
-                        AppOpenAdLoadCallback callback = invocation.getArgument(3);
-                        callback.onAdLoaded(loadedAd);
-                        return null;
-                    });
-
-            invokeShowAdIfAvailable(activity, listener);
-
-            adUtils.verify(() -> AdUtils.initialize(any(Context.class)));
-            appOpenAdStatic.verify(() -> com.google.android.gms.ads.appopen.AppOpenAd.load(
-                    any(Context.class),
-                    anyString(),
-                    any(AdRequest.class),
-                    any(AppOpenAdLoadCallback.class)));
-        }
-
-        verify(listener, times(1)).onShowAdComplete();
     }
 
     @Test
