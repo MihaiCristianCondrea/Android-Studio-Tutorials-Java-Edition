@@ -27,7 +27,6 @@
             <include
                 android:id="@+id/layout_preview_header"
                 layout="@layout/lesson_section_header"
-                android:layout_marginTop="0dp"
                 tools:text="@string/layout_preview" />
 
             <com.google.android.material.textview.MaterialTextView

@@ -15,7 +15,6 @@
     <string name="key_firebase_performance" translatable="false">firebase_performance</string>
     <string name="key_device_info" translatable="false">device_info</string>
     <string name="key_open_source_licenses" translatable="false">open_source_licenses</string>
-    <string name="key_feedback" translatable="false">feedback</string>
     <string name="key_consent_analytics" translatable="false">consent_analytics_storage</string>
     <string name="key_consent_ad_storage" translatable="false">consent_ad_storage</string>
     <string name="key_consent_ad_user_data" translatable="false">consent_ad_user_data</string>
