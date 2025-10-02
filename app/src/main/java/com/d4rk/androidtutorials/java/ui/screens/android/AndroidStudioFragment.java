@@ -430,7 +430,6 @@ public class AndroidStudioFragment extends Fragment {
             final MaterialTextView summary;
             final FrameLayout widgetFrame;
             final MaterialButton externalButton;
-            final FrameLayout iconFrame;
 
             LessonHolder(@NonNull View itemView) {
                 super(itemView);
@@ -439,7 +438,6 @@ public class AndroidStudioFragment extends Fragment {
                 title = itemView.findViewById(android.R.id.title);
                 summary = itemView.findViewById(android.R.id.summary);
                 widgetFrame = itemView.findViewById(android.R.id.widget_frame);
-                iconFrame = itemView.findViewById(android.R.id.icon_frame);
                 LayoutInflater.from(itemView.getContext())
                         .inflate(R.layout.item_preference_widget_open_in_new, widgetFrame, true);
                 externalButton = widgetFrame.findViewById(R.id.open_in_new);
@@ -449,14 +447,8 @@ public class AndroidStudioFragment extends Fragment {
                 if (lesson.iconRes != 0) {
                     icon.setImageResource(lesson.iconRes);
                     icon.setVisibility(View.VISIBLE);
-                    if (iconFrame != null) {
-                        iconFrame.setVisibility(View.VISIBLE);
-                    }
                 } else {
                     icon.setVisibility(View.GONE);
-                    if (iconFrame != null) {
-                        iconFrame.setVisibility(View.GONE);
-                    }
                 }
                 title.setText(lesson.title);
                 if (lesson.summary != null) {

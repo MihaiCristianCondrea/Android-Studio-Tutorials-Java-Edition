@@ -317,10 +317,9 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
     private void syncAccessoryVisibility(@NonNull View itemView) {
         View icon = itemView.findViewById(android.R.id.icon);
-        View iconFrame = itemView.findViewById(android.R.id.icon_frame);
-        if (iconFrame != null) {
-            boolean showIcon = icon != null && icon.getVisibility() == View.VISIBLE;
-            iconFrame.setVisibility(showIcon ? View.VISIBLE : View.GONE);
+        boolean showIcon = icon != null && icon.getVisibility() == View.VISIBLE;
+        if (icon != null) {
+            icon.setVisibility(showIcon ? View.VISIBLE : View.GONE);
         }
         View widgetFrame = itemView.findViewById(android.R.id.widget_frame);
         if (widgetFrame instanceof ViewGroup) {
