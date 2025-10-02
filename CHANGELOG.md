@@ -1,8 +1,9 @@
 # Version 5.0.3:
 
-- **New**: A cleaner, more intuitive layout awaits in your app settings.
-- **Patch**: Minor visual fixes and UI adjustments.
-- **Patch**: General bug fixes for better performance.
+- **New**: Introduced a lesson on using Spinner for dynamic selection in apps.
+- **New**: Refreshed Settings with a cleaner, more intuitive layout.
+- **Major**: Subtle visual tweaks and refined UI adjustments for smoother navigation.
+- **Patch**: General bug fixes and performance optimizations for a more stable experience.
 
 # Version 5.0.2:
 
