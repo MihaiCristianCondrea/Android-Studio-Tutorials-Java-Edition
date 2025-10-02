@@ -22,7 +22,11 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragmentCompat;
-import androidx.preference.PreferenceGroupAdapter;
+import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceScreen;
+
+import java.util.ArrayList;
+import java.util.List;
 import androidx.preference.SwitchPreferenceCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -247,13 +251,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
     private void updatePreferenceCardShapes(@NonNull RecyclerView listView) {
         RecyclerView.Adapter<?> adapter = listView.getAdapter();
-        if (!(adapter instanceof PreferenceGroupAdapter)) {
+        if (adapter == null) {
             return;
         }
-        PreferenceGroupAdapter preferenceAdapter = (PreferenceGroupAdapter) adapter;
-        int itemCount = preferenceAdapter.getItemCount();
+        PreferenceScreen screen = getPreferenceScreen();
+        if (screen == null) {
+            return;
+        }
+        List<Preference> visiblePreferences = getVisiblePreferences(screen);
+        int itemCount = Math.min(adapter.getItemCount(), visiblePreferences.size());
         for (int position = 0; position < itemCount; position++) {
-            Preference preference = preferenceAdapter.getItem(position);
+            Preference preference = visiblePreferences.get(position);
             if (preference instanceof PreferenceCategory) {
                 continue;
             }
@@ -265,38 +273,32 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             if (!(itemView instanceof MaterialCardView)) {
                 continue;
             }
-            boolean first = isFirstPreferenceInSection(preferenceAdapter, position);
-            boolean last = isLastPreferenceInSection(preferenceAdapter, position);
+            boolean first = isFirstPreferenceInSection(visiblePreferences, position);
+            boolean last = isLastPreferenceInSection(visiblePreferences, position);
             applyRoundedCorners((MaterialCardView) itemView, first, last);
             syncAccessoryVisibility(itemView);
         }
     }
 
-    private boolean isFirstPreferenceInSection(@NonNull PreferenceGroupAdapter adapter, int position) {
+    private boolean isFirstPreferenceInSection(@NonNull List<Preference> preferences, int position) {
         for (int index = position - 1; index >= 0; index--) {
-            Preference previous = adapter.getItem(index);
+            Preference previous = preferences.get(index);
             if (!previous.isVisible()) {
                 continue;
             }
-            if (previous instanceof PreferenceCategory) {
-                return true;
-            }
-            return false;
+            return previous instanceof PreferenceCategory;
         }
         return true;
     }
 
-    private boolean isLastPreferenceInSection(@NonNull PreferenceGroupAdapter adapter, int position) {
-        int itemCount = adapter.getItemCount();
+    private boolean isLastPreferenceInSection(@NonNull List<Preference> preferences, int position) {
+        int itemCount = preferences.size();
         for (int index = position + 1; index < itemCount; index++) {
-            Preference next = adapter.getItem(index);
+            Preference next = preferences.get(index);
             if (!next.isVisible()) {
                 continue;
             }
-            if (next instanceof PreferenceCategory) {
-                return true;
-            }
-            return false;
+            return next instanceof PreferenceCategory;
         }
         return true;
     }
@@ -322,8 +324,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             icon.setVisibility(showIcon ? View.VISIBLE : View.GONE);
         }
         View widgetFrame = itemView.findViewById(android.R.id.widget_frame);
-        if (widgetFrame instanceof ViewGroup) {
-            ViewGroup widgetGroup = (ViewGroup) widgetFrame;
+        if (widgetFrame instanceof ViewGroup widgetGroup) {
             boolean hasChild = widgetGroup.getChildCount() > 0;
             widgetFrame.setVisibility(hasChild ? View.VISIBLE : View.GONE);
             if (hasChild) {
@@ -335,7 +336,28 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         }
     }
 
-    private static class PreferenceSpacingDecoration extends RecyclerView.ItemDecoration {
+    @NonNull
+    private List<Preference> getVisiblePreferences(@NonNull PreferenceGroup group) {
+        List<Preference> preferences = new ArrayList<>();
+        collectVisiblePreferences(group, preferences);
+        return preferences;
+    }
+
+    private void collectVisiblePreferences(@NonNull PreferenceGroup group,
+                                           @NonNull List<Preference> out) {
+        for (int index = 0; index < group.getPreferenceCount(); index++) {
+            Preference preference = group.getPreference(index);
+            if (!preference.isVisible()) {
+                continue;
+            }
+            out.add(preference);
+            if (preference instanceof PreferenceGroup && !(preference instanceof PreferenceScreen)) {
+                collectVisiblePreferences((PreferenceGroup) preference, out);
+            }
+        }
+    }
+
+    private class PreferenceSpacingDecoration extends RecyclerView.ItemDecoration {
         private final int spacing;
 
         PreferenceSpacingDecoration(@NonNull Context context) {
@@ -346,15 +368,19 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         @Override
         public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,
                                    @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-            RecyclerView.Adapter<?> adapter = parent.getAdapter();
-            if (!(adapter instanceof PreferenceGroupAdapter)) {
+            PreferenceScreen screen = getPreferenceScreen();
+            if (screen == null) {
                 return;
             }
             int position = parent.getChildAdapterPosition(view);
             if (position == RecyclerView.NO_POSITION) {
                 return;
             }
-            Preference preference = ((PreferenceGroupAdapter) adapter).getItem(position);
+            List<Preference> preferences = getVisiblePreferences(screen);
+            if (position >= preferences.size()) {
+                return;
+            }
+            Preference preference = preferences.get(position);
             if (!(preference instanceof PreferenceCategory)) {
                 outRect.bottom = spacing;
             }
