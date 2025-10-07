@@ -13,6 +13,7 @@ import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.spinner.tabs.SpinnerTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.spinner.tabs.SpinnerTabLayoutFragment;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class SpinnerCodeActivity extends UpNavigationActivity {
 
         binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         setupViewPager();
 
         new TabLayoutMediator(binding.tabs, binding.viewpager, (tab, position) -> {

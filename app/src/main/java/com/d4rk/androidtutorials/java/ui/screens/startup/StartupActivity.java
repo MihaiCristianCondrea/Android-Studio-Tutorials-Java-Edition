@@ -5,12 +5,12 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.WindowCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityStartupBinding;
 import com.d4rk.androidtutorials.java.startup.StartupInitializer;
 import com.d4rk.androidtutorials.java.ui.screens.onboarding.OnboardingActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.ump.ConsentRequestParameters;
 
 import dagger.hilt.android.AndroidEntryPoint;
@@ -20,13 +20,15 @@ import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 public class StartupActivity extends AppCompatActivity {
 
     private StartupViewModel viewModel;
+    ActivityStartupBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityStartupBinding binding = ActivityStartupBinding.inflate(getLayoutInflater());
+
+        binding = ActivityStartupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         StartupInitializer.schedule(this);
 
         viewModel = new ViewModelProvider(this).get(StartupViewModel.class);

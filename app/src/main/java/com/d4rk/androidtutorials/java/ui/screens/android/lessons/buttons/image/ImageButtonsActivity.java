@@ -12,6 +12,7 @@ import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityImageButtonsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.snackbar.Snackbar;
 
 public class ImageButtonsActivity extends UpNavigationActivity {
@@ -23,7 +24,7 @@ public class ImageButtonsActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityImageButtonsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
 
         binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
         binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);

@@ -7,6 +7,7 @@ import androidx.core.view.WindowCompat;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityShortcutsRefractoringBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -16,7 +17,7 @@ public class RefactoringShortcutsActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         com.d4rk.androidtutorials.java.databinding.ActivityShortcutsRefractoringBinding binding = ActivityShortcutsRefractoringBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         AdUtils.loadBanner(binding.adView);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
     }

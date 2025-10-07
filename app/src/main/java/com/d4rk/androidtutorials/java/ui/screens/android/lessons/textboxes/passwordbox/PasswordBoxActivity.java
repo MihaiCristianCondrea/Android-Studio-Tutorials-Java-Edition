@@ -14,6 +14,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityPasswordBoxBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.snackbar.Snackbar;
 
 public class PasswordBoxActivity extends UpNavigationActivity {
@@ -25,7 +26,7 @@ public class PasswordBoxActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityPasswordBoxBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         bindListeners();
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }

@@ -13,6 +13,7 @@ import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retrofit.tabs.RetrofitTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retrofit.tabs.RetrofitTabLayoutFragment;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class RetrofitCodeActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         setupViewPager();
 
         new TabLayoutMediator(binding.tabs, binding.viewpager, (tab, position) -> {

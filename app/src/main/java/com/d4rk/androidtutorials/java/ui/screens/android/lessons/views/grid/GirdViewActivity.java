@@ -19,6 +19,7 @@ import com.d4rk.androidtutorials.java.databinding.ActivityGridViewBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemGridLetterBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 public class GirdViewActivity extends UpNavigationActivity {
 
@@ -31,7 +32,7 @@ public class GirdViewActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityGridViewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         ArrayAdapter<String> adapter = new LettersAdapter(this, numbers);
         binding.gridView.setAdapter(adapter);
         binding.gridView.setOnItemClickListener((adapterView, view, i, l) -> {

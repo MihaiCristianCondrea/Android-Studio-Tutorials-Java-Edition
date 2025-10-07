@@ -11,6 +11,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityClockBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -23,7 +24,7 @@ public class ClockActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityClockBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
 
         binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
         binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);

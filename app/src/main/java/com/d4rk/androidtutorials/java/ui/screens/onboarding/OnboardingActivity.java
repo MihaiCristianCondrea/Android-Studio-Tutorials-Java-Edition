@@ -18,6 +18,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityOnboardingBinding;
 import com.d4rk.androidtutorials.java.ui.screens.main.MainActivity;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.android.ump.ConsentInformation;
@@ -39,7 +40,7 @@ public class OnboardingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityOnboardingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         viewModel = new ViewModelProvider(this).get(OnboardingViewModel.class);
 
         // Fallback: show the consent form again if required.

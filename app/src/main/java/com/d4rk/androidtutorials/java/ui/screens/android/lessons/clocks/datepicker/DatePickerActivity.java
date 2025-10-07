@@ -11,6 +11,7 @@ import androidx.core.view.WindowCompat;
 import com.d4rk.androidtutorials.java.databinding.ActivityDatePickerBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -27,7 +28,7 @@ public class DatePickerActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityDatePickerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
 
 
         updateDateInView();

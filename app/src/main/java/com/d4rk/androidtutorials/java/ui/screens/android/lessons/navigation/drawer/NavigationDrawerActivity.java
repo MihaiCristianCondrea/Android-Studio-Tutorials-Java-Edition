@@ -12,6 +12,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityNavigationDrawerBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 public class NavigationDrawerActivity extends UpNavigationActivity {
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -22,7 +23,7 @@ public class NavigationDrawerActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityNavigationDrawerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         binding.navigationView.setNavigationItemSelectedListener(item -> {
             binding.textView.setText(getString(R.string.selected_format, item.getTitle()));
             binding.drawerLayout.closeDrawer(GravityCompat.START);

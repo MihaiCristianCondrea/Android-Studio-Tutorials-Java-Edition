@@ -11,6 +11,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityBottomNavigationBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 public class BottomNavigationActivity extends UpNavigationActivity {
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -21,7 +22,7 @@ public class BottomNavigationActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityBottomNavigationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         binding.bottomNav.setOnItemSelectedListener(item -> {
             binding.textView.setText(getString(R.string.selected_format, item.getTitle()));
             return true;

@@ -11,6 +11,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityShortcutsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 public class ShortcutsActivity extends UpNavigationActivity {
     @Override
@@ -18,7 +19,7 @@ public class ShortcutsActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         ActivityShortcutsBinding binding = ActivityShortcutsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         AdUtils.loadBanner(binding.adViewBottom);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_shortcuts, new SettingsFragment()).commit();

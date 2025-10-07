@@ -14,6 +14,7 @@ import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityChronometerBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 public class ChronometerActivity extends UpNavigationActivity {
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -25,7 +26,7 @@ public class ChronometerActivity extends UpNavigationActivity {
         binding = ActivityChronometerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
 
         binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
         binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);

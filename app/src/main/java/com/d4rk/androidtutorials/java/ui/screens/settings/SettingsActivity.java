@@ -11,6 +11,7 @@ import androidx.preference.ListPreference;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySettingsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
@@ -26,7 +27,7 @@ public class SettingsActivity extends UpNavigationActivity
         super.onCreate(savedInstanceState);
         ActivitySettingsBinding binding = ActivitySettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         settingsViewModel = new ViewModelProvider(this).get(SettingsViewModel.class);
         settingsViewModel.applyConsent();
 

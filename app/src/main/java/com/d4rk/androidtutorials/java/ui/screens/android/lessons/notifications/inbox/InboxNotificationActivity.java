@@ -18,6 +18,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityNotificationBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 public class InboxNotificationActivity extends UpNavigationActivity {
     private final String notificationChannelId = "inbox_notification";
@@ -31,7 +32,7 @@ public class InboxNotificationActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityNotificationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         binding.buttonShowNotification.setOnClickListener(v -> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1);

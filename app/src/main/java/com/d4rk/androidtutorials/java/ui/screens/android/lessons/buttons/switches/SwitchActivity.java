@@ -12,6 +12,7 @@ import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivitySwitchBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.snackbar.Snackbar;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
@@ -26,7 +27,7 @@ public class SwitchActivity extends UpNavigationActivity {
         binding = ActivitySwitchBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
         binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);
         binding.descriptionSection.descriptionText.setText(R.string.summary_toggle);

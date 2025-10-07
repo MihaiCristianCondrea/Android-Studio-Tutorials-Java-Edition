@@ -10,6 +10,7 @@ import androidx.core.view.WindowCompat;
 import com.d4rk.androidtutorials.java.databinding.ActivityTextBoxBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.snackbar.Snackbar;
 
 public class TextboxActivity extends UpNavigationActivity {
@@ -21,7 +22,7 @@ public class TextboxActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityTextBoxBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         bindListeners();
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }

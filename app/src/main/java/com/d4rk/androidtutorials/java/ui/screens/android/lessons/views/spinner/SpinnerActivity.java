@@ -15,6 +15,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivitySpinnerBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -28,7 +29,7 @@ public class SpinnerActivity extends UpNavigationActivity {
 
         binding = ActivitySpinnerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
         binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);
         binding.descriptionSection.descriptionText.setText(R.string.summary_spinner);

@@ -11,6 +11,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityAlertDialogBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class AlertDialogActivity extends UpNavigationActivity {
@@ -22,7 +23,7 @@ public class AlertDialogActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityAlertDialogBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         MaterialAlertDialogBuilder alertDialog = createAlertDialog();
         binding.button.setOnClickListener(v -> alertDialog.show());
 

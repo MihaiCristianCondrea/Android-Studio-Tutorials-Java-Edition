@@ -39,12 +39,14 @@ import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityMainBinding;
+import com.d4rk.androidtutorials.java.databinding.ActivityOnboardingBinding;
 import com.d4rk.androidtutorials.java.startup.StartupInitializer;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BottomSheetMenuFragment;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.d4rk.androidtutorials.java.utils.ReviewHelper;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
@@ -74,9 +76,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onResume(@NonNull LifecycleOwner owner) {
             ConsentUtils.applyStoredConsent(MainActivity.this);
-            ActivityMainBinding binding = mBinding;
-            if (binding != null) {
-                View adView = binding.adView;
+            if (mBinding != null) {
+                View adView = mBinding.adView;
                 if (adView != null) {
                     adView.setVisibility(View.VISIBLE);
                     AdUtils.loadBanner(adView);
@@ -97,7 +98,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
-        WindowCompat.enableEdgeToEdge(getWindow());
+        mBinding = ActivityMainBinding.inflate(getLayoutInflater());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), mBinding.getRoot());
         if (savedInstanceState != null) {
             navGraphInitialized = savedInstanceState.getBoolean(STATE_NAV_GRAPH_INITIALIZED, true);
             lastPreferredStartDestination = savedInstanceState.getInt(STATE_LAST_PREFERRED_DESTINATION, 0);

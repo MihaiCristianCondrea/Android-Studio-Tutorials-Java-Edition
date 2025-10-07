@@ -13,6 +13,7 @@ import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images.tabs.ImagesTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images.tabs.ImagesTabLayoutFragment;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class ImagesCodeActivity extends UpNavigationActivity {
 
         binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
 
         setupViewPager();
 

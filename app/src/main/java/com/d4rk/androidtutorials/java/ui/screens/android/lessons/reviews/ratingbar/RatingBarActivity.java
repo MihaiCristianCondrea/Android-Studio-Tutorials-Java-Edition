@@ -12,6 +12,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRatingBarBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 public class RatingBarActivity extends UpNavigationActivity {
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -24,7 +25,7 @@ public class RatingBarActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityRatingBarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         formattedString = String.format(getString(R.string.stars), rating);
         binding.textViewRatingValue.setText(formattedString);
         binding.ratingBar.setOnRatingBarChangeListener((ratingBar, rating, fromUser) -> {

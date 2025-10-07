@@ -7,6 +7,7 @@ import androidx.core.view.WindowCompat;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidHistoryBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -16,7 +17,7 @@ public class AndroidHistory extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         ActivityAndroidHistoryBinding binding = ActivityAndroidHistoryBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         AdUtils.loadBanner(binding.adView);
         AdUtils.loadBanner(binding.adViewBottom);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();

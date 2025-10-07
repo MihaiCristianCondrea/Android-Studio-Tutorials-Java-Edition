@@ -16,6 +16,7 @@ import com.d4rk.androidtutorials.java.databinding.ActivityViewBindingTutorialBin
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.d4rk.androidtutorials.java.utils.FontManager;
 
 import java.io.BufferedReader;
@@ -35,7 +36,7 @@ public class ViewBindingTutorialActivity extends UpNavigationActivity {
         setContentView(binding.getRoot());
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
 
         AdUtils.loadBanner(binding.adViewBottom);
         AdUtils.loadBanner(binding.adView);

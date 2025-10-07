@@ -14,6 +14,7 @@ import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityShortcutsNavigationAndSearchingBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemShortcutBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class NavigationAndSearchingShortcutsActivity extends UpNavigationActivit
         super.onCreate(savedInstanceState);
         ActivityShortcutsNavigationAndSearchingBinding binding = ActivityShortcutsNavigationAndSearchingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         AdUtils.loadBanner(binding.adView);
         new FastScrollerBuilder(binding.shortcutList).useMd2Style().build();
 

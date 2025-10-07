@@ -13,6 +13,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.gms.ads.AdRequest;
 
 import java.util.List;
@@ -30,7 +31,7 @@ public class SupportActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySupportBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         supportViewModel = new ViewModelProvider(this).get(SupportViewModel.class);
 
         AdRequest adRequest = supportViewModel.initMobileAds();

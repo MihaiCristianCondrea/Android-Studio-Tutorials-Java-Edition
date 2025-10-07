@@ -13,6 +13,7 @@ import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.data.model.AndroidVersion;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidSdkBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import java.util.Arrays;
 import java.util.List;
@@ -65,7 +66,7 @@ public class AndroidSDK extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityAndroidSdkBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         AdUtils.loadBanner(binding.adViewBottom);
         AdUtils.loadBanner(binding.adView);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();

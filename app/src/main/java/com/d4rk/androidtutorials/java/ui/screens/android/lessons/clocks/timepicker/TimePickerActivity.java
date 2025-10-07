@@ -11,6 +11,7 @@ import androidx.core.view.WindowCompat;
 import com.d4rk.androidtutorials.java.databinding.ActivityTimePickerBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -26,7 +27,7 @@ public class TimePickerActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityTimePickerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         updateTimeInView();
         binding.changeTimeButton.setOnClickListener(v -> {
             TimePickerDialog.OnTimeSetListener timeSetListener = (view, hourOfDay, minute) -> {

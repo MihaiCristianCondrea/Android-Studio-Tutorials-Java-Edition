@@ -13,6 +13,7 @@ import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons.tabs.ButtonsTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons.tabs.ButtonsTabLayoutFragment;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class ButtonsCodeActivity extends UpNavigationActivity {
 
         binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
 
         setupViewPager();
 

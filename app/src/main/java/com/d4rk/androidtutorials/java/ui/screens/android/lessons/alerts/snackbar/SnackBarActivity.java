@@ -11,6 +11,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySnackBarBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.snackbar.Snackbar;
 
 public class SnackBarActivity extends UpNavigationActivity {
@@ -22,7 +23,7 @@ public class SnackBarActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySnackBarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        WindowCompat.enableEdgeToEdge(getWindow());
+        EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         binding.button.setOnClickListener(v -> {
             Snackbar snackbar = Snackbar.make(binding.getRoot(), R.string.snack_this_is_a_snackbar, Snackbar.LENGTH_INDEFINITE);
             snackbar.setAction(android.R.string.ok, v1 -> snackbar.dismiss());
