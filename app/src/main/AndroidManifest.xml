@@ -197,45 +197,15 @@
             android:label="@string/shortcuts"
             android:parentActivityName=".ui.screens.main.MainActivity" />
         <activity
-            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.CodeShortcutsActivity"
+            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.ShortcutsCategoryActivity"
             android:exported="false"
-            android:label="@string/writing_code"
-            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.ShortcutsActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.GeneralShortcutsActivity"
-            android:exported="false"
-            android:label="@string/general"
-            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.ShortcutsActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.RefactoringShortcutsActivity"
-            android:exported="false"
-            android:label="@string/refactoring"
-            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.ShortcutsActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.BuildShortcutsActivity"
-            android:exported="false"
-            android:label="@string/build_and_run"
+            android:label="@string/shortcuts"
             android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.ShortcutsActivity" />
         <activity
             android:name=".ui.screens.android.lessons.clocks.chronometer.ChronometerActivity"
             android:exported="false"
             android:label="@string/chronometer"
             android:parentActivityName=".ui.screens.main.MainActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.DebuggingShortcutsActivity"
-            android:exported="false"
-            android:label="@string/debugging"
-            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.ShortcutsActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity"
-            android:exported="false"
-            android:label="@string/navigation_and_searching"
-            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.ShortcutsActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.basics.shortcuts.tabs.VersionControlShortcutsActivity"
-            android:exported="false"
-            android:label="@string/version_control"
-            android:parentActivityName=".ui.screens.android.lessons.basics.shortcuts.ShortcutsActivity" />
         <activity
             android:name=".ui.screens.android.lessons.basics.history.AndroidHistory"
             android:exported="false"

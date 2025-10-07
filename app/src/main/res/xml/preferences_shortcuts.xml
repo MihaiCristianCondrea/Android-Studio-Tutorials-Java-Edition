@@ -2,73 +2,45 @@
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.preference.Preference
+        android:key="shortcuts_general"
         app:allowDividerAbove="true"
         app:allowDividerBelow="true"
         app:icon="@drawable/ic_shortcut"
-        app:title="@string/general">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.GeneralShortcutsActivity"
-            android:targetPackage="com.d4rk.androidtutorials.java" />
-    </androidx.preference.Preference>
+        app:title="@string/general" />
     <androidx.preference.Preference
+        android:key="shortcuts_refactoring"
         app:allowDividerAbove="true"
         app:allowDividerBelow="true"
         app:icon="@drawable/ic_shortcut"
-        app:title="@string/refactoring">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.RefactoringShortcutsActivity"
-            android:targetPackage="com.d4rk.androidtutorials.java" />
-    </androidx.preference.Preference>
+        app:title="@string/refactoring" />
     <androidx.preference.Preference
+        android:key="shortcuts_build"
         app:allowDividerAbove="true"
         app:allowDividerBelow="true"
         app:icon="@drawable/ic_shortcut"
-        app:title="@string/build_and_run">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.BuildShortcutsActivity"
-            android:targetPackage="com.d4rk.androidtutorials.java" />
-    </androidx.preference.Preference>
+        app:title="@string/build_and_run" />
     <androidx.preference.Preference
+        android:key="shortcuts_debugging"
         app:allowDividerAbove="true"
         app:allowDividerBelow="true"
         app:icon="@drawable/ic_shortcut"
-        app:title="@string/debugging">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.DebuggingShortcutsActivity"
-            android:targetPackage="com.d4rk.androidtutorials.java" />
-    </androidx.preference.Preference>
+        app:title="@string/debugging" />
     <androidx.preference.Preference
+        android:key="shortcuts_navigation"
         app:allowDividerAbove="true"
         app:allowDividerBelow="true"
         app:icon="@drawable/ic_shortcut"
-        app:title="@string/navigation_and_searching">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.NavigationAndSearchingShortcutsActivity"
-            android:targetPackage="com.d4rk.androidtutorials.java" />
-    </androidx.preference.Preference>
+        app:title="@string/navigation_and_searching" />
     <androidx.preference.Preference
+        android:key="shortcuts_code"
         app:allowDividerAbove="true"
         app:allowDividerBelow="true"
         app:icon="@drawable/ic_shortcut"
-        app:title="@string/writing_code">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.CodeShortcutsActivity"
-            android:targetPackage="com.d4rk.androidtutorials.java" />
-    </androidx.preference.Preference>
+        app:title="@string/writing_code" />
     <androidx.preference.Preference
+        android:key="shortcuts_version_control"
         app:allowDividerAbove="true"
         app:allowDividerBelow="true"
         app:icon="@drawable/ic_shortcut"
-        app:title="@string/version_control">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.tabs.VersionControlShortcutsActivity"
-            android:targetPackage="com.d4rk.androidtutorials.java" />
-    </androidx.preference.Preference>
+        app:title="@string/version_control" />
 </androidx.preference.PreferenceScreen>
