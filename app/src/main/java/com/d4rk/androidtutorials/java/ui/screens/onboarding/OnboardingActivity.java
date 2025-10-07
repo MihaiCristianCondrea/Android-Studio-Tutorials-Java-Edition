@@ -84,9 +84,9 @@ public class OnboardingActivity extends AppCompatActivity {
 
         new TabLayoutMediator(binding.tabIndicator, binding.viewPager, (tab, position) -> {
             ImageView dot = new ImageView(this);
-              dot.setImageResource(R.drawable.onboarding_dot_unselected);
-              int margin = Math.round(TypedValue.applyDimension(
-                      TypedValue.COMPLEX_UNIT_DIP, 2, getResources().getDisplayMetrics()));
+            dot.setImageResource(R.drawable.onboarding_dot_unselected);
+            int margin = Math.round(TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP, 2, getResources().getDisplayMetrics()));
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -177,7 +177,6 @@ public class OnboardingActivity extends AppCompatActivity {
         }
     }
 
-    
 
     private static class OnboardingPagerAdapter extends FragmentStateAdapter {
 

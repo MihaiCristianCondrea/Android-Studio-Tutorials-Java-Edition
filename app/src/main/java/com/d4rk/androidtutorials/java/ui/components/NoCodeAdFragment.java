@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewbinding.ViewBinding;
 
-import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 /**
@@ -35,7 +34,7 @@ public abstract class NoCodeAdFragment<T extends ViewBinding> extends Fragment {
      * Called after the binding has been created and the banner ad loaded.
      * Subclasses can override to perform additional setup.
      *
-     * @param binding The binding instance.
+     * @param binding            The binding instance.
      * @param savedInstanceState Saved instance state.
      */
     protected void onBindingCreated(@NonNull T binding, @Nullable Bundle savedInstanceState) {
@@ -47,11 +46,13 @@ public abstract class NoCodeAdFragment<T extends ViewBinding> extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         binding = inflateBinding(inflater, container);
-        View adView = binding.getRoot().findViewById(R.id.ad_view);
-        AdUtils.loadBanner(adView);
+        AdUtils.loadBanner(getAdView(binding));
         onBindingCreated(binding, savedInstanceState);
         return binding.getRoot();
     }
+
+    @NonNull
+    protected abstract View getAdView(@NonNull T binding);
 
     @Override
     public void onDestroyView() {

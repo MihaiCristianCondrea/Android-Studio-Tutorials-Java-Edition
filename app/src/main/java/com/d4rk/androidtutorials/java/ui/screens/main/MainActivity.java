@@ -68,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
     private static final long BACK_PRESS_INTERVAL = 2000;
     private static final String STATE_NAV_GRAPH_INITIALIZED = "state_nav_graph_initialized";
     private static final String STATE_LAST_PREFERRED_DESTINATION = "state_last_preferred_destination";
-    private ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher;
     private final SparseIntArray navOrder = new SparseIntArray();
+    private ActivityResultLauncher<IntentSenderRequest> updateActivityResultLauncher;
     private ActivityMainBinding mBinding;
     private final DefaultLifecycleObserver lifecycleObserver = new DefaultLifecycleObserver() {
         @Override
@@ -379,11 +379,14 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .addOnFailureListener(this, e -> {
                     if (!BuildConfig.DEBUG) {
-                        Snackbar.make(
-                                findViewById(android.R.id.content),
-                                getString(R.string.snack_general_error),
-                                Snackbar.LENGTH_LONG
-                        ).show();
+                        ActivityMainBinding binding = mBinding;
+                        if (binding != null) {
+                            Snackbar.make(
+                                    binding.getRoot(),
+                                    getString(R.string.snack_general_error),
+                                    Snackbar.LENGTH_LONG
+                            ).show();
+                        }
                     }
                 });
     }

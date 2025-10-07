@@ -4,12 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.widget.RadioButton;
+import android.util.SparseArray;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityRadioButtonsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
+import com.google.android.material.radiobutton.MaterialRadioButton;
 import com.google.android.material.snackbar.Snackbar;
 
 public class RadioButtonsActivity extends UpNavigationActivity {
@@ -24,9 +25,15 @@ public class RadioButtonsActivity extends UpNavigationActivity {
 
         EdgeToEdgeDelegate.apply(this, binding.container);
 
+        SparseArray<MaterialRadioButton> radioButtons = new SparseArray<>();
+        radioButtons.put(binding.radioButtonFirstOption.getId(), binding.radioButtonFirstOption);
+        radioButtons.put(binding.radioButtonSecondOption.getId(), binding.radioButtonSecondOption);
+
         binding.radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
-            RadioButton radioButton = findViewById(checkedId);
-            Snackbar.make(binding.getRoot(), radioButton.getText(), Snackbar.LENGTH_SHORT).show();
+            MaterialRadioButton radioButton = radioButtons.get(checkedId);
+            if (radioButton != null) {
+                Snackbar.make(binding.getRoot(), radioButton.getText(), Snackbar.LENGTH_SHORT).show();
+            }
         });
 
         binding.floatingButtonShowSyntax.setOnClickListener(v -> {

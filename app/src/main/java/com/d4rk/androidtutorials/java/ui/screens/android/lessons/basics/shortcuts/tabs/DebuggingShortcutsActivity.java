@@ -17,7 +17,8 @@ public class DebuggingShortcutsActivity extends UpNavigationActivity {
         setContentView(binding.getRoot());
 
 
-        EdgeToEdgeDelegate.apply(this, binding.scrollView);        AdUtils.loadBanner(binding.adView);
+        EdgeToEdgeDelegate.apply(this, binding.scrollView);
+        AdUtils.loadBanner(binding.adView);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
     }
 }

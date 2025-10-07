@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.relative.tabs;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -13,5 +14,11 @@ public class RelativeLayoutTabCodeFragment extends NoCodeAdFragment<FragmentNoCo
     @NonNull
     protected FragmentNoCodeBinding inflateBinding(@NonNull LayoutInflater inflater, ViewGroup container) {
         return FragmentNoCodeBinding.inflate(inflater, container, false);
+    }
+
+    @Override
+    @NonNull
+    protected View getAdView(@NonNull FragmentNoCodeBinding binding) {
+        return binding.adView;
     }
 }

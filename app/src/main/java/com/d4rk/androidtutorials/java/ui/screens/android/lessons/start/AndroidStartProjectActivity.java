@@ -35,7 +35,8 @@ public class AndroidStartProjectActivity extends UpNavigationActivity {
                 return true;
             }
             return false;
-        });        AdUtils.loadBanner(binding.adViewBottom);
+        });
+        AdUtils.loadBanner(binding.adViewBottom);
         AdUtils.loadBanner(binding.adView);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.textViewThirdStepSummary.setMovementMethod(LinkMovementMethod.getInstance());

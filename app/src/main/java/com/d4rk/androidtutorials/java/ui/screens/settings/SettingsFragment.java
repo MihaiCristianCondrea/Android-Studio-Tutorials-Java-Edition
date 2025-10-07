@@ -24,18 +24,19 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
-
-import java.util.ArrayList;
-import java.util.List;
 import androidx.preference.SwitchPreferenceCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.d4rk.androidtutorials.java.R;
+import com.d4rk.androidtutorials.java.databinding.ItemPreferenceBinding;
 import com.d4rk.androidtutorials.java.ui.components.dialogs.RequireRestartDialog;
 import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.ShapeAppearanceModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
     @Nullable
@@ -318,12 +319,11 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private void syncAccessoryVisibility(@NonNull View itemView) {
-        View icon = itemView.findViewById(android.R.id.icon);
-        boolean showIcon = icon != null && icon.getVisibility() == View.VISIBLE;
-        if (icon != null) {
-            icon.setVisibility(showIcon ? View.VISIBLE : View.GONE);
-        }
-        View widgetFrame = itemView.findViewById(android.R.id.widget_frame);
+        ItemPreferenceBinding binding = ItemPreferenceBinding.bind(itemView);
+        View icon = binding.icon;
+        boolean showIcon = icon.getVisibility() == View.VISIBLE;
+        icon.setVisibility(showIcon ? View.VISIBLE : View.GONE);
+        View widgetFrame = binding.widgetFrame;
         if (widgetFrame instanceof ViewGroup widgetGroup) {
             boolean hasChild = widgetGroup.getChildCount() > 0;
             widgetFrame.setVisibility(hasChild ? View.VISIBLE : View.GONE);

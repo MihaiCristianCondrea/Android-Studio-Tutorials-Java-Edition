@@ -26,6 +26,7 @@ import com.d4rk.androidtutorials.java.databinding.DialogVersionInfoBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemHelpFaqBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.review.ReviewInfo;
@@ -39,9 +40,6 @@ import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 @AndroidEntryPoint
 public class HelpActivity extends BaseActivity {
 
-    private ActivityHelpBinding binding;
-    private HelpViewModel helpViewModel;
-    private final Handler handler = new Handler(Looper.getMainLooper());
     private static final List<FaqItem> FAQ_ITEMS = Arrays.asList(
             new FaqItem(R.string.question_1, R.string.summary_preference_faq_1),
             new FaqItem(R.string.question_2, R.string.summary_preference_faq_2),
@@ -53,12 +51,16 @@ public class HelpActivity extends BaseActivity {
             new FaqItem(R.string.question_8, R.string.summary_preference_faq_8),
             new FaqItem(R.string.question_9, R.string.summary_preference_faq_9)
     );
+    private final Handler handler = new Handler(Looper.getMainLooper());
+    private ActivityHelpBinding binding;
+    private HelpViewModel helpViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityHelpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        EdgeToEdgeDelegate.apply(this, binding.container);
         AdUtils.loadBanner(binding.faqNativeAd);
         helpViewModel = new ViewModelProvider(this).get(HelpViewModel.class);
         new FastScrollerBuilder(binding.scrollView)
@@ -236,12 +238,12 @@ public class HelpActivity extends BaseActivity {
         ViewCompat.setStateDescription(binding.questionContainer, stateDescription);
     }
 
-    private record FaqItem(@StringRes int questionResId, @StringRes int answerResId) {
-    }
-
     @Override
     protected void onDestroy() {
         handler.removeCallbacksAndMessages(null);
         super.onDestroy();
+    }
+
+    private record FaqItem(@StringRes int questionResId, @StringRes int answerResId) {
     }
 }
