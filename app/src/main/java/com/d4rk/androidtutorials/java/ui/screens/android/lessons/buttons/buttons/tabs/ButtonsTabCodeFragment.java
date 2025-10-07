@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -30,6 +31,12 @@ public class ButtonsTabCodeFragment extends NoCodeAdFragment<FragmentSameCodeBin
     @NonNull
     protected FragmentSameCodeBinding inflateBinding(@NonNull LayoutInflater inflater, ViewGroup container) {
         return FragmentSameCodeBinding.inflate(inflater, container, false);
+    }
+
+    @Override
+    @NonNull
+    protected View getAdView(@NonNull FragmentSameCodeBinding binding) {
+        return binding.adView;
     }
 
     @Override

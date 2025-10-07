@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -14,11 +13,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRoomBinding;
+import com.d4rk.androidtutorials.java.databinding.ItemNoteBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
-import com.google.android.material.textview.MaterialTextView;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -107,22 +105,29 @@ public class RoomActivity extends UpNavigationActivity {
         @NonNull
         @Override
         public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.item_note, parent, false);
-            return new NoteViewHolder(view);
+            ItemNoteBinding binding = ItemNoteBinding.inflate(
+                    LayoutInflater.from(parent.getContext()),
+                    parent,
+                    false
+            );
+            return new NoteViewHolder(binding);
         }
 
         @Override
         public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
-            holder.textView.setText(getItem(position).getText());
+            holder.bind(getItem(position));
         }
 
         static class NoteViewHolder extends RecyclerView.ViewHolder {
-            final MaterialTextView textView;
+            private final ItemNoteBinding binding;
 
-            NoteViewHolder(View itemView) {
-                super(itemView);
-                textView = itemView.findViewById(R.id.textViewNote);
+            NoteViewHolder(@NonNull ItemNoteBinding binding) {
+                super(binding.getRoot());
+                this.binding = binding;
+            }
+
+            void bind(@NonNull Note note) {
+                binding.textViewNote.setText(note.getText());
             }
         }
     }

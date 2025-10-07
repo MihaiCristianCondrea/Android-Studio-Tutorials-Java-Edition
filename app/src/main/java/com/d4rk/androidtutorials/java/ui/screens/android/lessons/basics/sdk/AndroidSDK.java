@@ -64,7 +64,8 @@ public class AndroidSDK extends UpNavigationActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityAndroidSdkBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());        EdgeToEdgeDelegate.apply(this, binding.scrollView);
+        setContentView(binding.getRoot());
+        EdgeToEdgeDelegate.apply(this, binding.scrollView);
 
         AdUtils.loadBanner(binding.adViewBottom);
         AdUtils.loadBanner(binding.adView);
@@ -74,7 +75,7 @@ public class AndroidSDK extends UpNavigationActivity {
     }
 
     private void createDynamicTable() {
-        TableLayout tableLayout = binding.cardViewTableLayout.findViewById(R.id.table_layout);
+        TableLayout tableLayout = binding.tableLayout;
         for (AndroidVersion version : androidVersions) {
             TableRow row = new TableRow(this);
 

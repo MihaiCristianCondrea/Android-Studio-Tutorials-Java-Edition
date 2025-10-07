@@ -379,11 +379,14 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .addOnFailureListener(this, e -> {
                     if (!BuildConfig.DEBUG) {
-                        Snackbar.make(
-                                findViewById(android.R.id.content),
-                                getString(R.string.snack_general_error),
-                                Snackbar.LENGTH_LONG
-                        ).show();
+                        ActivityMainBinding binding = mBinding;
+                        if (binding != null) {
+                            Snackbar.make(
+                                    binding.getRoot(),
+                                    getString(R.string.snack_general_error),
+                                    Snackbar.LENGTH_LONG
+                            ).show();
+                        }
                     }
                 });
     }

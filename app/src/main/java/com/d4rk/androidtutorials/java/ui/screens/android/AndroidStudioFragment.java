@@ -30,14 +30,14 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.ads.views.NativeAdBannerView;
 import com.d4rk.androidtutorials.java.databinding.FragmentAndroidStudioBinding;
+import com.d4rk.androidtutorials.java.databinding.ItemPreferenceBinding;
+import com.d4rk.androidtutorials.java.databinding.ItemPreferenceCategoryBinding;
+import com.d4rk.androidtutorials.java.databinding.ItemPreferenceWidgetOpenInNewBinding;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.ShapeAppearanceModel;
-import com.google.android.material.textview.MaterialTextView;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -375,13 +375,19 @@ public class AndroidStudioFragment extends Fragment {
                 adView.setNativeAdUnitId(R.string.native_ad_lessons_list_unit_id);
                 return new AdHolder(adView);
             } else if (viewType == TYPE_CATEGORY) {
-                View view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.item_preference_category, parent, false);
-                return new CategoryHolder(view);
+                ItemPreferenceCategoryBinding binding = ItemPreferenceCategoryBinding.inflate(
+                        LayoutInflater.from(parent.getContext()),
+                        parent,
+                        false
+                );
+                return new CategoryHolder(binding);
             } else {
-                View view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.item_preference, parent, false);
-                return new LessonHolder(view);
+                ItemPreferenceBinding binding = ItemPreferenceBinding.inflate(
+                        LayoutInflater.from(parent.getContext()),
+                        parent,
+                        false
+                );
+                return new LessonHolder(binding);
             }
         }
 
@@ -424,40 +430,36 @@ public class AndroidStudioFragment extends Fragment {
         }
 
         static class LessonHolder extends RecyclerView.ViewHolder {
-            final MaterialCardView card;
-            final ShapeableImageView icon;
-            final MaterialTextView title;
-            final MaterialTextView summary;
-            final FrameLayout widgetFrame;
-            final MaterialButton externalButton;
+            private final ItemPreferenceBinding binding;
+            private final ItemPreferenceWidgetOpenInNewBinding widgetBinding;
 
-            LessonHolder(@NonNull View itemView) {
-                super(itemView);
-                card = (MaterialCardView) itemView;
-                icon = itemView.findViewById(android.R.id.icon);
-                title = itemView.findViewById(android.R.id.title);
-                summary = itemView.findViewById(android.R.id.summary);
-                widgetFrame = itemView.findViewById(android.R.id.widget_frame);
-                LayoutInflater.from(itemView.getContext())
-                        .inflate(R.layout.item_preference_widget_open_in_new, widgetFrame, true);
-                externalButton = widgetFrame.findViewById(R.id.open_in_new);
+            LessonHolder(@NonNull ItemPreferenceBinding binding) {
+                super(binding.getRoot());
+                this.binding = binding;
+                widgetBinding = ItemPreferenceWidgetOpenInNewBinding.inflate(
+                        LayoutInflater.from(binding.getRoot().getContext()),
+                        binding.widgetFrame,
+                        true
+                );
             }
 
             void bind(Lesson lesson, boolean first, boolean last) {
                 if (lesson.iconRes != 0) {
-                    icon.setImageResource(lesson.iconRes);
-                    icon.setVisibility(View.VISIBLE);
+                    binding.icon.setImageResource(lesson.iconRes);
+                    binding.icon.setVisibility(View.VISIBLE);
                 } else {
-                    icon.setVisibility(View.GONE);
+                    binding.icon.setVisibility(View.GONE);
                 }
-                title.setText(lesson.title);
+                binding.title.setText(lesson.title);
                 if (lesson.summary != null) {
-                    summary.setText(lesson.summary);
-                    summary.setVisibility(View.VISIBLE);
+                    binding.summary.setText(lesson.summary);
+                    binding.summary.setVisibility(View.VISIBLE);
                 } else {
-                    summary.setVisibility(View.GONE);
+                    binding.summary.setVisibility(View.GONE);
                 }
                 boolean showExternalButton = lesson.opensInBrowser && lesson.intent != null;
+                FrameLayout widgetFrame = binding.widgetFrame;
+                MaterialButton externalButton = widgetBinding.openInNew;
                 widgetFrame.setVisibility(showExternalButton ? View.VISIBLE : View.GONE);
                 externalButton.setVisibility(showExternalButton ? View.VISIBLE : View.GONE);
                 externalButton.setEnabled(showExternalButton);
@@ -486,30 +488,30 @@ public class AndroidStudioFragment extends Fragment {
                         itemView.getResources().getDisplayMetrics());
                 float dp24 = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24,
                         itemView.getResources().getDisplayMetrics());
-                ShapeAppearanceModel.Builder builder = card.getShapeAppearanceModel().toBuilder()
+                ShapeAppearanceModel.Builder builder = binding.lessonCard.getShapeAppearanceModel().toBuilder()
                         .setTopLeftCorner(CornerFamily.ROUNDED, first ? dp24 : dp4)
                         .setTopRightCorner(CornerFamily.ROUNDED, first ? dp24 : dp4)
                         .setBottomLeftCorner(CornerFamily.ROUNDED, last ? dp24 : dp4)
                         .setBottomRightCorner(CornerFamily.ROUNDED, last ? dp24 : dp4);
-                card.setShapeAppearanceModel(builder.build());
+                binding.lessonCard.setShapeAppearanceModel(builder.build());
             }
         }
 
         static class CategoryHolder extends RecyclerView.ViewHolder {
-            final MaterialTextView title;
+            private final ItemPreferenceCategoryBinding binding;
 
-            CategoryHolder(@NonNull View itemView) {
-                super(itemView);
-                title = itemView.findViewById(android.R.id.title);
+            CategoryHolder(@NonNull ItemPreferenceCategoryBinding binding) {
+                super(binding.getRoot());
+                this.binding = binding;
             }
 
             void bind(Category category) {
                 if (category.iconRes != 0) {
-                    title.setCompoundDrawablesRelativeWithIntrinsicBounds(category.iconRes, 0, 0, 0);
+                    binding.title.setCompoundDrawablesRelativeWithIntrinsicBounds(category.iconRes, 0, 0, 0);
                 } else {
-                    title.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0);
+                    binding.title.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0);
                 }
-                title.setText(category.title);
+                binding.title.setText(category.title);
             }
         }
     }

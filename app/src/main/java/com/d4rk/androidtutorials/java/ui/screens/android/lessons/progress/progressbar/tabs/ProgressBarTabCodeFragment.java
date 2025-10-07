@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -30,6 +31,12 @@ public class ProgressBarTabCodeFragment extends NoCodeAdFragment<FragmentCodeBin
     @NonNull
     protected FragmentCodeBinding inflateBinding(@NonNull LayoutInflater inflater, ViewGroup container) {
         return FragmentCodeBinding.inflate(inflater, container, false);
+    }
+
+    @Override
+    @NonNull
+    protected View getAdView(@NonNull FragmentCodeBinding binding) {
+        return binding.adView;
     }
 
     @Override

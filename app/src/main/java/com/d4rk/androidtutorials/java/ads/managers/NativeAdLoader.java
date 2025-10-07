@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ads.managers;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
+import androidx.viewbinding.ViewBinding;
 
 import com.d4rk.androidtutorials.java.R;
 import com.google.android.gms.ads.AdListener;
@@ -22,6 +24,10 @@ import com.google.android.gms.ads.nativead.AdChoicesView;
 import com.google.android.gms.ads.nativead.MediaView;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * Helper class to load AdMob native ads into a container.
@@ -73,7 +79,7 @@ public class NativeAdLoader {
                     adView.setPadding(container.getPaddingLeft(), container.getPaddingTop(),
                             container.getPaddingRight(), container.getPaddingBottom());
                     container.setPadding(0, 0, 0, 0);
-                    populateNativeAdView(nativeAd, adView);
+                    populateNativeAdView(nativeAd, adView, layoutRes);
                     container.removeAllViews();
                     container.addView(adView);
                     container.requestLayout();
@@ -92,14 +98,22 @@ public class NativeAdLoader {
         adLoader.loadAd(adRequest);
     }
 
-    private static void populateNativeAdView(@NonNull NativeAd nativeAd, @NonNull NativeAdView adView) {
-        MediaView mediaView = adView.findViewById(R.id.ad_media);
-        TextView headlineView = adView.findViewById(R.id.ad_headline);
-        TextView bodyView = adView.findViewById(R.id.ad_body);
-        Button callToActionView = adView.findViewById(R.id.ad_call_to_action);
-        ImageView iconView = adView.findViewById(R.id.ad_app_icon);
-        TextView attributionView = adView.findViewById(R.id.ad_attribution);
-        AdChoicesView adChoicesView = adView.findViewById(R.id.ad_choices);
+    private static void populateNativeAdView(@NonNull NativeAd nativeAd,
+                                             @NonNull NativeAdView adView,
+                                             @LayoutRes int layoutRes) {
+        ViewBinding binding = tryBind(adView, layoutRes);
+        if (binding == null) {
+            Log.w(TAG, "Could not bind native ad view for layout " + layoutRes);
+            return;
+        }
+
+        MediaView mediaView = getBindingField(binding, "adMedia", MediaView.class);
+        TextView headlineView = getBindingField(binding, "adHeadline", TextView.class);
+        TextView bodyView = getBindingField(binding, "adBody", TextView.class);
+        Button callToActionView = getBindingField(binding, "adCallToAction", Button.class);
+        ImageView iconView = getBindingField(binding, "adAppIcon", ImageView.class);
+        TextView attributionView = getBindingField(binding, "adAttribution", TextView.class);
+        AdChoicesView adChoicesView = getBindingField(binding, "adChoices", AdChoicesView.class);
 
         if (mediaView != null) {
             adView.setMediaView(mediaView);
@@ -165,5 +179,54 @@ public class NativeAdLoader {
         }
 
         adView.setNativeAd(nativeAd);
+    }
+
+    @androidx.annotation.Nullable
+    private static ViewBinding tryBind(@NonNull NativeAdView adView, @LayoutRes int layoutRes) {
+        try {
+            String resourceName = adView.getResources().getResourceEntryName(layoutRes);
+            String bindingName = toBindingClassName(resourceName);
+            String fullClassName = adView.getContext().getPackageName() + ".databinding." + bindingName;
+            Class<?> bindingClass = Class.forName(fullClassName);
+            Method bindMethod = bindingClass.getMethod("bind", View.class);
+            return (ViewBinding) bindMethod.invoke(null, adView);
+        } catch (Resources.NotFoundException | ClassNotFoundException | NoSuchMethodException |
+                 IllegalAccessException | InvocationTargetException e) {
+            Log.w(TAG, "Failed to create view binding for native ad layout", e);
+            return null;
+        }
+    }
+
+    @androidx.annotation.Nullable
+    private static <T> T getBindingField(@NonNull ViewBinding binding,
+                                         @NonNull String fieldName,
+                                         @NonNull Class<T> type) {
+        try {
+            Field field = binding.getClass().getField(fieldName);
+            Object value = field.get(binding);
+            if (type.isInstance(value)) {
+                return type.cast(value);
+            }
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            Log.w(TAG, "Unable to access binding field " + fieldName, e);
+        }
+        return null;
+    }
+
+    @NonNull
+    private static String toBindingClassName(@NonNull String resourceName) {
+        StringBuilder builder = new StringBuilder(resourceName.length());
+        boolean capitalize = true;
+        for (int i = 0; i < resourceName.length(); i++) {
+            char c = resourceName.charAt(i);
+            if (c == '_') {
+                capitalize = true;
+            } else {
+                builder.append(capitalize ? Character.toUpperCase(c) : c);
+                capitalize = false;
+            }
+        }
+        builder.append("Binding");
+        return builder.toString();
     }
 }

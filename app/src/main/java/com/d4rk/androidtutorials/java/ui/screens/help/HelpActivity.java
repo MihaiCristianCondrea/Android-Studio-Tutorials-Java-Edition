@@ -26,6 +26,7 @@ import com.d4rk.androidtutorials.java.databinding.DialogVersionInfoBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemHelpFaqBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
+import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.review.ReviewInfo;
@@ -59,6 +60,7 @@ public class HelpActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityHelpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        EdgeToEdgeDelegate.apply(this, binding.container);
         AdUtils.loadBanner(binding.faqNativeAd);
         helpViewModel = new ViewModelProvider(this).get(HelpViewModel.class);
         new FastScrollerBuilder(binding.scrollView)

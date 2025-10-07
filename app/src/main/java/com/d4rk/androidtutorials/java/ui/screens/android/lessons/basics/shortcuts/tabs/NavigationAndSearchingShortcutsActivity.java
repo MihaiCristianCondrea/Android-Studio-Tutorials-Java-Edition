@@ -2,17 +2,15 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcu
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityShortcutsNavigationAndSearchingBinding;
+import com.d4rk.androidtutorials.java.databinding.ItemShortcutBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
@@ -72,15 +70,14 @@ public class NavigationAndSearchingShortcutsActivity extends UpNavigationActivit
         @NonNull
         @Override
         public ShortcutHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_shortcut, parent, false);
-            return new ShortcutHolder(view);
+            ItemShortcutBinding binding = ItemShortcutBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+            return new ShortcutHolder(binding);
         }
 
         @Override
         public void onBindViewHolder(@NonNull ShortcutHolder holder, int position) {
             Shortcut item = items.get(position);
-            holder.key.setText(item.key);
-            holder.description.setText(item.description);
+            holder.bind(item);
         }
 
         @Override
@@ -89,13 +86,16 @@ public class NavigationAndSearchingShortcutsActivity extends UpNavigationActivit
         }
 
         static class ShortcutHolder extends RecyclerView.ViewHolder {
-            final TextView key;
-            final TextView description;
+            private final ItemShortcutBinding binding;
 
-            ShortcutHolder(@NonNull View itemView) {
-                super(itemView);
-                key = itemView.findViewById(R.id.shortcut_key);
-                description = itemView.findViewById(R.id.shortcut_description);
+            ShortcutHolder(@NonNull ItemShortcutBinding binding) {
+                super(binding.getRoot());
+                this.binding = binding;
+            }
+
+            void bind(@NonNull Shortcut shortcut) {
+                binding.shortcutKey.setText(shortcut.key());
+                binding.shortcutDescription.setText(shortcut.description());
             }
         }
     }
