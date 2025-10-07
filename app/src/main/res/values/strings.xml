@@ -27,6 +27,7 @@
     <string name="learn_more">Learn more</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Ad</string>
+    <string name="ad_attribution_with_advertiser">Ad from %1$s</string>
     <string name="search_lessons_hint">Search lessons</string>
     <string name="search_lessons_content_description">Search lessons</string>
 
