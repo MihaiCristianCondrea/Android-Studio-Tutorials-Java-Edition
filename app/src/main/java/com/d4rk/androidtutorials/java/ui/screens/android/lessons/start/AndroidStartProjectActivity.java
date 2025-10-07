@@ -4,12 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.BuildConfig;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidStartProjectBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -19,9 +20,7 @@ public class AndroidStartProjectActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         ActivityAndroidStartProjectBinding binding = ActivityAndroidStartProjectBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        EdgeToEdgeDelegate.apply(this, binding.constraintLayout);
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         setSupportActionBar(binding.topAppBar);
         binding.topAppBar.setNavigationOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
         binding.topAppBar.setOnMenuItemClickListener(item -> {

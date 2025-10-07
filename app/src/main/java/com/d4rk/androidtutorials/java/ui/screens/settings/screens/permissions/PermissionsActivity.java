@@ -2,6 +2,7 @@ package com.d4rk.androidtutorials.java.ui.screens.settings.screens.permissions;
 
 import android.os.Bundle;
 
+import androidx.core.view.WindowCompat;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.d4rk.androidtutorials.java.R;
@@ -14,7 +15,7 @@ public class PermissionsActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         ActivityPermissionsBinding binding = ActivityPermissionsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_permissions, new SettingsFragment()).commit();
     }
 

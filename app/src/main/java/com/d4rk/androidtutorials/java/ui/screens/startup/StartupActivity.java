@@ -5,12 +5,12 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.WindowCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityStartupBinding;
 import com.d4rk.androidtutorials.java.startup.StartupInitializer;
 import com.d4rk.androidtutorials.java.ui.screens.onboarding.OnboardingActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.ump.ConsentRequestParameters;
 
 import dagger.hilt.android.AndroidEntryPoint;
@@ -26,9 +26,7 @@ public class StartupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityStartupBinding binding = ActivityStartupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        EdgeToEdgeDelegate.apply(this, binding.getRoot());
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         StartupInitializer.schedule(this);
 
         viewModel = new ViewModelProvider(this).get(StartupViewModel.class);

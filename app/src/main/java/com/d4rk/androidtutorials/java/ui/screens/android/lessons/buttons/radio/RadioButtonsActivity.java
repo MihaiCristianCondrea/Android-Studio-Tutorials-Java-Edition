@@ -6,10 +6,11 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.SparseArray;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.databinding.ActivityRadioButtonsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.radiobutton.MaterialRadioButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -22,8 +23,7 @@ public class RadioButtonsActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityRadioButtonsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        EdgeToEdgeDelegate.apply(this, binding.container);
+        WindowCompat.enableEdgeToEdge(getWindow());
 
         SparseArray<MaterialRadioButton> radioButtons = new SparseArray<>();
         radioButtons.put(binding.radioButtonFirstOption.getId(), binding.radioButtonFirstOption);

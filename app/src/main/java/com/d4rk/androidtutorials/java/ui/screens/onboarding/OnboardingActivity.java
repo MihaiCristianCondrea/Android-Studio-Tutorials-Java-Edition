@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.WindowCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
@@ -17,7 +18,6 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityOnboardingBinding;
 import com.d4rk.androidtutorials.java.ui.screens.main.MainActivity;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.android.ump.ConsentInformation;
@@ -39,9 +39,7 @@ public class OnboardingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityOnboardingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        EdgeToEdgeDelegate.apply(this, binding.getRoot());
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         viewModel = new ViewModelProvider(this).get(OnboardingViewModel.class);
 
         // Fallback: show the consent form again if required.

@@ -12,7 +12,6 @@ import com.d4rk.androidtutorials.java.databinding.ActivityTabLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room.tabs.RoomTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room.tabs.RoomTabLayoutFragment;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
@@ -28,8 +27,6 @@ public class RoomCodeActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityTabLayoutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        EdgeToEdgeDelegate.apply(this, binding.appBarLayout);
 
         setupViewPager();
 

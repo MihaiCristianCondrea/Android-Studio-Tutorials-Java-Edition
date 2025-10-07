@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.databinding.ActivityTextBoxBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
@@ -19,6 +21,7 @@ public class TextboxActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityTextBoxBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        WindowCompat.enableEdgeToEdge(getWindow());
         bindListeners();
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }

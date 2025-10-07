@@ -8,10 +8,11 @@ import android.os.Looper;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.databinding.ActivityWebviewBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -24,9 +25,7 @@ public class WebViewActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityWebviewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        EdgeToEdgeDelegate.apply(this, binding.container);
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         new FastScrollerBuilder(binding.webView).useMd2Style().build();
         setupWebView();
         setupFloatingButton();

@@ -7,13 +7,13 @@ import android.os.Looper;
 import android.os.SystemClock;
 
 import androidx.annotation.Nullable;
+import androidx.core.view.WindowCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityChronometerBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 public class ChronometerActivity extends UpNavigationActivity {
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -25,8 +25,7 @@ public class ChronometerActivity extends UpNavigationActivity {
         binding = ActivityChronometerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
-        EdgeToEdgeDelegate.apply(this, binding.container);
+        WindowCompat.enableEdgeToEdge(getWindow());
 
         binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
         binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);

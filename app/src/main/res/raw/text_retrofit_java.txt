@@ -35,8 +35,6 @@ public class RetrofitActivity extends UpNavigationActivity {
         binding = ActivityRetrofitBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        EdgeToEdgeDelegate.apply(this, binding.constraintLayout);
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://jsonplaceholder.typicode.com/")
                 .addConverterFactory(GsonConverterFactory.create())

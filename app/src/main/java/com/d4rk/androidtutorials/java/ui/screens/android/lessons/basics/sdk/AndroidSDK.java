@@ -7,11 +7,12 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.data.model.AndroidVersion;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidSdkBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import java.util.Arrays;
 import java.util.List;
@@ -64,8 +65,7 @@ public class AndroidSDK extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityAndroidSdkBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        EdgeToEdgeDelegate.apply(this, binding.scrollView);
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         AdUtils.loadBanner(binding.adViewBottom);
         AdUtils.loadBanner(binding.adView);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();

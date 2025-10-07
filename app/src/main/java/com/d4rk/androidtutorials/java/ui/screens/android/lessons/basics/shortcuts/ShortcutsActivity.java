@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.core.view.WindowCompat;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.d4rk.androidtutorials.java.R;
@@ -17,7 +18,7 @@ public class ShortcutsActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         ActivityShortcutsBinding binding = ActivityShortcutsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         AdUtils.loadBanner(binding.adViewBottom);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_shortcuts, new SettingsFragment()).commit();

@@ -5,9 +5,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.databinding.ActivityRelativeLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -21,9 +22,7 @@ public class RelativeLayoutActivity extends UpNavigationActivity {
         binding = ActivityRelativeLayoutBinding.inflate(getLayoutInflater());
 
         setContentView(binding.getRoot());
-
-        EdgeToEdgeDelegate.apply(this, binding.container);
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(RelativeLayoutActivity.this, RelativeLayoutCodeActivity.class)));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);

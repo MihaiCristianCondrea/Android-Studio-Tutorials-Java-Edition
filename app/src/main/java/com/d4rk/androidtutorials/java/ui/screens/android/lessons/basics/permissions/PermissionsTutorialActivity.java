@@ -4,10 +4,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityPermissionsTutorialBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
@@ -17,8 +18,7 @@ public class PermissionsTutorialActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         com.d4rk.androidtutorials.java.databinding.ActivityPermissionsTutorialBinding binding = ActivityPermissionsTutorialBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        EdgeToEdgeDelegate.apply(this, binding.scrollView);
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         AdUtils.loadBanner(binding.adViewBottom);
         AdUtils.loadBanner(binding.adViewLarge);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();

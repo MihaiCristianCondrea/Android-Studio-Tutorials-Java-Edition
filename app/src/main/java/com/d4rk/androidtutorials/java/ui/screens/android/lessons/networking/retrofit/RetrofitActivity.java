@@ -8,11 +8,11 @@ import android.os.Looper;
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.WindowCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRetrofitBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.google.gson.annotations.SerializedName;
 
 import retrofit2.Call;
@@ -35,9 +35,7 @@ public class RetrofitActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityRetrofitBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        EdgeToEdgeDelegate.apply(this, binding.constraintLayout);
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://jsonplaceholder.typicode.com/")
                 .addConverterFactory(GsonConverterFactory.create())

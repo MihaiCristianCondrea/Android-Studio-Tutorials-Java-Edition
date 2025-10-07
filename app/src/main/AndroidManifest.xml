@@ -36,7 +36,7 @@
         android:resizeableActivity="true"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppThemeActionBar"
+        android:theme="@style/FitSystemWindowsTheme"
         tools:targetApi="33">
 
         <activity
@@ -300,8 +300,7 @@
             android:name=".ui.screens.android.lessons.start.AndroidStartProjectActivity"
             android:exported="false"
             android:label="@string/android_start"
-            android:parentActivityName=".ui.screens.main.MainActivity"
-            android:theme="@style/AppTheme" />
+            android:parentActivityName=".ui.screens.main.MainActivity" />
         <activity
             android:name=".ui.screens.android.lessons.basics.sdk.AndroidSDK"
             android:exported="false"
@@ -361,7 +360,8 @@
             android:name=".ui.screens.settings.SettingsActivity"
             android:exported="false"
             android:label="@string/settings"
-            android:parentActivityName=".ui.screens.settings.SettingsActivity">
+            android:parentActivityName=".ui.screens.settings.SettingsActivity"
+            android:theme="@style/FitSystemWindowsTheme">
             <intent-filter>
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
             </intent-filter>
@@ -371,6 +371,7 @@
             android:exported="false"
             android:label="@string/support_us"
             android:parentActivityName=".ui.screens.support.SupportActivity" />
+
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
             android:enabled="false"

@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.core.view.WindowCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.ListPreference;
 
@@ -25,8 +26,7 @@ public class SettingsActivity extends UpNavigationActivity
         super.onCreate(savedInstanceState);
         ActivitySettingsBinding binding = ActivitySettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         settingsViewModel = new ViewModelProvider(this).get(SettingsViewModel.class);
         settingsViewModel.applyConsent();
 

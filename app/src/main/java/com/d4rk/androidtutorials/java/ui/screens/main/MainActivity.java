@@ -45,7 +45,6 @@ import com.d4rk.androidtutorials.java.ui.screens.startup.StartupActivity;
 import com.d4rk.androidtutorials.java.ui.screens.startup.StartupViewModel;
 import com.d4rk.androidtutorials.java.ui.screens.support.SupportActivity;
 import com.d4rk.androidtutorials.java.utils.ConsentUtils;
-import com.d4rk.androidtutorials.java.utils.EdgeToEdgeDelegate;
 import com.d4rk.androidtutorials.java.utils.ReviewHelper;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
@@ -98,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
-
+        WindowCompat.enableEdgeToEdge(getWindow());
         if (savedInstanceState != null) {
             navGraphInitialized = savedInstanceState.getBoolean(STATE_NAV_GRAPH_INITIALIZED, true);
             lastPreferredStartDestination = savedInstanceState.getInt(STATE_LAST_PREFERRED_DESTINATION, 0);
@@ -219,7 +218,6 @@ public class MainActivity extends AppCompatActivity {
                     navRail.setVisibility(View.GONE);
                 }
                 navBarView.setVisibility(View.VISIBLE);
-                EdgeToEdgeDelegate.applyBottomBar(this, binding.container, navBarView);
 
                 navBarView.setLabelVisibilityMode(uiState.bottomNavVisibility());
                 View adView = binding.adView;

@@ -8,6 +8,8 @@ import android.os.Looper;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 
+import androidx.core.view.WindowCompat;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityPasswordBoxBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
@@ -23,6 +25,7 @@ public class PasswordBoxActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityPasswordBoxBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        WindowCompat.enableEdgeToEdge(getWindow());
         bindListeners();
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }

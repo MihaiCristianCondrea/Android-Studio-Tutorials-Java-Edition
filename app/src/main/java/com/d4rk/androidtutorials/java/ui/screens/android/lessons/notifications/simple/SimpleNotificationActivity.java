@@ -12,6 +12,7 @@ import android.os.Looper;
 
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
+import androidx.core.view.WindowCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityNotificationBinding;
@@ -30,6 +31,7 @@ public class SimpleNotificationActivity extends UpNavigationActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityNotificationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        WindowCompat.enableEdgeToEdge(getWindow());
         binding.buttonShowNotification.setOnClickListener(v -> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1);
