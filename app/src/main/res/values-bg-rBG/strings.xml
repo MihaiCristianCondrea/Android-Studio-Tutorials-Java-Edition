@@ -27,6 +27,7 @@
     <string name="learn_more">Научете повече</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Реклама</string>
+    <string name="ad_attribution_with_advertiser">Реклама от %1$s</string>
     <string name="search_lessons_hint">Търсене на уроци</string>
     <string name="search_lessons_content_description">Търсене на уроци</string>
 

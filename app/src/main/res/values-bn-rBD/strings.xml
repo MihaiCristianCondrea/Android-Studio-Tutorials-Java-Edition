@@ -27,6 +27,7 @@
     <string name="learn_more">আরও জানুন</string>
     <string name="play_store">প্লে স্টোর</string>
     <string name="ad">বিজ্ঞাপন</string>
+    <string name="ad_attribution_with_advertiser">%1$s-এর বিজ্ঞাপন</string>
     <string name="search_lessons_hint">পাঠ খুঁজুন</string>
     <string name="search_lessons_content_description">পাঠ খুঁজুন</string>
 

@@ -28,6 +28,7 @@
     <string name="learn_more">और जानें</string>
     <string name="play_store">प्ले स्टोर</string>
     <string name="ad">विज्ञापन</string>
+    <string name="ad_attribution_with_advertiser">%1$s का विज्ञापन</string>
     <string name="search_lessons_hint">पाठ खोजें</string>
     <string name="search_lessons_content_description">पाठ खोजें</string>
 

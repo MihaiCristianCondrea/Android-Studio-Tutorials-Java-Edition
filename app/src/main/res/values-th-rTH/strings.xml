@@ -24,6 +24,7 @@
     <string name="learn_more">เรียนรู้เพิ่มเติม</string>
     <string name="play_store">Play Store</string>
     <string name="ad">โฆษณา</string>
+    <string name="ad_attribution_with_advertiser">โฆษณาจาก %1$s</string>
     <string name="search_lessons_hint">ค้นหาบทเรียน</string>
     <string name="search_lessons_content_description">ค้นหาบทเรียน</string>
     <string name="android_studio">Android Studio</string>

@@ -27,6 +27,7 @@
     <string name="learn_more">Pelajari lebih lanjut</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Iklan</string>
+    <string name="ad_attribution_with_advertiser">Iklan dari %1$s</string>
     <string name="search_lessons_hint">Cari pelajaran</string>
     <string name="search_lessons_content_description">Cari pelajaran</string>
 

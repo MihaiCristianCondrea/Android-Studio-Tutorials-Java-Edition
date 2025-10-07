@@ -24,6 +24,7 @@
     <string name="learn_more">Saiba mais</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Anúncio</string>
+    <string name="ad_attribution_with_advertiser">Anúncio de %1$s</string>
     <string name="search_lessons_hint">Pesquisar lições</string>
     <string name="search_lessons_content_description">Pesquisar lições</string>
     <string name="android_studio">Android Studio</string>

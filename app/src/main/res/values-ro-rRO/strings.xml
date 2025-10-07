@@ -27,6 +27,7 @@
     <string name="learn_more">Află mai multe</string>
     <string name="play_store">Magazin Play</string>
     <string name="ad">Anunț</string>
+    <string name="ad_attribution_with_advertiser">Reclamă de la %1$s</string>
     <string name="search_lessons_hint">Caută lecții</string>
     <string name="search_lessons_content_description">Caută lecții</string>
 

@@ -24,6 +24,7 @@
     <string name="learn_more">مزید جانیں</string>
     <string name="play_store">پلے اسٹور</string>
     <string name="ad">اشتہار</string>
+    <string name="ad_attribution_with_advertiser">%1$s کا اشتہار</string>
     <string name="search_lessons_hint">سبق تلاش کریں</string>
     <string name="search_lessons_content_description">سبق تلاش کریں</string>
     <string name="android_studio">اینڈرائیڈ اسٹوڈیو</string>

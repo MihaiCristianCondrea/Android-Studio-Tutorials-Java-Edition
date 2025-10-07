@@ -27,6 +27,7 @@
     <string name="learn_more">Узнать больше</string>
     <string name="play_store">Play Маркет</string>
     <string name="ad">Реклама</string>
+    <string name="ad_attribution_with_advertiser">Реклама от %1$s</string>
     <string name="search_lessons_hint">Поиск уроков</string>
     <string name="search_lessons_content_description">Поиск уроков</string>
 

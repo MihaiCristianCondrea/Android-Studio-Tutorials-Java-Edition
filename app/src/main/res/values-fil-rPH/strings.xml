@@ -24,6 +24,7 @@
     <string name="learn_more">Matuto pa</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Ad</string>
+    <string name="ad_attribution_with_advertiser">Anunsyo mula sa %1$s</string>
     <string name="search_lessons_hint">Maghanap ng mga aralin</string>
     <string name="search_lessons_content_description">Maghanap ng mga aralin</string>
     <string name="android_studio">Android Studio</string>

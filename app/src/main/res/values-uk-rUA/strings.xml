@@ -24,6 +24,7 @@
     <string name="learn_more">Дізнайтеся більше</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Реклама</string>
+    <string name="ad_attribution_with_advertiser">Реклама від %1$s</string>
     <string name="search_lessons_hint">Пошук уроків</string>
     <string name="search_lessons_content_description">Пошук уроків</string>
     <string name="android_studio">Android Studio</string>

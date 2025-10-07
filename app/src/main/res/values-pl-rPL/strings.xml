@@ -29,6 +29,7 @@
     <string name="learn_more">Dowiedz się więcej</string>
     <string name="play_store">Sklep Play</string>
     <string name="ad">Reklama</string>
+    <string name="ad_attribution_with_advertiser">Reklama od %1$s</string>
     <string name="search_lessons_hint">Wyszukaj lekcje</string>
     <string name="search_lessons_content_description">Wyszukaj lekcje</string>
 

@@ -24,6 +24,7 @@
     <string name="learn_more">Daha fazla bilgi edinin</string>
     <string name="play_store">Play Store</string>
     <string name="ad">Reklam</string>
+    <string name="ad_attribution_with_advertiser">%1$s reklamı</string>
     <string name="search_lessons_hint">Dersleri ara</string>
     <string name="search_lessons_content_description">Dersleri ara</string>
     <string name="android_studio">Android Studio</string>

@@ -29,6 +29,7 @@
     <string name="learn_more">詳しく見る</string>
     <string name="play_store">Play ストア</string>
     <string name="ad">広告</string>
+    <string name="ad_attribution_with_advertiser">%1$s の広告</string>
     <string name="search_lessons_hint">レッスンを検索</string>
     <string name="search_lessons_content_description">レッスンを検索</string>
 

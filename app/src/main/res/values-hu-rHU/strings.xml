@@ -29,6 +29,7 @@
     <string name="learn_more">Tudj meg többet</string>
     <string name="play_store">Play Áruház</string>
     <string name="ad">Hirdetés</string>
+    <string name="ad_attribution_with_advertiser">Hirdetés a(z) %1$s-től</string>
     <string name="search_lessons_hint">Leckék keresése</string>
     <string name="search_lessons_content_description">Leckék keresése</string>
 
