@@ -8,8 +8,6 @@ import android.os.Looper;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 
-import androidx.core.view.WindowCompat;
-
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityPasswordBoxBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;

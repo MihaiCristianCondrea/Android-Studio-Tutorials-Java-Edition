@@ -6,8 +6,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.SparseArray;
 
-import androidx.core.view.WindowCompat;
-
 import com.d4rk.androidtutorials.java.databinding.ActivityRadioButtonsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;

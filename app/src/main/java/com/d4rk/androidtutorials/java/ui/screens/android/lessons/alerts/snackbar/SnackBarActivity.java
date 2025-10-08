@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-import androidx.core.view.WindowCompat;
-
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySnackBarBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;

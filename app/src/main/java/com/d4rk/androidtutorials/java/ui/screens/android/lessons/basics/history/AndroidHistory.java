@@ -2,8 +2,6 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.history
 
 import android.os.Bundle;
 
-import androidx.core.view.WindowCompat;
-
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidHistoryBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;

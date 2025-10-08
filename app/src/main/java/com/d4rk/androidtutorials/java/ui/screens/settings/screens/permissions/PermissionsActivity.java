@@ -2,7 +2,6 @@ package com.d4rk.androidtutorials.java.ui.screens.settings.screens.permissions;
 
 import android.os.Bundle;
 
-import androidx.core.view.WindowCompat;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.d4rk.androidtutorials.java.R;

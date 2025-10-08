@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 
-import androidx.core.view.WindowCompat;
 import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;

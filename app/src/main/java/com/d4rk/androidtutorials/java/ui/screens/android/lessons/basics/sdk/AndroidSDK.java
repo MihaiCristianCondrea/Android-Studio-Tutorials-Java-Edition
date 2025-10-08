@@ -7,8 +7,6 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import androidx.core.view.WindowCompat;
-
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.data.model.AndroidVersion;
 import com.d4rk.androidtutorials.java.databinding.ActivityAndroidSdkBinding;

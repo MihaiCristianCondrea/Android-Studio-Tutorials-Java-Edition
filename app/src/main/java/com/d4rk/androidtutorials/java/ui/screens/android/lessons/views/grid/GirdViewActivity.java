@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.view.WindowCompat;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityGridViewBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemGridLetterBinding;

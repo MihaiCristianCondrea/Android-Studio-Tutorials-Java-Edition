@@ -6,8 +6,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
-import androidx.core.view.WindowCompat;
-
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRatingBarBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
