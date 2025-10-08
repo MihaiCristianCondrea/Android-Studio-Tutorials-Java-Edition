@@ -17,6 +17,7 @@ import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room.tabs.RoomTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room.tabs.RoomTabLayoutFragment;
+import com.d4rk.androidtutorials.java.ui.utils.LessonUiUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import java.util.Arrays;
@@ -39,6 +40,10 @@ public class RoomActivity extends SyntaxFabActivity {
         binding = ActivityRoomBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
+
+        LessonUiUtils.setupDescriptionSection(binding.descriptionSection,
+                R.string.summary_room_database,
+                true);
 
         db = AppDatabase.getInstance(this);
 
