@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.clock;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -9,9 +8,13 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityClockBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.clock.tabs.ClockTabCodeFragment;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.clock.tabs.ClockTabLayoutFragment;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
+import java.util.Arrays;
 
 public class ClockActivity extends UpNavigationActivity {
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -31,7 +34,21 @@ public class ClockActivity extends UpNavigationActivity {
 
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        binding.floatingButtonShowSyntax.setOnClickListener(view -> startActivity(new Intent(this, ClockCodeActivity.class)));
+        binding.floatingButtonShowSyntax.setOnClickListener(view -> startActivity(
+                LessonCodeTabsActivity.createIntent(
+                        this,
+                        R.string.clocks,
+                        Arrays.asList(
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        ClockTabCodeFragment.class,
+                                        getString(R.string.code_java)
+                                ),
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        ClockTabLayoutFragment.class,
+                                        getString(R.string.layout_xml)
+                                )
+                        )
+                )));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 

@@ -36,7 +36,7 @@
         android:resizeableActivity="true"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/FitSystemWindowsTheme"
+        android:theme="@style/AppThemeActionBar"
         tools:targetApi="33">
 
         <activity
@@ -78,6 +78,12 @@
             android:parentActivityName=".ui.screens.main.MainActivity" />
 
         <activity
+            android:name=".ui.screens.android.lessons.common.LessonCodeTabsActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:parentActivityName=".ui.screens.main.MainActivity" />
+
+        <activity
             android:name=".ui.screens.android.lessons.buttons.radio.RadioButtonsActivity"
             android:exported="false"
             android:label="@string/radio_buttons"
@@ -99,19 +105,9 @@
             android:label="@string/image_view"
             android:parentActivityName=".ui.screens.main.MainActivity" />
         <activity
-            android:name=".ui.screens.android.lessons.views.images.ImagesCodeActivity"
-            android:exported="false"
-            android:label="@string/image_view"
-            android:parentActivityName=".ui.screens.android.lessons.views.images.ImagesActivity" />
-        <activity
             android:name=".ui.screens.android.lessons.alerts.snackbar.SnackBarActivity"
             android:exported="false"
             android:label="@string/snack_bar"
-            android:parentActivityName=".ui.screens.main.MainActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.clocks.clock.ClockCodeActivity"
-            android:exported="false"
-            android:label="@string/clocks"
             android:parentActivityName=".ui.screens.main.MainActivity" />
         <activity
             android:name=".ui.screens.android.lessons.clocks.clock.ClockActivity"
@@ -133,11 +129,6 @@
             android:exported="false"
             android:label="@string/spinner"
             android:parentActivityName=".ui.screens.main.MainActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.views.spinner.SpinnerCodeActivity"
-            android:exported="false"
-            android:label="@string/spinner"
-            android:parentActivityName=".ui.screens.android.lessons.views.spinner.SpinnerActivity" />
 
         <activity-alias
             android:name="com.d4rk.androidtutorials.java.ui.android.webviews.WebViewActivity"
@@ -149,11 +140,6 @@
             android:exported="false"
             android:label="@string/progress_bar"
             android:parentActivityName=".ui.screens.main.MainActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.progress.progressbar.ProgressBarCodeActivity"
-            android:exported="false"
-            android:label="@string/progress_bar"
-            android:parentActivityName=".ui.screens.android.lessons.progress.progressbar.ProgressBarActivity" />
         <activity
             android:name=".ui.screens.android.lessons.notifications.simple.SimpleNotificationActivity"
             android:exported="false"
@@ -212,40 +198,20 @@
             android:label="@string/history_of_android"
             android:parentActivityName=".ui.screens.main.MainActivity" />
         <activity
-            android:name=".ui.screens.android.lessons.buttons.buttons.ButtonsCodeActivity"
-            android:exported="false"
-            android:label="@string/buttons"
-            android:parentActivityName=".ui.screens.main.MainActivity" />
-        <activity
             android:name=".ui.screens.android.lessons.layouts.linear.LinearLayoutActivity"
             android:exported="false"
             android:label="@string/linear_layout"
             android:parentActivityName=".ui.screens.main.MainActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.layouts.linear.LinearLayoutCodeActivity"
-            android:exported="false"
-            android:label="@string/linear_layout"
-            android:parentActivityName=".ui.screens.android.lessons.layouts.linear.LinearLayoutActivity" />
         <activity
             android:name=".ui.screens.android.lessons.layouts.relative.RelativeLayoutActivity"
             android:exported="false"
             android:label="@string/relative_layout"
             android:parentActivityName=".ui.screens.main.MainActivity" />
         <activity
-            android:name=".ui.screens.android.lessons.layouts.relative.RelativeLayoutCodeActivity"
-            android:exported="false"
-            android:label="@string/relative_layout"
-            android:parentActivityName=".ui.screens.android.lessons.layouts.relative.RelativeLayoutActivity" />
-        <activity
             android:name=".ui.screens.android.lessons.layouts.table.TableLayoutActivity"
             android:exported="false"
             android:label="@string/table_layout"
             android:parentActivityName=".ui.screens.main.MainActivity" />
-        <activity
-            android:name=".ui.screens.android.lessons.layouts.table.TableLayoutCodeActivity"
-            android:exported="false"
-            android:label="@string/table_layout"
-            android:parentActivityName=".ui.screens.android.lessons.layouts.table.TableLayoutActivity" />
         <activity
             android:name=".ui.screens.android.lessons.views.grid.GirdViewActivity"
             android:exported="false"
@@ -308,11 +274,6 @@
             android:label="@string/room_database"
             android:parentActivityName=".ui.screens.main.MainActivity" />
 
-        <activity
-            android:name=".ui.screens.android.lessons.data.room.RoomCodeActivity"
-            android:exported="false"
-            android:label="@string/room_database"
-            android:parentActivityName=".ui.screens.android.lessons.data.room.RoomActivity" />
 
         <activity
             android:name=".ui.screens.android.lessons.networking.retrofit.RetrofitActivity"
@@ -320,18 +281,12 @@
             android:label="@string/retrofit"
             android:parentActivityName=".ui.screens.main.MainActivity" />
 
-        <activity
-            android:name=".ui.screens.android.lessons.networking.retrofit.RetrofitCodeActivity"
-            android:exported="false"
-            android:label="@string/retrofit"
-            android:parentActivityName=".ui.screens.android.lessons.networking.retrofit.RetrofitActivity" />
 
         <activity
             android:name=".ui.screens.settings.SettingsActivity"
             android:exported="false"
             android:label="@string/settings"
-            android:parentActivityName=".ui.screens.settings.SettingsActivity"
-            android:theme="@style/FitSystemWindowsTheme">
+            android:parentActivityName=".ui.screens.settings.SettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
             </intent-filter>

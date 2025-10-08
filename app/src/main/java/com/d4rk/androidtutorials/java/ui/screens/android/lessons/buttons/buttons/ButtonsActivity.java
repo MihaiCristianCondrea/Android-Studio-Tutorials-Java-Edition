@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -9,10 +8,14 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityButtonsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons.tabs.ButtonsTabCodeFragment;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons.tabs.ButtonsTabLayoutFragment;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.snackbar.Snackbar;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
+import java.util.Arrays;
 
 public class ButtonsActivity extends UpNavigationActivity {
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -49,7 +52,21 @@ public class ButtonsActivity extends UpNavigationActivity {
         binding.floatingButtonSecondary.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.floating_button_secondary_icon) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());
         binding.floatingButtonSurface.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.floating_button_surface_icon) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());
         binding.floatingButtonTertiary.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.floating_button_tertiary_icon) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(new Intent(ButtonsActivity.this, ButtonsCodeActivity.class)));
+        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(
+                LessonCodeTabsActivity.createIntent(
+                        ButtonsActivity.this,
+                        R.string.buttons,
+                        Arrays.asList(
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        ButtonsTabCodeFragment.class,
+                                        getString(R.string.code_java)
+                                ),
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        ButtonsTabLayoutFragment.class,
+                                        getString(R.string.layout_xml)
+                                )
+                        )
+                )));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 

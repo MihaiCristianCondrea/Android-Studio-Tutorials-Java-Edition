@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.progress.progressbar;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -9,9 +8,13 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityProgressBarBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.progress.progressbar.tabs.ProgressBarTabCodeFragment;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.progress.progressbar.tabs.ProgressBarTabLayoutFragment;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
+import java.util.Arrays;
 
 public class ProgressBarActivity extends UpNavigationActivity {
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -48,8 +51,21 @@ public class ProgressBarActivity extends UpNavigationActivity {
             binding.progressBar.show();
             handler.postDelayed(() -> binding.progressBar.hide(), 5000);
         });
-        binding.floatingButtonShowSyntax.setOnClickListener(v ->
-                startActivity(new Intent(this, ProgressBarCodeActivity.class)));
+        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(
+                LessonCodeTabsActivity.createIntent(
+                        this,
+                        R.string.progress_bar,
+                        Arrays.asList(
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        ProgressBarTabCodeFragment.class,
+                                        getString(R.string.code_java)
+                                ),
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        ProgressBarTabLayoutFragment.class,
+                                        getString(R.string.layout_xml)
+                                )
+                        )
+                )));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 

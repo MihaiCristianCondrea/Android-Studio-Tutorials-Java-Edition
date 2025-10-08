@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -13,11 +12,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRoomBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemNoteBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room.tabs.RoomTabCodeFragment;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room.tabs.RoomTabLayoutFragment;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -62,8 +66,21 @@ public class RoomActivity extends UpNavigationActivity {
             }
         });
 
-        binding.floatingButtonShowSyntax.setOnClickListener(v ->
-                startActivity(new Intent(RoomActivity.this, RoomCodeActivity.class)));
+        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(
+                LessonCodeTabsActivity.createIntent(
+                        this,
+                        R.string.room_database,
+                        Arrays.asList(
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        RoomTabCodeFragment.class,
+                                        getString(R.string.code_java)
+                                ),
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        RoomTabLayoutFragment.class,
+                                        getString(R.string.layout_xml)
+                                )
+                        )
+                )));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 

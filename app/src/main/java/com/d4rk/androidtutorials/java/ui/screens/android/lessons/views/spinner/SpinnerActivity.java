@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.spinner;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -14,9 +13,13 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivitySpinnerBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.spinner.tabs.SpinnerTabCodeFragment;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.spinner.tabs.SpinnerTabLayoutFragment;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
+import java.util.Arrays;
 
 public class SpinnerActivity extends UpNavigationActivity {
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -62,8 +65,21 @@ public class SpinnerActivity extends UpNavigationActivity {
             }
         });
 
-        binding.floatingButtonShowSyntax.setOnClickListener(v ->
-                startActivity(new Intent(this, SpinnerCodeActivity.class)));
+        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(
+                LessonCodeTabsActivity.createIntent(
+                        this,
+                        R.string.spinner,
+                        Arrays.asList(
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        SpinnerTabCodeFragment.class,
+                                        getString(R.string.code_java)
+                                ),
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        SpinnerTabLayoutFragment.class,
+                                        getString(R.string.layout_xml)
+                                )
+                        )
+                )));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 

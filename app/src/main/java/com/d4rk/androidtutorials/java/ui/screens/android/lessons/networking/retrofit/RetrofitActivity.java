@@ -1,6 +1,5 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retrofit;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -12,6 +11,9 @@ import androidx.annotation.Nullable;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRetrofitBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retrofit.tabs.RetrofitTabCodeFragment;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retrofit.tabs.RetrofitTabLayoutFragment;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.gson.annotations.SerializedName;
 
@@ -21,6 +23,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import java.util.Arrays;
 
 /**
  * Demonstrates a simple HTTP request using Retrofit.
@@ -63,8 +66,21 @@ public class RetrofitActivity extends UpNavigationActivity {
             });
         });
 
-        binding.floatingButtonShowSyntax.setOnClickListener(v ->
-                startActivity(new Intent(RetrofitActivity.this, RetrofitCodeActivity.class)));
+        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(
+                LessonCodeTabsActivity.createIntent(
+                        this,
+                        R.string.retrofit,
+                        Arrays.asList(
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        RetrofitTabCodeFragment.class,
+                                        getString(R.string.code_java)
+                                ),
+                                LessonCodeTabsActivity.PageSpec.of(
+                                        RetrofitTabLayoutFragment.class,
+                                        getString(R.string.layout_xml)
+                                )
+                        )
+                )));
         handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 
