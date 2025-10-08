@@ -7,9 +7,17 @@ import android.view.ViewGroup;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.ShortcutItem;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.ShortcutsAdapter;
+import com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.ShortcutsRepository;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.gms.ads.AdView;
+
+import java.util.List;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import me.zhanghai.android.fastscroll.FastScrollScrollView;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
@@ -37,6 +45,8 @@ public class ShortcutsCategoryActivity extends UpNavigationActivity {
         setContentView(layoutResId);
         setTitle(titleResId);
 
+        RecyclerView recyclerView = setupShortcuts(layoutResId);
+
         View contentView = findViewById(android.R.id.content);
         if (contentView instanceof ViewGroup) {
             View root = ((ViewGroup) contentView).getChildAt(0);
@@ -50,9 +60,28 @@ public class ShortcutsCategoryActivity extends UpNavigationActivity {
             AdUtils.loadBanner(adView);
         }
 
-        FastScrollScrollView scrollView = findViewById(R.id.scroll_view);
-        if (scrollView != null) {
-            new FastScrollerBuilder(scrollView).useMd2Style().build();
+        if (recyclerView != null) {
+            new FastScrollerBuilder(recyclerView).useMd2Style().build();
+        } else {
+            FastScrollScrollView scrollView = findViewById(R.id.scroll_view);
+            if (scrollView != null) {
+                new FastScrollerBuilder(scrollView).useMd2Style().build();
+            }
         }
+    }
+
+    private RecyclerView setupShortcuts(int layoutResId) {
+        RecyclerView recyclerView = findViewById(R.id.shortcut_list);
+        if (recyclerView == null) {
+            return null;
+        }
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        ShortcutsAdapter adapter = new ShortcutsAdapter();
+        recyclerView.setAdapter(adapter);
+
+        List<ShortcutItem> shortcuts = ShortcutsRepository.getShortcuts(layoutResId);
+        adapter.submitList(shortcuts);
+        return recyclerView;
     }
 }

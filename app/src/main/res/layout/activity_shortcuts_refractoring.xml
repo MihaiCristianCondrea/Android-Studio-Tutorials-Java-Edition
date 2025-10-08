@@ -4,275 +4,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.android.lessons.basics.shortcuts.tabs.ShortcutsCategoryActivity">
 
-    <me.zhanghai.android.fastscroll.FastScrollScrollView
-        android:id="@+id/scroll_view"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/header_row"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:divider="?attr/colorAccent"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:showDividers="middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/shortcuts_title"
+            android:textAlignment="center" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/description"
+            android:textAlignment="center" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shortcut_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/ad_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TableLayout
-                android:id="@+id/table_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:showDividers="middle"
-                android:stretchColumns="*">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:divider="?attr/colorAccent"
-                    android:showDividers="middle">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        style="@style/TextAppearance.Material3.TitleLarge"
-                        android:layout_margin="16dp"
-                        android:text="@string/shortcuts_title"
-                        android:textAlignment="center" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        style="@style/TextAppearance.Material3.TitleLarge"
-                        android:layout_margin="16dp"
-                        android:text="@string/description"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:divider="?attr/colorAccent"
-                    android:showDividers="middle">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="F5"
-                        tools:ignore="HardcodedText" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="@android:string/copy"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:divider="?attr/colorAccent"
-                    android:showDividers="middle">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="F6"
-                        tools:ignore="HardcodedText" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="@string/move"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:divider="?attr/colorAccent"
-                    android:showDividers="middle">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="Alt + Delete"
-                        tools:ignore="HardcodedText" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="@string/safe_delete"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:divider="?attr/colorAccent"
-                    android:showDividers="middle">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="Shift + F6"
-                        tools:ignore="HardcodedText" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="@string/rename"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:divider="?attr/colorAccent"
-                    android:showDividers="middle">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="Ctrl + F6"
-                        tools:ignore="HardcodedText" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="@string/change_signature"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:divider="?attr/colorAccent"
-                    android:showDividers="middle">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="Ctrl + Alt + N"
-                        tools:ignore="HardcodedText" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="@string/inline"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:divider="?attr/colorAccent"
-                    android:showDividers="middle">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="Ctrl + Alt + M"
-                        tools:ignore="HardcodedText" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="@string/extract_method"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:divider="?attr/colorAccent"
-                    android:showDividers="middle">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="Ctrl + Alt + V"
-                        tools:ignore="HardcodedText" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="@string/extract_variable"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:divider="?attr/colorAccent"
-                    android:showDividers="middle">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="Ctrl + Alt + F"
-                        tools:ignore="HardcodedText" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="@string/extract_field"
-                        android:textAlignment="center" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:divider="?attr/colorAccent"
-                    android:showDividers="middle">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="Ctrl + Alt + C"
-                        tools:ignore="HardcodedText" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp"
-                        android:gravity="center"
-                        android:text="@string/extract_constant"
-                        android:textAlignment="center" />
-                </TableRow>
-            </TableLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </me.zhanghai.android.fastscroll.FastScrollScrollView>
+        app:layout_constraintTop_toBottomOf="@id/header_row"
+        tools:listitem="@layout/item_shortcut" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/ad_view"
@@ -286,4 +58,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
