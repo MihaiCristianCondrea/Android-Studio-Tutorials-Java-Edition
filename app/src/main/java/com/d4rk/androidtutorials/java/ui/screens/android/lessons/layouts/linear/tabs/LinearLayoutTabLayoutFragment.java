@@ -1,66 +1,34 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.linear.tabs;
 
-import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.preference.PreferenceManager;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.FragmentLinearLayoutLayoutBinding;
-import com.d4rk.androidtutorials.java.utils.CodeHighlighter;
 import com.d4rk.androidtutorials.java.utils.CodeViewUtils;
-import com.d4rk.androidtutorials.java.utils.FontManager;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class LinearLayoutTabLayoutFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         FragmentLinearLayoutLayoutBinding binding = FragmentLinearLayoutLayoutBinding.inflate(inflater, container, false);
-        new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         AdUtils.loadBanner(binding.adView);
-
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        Typeface monospaceFont = FontManager.getMonospaceFont(requireContext(), prefs);
-        CodeViewUtils.applyDefaults(monospaceFont,
+        CodeViewUtils.populateFromRawResource(
                 binding.codeViewVerticalXml,
-                binding.codeViewHorizontalXml);
-
-        StringBuilder verticalBuilder = new StringBuilder();
-        try (BufferedReader readerVertical = new BufferedReader(new InputStreamReader(getResources().openRawResource(R.raw.text_linear_layout_vertical_xml)))) {
-            String line;
-            while ((line = readerVertical.readLine()) != null) {
-                verticalBuilder.append(line).append('\n');
-            }
-            binding.codeViewVerticalXml.setText(verticalBuilder.toString());
-            CodeHighlighter.applyXmlTheme(binding.codeViewVerticalXml);
-        } catch (IOException e) {
-            Log.e("LinearLayoutTab", "Error reading vertical layout", e);
-        }
-        StringBuilder horizontalBuilder = new StringBuilder();
-        try (BufferedReader readerHorizontal = new BufferedReader(new InputStreamReader(getResources().openRawResource(R.raw.text_linear_layout_horizontal_xml)))) {
-            String line;
-            while ((line = readerHorizontal.readLine()) != null) {
-                horizontalBuilder.append(line).append('\n');
-            }
-            binding.codeViewHorizontalXml.setText(horizontalBuilder.toString());
-            CodeHighlighter.applyXmlTheme(binding.codeViewHorizontalXml);
-        } catch (IOException e) {
-            Log.e("LinearLayoutTab", "Error reading horizontal layout", e);
-        }
+                R.raw.text_linear_layout_vertical_xml,
+                CodeViewUtils.HighlightMode.XML,
+                "LinearLayoutTabLayout");
+        CodeViewUtils.populateFromRawResource(
+                binding.codeViewHorizontalXml,
+                R.raw.text_linear_layout_horizontal_xml,
+                CodeViewUtils.HighlightMode.XML,
+                "LinearLayoutTabLayout");
         return binding.getRoot();
     }
 }
