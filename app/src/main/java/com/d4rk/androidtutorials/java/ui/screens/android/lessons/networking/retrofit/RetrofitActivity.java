@@ -12,6 +12,7 @@ import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retrofit.tabs.RetrofitTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retrofit.tabs.RetrofitTabLayoutFragment;
+import com.d4rk.androidtutorials.java.ui.utils.LessonUiUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.gson.annotations.SerializedName;
 
@@ -23,6 +24,8 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+
+import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 /**
  * Demonstrates a simple HTTP request using Retrofit.
@@ -37,6 +40,8 @@ public class RetrofitActivity extends SyntaxFabActivity {
         binding = ActivityRetrofitBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
+        LessonUiUtils.setupDescriptionSection(binding.descriptionSection, R.string.summary_retrofit, false);
+        new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://jsonplaceholder.typicode.com/")
                 .addConverterFactory(GsonConverterFactory.create())

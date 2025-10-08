@@ -25,6 +25,7 @@ public class NavigationDrawerActivity extends SyntaxFabActivity {
             binding.drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         });
+        binding.buttonOpenDrawer.setOnClickListener(v -> binding.drawerLayout.openDrawer(GravityCompat.START));
 
         setupSyntaxFab(binding.floatingButtonShowSyntax, () -> {
             Intent intent = new Intent(this, CodeActivity.class);

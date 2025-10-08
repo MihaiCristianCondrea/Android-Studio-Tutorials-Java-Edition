@@ -11,6 +11,8 @@ import com.d4rk.androidtutorials.java.databinding.ActivityAndroidStartProjectBin
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
+import androidx.core.text.HtmlCompat;
+
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class AndroidStartProjectActivity extends UpNavigationActivity {
@@ -37,6 +39,10 @@ public class AndroidStartProjectActivity extends UpNavigationActivity {
         AdUtils.loadBanner(binding.adViewBottom);
         AdUtils.loadBanner(binding.adView);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
+        binding.textViewThirdStepSummary.setText(HtmlCompat.fromHtml(
+                getString(R.string.summary_third_step),
+                HtmlCompat.FROM_HTML_MODE_LEGACY
+        ));
         binding.textViewThirdStepSummary.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }

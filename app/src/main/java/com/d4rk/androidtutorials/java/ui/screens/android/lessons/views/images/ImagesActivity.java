@@ -8,6 +8,7 @@ import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images.tabs.ImagesTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images.tabs.ImagesTabLayoutFragment;
+import com.d4rk.androidtutorials.java.ui.utils.LessonUiUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import java.util.Arrays;
@@ -23,6 +24,7 @@ public class ImagesActivity extends SyntaxFabActivity {
         binding = ActivityImagesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
+        LessonUiUtils.setupDescriptionSection(binding.descriptionSection, R.string.summary_image_view, true);
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         setupSyntaxFab(binding.floatingButtonShowSyntax, () -> startActivity(
                 LessonCodeTabsActivity.createIntent(
