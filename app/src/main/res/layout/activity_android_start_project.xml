@@ -2,20 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraint_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/top_app_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/menu_share"
-        app:shapeAppearanceOverlay="@style/ShapeTokens.Clover"
-        app:title="@string/android_start_project" />
 
     <me.zhanghai.android.fastscroll.FastScrollScrollView
         android:id="@+id/scroll_view"
@@ -24,7 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/top_app_bar">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -32,6 +22,11 @@
             android:orientation="vertical"
             android:paddingHorizontal="24dp"
             android:paddingVertical="24dp">
+
+            <include
+                android:id="@+id/layout_preview_header"
+                layout="@layout/lesson_section_header"
+                tools:text="@string/layout_preview" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_first_step"
