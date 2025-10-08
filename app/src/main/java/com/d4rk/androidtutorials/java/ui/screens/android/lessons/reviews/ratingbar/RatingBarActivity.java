@@ -2,18 +2,15 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.reviews.rating
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.widget.Toast;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRatingBarBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
-public class RatingBarActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class RatingBarActivity extends SyntaxFabActivity {
     private ActivityRatingBarBinding binding;
     private float rating = 0f;
     private String formattedString;
@@ -31,12 +28,11 @@ public class RatingBarActivity extends UpNavigationActivity {
             updateRatingText();
         });
         binding.button.setOnClickListener(v -> showRatingToast());
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> {
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> {
             Intent intent = new Intent(this, CodeActivity.class);
             intent.putExtra("lesson_name", "RatingBar");
             startActivity(intent);
         });
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 
     private void updateRatingText() {
@@ -47,12 +43,5 @@ public class RatingBarActivity extends UpNavigationActivity {
     private void showRatingToast() {
         formattedString = String.format(getString(R.string.snack_rating), rating);
         Toast.makeText(this, formattedString, Toast.LENGTH_SHORT).show();
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }

@@ -3,8 +3,6 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.grid;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,14 +14,13 @@ import androidx.annotation.Nullable;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityGridViewBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemGridLetterBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
-public class GirdViewActivity extends UpNavigationActivity {
+public class GirdViewActivity extends SyntaxFabActivity {
 
     private final String[] numbers = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
-    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivityGridViewBinding binding;
 
     @Override
@@ -38,18 +35,11 @@ public class GirdViewActivity extends UpNavigationActivity {
             ItemGridLetterBinding itemBinding = ItemGridLetterBinding.bind(view);
             Toast.makeText(this, itemBinding.textLetter.getText(), Toast.LENGTH_SHORT).show();
         });
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> {
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> {
             Intent intent = new Intent(this, CodeActivity.class);
             intent.putExtra("lesson_name", "GridView");
             startActivity(intent);
         });
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 
     private static class LettersAdapter extends ArrayAdapter<String> {

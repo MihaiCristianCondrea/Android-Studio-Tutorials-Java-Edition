@@ -7,22 +7,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityNotificationBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
-public class InboxNotificationActivity extends UpNavigationActivity {
+public class InboxNotificationActivity extends SyntaxFabActivity {
     private final String notificationChannelId = "inbox_notification";
     private final int notificationId = 1;
-    private final Handler handler = new Handler(Looper.getMainLooper());
     private ActivityNotificationBinding binding;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -51,18 +47,10 @@ public class InboxNotificationActivity extends UpNavigationActivity {
 
             notificationManager.notify(notificationId, notificationBuilder.build());
         });
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> {
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> {
             Intent intent = new Intent(this, CodeActivity.class);
             intent.putExtra("lesson_name", "InboxNotification");
             startActivity(intent);
         });
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }

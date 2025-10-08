@@ -7,7 +7,7 @@ import android.os.Looper;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityProgressBarBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.progress.progressbar.tabs.ProgressBarTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.progress.progressbar.tabs.ProgressBarTabLayoutFragment;
@@ -16,8 +16,8 @@ import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 import java.util.Arrays;
 
-public class ProgressBarActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class ProgressBarActivity extends SyntaxFabActivity {
+    private final Handler progressHandler = new Handler(Looper.getMainLooper());
     private ActivityProgressBarBinding binding;
 
     @Override
@@ -41,17 +41,17 @@ public class ProgressBarActivity extends UpNavigationActivity {
                     if (progressStatus[0] < 100) {
                         progressStatus[0]++;
                         binding.progressBarHorizontal.setProgress(progressStatus[0]);
-                        handler.postDelayed(this, 50);
+                        progressHandler.postDelayed(this, 50);
                     }
                 }
             };
-            handler.post(runnable);
+            progressHandler.post(runnable);
         });
         binding.buttonDownload.setOnClickListener(v -> {
             binding.progressBar.show();
-            handler.postDelayed(() -> binding.progressBar.hide(), 5000);
+            progressHandler.postDelayed(() -> binding.progressBar.hide(), 5000);
         });
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> startActivity(
                 LessonCodeTabsActivity.createIntent(
                         this,
                         R.string.progress_bar,
@@ -66,13 +66,12 @@ public class ProgressBarActivity extends UpNavigationActivity {
                                 )
                         )
                 )));
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
+        progressHandler.removeCallbacksAndMessages(null);
     }
 }

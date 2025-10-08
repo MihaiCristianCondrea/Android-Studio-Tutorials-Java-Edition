@@ -2,19 +2,15 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.navigation.dra
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-
 import androidx.core.view.GravityCompat;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityNavigationDrawerBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
-public class NavigationDrawerActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class NavigationDrawerActivity extends SyntaxFabActivity {
     private ActivityNavigationDrawerBinding binding;
 
     @Override
@@ -29,19 +25,10 @@ public class NavigationDrawerActivity extends UpNavigationActivity {
             return true;
         });
 
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> {
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> {
             Intent intent = new Intent(this, CodeActivity.class);
             intent.putExtra("lesson_name", "NavigationDrawer");
             startActivity(intent);
         });
-
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }

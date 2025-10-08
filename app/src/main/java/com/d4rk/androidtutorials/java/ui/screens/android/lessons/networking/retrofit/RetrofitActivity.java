@@ -1,8 +1,6 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retrofit;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
@@ -10,7 +8,7 @@ import androidx.annotation.Nullable;
 
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRetrofitBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retrofit.tabs.RetrofitTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retrofit.tabs.RetrofitTabLayoutFragment;
@@ -28,8 +26,7 @@ import java.util.Arrays;
 /**
  * Demonstrates a simple HTTP request using Retrofit.
  */
-public class RetrofitActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class RetrofitActivity extends SyntaxFabActivity {
     private ActivityRetrofitBinding binding;
     private JsonPlaceholderApi api;
 
@@ -66,7 +63,7 @@ public class RetrofitActivity extends UpNavigationActivity {
             });
         });
 
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> startActivity(
                 LessonCodeTabsActivity.createIntent(
                         this,
                         R.string.retrofit,
@@ -81,13 +78,6 @@ public class RetrofitActivity extends UpNavigationActivity {
                                 )
                         )
                 )));
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 
     private void displayTodoTitle(@NonNull Response<Todo> response) {

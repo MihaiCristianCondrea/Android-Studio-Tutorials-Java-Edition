@@ -1,13 +1,10 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.linear;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityLinearLayoutBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.linear.tabs.LinearLayoutTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.linear.tabs.LinearLayoutTabLayoutFragment;
@@ -16,8 +13,7 @@ import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 import java.util.Arrays;
 
-public class LinearLayoutActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class LinearLayoutActivity extends SyntaxFabActivity {
     private ActivityLinearLayoutBinding binding;
 
     @Override
@@ -32,7 +28,7 @@ public class LinearLayoutActivity extends UpNavigationActivity {
         AdUtils.loadBanner(binding.descriptionSection.adView);
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> startActivity(
                 LessonCodeTabsActivity.createIntent(
                         this,
                         R.string.linear_layout,
@@ -47,13 +43,5 @@ public class LinearLayoutActivity extends UpNavigationActivity {
                                 )
                         )
                 )));
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }

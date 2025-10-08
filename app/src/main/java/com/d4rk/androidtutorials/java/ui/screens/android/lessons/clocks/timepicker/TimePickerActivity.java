@@ -3,11 +3,8 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.timepic
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-
 import com.d4rk.androidtutorials.java.databinding.ActivityTimePickerBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
@@ -15,8 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class TimePickerActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class TimePickerActivity extends SyntaxFabActivity {
     private final Calendar calendar = Calendar.getInstance();
     private ActivityTimePickerBinding binding;
 
@@ -39,24 +35,16 @@ public class TimePickerActivity extends UpNavigationActivity {
                     calendar.get(Calendar.MINUTE),
                     true).show();
         });
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> {
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> {
             Intent intent = new Intent(this, CodeActivity.class);
             intent.putExtra("lesson_name", "TimePicker");
             startActivity(intent);
         });
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 
     private void updateTimeInView() {
         String timeFormat = "HH:mm";
         SimpleDateFormat sdf = new SimpleDateFormat(timeFormat, Locale.getDefault());
         binding.timeTextView.setText(sdf.format(calendar.getTime()));
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }

@@ -1,12 +1,9 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.table;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityTableLayoutBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.table.tabs.TableLayoutTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.table.tabs.TableLayoutTabLayoutFragment;
@@ -15,8 +12,7 @@ import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 import java.util.Arrays;
 
-public class TableLayoutActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class TableLayoutActivity extends SyntaxFabActivity {
     private ActivityTableLayoutBinding binding;
 
     @Override
@@ -26,7 +22,7 @@ public class TableLayoutActivity extends UpNavigationActivity {
         setContentView(binding.getRoot());
         EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> startActivity(
                 LessonCodeTabsActivity.createIntent(
                         this,
                         R.string.table_layout,
@@ -41,13 +37,5 @@ public class TableLayoutActivity extends UpNavigationActivity {
                                 )
                         )
                 )));
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }

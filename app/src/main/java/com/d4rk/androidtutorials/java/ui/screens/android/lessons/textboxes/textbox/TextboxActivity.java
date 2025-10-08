@@ -2,17 +2,13 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.textboxes.text
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-
 import com.d4rk.androidtutorials.java.databinding.ActivityTextBoxBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.snackbar.Snackbar;
 
-public class TextboxActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class TextboxActivity extends SyntaxFabActivity {
     private ActivityTextBoxBinding binding;
 
     @Override
@@ -22,11 +18,10 @@ public class TextboxActivity extends UpNavigationActivity {
         setContentView(binding.getRoot());
         EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         bindListeners();
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 
     private void bindListeners() {
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> {
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> {
             Intent intent = new Intent(this, CodeActivity.class);
             intent.putExtra("lesson_name", "TextBox");
             startActivity(intent);
@@ -41,12 +36,5 @@ public class TextboxActivity extends UpNavigationActivity {
                 Snackbar.make(binding.getRoot(), text, Snackbar.LENGTH_LONG).show();
             }
         });
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }

@@ -2,8 +2,6 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.chronom
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.os.SystemClock;
 
 import androidx.annotation.Nullable;
@@ -11,12 +9,11 @@ import androidx.annotation.Nullable;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityChronometerBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
-public class ChronometerActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class ChronometerActivity extends SyntaxFabActivity {
     private ActivityChronometerBinding binding;
 
     @Override
@@ -32,21 +29,13 @@ public class ChronometerActivity extends UpNavigationActivity {
         binding.descriptionSection.descriptionText.setText(R.string.summary_chronometer);
         AdUtils.loadBanner(binding.descriptionSection.adView);
 
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> {
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> {
             Intent intent = new Intent(this, CodeActivity.class);
             intent.putExtra("lesson_name", "Chronometer");
             startActivity(intent);
         });
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
         binding.buttonStart.setOnClickListener(v -> binding.chronometer.start());
         binding.buttonStop.setOnClickListener(v -> binding.chronometer.stop());
         binding.buttonReset.setOnClickListener(v -> binding.chronometer.setBase(SystemClock.elapsedRealtime()));
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }

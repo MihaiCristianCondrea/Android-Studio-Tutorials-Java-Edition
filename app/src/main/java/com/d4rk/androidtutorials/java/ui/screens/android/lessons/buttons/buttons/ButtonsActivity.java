@@ -1,13 +1,10 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityButtonsBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons.tabs.ButtonsTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons.tabs.ButtonsTabLayoutFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
@@ -17,8 +14,7 @@ import com.google.android.material.snackbar.Snackbar;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 import java.util.Arrays;
 
-public class ButtonsActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class ButtonsActivity extends SyntaxFabActivity {
     private ActivityButtonsBinding binding;
 
     @Override
@@ -52,7 +48,7 @@ public class ButtonsActivity extends UpNavigationActivity {
         binding.floatingButtonSecondary.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.floating_button_secondary_icon) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());
         binding.floatingButtonSurface.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.floating_button_surface_icon) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());
         binding.floatingButtonTertiary.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.floating_button_tertiary_icon) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> startActivity(
                 LessonCodeTabsActivity.createIntent(
                         ButtonsActivity.this,
                         R.string.buttons,
@@ -67,13 +63,5 @@ public class ButtonsActivity extends UpNavigationActivity {
                                 )
                         )
                 )));
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }

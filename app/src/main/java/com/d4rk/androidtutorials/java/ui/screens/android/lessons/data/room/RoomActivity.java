@@ -1,8 +1,6 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -15,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRoomBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemNoteBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room.tabs.RoomTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room.tabs.RoomTabLayoutFragment;
@@ -29,8 +27,7 @@ import java.util.concurrent.Executors;
 /**
  * Demonstrates basic Room usage by inserting and reading notes.
  */
-public class RoomActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class RoomActivity extends SyntaxFabActivity {
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
     private ActivityRoomBinding binding;
     private NotesAdapter adapter;
@@ -66,7 +63,7 @@ public class RoomActivity extends UpNavigationActivity {
             }
         });
 
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> startActivity(
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> startActivity(
                 LessonCodeTabsActivity.createIntent(
                         this,
                         R.string.room_database,
@@ -81,7 +78,6 @@ public class RoomActivity extends UpNavigationActivity {
                                 )
                         )
                 )));
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
     }
 
     private void loadNotes() {
@@ -97,7 +93,6 @@ public class RoomActivity extends UpNavigationActivity {
     protected void onDestroy() {
         super.onDestroy();
         executor.shutdown();
-        handler.removeCallbacksAndMessages(null);
     }
 
     private static class NotesAdapter extends ListAdapter<Note, NotesAdapter.NoteViewHolder> {

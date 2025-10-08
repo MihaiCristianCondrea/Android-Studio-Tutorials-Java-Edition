@@ -2,21 +2,17 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.switch
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivitySwitchBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.snackbar.Snackbar;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
-public class SwitchActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class SwitchActivity extends SyntaxFabActivity {
     private ActivitySwitchBinding binding;
 
     @Override
@@ -40,18 +36,10 @@ public class SwitchActivity extends UpNavigationActivity {
         binding.materialSwitch.setOnClickListener(view -> Snackbar.make(binding.getRoot(), R.string.material_switch, Snackbar.LENGTH_SHORT).show());
         binding.switchMaterial.setOnClickListener(view -> Snackbar.make(binding.getRoot(), R.string.switch_material, Snackbar.LENGTH_SHORT).show());
         binding.buttonToggle.setOnClickListener(view -> Snackbar.make(binding.getRoot(), R.string.toggle_button, Snackbar.LENGTH_SHORT).show());
-        binding.floatingButtonShowSyntax.setOnClickListener(view -> {
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> {
             Intent intent = new Intent(this, CodeActivity.class);
             intent.putExtra("lesson_name", "Switch");
             startActivity(intent);
         });
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }

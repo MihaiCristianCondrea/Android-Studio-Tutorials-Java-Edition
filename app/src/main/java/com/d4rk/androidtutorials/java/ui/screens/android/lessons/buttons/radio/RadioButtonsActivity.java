@@ -2,19 +2,16 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.radio;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.util.SparseArray;
 
 import com.d4rk.androidtutorials.java.databinding.ActivityRadioButtonsBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.radiobutton.MaterialRadioButton;
 import com.google.android.material.snackbar.Snackbar;
 
-public class RadioButtonsActivity extends UpNavigationActivity {
-    private final Handler handler = new Handler(Looper.getMainLooper());
+public class RadioButtonsActivity extends SyntaxFabActivity {
     private ActivityRadioButtonsBinding binding;
 
     @Override
@@ -35,19 +32,10 @@ public class RadioButtonsActivity extends UpNavigationActivity {
             }
         });
 
-        binding.floatingButtonShowSyntax.setOnClickListener(v -> {
+        setupSyntaxFab(binding.floatingButtonShowSyntax, () -> {
             Intent intent = new Intent(this, CodeActivity.class);
             intent.putExtra("lesson_name", "RadioButtons");
             startActivity(intent);
         });
-
-        handler.postDelayed(() -> binding.floatingButtonShowSyntax.shrink(), 5000);
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }
