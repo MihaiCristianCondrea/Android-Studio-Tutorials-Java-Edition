@@ -15,13 +15,14 @@ import com.d4rk.androidtutorials.java.ui.screens.android.lessons.networking.retr
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Arrays;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
-import java.util.Arrays;
 
 /**
  * Demonstrates a simple HTTP request using Retrofit.

@@ -1,5 +1,11 @@
 package com.d4rk.androidtutorials.java.startup;
 
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.mockStatic;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.when;
+
 import android.content.Context;
 import android.webkit.CookieManager;
 
@@ -10,12 +16,6 @@ import com.d4rk.androidtutorials.java.ads.AdUtils;
 
 import org.junit.Test;
 import org.mockito.MockedStatic;
-
-import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.mockStatic;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.when;
 
 public class StartupWorkerTest {
 

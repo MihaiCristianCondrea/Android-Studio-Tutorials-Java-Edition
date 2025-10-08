@@ -2,6 +2,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.textboxes.text
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import com.d4rk.androidtutorials.java.databinding.ActivityTextBoxBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;

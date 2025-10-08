@@ -1,18 +1,20 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons;
 
 import android.os.Bundle;
+
 import com.d4rk.androidtutorials.java.R;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityButtonsBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons.tabs.ButtonsTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.buttons.buttons.tabs.ButtonsTabLayoutFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
+import com.d4rk.androidtutorials.java.ui.utils.LessonUiUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.material.snackbar.Snackbar;
 
-import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 import java.util.Arrays;
+
+import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class ButtonsActivity extends SyntaxFabActivity {
     private ActivityButtonsBinding binding;
@@ -24,10 +26,9 @@ public class ButtonsActivity extends SyntaxFabActivity {
         setContentView(binding.getRoot());
         EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
 
-        binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
-        binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);
-        binding.descriptionSection.descriptionText.setText(R.string.summary_buttons);
-        AdUtils.loadBanner(binding.descriptionSection.adView);
+        LessonUiUtils.setupDescriptionSection(binding.descriptionSection,
+                R.string.summary_buttons,
+                true);
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.buttonNormal.setOnClickListener(view -> Snackbar.make(binding.getRoot(), getString(R.string.button_normal) + " " + getString(R.string.snack_bar_clicked), Snackbar.LENGTH_SHORT).show());

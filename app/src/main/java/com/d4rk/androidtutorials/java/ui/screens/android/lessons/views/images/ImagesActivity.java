@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images;
 
 import android.os.Bundle;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityImagesBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
@@ -9,8 +10,9 @@ import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images.ta
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.images.tabs.ImagesTabLayoutFragment;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
-import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 import java.util.Arrays;
+
+import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class ImagesActivity extends SyntaxFabActivity {
     private ActivityImagesBinding binding;

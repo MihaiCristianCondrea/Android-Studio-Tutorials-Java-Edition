@@ -1,17 +1,19 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.clock;
 
 import android.os.Bundle;
+
 import com.d4rk.androidtutorials.java.R;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityClockBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.clock.tabs.ClockTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.clocks.clock.tabs.ClockTabLayoutFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
+import com.d4rk.androidtutorials.java.ui.utils.LessonUiUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
-import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 import java.util.Arrays;
+
+import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class ClockActivity extends SyntaxFabActivity {
     private ActivityClockBinding binding;
@@ -23,10 +25,9 @@ public class ClockActivity extends SyntaxFabActivity {
         setContentView(binding.getRoot());
         EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
 
-        binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
-        binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);
-        binding.descriptionSection.descriptionText.setText(R.string.summary_clocks);
-        AdUtils.loadBanner(binding.descriptionSection.adView);
+        LessonUiUtils.setupDescriptionSection(binding.descriptionSection,
+                R.string.summary_clocks,
+                true);
 
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();

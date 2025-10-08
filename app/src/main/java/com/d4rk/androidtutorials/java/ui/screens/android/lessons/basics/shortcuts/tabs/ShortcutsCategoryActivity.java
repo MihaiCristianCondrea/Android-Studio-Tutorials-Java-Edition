@@ -5,19 +5,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.ShortcutItem;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.ShortcutsAdapter;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.shortcuts.ShortcutsRepository;
-import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.gms.ads.AdView;
 
 import java.util.List;
-
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import me.zhanghai.android.fastscroll.FastScrollScrollView;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;

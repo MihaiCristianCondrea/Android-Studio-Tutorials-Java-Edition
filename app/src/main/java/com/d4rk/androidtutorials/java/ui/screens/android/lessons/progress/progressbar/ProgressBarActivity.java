@@ -5,16 +5,17 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.d4rk.androidtutorials.java.R;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityProgressBarBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.common.LessonCodeTabsActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.progress.progressbar.tabs.ProgressBarTabCodeFragment;
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.progress.progressbar.tabs.ProgressBarTabLayoutFragment;
+import com.d4rk.androidtutorials.java.ui.utils.LessonUiUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
-import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 import java.util.Arrays;
+
+import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class ProgressBarActivity extends SyntaxFabActivity {
     private final Handler progressHandler = new Handler(Looper.getMainLooper());
@@ -26,10 +27,9 @@ public class ProgressBarActivity extends SyntaxFabActivity {
         binding = ActivityProgressBarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
-        binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
-        binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);
-        binding.descriptionSection.descriptionText.setText(R.string.summary_progress_bar);
-        AdUtils.loadBanner(binding.descriptionSection.adView);
+        LessonUiUtils.setupDescriptionSection(binding.descriptionSection,
+                R.string.summary_progress_bar,
+                true);
 
         new FastScrollerBuilder(binding.scrollView).useMd2Style().build();
         binding.progressBar.hide();

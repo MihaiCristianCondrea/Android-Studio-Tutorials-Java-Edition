@@ -1,6 +1,7 @@
 package com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.relative;
 
 import android.os.Bundle;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivityRelativeLayoutBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
@@ -9,8 +10,9 @@ import com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.relativ
 import com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.relative.tabs.RelativeLayoutTabLayoutFragment;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
-import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 import java.util.Arrays;
+
+import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class RelativeLayoutActivity extends SyntaxFabActivity {
     private ActivityRelativeLayoutBinding binding;

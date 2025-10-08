@@ -2,6 +2,7 @@ package com.d4rk.androidtutorials.java.ui.screens.android.lessons.alerts.snackba
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ActivitySnackBarBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;

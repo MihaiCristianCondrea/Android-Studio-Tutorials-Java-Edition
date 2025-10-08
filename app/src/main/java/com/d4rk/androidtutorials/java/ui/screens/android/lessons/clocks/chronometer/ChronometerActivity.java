@@ -7,10 +7,10 @@ import android.os.SystemClock;
 import androidx.annotation.Nullable;
 
 import com.d4rk.androidtutorials.java.R;
-import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityChronometerBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity;
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
+import com.d4rk.androidtutorials.java.ui.utils.LessonUiUtils;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 public class ChronometerActivity extends SyntaxFabActivity {
@@ -24,10 +24,9 @@ public class ChronometerActivity extends SyntaxFabActivity {
 
         EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
 
-        binding.descriptionSection.descriptionHeader.getRoot().setText(R.string.description);
-        binding.layoutPreviewHeader.getRoot().setText(R.string.layout_preview);
-        binding.descriptionSection.descriptionText.setText(R.string.summary_chronometer);
-        AdUtils.loadBanner(binding.descriptionSection.adView);
+        LessonUiUtils.setupDescriptionSection(binding.descriptionSection,
+                R.string.summary_chronometer,
+                true);
 
         setupSyntaxFab(binding.floatingButtonShowSyntax, () -> {
             Intent intent = new Intent(this, CodeActivity.class);
