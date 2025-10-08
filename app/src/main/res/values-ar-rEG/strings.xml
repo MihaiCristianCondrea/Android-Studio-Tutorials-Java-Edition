@@ -312,6 +312,9 @@
     <string name="non_paid_support">دعم غير مدفوع</string>
     <string name="web_ad">إعلان ويب</string>
     <string name="support_link_unavailable">لا يتوفر أي تطبيق لفتح رابط الدعم.</string>
+    <string name="support_purchase_thank_you">شكرًا لك على دعم المشروع!</string>
+    <string name="support_purchase_restored">تمت استعادة عملية الشراء الداعمة السابقة الخاصة بك.</string>
+    <string name="support_purchase_revoked">تم رد أو إلغاء عملية الشراء الداعمة الخاصة بك. تمت إزالة الوصول.</string>
     <string name="info">معلومات</string>
     <string name="device_info">معلومات الجهاز</string>
     <string name="app_build">بناء التطبيق: إصدار\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

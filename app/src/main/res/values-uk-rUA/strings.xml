@@ -312,6 +312,9 @@
     <string name="non_paid_support">Безкоштовна підтримка</string>
     <string name="web_ad">Веб-реклама</string>
     <string name="support_link_unavailable">Немає застосунку, який може відкрити посилання підтримки.</string>
+    <string name="support_purchase_thank_you">Дякуємо за підтримку проєкту!</string>
+    <string name="support_purchase_restored">Вашу попередню покупку підтримки відновлено.</string>
+    <string name="support_purchase_revoked">Вашу покупку підтримки було повернуто або скасовано. Доступ видалено.</string>
     <string name="info">Інформація</string>
     <string name="device_info">Інформація про пристрій</string>
     <string name="app_build">Збірка додатка: Випуск\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

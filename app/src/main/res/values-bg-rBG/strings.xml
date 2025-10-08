@@ -338,6 +338,9 @@
     <string name="non_paid_support">Безплатна поддръжка</string>
     <string name="web_ad">Уеб реклама</string>
     <string name="support_link_unavailable">Няма налично приложение, което да отвори връзката за поддръжка.</string>
+    <string name="support_purchase_thank_you">Благодарим, че подкрепяте проекта!</string>
+    <string name="support_purchase_restored">Предишната ви покупка за подкрепа беше възстановена.</string>
+    <string name="support_purchase_revoked">Покупката ви за подкрепа беше възстановена или отменена. Достъпът е премахнат.</string>
     <string name="info">Информация</string>
     <string name="device_info">Информация за устройството</string>
     <string name="app_build">Компилация на приложението: Издание\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

@@ -312,6 +312,9 @@
     <string name="non_paid_support">Ücretsiz Destek</string>
     <string name="web_ad">Web Reklamı</string>
     <string name="support_link_unavailable">Destek bağlantısını açabilecek bir uygulama mevcut değil.</string>
+    <string name="support_purchase_thank_you">Projeyi desteklediğiniz için teşekkürler!</string>
+    <string name="support_purchase_restored">Önceki destek satın alımınız geri yüklendi.</string>
+    <string name="support_purchase_revoked">Destek satın alımınız iade edildi veya iptal edildi. Erişim kaldırıldı.</string>
     <string name="info">Bilgi</string>
     <string name="device_info">Cihaz Bilgisi</string>
     <string name="app_build">Uygulama Derlemesi: Sürüm\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

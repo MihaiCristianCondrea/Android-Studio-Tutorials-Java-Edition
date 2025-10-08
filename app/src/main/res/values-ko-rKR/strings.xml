@@ -312,6 +312,9 @@
     <string name="non_paid_support">무료 지원</string>
     <string name="web_ad">웹 광고</string>
     <string name="support_link_unavailable">지원 링크를 열 수 있는 앱이 없습니다.</string>
+    <string name="support_purchase_thank_you">프로젝트를 지원해 주셔서 감사합니다!</string>
+    <string name="support_purchase_restored">이전에 구매한 지원 항목이 복원되었습니다.</string>
+    <string name="support_purchase_revoked">지원 구매가 환불되었거나 취소되었습니다. 액세스가 제거되었습니다.</string>
     <string name="info">정보</string>
     <string name="device_info">기기 정보</string>
     <string name="app_build">앱 빌드: 릴리스\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

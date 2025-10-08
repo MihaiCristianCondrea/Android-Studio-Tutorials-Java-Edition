@@ -312,6 +312,9 @@
     <string name="non_paid_support">Icke-betald support</string>
     <string name="web_ad">Webbannons</string>
     <string name="support_link_unavailable">Det finns ingen app tillgänglig för att öppna supportlänken.</string>
+    <string name="support_purchase_thank_you">Tack för att du stöttar projektet!</string>
+    <string name="support_purchase_restored">Ditt tidigare stödköp har återställts.</string>
+    <string name="support_purchase_revoked">Ditt stödköp har återbetalats eller återkallats. Åtkomsten har tagits bort.</string>
     <string name="info">Info</string>
     <string name="device_info">Enhetsinfo</string>
     <string name="app_build">App-build: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

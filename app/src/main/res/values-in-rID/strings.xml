@@ -338,6 +338,9 @@
     <string name="non_paid_support">Dukungan Tidak Berbayar</string>
     <string name="web_ad">Iklan Web</string>
     <string name="support_link_unavailable">Tidak ada aplikasi yang tersedia untuk membuka tautan dukungan.</string>
+    <string name="support_purchase_thank_you">Terima kasih telah mendukung proyek ini!</string>
+    <string name="support_purchase_restored">Pembelian dukungan sebelumnya telah dipulihkan.</string>
+    <string name="support_purchase_revoked">Pembelian dukungan Anda telah dikembalikan atau dibatalkan. Akses telah dihapus.</string>
     <string name="info">Info</string>
     <string name="device_info">Info Perangkat</string>
     <string name="app_build">Build Aplikasi: Rilis\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

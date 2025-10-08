@@ -32,6 +32,8 @@ public class SupportActivity extends BaseActivity {
         setContentView(binding.getRoot());
         EdgeToEdgeHelper.applyEdgeToEdge(getWindow(), binding.getRoot());
         supportViewModel = new ViewModelProvider(this).get(SupportViewModel.class);
+        supportViewModel.registerPurchaseStatusListener();
+        supportViewModel.getPurchaseStatus().observe(this, this::handlePurchaseStatus);
 
         AdRequest adRequest = supportViewModel.initMobileAds();
         binding.supportNativeAd.loadAd(adRequest);
@@ -45,6 +47,12 @@ public class SupportActivity extends BaseActivity {
         binding.buttonNormalDonation.setOnClickListener(v -> initiatePurchase("normal_donation"));
         binding.buttonHighDonation.setOnClickListener(v -> initiatePurchase("high_donation"));
         binding.buttonExtremeDonation.setOnClickListener(v -> initiatePurchase("extreme_donation"));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        supportViewModel.refreshPurchases();
     }
 
     private void queryProductDetails() {
@@ -81,4 +89,21 @@ public class SupportActivity extends BaseActivity {
     }
 
     // Up navigation handled by BaseActivity
+
+    private void handlePurchaseStatus(SupportPurchaseStatus status) {
+        if (status == null) {
+            return;
+        }
+
+        int messageRes;
+        if (status.state() == SupportPurchaseStatus.State.GRANTED) {
+            messageRes = status.newPurchase()
+                    ? R.string.support_purchase_thank_you
+                    : R.string.support_purchase_restored;
+        } else {
+            messageRes = R.string.support_purchase_revoked;
+        }
+
+        Toast.makeText(this, messageRes, Toast.LENGTH_LONG).show();
+    }
 }

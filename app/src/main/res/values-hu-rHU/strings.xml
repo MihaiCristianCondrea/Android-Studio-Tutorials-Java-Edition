@@ -359,6 +359,9 @@
     <string name="non_paid_support">Nem fizetett támogatás</string>
     <string name="web_ad">Webes hirdetés</string>
     <string name="support_link_unavailable">Nem érhető el alkalmazás a támogatási hivatkozás megnyitásához.</string>
+    <string name="support_purchase_thank_you">Köszönjük, hogy támogatod a projektet!</string>
+    <string name="support_purchase_restored">A korábbi támogatói vásárlásodat visszaállítottuk.</string>
+    <string name="support_purchase_revoked">A támogatói vásárlásodat visszatérítették vagy visszavonták. A hozzáférés megszűnt.</string>
     <string name="info">Információ</string>
     <string name="device_info">Eszközinformáció</string>
     <string name="app_build">Alkalmazás build: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

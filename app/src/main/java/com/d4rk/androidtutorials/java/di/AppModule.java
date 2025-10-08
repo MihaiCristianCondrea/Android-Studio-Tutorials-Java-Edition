@@ -43,6 +43,8 @@ import com.d4rk.androidtutorials.java.domain.support.InitBillingClientUseCase;
 import com.d4rk.androidtutorials.java.domain.support.InitMobileAdsUseCase;
 import com.d4rk.androidtutorials.java.domain.support.InitiatePurchaseUseCase;
 import com.d4rk.androidtutorials.java.domain.support.QueryProductDetailsUseCase;
+import com.d4rk.androidtutorials.java.domain.support.RefreshPurchasesUseCase;
+import com.d4rk.androidtutorials.java.domain.support.SetPurchaseStatusListenerUseCase;
 import com.d4rk.androidtutorials.java.ui.screens.about.repository.AboutRepository;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
 import com.d4rk.androidtutorials.java.ui.screens.settings.repository.SettingsRepository;
@@ -247,6 +249,16 @@ public class AppModule {
     @Provides
     public InitMobileAdsUseCase provideInitMobileAdsUseCase(SupportRepository repository) {
         return new InitMobileAdsUseCase(repository);
+    }
+
+    @Provides
+    public RefreshPurchasesUseCase provideRefreshPurchasesUseCase(SupportRepository repository) {
+        return new RefreshPurchasesUseCase(repository);
+    }
+
+    @Provides
+    public SetPurchaseStatusListenerUseCase provideSetPurchaseStatusListenerUseCase(SupportRepository repository) {
+        return new SetPurchaseStatusListenerUseCase(repository);
     }
 
     @Provides

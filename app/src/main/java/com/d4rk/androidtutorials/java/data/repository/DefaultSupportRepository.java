@@ -1,33 +1,51 @@
 package com.d4rk.androidtutorials.java.data.repository;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import androidx.annotation.NonNull;
 
+import com.android.billingclient.api.AcknowledgePurchaseParams;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
 import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.PendingPurchasesParams;
 import com.android.billingclient.api.ProductDetails;
+import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.QueryProductDetailsParams;
+import com.android.billingclient.api.QueryPurchasesParams;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.google.android.gms.ads.AdRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class DefaultSupportRepository implements SupportRepository {
 
+    private static final String PREFS_NAME = "support_billing";
+    private static final String KEY_GRANTED_PRODUCTS = "granted_products";
+
     private final Context context;
     private final Map<String, ProductDetails> productDetailsMap = new HashMap<>();
+    private final SharedPreferences billingPrefs;
+    private final Set<String> grantedEntitlements;
     private BillingClient billingClient;
+    private PurchaseStatusListener purchaseStatusListener;
 
     public DefaultSupportRepository(Context context) {
         this.context = context.getApplicationContext();
+        this.billingPrefs = this.context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        Set<String> granted = billingPrefs.getStringSet(KEY_GRANTED_PRODUCTS, Collections.emptySet());
+        this.grantedEntitlements = (granted != null) ? new HashSet<>(granted) : new HashSet<>();
     }
 
     /**
@@ -35,11 +53,10 @@ public class DefaultSupportRepository implements SupportRepository {
      *
      * @param onConnected Callback once the billing service is connected.
      */
+    @Override
     public void initBillingClient(Runnable onConnected) {
         billingClient = BillingClient.newBuilder(context)
-                .setListener((billingResult, purchases) -> {
-                    // To be implemented in a later release
-                })
+                .setListener(this::handlePurchaseUpdates)
                 .enablePendingPurchases(
                         PendingPurchasesParams.newBuilder()
                                 .enableOneTimeProducts()
@@ -53,6 +70,7 @@ public class DefaultSupportRepository implements SupportRepository {
             public void onBillingSetupFinished(@NonNull BillingResult billingResult) {
                 if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                     // The BillingClient is ready. You can query purchases here.
+                    refreshPurchases();
                     if (onConnected != null) {
                         onConnected.run();
                     }
@@ -72,6 +90,7 @@ public class DefaultSupportRepository implements SupportRepository {
      * Query your product details for in-app items.
      * Typically called after billing client is connected.
      */
+    @Override
     public void queryProductDetails(List<String> productIds, OnProductDetailsListener listener) {
         if (billingClient == null || !billingClient.isReady()) {
             return;
@@ -114,10 +133,10 @@ public class DefaultSupportRepository implements SupportRepository {
         });
     }
 
-
     /**
      * Launch the billing flow for a particular product.
      */
+    @Override
     public BillingFlowLauncher initiatePurchase(String productId) {
         ProductDetails details = productDetailsMap.get(productId);
         if (details != null && billingClient != null) {
@@ -146,14 +165,131 @@ public class DefaultSupportRepository implements SupportRepository {
         return null;
     }
 
-
     /**
      * Initialize Mobile Ads (usually done once in your app, but
      * can be done here if needed for the support screen).
      */
+    @Override
     public AdRequest initMobileAds() {
         AdUtils.initialize(context);
         return new AdRequest.Builder().build();
     }
 
+    @Override
+    public void setPurchaseStatusListener(PurchaseStatusListener listener) {
+        this.purchaseStatusListener = listener;
+        if (listener != null) {
+            for (String productId : grantedEntitlements) {
+                listener.onPurchaseAcknowledged(productId, false);
+            }
+        }
+    }
+
+    @Override
+    public void refreshPurchases() {
+        if (billingClient == null || !billingClient.isReady()) {
+            return;
+        }
+
+        QueryPurchasesParams params = QueryPurchasesParams.newBuilder()
+                .setProductType(BillingClient.ProductType.INAPP)
+                .build();
+
+        billingClient.queryPurchasesAsync(params, (billingResult, purchasesList) -> {
+            if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
+                handlePurchaseUpdates(billingResult, purchasesList);
+            }
+        });
+    }
+
+    private void handlePurchaseUpdates(BillingResult billingResult, List<Purchase> purchases) {
+        if (billingResult.getResponseCode() != BillingClient.BillingResponseCode.OK || purchases == null) {
+            return;
+        }
+
+        Set<String> activeEntitlements = new HashSet<>();
+        boolean shouldPersist = false;
+
+        for (Purchase purchase : purchases) {
+            List<String> productIds = purchase.getProducts();
+            if (productIds.isEmpty()) {
+                continue;
+            }
+
+            int rawState = getRawPurchaseState(purchase);
+            if (rawState == Purchase.PurchaseState.PURCHASED) {
+                if (!purchase.isAcknowledged()) {
+                    acknowledgePurchase(purchase);
+                }
+                for (String productId : productIds) {
+                    activeEntitlements.add(productId);
+                    if (grantedEntitlements.add(productId)) {
+                        shouldPersist = true;
+                        notifyPurchaseAcknowledged(productId, true);
+                    }
+                }
+            } else {
+                for (String productId : productIds) {
+                    if (grantedEntitlements.remove(productId)) {
+                        shouldPersist = true;
+                        notifyPurchaseRevoked(productId);
+                    }
+                }
+            }
+        }
+
+        Set<String> revokedProducts = new HashSet<>(grantedEntitlements);
+        revokedProducts.removeAll(activeEntitlements);
+        if (!revokedProducts.isEmpty()) {
+            shouldPersist = true;
+        }
+        for (String productId : revokedProducts) {
+            if (grantedEntitlements.remove(productId)) {
+                notifyPurchaseRevoked(productId);
+            }
+        }
+
+        if (shouldPersist) {
+            persistGrantedEntitlements();
+        }
+    }
+
+    private void acknowledgePurchase(Purchase purchase) {
+        if (billingClient == null) {
+            return;
+        }
+        AcknowledgePurchaseParams params = AcknowledgePurchaseParams.newBuilder()
+                .setPurchaseToken(purchase.getPurchaseToken())
+                .build();
+        billingClient.acknowledgePurchase(params, billingResult -> {
+            // No-op: handled by entitlement updates once Google confirms the acknowledgement.
+        });
+    }
+
+    private void notifyPurchaseAcknowledged(String productId, boolean isNewPurchase) {
+        if (purchaseStatusListener != null) {
+            purchaseStatusListener.onPurchaseAcknowledged(productId, isNewPurchase);
+        }
+    }
+
+    private void notifyPurchaseRevoked(String productId) {
+        if (purchaseStatusListener != null) {
+            purchaseStatusListener.onPurchaseRevoked(productId);
+        }
+    }
+
+    private int getRawPurchaseState(Purchase purchase) {
+        try {
+            JSONObject jsonObject = new JSONObject(purchase.getOriginalJson());
+            return jsonObject.optInt("purchaseState", Purchase.PurchaseState.UNSPECIFIED_STATE);
+        } catch (JSONException exception) {
+            return purchase.getPurchaseState();
+        }
+    }
+
+    private void persistGrantedEntitlements() {
+        billingPrefs.edit()
+                .putStringSet(KEY_GRANTED_PRODUCTS, new HashSet<>(grantedEntitlements))
+                .apply();
+    }
 }

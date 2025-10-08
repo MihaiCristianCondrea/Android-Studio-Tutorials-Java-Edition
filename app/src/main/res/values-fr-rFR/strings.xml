@@ -338,6 +338,9 @@
     <string name="non_paid_support">Support non payant</string>
     <string name="web_ad">Publicité Web</string>
     <string name="support_link_unavailable">Aucune application n\'est disponible pour ouvrir le lien d\'assistance.</string>
+    <string name="support_purchase_thank_you">Merci de soutenir le projet !</string>
+    <string name="support_purchase_restored">Votre précédent achat de soutien a été restauré.</string>
+    <string name="support_purchase_revoked">Votre achat de soutien a été remboursé ou révoqué. L\'accès a été supprimé.</string>
     <string name="info">Infos</string>
     <string name="device_info">Infos sur l\'appareil</string>
     <string name="app_build">Build de l\'application : Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>

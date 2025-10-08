@@ -16,11 +16,21 @@ public interface SupportRepository {
 
     AdRequest initMobileAds();
 
+    void setPurchaseStatusListener(PurchaseStatusListener listener);
+
+    void refreshPurchases();
+
     interface OnProductDetailsListener {
         void onProductDetailsRetrieved(List<ProductDetails> productDetailsList);
     }
 
     interface BillingFlowLauncher {
         void launch(Activity activity);
+    }
+
+    interface PurchaseStatusListener {
+        void onPurchaseAcknowledged(String productId, boolean isNewPurchase);
+
+        void onPurchaseRevoked(String productId);
     }
 }
