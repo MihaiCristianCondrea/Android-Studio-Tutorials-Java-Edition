@@ -24,7 +24,7 @@ import com.d4rk.androidtutorials.java.ads.AdUtils;
 import com.d4rk.androidtutorials.java.databinding.ActivityHelpBinding;
 import com.d4rk.androidtutorials.java.databinding.DialogVersionInfoBinding;
 import com.d4rk.androidtutorials.java.databinding.ItemHelpFaqBinding;
-import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
@@ -38,7 +38,7 @@ import dagger.hilt.android.AndroidEntryPoint;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 @AndroidEntryPoint
-public class HelpActivity extends BaseActivity {
+public class HelpActivity extends UpNavigationActivity {
 
     private static final List<FaqItem> FAQ_ITEMS = Arrays.asList(
             new FaqItem(R.string.question_1, R.string.summary_preference_faq_1),

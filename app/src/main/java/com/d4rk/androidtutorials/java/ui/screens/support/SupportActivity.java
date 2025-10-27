@@ -12,6 +12,7 @@ import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.data.repository.SupportRepository;
 import com.d4rk.androidtutorials.java.databinding.ActivitySupportBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.BaseActivity;
+import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 import com.google.android.gms.ads.AdRequest;
 
@@ -20,7 +21,7 @@ import java.util.List;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class SupportActivity extends BaseActivity {
+public class SupportActivity extends UpNavigationActivity {
 
     private ActivitySupportBinding binding;
     private SupportViewModel supportViewModel;
