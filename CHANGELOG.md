@@ -1,3 +1,6 @@
+# Version 5.0.4:
+- **Patch**: Updated components to improve compatibility.
+
 # Version 5.0.3:
 
 - **New**: Introduced a lesson on using Spinner for dynamic selection in apps.
