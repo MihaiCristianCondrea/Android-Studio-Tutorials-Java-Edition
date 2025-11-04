@@ -32,6 +32,7 @@ hilt = "2.57.2"
 room = "2.8.3"
 glide = "5.0.5"
 retrofit = "3.0.0"
+desugarJdkLibs = "2.1.2"
 
 [libraries]
 # AndroidX & Material
@@ -81,6 +82,7 @@ review = { module = "com.google.android.play:review", version.ref = "review" }
 volley = { module = "com.android.volley:volley", version.ref = "volley" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugarJdkLibs" }
 
 # --- TESTING ---
 # Unit Tests (test folder)
