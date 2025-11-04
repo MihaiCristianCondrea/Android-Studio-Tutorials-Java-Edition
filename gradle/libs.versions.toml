@@ -32,7 +32,7 @@ hilt = "2.57.2"
 room = "2.8.3"
 glide = "5.0.5"
 retrofit = "3.0.0"
-desugarJdkLibs = "2.1.2"
+desugarJdkLibs = "2.1.5"
 
 [libraries]
 # AndroidX & Material
