@@ -74,6 +74,12 @@ android {
         buildConfig true
     }
 
+    testOptions {
+        unitTests {
+            includeAndroidResources true
+        }
+    }
+
     bundle {
         storeArchive {
             enable true
