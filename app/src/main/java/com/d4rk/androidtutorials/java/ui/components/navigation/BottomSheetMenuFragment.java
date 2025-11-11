@@ -76,6 +76,12 @@ public class BottomSheetMenuFragment extends BottomSheetDialogFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
+        if (binding != null) {
+            binding.menuSettings.setOnClickListener(null);
+            binding.menuHelpFeedback.setOnClickListener(null);
+            binding.menuUpdates.setOnClickListener(null);
+            binding.menuShare.setOnClickListener(null);
+            binding = null;
+        }
     }
 }
