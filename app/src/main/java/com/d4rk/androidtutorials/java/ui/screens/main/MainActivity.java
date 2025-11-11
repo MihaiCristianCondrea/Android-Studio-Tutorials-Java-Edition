@@ -327,6 +327,16 @@ public class MainActivity extends AppCompatActivity {
             lastPreferredStartDestination = preferredDestination;
             return;
         }
+        if (!getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.RESUMED)) {
+            getLifecycle().addObserver(new DefaultLifecycleObserver() {
+                @Override
+                public void onResume(@NonNull LifecycleOwner owner) {
+                    getLifecycle().removeObserver(this);
+                    navigateToPreferredDestination(preferredDestination);
+                }
+            });
+            return;
+        }
         NavOptions options = new NavOptions.Builder()
                 .setPopUpTo(graph.getStartDestinationId(), true)
                 .setLaunchSingleTop(true)
