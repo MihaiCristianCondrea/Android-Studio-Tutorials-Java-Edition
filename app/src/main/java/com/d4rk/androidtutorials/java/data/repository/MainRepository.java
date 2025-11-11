@@ -13,7 +13,7 @@ public interface MainRepository {
 
     void markStartupScreenShown();
 
-    void applyLanguageSettings();
+    boolean applyLanguageSettings();
 
     AppUpdateManager getAppUpdateManager();
 }
