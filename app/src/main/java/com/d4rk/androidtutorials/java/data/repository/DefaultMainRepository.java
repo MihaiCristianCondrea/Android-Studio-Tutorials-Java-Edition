@@ -100,12 +100,23 @@ public class DefaultMainRepository implements MainRepository {
     /**
      * Applies the language setting from SharedPreferences.
      */
-    public void applyLanguageSettings() {
+    public boolean applyLanguageSettings() {
         String languageKey = context.getString(R.string.key_language);
         String defaultLanguageValue = context.getString(R.string.default_value_language);
         String languageCode = defaultSharedPrefs.getString(languageKey, defaultLanguageValue);
 
+        if (languageCode == null) {
+            languageCode = defaultLanguageValue;
+        }
+
+        LocaleListCompat currentLocales = AppCompatDelegate.getApplicationLocales();
+        String currentLanguageTags = currentLocales.toLanguageTags();
+        if (languageCode.equals(currentLanguageTags)) {
+            return false;
+        }
+
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode));
+        return true;
     }
 
     /**
