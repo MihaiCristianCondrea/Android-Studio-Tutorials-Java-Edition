@@ -45,6 +45,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Locale;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -73,6 +74,7 @@ public class AndroidStudioFragment extends Fragment {
         RecyclerView list = binding.lessonsList;
         list.setLayoutManager(new LinearLayoutManager(requireContext()));
         adapter = new LessonsAdapter();
+        list.setHasFixedSize(true);
         list.setAdapter(adapter);
         list.addItemDecoration(new LessonAdSpacingDecoration(requireContext()));
         allItems.clear();
@@ -239,7 +241,7 @@ public class AndroidStudioFragment extends Fragment {
     }
 
     private void filterLessons(String query) {
-        String lower = query == null ? "" : query.toLowerCase();
+        String lower = query == null ? "" : query.toLowerCase(Locale.ROOT);
         if (lower.isEmpty()) {
             populateAdapter(allItems);
             return;
@@ -252,7 +254,7 @@ public class AndroidStudioFragment extends Fragment {
                 lastCategory = (Category) item;
                 categoryAdded = false;
             } else if (item instanceof Lesson l) {
-                if (l.title != null && l.title.toLowerCase().contains(lower)) {
+                if (l.title != null && l.title.toLowerCase(Locale.ROOT).contains(lower)) {
                     if (lastCategory != null && !categoryAdded) {
                         filtered.add(lastCategory);
                         categoryAdded = true;
@@ -307,6 +309,10 @@ public class AndroidStudioFragment extends Fragment {
         static final int TYPE_AD = 1;
         static final int TYPE_CATEGORY = 2;
         private final List<Object> items = new ArrayList<>();
+
+        LessonsAdapter() {
+            setHasStableIds(true);
+        }
 
         void setItems(List<Object> newItems) {
             DiffUtil.DiffResult diff = DiffUtil.calculateDiff(new DiffUtil.Callback() {
@@ -363,6 +369,18 @@ public class AndroidStudioFragment extends Fragment {
             return TYPE_AD;
         }
 
+        @Override
+        public long getItemId(int position) {
+            Object item = items.get(position);
+            if (item instanceof Lesson lesson) {
+                return Objects.hash(TYPE_LESSON, lesson.title, lesson.summary, lesson.iconRes);
+            }
+            if (item instanceof Category category) {
+                return Objects.hash(TYPE_CATEGORY, category.title, category.iconRes);
+            }
+            return Objects.hash(TYPE_AD, position);
+        }
+
         @NonNull
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -398,12 +416,7 @@ public class AndroidStudioFragment extends Fragment {
             int type = getItemViewType(pos);
             if (type == TYPE_AD) {
                 AdHolder adHolder = (AdHolder) holder;
-                adHolder.adView.loadAd(new AdListener() {
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError error) {
-                        adHolder.adView.setVisibility(View.GONE);
-                    }
-                });
+                adHolder.bind();
             } else if (type == TYPE_CATEGORY) {
                 Category category = (Category) items.get(pos);
                 ((CategoryHolder) holder).bind(category);
@@ -422,16 +435,34 @@ public class AndroidStudioFragment extends Fragment {
 
         static class AdHolder extends RecyclerView.ViewHolder {
             final NativeAdBannerView adView;
+            private boolean adRequested;
 
             AdHolder(@NonNull NativeAdBannerView itemView) {
                 super(itemView);
                 this.adView = itemView;
+            }
+
+            void bind() {
+                if (adRequested) {
+                    return;
+                }
+                adRequested = true;
+                adView.loadAd(new AdListener() {
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError error) {
+                        adView.setVisibility(View.GONE);
+                    }
+                });
             }
         }
 
         static class LessonHolder extends RecyclerView.ViewHolder {
             private final ItemPreferenceBinding binding;
             private final ItemPreferenceWidgetOpenInNewBinding widgetBinding;
+            private final ShapeAppearanceModel roundedAllCorners;
+            private final ShapeAppearanceModel roundedTopOnly;
+            private final ShapeAppearanceModel roundedBottomOnly;
+            private final ShapeAppearanceModel compactCorners;
 
             LessonHolder(@NonNull ItemPreferenceBinding binding) {
                 super(binding.getRoot());
@@ -441,6 +472,36 @@ public class AndroidStudioFragment extends Fragment {
                         binding.widgetFrame,
                         true
                 );
+
+                float dp4 = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4,
+                        itemView.getResources().getDisplayMetrics());
+                float dp24 = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24,
+                        itemView.getResources().getDisplayMetrics());
+                ShapeAppearanceModel base = binding.lessonCard.getShapeAppearanceModel();
+                roundedAllCorners = base.toBuilder()
+                        .setTopLeftCorner(CornerFamily.ROUNDED, dp24)
+                        .setTopRightCorner(CornerFamily.ROUNDED, dp24)
+                        .setBottomLeftCorner(CornerFamily.ROUNDED, dp24)
+                        .setBottomRightCorner(CornerFamily.ROUNDED, dp24)
+                        .build();
+                roundedTopOnly = base.toBuilder()
+                        .setTopLeftCorner(CornerFamily.ROUNDED, dp24)
+                        .setTopRightCorner(CornerFamily.ROUNDED, dp24)
+                        .setBottomLeftCorner(CornerFamily.ROUNDED, dp4)
+                        .setBottomRightCorner(CornerFamily.ROUNDED, dp4)
+                        .build();
+                roundedBottomOnly = base.toBuilder()
+                        .setTopLeftCorner(CornerFamily.ROUNDED, dp4)
+                        .setTopRightCorner(CornerFamily.ROUNDED, dp4)
+                        .setBottomLeftCorner(CornerFamily.ROUNDED, dp24)
+                        .setBottomRightCorner(CornerFamily.ROUNDED, dp24)
+                        .build();
+                compactCorners = base.toBuilder()
+                        .setTopLeftCorner(CornerFamily.ROUNDED, dp4)
+                        .setTopRightCorner(CornerFamily.ROUNDED, dp4)
+                        .setBottomLeftCorner(CornerFamily.ROUNDED, dp4)
+                        .setBottomRightCorner(CornerFamily.ROUNDED, dp4)
+                        .build();
             }
 
             void bind(Lesson lesson, boolean first, boolean last) {
@@ -484,16 +545,15 @@ public class AndroidStudioFragment extends Fragment {
             }
 
             private void applyCorners(boolean first, boolean last) {
-                float dp4 = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4,
-                        itemView.getResources().getDisplayMetrics());
-                float dp24 = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24,
-                        itemView.getResources().getDisplayMetrics());
-                ShapeAppearanceModel.Builder builder = binding.lessonCard.getShapeAppearanceModel().toBuilder()
-                        .setTopLeftCorner(CornerFamily.ROUNDED, first ? dp24 : dp4)
-                        .setTopRightCorner(CornerFamily.ROUNDED, first ? dp24 : dp4)
-                        .setBottomLeftCorner(CornerFamily.ROUNDED, last ? dp24 : dp4)
-                        .setBottomRightCorner(CornerFamily.ROUNDED, last ? dp24 : dp4);
-                binding.lessonCard.setShapeAppearanceModel(builder.build());
+                if (first && last) {
+                    binding.lessonCard.setShapeAppearanceModel(roundedAllCorners);
+                } else if (first) {
+                    binding.lessonCard.setShapeAppearanceModel(roundedTopOnly);
+                } else if (last) {
+                    binding.lessonCard.setShapeAppearanceModel(roundedBottomOnly);
+                } else {
+                    binding.lessonCard.setShapeAppearanceModel(compactCorners);
+                }
             }
         }
 

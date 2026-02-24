@@ -12,7 +12,7 @@ android {
         applicationId 'com.d4rk.androidtutorials.java'
         minSdk 23
         targetSdk 36
-        versionCode 58
+        versionCode 59
         versionName '5.0.5'
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
