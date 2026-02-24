@@ -91,8 +91,10 @@ public class MainViewModel extends ViewModel {
             startFragmentId = R.id.navigation_home;
         }
 
-        uiState.setValue(new MainUiState(visibilityMode, startFragmentId, changedTheme));
-        applyLanguageSettingsUseCase.invoke();
+        boolean changedLanguage = applyLanguageSettingsUseCase.invoke();
+        boolean requiresRecreation = changedTheme || changedLanguage;
+
+        uiState.setValue(new MainUiState(visibilityMode, startFragmentId, requiresRecreation));
         isLoading.setValue(false);
     }
 

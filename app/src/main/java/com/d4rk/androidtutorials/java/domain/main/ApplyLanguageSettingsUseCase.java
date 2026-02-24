@@ -12,7 +12,7 @@ public class ApplyLanguageSettingsUseCase {
         this.repository = repository;
     }
 
-    public void invoke() {
-        repository.applyLanguageSettings();
+    public boolean invoke() {
+        return repository.applyLanguageSettings();
     }
 }
