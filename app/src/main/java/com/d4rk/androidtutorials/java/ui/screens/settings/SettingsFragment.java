@@ -46,6 +46,8 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     private RecyclerView.OnChildAttachStateChangeListener preferenceChildAttachListener;
     @Nullable
     private ViewTreeObserver.OnGlobalLayoutListener preferenceLayoutListener;
+    @NonNull
+    private final List<PreferenceMetadata> preferenceMetadataCache = new ArrayList<>();
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -57,6 +59,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         setupDefaultTabPreference();
         setupNotificationsPreference();
         setupDeviceInfoPreference();
+        rebuildPreferenceMetadataCache();
     }
 
     @Override
@@ -185,38 +188,43 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         preferenceAdapterObserver = null;
         preferenceChildAttachListener = null;
         preferenceLayoutListener = null;
+        preferenceMetadataCache.clear();
         settingsList = null;
         super.onDestroyView();
     }
 
     private void setupPreferenceCardStyling(@NonNull RecyclerView listView) {
-        Runnable updateRunnable = () -> updatePreferenceCardShapes(listView);
+        Runnable refreshPreferenceCardsRunnable = () -> updatePreferenceCardShapes(listView);
+        Runnable refreshDataRunnable = () -> {
+            rebuildPreferenceMetadataCache();
+            refreshPreferenceCardsRunnable.run();
+        };
         RecyclerView.Adapter<?> adapter = listView.getAdapter();
         if (adapter != null) {
             preferenceAdapterObserver = new RecyclerView.AdapterDataObserver() {
                 @Override
                 public void onChanged() {
-                    updateRunnable.run();
+                    refreshDataRunnable.run();
                 }
 
                 @Override
                 public void onItemRangeInserted(int positionStart, int itemCount) {
-                    updateRunnable.run();
+                    refreshDataRunnable.run();
                 }
 
                 @Override
                 public void onItemRangeRemoved(int positionStart, int itemCount) {
-                    updateRunnable.run();
+                    refreshDataRunnable.run();
                 }
 
                 @Override
                 public void onItemRangeChanged(int positionStart, int itemCount) {
-                    updateRunnable.run();
+                    refreshDataRunnable.run();
                 }
 
                 @Override
                 public void onItemRangeMoved(int fromPosition, int toPosition, int itemCount) {
-                    updateRunnable.run();
+                    refreshDataRunnable.run();
                 }
             };
             adapter.registerAdapterDataObserver(preferenceAdapterObserver);
@@ -224,18 +232,18 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         preferenceChildAttachListener = new RecyclerView.OnChildAttachStateChangeListener() {
             @Override
             public void onChildViewAttachedToWindow(@NonNull View view) {
-                updateRunnable.run();
+                refreshPreferenceCardsRunnable.run();
             }
 
             @Override
             public void onChildViewDetachedFromWindow(@NonNull View view) {
-                updateRunnable.run();
+                refreshPreferenceCardsRunnable.run();
             }
         };
         listView.addOnChildAttachStateChangeListener(preferenceChildAttachListener);
-        preferenceLayoutListener = updateRunnable::run;
+        preferenceLayoutListener = refreshPreferenceCardsRunnable::run;
         listView.getViewTreeObserver().addOnGlobalLayoutListener(preferenceLayoutListener);
-        listView.post(updateRunnable);
+        listView.post(refreshDataRunnable);
     }
 
     private void updatePreferenceCardShapes(@NonNull RecyclerView listView) {
@@ -243,15 +251,13 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         if (adapter == null) {
             return;
         }
-        PreferenceScreen screen = getPreferenceScreen();
-        if (screen == null) {
+        if (preferenceMetadataCache.isEmpty()) {
             return;
         }
-        List<Preference> visiblePreferences = getVisiblePreferences(screen);
-        int itemCount = Math.min(adapter.getItemCount(), visiblePreferences.size());
+        int itemCount = Math.min(adapter.getItemCount(), preferenceMetadataCache.size());
         for (int position = 0; position < itemCount; position++) {
-            Preference preference = visiblePreferences.get(position);
-            if (preference instanceof PreferenceCategory) {
+            PreferenceMetadata metadata = preferenceMetadataCache.get(position);
+            if (metadata.isCategory) {
                 continue;
             }
             RecyclerView.ViewHolder holder = listView.findViewHolderForAdapterPosition(position);
@@ -262,34 +268,10 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             if (!(itemView instanceof MaterialCardView)) {
                 continue;
             }
-            boolean first = isFirstPreferenceInSection(visiblePreferences, position);
-            boolean last = isLastPreferenceInSection(visiblePreferences, position);
-            applyRoundedCorners((MaterialCardView) itemView, first, last);
+            applyRoundedCorners((MaterialCardView) itemView,
+                    metadata.isFirstInSection, metadata.isLastInSection);
             syncAccessoryVisibility(itemView);
         }
-    }
-
-    private boolean isFirstPreferenceInSection(@NonNull List<Preference> preferences, int position) {
-        for (int index = position - 1; index >= 0; index--) {
-            Preference previous = preferences.get(index);
-            if (!previous.isVisible()) {
-                continue;
-            }
-            return previous instanceof PreferenceCategory;
-        }
-        return true;
-    }
-
-    private boolean isLastPreferenceInSection(@NonNull List<Preference> preferences, int position) {
-        int itemCount = preferences.size();
-        for (int index = position + 1; index < itemCount; index++) {
-            Preference next = preferences.get(index);
-            if (!next.isVisible()) {
-                continue;
-            }
-            return next instanceof PreferenceCategory;
-        }
-        return true;
     }
 
     private void applyRoundedCorners(@NonNull MaterialCardView card, boolean first, boolean last) {
@@ -331,6 +313,32 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         return preferences;
     }
 
+    private void rebuildPreferenceMetadataCache() {
+        preferenceMetadataCache.clear();
+        PreferenceScreen screen = getPreferenceScreen();
+        if (screen == null) {
+            return;
+        }
+        List<Preference> visiblePreferences = getVisiblePreferences(screen);
+        int itemCount = visiblePreferences.size();
+        for (int position = 0; position < itemCount; position++) {
+            Preference preference = visiblePreferences.get(position);
+            boolean isCategory = preference instanceof PreferenceCategory;
+            boolean isFirstInSection = true;
+            boolean isLastInSection = true;
+            if (!isCategory) {
+                Preference previousPreference = position > 0 ? visiblePreferences.get(position - 1) : null;
+                Preference nextPreference = position + 1 < itemCount ? visiblePreferences.get(position + 1) : null;
+                isFirstInSection = previousPreference == null
+                        || previousPreference instanceof PreferenceCategory;
+                isLastInSection = nextPreference == null
+                        || nextPreference instanceof PreferenceCategory;
+            }
+            preferenceMetadataCache.add(new PreferenceMetadata(isCategory,
+                    isFirstInSection, isLastInSection));
+        }
+    }
+
     private void collectVisiblePreferences(@NonNull PreferenceGroup group,
                                            @NonNull List<Preference> out) {
         for (int index = 0; index < group.getPreferenceCount(); index++) {
@@ -356,22 +364,30 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         @Override
         public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,
                                    @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-            PreferenceScreen screen = getPreferenceScreen();
-            if (screen == null) {
-                return;
-            }
             int position = parent.getChildAdapterPosition(view);
             if (position == RecyclerView.NO_POSITION) {
                 return;
             }
-            List<Preference> preferences = getVisiblePreferences(screen);
-            if (position >= preferences.size()) {
+            if (position >= preferenceMetadataCache.size()) {
                 return;
             }
-            Preference preference = preferences.get(position);
-            if (!(preference instanceof PreferenceCategory)) {
+            PreferenceMetadata metadata = preferenceMetadataCache.get(position);
+            if (!metadata.isCategory) {
                 outRect.bottom = spacing;
             }
+        }
+    }
+
+    private static class PreferenceMetadata {
+        private final boolean isCategory;
+        private final boolean isFirstInSection;
+        private final boolean isLastInSection;
+
+        PreferenceMetadata(boolean isCategory,
+                           boolean isFirstInSection, boolean isLastInSection) {
+            this.isCategory = isCategory;
+            this.isFirstInSection = isFirstInSection;
+            this.isLastInSection = isLastInSection;
         }
     }
 }
