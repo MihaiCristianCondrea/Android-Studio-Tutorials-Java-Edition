@@ -44,18 +44,20 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.IdentityHashMap;
+import java.util.LinkedHashSet;
 import java.util.Locale;
-import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
-import java.util.Random;
 import java.util.Set;
 
 public class AndroidStudioFragment extends Fragment {
 
     private static boolean mobileAdsInitialized = false;
     private final List<Object> allItems = new ArrayList<>();
+    private final Set<Integer> stableAdLessonIndexes = new LinkedHashSet<>();
+    private final Map<Lesson, Integer> lessonIndexLookup = new IdentityHashMap<>();
     private LessonsAdapter adapter;
     private FragmentAndroidStudioBinding binding;
 
@@ -79,6 +81,7 @@ public class AndroidStudioFragment extends Fragment {
         list.addItemDecoration(new LessonAdSpacingDecoration(requireContext()));
         allItems.clear();
         allItems.addAll(loadItems());
+        cacheStableAdPositions(allItems);
         populateAdapter(allItems);
 
         MenuHost menuHost = requireActivity();
@@ -205,39 +208,48 @@ public class AndroidStudioFragment extends Fragment {
 
     private void populateAdapter(List<Object> source) {
         List<Object> items = new ArrayList<>();
-        List<Integer> eligible = new ArrayList<>();
-        int lessonCount = 0;
-        boolean firstInCategory = true;
-        for (Object item : source) {
-            if (item instanceof Category) {
-                firstInCategory = true;
-            } else if (item instanceof Lesson) {
-                if (!firstInCategory) {
-                    eligible.add(lessonCount);
-                }
-                lessonCount++;
-                firstInCategory = false;
-            }
-        }
-        int adCount = lessonCount / 3;
-        Collections.shuffle(eligible, new Random());
-        if (adCount > eligible.size()) {
-            adCount = eligible.size();
-        }
-        Set<Integer> adPositions = new HashSet<>(eligible.subList(0, adCount));
-        int lessonIndex = 0;
         for (Object item : source) {
             if (item instanceof Lesson) {
-                if (adPositions.contains(lessonIndex)) {
-                    items.add(new AdItem());
+                Integer lessonIndex = lessonIndexLookup.get(item);
+                if (lessonIndex != null && stableAdLessonIndexes.contains(lessonIndex)) {
+                    items.add(new AdItem(lessonIndex));
                 }
                 items.add(item);
-                lessonIndex++;
             } else {
                 items.add(item);
             }
         }
         adapter.setItems(items);
+    }
+
+    private void cacheStableAdPositions(List<Object> source) {
+        lessonIndexLookup.clear();
+        stableAdLessonIndexes.clear();
+        List<Integer> eligibleIndexes = new ArrayList<>();
+        int lessonCount = 0;
+        boolean firstInCategory = true;
+        for (Object item : source) {
+            if (item instanceof Category) {
+                firstInCategory = true;
+            } else if (item instanceof Lesson lesson) {
+                lessonIndexLookup.put(lesson, lessonCount);
+                if (!firstInCategory) {
+                    eligibleIndexes.add(lessonCount);
+                }
+                lessonCount++;
+                firstInCategory = false;
+            }
+        }
+
+        int adCount = Math.min(lessonCount / 3, eligibleIndexes.size());
+        if (adCount == 0) {
+            return;
+        }
+
+        for (int slot = 1; slot <= adCount; slot++) {
+            int eligiblePosition = (int) Math.floor((slot * (double) eligibleIndexes.size()) / (adCount + 1));
+            stableAdLessonIndexes.add(eligibleIndexes.get(eligiblePosition));
+        }
     }
 
     private void filterLessons(String query) {
@@ -267,6 +279,11 @@ public class AndroidStudioFragment extends Fragment {
     }
 
     private static class AdItem {
+        private final long stableId;
+
+        AdItem(int lessonIndex) {
+            stableId = lessonIndex;
+        }
     }
 
     private static class Lesson {
@@ -336,7 +353,10 @@ public class AndroidStudioFragment extends Fragment {
                     if (oldItem instanceof Category oldCat && newItem instanceof Category newCat) {
                         return Objects.equals(oldCat.title, newCat.title);
                     }
-                    return oldItem instanceof AdItem && newItem instanceof AdItem;
+                    if (oldItem instanceof AdItem oldAd && newItem instanceof AdItem newAd) {
+                        return oldAd.stableId == newAd.stableId;
+                    }
+                    return false;
                 }
 
                 @Override
@@ -378,7 +398,8 @@ public class AndroidStudioFragment extends Fragment {
             if (item instanceof Category category) {
                 return Objects.hash(TYPE_CATEGORY, category.title, category.iconRes);
             }
-            return Objects.hash(TYPE_AD, position);
+            AdItem adItem = (AdItem) item;
+            return Objects.hash(TYPE_AD, adItem.stableId);
         }
 
         @NonNull
