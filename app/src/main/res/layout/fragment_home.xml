@@ -169,17 +169,13 @@
                     android:text="@string/other_apps_title"
                     android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
 
-                <HorizontalScrollView
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/promoted_apps_recycler_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:scrollbars="none">
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/promoted_apps_container"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal" />
-                </HorizontalScrollView>
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <com.google.android.material.card.MaterialCardView

@@ -9,10 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.bumptech.glide.Glide;
 import com.d4rk.androidtutorials.java.ads.AdUtils;
-import com.d4rk.androidtutorials.java.data.model.PromotedApp;
 import com.d4rk.androidtutorials.java.databinding.FragmentHomeBinding;
 
 import dagger.hilt.android.AndroidEntryPoint;
@@ -23,6 +22,7 @@ public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     private HomeViewModel homeViewModel;
+    private PromotedAppsAdapter promotedAppsAdapter;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,34 +34,36 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+        promotedAppsAdapter = new PromotedAppsAdapter(new PromotedAppsAdapter.PromotedAppActionListener() {
+            @Override
+            public void onOpenApp(@NonNull com.d4rk.androidtutorials.java.data.model.PromotedApp app) {
+                startActivity(homeViewModel.getPromotedAppIntent(app.packageName()));
+            }
+
+            @Override
+            public void onShareApp(@NonNull com.d4rk.androidtutorials.java.data.model.PromotedApp app) {
+                shareApp(app);
+            }
+        });
         initializeAds();
+        binding.promotedAppsRecyclerView.setLayoutManager(
+                new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        );
+        binding.promotedAppsRecyclerView.setAdapter(promotedAppsAdapter);
         homeViewModel.setAnnouncements(
                 getString(com.d4rk.androidtutorials.java.R.string.announcement_title),
                 getString(com.d4rk.androidtutorials.java.R.string.announcement_subtitle)
         );
-        LayoutInflater inflater = LayoutInflater.from(requireContext());
-        homeViewModel.getUiState().observe(getViewLifecycleOwner(), state -> {
-            binding.announcementTitle.setText(state.announcementTitle());
-            binding.announcementSubtitle.setText(state.announcementSubtitle());
-            binding.tipText.setText(state.dailyTip());
-            binding.shareTipButton.setOnClickListener(v -> shareTip(state.dailyTip()));
-
-            ViewGroup promotedContainer = binding.promotedAppsContainer;
+        homeViewModel.getContentState().observe(getViewLifecycleOwner(), contentState -> {
+            binding.announcementTitle.setText(contentState.announcementTitle());
+            binding.announcementSubtitle.setText(contentState.announcementSubtitle());
+            binding.tipText.setText(contentState.dailyTip());
+            binding.shareTipButton.setOnClickListener(v -> shareTip(contentState.dailyTip()));
+        });
+        homeViewModel.getPromotedAppsState().observe(getViewLifecycleOwner(), apps -> {
             binding.scrollView.clearFocus();
-            promotedContainer.clearFocus();
-            promotedContainer.removeAllViews();
-            java.util.List<PromotedApp> apps = state.promotedApps();
-            for (int i = 0; i < apps.size(); i++) {
-                PromotedApp app = apps.get(i);
-                com.d4rk.androidtutorials.java.databinding.ItemPromotedAppBinding itemBinding =
-                        com.d4rk.androidtutorials.java.databinding.ItemPromotedAppBinding.inflate(inflater, promotedContainer, false);
-                loadImage(app.iconUrl(), itemBinding.appIcon);
-                itemBinding.appName.setText(app.name());
-                itemBinding.appDescription.setVisibility(android.view.View.GONE);
-                itemBinding.appButton.setOnClickListener(v -> startActivity(homeViewModel.getPromotedAppIntent(app.packageName())));
-                itemBinding.shareButton.setOnClickListener(v -> shareApp(app));
-                promotedContainer.addView(itemBinding.getRoot());
-            }
+            binding.promotedAppsRecyclerView.clearFocus();
+            promotedAppsAdapter.submitList(apps);
         });
         new FastScrollerBuilder(binding.scrollView)
                 .useMd2Style()
@@ -77,7 +79,9 @@ public class HomeFragment extends Fragment {
         super.onDestroyView();
         if (binding != null) {
             binding.scrollView.clearFocus();
+            binding.promotedAppsRecyclerView.setAdapter(null);
         }
+        promotedAppsAdapter = null;
         binding = null;
     }
 
@@ -106,10 +110,4 @@ public class HomeFragment extends Fragment {
         startActivity(android.content.Intent.createChooser(sharingIntent, getString(com.d4rk.androidtutorials.java.R.string.share_using)));
     }
 
-    private void loadImage(String url, android.widget.ImageView imageView) {
-        Glide.with(imageView.getContext())
-                .load(url)
-                .centerInside()
-                .into(imageView);
-    }
 }

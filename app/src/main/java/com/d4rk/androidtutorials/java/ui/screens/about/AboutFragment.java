@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -59,28 +60,38 @@ public class AboutFragment extends Fragment {
             return true;
         });
 
-        binding.imageViewAppIcon.setOnClickListener(
-                v -> openUrl("https://mihaicristiancondrea.github.io/profile"));
-        binding.chipGoogleDev.setOnClickListener(
-                v -> openUrl("https://g.dev/Mihai-Cristian-Condrea"));
-        binding.chipYoutube.setOnClickListener(
-                v -> openUrl("https://www.youtube.com/c/D4rK7355608"));
-        binding.chipGithub.setOnClickListener(
-                v -> openUrl("https://github.com/MihaiCristianCondrea/" + BuildConfig.APPLICATION_ID));
-        binding.chipTwitter.setOnClickListener(
-                v -> openUrl("https://x.com/MihaiCristianC"));
-        binding.chipXda.setOnClickListener(
-                v -> openUrl("https://forum.xda-developers.com/m/d4rk7355608.10095012"));
-        binding.chipMusic.setOnClickListener(
-                v -> openUrl("https://linktr.ee/D4rKRekords"));
+        Intent profileIntent = createBrowsableIntent(Uri.parse("https://mihaicristiancondrea.github.io/profile"));
+        Intent googleDevIntent = createBrowsableIntent(Uri.parse("https://g.dev/Mihai-Cristian-Condrea"));
+        Intent youtubeIntent = createBrowsableIntent(Uri.parse("https://www.youtube.com/c/D4rK7355608"));
+        Intent githubIntent = createBrowsableIntent(Uri.parse("https://github.com/MihaiCristianCondrea/" + BuildConfig.APPLICATION_ID));
+        Intent xIntent = createBrowsableIntent(Uri.parse("https://x.com/MihaiCristianC"));
+        Intent xdaIntent = createBrowsableIntent(Uri.parse("https://forum.xda-developers.com/m/d4rk7355608.10095012"));
+        Intent musicIntent = createBrowsableIntent(Uri.parse("https://linktr.ee/D4rKRekords"));
+
+        bindExternalLink(binding.imageViewAppIcon, profileIntent);
+        bindExternalLink(binding.chipGoogleDev, googleDevIntent);
+        bindExternalLink(binding.chipYoutube, youtubeIntent);
+        bindExternalLink(binding.chipGithub, githubIntent);
+        bindExternalLink(binding.chipTwitter, xIntent);
+        bindExternalLink(binding.chipXda, xdaIntent);
+        bindExternalLink(binding.chipMusic, musicIntent);
 
         return binding.getRoot();
     }
 
-    private void openUrl(String url) {
-        Context context = requireContext();
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+    private void bindExternalLink(@NonNull View view, @NonNull Intent intent) {
+        view.setOnClickListener(v -> openUrl(intent));
+    }
+
+    @NonNull
+    private Intent createBrowsableIntent(@NonNull Uri uri) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        return intent;
+    }
+
+    private void openUrl(@NonNull Intent intent) {
+        Context context = requireContext();
 
         if (intent.resolveActivity(context.getPackageManager()) != null) {
             startActivity(intent);

@@ -5,6 +5,7 @@ import android.net.Uri;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 
 import com.d4rk.androidtutorials.java.data.model.PromotedApp;
@@ -29,6 +30,19 @@ public class HomeViewModel extends ViewModel {
     private final GetAppPlayStoreUrlUseCase getAppPlayStoreUrlUseCase;
 
     private final MutableLiveData<HomeUiState> uiState = new MutableLiveData<>();
+    private final LiveData<HomeContentState> contentState =
+            Transformations.distinctUntilChanged(
+                    Transformations.map(uiState, state ->
+                            new HomeContentState(
+                                    state.announcementTitle(),
+                                    state.announcementSubtitle(),
+                                    state.dailyTip()
+                            ))
+            );
+    private final LiveData<List<PromotedApp>> promotedAppsState =
+            Transformations.distinctUntilChanged(
+                    Transformations.map(uiState, HomeUiState::promotedApps)
+            );
     private List<PromotedApp> allPromotedApps = new ArrayList<>();
 
     @Inject
@@ -95,6 +109,14 @@ public class HomeViewModel extends ViewModel {
      */
     public LiveData<HomeUiState> getUiState() {
         return uiState;
+    }
+
+    public LiveData<HomeContentState> getContentState() {
+        return contentState;
+    }
+
+    public LiveData<List<PromotedApp>> getPromotedAppsState() {
+        return promotedAppsState;
     }
 
     /**
