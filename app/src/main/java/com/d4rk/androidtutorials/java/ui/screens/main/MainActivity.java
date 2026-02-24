@@ -207,19 +207,9 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
             NavigationBarView navBarView = (NavigationBarView) binding.navView;
-            View navRail = binding.navRail;
             if (useRail) {
-                if (navRail != null) {
-                    navRail.setVisibility(View.VISIBLE);
-                }
-                navBarView.setVisibility(View.GONE);
                 WindowCompat.enableEdgeToEdge(this.getWindow());
             } else {
-                if (navRail != null) {
-                    navRail.setVisibility(View.GONE);
-                }
-                navBarView.setVisibility(View.VISIBLE);
-
                 navBarView.setLabelVisibilityMode(uiState.bottomNavVisibility());
                 View adView = binding.adView;
                 if (adView != null) {
@@ -271,35 +261,18 @@ public class MainActivity extends AppCompatActivity {
                     currentNavIndex = navOrder.get(destination.getId(), currentNavIndex);
                 }
 
-                if (useRail) {
-                    if (binding.navRail != null) {
-                        NavigationUI.setupWithNavController(binding.navRail, navController);
-                        binding.navRail.setOnItemSelectedListener(item -> {
-                            androidx.navigation.NavDestination currentDestination = navController.getCurrentDestination();
-                            if (currentDestination != null && item.getItemId() == currentDestination.getId()) {
-                                return true;
-                            }
-                            int newIndex = navOrder.get(item.getItemId());
-                            NavOptions options = newIndex > currentNavIndex ? forwardOptions : backwardOptions;
-                            navController.navigate(item.getItemId(), null, options);
-                            currentNavIndex = newIndex;
-                            return true;
-                        });
-                    }
-                } else {
-                    NavigationUI.setupWithNavController(navBarView, navController);
-                    navBarView.setOnItemSelectedListener(item -> {
-                        androidx.navigation.NavDestination currentDestination = navController.getCurrentDestination();
-                        if (currentDestination != null && item.getItemId() == currentDestination.getId()) {
-                            return true;
-                        }
-                        int newIndex = navOrder.get(item.getItemId());
-                        NavOptions options = newIndex > currentNavIndex ? forwardOptions : backwardOptions;
-                        navController.navigate(item.getItemId(), null, options);
-                        currentNavIndex = newIndex;
+                NavigationUI.setupWithNavController(navBarView, navController);
+                navBarView.setOnItemSelectedListener(item -> {
+                    androidx.navigation.NavDestination currentDestination = navController.getCurrentDestination();
+                    if (currentDestination != null && item.getItemId() == currentDestination.getId()) {
                         return true;
-                    });
-                }
+                    }
+                    int newIndex = navOrder.get(item.getItemId());
+                    NavOptions options = newIndex > currentNavIndex ? forwardOptions : backwardOptions;
+                    navController.navigate(item.getItemId(), null, options);
+                    currentNavIndex = newIndex;
+                    return true;
+                });
 
                 setSupportActionBar(binding.toolbar);
 
