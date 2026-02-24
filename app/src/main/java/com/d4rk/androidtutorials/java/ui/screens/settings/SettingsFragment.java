@@ -30,7 +30,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.d4rk.androidtutorials.java.R;
 import com.d4rk.androidtutorials.java.databinding.ItemPreferenceBinding;
 import com.d4rk.androidtutorials.java.ui.components.dialogs.RequireRestartDialog;
-import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.ShapeAppearanceModel;
@@ -56,7 +55,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         setupLabelVisibilityPreference();
         setupConsentAnalyticsPreference(settingsViewModel);
         setupDefaultTabPreference();
-        setupOpenSourceLicensesPreference();
         setupNotificationsPreference();
         setupDeviceInfoPreference();
     }
@@ -107,16 +105,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             defaultTab.setOnPreferenceChangeListener((preference, newValue) -> {
                 RequireRestartDialog restartDialog = new RequireRestartDialog();
                 restartDialog.show(getChildFragmentManager(), RequireRestartDialog.class.getName());
-                return true;
-            });
-        }
-    }
-
-    private void setupOpenSourceLicensesPreference() {
-        Preference ossPreference = findPreference(getString(R.string.key_open_source_licenses));
-        if (ossPreference != null) {
-            ossPreference.setOnPreferenceClickListener(preference -> {
-                OpenSourceLicensesUtils.openLicensesScreen(requireContext());
                 return true;
             });
         }

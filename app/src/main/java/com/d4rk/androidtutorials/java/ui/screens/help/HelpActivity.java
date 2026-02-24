@@ -27,7 +27,6 @@ import com.d4rk.androidtutorials.java.databinding.ItemHelpFaqBinding;
 import com.d4rk.androidtutorials.java.ui.components.navigation.UpNavigationActivity;
 import com.d4rk.androidtutorials.java.ui.screens.help.repository.HelpRepository;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
-import com.d4rk.androidtutorials.java.utils.OpenSourceLicensesUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.review.ReviewInfo;
 
@@ -99,9 +98,6 @@ public class HelpActivity extends UpNavigationActivity {
             return true;
         } else if (itemId == R.id.privacy_policy) {
             openLink("https://mihaicristiancondrea.github.io/profile/#privacy-policy-end-user-software");
-            return true;
-        } else if (itemId == R.id.oss) {
-            OpenSourceLicensesUtils.openLicensesScreen(this);
             return true;
         } else {
             return super.onOptionsItemSelected(item);

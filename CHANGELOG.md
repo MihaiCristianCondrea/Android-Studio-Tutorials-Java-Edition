@@ -1,3 +1,7 @@
+# Version 5.0.5:
+
+- **Patch**: Updated components to improve compatibility.
+
 # Version 5.0.4:
 - **Patch**: Updated components to improve compatibility.
 

@@ -42,12 +42,4 @@
         app:iconTint="?attr/colorOnSurface"
         app:showAsAction="never"
         tools:targetApi="26" />
-    <item
-        android:id="@+id/oss"
-        android:icon="@drawable/ic_license"
-        android:iconTint="?attr/colorOnSurface"
-        android:title="@string/open_source_licenses"
-        app:iconTint="?attr/colorOnSurface"
-        app:showAsAction="never"
-        tools:targetApi="26" />
 </menu>

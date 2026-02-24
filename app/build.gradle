@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.androidApplication)
-    alias(libs.plugins.ossLicenses)
     alias(libs.plugins.googleServices)
     alias(libs.plugins.firebaseCrashlytics)
     alias(libs.plugins.hiltAndroid)
@@ -16,6 +15,7 @@ android {
         versionCode 58
         versionName '5.0.5'
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         resourceConfigurations += [
                 'ar-rEG',
@@ -49,15 +49,8 @@ android {
 
     buildTypes {
         release {
-            multiDexEnabled true
             minifyEnabled true
             shrinkResources true
-            debuggable false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            multiDexEnabled true
-            debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

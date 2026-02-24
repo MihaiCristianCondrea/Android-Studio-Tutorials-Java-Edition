@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <!-- 1. THE VECTOR GRAPHIC -->
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="288dp"
+            android:height="288dp"
+            android:viewportWidth="393"
+            android:viewportHeight="393">
+
+            <group
+                android:name="content_scale"
+                android:pivotX="196.5"
+                android:pivotY="196.5"
+                android:scaleX="1.3"
+                android:scaleY="1.3">
+
+                <group
+                    android:name="base_translate"
+                    android:translateX="12.9"
+                    android:translateY="12.9"
+                    android:scaleX="0.85"
+                    android:scaleY="0.85">
+
+                    <!-- The Main Animated Group -->
+                    <group
+                        android:name="logo_group"
+                        android:pivotX="216"
+                        android:pivotY="216"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:alpha="0">
+
+                        <!-- RED (Starts thin) -->
+                        <path android:name="path_1" android:fillColor="#DB4437" android:strokeWidth="0" android:pathData="M243.8,253.4 l37.4,-37.4 l-37.4,-37.4 l-3,3 l34.4,34.4 l-34.4,34.4 L243.8,253.4 z" />
+                        <!-- BLUE (Starts thin) -->
+                        <path android:name="path_2" android:fillColor="#4285F4" android:strokeWidth="0" android:pathData="M162,129.5 h108 v45.8 H273 v-48.8 l-114,-0.1 v48.9 h3 V129.5 z" />
+                        <!-- GREEN (Starts thin) -->
+                        <path android:name="path_3" android:fillColor="#0F9D58" android:strokeWidth="0" android:pathData="M270,302.6 h-108 v-45.9 H159 v48.9 h114 v-48.9 h-3 V302.6 z" />
+                        <!-- YELLOW (Starts thin) -->
+                        <path android:name="path_4" android:fillColor="#F4B400" android:strokeWidth="0" android:pathData="M191.2,250.4 L156.8,216 l34.4,-34.4 l-3,-3 L150.8,216 l37.4,37.4 L191.2,250.4 z" />
+                        <!-- ORANGE SLASH (Starts thin) -->
+                        <path android:name="path_5" android:fillColor="#F89820" android:strokeWidth="0" android:pathData="M284.3,0 L0.7,283.6 L0.7,280.6 L281.3,0 Z" />
+                        <!-- WHITE SPARKLE 1 (Starts tiny/thin) -->
+                        <path android:name="path_6" android:fillColor="#FFFFFF" android:strokeWidth="0" android:pathData="M127.9,149.15 l-0.72,0.72 c-0.13,0.13 -0.13,0.35 0,0.48 l1.19,1.19 l0.36,-0.36 l-0.36,-0.36 l0.48,-0.48 l0.36,0.36 l0.36,-0.36 l-1.19,-1.19 C128.24,149.01 128.03,149.01 127.9,149.15 z M128.5,149.98 l-0.48,0.48 l-0.36,-0.36 l0.48,-0.48 L128.5,149.98 z" />
+                        <!-- WHITE SPARKLE 2 (Starts tiny/thin) -->
+                        <path android:name="path_7" android:fillColor="#FFFFFF" android:strokeWidth="0" android:pathData="M143.65,134.29 l0.36,-0.36 l1.02,1.85 l-0.36,0.36 l-1.85,-1.02 l0.36,-0.36 l1.06,0.58 L143.65,134.29 z" />
+                        <!-- WHITE SPARKLE 3 (Starts tiny/thin) -->
+                        <path android:name="path_8" android:fillColor="#FFFFFF" android:strokeWidth="0" android:pathData="M117.3,160.64 l1.08,1.08 l-0.36,0.36 l-0.24,-0.24 l-0.36,0.36 l0.24,0.24 c0.2,0.2 0.52,0.2 0.72,0 l0.36,-0.36 c0.2,-0.2 0.2,-0.52 0,-0.72 l-1.08,-1.08 C117.66,160.28 117.5,160.44 117.3,160.64 z" />
+                        <!-- WHITE SPARKLE 4 (Starts tiny/thin) -->
+                        <path android:name="path_9" android:fillColor="#FFFFFF" android:strokeWidth="0" android:pathData="M160.55,119.21 l-0.71,0.71 c-0.13,0.13 -0.13,0.34 0,0.48 l1.19,1.19 l0.36,-0.36 l-0.36,-0.36 l0.48,-0.48 l0.36,0.36 l0.36,-0.36 L161.04,119.2 C160.89,119.08 160.68,119.08 160.55,119.21 z M161.14,120.04 l-0.48,0.48 l-0.36,-0.36 l0.48,-0.48 L161.14,120.04 z" />
+
+                    </group>
+                </group>
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <!-- 2. THE ANIMATORS -->
+
+    <!-- Group Animation (Fade & Scale) remains identical -->
+
+    <!--
+       Weight Animation via Path Morphing
+       Smoothly animating the physical path coordinates from the custom Thin versions
+       above directly into your exact Original artwork.
+    -->
+    <target android:name="path_1">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="pathData" android:duration="800" android:valueType="pathType" android:interpolator="@android:anim/decelerate_interpolator"
+                android:valueFrom="M243.8,253.4 l37.4,-37.4 l-37.4,-37.4 l-3,3 l34.4,34.4 l-34.4,34.4 L243.8,253.4 z"
+                android:valueTo="M243.8,253.4 l37.4,-37.4 l-37.4,-37.4 l-11.5,11.6 l25.8,25.8 l-25.8,25.8 L243.8,253.4 z" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="path_2">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="pathData" android:duration="800" android:valueType="pathType" android:interpolator="@android:anim/decelerate_interpolator"
+                android:valueFrom="M162,129.5 h108 v45.8 H273 v-48.8 l-114,-0.1 v48.9 h3 V129.5 z"
+                android:valueTo="M175.2,159 h81.4 v16.3 H273 v-48.8 l-114,-0.1 v48.9 h16.3 V159 z" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="path_3">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="pathData" android:duration="800" android:valueType="pathType" android:interpolator="@android:anim/decelerate_interpolator"
+                android:valueFrom="M270,302.6 h-108 v-45.9 H159 v48.9 h114 v-48.9 h-3 V302.6 z"
+                android:valueTo="M256.7,273 h-81.4 v-16.3 H159 v48.9 h114 v-48.9 h-16.3 V273 z" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="path_4">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="pathData" android:duration="800" android:valueType="pathType" android:interpolator="@android:anim/decelerate_interpolator"
+                android:valueFrom="M191.2,250.4 L156.8,216 l34.4,-34.4 l-3,-3 L150.8,216 l37.4,37.4 L191.2,250.4 z"
+                android:valueTo="M199.7,241.8 L173.9,216 l25.8,-25.8 l-11.5,-11.6 L150.8,216 l37.4,37.4 L199.7,241.8 z" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="path_5">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="pathData" android:duration="800" android:valueType="pathType" android:interpolator="@android:anim/decelerate_interpolator"
+                android:valueFrom="M284.3,0 L0.7,283.6 L0.7,280.6 L281.3,0 Z"
+                android:valueTo="M311.5,0 L0.7,310.8 L0.7,253.4 L254.1,0 Z" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="path_6">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="pathData" android:duration="800" android:valueType="pathType" android:interpolator="@android:anim/decelerate_interpolator"
+                android:valueFrom="M127.9,149.15 l-0.72,0.72 c-0.13,0.13 -0.13,0.35 0,0.48 l1.19,1.19 l0.36,-0.36 l-0.36,-0.36 l0.48,-0.48 l0.36,0.36 l0.36,-0.36 l-1.19,-1.19 C128.24,149.01 128.03,149.01 127.9,149.15 z M128.5,149.98 l-0.48,0.48 l-0.36,-0.36 l0.48,-0.48 L128.5,149.98 z"
+                android:valueTo="M127,141.5 l-7.2,7.2 c-1.3,1.3 -1.3,3.5 0,4.8 l11.9,11.9 l3.6,-3.6 l-3.6,-3.6 l4.8,-4.8 l3.6,3.6 l3.6,-3.6 l-11.9,-11.9 C130.4,140.1 128.3,140.1 127,141.5 z M133,149.8 l-4.8,4.8 l-3.6,-3.6 l4.8,-4.8 L133,149.8 z" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="path_7">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="pathData" android:duration="800" android:valueType="pathType" android:interpolator="@android:anim/decelerate_interpolator"
+                android:valueFrom="M143.65,134.29 l0.36,-0.36 l1.02,1.85 l-0.36,0.36 l-1.85,-1.02 l0.36,-0.36 l1.06,0.58 L143.65,134.29 z"
+                android:valueTo="M140.5,127.9 l3.6,-3.6 l10.2,18.5 l-3.6,3.6 l-18.5,-10.2 l3.6,-3.6 l10.6,5.8 L140.5,127.9 z" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="path_8">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="pathData" android:duration="800" android:valueType="pathType" android:interpolator="@android:anim/decelerate_interpolator"
+                android:valueFrom="M117.3,160.64 l1.08,1.08 l-0.36,0.36 l-0.24,-0.24 l-0.36,0.36 l0.24,0.24 c0.2,0.2 0.52,0.2 0.72,0 l0.36,-0.36 c0.2,-0.2 0.2,-0.52 0,-0.72 l-1.08,-1.08 C117.66,160.28 117.5,160.44 117.3,160.64 z"
+                android:valueTo="M111,157.4 l10.8,10.8 l-3.6,3.6 l-2.4,-2.4 l-3.6,3.6 l2.4,2.4 c2,2 5.2,2 7.2,0 l3.6,-3.6 c2,-2 2,-5.2 0,-7.2 l-10.8,-10.8 C114.6,153.8 113,155.4 111,157.4 z" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="path_9">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="pathData" android:duration="800" android:valueType="pathType" android:interpolator="@android:anim/decelerate_interpolator"
+                android:valueFrom="M160.55,119.21 l-0.71,0.71 c-0.13,0.13 -0.13,0.34 0,0.48 l1.19,1.19 l0.36,-0.36 l-0.36,-0.36 l0.48,-0.48 l0.36,0.36 l0.36,-0.36 L161.04,119.2 C160.89,119.08 160.68,119.08 160.55,119.21 z M161.14,120.04 l-0.48,0.48 l-0.36,-0.36 l0.48,-0.48 L161.14,120.04 z"
+                android:valueTo="M156.5,112.1 l-7.1,7.1 c-1.3,1.3 -1.3,3.4 0,4.8 l11.9,11.9 l3.6,-3.6 l-3.6,-3.6 l4.8,-4.8 l3.6,3.6 l3.6,-3.6 L161.4,112 C159.9,110.8 157.8,110.8 156.5,112.1 z M162.4,120.4 l-4.8,4.8 l-3.6,-3.6 l4.8,-4.8 L162.4,120.4 z" />
+        </aapt:attr>
+    </target>
+
+</animated-vector>

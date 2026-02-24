@@ -33,6 +33,8 @@
         <item name="toolbarStyle">@style/Widget.App.Toolbar.Clover</item>
         <item name="materialCardViewStyle">@style/Widget.App.CardView.Clover</item>
         <item name="materialButtonStyle">@style/Widget.App.Button.Clover</item>
+        <item name="android:fontFamily">@font/google_sans_flex_variable</item>
+        <item name="fontFamily">@font/google_sans_flex_variable</item>
     </style>
 
     <style name="FitSystemWindowsTheme" parent="AppThemeActionBar">

@@ -10,5 +10,7 @@
         <item name="dialogCornerRadius">28dp</item>
         <item name="alertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog</item>
         <item name="switchPreferenceCompatStyle">@style/switchPreferenceCompatStyle</item>
+        <item name="android:fontFamily">@font/google_sans_flex_variable</item>
+        <item name="fontFamily">@font/google_sans_flex_variable</item>
     </style>
 </resources>
