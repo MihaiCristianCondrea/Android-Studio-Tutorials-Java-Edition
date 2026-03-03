@@ -87,6 +87,15 @@
                 android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.data.room.RoomActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_code_binding"
+            app:summary="@string/summary_preference_android_studio_view_model"
+            app:title="@string/view_model">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.architecture.viewmodel.ViewModelActivity"
+                android:targetPackage="com.d4rk.androidtutorials.java" />
+        </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
         app:icon="@drawable/ic_category_layout_tinted"
@@ -116,6 +125,15 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.table.TableLayoutActivity"
+                android:targetPackage="com.d4rk.androidtutorials.java" />
+        </androidx.preference.Preference>
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_view_quilt"
+            app:summary="@string/summary_preference_android_studio_constraint_layout"
+            app:title="@string/constraint_layout">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.layouts.constraint.ConstraintLayoutActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -152,6 +170,15 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.spinner.SpinnerActivity"
+                android:targetPackage="com.d4rk.androidtutorials.java" />
+        </androidx.preference.Preference>
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_grid_view"
+            app:summary="@string/summary_preference_android_studio_recycler_view"
+            app:title="@string/recycler_view">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.lists.recyclerview.RecyclerViewActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>

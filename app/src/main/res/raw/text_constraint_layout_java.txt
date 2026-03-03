@@ -1,0 +1,8 @@
+ConstraintLayoutActivity binding = ActivityConstraintLayoutBinding.inflate(getLayoutInflater());
+setContentView(binding.getRoot());
+
+binding.buttonStart.setOnClickListener(view ->
+        Toast.makeText(this, "Start constrained", Toast.LENGTH_SHORT).show());
+
+binding.buttonEnd.setOnClickListener(view ->
+        Toast.makeText(this, "End constrained", Toast.LENGTH_SHORT).show());

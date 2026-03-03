@@ -1,0 +1,6 @@
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycler_view_preview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="220dp"
+    tools:listitem="@layout/item_recycler_view_lesson" />
