@@ -18,7 +18,7 @@ import java.util.List;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
-public class AndroidSDK extends UpNavigationActivity {
+public class AndroidSdkActivity extends UpNavigationActivity {
     private final List<AndroidVersion> androidVersions = Arrays.asList(
             new AndroidVersion("1.0", "1", "BASE", "None", "2008"),
             new AndroidVersion("1.1", "2", "BASE_1_1", "Petit Four", "2009"),
