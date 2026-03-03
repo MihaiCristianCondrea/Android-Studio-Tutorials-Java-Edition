@@ -18,7 +18,7 @@ import com.d4rk.androidtutorials.java.ui.components.navigation.SyntaxFabActivity
 import com.d4rk.androidtutorials.java.ui.screens.android.CodeActivity;
 import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
-public class GirdViewActivity extends SyntaxFabActivity {
+public class GridViewActivity extends SyntaxFabActivity {
 
     private final String[] numbers = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
     private ActivityGridViewBinding binding;

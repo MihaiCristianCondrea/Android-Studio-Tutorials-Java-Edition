@@ -183,7 +183,7 @@
             android:label="@string/chronometer"
             android:parentActivityName=".ui.screens.main.MainActivity" />
         <activity
-            android:name=".ui.screens.android.lessons.basics.history.AndroidHistory"
+            android:name=".ui.screens.android.lessons.basics.history.AndroidHistoryActivity"
             android:exported="false"
             android:label="@string/history_of_android"
             android:parentActivityName=".ui.screens.main.MainActivity" />
@@ -218,7 +218,7 @@
             android:label="@string/view_model"
             android:parentActivityName=".ui.screens.main.MainActivity" />
         <activity
-            android:name=".ui.screens.android.lessons.views.grid.GirdViewActivity"
+            android:name=".ui.screens.android.lessons.views.grid.GridViewActivity"
             android:exported="false"
             android:label="@string/grid_view"
             android:parentActivityName=".ui.screens.main.MainActivity" />
@@ -243,7 +243,7 @@
             android:label="@string/android_start"
             android:parentActivityName=".ui.screens.main.MainActivity" />
         <activity
-            android:name=".ui.screens.android.lessons.basics.sdk.AndroidSDK"
+            android:name=".ui.screens.android.lessons.basics.sdk.AndroidSdkActivity"
             android:exported="false"
             android:label="@string/android_sdk"
             android:parentActivityName=".ui.screens.main.MainActivity" />

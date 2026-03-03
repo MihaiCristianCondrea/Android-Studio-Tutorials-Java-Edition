@@ -32,7 +32,7 @@
             app:title="@string/history_of_android">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.history.AndroidHistory"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.history.AndroidHistoryActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -41,7 +41,7 @@
             app:title="@string/android_sdk">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.sdk.AndroidSDK"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.basics.sdk.AndroidSdkActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
@@ -142,7 +142,7 @@
             app:title="@string/grid_view">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.grid.GirdViewActivity"
+                android:targetClass="com.d4rk.androidtutorials.java.ui.screens.android.lessons.views.grid.GridViewActivity"
                 android:targetPackage="com.d4rk.androidtutorials.java" />
         </androidx.preference.Preference>
         <androidx.preference.Preference

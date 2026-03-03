@@ -9,7 +9,7 @@ import com.d4rk.androidtutorials.java.utils.EdgeToEdgeHelper;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
-public class AndroidHistory extends UpNavigationActivity {
+public class AndroidHistoryActivity extends UpNavigationActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
