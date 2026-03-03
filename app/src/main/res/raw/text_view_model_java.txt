@@ -1,0 +1,6 @@
+CounterViewModel counterViewModel = new ViewModelProvider(this).get(CounterViewModel.class);
+
+binding.incrementButton.setOnClickListener(view -> counterViewModel.incrementCounter());
+
+counterViewModel.getCounter().observe(this, value ->
+        binding.counterValue.setText(getString(R.string.view_model_counter_value, value)));

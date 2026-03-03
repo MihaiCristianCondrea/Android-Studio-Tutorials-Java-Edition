@@ -1,0 +1,10 @@
+binding.recyclerViewPreview.setLayoutManager(new LinearLayoutManager(this));
+
+List<String> lessons = Arrays.asList(
+        "Linear Layout",
+        "Constraint Layout",
+        "RecyclerView",
+        "ViewModel"
+);
+
+binding.recyclerViewPreview.setAdapter(new RecyclerViewPreviewAdapter(lessons));

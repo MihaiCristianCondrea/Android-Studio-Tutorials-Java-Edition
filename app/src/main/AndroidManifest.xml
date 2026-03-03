@@ -203,6 +203,21 @@
             android:label="@string/table_layout"
             android:parentActivityName=".ui.screens.main.MainActivity" />
         <activity
+            android:name=".ui.screens.android.lessons.layouts.constraint.ConstraintLayoutActivity"
+            android:exported="false"
+            android:label="@string/constraint_layout"
+            android:parentActivityName=".ui.screens.main.MainActivity" />
+        <activity
+            android:name=".ui.screens.android.lessons.lists.recyclerview.RecyclerViewActivity"
+            android:exported="false"
+            android:label="@string/recycler_view"
+            android:parentActivityName=".ui.screens.main.MainActivity" />
+        <activity
+            android:name=".ui.screens.android.lessons.architecture.viewmodel.ViewModelActivity"
+            android:exported="false"
+            android:label="@string/view_model"
+            android:parentActivityName=".ui.screens.main.MainActivity" />
+        <activity
             android:name=".ui.screens.android.lessons.views.grid.GirdViewActivity"
             android:exported="false"
             android:label="@string/grid_view"

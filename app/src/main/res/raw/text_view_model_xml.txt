@@ -1,0 +1,11 @@
+<com.google.android.material.textview.MaterialTextView
+    android:id="@+id/counter_value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/view_model_counter_default" />
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/increment_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/view_model_increment" />
