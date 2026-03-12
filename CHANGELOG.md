@@ -1,3 +1,8 @@
+# Version 5.0.6:
+
+- **New**: Added lessons for ConstraintLayout, RecyclerView, and ViewModel.
+- **Minor**: Optimized preference card styling with improved metadata caching.
+
 # Version 5.0.5:
 
 - **Patch**: Updated components to improve compatibility.

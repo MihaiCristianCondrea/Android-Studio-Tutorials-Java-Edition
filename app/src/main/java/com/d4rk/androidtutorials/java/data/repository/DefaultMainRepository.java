@@ -110,7 +110,7 @@ public class DefaultMainRepository implements MainRepository {
         }
 
         LocaleListCompat currentLocales = AppCompatDelegate.getApplicationLocales();
-        String currentLanguageTags = currentLocales.toLanguageTags();
+        String currentLanguageTags = currentLocales == null ? "" : currentLocales.toLanguageTags();
         if (languageCode.equals(currentLanguageTags)) {
             return false;
         }

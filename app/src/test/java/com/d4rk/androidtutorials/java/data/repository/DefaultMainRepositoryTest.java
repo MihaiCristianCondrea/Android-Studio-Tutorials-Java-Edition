@@ -84,12 +84,12 @@ public class DefaultMainRepositoryTest {
         defaultPrefs.edit().putString("theme", "light").apply();
 
         try (MockedStatic<AppCompatDelegate> appCompatDelegate = mockStatic(AppCompatDelegate.class)) {
-            appCompatDelegate.when(AppCompatDelegate::getDefaultNightMode).thenReturn(AppCompatDelegate.MODE_NIGHT_NO); // FIXME: Result of 'AppCompatDelegate.getDefaultNightMode()' is ignored
+            appCompatDelegate.when(AppCompatDelegate::getDefaultNightMode).thenReturn(AppCompatDelegate.MODE_NIGHT_NO);
 
             boolean changed = repository.applyThemeSettings(new String[]{"system", "light", "dark", "auto"});
 
             assertFalse(changed);
-            appCompatDelegate.verify(AppCompatDelegate::getDefaultNightMode); // FIXME: Result of 'AppCompatDelegate.getDefaultNightMode()' is ignored
+            appCompatDelegate.verify(AppCompatDelegate::getDefaultNightMode);
             appCompatDelegate.verifyNoMoreInteractions();
         }
     }
@@ -99,12 +99,12 @@ public class DefaultMainRepositoryTest {
         defaultPrefs.edit().putString("theme", "dark").apply();
 
         try (MockedStatic<AppCompatDelegate> appCompatDelegate = mockStatic(AppCompatDelegate.class)) {
-            appCompatDelegate.when(AppCompatDelegate::getDefaultNightMode).thenReturn(AppCompatDelegate.MODE_NIGHT_NO); // FIXME: Result of 'AppCompatDelegate.getDefaultNightMode()' is ignored
+            appCompatDelegate.when(AppCompatDelegate::getDefaultNightMode).thenReturn(AppCompatDelegate.MODE_NIGHT_NO);
 
             boolean changed = repository.applyThemeSettings(new String[]{"system", "light", "dark", "auto"});
 
             assertTrue(changed);
-            appCompatDelegate.verify(AppCompatDelegate::getDefaultNightMode); // FIXME: Result of 'AppCompatDelegate.getDefaultNightMode()' is ignored
+            appCompatDelegate.verify(AppCompatDelegate::getDefaultNightMode);
             appCompatDelegate.verify(() -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES));
             appCompatDelegate.verifyNoMoreInteractions();
         }
@@ -130,59 +130,6 @@ public class DefaultMainRepositoryTest {
         repository.markStartupScreenShown();
         assertFalse(repository.shouldShowStartupScreen());
     }
-/*
-    FIXME:
-
-Cannot invoke "androidx.core.os.LocaleListCompat.toLanguageTags()" because "currentLocales" is null
-java.lang.NullPointerException: Cannot invoke "androidx.core.os.LocaleListCompat.toLanguageTags()" because "currentLocales" is null
-	at com.d4rk.androidtutorials.java.data.repository.DefaultMainRepository.applyLanguageSettings(DefaultMainRepository.java:113)
-	at com.d4rk.androidtutorials.java.data.repository.DefaultMainRepositoryTest.applyLanguageSettings_setsLocales(DefaultMainRepositoryTest.java:148)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.runRequest(JUnitTestExecutor.java:175)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.accept(JUnitTestExecutor.java:84)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.accept(JUnitTestExecutor.java:47)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestDefinitionProcessor.processTestDefinition(AbstractJUnitTestDefinitionProcessor.java:65)
-	at org.gradle.api.internal.tasks.testing.SuiteTestDefinitionProcessor.processTestDefinition(SuiteTestDefinitionProcessor.java:53)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.gradle.internal.dispatch.MethodInvocation.invokeOn(MethodInvocation.java:77)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:28)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:19)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:88)
-	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestDefinition(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:178)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-
-    */
     @Test
     public void applyLanguageSettings_setsLocales() {
         defaultPrefs.edit().putString("language", "fr").apply();
@@ -197,10 +144,14 @@ java.lang.NullPointerException: Cannot invoke "androidx.core.os.LocaleListCompat
                         return null;
                     });
 
-            repository.applyLanguageSettings(); // FIXME: Cannot invoke "androidx.core.os.LocaleListCompat.toLanguageTags()" because "currentLocales" is null
+            appCompatDelegate.when(AppCompatDelegate::getApplicationLocales).thenReturn(LocaleListCompat.getEmptyLocaleList());
 
+            boolean changed = repository.applyLanguageSettings();
+
+            assertTrue(changed);
             assertNotNull(capturedLocale[0]);
             assertEquals("fr", capturedLocale[0].toLanguageTags());
+            appCompatDelegate.verify(AppCompatDelegate::getApplicationLocales);
             appCompatDelegate.verify(() -> AppCompatDelegate.setApplicationLocales(capturedLocale[0]));
             appCompatDelegate.verifyNoMoreInteractions();
         }
