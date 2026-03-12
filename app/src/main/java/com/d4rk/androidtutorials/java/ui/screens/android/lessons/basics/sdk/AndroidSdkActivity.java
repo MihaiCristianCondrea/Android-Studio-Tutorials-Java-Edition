@@ -38,8 +38,8 @@ public class AndroidSdkActivity extends UpNavigationActivity {
             new AndroidVersion("4.1", "16", "JELLYBEAN", "Jelly Bean", "2012"),
             new AndroidVersion("4.2", "17", "JELLYBEAN_MR1", "Jelly Bean", "2012"),
             new AndroidVersion("4.3", "18", "JELLYBEAN_MR2", "Jelly Bean", "2013"),
-            new AndroidVersion("4.4", "19", "JELLYBEAN_MR2", "KitKat", "2013"),
-            new AndroidVersion("4.4W", "20", "JKITKAT_WATCH", "KitKat", "2013"),
+            new AndroidVersion("4.4", "19", "KITKAT", "KitKat", "2013"),
+            new AndroidVersion("4.4W", "20", "KITKAT_WATCH", "KitKat", "2014"),
             new AndroidVersion("5.0", "21", "LOLLIPOP, L", "Lollipop", "2014"),
             new AndroidVersion("5.1", "22", "LOLLIPOP_MR1", "Lollipop", "2015"),
             new AndroidVersion("6.0", "23", "M", "Marshmallow", "2015"),
@@ -54,7 +54,7 @@ public class AndroidSdkActivity extends UpNavigationActivity {
             new AndroidVersion("12L", "32", "S_V2", "Snow Cone", "2021"),
             new AndroidVersion("13", "33", "T", "Tiramisu", "2022"),
             new AndroidVersion("14", "34", "U", "Upside Down Cake", "2023"),
-            new AndroidVersion("15", "35", "V", "Vanilla Ice Cake", "2024"),
+            new AndroidVersion("15", "35", "VANILLA_ICE_CREAM", "Vanilla Ice Cream", "2024"),
             new AndroidVersion("16", "36", "Baklava", "Baklava", "2025")
     );
     private ActivityAndroidSdkBinding binding;
